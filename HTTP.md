@@ -77,6 +77,7 @@ URL은 변할 수 있지만 URN은 변하지 않는다.<br>
 
  ### **-> _scheme://[userinfo@]host[:port][/path][?query][#fragment]_**
  <br>
+ <pre>
      scheme
         보통 프로토콜 정보가 들어감
         ex) http (80), https (443), ftp 등
@@ -88,13 +89,13 @@ URL은 변할 수 있지만 URN은 변하지 않는다.<br>
         보편적으론 생략 가능
      path
         리소스가 있는 경로, 계층적 구조
-     query
-        key=value 현태
+     query<br>
+        key=value 형태<br>
         ?로 시작, &로 추가 가능
         query parameter, puery string 등으로 불림. 
      fragment
         html 내부 북마크에 사용
-
+</pre>
 <br>
 
 ---
