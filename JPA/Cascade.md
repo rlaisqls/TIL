@@ -1,6 +1,6 @@
 # Cascade
 
-cascade 옵션은 jpa를 사용할때 @OneToMany나 @ManyToOne에 옵션으로 줄 수 있는 값이다. cacade 옵션을 사용하면 부모 엔티티에 상태 변화가 생길 때 그 엔티티와 연관되어있는 엔티티에도 상태 변화를 전이시킬 수 있다. 즉, 자식 엔티티의 <a href="/Entity의 생명주기.md"></a>생명주기를 관리할 수 있다.
+cascade 옵션은 jpa를 사용할때 @OneToMany나 @ManyToOne에 옵션으로 줄 수 있는 값이다. cacade 옵션을 사용하면 부모 엔티티에 상태 변화가 생길 때 그 엔티티와 연관되어있는 엔티티에도 상태 변화를 전이시킬 수 있다. 즉, 자식 엔티티의 <a href="#reference">생명주기</a>를 관리할 수 있다.
 
 ## cascade 타입의 종류
 
@@ -29,3 +29,6 @@ cascade 옵션은 jpa를 사용할때 @OneToMany나 @ManyToOne에 옵션으로 �
 ### ALL
 
 위에 있는 상태 전이가 모두 적용된다.
+
+<div id="reference">참고:</div>
+엔티티의 생명주기 https://gmlwjd9405.github.io/2019/08/08/jpa-entity-lifecycle.html
