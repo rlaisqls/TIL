@@ -4,7 +4,7 @@
 <p>과거에 쓰이던 Token ring을 대체하여, 현재는 LAN, MAN 및 WAN에서 가장 많이 쓰이는 방식이다.</p>
 <br>
 
-<img src="https://m1.daumcdn.net/cfile245/image/2268BA4C57130B423072AC" height=250px width=300px style="display: block; margin: 0px auto;">
+<img src="https://m1.daumcdn.net/cfile245/image/2268BA4C57130B423072AC" height=260px width=350px>
 
 <br>
 
@@ -14,4 +14,4 @@
 
 <br>
 
-<img src="https://thecustomizewindows.com/wp-content/uploads/2013/04/Token-Ring-Local-Area-Network-Technology.png" height=250px style="display: block; margin: 0px auto;">
+<img src="https://thecustomizewindows.com/wp-content/uploads/2013/04/Token-Ring-Local-Area-Network-Technology.png" height=250px>
