@@ -1,4 +1,4 @@
-# GROUP BY절
+# 🐬 GROUP BY절
 GROUP BY절은 GROUP BY절에 기재한 컬럼을 기춘으로 결과 집합을 그룹화한다. 이 GROUP BY절을 사용하면 소그룹별 기준 칼럼을 정한 후, 집계 함수를 사용하여 그룹별 통계를 계산할 수 있다. 
 
 ### GROUP BY절 쿼리 예제

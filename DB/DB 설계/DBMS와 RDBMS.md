@@ -1,4 +1,4 @@
-## DBMS(Database Management System)
+## 💾 DBMS(Database Management System)
 <p>
 넓은 의미에서의 데이터베이스는 일상적인 정보들을 모아 놓은 것 자체를 의미한다. 일반적으로 DB라고 말할 떄는 특정 기업이나 조직 또는 개인이 필요한 데이터를 일정한 형태로 저장해 놓은 것을 의미한다.
 </p>
@@ -6,7 +6,7 @@
 사용자들은 보다 효율적인 데이터 관리뿐만 아니라 예기치 못한 사건으로 인한 데이터의 손상을 피하고, 필요할 때 데이터를 복구하기 위한 강력한 기능의 소프트웨어를 필요로 한다. 이러한 요구사항을 만족시켜주는 시스템을 데이터베이스 관리 시스템(DBMS)이라고 한다.
 </p>
 
-## RDBMS(Relational Database Management System)
+## 💾 RDBMS(Relational Database Management System)
 <p>
 관계형 데이터베이스는 정규화 이론에 근거한 합리적인 데이터 모델링을 통해 데이터 이상(Anomaly) 현상 및 불필요한 데이터 중복 현상을 피할 수 있다. 이러한 RDB를 관리하는 시스템 소프트웨어를 관계현 데이터베이스 관리 시스템(RDBMS)이라고 한다.
 </p>

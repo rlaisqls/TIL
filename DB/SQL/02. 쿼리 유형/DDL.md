@@ -1,4 +1,4 @@
-# DDL(Data Definition Lanquage)
+# 🐬 DDL(Data Definition Lanquage)
 <p>
 DDL은 데이터 정의어를 뜻한다. DB를 구성하는 물리적 객체(사용자, 테이블, 인덱스, 뷰, 트리거, 프로시저, 사용자 정의 함수 등)을 정의/변경/제거하는 데 사용한다.
 </p>

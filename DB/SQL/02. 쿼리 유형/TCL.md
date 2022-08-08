@@ -1,4 +1,4 @@
-# TCL(Transaction Control Language)
+# 🐬 TCL(Transaction Control Language)
 <p>
 TCL은 트랜잭션 제어어를 뜻한다. <a href="/DB/DB/트랜잭션.md">트랜잭션</a>이란 DB에서 처리되는 논리적인 연산 단위를 뜻하는데, TCL은 데이터의 변경 후 커밋, 롤백으로 트랜잭션을 완료, 취소하는 작업을 수행할 때 사용한다.
 </p>

@@ -1,4 +1,4 @@
-# DCL(Data Control Language) 
+# 🐬 DCL(Data Control Language) 
 <p>
 DCL은 데이터 제어어를 뜻한다. 데이터베이스에 접근하고 객체들을 사용하도록 권한을 부여하고 회수하는 데 사용한다.
 </p>

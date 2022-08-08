@@ -1,4 +1,4 @@
-# OrphanRemoval
+# 📑 OrphanRemoval
 
 <p><a href="./cascade.md">cascade</a> 옵션을 사용하면 부모 엔티티에 상태 변화가 생길 때 그 엔티티와 연관되어있는 엔티티에도 상태 변화를 전이시킬 수 있다. 그러나 cascade 옵션을 사용한다고 해서 부모 엔티티에서 자식 엔티티의 생명주기를 완전히 통제할 수 있는 것은 아니다.</p>
 
