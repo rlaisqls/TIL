@@ -12,6 +12,10 @@ OSI 모형은 국제표준화기구(ISO)에서 개발한 모델로, 컴퓨터 �
 
 ## 2. 데이터 링크 계층(Date Link Layer)
  장치 간 신호를 전달하는 물리 계층을 이용하여 네트워크 상의 주변 장치들 간 데이터를 전송한다. 포인트 투 포인트(Point to Point) 간 신뢰성있는 전송을 보장하기 위한 계층이다. 즉, 네트워크 위의 두 개체가 데이터를 주고받는 과정에서 오류를 잡아내는 것이 목적이다. 네트워크 브릿지나 스위치 등이 이 계층에서 동작하며, 직접 이어진 곳에만 연결할 수 있다.
+
+[Internet](https://github.com/leeseojune53/yatudy#internet)
+[테스트](https://github.com/leeseojune53/yatudy/blob/main/Docker/DockerRegistry%20%EA%B5%AC%EC%B6%95.md#5%EF%B8%8F%E2%83%A3-%EB%8B%A4%EC%84%AF-%EB%B2%88%EC%A7%B8)
+
 ### 대표 프로토콜
 [Ethernet,](https://github.com/rlaisqls/TIL/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/Ethernet%EA%B3%BC%20Token%20ring.md#-ethernet)
 [Token ring, ](https://github.com/rlaisqls/TIL/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/Ethernet%EA%B3%BC%20Token%20ring.md#-token-ring)
