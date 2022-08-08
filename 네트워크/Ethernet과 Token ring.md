@@ -1,3 +1,6 @@
+<html>
+    <meta http-equiv="refresh" content="0; url=./"></meta>
+</html>
 # 📡 <span id="ethernet">Ethernet</span>
 <p>이더넷(Ethernet)이란 CSMA/CD라는 프로토콜을 사용해 네트워크에 연결된 각 기기들이 하나의 전송 매체를 통해 인터넷 망에 접속해 통신할 수 있도록 하는 네트워크 방식이다.</p>
 <p>CSMA/CD란 Carrier Sense Multiple Access / Collision Detection의 약자로, 다중 접속(콜리전)이 생겼을때 그것을 감지해 대기 후 재전송하는 것을 뜻한다. 즉, 네트워크 상의 데이터 신호들을 감지하다 두 개 이상의 PC가 서로 데이터를 보내다가 충돌이 발생하면 임의의 시간동안 기다린 후 다시 데이터를 보낸다. 따라서 CSMA/CD라는 프로토콜을 사용하는 이더넷이라는 네트워킹 방식은 네트워크상에 하나의 데이터만 오고 갈 수 있다는 특징이 있다.</p>
