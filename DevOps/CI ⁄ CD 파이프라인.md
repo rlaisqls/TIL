@@ -18,5 +18,10 @@
 참고:<br>
 <a href="https://www.redhat.com/ko/topics/devops/what-is-ci-cd">redhat CI/CD(지속적 통합/지속적 제공): 개념,방법,장점,구현 과정</a>
 
+<br>
+<br>
+
+---
+
 더 알아보기:<br>
 CI/CD 툴들 https://ichi.pro/ko/hyeonjae-sayong-ganeunghan-choegoui-ci-cd-dogu-27gaji-194611649728144

@@ -40,9 +40,11 @@ OSI 모형은 국제표준화기구(ISO)에서 개발한 모델로, 컴퓨터 �
  - ### 대표 프로토콜
     <a href="https://github.com/rlaisqls/TIL/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/HTTP.md">HTTP</a>, SMTP, FTP, DNS
 
+<br>
+<br>
+<br>
 
-참고:<br>
-위키피디아 https://ko.wikipedia.org/wiki/OSI_%EB%AA%A8%ED%98%95
+---
 
 더 알아보기<br>
 OSI 계층별 프로토콜 예시 <br> https://en.wikipedia.org/wiki/List_of_network_protocols_(OSI_model)<br>
