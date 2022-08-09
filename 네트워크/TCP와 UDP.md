@@ -17,7 +17,7 @@
     각 연결이 정확히 2개의 종단점을 가지고 있다.
 
 ## TCP 헤더
-<img src="https://limjunho.github.io/assets/Network/packet-header/1.png" height=250px>
+<img src="https://t1.daumcdn.net/cfile/tistory/215E874552342E7319" height=250px>
 
 
 |필드|내용|
@@ -48,7 +48,7 @@
 
  
 ## UDP 헤더
-<img src="https://t1.daumcdn.net/cfile/tistory/99B12B385BD6DC0F03">
+<img src="https://images.velog.io/images/hahahaa8642/post/2e0e1cf7-5120-4533-a792-ba5d907830fc/272A5A385759267B36.png" height=200px>
 
 |필드|내용|
 |-|-|
