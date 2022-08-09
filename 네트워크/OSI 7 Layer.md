@@ -14,12 +14,12 @@ OSI 모형은 국제표준화기구(ISO)에서 개발한 모델로, 컴퓨터 �
   - 장치 간 신호를 전달하는 물리 계층을 이용하여 네트워크 상의 주변 장치들 간 데이터를 전송한다. 포인트 투 포인트(Point to Point) 간 신뢰성있는 전송을 보장하기 위한 계층이다. 즉, 네트워크 위의 두 개체가 데이터를 주고받는 과정에서 오류를 잡아내는 것이 목적이다. 네트워크 브릿지나 스위치 등이 이 계층에서 동작하며, 직접 이어진 곳에만 연결할 수 있다.
 
  - ### 대표 프로토콜
-    <a href="./Etherne과 Token ring.md#-ethernet">Ethernet,<a/> <a href="./Ethernet%EA%B3%BC%20Token%20ring.md#-token-ring">Token ring, </a>PPP
+    <a href="https://github.com/rlaisqls/TIL/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/Ethernet%EA%B3%BC%20Token%20ring.md#-ethernet">Ethernet,<a/> <a href="https://github.com/rlaisqls/TIL/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/Ethernet%EA%B3%BC%20Token%20ring.md#-token-ring">Token ring, </a>PPP
 
 ## 3. 네트워크 계층(Network Layer)
  - 여러개의 노드를 거쳐 패킷을 최종 수신대상에게 전달(End-To-End)하기 위한 경로 설정을 담당한다. 호스트를 식별하고 라우팅 등의 패킷포워딩을 수행하여 패킷이 목적지에 도달할 수 있도록 한다.
  - ### 대표 프로토콜
-    <a src="./IP.md">IP,</a> DHCP, ARP, IGMP, ICMP
+    <a src="./IP.md">IP</a>, DHCP, ARP, IGMP, ICMP
 
 ## 4. 전송 계층(Transport Layer)
  - 종단간 연결의 신뢰성과 유효성을 보장한다. 양 끝단의 사용자들이 통신하는 과정에서 생기는 오류를 검출, 복구하고 흐름을 제어하는 일을 담당한다. 프로세스를 특정하여 데이터를 전송하기 위해서 Port 번호를 사용하며, 주로 세그먼트(Segment) 라는 데이터 단위를 사용한다. 
@@ -38,7 +38,7 @@ OSI 모형은 국제표준화기구(ISO)에서 개발한 모델로, 컴퓨터 �
 ## 7. 응용 계층(Application Layer)
  - 사용자가 네트워크에 접근할 수 있는 응용 프로세스를 제공하는 계층이다. 네트워크 활동의 기반이 되는 인터페이스를 보여주고 사용자와 직접 상호작용할 수 있도록 한다.
  - ### 대표 프로토콜
-    HTTP, SMTP, FTP, DNS
+    <a href="https://github.com/rlaisqls/TIL/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/HTTP.md">HTTP</a>, SMTP, FTP, DNS
 
 
 참고:<br>
