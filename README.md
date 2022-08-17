@@ -38,17 +38,17 @@
     <div>   
         <table>
             <th></th>
-    	    <tr><td><a href="./3 행위 패턴/책임 연쇄 패턴.md">#</a> 책임 연쇄(Chain of Responsibility) 패턴</td></tr>
-            <tr><td><a href="./3 행위 패턴/커맨드 패턴.md">#</a> 커맨드(Command) 패턴</a></td></tr>
-            <tr><td><a href="./3 행위 패턴/인터프리터 패턴.md">#</a> 인터프리터(Interpreter) 패턴</td></tr>
-            <tr><td><a href="./3 행위 패턴/이터레이터 패턴.md">#</a> 이터레이터(Iterator) 패턴</td></tr>
-            <tr><td><a href="./3 행위 패턴/중재자 패턴.md">#</a> 중재자(Mediator) 패턴</td></tr>
-            <tr><td><a href="./3 행위 패턴/메멘토 패턴.md">#</a> 메멘토(Memento) 패턴</td></tr>
-             <tr><td><a href="./3 행위 패턴/옵저버 패턴.md">#</a> 옵저버(Observer) 패턴</td></tr>
-            <tr><td><a href="./3 행위 패턴/상태 패턴.md">#</a> 상태(State) 패턴</td></tr>
-            <tr><td><a href="./3 행위 패턴/전략 패턴.md">#</a> 전략(Strategy) 패턴</td></tr>
-            <tr><td><a href="./3 행위 패턴/템플릿 메소드 패턴.md">#</a> 템플릿 메소드(Template Method) 패턴</td></tr>
-            <tr><td><a href="./3 행위 패턴/방문자 패턴.md">#</a> 방문자(Visitor) 패턴</td></tr>
+    	    <tr><td><a href="./3. 행위 패턴/책임 연쇄 패턴.md">#</a> 책임 연쇄(Chain of Responsibility) 패턴</td></tr>
+            <tr><td><a href="./3. 행위 패턴/커맨드 패턴.md">#</a> 커맨드(Command) 패턴</a></td></tr>
+            <tr><td><a href="./3. 행위 패턴/인터프리터 패턴.md">#</a> 인터프리터(Interpreter) 패턴</td></tr>
+            <tr><td><a href="./3. 행위 패턴/이터레이터 패턴.md">#</a> 이터레이터(Iterator) 패턴</td></tr>
+            <tr><td><a href="./3. 행위 패턴/중재자 패턴.md">#</a> 중재자(Mediator) 패턴</td></tr>
+            <tr><td><a href="./3. 행위 패턴/메멘토 패턴.md">#</a> 메멘토(Memento) 패턴</td></tr>
+             <tr><td><a href="./3. 행위 패턴/옵저버 패턴.md">#</a> 옵저버(Observer) 패턴</td></tr>
+            <tr><td><a href="./3. 행위 패턴/상태 패턴.md">#</a> 상태(State) 패턴</td></tr>
+            <tr><td><a href="./3. 행위 패턴/전략 패턴.md">#</a> 전략(Strategy) 패턴</td></tr>
+            <tr><td><a href="./3. 행위 패턴/템플릿 메소드 패턴.md">#</a> 템플릿 메소드(Template Method) 패턴</td></tr>
+            <tr><td><a href="./3. 행위 패턴/방문자 패턴.md">#</a> 방문자(Visitor) 패턴</td></tr>
         </table>
     </div>
   </details>
