@@ -16,7 +16,7 @@
 
 <p>자세히 말하자면 DB에 고정적으로 저장되어있는 카드가 있어서 그 카드를 유저가 여러개 가질 수 있는 구조였다. 그 두 테이블을 다대다로 연결하기 위해서 UserCard라는 중간 테이블을 만들었는데, 여기서 User(부모)와 UserCard(자식)에cascadeType.ALL과 orphanRemoval를 적용했다.</p>
 
-```
+```java
 //User와 UserCard 1:N관계로 매핑하고, 그 카드를 지우는 메서드를 User 클래스 내부에 구현했다.
 @Getter
 @Builder
@@ -57,6 +57,6 @@ public class User {
 <p>위에서 설명한 코드는 이 <a href="https://github.com/YouGoodBackEnd/DSM-TCG-Backend/blob/master/src/main/java/com/project/tcg/domain/user/domain/User.java">링크</a>에서 자세히 볼 수 있다.</p>
 
 
-참고:
-고아객체 삭제 https://www.baeldung.com/jpa-cascade-remove-vs-orphanremoval<br>
+참고: <br>
+ https://www.baeldung.com/jpa-cascade-remove-vs-orphanremoval<br>
 https://velog.io/@banjjoknim/JPA에서-Cascade-orphanRemoval을-사용할-때-주의해야할-점
