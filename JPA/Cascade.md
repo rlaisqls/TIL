@@ -33,7 +33,8 @@ cascade 옵션은 jpa를 사용할때 @OneToMany나 @ManyToOne에 옵션으로 �
 ---
 
 다음과 같이 연관관계 매핑 어노테이션에 속성으로 지정해주면 된다.
-```
+
+```java
 public class Card {
     ...
     @OneToMany(mappedBy = "card", cascade = CascadeType.REMOVE)
@@ -42,6 +43,5 @@ public class Card {
 }
 ```
 
-<div id="reference">참고:</div>
-Cascade https://www.baeldung.com/jpa-cascade-types<br>
-엔티티의 생명주기 https://gmlwjd9405.github.io/2019/08/08/jpa-entity-lifecycle.html
+<div id="reference">연관 개념:</div>
+엔티티의 생명주기 <a href="https://gmlwjd9405.github.io/2019/08/08/jpa-entity-lifecycle.html">https://gmlwjd9405.github.io/2019/08/08/jpa-entity-lifecycle.html</a>
