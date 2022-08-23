@@ -28,7 +28,7 @@ WHERE절과 유사한 기능을 하지만, 테이블에서 추출할 행을 제�
 
 ### HAVING절 쿼리 예제
 코드
-```
+```sql
 SELECT A.species, 
        SUM(A.count) AS "마릿수"
 FROM animal A

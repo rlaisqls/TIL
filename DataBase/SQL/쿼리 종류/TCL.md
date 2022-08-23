@@ -12,18 +12,18 @@ TCL은 트랜잭션 제어어를 뜻한다. <a href="/DB/DB/트랜잭션.md">트
 ## TCL 쿼리 예제
 ---
 ### 커밋
-```
+```sql
 COMMIT;
 ```
 ### 롤백
-```
+```sql
 ROLLBACK;
 ```
 ### 세이브포인트
-```
+```sql
 SAVEPOINT SVPT;
 ```
 ### 세이브포인트까지 롤백
-```
+```sql
 ROLLBACK TO SVPT;
 ```

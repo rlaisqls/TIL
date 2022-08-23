@@ -16,7 +16,7 @@ DDL은 데이터 정의어를 뜻한다. DB를 구성하는 물리적 객체(사
 ---
 ### 테이블 생성
 CREATE문을 통해 테이블을 생성하는 쿼리이다. 
-```
+```sql
 CREATE TABLE 테이블명1(
     컬럼명1 DATATYPE,
     컬럼명2 DATATYPE,
@@ -24,13 +24,13 @@ CREATE TABLE 테이블명1(
 );
 ```
 SELECT문으로 테이블을 생성하는 방법도 있다. (테이블 구조와 일부 데이터는 똑같이 복사되지만 제약조건은 복사되지 않는다.)
-```
+```sql
 CREATE TABLE 테이블명2
 AS SELECT * FROM 테이블명1;
 ```
 ### 외래키 생성
 생성된 테이블에 외래키(FK)를 생성하는 쿼리이다. 
-```
+```sql
 ALTER TABLE 테이블명1
 ADD CONSTRAINT 제약조건명2 
 FOREIGN KEY (컬럼명1)
@@ -38,50 +38,50 @@ REFERENCES 테이블명2 (컬럼명3);
 ```
 ---
 ### 칼럼 추가
-```
+```sql
 ALTER TABLE 테이블명1 ADD (컬럼명 VARCHAR(5) NULL);  
 ```
 ### 칼럼 삭제
-```
+```sql
 ALTER TABLE 테이블명1 DROP 컬럼명;  
 ```
 ### 데이터형 및 제약조건 변경
-``` 
+``` sql
 ALTER TABLE 테이블명1 MODIFY(컬럼명 NUMBER(1)
                             DEFALT 0 NOT NULL
                             NOVALIDATE);  
 ```
 ### 제약조건 삭제
-```
+```sql
 ALTER TABLE 테이블명1 DROP CONSTRAINT 제약조건명1;  
 ```
 ### 칼럼명 변경
-```
+```sql
 ALTER TABLE 테이블명1
 RENAME COLUMN 컬럼명 TO 새컬럼명;  
 ```
 ---
 ### 테이블명 변경
-```
+```sql
 RENAME 테이블명1 TO 새테이블명1;
 ```
-```
+```sql
 ALTER TABLE 테이블명1
 RENAME 테이블명1 TO 새테이블명2;  
 ```
 ### 테이블 내 데이터 제거
-```
+```sql
 TRUNCATE TABLE 테이블명1;
 ```
 ### 테이블 제거
-```
+```sql
 DROP TABLE 테이블명1;
 ```
 RESTRICT 명령어를 붙이면 삭제할 테이블이 참조 중인 경우에 테이블을 삭제하지 않는다.
-```
+```sql
 DROP TABLE 새테이블명1 RESTRICT;
 ```
 CASCADE 명령어를 붙이면 삭제할 테이블을 참조 중인 모든 요소를 전부 삭제한다.
-```
+```sql
 DROP TABLE 새테이블명1 CASCADE;
 ```

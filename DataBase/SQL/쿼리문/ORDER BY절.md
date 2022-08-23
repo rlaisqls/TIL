@@ -7,7 +7,7 @@ ORDER BY절은 SELECT문에서 조회한 데이터 집합을 특정 칼럼 기�
 </p>
 
 ### ORDER BY절 쿼리 예제
-```
+```sql
 SELECT *
 FROM 테이블명1 A
 ORDER BY A.컬럼명1
