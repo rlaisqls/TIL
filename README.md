@@ -81,10 +81,10 @@
         </table>
         <table>
             <th>쿼리문</th>
-            <tr><td><a href="./DataBase/SQL/쿼리문/제약조건.md">#</a> 제약조건</td></tr>
-            <tr><td><a href="./DataBase/SQL/쿼리문/집계함수.md">#</a> 집계함수</td></tr>
-            <tr><td><a href="./DataBase/SQL/쿼리문/GROUP BY와 HAVING절.md">#</a> GROUP BY와 HAVING절</td></tr>
-            <tr><td><a href="./DataBase/SQL/쿼리문/ORDER BY절.md">#</a> ORDER BY절</td></tr>
+            <tr><td><a href="./DataBase/SQL/쿼리명령어/제약조건.md">#</a> 제약조건</td></tr>
+            <tr><td><a href="./DataBase/SQL/쿼리명령어/집계함수.md">#</a> 집계함수</td></tr>
+            <tr><td><a href="./DataBase/SQL/쿼리명령어/GROUP BY와 HAVING절.md">#</a> GROUP BY와 HAVING절</td></tr>
+            <tr><td><a href="./DataBase/SQL/쿼리명령어/ORDER BY절.md">#</a> ORDER BY절</td></tr>
         </table>
     </div>
   </details>
