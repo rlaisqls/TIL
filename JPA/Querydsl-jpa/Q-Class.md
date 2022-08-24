@@ -1,6 +1,6 @@
-# Q Type
+# Q-Class
 
-Q Type는 컴파일 시점에 JPAAnnotationProcessor가 @Entity, @Data같은 Annotation이 붙어있는 클래스를 분석하여 자동으로 생성되는 클래스이다.
+Q-Class는 컴파일 시점에 JPAAnnotationProcessor가 @Entity, @Data같은 Annotation이 붙어있는 클래스를 분석하여 자동으로 생성되는 클래스이다.
 
 Q 클래스 인스턴스를 사용하는 방법은 총 2가지가 있다.
 
