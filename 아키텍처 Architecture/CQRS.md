@@ -56,11 +56,14 @@ CQRS는
 - Event Sourcing
 - Eventual Consistency
 - Domain Driven Design
+
 과 같은 아키텍처 패턴과 방법론을 파생하거나 필요로 할 수 있으며, 최종적으로는 명령과 조회에 대한 책임이 별도의 애플리케이션으로 완벽히 분리된 형태로 구현될 수 있다.
 
 CQRS는 애플리케이션의 복잡도가 증가하는 경우에 큰 변화를 줄 수 있는 방법중 하나인 것 같다.
 
 #### 참고하면 좋은 글/영상
 <a href="https://www.popit.kr/cqrs-eventsourcing">나만 모르고 있던 CQRS & EventSourcing</a>
+
 <a href="www.youtube.com/watch?v=BnS6343GTkY">[우아콘2020] 배달의민족 마이크로서비스 여행기</a>
+
 <a href="https://martinfowler.com/bliki/CQRS.html">마틴파울러 블로그</a>
