@@ -12,7 +12,7 @@ jackson은 java.lang reflection 라이브러리를 사용한다.
 
 기본생성자가 있는 경우에는 _constructor.newInstance()를 사용하여, 객체를 생성한다.
 
-```
+```java
 @Override
 public final Object call() throws Exception {
     return _constructor.newInstance();
@@ -21,7 +21,7 @@ public final Object call() throws Exception {
 
 기본 생성자가 없는 경우에는 _constructor.newInstance(Object[] args) 또는 _constructor.newInstance(Object arg) 등을 사용하여 생성한다.
 
-```
+```java
 @Override
 public final Object call(Object[] args) throws Exception {
     return _constructor.newInstance(args);
