@@ -8,7 +8,7 @@
 
 ### Hexagonal Architecture의 특징
 
-<img src="https://beyondxscratch.com/wp-content/uploads/2020/08/overview-of-a-hexagonal-architecture.png">
+<img height=300px src="https://beyondxscratch.com/wp-content/uploads/2020/08/overview-of-a-hexagonal-architecture.png">
 
 위의 그림은 Hexagonal Architecture의 구조를 간단히 표현한 것이다.
 
@@ -22,7 +22,7 @@
 
 ### Hexagonal Architecture에서의 Interface 사용
 
-<img src="https://beyondxscratch.com/wp-content/uploads/2020/08/implementation-of-the-hexagonal-architecture-1024x554.png">
+<img height=300px src="https://beyondxscratch.com/wp-content/uploads/2020/08/implementation-of-the-hexagonal-architecture-1024x554.png">
 
 육각형의 독립성을 보장하기 위해서는 의존성의 방향이 역전되어야 한다.
 
