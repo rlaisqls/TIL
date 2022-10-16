@@ -75,4 +75,4 @@ Enter admin password (min 8 characters long): qwertyuiop...
 
 ec2에서 swarmpit을 사용하는 경우 설정한 포트를 인바운드 규칙에 추가해줘야한다.
 
-`EC2 IP주소:swarmpit 포트`를 통해 접속 후, 로그인하면 Swarmpit으로 docker 컨테이너들을 GUI로 배포 및 관리할 수 있다.
+`서버 주소:swarmpit 포트`를 통해 접속 후, 로그인하면 Swarmpit으로 docker 컨테이너들을 GUI로 배포 및 관리할 수 있다.
