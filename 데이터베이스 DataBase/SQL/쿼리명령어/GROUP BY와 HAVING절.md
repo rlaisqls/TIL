@@ -3,7 +3,7 @@ GROUP BY절은 GROUP BY절에 기재한 컬럼을 기춘으로 결과 집합을 
 
 ### GROUP BY절 쿼리 예제
 코드
-```
+```sql
 SELECT A.species, 
        SUM(A.count) AS "마릿수"
 FROM animal A
@@ -18,7 +18,8 @@ species | 마릿수
 고양이  | 40
 앵무새  | 15
 ```
-# HAVING절
+
+# 🐬 HAVING절
 <p>
 HAVING절은 그룹을 나타내는 결과집합의 행에 조건이 적용된다. HAVING절에는 GROUP BY절의 기준 항목이나 소그룹의 집계함수가 조건으로 사용되고, 만들어진 소그룹 중 HAVING절 조건에 만족되는 내용만 출력한다.
 </p>
