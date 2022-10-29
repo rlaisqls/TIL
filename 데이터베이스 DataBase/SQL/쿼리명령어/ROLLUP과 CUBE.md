@@ -39,7 +39,7 @@ SELECT student.grade AS 학년,
        student.sex AS 성별,
        COUNT(*) AS 인원수
 FROM student
-GROUP BY CUBE(grade)
+GROUP BY CUBE(grade, sex)
 ```
 
 #### 결과
