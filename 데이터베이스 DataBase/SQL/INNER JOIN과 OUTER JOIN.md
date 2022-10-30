@@ -74,7 +74,7 @@ null |  6
 
 ### Full outer join
 
-Full outer join을 하면 A와 B의 합집합을 얻게 됩니다. B에는 있는데 A에 없는 부분은 A에서는 해당 부분이 null 이 되고, A에는 있는데 B에 없는 부분에서는 B에서는 해당 부분이 null 이 됩니다.
+Full outer join을 하면 A와 B의 합집합을 얻게 됩니다. B에는 있는데 A에 없는 부분은 A에서는 해당 부분이 null 이 되고, A에는 있는데 B에 없는 부분에서는 B에서는 해당 부분이 null 이 된다.
 
 ```sql
 SELECT *
