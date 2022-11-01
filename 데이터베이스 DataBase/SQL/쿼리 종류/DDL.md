@@ -63,11 +63,8 @@ RENAME COLUMN 컬럼명 TO 새컬럼명;
 ---
 ### 테이블명 변경
 ```sql
-RENAME 테이블명1 TO 새테이블명1;
-```
-```sql
 ALTER TABLE 테이블명1
-RENAME 테이블명1 TO 새테이블명2;  
+RENAME TO 새테이블명2;  
 ```
 ### 테이블 내 데이터 제거
 ```sql
