@@ -55,7 +55,7 @@ docker swarm init
 Docker swarm을 관리하기 쉽게 GUI형태로 확인할 수 있는 도구인 <a href="https://swarmpit.io/">Swarmpit</a>을 다운받는다.
 
 ```js
-docker run -it --rm \
+sudo docker run -it --rm \
   --name swarmpit-installer \
   --volume /var/run/docker.sock:/var/run/docker.sock \
 swarmpit/install:1.9
