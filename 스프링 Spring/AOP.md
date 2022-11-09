@@ -78,7 +78,7 @@ public class UseService {
 		
     public void useLogic() {
         //Target 호출하는 것처럼 부가 기능이 추가된 Proxy를 호출한다.
-        rgetService.logic();
+        targetService.logic();
     }
 }
 ```
