@@ -2,16 +2,16 @@
 
 ## Delete(/Modify) Action
 
-**RESTRICT**<br>
-본인의 PK값이 Child 테이블에 FK로 존재하지 않는 경우에만 삭제를 허용한다.
+1. Cascade: Master 삭제 시 Child 같이 삭제
+2. Set Null: Master 삭제 시 Child의 FK 필드 Null
+3. set Default: Master 삭제 시 Child FK 필드 Default 값으로 설정
+4. Restrict: Child 테이블에 PK 값이 없는 경우만 Master 삭제 허용
+5. No Action: 참조 무결성을 위반하는 삭제/수정 액션을 취하지 않음(MySQL에서는 Restrict와 동일함)
 
-**NO ACTION** : 참조무결성을 위반하는 삭제/수정 액션을 취하지 않는다. 표준 SQL에 등장하는 키워드로, MySQL에서는 `RESTRICT` 옵션과 동일한 기능이다.
+## Insert Action
 
-**CASCADE**<br>
-부모 테이블에서 `UPDATE` 및 `DELETE`8 연산이 발생하면 해당 인스턴스를 참조하고 있는 자식 테이블에도 자동으로 연산을 수행한다.
-
-**SET NULL**<br>
-Child 테이블이 존재하지 않는(삭제된) 키를 FK로 가지고 있는 경우 Null값으로 처리한다.
-
-**SET DEFAULT**<br>
-Child 테이블이 존재하지 않는(삭제된) 키를 FK로 가지고 있는 경우 기본값을 삽입한다.
+1. Automatic: Master 테이블에 PK가 없는 경우 Master PK를 생성 후 Child
+2. Set Null: Master 테이블에 PK가 없는 경우 Child 외부키를 Null 값으로 처리
+3. Set Default: Master 테이블에 PK가 없는 경우 Child 외부키를 지정된 기본값으로 입력
+4. Dependant: Master 테이블에 PK가 존재할 때만 Child 입력 허용
+5. No Action: 참조무결성을 위반하는 입력 액션을 취하지 않음
