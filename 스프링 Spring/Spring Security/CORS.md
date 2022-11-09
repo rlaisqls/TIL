@@ -6,9 +6,9 @@ CORS란Cross-Origin Resource Sharing, 교차 출처 리소스 공유의 약자�
 
 Spring Security에서도 기본적으로 CORS가 제한되어있다. 이때 특정 도메인, 또는 전체 도메인에서의 요청을 허용하려면 아래와 같이 설정해주면 된다.
 
-```kotlin
+``java
 @Bean
-fun filterChain(httpSecurity: HttpSecurity): SecurityFilterChain {
+public class SecurityFilterChain filterChain(HttpSecurity: httpSecurity)  {
         
     return httpSecurity
         .cors().and() // cors 설정을 적용하겠다는 뜻
@@ -22,7 +22,7 @@ fun filterChain(httpSecurity: HttpSecurity): SecurityFilterChain {
     
 ```
 
-```kotlin
+```java
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
 
