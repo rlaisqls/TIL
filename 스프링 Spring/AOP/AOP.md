@@ -12,11 +12,12 @@ AOP 없이 흩어진 관심사를 처리하면 다음과 같은 문제가 발생
 - 따라서 흩어진 관심사를 별도의 클래스로 모듈화하여 위의 문제들을 해결하고, 결과적으로 OOP를 더욱 잘 지킬 수 있도록 도움을 주는 것이 AOP이다.
 
 ### AOP의 주요 개념
+
 **Aspect :** Advice + PointCut로 AOP의 기본 모듈
 
 **Advice :** Target에 제공할 부가 기능을 담고 있는 모듈
 
-**Target :** Advice이 부가 기능을 제공할 대상 (Advice가 적용될 비즈니스 로직)
+**Target :** Advic가이 부가 기능을 제공할 대상 (Advice가 적용될 비즈니스 로직)
 
 **JointPoint :** Advice가 적용될 위치. 메서드 진입 지점, 생성자 호출 시점, 필드에서 값을 꺼내올 때 등 다양한 시점에 적용 가능
 
@@ -82,3 +83,5 @@ public class UseService {
     }
 }
 ```
+
+Spring AOP에서는 AOP를 적용할 클래스를 지정하면 내부적으로 프록시가 생성되어 작동한다.
