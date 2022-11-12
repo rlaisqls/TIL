@@ -18,7 +18,7 @@ Pointcut은 Advice가 부가 기능을 제공할 대상을 특정하는 정규�
 |@within|limits matching to join points within types that have the given annotation (the execution of methods declared in types with the given annotation when using Spring AOP)|
 |@annotation|limits matching to join points where the subject of the join point (method being executed in Spring AOP) has the given annotation|
 
-## `execution`
+# `execution`
 
 ```js
 execution([접근지정자] 리턴타입 [클래스경로].메서드이름(파라미터)
@@ -35,33 +35,33 @@ execution([접근지정자] 리턴타입 [클래스경로].메서드이름(파�
 ### Example
 
 - 모든 public 메서드:
-```java
+```js
 execution(public * *(..))
 ```
 
 - 'set'으로 시작하는 모든 메서드:
-```java
+```js
 execution(* set*(..))
 ```
 
 - `AccountService` 인터페이스에 의해 정의된 모든 메서드:
-```java
+```js
 execution(* com.xyz.service.AccountService.*(..))
 ```
 
 - service 패키지에 정의된 모든 메서드:
-```java
+```js
 execution(* com.xyz.service.*.*(..))
 ```
 
-- service 패키지 또는 그 하위 패키지에 정의된 모든 메서드중, 두개의 인자를 가지고 있고 두번째 인자가 String 타입인 메서드
-```java
+- service 패키지 또는 그 하위 패키지에 정의된 모든 메서드중, 두개의 인자를 가지고 있고 두번째 인자가 String 타입인 메서드:
+```js
 execution(* com.xyz.service..*.*(*,String))
 ```
 
-## `within`
+# `within`
 
-```java
+```js
 within(패키지경로)
 ```
 
@@ -69,17 +69,17 @@ within은 특정 패키지 안에 있는 클래스에 AOP를 적용하도록 한
 
 ### Example
 
-- service 패키지에 있는 모든 joinPoint(메서드)
-```java
+- service 패키지에 있는 모든 joinPoint(메서드):
+```js
 within(com.xyz.service.*)
 ```
 
-- service 패키지 또는 그 하위 패키지에 있는 joinPoint(메서드)
-```java
+- service 패키지 또는 그 하위 패키지에 있는 joinPoint(메서드):
+```js
 within(com.xyz.service..*)
 ```
 
-## `this`
+# `this`
 
 ```js
 this(클래스경로)
@@ -91,12 +91,12 @@ this(클래스경로)
 
 ### Example
 
-- 프록시가 `AccountService` 인터페이스를 구현하는 joinPoint(메서드)
-```java
+- 프록시가 `AccountService` 인터페이스를 구현하는 joinPoint(메서드):
+```js
 this(com.xyz.service.AccountService)
 ```
 
-## `target`
+# `target`
 
 ```js
 target(클래스경로)
@@ -106,14 +106,14 @@ target(클래스경로)
 
 ### Example
 
-- `AccountService` 클래스 안에 있는 joinPoint(메서드)
-```java
+- `AccountService` 클래스 안에 있는 joinPoint(메서드):
+```js
 target(com.xyz.service.AccountService)
 ```
 
-## `args`
+# `args`
 
-```java
+```js
 args(클래스경로)
 ```
 
@@ -123,17 +123,17 @@ args(클래스경로)
 
 ### Example
 
-- `Serializable` 한개를 파라미터로 받는 메서드
-```java
+- `Serializable` 한개를 파라미터로 받는 메서드:
+```js
 args(java.io.Serializable)
 ```
 
-- `Serializable`와 `Int`두개를 파라미터로 받는 메서드
-```java
+- `Serializable`와 `Int`두개를 파라미터로 받는 메서드:
+```js
 args(java.io.Serializable, Int)
 ```
 
-## `@target`, `@within`, `@annotation`, `@args`
+# `@target`, `@within`, `@annotation`, `@args`
 
 위 네개의 명시자는 특정 어노테이션을 가지고 있는 클래스, 혹은 메서드에 AOP를 적용하도록 하는 명시자이다. 각각 상세한 의미를 가지고있지만 서로 비슷하여 헷갈릴 수 있으니 비교하며 알아보자.
 
@@ -144,9 +144,11 @@ args(java.io.Serializable, Int)
 |@annotation|해당 어노테이션이 붙어있는 메서드 |
 |@args|인수의 런타입 유형이 특정 어노테이션을 가지고있는 메서드|
 
-## `bean`
+크게 더 설명할 부분이 없으므로 예시는 생략한다.
 
-```java
+# `bean`
+
+```js
 bean(빈 이름)
 ```
 
@@ -154,12 +156,16 @@ bean은 스프링에 등록된 빈의 이름으로 AOP 적용 대상을 명시�
 
 ### Example
 
-- 이름이 `tradeService`인 빈
-```java
+- 이름이 `tradeService`인 빈:
+```js
 bean(tradeService)
 ```
 
-- 이름이 `Service`로 끝나는 빈
-```java
+- 이름이 `Service`로 끝나는 빈:
+```js
 bean(*Service)
 ```
+
+---
+
+참고: [https://docs.spring.io/spring-framework/docs/4.3.15.RELEASE/spring-framework-reference/html/aop.html#aop-pointcuts](https://docs.spring.io/spring-framework/docs/4.3.15.RELEASE/spring-framework-reference/html/aop.html#aop-pointcuts)
