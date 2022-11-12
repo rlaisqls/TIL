@@ -1,4 +1,4 @@
-# @Component와 @Service의 차이
+# 🍃  @Component와 @Service의 차이
 
 @Component는 스프링 빈 등록을 위한 기본 annotation이다.
 
