@@ -46,11 +46,7 @@ MethodInterceptor 오브젝트는 여러 프록시가 공유해서 사용할 수
 
 스프링의 ProxyFactoryBean 방식은 두 가지 확장 기능인 부가기능(Advice)과 메소드 선정 로직(Pointcut)을 아래와 같은 유연한 구조로 설계하여, 기존의 장점을 그대로 가져갈 수 있도록 하였다.
 
-<br/>
-
 ![image](https://user-images.githubusercontent.com/81006587/201669169-0c2d51c2-3748-4494-be57-cb3231e86793.png)
-
-<br/>
 
 Advice와 Pointcut은 모두 Proxy에 DI로 주입되어 사용된다. 두 가지 모두 여러 프록시에서 공유가 가능하도록 만들어지기 때문에 싱글톤 빈으로 등록 가능하다.
 
