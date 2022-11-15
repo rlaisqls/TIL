@@ -4,8 +4,6 @@
 
 'static'키워드가 붙은 내부 클래스는 메모리에 하나만 올라가는 인스턴스가 아니다.
 
-
-
 ```java
 MyClass.InnerClass mic1 = new MyClass().new InnerClass();
 MyClass.InnerClass mic2 = new MyClass().new InnerClass();
