@@ -1,5 +1,6 @@
 # ⚓ K8s의 도커 런타임 사용중단
 
+![image](https://user-images.githubusercontent.com/81006587/201903310-cec614e1-d458-40be-afc3-9df77529e4d5.png)
 
 Source : https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/
 
