@@ -4,7 +4,7 @@
 
 비슷한 느낌으로 컨테이너 오케스트레이션은, `"컨테이너화 된 애플리케이션에 대한 자동화된 설정, 관리 및 제어 체계"`로 받아들일 수 있다.
 
-<img src= "https://shareditassets.s3.ap-northeast-2.amazonaws.com/production/uploads/upload_file/file/6728/4.Orchestration.png">
+<img height=300px src= "https://shareditassets.s3.ap-northeast-2.amazonaws.com/production/uploads/upload_file/file/6728/4.Orchestration.png">
 
 
 ## 컨테이너 오케스트레이션이 필요한 이유
