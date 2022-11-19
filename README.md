@@ -155,4 +155,5 @@
 ┗━　[README.md](./README.md)</br>
 .
 ╊━　[readme_template.md](./readme_template.md)</br>
-┗━　[pre━commit](./pre━commit)</br>
+╊━　[pre━commit](./pre━commit)</br>
+┗━　[debug.log](./debug.log)</br>
