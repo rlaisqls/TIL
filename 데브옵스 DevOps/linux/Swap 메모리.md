@@ -38,7 +38,6 @@ sudo vi /etc/fstab
 /swapfile swap swap defaults 0 0
 ```
 
-
 ## Swap 메모리 해제
 
 swapoff 명령어를 사용하여 Swap 메모리를 비활성화할 수 있다.
