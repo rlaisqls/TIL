@@ -4,6 +4,8 @@ Git에서는 어떤 이벤트가 생겼을 때 자동으로 특정 스크립트�
 
 프로젝트의 `.git/hooks` 폴더에 들어가서 해당 훅의 이름을 파일명으로 쉘스크립트를 작성하면, 해당 훅이 특정 상황에 자동으로 실행된다. 
 
+<img width="776" alt="image" src="https://user-images.githubusercontent.com/81006587/203177263-6763519c-e0d9-4dc0-a1e7-d9ea1b529de1.png">
+
 분류에 따른 훅은 아래 표와 같다.​
 
 ### Commit workflow hook
