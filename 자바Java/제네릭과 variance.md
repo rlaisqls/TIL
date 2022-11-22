@@ -10,7 +10,7 @@
 
 ```kotlin
 class Wrapper<T>(var value: T)
-
+ 
 fun main(vararg args: String) {
     val intWrapper = Wrapper(1)
     val strWrapper = Wrapper<String>("1")
