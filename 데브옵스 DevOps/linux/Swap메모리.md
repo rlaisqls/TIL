@@ -44,10 +44,10 @@ sudo vi /etc/fstab
 swapoff 명령어를 사용하여 Swap 메모리를 비활성화할 수 있다.
 
 ```java
-sudo swapon swapfile
+sudo swapoff swapfile
 ```
 
-그 후, 스왐파일로 사용했던 파일을 제거하면 Swap 메모리를 완전히 삭제할 수 있다.
+그 후, 스왑파일로 사용했던 파일을 제거하면 Swap 메모리를 완전히 삭제할 수 있다.
 
 ```java
 sudo rm -r swapfile
