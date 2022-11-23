@@ -26,6 +26,12 @@ where option can be:
     | SYSID uid
 ```
 
+#### example
+```
+CREATE ROLE rladmsqls WITH LOGIN PASSWORD ‘password’;
+ALTER ROLE rladmsqls CREATEDB;
+```
+
 ####  테이블 리스트 보기
 ```
  \dt
@@ -63,54 +69,10 @@ pg_ctl register   [-N SERVICENAME] [-U USERNAME] [-P PASSWORD] [-D DATADIR]
 pg_ctl unregister [-N 서비스이름]
 ```
 
-#### 옵션
-```
--D, -- pgdata DATADIR
-
--s, --slient
-
--t SECS
-
--w 작업이 끝날때 까지 기다림
-
--W 작업이 끝날때 까지 기다리지 않음
-
---help
-
---version
-```
-
-#### 시작
-```
-#시작
-pg_ctl start
-
-#포트 5433을 사용하고 fsync 없이 실행
-pg_ctl -o "-F -p 5433" start
-```
-
-#### 중지
+#### brew
 
 ```
-#중지
-pg_ctl stop
-
-#-m 옵션을 제어 
-pg_ctl stop -m smart
-
+brew services start postgresql
+brew services stop postgresql
 ```
-
-#### 재시작
-
-```
-#재시작
-pg_ctl restart
-
-#포트 5433을 사용하여 다시 시작
-pg_ctl -o "-F -p 5433" restart
-```
-
-#### 상태표시
-```
-pg_ctl status
-```
+ 
