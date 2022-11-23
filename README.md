@@ -157,7 +157,8 @@
 ┃　　　┃　　　　　　　╊━　[Procedural／Nonprocedural DML.md](./데이터베이스 DataBase/SQL/쿼리종류/Procedural／Nonprocedural DML.md)</br>
 ┃　　　┃　　　　　　　┗━　[TCL.md](./데이터베이스 DataBase/SQL/쿼리종류/TCL.md)</br>
 ┃　　　┗━　[DBMS](./데이터베이스 DataBase/DBMS)</br>
-┃　　　　　　　┗━　[PostgreSQL.md](./데이터베이스 DataBase/DBMS/PostgreSQL.md)</br>
+┃　　　　　　　╊━　[PostgreSQL.md](./데이터베이스 DataBase/DBMS/PostgreSQL.md)</br>
+┃　　　　　　　┗━　[PostgreSQL명령어.md](./데이터베이스 DataBase/DBMS/PostgreSQL명령어.md)</br>
 ╊━　[개발](./개발)</br>
 ┃　　　┗━　[기업이 오픈소스 소프트웨어를　선택하는 이유.md](./개발/기업이 오픈소스 소프트웨어를　선택하는 이유.md)</br>
 ┗━　[README.md](./README.md)</br>
