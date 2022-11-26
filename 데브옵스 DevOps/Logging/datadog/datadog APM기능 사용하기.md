@@ -62,8 +62,14 @@ docker run -d --cgroupns host \
 
 ### 4. 모니터링
 
-연결한 후 APM 탭에 들어가보면, 정말 많은 정보를 확인할 수 있다. jvm 상태와 모든 프로그램에 대한 트래이싱 데이터 등등을 꼼꼼히 살펴볼 수 있다. 직접 설정하여 둘러보자!
+연결한 후 APM 탭에 들어가보면, 정말 많은 정보를 확인할 수 있다. jvm 상태와 모든 프로그램에 대한 트래이싱 데이터 등등을 꼼꼼히 살펴볼 수 있다. 
+  
+![image](https://user-images.githubusercontent.com/81006587/204086332-2d092adc-36f4-4770-a8ed-7a91e02914e1.png)
 
+![image](https://user-images.githubusercontent.com/81006587/204086343-e169c32b-e0fc-40dc-8374-c6c42f89f2be.png)
 
+![image](https://user-images.githubusercontent.com/81006587/204086356-d8e06ce4-c786-459b-96e8-2dc56bec2c81.png)
+
+화면을 보면, 현재 실행 중인 앱에서 어떤 것이 가장 많은 요청을 받고 있는지, 어떤 동작을 얼마나 수행하는지 Code-Level 단위로 세세하게 나오고 있다. 더 자세한 화면들은 직접 설정하여 둘러보자!
 
 datadog은 한국어로 친절하게 설명되어있는 자료가 별로 없는 반면에, Docs 내용이 정말 유익하다.  APM 기능으로 어떤 것들을 할 수 있고 볼 수 있는지 더 알아보고 싶다면 <a href="https://docs.datadoghq.com/tracing/glossary/">Docs<a/>에 직접 들어가서 보면 좋다 ㅎㅎ
