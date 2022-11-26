@@ -72,4 +72,4 @@ docker run -d --cgroupns host \
 
 화면을 보면, 현재 실행 중인 앱에서 어떤 것이 가장 많은 요청을 받고 있는지, 어떤 동작을 얼마나 수행하는지 Code-Level 단위로 세세하게 나오고 있다. 더 자세한 화면들은 직접 설정하여 둘러보자!
 
-datadog은 한국어로 친절하게 설명되어있는 자료가 별로 없는 반면에, Docs 내용이 정말 유익하다.  APM 기능으로 어떤 것들을 할 수 있고 볼 수 있는지 더 알아보고 싶다면 <a href="https://docs.datadoghq.com/tracing/glossary/">Docs<a/>에 직접 들어가서 보면 좋다 ㅎㅎ
+datadog은 한국어로 친절하게 설명되어있는 자료가 별로 없는 반면에, Docs 내용이 정말 유익하다.  APM 기능으로 어떤 것들을 할 수 있고 볼 수 있는지 더 알아보고 싶다면 <a href="https://docs.datadoghq.com/tracing/glossary/">Docs<a/>에 직접 들어가서 보면 좋다.
