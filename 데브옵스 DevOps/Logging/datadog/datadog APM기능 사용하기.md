@@ -20,7 +20,7 @@ Application Performance Monitoring 의 약자로 구동 중인 애플리케이�
 
 Agent의 모든 설정은 제목의 파일명에서 확인할 수 있다. 각각의 설치환경 별로 해당파일의 경로를 모두 소개해주고 있으니 APM Service setup docs를 확인하여 파일을 찾아보자.
 
-단, 도커의 경우에는 그냥 실행시 `e- DD_APM_ENABLED=true`로 설정해주면 된다.
+단, 컨테이너 Agent의 경우에는 그냥 실행시 `-e DD_APM_ENABLED=true`로 설정해주면 된다.
 
 그 외의 경우에는 설정 파일을 열어 쭈욱 밑으로 내려 Traces Configuration에서 아래와 같이 되어있는 부분을 찾는다.
 
@@ -72,4 +72,4 @@ docker run -d --cgroupns host \
 
 화면을 보면, 현재 실행 중인 앱에서 어떤 것이 가장 많은 요청을 받고 있는지, 어떤 동작을 얼마나 수행하는지 Code-Level 단위로 세세하게 나오고 있다. 더 자세한 화면들은 직접 설정하여 둘러보자!
 
-datadog은 한국어로 친절하게 설명되어있는 자료가 별로 없는 반면에, Docs 내용이 정말 유익하다.  APM 기능으로 어떤 것들을 할 수 있고 볼 수 있는지 더 알아보고 싶다면 <a href="https://docs.datadoghq.com/tracing/glossary/">Docs<a/>에 직접 들어가서 보면 좋다 ㅎㅎ
+datadog은 한국어로 친절하게 설명되어있는 자료가 별로 없는 반면에, Docs 내용이 정말 유익하다.  APM 기능으로 어떤 것들을 할 수 있고 볼 수 있는지 더 알아보고 싶다면 <a href="https://docs.datadoghq.com/tracing/glossary/">Docs<a/>에 직접 들어가서 보면 좋다.
