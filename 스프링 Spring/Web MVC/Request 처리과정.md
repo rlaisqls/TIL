@@ -2,7 +2,9 @@
 
 Spring Web MVC 에서 HTTP Request를 처리하는 핵심 클래스는 DispatcherServlet이란 클래스이다. 아 DispatcherServlet은 MVC 아키텍처로 구성된 프레젠테이션 계층을 만들 수 있도록 설계되어 있다.
 
-서버가 브라우저 등의 HTTP 클라이언트로부터 요청을 받아 처리 후 응답하기까지의 과정을 알아보다.
+서버가 브라우저 등의 HTTP 클라이언트로부터 요청을 받아 처리 후 응답하기까지의 과정을 알아보자.
+
+![image](https://user-images.githubusercontent.com/81006587/204775740-0a612c04-c871-4710-8b99-44daa50fc176.png)
 
 ## 1. DispatcherServlet의 요청 접수
 
@@ -45,7 +47,6 @@ HttpServletResponse도 함께 전해준다. 원한다면 리턴하고 싶은 값
 ## 5. HTTP 응답 돌려주기
 
 뷰 생성까지의 모든 작업을 마쳤으면 DispatcherServlet은 등록되 후처리기가 있는지 확인하고, 있다면 후처리기에서 후속 작업을 진행한 뒤에 뷰가 만들어준 HttpServletResponse에 담인 최종 결과를 서블릿 컨테이너에게 돌려준다. 서블릿 컨테이너는 HttpServletResponse에 담긴 정보를 HTTP 응답으로 만들어 사용자의 브라우저나 클라리런트에게 전송하고 작업을 종료한다.
-
 
 ---
 
