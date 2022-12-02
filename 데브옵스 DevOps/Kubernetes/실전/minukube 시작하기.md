@@ -10,8 +10,6 @@ linux 기준 명령어는 다음과 같다.
 curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl
 ```
 
-
-
 mac 기준 명령어는 다음과 같다.
 
 ```bash
