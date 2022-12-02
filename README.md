@@ -119,18 +119,18 @@
 ┃　　　　　　　╊━　[README.md](./데브옵스 DevOps/Kubernetes/README.md)</br>
 ┃　　　　　　　╊━　[k8s와같이쓰면좋은툴.md](./데브옵스 DevOps/Kubernetes/k8s와같이쓰면좋은툴.md)</br>
 ┃　　　　　　　╊━　[실전](./데브옵스 DevOps/Kubernetes/실전)</br>
-┃　　　　　　　┃　　　╊━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/실전/환경변수 설정.md)</br>
 ┃　　　　　　　┃　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/실전/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　　　　　┃　　　╊━　[SpringBoot 서비스를　위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/실전/SpringBoot 서비스를　위한 Kubernetes 설정.md)</br>
 ┃　　　　　　　┃　　　╊━　[NodePort와 ServicePort와 targetPort.md](./데브옵스 DevOps/Kubernetes/실전/NodePort와 ServicePort와 targetPort.md)</br>
-┃　　　　　　　┃　　　┗━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/실전/minukube 시작하기.md)</br>
+┃　　　　　　　┃　　　╊━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/실전/minukube 시작하기.md)</br>
+┃　　　　　　　┃　　　┗━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/실전/환경변수 설정.md)</br>
 ┃　　　　　　　┗━　[이론](./데브옵스 DevOps/Kubernetes/이론)</br>
 ┃　　　　　　　　　　　╊━　[K8s Architecture.md](./데브옵스 DevOps/Kubernetes/이론/K8s Architecture.md)</br>
 ┃　　　　　　　　　　　╊━　[K8s의 도커런타임 사용중단.md](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
 ┃　　　　　　　　　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
 ┃　　　　　　　　　　　╊━　[Workloads](./데브옵스 DevOps/Kubernetes/이론/Workloads)</br>
-┃　　　　　　　　　　　┃　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Workloads/Deployments.md)</br>
-┃　　　　　　　　　　　┃　　　┗━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Workloads/Endpoints.md)</br>
+┃　　　　　　　　　　　┃　　　╊━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Workloads/Endpoints.md)</br>
+┃　　　　　　　　　　　┃　　　┗━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Workloads/Deployments.md)</br>
 ┃　　　　　　　　　　　┗━　[Pod.md](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
 ╊━　[언어 Language](./언어 Language)</br>
 ┃　　　╊━　[Kotlin](./언어 Language/Kotlin)</br>
