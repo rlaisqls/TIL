@@ -128,12 +128,12 @@
 ┃　　　　　　　┃　　　╊━　[K8s Architecture.md](./데브옵스 DevOps/Kubernetes/이론/K8s Architecture.md)</br>
 ┃　　　　　　　┃　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
 ┃　　　　　　　┃　　　╊━　[Pod.md](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
-┃　　　　　　　┃　　　╊━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
-┃　　　　　　　┃　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
 ┃　　　　　　　┃　　　╊━　[ReplicaSet.md](./데브옵스 DevOps/Kubernetes/이론/ReplicaSet.md)</br>
 ┃　　　　　　　┃　　　╊━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
+┃　　　　　　　┃　　　╊━　[K8s의 도커런타임 사용중단.md](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
 ┃　　　　　　　┃　　　╊━　[Helm.md](./데브옵스 DevOps/Kubernetes/이론/Helm.md)</br>
-┃　　　　　　　┃　　　┗━　[K8s의 도커런타임 사용중단.md](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
+┃　　　　　　　┃　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
+┃　　　　　　　┃　　　┗━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
 ┃　　　　　　　┗━　[ㅇㅇ.yml](./데브옵스 DevOps/Kubernetes/ㅇㅇ.yml)</br>
 ╊━　[언어 Language](./언어 Language)</br>
 ┃　　　╊━　[Kotlin](./언어 Language/Kotlin)</br>
