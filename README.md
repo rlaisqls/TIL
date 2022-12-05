@@ -136,19 +136,6 @@
 ┃　　　　　　　　　　　╊━　[기본문법.md](./스프링 Spring/JPA/QuerydslJpa/기본문법.md)</br>
 ┃　　　　　　　　　　　╊━　[동적쿼리.md](./스프링 Spring/JPA/QuerydslJpa/동적쿼리.md)</br>
 ┃　　　　　　　　　　　┗━　[벌크연산.md](./스프링 Spring/JPA/QuerydslJpa/벌크연산.md)</br>
-╊━　[개발](./개발)</br>
-┃　　　╊━　[기업이 오픈소스 소프트웨어를　선택하는 이유.md](./개발/기업이 오픈소스 소프트웨어를　선택하는 이유.md)</br>
-┃　　　┗━　[RPC와Rest.md](./개발/RPC와Rest.md)</br>
-╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)</br>
-┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
-┃　　　╊━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
-┃　　　╊━　[멀티모듈.md](./아키텍처 및 방법론/멀티모듈.md)</br>
-┃　　　┗━　[DDD](./아키텍처 및 방법론/DDD)</br>
-┃　　　　　　　╊━　[컨트랙트.md](./아키텍처 및 방법론/DDD/컨트랙트.md)</br>
-┃　　　　　　　╊━　[이벤트 스토밍.md](./아키텍처 및 방법론/DDD/이벤트 스토밍.md)</br>
-┃　　　　　　　╊━　[DDD.md](./아키텍처 및 방법론/DDD/DDD.md)</br>
-┃　　　　　　　╊━　[DDD의 아키텍처.md](./아키텍처 및 방법론/DDD/DDD의 아키텍처.md)</br>
-┃　　　　　　　┗━　[도메인영역.md](./아키텍처 및 방법론/DDD/도메인영역.md)</br>
 ╊━　[디자인패턴 DesignPattern](./디자인패턴 DesignPattern)</br>
 ┃　　　╊━　[디자인패턴.md](./디자인패턴 DesignPattern/디자인패턴.md)</br>
 ┃　　　╊━　[1. 생성패턴](./디자인패턴 DesignPattern/1. 생성패턴)</br>
@@ -182,14 +169,14 @@
 ┃　　　╊━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
 ┃　　　╊━　[Logging](./데브옵스 DevOps/Logging)</br>
 ┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog)</br>
-┃　　　┃　　　　　　　╊━　[datadog APM기능 사용하기.md](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
-┃　　　┃　　　　　　　┗━　[helmChart로　Agent 설치.md](./데브옵스 DevOps/Logging/datadog/helmChart로　Agent 설치.md)</br>
+┃　　　┃　　　　　　　╊━　[helmChart로　Agent 설치.md](./데브옵스 DevOps/Logging/datadog/helmChart로　Agent 설치.md)</br>
+┃　　　┃　　　　　　　┗━　[datadog APM기능 사용하기.md](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
 ┃　　　╊━　[Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　╊━　[ContainerRuntime.md](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
 ┃　　　┃　　　┗━　[Container Orchestration.md](./데브옵스 DevOps/Container/Container Orchestration.md)</br>
 ┃　　　╊━　[linux](./데브옵스 DevOps/linux)</br>
-┃　　　┃　　　╊━　[Swap메모리.md](./데브옵스 DevOps/linux/Swap메모리.md)</br>
-┃　　　┃　　　┗━　[namespace와 cgroup.md](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　╊━　[namespace와 cgroup.md](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　┗━　[Swap메모리.md](./데브옵스 DevOps/linux/Swap메모리.md)</br>
 ┃　　　╊━　[Docker](./데브옵스 DevOps/Docker)</br>
 ┃　　　┃　　　╊━　[\010Docker.md](./데브옵스 DevOps/Docker/\010Docker.md)</br>
 ┃　　　┃　　　╊━　[가상화와 컨테이너.md](./데브옵스 DevOps/Docker/가상화와 컨테이너.md)</br>
@@ -205,22 +192,38 @@
 ┃　　　　　　　┃　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
 ┃　　　　　　　┃　　　╊━　[Pod.md](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
 ┃　　　　　　　┃　　　╊━　[ReplicaSet.md](./데브옵스 DevOps/Kubernetes/이론/ReplicaSet.md)</br>
-┃　　　　　　　┃　　　╊━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
 ┃　　　　　　　┃　　　╊━　[K8s의 도커런타임 사용중단.md](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
 ┃　　　　　　　┃　　　╊━　[Helm.md](./데브옵스 DevOps/Kubernetes/이론/Helm.md)</br>
 ┃　　　　　　　┃　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
-┃　　　　　　　┃　　　┗━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
-┃　　　　　　　╊━　[ㅇㅇ.yml](./데브옵스 DevOps/Kubernetes/ㅇㅇ.yml)</br>
-┃　　　　　　　╊━　[kk.yml](./데브옵스 DevOps/Kubernetes/kk.yml)</br>
-┃　　　　　　　╊━　[dd.yml](./데브옵스 DevOps/Kubernetes/dd.yml)</br>
+┃　　　　　　　┃　　　╊━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
+┃　　　　　　　┃　　　┗━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
 ┃　　　　　　　╊━　[실전](./데브옵스 DevOps/Kubernetes/실전)</br>
 ┃　　　　　　　┃　　　╊━　[SpringBoot 서비스를　위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/실전/SpringBoot 서비스를　위한 Kubernetes 설정.md)</br>
-┃　　　　　　　┃　　　╊━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/실전/minukube 시작하기.md)</br>
 ┃　　　　　　　┃　　　╊━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/실전/환경변수 설정.md)</br>
-┃　　　　　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/실전/K8s를 위한 SpringBoot 개발.md)</br>
+┃　　　　　　　┃　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/실전/K8s를 위한 SpringBoot 개발.md)</br>
+┃　　　　　　　┃　　　┗━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/실전/minukube 시작하기.md)</br>
 ┃　　　　　　　╊━　[ArgoCD](./데브옵스 DevOps/Kubernetes/ArgoCD)</br>
 ┃　　　　　　　┃　　　┗━　[ArgoCD 설치.md](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
-┃　　　　　　　┗━　[kk　copy.yml](./데브옵스 DevOps/Kubernetes/kk　copy.yml)</br>
+┃　　　　　　　╊━　[dd.yml](./데브옵스 DevOps/Kubernetes/dd.yml)</br>
+┃　　　　　　　╊━　[kk　copy.yml](./데브옵스 DevOps/Kubernetes/kk　copy.yml)</br>
+┃　　　　　　　┗━　[kk.yml](./데브옵스 DevOps/Kubernetes/kk.yml)</br>
+╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)</br>
+┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
+┃　　　╊━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
+┃　　　╊━　[멀티모듈.md](./아키텍처 및 방법론/멀티모듈.md)</br>
+┃　　　╊━　[DDD](./아키텍처 및 방법론/DDD)</br>
+┃　　　┃　　　╊━　[컨트랙트.md](./아키텍처 및 방법론/DDD/컨트랙트.md)</br>
+┃　　　┃　　　╊━　[이벤트 스토밍.md](./아키텍처 및 방법론/DDD/이벤트 스토밍.md)</br>
+┃　　　┃　　　╊━　[도메인영역.md](./아키텍처 및 방법론/DDD/도메인영역.md)</br>
+┃　　　┃　　　╊━　[DDD의 아키텍처.md](./아키텍처 및 방법론/DDD/DDD의 아키텍처.md)</br>
+┃　　　┃　　　┗━　[DDD.md](./아키텍처 및 방법론/DDD/DDD.md)</br>
+┃　　　┗━　[API 아키텍처](./아키텍처 및 방법론/API 아키텍처)</br>
+┃　　　　　　　╊━　[RPC.md](./아키텍처 및 방법론/API 아키텍처/RPC.md)</br>
+┃　　　　　　　╊━　[SOAP.md](./아키텍처 및 방법론/API 아키텍처/SOAP.md)</br>
+┃　　　　　　　╊━　[GraphQL.md](./아키텍처 및 방법론/API 아키텍처/GraphQL.md)</br>
+┃　　　　　　　┗━　[REST.md](./아키텍처 및 방법론/API 아키텍처/REST.md)</br>
+╊━　[개발](./개발)</br>
+┃　　　┗━　[기업이 오픈소스 소프트웨어를　선택하는 이유.md](./개발/기업이 오픈소스 소프트웨어를　선택하는 이유.md)</br>
 ┗━　[README.md](./README.md)</br>
 .
 ╊━　[readme_template.md](./readme_template.md)</br>
