@@ -147,8 +147,8 @@
 ┃　　　　　　　╊━　[컨트랙트.md](./아키텍처 및 방법론/DDD/컨트랙트.md)</br>
 ┃　　　　　　　╊━　[이벤트 스토밍.md](./아키텍처 및 방법론/DDD/이벤트 스토밍.md)</br>
 ┃　　　　　　　╊━　[DDD.md](./아키텍처 및 방법론/DDD/DDD.md)</br>
-┃　　　　　　　╊━　[도메인영역.md](./아키텍처 및 방법론/DDD/도메인영역.md)</br>
-┃　　　　　　　┗━　[DDD의 아키텍처.md](./아키텍처 및 방법론/DDD/DDD의 아키텍처.md)</br>
+┃　　　　　　　╊━　[DDD의 아키텍처.md](./아키텍처 및 방법론/DDD/DDD의 아키텍처.md)</br>
+┃　　　　　　　┗━　[도메인영역.md](./아키텍처 및 방법론/DDD/도메인영역.md)</br>
 ╊━　[디자인패턴 DesignPattern](./디자인패턴 DesignPattern)</br>
 ┃　　　╊━　[디자인패턴.md](./디자인패턴 DesignPattern/디자인패턴.md)</br>
 ┃　　　╊━　[1. 생성패턴](./디자인패턴 DesignPattern/1. 생성패턴)</br>
