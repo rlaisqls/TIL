@@ -22,7 +22,7 @@ Swap 메모리를 설정하기 위해선, 우선 Swap 메모리를 저장할 파
 
 ```js
 sudo fallocate -l 2G /swapfile
-sudo mkswap swapfile
+sudo mkswap /swapfile
 sudo swapon /swapfile
 ```
 
