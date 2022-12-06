@@ -20,7 +20,7 @@ Application Performance Monitoring 의 약자로 구동 중인 애플리케이�
 
 Agent의 모든 설정은 제목의 파일명에서 확인할 수 있다. 각각의 설치환경 별로 해당파일의 경로를 모두 소개해주고 있으니 APM Service setup docs를 확인하여 파일을 찾아보자.
 
-단, 컨테이너 Agent의 경우에는 그냥 실행시 `-e DD_APM_ENABLED=true`로 설정해주면 된다.
+단, 컨테이너 Agent의 경우에는 실행시 `-e DD_APM_ENABLED=true`로 설정하고, helm으로 설치한 경우엔 메니페스트에 `datadog.apm.portEnabled`를 true로 만들면 된다.
 
 그 외의 경우에는 설정 파일을 열어 쭈욱 밑으로 내려 Traces Configuration에서 아래와 같이 되어있는 부분을 찾는다.
 
