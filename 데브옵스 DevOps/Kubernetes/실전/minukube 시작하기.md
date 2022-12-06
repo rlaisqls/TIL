@@ -131,12 +131,12 @@ minikube unpause
 ```
 
 클러스터 멈추기:
-```bash
+```js
 minikube stop
 ```
 
 기본 메모리 제한 변경 (재시작 필요):
-```bash
+```js
 minikube config set memory 9001
 ```
 
@@ -146,6 +146,6 @@ minikube addons list
 ```
 
 모든 클러스터 삭제:
-```bash
+```js
 minikube delete --all
 ```

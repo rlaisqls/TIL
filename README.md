@@ -20,48 +20,6 @@
 ┃　　　╊━　[OSI 7Layer.md](./네트워크 Network/OSI 7Layer.md)</br>
 ┃　　　╊━　[TCP와 UDP.md](./네트워크 Network/TCP와 UDP.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？.md](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
-╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)</br>
-┃　　　╊━　[DB설계](./데이터베이스 DataBase/DB설계)</br>
-┃　　　┃　　　╊━　[DBMS와 RDBMS.md](./데이터베이스 DataBase/DB설계/DBMS와 RDBMS.md)</br>
-┃　　　┃　　　╊━　[데이터모델링.md](./데이터베이스 DataBase/DB설계/데이터모델링.md)</br>
-┃　　　┃　　　╊━　[무결성 제약조건.md](./데이터베이스 DataBase/DB설계/무결성 제약조건.md)</br>
-┃　　　┃　　　╊━　[분산데이터베이스.md](./데이터베이스 DataBase/DB설계/분산데이터베이스.md)</br>
-┃　　　┃　　　╊━　[스키마.md](./데이터베이스 DataBase/DB설계/스키마.md)</br>
-┃　　　┃　　　╊━　[정규화와 반정규화.md](./데이터베이스 DataBase/DB설계/정규화와 반정규화.md)</br>
-┃　　　┃　　　╊━　[테이블분할.md](./데이터베이스 DataBase/DB설계/테이블분할.md)</br>
-┃　　　┃　　　┗━　[트랜잭션 ACID와 격리수준.md](./데이터베이스 DataBase/DB설계/트랜잭션 ACID와 격리수준.md)</br>
-┃　　　╊━　[NoSQL](./데이터베이스 DataBase/NoSQL)</br>
-┃　　　┃　　　╊━　[Redis.md](./데이터베이스 DataBase/NoSQL/Redis.md)</br>
-┃　　　┃　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/Spring Redis Phantomkey.md)</br>
-┃　　　╊━　[메시지큐.md](./데이터베이스 DataBase/메시지큐.md)</br>
-┃　　　╊━　[SQL](./데이터베이스 DataBase/SQL)</br>
-┃　　　┃　　　╊━　[Alias.md](./데이터베이스 DataBase/SQL/Alias.md)</br>
-┃　　　┃　　　╊━　[FK옵션.md](./데이터베이스 DataBase/SQL/FK옵션.md)</br>
-┃　　　┃　　　╊━　[GROUPING SETS와 GROUPING.md](./데이터베이스 DataBase/SQL/GROUPING SETS와 GROUPING.md)</br>
-┃　　　┃　　　╊━　[GROUP BY와 HAVING절.md](./데이터베이스 DataBase/SQL/GROUP BY와 HAVING절.md)</br>
-┃　　　┃　　　╊━　[INNER JOIN과 OUTER JOIN.md](./데이터베이스 DataBase/SQL/INNER JOIN과 OUTER JOIN.md)</br>
-┃　　　┃　　　╊━　[ON절.md](./데이터베이스 DataBase/SQL/ON절.md)</br>
-┃　　　┃　　　╊━　[ORDER BY절.md](./데이터베이스 DataBase/SQL/ORDER BY절.md)</br>
-┃　　　┃　　　╊━　[README.md](./데이터베이스 DataBase/SQL/README.md)</br>
-┃　　　┃　　　╊━　[ROLLUP과 CUBE.md](./데이터베이스 DataBase/SQL/ROLLUP과 CUBE.md)</br>
-┃　　　┃　　　╊━　[SELECT쿼리 실행순서.md](./데이터베이스 DataBase/SQL/SELECT쿼리 실행순서.md)</br>
-┃　　　┃　　　╊━　[계층형 질의.md](./데이터베이스 DataBase/SQL/계층형 질의.md)</br>
-┃　　　┃　　　╊━　[서브쿼리.md](./데이터베이스 DataBase/SQL/서브쿼리.md)</br>
-┃　　　┃　　　╊━　[옵티마이저.md](./데이터베이스 DataBase/SQL/옵티마이저.md)</br>
-┃　　　┃　　　╊━　[윈도우 함수.md](./데이터베이스 DataBase/SQL/윈도우 함수.md)</br>
-┃　　　┃　　　╊━　[제약조건.md](./데이터베이스 DataBase/SQL/제약조건.md)</br>
-┃　　　┃　　　╊━　[조인 수행원리.md](./데이터베이스 DataBase/SQL/조인 수행원리.md)</br>
-┃　　　┃　　　╊━　[집계함수.md](./데이터베이스 DataBase/SQL/집계함수.md)</br>
-┃　　　┃　　　╊━　[집합연산자.md](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
-┃　　　┃　　　┗━　[쿼리종류](./데이터베이스 DataBase/SQL/쿼리종류)</br>
-┃　　　┃　　　　　　　╊━　[DCL.md](./데이터베이스 DataBase/SQL/쿼리종류/DCL.md)</br>
-┃　　　┃　　　　　　　╊━　[DDL.md](./데이터베이스 DataBase/SQL/쿼리종류/DDL.md)</br>
-┃　　　┃　　　　　　　╊━　[DML.md](./데이터베이스 DataBase/SQL/쿼리종류/DML.md)</br>
-┃　　　┃　　　　　　　╊━　[Procedural／Nonprocedural DML.md](./데이터베이스 DataBase/SQL/쿼리종류/Procedural／Nonprocedural DML.md)</br>
-┃　　　┃　　　　　　　┗━　[TCL.md](./데이터베이스 DataBase/SQL/쿼리종류/TCL.md)</br>
-┃　　　┗━　[DBMS](./데이터베이스 DataBase/DBMS)</br>
-┃　　　　　　　╊━　[PostgreSQL.md](./데이터베이스 DataBase/DBMS/PostgreSQL.md)</br>
-┃　　　　　　　┗━　[PostgreSQL명령어.md](./데이터베이스 DataBase/DBMS/PostgreSQL명령어.md)</br>
 ╊━　[언어 Language](./언어 Language)</br>
 ┃　　　╊━　[Kotlin](./언어 Language/Kotlin)</br>
 ┃　　　┃　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
@@ -224,6 +182,53 @@
 ┃　　　　　　　┗━　[REST.md](./아키텍처 및 방법론/API 아키텍처/REST.md)</br>
 ╊━　[개발](./개발)</br>
 ┃　　　┗━　[기업이 오픈소스 소프트웨어를　선택하는 이유.md](./개발/기업이 오픈소스 소프트웨어를　선택하는 이유.md)</br>
+╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)</br>
+┃　　　╊━　[DB설계](./데이터베이스 DataBase/DB설계)</br>
+┃　　　┃　　　╊━　[DBMS와 RDBMS.md](./데이터베이스 DataBase/DB설계/DBMS와 RDBMS.md)</br>
+┃　　　┃　　　╊━　[데이터모델링.md](./데이터베이스 DataBase/DB설계/데이터모델링.md)</br>
+┃　　　┃　　　╊━　[무결성 제약조건.md](./데이터베이스 DataBase/DB설계/무결성 제약조건.md)</br>
+┃　　　┃　　　╊━　[분산데이터베이스.md](./데이터베이스 DataBase/DB설계/분산데이터베이스.md)</br>
+┃　　　┃　　　╊━　[스키마.md](./데이터베이스 DataBase/DB설계/스키마.md)</br>
+┃　　　┃　　　╊━　[정규화와 반정규화.md](./데이터베이스 DataBase/DB설계/정규화와 반정규화.md)</br>
+┃　　　┃　　　╊━　[테이블분할.md](./데이터베이스 DataBase/DB설계/테이블분할.md)</br>
+┃　　　┃　　　┗━　[트랜잭션 ACID와 격리수준.md](./데이터베이스 DataBase/DB설계/트랜잭션 ACID와 격리수준.md)</br>
+┃　　　╊━　[메시지큐.md](./데이터베이스 DataBase/메시지큐.md)</br>
+┃　　　╊━　[SQL](./데이터베이스 DataBase/SQL)</br>
+┃　　　┃　　　╊━　[Alias.md](./데이터베이스 DataBase/SQL/Alias.md)</br>
+┃　　　┃　　　╊━　[FK옵션.md](./데이터베이스 DataBase/SQL/FK옵션.md)</br>
+┃　　　┃　　　╊━　[GROUPING SETS와 GROUPING.md](./데이터베이스 DataBase/SQL/GROUPING SETS와 GROUPING.md)</br>
+┃　　　┃　　　╊━　[GROUP BY와 HAVING절.md](./데이터베이스 DataBase/SQL/GROUP BY와 HAVING절.md)</br>
+┃　　　┃　　　╊━　[INNER JOIN과 OUTER JOIN.md](./데이터베이스 DataBase/SQL/INNER JOIN과 OUTER JOIN.md)</br>
+┃　　　┃　　　╊━　[ON절.md](./데이터베이스 DataBase/SQL/ON절.md)</br>
+┃　　　┃　　　╊━　[ORDER BY절.md](./데이터베이스 DataBase/SQL/ORDER BY절.md)</br>
+┃　　　┃　　　╊━　[README.md](./데이터베이스 DataBase/SQL/README.md)</br>
+┃　　　┃　　　╊━　[ROLLUP과 CUBE.md](./데이터베이스 DataBase/SQL/ROLLUP과 CUBE.md)</br>
+┃　　　┃　　　╊━　[SELECT쿼리 실행순서.md](./데이터베이스 DataBase/SQL/SELECT쿼리 실행순서.md)</br>
+┃　　　┃　　　╊━　[계층형 질의.md](./데이터베이스 DataBase/SQL/계층형 질의.md)</br>
+┃　　　┃　　　╊━　[서브쿼리.md](./데이터베이스 DataBase/SQL/서브쿼리.md)</br>
+┃　　　┃　　　╊━　[옵티마이저.md](./데이터베이스 DataBase/SQL/옵티마이저.md)</br>
+┃　　　┃　　　╊━　[윈도우 함수.md](./데이터베이스 DataBase/SQL/윈도우 함수.md)</br>
+┃　　　┃　　　╊━　[제약조건.md](./데이터베이스 DataBase/SQL/제약조건.md)</br>
+┃　　　┃　　　╊━　[조인 수행원리.md](./데이터베이스 DataBase/SQL/조인 수행원리.md)</br>
+┃　　　┃　　　╊━　[집계함수.md](./데이터베이스 DataBase/SQL/집계함수.md)</br>
+┃　　　┃　　　╊━　[집합연산자.md](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
+┃　　　┃　　　┗━　[쿼리종류](./데이터베이스 DataBase/SQL/쿼리종류)</br>
+┃　　　┃　　　　　　　╊━　[DCL.md](./데이터베이스 DataBase/SQL/쿼리종류/DCL.md)</br>
+┃　　　┃　　　　　　　╊━　[DDL.md](./데이터베이스 DataBase/SQL/쿼리종류/DDL.md)</br>
+┃　　　┃　　　　　　　╊━　[DML.md](./데이터베이스 DataBase/SQL/쿼리종류/DML.md)</br>
+┃　　　┃　　　　　　　╊━　[Procedural／Nonprocedural DML.md](./데이터베이스 DataBase/SQL/쿼리종류/Procedural／Nonprocedural DML.md)</br>
+┃　　　┃　　　　　　　┗━　[TCL.md](./데이터베이스 DataBase/SQL/쿼리종류/TCL.md)</br>
+┃　　　┗━　[NoSQL](./데이터베이스 DataBase/NoSQL)</br>
+┃　　　　　　　╊━　[PostgreSQL](./데이터베이스 DataBase/NoSQL/PostgreSQL)</br>
+┃　　　　　　　┃　　　╊━　[PostgreSQL.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL.md)</br>
+┃　　　　　　　┃　　　┗━　[PostgreSQL명령어.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL명령어.md)</br>
+┃　　　　　　　╊━　[MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB)</br>
+┃　　　　　　　┃　　　╊━　[Homebrew로 MongoDB설치하기.md](./데이터베이스 DataBase/NoSQL/MongoDB/Homebrew로 MongoDB설치하기.md)</br>
+┃　　　　　　　┃　　　┗━　[MongoDB.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB.md)</br>
+┃　　　　　　　╊━　[redis](./데이터베이스 DataBase/NoSQL/redis)</br>
+┃　　　　　　　┃　　　╊━　[Redis.md](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
+┃　　　　　　　┃　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
+┃　　　　　　　┗━　[dd](./데이터베이스 DataBase/NoSQL/dd)</br>
 ┗━　[README.md](./README.md)</br>
 .
 ╊━　[readme_template.md](./readme_template.md)</br>
