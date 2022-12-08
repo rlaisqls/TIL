@@ -145,40 +145,40 @@
 ┃　　　┃　　　┗━　[Prune.md](./데브옵스 DevOps/Docker/Prune.md)</br>
 ┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes)</br>
 ┃　　　　　　　╊━　[Kubernetes.md](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
-┃　　　　　　　╊━　[실전](./데브옵스 DevOps/Kubernetes/실전)</br>
-┃　　　　　　　┃　　　╊━　[SpringBoot 서비스를　위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/실전/SpringBoot 서비스를　위한 Kubernetes 설정.md)</br>
-┃　　　　　　　┃　　　╊━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/실전/환경변수 설정.md)</br>
-┃　　　　　　　┃　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/실전/K8s를 위한 SpringBoot 개발.md)</br>
-┃　　　　　　　┃　　　┗━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/실전/minukube 시작하기.md)</br>
 ┃　　　　　　　╊━　[ArgoCD](./데브옵스 DevOps/Kubernetes/ArgoCD)</br>
 ┃　　　　　　　┃　　　┗━　[ArgoCD 설치.md](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
+┃　　　　　　　╊━　[이론](./데브옵스 DevOps/Kubernetes/이론)</br>
+┃　　　　　　　┃　　　╊━　[K8s Architecture.md](./데브옵스 DevOps/Kubernetes/이론/K8s Architecture.md)</br>
+┃　　　　　　　┃　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
+┃　　　　　　　┃　　　╊━　[Pod.md](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
+┃　　　　　　　┃　　　╊━　[K8s의 도커런타임 사용중단.md](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
+┃　　　　　　　┃　　　╊━　[Helm.md](./데브옵스 DevOps/Kubernetes/이론/Helm.md)</br>
+┃　　　　　　　┃　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
+┃　　　　　　　┃　　　╊━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
+┃　　　　　　　┃　　　┗━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
 ┃　　　　　　　╊━　[dd.yml](./데브옵스 DevOps/Kubernetes/dd.yml)</br>
 ┃　　　　　　　╊━　[kk　copy.yml](./데브옵스 DevOps/Kubernetes/kk　copy.yml)</br>
 ┃　　　　　　　╊━　[kk.yml](./데브옵스 DevOps/Kubernetes/kk.yml)</br>
-┃　　　　　　　┗━　[이론](./데브옵스 DevOps/Kubernetes/이론)</br>
-┃　　　　　　　　　　　╊━　[K8s Architecture.md](./데브옵스 DevOps/Kubernetes/이론/K8s Architecture.md)</br>
-┃　　　　　　　　　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
-┃　　　　　　　　　　　╊━　[Pod.md](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
-┃　　　　　　　　　　　╊━　[K8s의 도커런타임 사용중단.md](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
-┃　　　　　　　　　　　╊━　[Helm.md](./데브옵스 DevOps/Kubernetes/이론/Helm.md)</br>
-┃　　　　　　　　　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
-┃　　　　　　　　　　　╊━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
-┃　　　　　　　　　　　┗━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
+┃　　　　　　　┗━　[실전](./데브옵스 DevOps/Kubernetes/실전)</br>
+┃　　　　　　　　　　　╊━　[SpringBoot 서비스를　위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/실전/SpringBoot 서비스를　위한 Kubernetes 설정.md)</br>
+┃　　　　　　　　　　　╊━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/실전/환경변수 설정.md)</br>
+┃　　　　　　　　　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/실전/K8s를 위한 SpringBoot 개발.md)</br>
+┃　　　　　　　　　　　┗━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/실전/minukube 시작하기.md)</br>
 ╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)</br>
 ┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　╊━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┃　　　╊━　[멀티모듈.md](./아키텍처 및 방법론/멀티모듈.md)</br>
-┃　　　╊━　[DDD](./아키텍처 및 방법론/DDD)</br>
-┃　　　┃　　　╊━　[컨트랙트.md](./아키텍처 및 방법론/DDD/컨트랙트.md)</br>
-┃　　　┃　　　╊━　[이벤트 스토밍.md](./아키텍처 및 방법론/DDD/이벤트 스토밍.md)</br>
-┃　　　┃　　　╊━　[도메인영역.md](./아키텍처 및 방법론/DDD/도메인영역.md)</br>
-┃　　　┃　　　╊━　[DDD의 아키텍처.md](./아키텍처 및 방법론/DDD/DDD의 아키텍처.md)</br>
-┃　　　┃　　　┗━　[DDD.md](./아키텍처 및 방법론/DDD/DDD.md)</br>
-┃　　　┗━　[API 아키텍처](./아키텍처 및 방법론/API 아키텍처)</br>
-┃　　　　　　　╊━　[RPC.md](./아키텍처 및 방법론/API 아키텍처/RPC.md)</br>
-┃　　　　　　　╊━　[SOAP.md](./아키텍처 및 방법론/API 아키텍처/SOAP.md)</br>
-┃　　　　　　　╊━　[GraphQL.md](./아키텍처 및 방법론/API 아키텍처/GraphQL.md)</br>
-┃　　　　　　　┗━　[REST.md](./아키텍처 및 방법론/API 아키텍처/REST.md)</br>
+┃　　　╊━　[API 아키텍처](./아키텍처 및 방법론/API 아키텍처)</br>
+┃　　　┃　　　╊━　[RPC.md](./아키텍처 및 방법론/API 아키텍처/RPC.md)</br>
+┃　　　┃　　　╊━　[SOAP.md](./아키텍처 및 방법론/API 아키텍처/SOAP.md)</br>
+┃　　　┃　　　╊━　[GraphQL.md](./아키텍처 및 방법론/API 아키텍처/GraphQL.md)</br>
+┃　　　┃　　　┗━　[REST.md](./아키텍처 및 방법론/API 아키텍처/REST.md)</br>
+┃　　　┗━　[DDD](./아키텍처 및 방법론/DDD)</br>
+┃　　　　　　　╊━　[컨트랙트.md](./아키텍처 및 방법론/DDD/컨트랙트.md)</br>
+┃　　　　　　　╊━　[이벤트 스토밍.md](./아키텍처 및 방법론/DDD/이벤트 스토밍.md)</br>
+┃　　　　　　　╊━　[DDD의 아키텍처.md](./아키텍처 및 방법론/DDD/DDD의 아키텍처.md)</br>
+┃　　　　　　　╊━　[DDD.md](./아키텍처 및 방법론/DDD/DDD.md)</br>
+┃　　　　　　　┗━　[도메인영역.md](./아키텍처 및 방법론/DDD/도메인영역.md)</br>
 ╊━　[개발](./개발)</br>
 ┃　　　┗━　[기업이 오픈소스 소프트웨어를　선택하는 이유.md](./개발/기업이 오픈소스 소프트웨어를　선택하는 이유.md)</br>
 ╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)</br>
@@ -221,12 +221,12 @@
 ┃　　　　　　　╊━　[PostgreSQL](./데이터베이스 DataBase/NoSQL/PostgreSQL)</br>
 ┃　　　　　　　┃　　　╊━　[PostgreSQL.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL.md)</br>
 ┃　　　　　　　┃　　　┗━　[PostgreSQL명령어.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL명령어.md)</br>
-┃　　　　　　　╊━　[MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB)</br>
-┃　　　　　　　┃　　　╊━　[Homebrew로 MongoDB설치하기.md](./데이터베이스 DataBase/NoSQL/MongoDB/Homebrew로 MongoDB설치하기.md)</br>
-┃　　　　　　　┃　　　┗━　[MongoDB.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB.md)</br>
-┃　　　　　　　┗━　[redis](./데이터베이스 DataBase/NoSQL/redis)</br>
-┃　　　　　　　　　　　╊━　[Redis.md](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
-┃　　　　　　　　　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
+┃　　　　　　　╊━　[redis](./데이터베이스 DataBase/NoSQL/redis)</br>
+┃　　　　　　　┃　　　╊━　[Redis.md](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
+┃　　　　　　　┃　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
+┃　　　　　　　┗━　[MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB)</br>
+┃　　　　　　　　　　　╊━　[Homebrew로 MongoDB설치하기.md](./데이터베이스 DataBase/NoSQL/MongoDB/Homebrew로 MongoDB설치하기.md)</br>
+┃　　　　　　　　　　　┗━　[MongoDB.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB.md)</br>
 ┗━　[README.md](./README.md)</br>
 .
 ╊━　[readme_template.md](./readme_template.md)</br>
