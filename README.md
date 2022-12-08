@@ -145,16 +145,6 @@
 ┃　　　┃　　　┗━　[Prune.md](./데브옵스 DevOps/Docker/Prune.md)</br>
 ┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes)</br>
 ┃　　　　　　　╊━　[Kubernetes.md](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
-┃　　　　　　　╊━　[이론](./데브옵스 DevOps/Kubernetes/이론)</br>
-┃　　　　　　　┃　　　╊━　[K8s Architecture.md](./데브옵스 DevOps/Kubernetes/이론/K8s Architecture.md)</br>
-┃　　　　　　　┃　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
-┃　　　　　　　┃　　　╊━　[Pod.md](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
-┃　　　　　　　┃　　　╊━　[ReplicaSet.md](./데브옵스 DevOps/Kubernetes/이론/ReplicaSet.md)</br>
-┃　　　　　　　┃　　　╊━　[K8s의 도커런타임 사용중단.md](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
-┃　　　　　　　┃　　　╊━　[Helm.md](./데브옵스 DevOps/Kubernetes/이론/Helm.md)</br>
-┃　　　　　　　┃　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
-┃　　　　　　　┃　　　╊━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
-┃　　　　　　　┃　　　┗━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
 ┃　　　　　　　╊━　[실전](./데브옵스 DevOps/Kubernetes/실전)</br>
 ┃　　　　　　　┃　　　╊━　[SpringBoot 서비스를　위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/실전/SpringBoot 서비스를　위한 Kubernetes 설정.md)</br>
 ┃　　　　　　　┃　　　╊━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/실전/환경변수 설정.md)</br>
@@ -164,7 +154,16 @@
 ┃　　　　　　　┃　　　┗━　[ArgoCD 설치.md](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
 ┃　　　　　　　╊━　[dd.yml](./데브옵스 DevOps/Kubernetes/dd.yml)</br>
 ┃　　　　　　　╊━　[kk　copy.yml](./데브옵스 DevOps/Kubernetes/kk　copy.yml)</br>
-┃　　　　　　　┗━　[kk.yml](./데브옵스 DevOps/Kubernetes/kk.yml)</br>
+┃　　　　　　　╊━　[kk.yml](./데브옵스 DevOps/Kubernetes/kk.yml)</br>
+┃　　　　　　　┗━　[이론](./데브옵스 DevOps/Kubernetes/이론)</br>
+┃　　　　　　　　　　　╊━　[K8s Architecture.md](./데브옵스 DevOps/Kubernetes/이론/K8s Architecture.md)</br>
+┃　　　　　　　　　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
+┃　　　　　　　　　　　╊━　[Pod.md](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
+┃　　　　　　　　　　　╊━　[K8s의 도커런타임 사용중단.md](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
+┃　　　　　　　　　　　╊━　[Helm.md](./데브옵스 DevOps/Kubernetes/이론/Helm.md)</br>
+┃　　　　　　　　　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
+┃　　　　　　　　　　　╊━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
+┃　　　　　　　　　　　┗━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
 ╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)</br>
 ┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　╊━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
