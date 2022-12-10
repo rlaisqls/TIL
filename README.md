@@ -223,10 +223,11 @@
 ┃　　　　　　　┃　　　┗━　[PostgreSQL명령어.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL명령어.md)</br>
 ┃　　　　　　　╊━　[redis](./데이터베이스 DataBase/NoSQL/redis)</br>
 ┃　　　　　　　┃　　　╊━　[Redis.md](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
-┃　　　　　　　┃　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
+┃　　　　　　　┃　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
 ┃　　　　　　　┗━　[MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB)</br>
 ┃　　　　　　　　　　　╊━　[Homebrew로 MongoDB설치하기.md](./데이터베이스 DataBase/NoSQL/MongoDB/Homebrew로 MongoDB설치하기.md)</br>
-┃　　　　　　　　　　　┗━　[MongoDB.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB.md)</br>
+┃　　　　　　　　　　　╊━　[MongoDB.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB.md)</br>
+┃　　　　　　　　　　　┗━　[MongoDB 스키마설계 고려사항.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB 스키마설계 고려사항.md)</br>
 ┗━　[README.md](./README.md)</br>
 .
 ╊━　[readme_template.md](./readme_template.md)</br>
