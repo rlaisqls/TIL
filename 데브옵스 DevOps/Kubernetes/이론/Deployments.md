@@ -4,7 +4,7 @@
 
 `Deployment`는 k8s의 핵심 개념중 하나인 `desired state`(목표 상태)를 설명하는 요소이다. Deployment에서 desired state를 정의하면 **배포 컨트롤러**가 원하는 상태로 복구한다.
 
-Deploy를 만들어 실습해보자! 더 자세하고 정확한 설명은 <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment">여기</a>를 참고하자.
+Deploy를 만들어 실습해보자! 더 자세하고 정확한 설명은 <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment">공식 </a>를 참고하자.
 
 ## Creating a Deployment 
 
