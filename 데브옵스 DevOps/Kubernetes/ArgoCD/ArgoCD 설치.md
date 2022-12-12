@@ -2,7 +2,7 @@
 
 출처: https://dev.to/airoasis/argo-cd-seolci-mic-seoljeong-45bd
 
-## ArhoCD, ArgCD CLI 설피
+## ArhoCD, ArgCD CLI 설치
 
 Argo CD를 kubernetes cluster에 설치한다.
 

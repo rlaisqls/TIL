@@ -4,7 +4,7 @@
 
 `Deployment`는 k8s의 핵심 개념중 하나인 `desired state`(목표 상태)를 설명하는 요소이다. Deployment에서 desired state를 정의하면 **배포 컨트롤러**가 원하는 상태로 복구한다.
 
-Deploy를 만들어 실습해보자! 더 자세하고 정확한 설명은 <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment">여기</a>를 참고하자.
+Deploy를 만들어 실습해보자! 더 자세하고 정확한 설명은 <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment">공식 </a>를 참고하자.
 
 ## Creating a Deployment 
 
@@ -72,16 +72,12 @@ nginx-deployment   0/3     0            0           1s
 
 3. Deployment rollout status를 보기 위해 `kubectl rollout status deployment/nginx-deployment`를 실행한다.
 
-그 출력물은 다음과 비슷할 것이다.
-
 ```
 Waiting for rollout to finish: 2 out of 3 new replicas have been updated...
 deployment "nginx-deployment" successfully rolled out
 ```
 
 4. 몇 초를 기다린 후, `kubectl get deployments`를 다시 실행한다.
-
-그 출력물은 다음과 비슷할 것이다.
 
 ```
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
@@ -91,8 +87,6 @@ nginx-deployment   3/3     3            3           18s
 세 개의 모든 Replica들이 생성되었고, 사용 가능한 상태가 되었음을 알 수 있다.
 
 5. Deploy에 의해 생성된 ReplicaSet(rs)를 보기 위해 `rs`를 실행한다.
-
-그 결과는 다음과 같을 것이다.
 
 ```
 NAME                          DESIRED   CURRENT   READY   AGE
