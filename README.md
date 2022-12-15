@@ -179,7 +179,7 @@
 ┃　　　┃　　　┗━　[WebFlux.md](./스프링 Spring/WebFlux/WebFlux.md)</br>
 ┃　　　╊━　[Web MVC](./스프링 Spring/Web MVC)</br>
 ┃　　　┃　　　╊━　[Request 처리과정.md](./스프링 Spring/Web MVC/Request 처리과정.md)</br>
-┃　　　┃　　　┗━　[SpringMVC의 시작.md](./스프링 Spring/Web MVC/SpringMVC의 시작.md)</br>
+┃　　　┃　　　┗━　[SpringServletContainerInitializer.md](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
 ┃　　　╊━　[@ComponentScan.md](./스프링 Spring/@ComponentScan.md)</br>
 ┃　　　╊━　[@Component VS @Service.md](./스프링 Spring/@Component VS @Service.md)</br>
 ┃　　　╊━　[Ioc와 DI.md](./스프링 Spring/Ioc와 DI.md)</br>
