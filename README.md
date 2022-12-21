@@ -110,6 +110,7 @@
 ┃　　　┃　　　╊━　[조인 수행원리.md](./데이터베이스 DataBase/SQL/조인 수행원리.md)</br>
 ┃　　　┃　　　╊━　[집계함수.md](./데이터베이스 DataBase/SQL/집계함수.md)</br>
 ┃　　　┃　　　┗━　[집합연산자.md](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
+┃　　　╊━　[Column, Row기반DB.md](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
 ┃　　　┗━　[메시지큐.md](./데이터베이스 DataBase/메시지큐.md)</br>
 ╊━　[디자인패턴 DesignPattern](./디자인패턴 DesignPattern)</br>
 ┃　　　╊━　[1. 생성패턴](./디자인패턴 DesignPattern/1. 생성패턴)</br>
@@ -178,8 +179,10 @@
 ┃　　　┃　　　╊━　[RouterFunctions.md](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
 ┃　　　┃　　　┗━　[WebFlux.md](./스프링 Spring/WebFlux/WebFlux.md)</br>
 ┃　　　╊━　[Web MVC](./스프링 Spring/Web MVC)</br>
+┃　　　┃　　　╊━　[AbstractContextLoaderInitializer.md](./스프링 Spring/Web MVC/AbstractContextLoaderInitializer.md)</br>
 ┃　　　┃　　　╊━　[Request 처리과정.md](./스프링 Spring/Web MVC/Request 처리과정.md)</br>
-┃　　　┃　　　┗━　[SpringServletContainerInitializer.md](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
+┃　　　┃　　　╊━　[SpringServletContainerInitializer.md](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
+┃　　　┃　　　┗━　[TomecatToSpring.md](./스프링 Spring/Web MVC/TomecatToSpring.md)</br>
 ┃　　　╊━　[@ComponentScan.md](./스프링 Spring/@ComponentScan.md)</br>
 ┃　　　╊━　[@Component VS @Service.md](./스프링 Spring/@Component VS @Service.md)</br>
 ┃　　　╊━　[Ioc와 DI.md](./스프링 Spring/Ioc와 DI.md)</br>
@@ -203,6 +206,8 @@
 ┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　╊━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┃　　　┗━　[멀티모듈.md](./아키텍처 및 방법론/멀티모듈.md)</br>
+╊━　[알고리즘 Algorithm](./알고리즘 Algorithm)</br>
+┃　　　┗━　[세그먼트트리.md](./알고리즘 Algorithm/세그먼트트리.md)</br>
 ╊━　[언어 Language](./언어 Language)</br>
 ┃　　　╊━　[JAVA](./언어 Language/JAVA)</br>
 ┃　　　┃　　　╊━　[JVM](./언어 Language/JAVA/JVM)</br>
