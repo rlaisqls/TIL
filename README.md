@@ -8,8 +8,6 @@
 ┃　　　┗━　[hooks](./Git/hooks)</br>
 ┃　　　　　　　╊━　[Githooks.md](./Git/hooks/Githooks.md)</br>
 ┃　　　　　　　┗━　[파일트리 자동생성.md](./Git/hooks/파일트리 자동생성.md)</br>
-╊━　[개발](./개발)</br>
-┃　　　┗━　[기업이 오픈소스 소프트웨어를　선택하는 이유.md](./개발/기업이 오픈소스 소프트웨어를　선택하는 이유.md)</br>
 ╊━　[객체지향 OOP](./객체지향 OOP)</br>
 ┃　　　╊━　[JAVA.md](./객체지향 OOP/JAVA.md)</br>
 ┃　　　╊━　[SOLID.md](./객체지향 OOP/SOLID.md)</br>
@@ -99,7 +97,6 @@
 ┃　　　┃　　　╊━　[INNER JOIN과 OUTER JOIN.md](./데이터베이스 DataBase/SQL/INNER JOIN과 OUTER JOIN.md)</br>
 ┃　　　┃　　　╊━　[ON절.md](./데이터베이스 DataBase/SQL/ON절.md)</br>
 ┃　　　┃　　　╊━　[ORDER BY절.md](./데이터베이스 DataBase/SQL/ORDER BY절.md)</br>
-┃　　　┃　　　╊━　[README.md](./데이터베이스 DataBase/SQL/README.md)</br>
 ┃　　　┃　　　╊━　[ROLLUP과 CUBE.md](./데이터베이스 DataBase/SQL/ROLLUP과 CUBE.md)</br>
 ┃　　　┃　　　╊━　[SELECT쿼리 실행순서.md](./데이터베이스 DataBase/SQL/SELECT쿼리 실행순서.md)</br>
 ┃　　　┃　　　╊━　[계층형 질의.md](./데이터베이스 DataBase/SQL/계층형 질의.md)</br>
@@ -211,6 +208,11 @@
 ╊━　[언어 Language](./언어 Language)</br>
 ┃　　　╊━　[JAVA](./언어 Language/JAVA)</br>
 ┃　　　┃　　　╊━　[JVM](./언어 Language/JAVA/JVM)</br>
+┃　　　┃　　　┃　　　╊━　[Heap영역 구조와 GC.md](./언어 Language/JAVA/JVM/Heap영역 구조와 GC.md)</br>
+┃　　　┃　　　┃　　　╊━　[JVM 구성요소.md](./언어 Language/JAVA/JVM/JVM 구성요소.md)</br>
+┃　　　┃　　　┃　　　╊━　[Java Bytecode.md](./언어 Language/JAVA/JVM/Java Bytecode.md)</br>
+┃　　　┃　　　┃　　　╊━　[Permanent to Metaspace.md](./언어 Language/JAVA/JVM/Permanent to Metaspace.md)</br>
+┃　　　┃　　　┃　　　╊━　[Runtime Data Area.md](./언어 Language/JAVA/JVM/Runtime Data Area.md)</br>
 ┃　　　┃　　　┃　　　┗━　[메모리누수.md](./언어 Language/JAVA/JVM/메모리누수.md)</br>
 ┃　　　┃　　　╊━　[Inner static class.md](./언어 Language/JAVA/Inner static class.md)</br>
 ┃　　　┃　　　╊━　[JDKProxy와 CGLibProxy.md](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
