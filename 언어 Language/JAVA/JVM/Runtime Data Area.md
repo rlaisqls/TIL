@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/81006587/208620894-79b2837e-8358-4a14-826c-825a288322a9.png)
 
-Runtime Data Area는 Method영역, Heap영역, Stack영역, PC 레지스터 영역, Native Method Stack으로 나뉘어있다.
+Runtime Data Area는 크게 Method영역, Heap영역, Stack영역, PC 레지스터 영역, Native Method Stack으로 나눌 수 있다.
 
 ---
 
