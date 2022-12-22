@@ -38,7 +38,7 @@
 ┃　　　┃　　　╊━　[실전](./데브옵스 DevOps/Kubernetes/실전)</br>
 ┃　　　┃　　　┃　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/실전/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　┃　　　┃　　　╊━　[NodePort와 ServicePort와 targetPort.md](./데브옵스 DevOps/Kubernetes/실전/NodePort와 ServicePort와 targetPort.md)</br>
-┃　　　┃　　　┃　　　╊━　[SpringBoot 서비스를　위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/실전/SpringBoot 서비스를　위한 Kubernetes 설정.md)</br>
+┃　　　┃　　　┃　　　╊━　[SpringBoot 서비스를 위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/실전/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
 ┃　　　┃　　　┃　　　╊━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/실전/minukube 시작하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/실전/환경변수 설정.md)</br>
 ┃　　　┃　　　╊━　[이론](./데브옵스 DevOps/Kubernetes/이론)</br>
@@ -219,27 +219,27 @@
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/JAVA/제네릭과 variance.md)</br>
 ┃　　　┗━　[Kotlin](./언어 Language/Kotlin)</br>
 ┃　　　　　　　╊━　[변수](./언어 Language/Kotlin/변수)</br>
-┃　　　　　　　┃　　　╊━　[List와　MutableList.md](./언어 Language/Kotlin/변수/List와　MutableList.md)</br>
+┃　　　　　　　┃　　　╊━　[List와 MutableList.md](./언어 Language/Kotlin/변수/List와 MutableList.md)</br>
 ┃　　　　　　　┃　　　╊━　[Nullable.md](./언어 Language/Kotlin/변수/Nullable.md)</br>
 ┃　　　　　　　┃　　　╊━　[const.md](./언어 Language/Kotlin/변수/const.md)</br>
-┃　　　　　　　┃　　　╊━　[val과　var.md](./언어 Language/Kotlin/변수/val과　var.md)</br>
-┃　　　　　　　┃　　　┗━　[제네릭과　variance.md](./언어 Language/Kotlin/변수/제네릭과　variance.md)</br>
+┃　　　　　　　┃　　　╊━　[val과 var.md](./언어 Language/Kotlin/변수/val과 var.md)</br>
+┃　　　　　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/변수/제네릭과 variance.md)</br>
 ┃　　　　　　　╊━　[클래스](./언어 Language/Kotlin/클래스)</br>
 ┃　　　　　　　┃　　　╊━　[@JvmField.md](./언어 Language/Kotlin/클래스/@JvmField.md)</br>
 ┃　　　　　　　┃　　　╊━　[@JvmStatic.md](./언어 Language/Kotlin/클래스/@JvmStatic.md)</br>
 ┃　　　　　　　┃　　　╊━　[Object.md](./언어 Language/Kotlin/클래스/Object.md)</br>
-┃　　　　　　　┃　　　╊━　[Sealed　Class,　interface.md](./언어 Language/Kotlin/클래스/Sealed　Class,　interface.md)</br>
+┃　　　　　　　┃　　　╊━　[Sealed Class, interface.md](./언어 Language/Kotlin/클래스/Sealed Class, interface.md)</br>
 ┃　　　　　　　┃　　　╊━　[생성자.md](./언어 Language/Kotlin/클래스/생성자.md)</br>
-┃　　　　　　　┃　　　╊━　[코틀린에서의　Static.md](./언어 Language/Kotlin/클래스/코틀린에서의　Static.md)</br>
-┃　　　　　　　┃　　　╊━　[클래스　상속.md](./언어 Language/Kotlin/클래스/클래스　상속.md)</br>
-┃　　　　　　　┃　　　┗━　[필드와　접근자　메서드.md](./언어 Language/Kotlin/클래스/필드와　접근자　메서드.md)</br>
+┃　　　　　　　┃　　　╊━　[코틀린에서의 Static.md](./언어 Language/Kotlin/클래스/코틀린에서의 Static.md)</br>
+┃　　　　　　　┃　　　╊━　[클래스 상속.md](./언어 Language/Kotlin/클래스/클래스 상속.md)</br>
+┃　　　　　　　┃　　　┗━　[필드와 접근자 메서드.md](./언어 Language/Kotlin/클래스/필드와 접근자 메서드.md)</br>
 ┃　　　　　　　╊━　[함수](./언어 Language/Kotlin/함수)</br>
 ┃　　　　　　　┃　　　┗━　[기본인자.md](./언어 Language/Kotlin/함수/기본인자.md)</br>
 ┃　　　　　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
 ┃　　　　　　　╊━　[Sequences.md](./언어 Language/Kotlin/Sequences.md)</br>
 ┃　　　　　　　╊━　[Stream.md](./언어 Language/Kotlin/Stream.md)</br>
-┃　　　　　　　╊━　[람다　표현식.md](./언어 Language/Kotlin/람다　표현식.md)</br>
-┃　　　　　　　┗━　[범위　지정　함수.md](./언어 Language/Kotlin/범위　지정　함수.md)</br>
+┃　　　　　　　╊━　[람다 표현식.md](./언어 Language/Kotlin/람다 표현식.md)</br>
+┃　　　　　　　┗━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┗━　[README.md](./README.md)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
