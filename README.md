@@ -186,6 +186,7 @@
 ┃　　　╊━　[Programmatic과 Declarative.md](./스프링 Spring/Programmatic과 Declarative.md)</br>
 ┃　　　╊━　[ProxyFactoryBean.md](./스프링 Spring/ProxyFactoryBean.md)</br>
 ┃　　　╊━　[Reflection과 직렬화.md](./스프링 Spring/Reflection과 직렬화.md)</br>
+┃　　　╊━　[등록된 빈 목록 출력하기.md](./스프링 Spring/등록된 빈 목록 출력하기.md)</br>
 ┃　　　╊━　[빈.md](./스프링 Spring/빈.md)</br>
 ┃　　　┗━　[싱글톤.md](./스프링 Spring/싱글톤.md)</br>
 ╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)</br>
