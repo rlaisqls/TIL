@@ -162,9 +162,10 @@
 ┃　　　┃　　　┃　　　╊━　[동적쿼리.md](./스프링 Spring/JPA/QuerydslJpa/동적쿼리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[벌크연산.md](./스프링 Spring/JPA/QuerydslJpa/벌크연산.md)</br>
 ┃　　　┃　　　╊━　[Cascade.md](./스프링 Spring/JPA/Cascade.md)</br>
-┃　　　┃　　　╊━　[Id로 연관관계 객체 저장.md](./스프링 Spring/JPA/Id로 연관관계 객체 저장.md)</br>
+┃　　　┃　　　╊━　[Hibernate dialect.md](./스프링 Spring/JPA/Hibernate dialect.md)</br>
+┃　　　┃　　　╊━　[Id로 연관관계 객체 저장.md](./스프링 Spring/JPA/Id로 연관관계 객체 저장.md)</br>
 ┃　　　┃　　　╊━　[JPA.md](./스프링 Spring/JPA/JPA.md)</br>
-┃　　　┃　　　╊━　[N+1 문제　.md](./스프링 Spring/JPA/N+1 문제　.md)</br>
+┃　　　┃　　　╊━　[N+1 문제.md](./스프링 Spring/JPA/N+1 문제.md)</br>
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
 ┃　　　┃　　　┗━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
@@ -176,7 +177,6 @@
 ┃　　　┃　　　╊━　[RouterFunctions.md](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
 ┃　　　┃　　　┗━　[WebFlux.md](./스프링 Spring/WebFlux/WebFlux.md)</br>
 ┃　　　╊━　[Web MVC](./스프링 Spring/Web MVC)</br>
-┃　　　┃　　　╊━　[AbstractContextLoaderInitializer.md](./스프링 Spring/Web MVC/AbstractContextLoaderInitializer.md)</br>
 ┃　　　┃　　　╊━　[Request 처리과정.md](./스프링 Spring/Web MVC/Request 처리과정.md)</br>
 ┃　　　┃　　　╊━　[SpringServletContainerInitializer.md](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
 ┃　　　┃　　　┗━　[TomecatToSpring.md](./스프링 Spring/Web MVC/TomecatToSpring.md)</br>
