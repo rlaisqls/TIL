@@ -161,6 +161,10 @@
 ┃　　　┃　　　┃　　　╊━　[기본문법.md](./스프링 Spring/JPA/QuerydslJpa/기본문법.md)</br>
 ┃　　　┃　　　┃　　　╊━　[동적쿼리.md](./스프링 Spring/JPA/QuerydslJpa/동적쿼리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[벌크연산.md](./스프링 Spring/JPA/QuerydslJpa/벌크연산.md)</br>
+┃　　　┃　　　╊━　[캐싱](./스프링 Spring/JPA/캐싱)</br>
+┃　　　┃　　　┃　　　╊━　[1차캐시.md](./스프링 Spring/JPA/캐싱/1차캐시.md)</br>
+┃　　　┃　　　┃　　　╊━　[2차캐시.md](./스프링 Spring/JPA/캐싱/2차캐시.md)</br>
+┃　　　┃　　　┃　　　┗━　[영속성 컨텍스트.md](./스프링 Spring/JPA/캐싱/영속성 컨텍스트.md)</br>
 ┃　　　┃　　　╊━　[Cascade.md](./스프링 Spring/JPA/Cascade.md)</br>
 ┃　　　┃　　　╊━　[Hibernate dialect.md](./스프링 Spring/JPA/Hibernate dialect.md)</br>
 ┃　　　┃　　　╊━　[Id로 연관관계 객체 저장.md](./스프링 Spring/JPA/Id로 연관관계 객체 저장.md)</br>
@@ -178,8 +182,7 @@
 ┃　　　┃　　　┗━　[WebFlux.md](./스프링 Spring/WebFlux/WebFlux.md)</br>
 ┃　　　╊━　[Web MVC](./스프링 Spring/Web MVC)</br>
 ┃　　　┃　　　╊━　[Request 처리과정.md](./스프링 Spring/Web MVC/Request 처리과정.md)</br>
-┃　　　┃　　　╊━　[SpringServletContainerInitializer.md](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
-┃　　　┃　　　┗━　[TomecatToSpring.md](./스프링 Spring/Web MVC/TomecatToSpring.md)</br>
+┃　　　┃　　　┗━　[SpringServletContainerInitializer.md](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
 ┃　　　╊━　[@ComponentScan.md](./스프링 Spring/@ComponentScan.md)</br>
 ┃　　　╊━　[@Component VS @Service.md](./스프링 Spring/@Component VS @Service.md)</br>
 ┃　　　╊━　[Ioc와 DI.md](./스프링 Spring/Ioc와 DI.md)</br>
