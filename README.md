@@ -8,7 +8,37 @@
 ┃　　　┗━　[hooks](./Git/hooks)</br>
 ┃　　　　　　　╊━　[Githooks.md](./Git/hooks/Githooks.md)</br>
 ┃　　　　　　　┗━　[파일트리 자동생성.md](./Git/hooks/파일트리 자동생성.md)</br>
+╊━　[Gradle](./Gradle)</br>
+┃　　　┗━　[DependencyHandler.md](./Gradle/DependencyHandler.md)</br>
 ╊━　[객체지향 OOP](./객체지향 OOP)</br>
+┃　　　╊━　[디자인패턴](./객체지향 OOP/디자인패턴)</br>
+┃　　　┃　　　╊━　[1. 생성패턴](./객체지향 OOP/디자인패턴/1. 생성패턴)</br>
+┃　　　┃　　　┃　　　╊━　[빌더 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/빌더 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[싱글톤 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/싱글톤 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[추상팩토리 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/추상팩토리 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[팩토리메소드 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/팩토리메소드 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[프로토타입 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/프로토타입 패턴.md)</br>
+┃　　　┃　　　╊━　[2. 구조패턴](./객체지향 OOP/디자인패턴/2. 구조패턴)</br>
+┃　　　┃　　　┃　　　╊━　[데코레이터 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/데코레이터 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[브릿지 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/브릿지 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[어댑터 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/어댑터 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[컴포짓 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/컴포짓 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[퍼사드 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/퍼사드 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[프록시 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/프록시 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[플라이웨이트 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/플라이웨이트 패턴.md)</br>
+┃　　　┃　　　╊━　[3. 행위패턴](./객체지향 OOP/디자인패턴/3. 행위패턴)</br>
+┃　　　┃　　　┃　　　╊━　[메멘토 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/메멘토 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[방문자 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/방문자 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[상태 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/상태 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[옵저버 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/옵저버 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[이터레이터 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/이터레이터 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[인터프리터 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/인터프리터 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[전략 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/전략 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[중재자 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/중재자 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[책임연쇄 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/책임연쇄 패턴.md)</br>
+┃　　　┃　　　┃　　　╊━　[커맨드 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/커맨드 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[템플릿메소드 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/템플릿메소드 패턴.md)</br>
+┃　　　┃　　　┗━　[디자인패턴.md](./객체지향 OOP/디자인패턴/디자인패턴.md)</br>
 ┃　　　╊━　[JAVA.md](./객체지향 OOP/JAVA.md)</br>
 ┃　　　╊━　[SOLID.md](./객체지향 OOP/SOLID.md)</br>
 ┃　　　┗━　[응집도와 결합도.md](./객체지향 OOP/응집도와 결합도.md)</br>
@@ -109,34 +139,6 @@
 ┃　　　┃　　　┗━　[집합연산자.md](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
 ┃　　　╊━　[Column, Row기반DB.md](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
 ┃　　　┗━　[메시지큐.md](./데이터베이스 DataBase/메시지큐.md)</br>
-╊━　[디자인패턴 DesignPattern](./디자인패턴 DesignPattern)</br>
-┃　　　╊━　[1. 생성패턴](./디자인패턴 DesignPattern/1. 생성패턴)</br>
-┃　　　┃　　　╊━　[빌더 패턴.md](./디자인패턴 DesignPattern/1. 생성패턴/빌더 패턴.md)</br>
-┃　　　┃　　　╊━　[싱글톤 패턴.md](./디자인패턴 DesignPattern/1. 생성패턴/싱글톤 패턴.md)</br>
-┃　　　┃　　　╊━　[추상팩토리 패턴.md](./디자인패턴 DesignPattern/1. 생성패턴/추상팩토리 패턴.md)</br>
-┃　　　┃　　　╊━　[팩토리메소드 패턴.md](./디자인패턴 DesignPattern/1. 생성패턴/팩토리메소드 패턴.md)</br>
-┃　　　┃　　　┗━　[프로토타입 패턴.md](./디자인패턴 DesignPattern/1. 생성패턴/프로토타입 패턴.md)</br>
-┃　　　╊━　[2. 구조패턴](./디자인패턴 DesignPattern/2. 구조패턴)</br>
-┃　　　┃　　　╊━　[데코레이터 패턴.md](./디자인패턴 DesignPattern/2. 구조패턴/데코레이터 패턴.md)</br>
-┃　　　┃　　　╊━　[브릿지 패턴.md](./디자인패턴 DesignPattern/2. 구조패턴/브릿지 패턴.md)</br>
-┃　　　┃　　　╊━　[어댑터 패턴.md](./디자인패턴 DesignPattern/2. 구조패턴/어댑터 패턴.md)</br>
-┃　　　┃　　　╊━　[컴포짓 패턴.md](./디자인패턴 DesignPattern/2. 구조패턴/컴포짓 패턴.md)</br>
-┃　　　┃　　　╊━　[퍼사드 패턴.md](./디자인패턴 DesignPattern/2. 구조패턴/퍼사드 패턴.md)</br>
-┃　　　┃　　　╊━　[프록시 패턴.md](./디자인패턴 DesignPattern/2. 구조패턴/프록시 패턴.md)</br>
-┃　　　┃　　　┗━　[플라이웨이트 패턴.md](./디자인패턴 DesignPattern/2. 구조패턴/플라이웨이트 패턴.md)</br>
-┃　　　╊━　[3. 행위패턴](./디자인패턴 DesignPattern/3. 행위패턴)</br>
-┃　　　┃　　　╊━　[메멘토 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/메멘토 패턴.md)</br>
-┃　　　┃　　　╊━　[방문자 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/방문자 패턴.md)</br>
-┃　　　┃　　　╊━　[상태 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/상태 패턴.md)</br>
-┃　　　┃　　　╊━　[옵저버 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/옵저버 패턴.md)</br>
-┃　　　┃　　　╊━　[이터레이터 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/이터레이터 패턴.md)</br>
-┃　　　┃　　　╊━　[인터프리터 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/인터프리터 패턴.md)</br>
-┃　　　┃　　　╊━　[전략 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/전략 패턴.md)</br>
-┃　　　┃　　　╊━　[중재자 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/중재자 패턴.md)</br>
-┃　　　┃　　　╊━　[책임연쇄 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/책임연쇄 패턴.md)</br>
-┃　　　┃　　　╊━　[커맨드 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/커맨드 패턴.md)</br>
-┃　　　┃　　　┗━　[템플릿메소드 패턴.md](./디자인패턴 DesignPattern/3. 행위패턴/템플릿메소드 패턴.md)</br>
-┃　　　┗━　[디자인패턴.md](./디자인패턴 DesignPattern/디자인패턴.md)</br>
 ╊━　[스프링 Spring](./스프링 Spring)</br>
 ┃　　　╊━　[AOP](./스프링 Spring/AOP)</br>
 ┃　　　┃　　　╊━　[트랜잭션](./스프링 Spring/AOP/트랜잭션)</br>
@@ -172,6 +174,7 @@
 ┃　　　┃　　　╊━　[N+1 문제.md](./스프링 Spring/JPA/N+1 문제.md)</br>
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
+┃　　　┃　　　╊━　[낙관적잠금(OptimissticLock)</br>.md](./스프링 Spring/JPA/낙관적잠금(OptimissticLock)</br>.md)</br>
 ┃　　　┃　　　┗━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
@@ -191,6 +194,7 @@
 ┃　　　╊━　[Reflection과 직렬화.md](./스프링 Spring/Reflection과 직렬화.md)</br>
 ┃　　　╊━　[등록된 빈 목록 출력하기.md](./스프링 Spring/등록된 빈 목록 출력하기.md)</br>
 ┃　　　╊━　[빈.md](./스프링 Spring/빈.md)</br>
+┃　　　╊━　[선점 잠금과 비선점 잠금.md](./스프링 Spring/선점 잠금과 비선점 잠금.md)</br>
 ┃　　　┗━　[싱글톤.md](./스프링 Spring/싱글톤.md)</br>
 ╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)</br>
 ┃　　　╊━　[API 아키텍처](./아키텍처 및 방법론/API 아키텍처)</br>
