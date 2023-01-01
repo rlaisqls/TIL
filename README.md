@@ -174,7 +174,6 @@
 ┃　　　┃　　　╊━　[N+1 문제.md](./스프링 Spring/JPA/N+1 문제.md)</br>
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
-┃　　　┃　　　╊━　[낙관적잠금(OptimissticLock)</br>.md](./스프링 Spring/JPA/낙관적잠금(OptimissticLock)</br>.md)</br>
 ┃　　　┃　　　┗━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
