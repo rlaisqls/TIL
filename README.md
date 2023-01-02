@@ -181,6 +181,7 @@
 ┃　　　╊━　[TestCode](./스프링 Spring/TestCode)</br>
 ┃　　　┃　　　╊━　[Kotest.md](./스프링 Spring/TestCode/Kotest.md)</br>
 ┃　　　┃　　　╊━　[Kotest Assertions.md](./스프링 Spring/TestCode/Kotest Assertions.md)</br>
+┃　　　┃　　　╊━　[Kotest Specs.md](./스프링 Spring/TestCode/Kotest Specs.md)</br>
 ┃　　　┃　　　┗━　[Mockk.md](./스프링 Spring/TestCode/Mockk.md)</br>
 ┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)</br>
 ┃　　　┃　　　╊━　[@Controller.md](./스프링 Spring/WebFlux/@Controller.md)</br>

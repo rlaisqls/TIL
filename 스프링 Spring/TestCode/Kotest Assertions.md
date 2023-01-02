@@ -7,9 +7,8 @@ https://kotest.io/docs/assertions/assertions.html
 - shouldBe
 
 ```kotlin
-name shouldBe "kyunam"
-
-// == assertThat(name).isEqualTo("kyunam")
+name shouldBe "eunbin"
+// == assertThat(name).isEqualTo("eunbin")
 ```
 
 **Inspectors**
