@@ -220,6 +220,8 @@ internal class CalculatorDescribeSpec : DescribeSpec({
 
 위와 같은 여러 레이아웃 중 프로젝트 상황에 가장 잘 맞는 레이아웃을 골라 사용하면 된다.
 
+상황에 따라 [kotest 플러그인](https://kotest.io/docs/intellij/intellij-plugin.html)을 깔아야 test 실행 버튼이 나타날 수도 있다. 
+
 ---
 
 ## Kotest with @SpringBootTest
