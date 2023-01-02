@@ -8,7 +8,6 @@ https://kotest.io/docs/assertions/assertions.html
 
 ```kotlin
 name shouldBe "eunbin"
-
 // == assertThat(name).isEqualTo("eunbin")
 ```
 
