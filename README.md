@@ -179,9 +179,12 @@
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
 ┃　　　┃　　　┗━　[CSRF.md](./스프링 Spring/SpringSecurity/CSRF.md)</br>
 ┃　　　╊━　[TestCode](./스프링 Spring/TestCode)</br>
-┃　　　┃　　　╊━　[Kotest.md](./스프링 Spring/TestCode/Kotest.md)</br>
-┃　　　┃　　　╊━　[Kotest Assertions.md](./스프링 Spring/TestCode/Kotest Assertions.md)</br>
-┃　　　┃　　　┗━　[Mockk.md](./스프링 Spring/TestCode/Mockk.md)</br>
+┃　　　┃　　　╊━　[Kotlin](./스프링 Spring/TestCode/Kotlin)</br>
+┃　　　┃　　　┃　　　╊━　[Kotest.md](./스프링 Spring/TestCode/Kotlin/Kotest.md)</br>
+┃　　　┃　　　┃　　　╊━　[Kotest Assertions.md](./스프링 Spring/TestCode/Kotlin/Kotest Assertions.md)</br>
+┃　　　┃　　　┃　　　╊━　[Kotest Specs.md](./스프링 Spring/TestCode/Kotlin/Kotest Specs.md)</br>
+┃　　　┃　　　┃　　　┗━　[Mockk.md](./스프링 Spring/TestCode/Kotlin/Mockk.md)</br>
+┃　　　┃　　　┗━　[Mock과 Spy.md](./스프링 Spring/TestCode/Mock과 Spy.md)</br>
 ┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)</br>
 ┃　　　┃　　　╊━　[@Controller.md](./스프링 Spring/WebFlux/@Controller.md)</br>
 ┃　　　┃　　　╊━　[RouterFunctions.md](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
