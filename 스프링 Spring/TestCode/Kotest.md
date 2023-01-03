@@ -23,6 +23,12 @@
 
 - 다양한 테스트 레이아웃(String Spec, Describe Spec, Behavior Spec 등) 제공
 - Kotlin DSL 스타일의 Assertion 기능 제공
+- 데이터 기반 테스트로 많은 양의 매개변수도 테스트 가능
+- 모든 테스트에 대해 호출수, 병렬 처리, 시간제한, 테스트 그룹화, 조건부 비활성 등의 미세 조정 테스트 가능
+- 중첩 테스트기능 제공
+- 동적 테스트 제공 (런타임에 조건부로 테스트를 추가 가능)
+- 테스트 수명주기에 맞는 다양한 콜백을 제공
+
 
 Kotest를 사용하기 위해서는 아래와 같은 설정 / 의존성 추가가 필요하다.
 ```kotlin
@@ -43,6 +49,8 @@ Kotest는 테스트를 위한 많은 레이아웃을 제공한다.
 - Describe Spec
 - Fun Spec
 - …
+
+모든 Spec에 대한 정보는 <a href="./Kotest Specs.md">여기서</a> 확인해보자.
 
 **Kotest Annotation Spec**
 
