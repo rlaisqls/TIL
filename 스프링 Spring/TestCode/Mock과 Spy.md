@@ -103,10 +103,9 @@ class DeleteUserUseCase(
 
 그렇기 때문에 이런 상황에서는 아래와 같이 설정해주거나
 
-(코틀린에서만 가능한 형태이다. JAVA에선 이렇게까지 strict하게 잡는 라이브러리를 보지 못한 것 같은데, 아마 그런 경우에는 내부에 추가 구현이 있을 것 같긴 하다.)
-
 ```kotlin
-    every { standbyCompanyRepository.delete(standByCompany) } returns Unit
+    every { documentRepository.delete(document) } returns Unit
+    justRun { documentRepository.delete(document) }
 ```
 
 `relaxUnitFun` 설정을 `true`로 해줘서, 반환값이 없는 메소드는 stub 없이도 실행할 수 있도록 해줘야한다.
