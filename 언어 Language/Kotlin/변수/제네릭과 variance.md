@@ -41,8 +41,8 @@ val strs: MutableList<String> = mutableListOf()
 
 //val objs: MutableList<Object> = strs 에러발생
 ```
-
-위 코드는 실제 코틀린으로 작성을 하면 2번째 줄에서 컴파일 에러가 발생한다. 만약 `MutableList<String>` 이 `MutableList<Object>`의 subType이면 2번째 줄이 에러가 발생하지 않아야 한다. 
+    
+두번째 줄과 같은 코드는 에러 발생으로 인해 실행될 수 없다. 만약 `MutableList<String>` 이 `MutableList<Object>`의 subType이면 2번째 줄이 에러가 발생하지 않아야 한다. 
 
 이렇게 형식 인자들끼리는 sub type 관계를 만족하더라도 제네릭을 사용하는 클래스와 인터페이스에서는 subType 관계가 유지되지 않는 것이 **Invariance(불공변)**이다. 기본적으로 코틀린의 모든 제네릭에서의 형식 인자는 Invariance이 된다.
 
