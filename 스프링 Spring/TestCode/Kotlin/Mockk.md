@@ -4,7 +4,7 @@
 
 Mockk는 코틀린 스타일의 Mock 프레임워크이다.
 
-Mockito를 사용하는 경우 코틀린 DSL 스타일을 활용할 수 없지만, Mockk를 사용하면 아래와 같이 코틀린 DSL 스타일로 Mock 테스트를 작성할 수 있습니다.
+Mockito를 사용하는 경우 코틀린 DSL 스타일을 활용할 수 없지만, Mockk를 사용하면 아래와 같이 코틀린 DSL 스타일로 Mock 테스트를 작성할 수 있다.
 
 ```kotlin
 //Mockito
