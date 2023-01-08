@@ -6,7 +6,7 @@ Mockito 등의 라이브러리를 쓰다보면, Mock과 Spy를 사용하게 될 
 
 ## 비교
 
-간단히 말하자면, Mock은 완벽한 가짜 객체를 만드는데 반해, Spy는 기본적으로 기존에 구현되어있는 동작을 따르지만 일부 메소드만 stub 한다.
+간단히 말하자면, Mock은 완벽한 가짜 객체를 만드는데 반해, Spy는 기본적으로 기존에 구현되어있는 동작을 따르고 일부 메소드만 stub 한다.
 
 Mock 객체의 함수를 호출했을때 그 함수에 stub된 동작이 없으면 코드나 라이브러리에 따라 문제가 생길 수 있다. strict 하게 규칙이 설정된 라이브러리(`ex. mockk`)의 경우에는 호출 즉시 예외가 던져질 수 있고, null이나 기본값 (`int = 0, String = ""...`)이 반환되도록 되어있을 수도 있다.(`ex. mockito`)
 
@@ -140,6 +140,7 @@ Unit 메서드 : Unit
 이런식으로 반환하는 것 같다.
 
 ```kotlin
+//io.mockk.impl.stub.MockKStub
     protected open fun defaultAnswer(invocation: Invocation): Any? {
         return stdObjectFunctions(invocation.self, invocation.method, invocation.args) {
             if (shouldRelax(invocation)) { //Relax 
@@ -165,6 +166,7 @@ Unit 메서드 : Unit
 ```
 
 ```
+//io.mockk.impl.instantiation.AnyValueGenerator
 open class AnyValueGenerator {
     open fun anyValue(cls: KClass<*>, isNullable: Boolean, orInstantiateVia: () -> Any?): Any? {
         return when (cls) {

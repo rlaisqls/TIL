@@ -23,7 +23,7 @@ Kuberneted  10.10.50.50.:6443                 11d
 
 ```
 
-두개의 endpoints를 가지고 있으며 모두 80 포트라는것을 확인 할 수 있다. 이 endpoint들은 매니페스트로 배포한 pod들의 ip 주소여야 한다. 이것을 확인하기위해 get pods 커맨드를 `-o wide` 옵션과 함께 확인해보도록 하자.
+두개의 endpoints를 가지고 있으며 모두 80 포트라는것을 확인 할 수 있다. 이 endpoint들은 매니페스트로 배포한 pod들의 ip 주소여야 한다. 이것을 확인하기위해 get pods 커맨드를 `-o wide` 옵션과 함께 확인해보자.
 
 ```js
 $ kubectl get endpoints -o wide
@@ -34,4 +34,4 @@ myapp-deployment-6d99f57cb4-x5gsm  1/1    Running  0         1h   10.244.2.204:8
 
 ```
 
-Pod의 IP 주소들이 엔드포인트의 주소들과 매칭된다는 것을 확인할 수 있습니다. 보이지 않는 곳에서 endpoints가 매칭된다는 사실을 확인했다.
+Pod의 IP 주소들이 엔드포인트의 주소들과 매칭된다는 것을 확인할 수 있다. 보이지 않는 곳에서 endpoints가 매칭된다는 사실을 확인했다.
