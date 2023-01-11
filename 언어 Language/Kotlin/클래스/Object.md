@@ -86,7 +86,9 @@ start(object : Vehicle {
 ```java
 public final class VehicleKt {
    public static final void start(@NotNull Vehicle vehicle) {
+   
       Intrinsics.checkNotNullParameter(vehicle, "vehicle");
+   
       String var1 = vehicle.drive();
       System.out.println(var1);
    }

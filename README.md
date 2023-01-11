@@ -87,7 +87,9 @@
 ┃　　　┃　　　　　　　┗━　[helmChart로　Agent 설치.md](./데브옵스 DevOps/Logging/datadog/helmChart로　Agent 설치.md)</br>
 ┃　　　╊━　[linux](./데브옵스 DevOps/linux)</br>
 ┃　　　┃　　　╊━　[Swap메모리.md](./데브옵스 DevOps/linux/Swap메모리.md)</br>
-┃　　　┃　　　┗━　[namespace와 cgroup.md](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./데브옵스 DevOps/linux/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　╊━　[namespace와 cgroup.md](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　┗━　[zshrc.md](./데브옵스 DevOps/linux/zshrc.md)</br>
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
 ╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)</br>
