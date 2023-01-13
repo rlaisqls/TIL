@@ -46,6 +46,7 @@
 ┃　　　╊━　[CDN.md](./네트워크 Network/CDN.md)</br>
 ┃　　　╊━　[Ethernet과 TokenRing.md](./네트워크 Network/Ethernet과 TokenRing.md)</br>
 ┃　　　╊━　[HTTP.md](./네트워크 Network/HTTP.md)</br>
+┃　　　╊━　[HTTP Options.md](./네트워크 Network/HTTP Options.md)</br>
 ┃　　　╊━　[IP.md](./네트워크 Network/IP.md)</br>
 ┃　　　╊━　[OSI 7Layer.md](./네트워크 Network/OSI 7Layer.md)</br>
 ┃　　　╊━　[TCP와 UDP.md](./네트워크 Network/TCP와 UDP.md)</br>
@@ -179,7 +180,8 @@
 ┃　　　┃　　　┗━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
-┃　　　┃　　　┗━　[CSRF.md](./스프링 Spring/SpringSecurity/CSRF.md)</br>
+┃　　　┃　　　╊━　[CSRF.md](./스프링 Spring/SpringSecurity/CSRF.md)</br>
+┃　　　┃　　　┗━　[authn과 authz.md](./스프링 Spring/SpringSecurity/authn과 authz.md)</br>
 ┃　　　╊━　[TestCode](./스프링 Spring/TestCode)</br>
 ┃　　　┃　　　╊━　[Kotlin](./스프링 Spring/TestCode/Kotlin)</br>
 ┃　　　┃　　　┃　　　╊━　[Kotest.md](./스프링 Spring/TestCode/Kotlin/Kotest.md)</br>
@@ -187,6 +189,8 @@
 ┃　　　┃　　　┃　　　╊━　[Kotest Specs.md](./스프링 Spring/TestCode/Kotlin/Kotest Specs.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Mockk.md](./스프링 Spring/TestCode/Kotlin/Mockk.md)</br>
 ┃　　　┃　　　┗━　[Mock과 Spy.md](./스프링 Spring/TestCode/Mock과 Spy.md)</br>
+┃　　　╊━　[Validation](./스프링 Spring/Validation)</br>
+┃　　　┃　　　┗━　[@GroupSequence.md](./스프링 Spring/Validation/@GroupSequence.md)</br>
 ┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)</br>
 ┃　　　┃　　　╊━　[@Controller.md](./스프링 Spring/WebFlux/@Controller.md)</br>
 ┃　　　┃　　　╊━　[RouterFunctions.md](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
@@ -206,6 +210,7 @@
 ┃　　　┃　　　╊━　[선점 잠금과 비선점 잠금.md](./스프링 Spring/기본원리/선점 잠금과 비선점 잠금.md)</br>
 ┃　　　┃　　　┗━　[싱글톤.md](./스프링 Spring/기본원리/싱글톤.md)</br>
 ┃　　　╊━　[AOT.md](./스프링 Spring/AOT.md)</br>
+┃　　　╊━　[ApplicationEventPublisher.md](./스프링 Spring/ApplicationEventPublisher.md)</br>
 ┃　　　┗━　[Spring 6.0과 Spring Boot 3.0.md](./스프링 Spring/Spring 6.0과 Spring Boot 3.0.md)</br>
 ╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)</br>
 ┃　　　╊━　[API 아키텍처](./아키텍처 및 방법론/API 아키텍처)</br>
