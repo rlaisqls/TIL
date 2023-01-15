@@ -103,6 +103,9 @@
 ┃　　　┃　　　╊━　[정규화와 반정규화.md](./데이터베이스 DataBase/DB설계/정규화와 반정규화.md)</br>
 ┃　　　┃　　　╊━　[테이블분할.md](./데이터베이스 DataBase/DB설계/테이블분할.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 ACID와 격리수준.md](./데이터베이스 DataBase/DB설계/트랜잭션 ACID와 격리수준.md)</br>
+┃　　　╊━　[MQ](./데이터베이스 DataBase/MQ)</br>
+┃　　　┃　　　╊━　[RabbitMQ.md](./데이터베이스 DataBase/MQ/RabbitMQ.md)</br>
+┃　　　┃　　　┗━　[메시지큐.md](./데이터베이스 DataBase/MQ/메시지큐.md)</br>
 ┃　　　╊━　[NoSQL](./데이터베이스 DataBase/NoSQL)</br>
 ┃　　　┃　　　╊━　[MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB)</br>
 ┃　　　┃　　　┃　　　╊━　[Homebrew로 MongoDB설치하기.md](./데이터베이스 DataBase/NoSQL/MongoDB/Homebrew로 MongoDB설치하기.md)</br>
@@ -140,8 +143,7 @@
 ┃　　　┃　　　╊━　[조인 수행원리.md](./데이터베이스 DataBase/SQL/조인 수행원리.md)</br>
 ┃　　　┃　　　╊━　[집계함수.md](./데이터베이스 DataBase/SQL/집계함수.md)</br>
 ┃　　　┃　　　┗━　[집합연산자.md](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
-┃　　　╊━　[Column, Row기반DB.md](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
-┃　　　┗━　[메시지큐.md](./데이터베이스 DataBase/메시지큐.md)</br>
+┃　　　┗━　[Column, Row기반DB.md](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
 ╊━　[스프링 Spring](./스프링 Spring)</br>
 ┃　　　╊━　[AOP](./스프링 Spring/AOP)</br>
 ┃　　　┃　　　╊━　[트랜잭션](./스프링 Spring/AOP/트랜잭션)</br>
@@ -152,6 +154,9 @@
 ┃　　　┃　　　╊━　[AdviceAnnotation.md](./스프링 Spring/AOP/AdviceAnnotation.md)</br>
 ┃　　　┃　　　╊━　[CustomAnnotation.md](./스프링 Spring/AOP/CustomAnnotation.md)</br>
 ┃　　　┃　　　┗━　[Pointcut.md](./스프링 Spring/AOP/Pointcut.md)</br>
+┃　　　╊━　[Event](./스프링 Spring/Event)</br>
+┃　　　┃　　　╊━　[@TransactionalEventListener.md](./스프링 Spring/Event/@TransactionalEventListener.md)</br>
+┃　　　┃　　　┗━　[ApplicationEventPublisher.md](./스프링 Spring/Event/ApplicationEventPublisher.md)</br>
 ┃　　　╊━　[JPA](./스프링 Spring/JPA)</br>
 ┃　　　┃　　　╊━　[JPQL](./스프링 Spring/JPA/JPQL)</br>
 ┃　　　┃　　　┃　　　╊━　[FetchJoin.md](./스프링 Spring/JPA/JPQL/FetchJoin.md)</br>
@@ -210,7 +215,6 @@
 ┃　　　┃　　　╊━　[선점 잠금과 비선점 잠금.md](./스프링 Spring/기본원리/선점 잠금과 비선점 잠금.md)</br>
 ┃　　　┃　　　┗━　[싱글톤.md](./스프링 Spring/기본원리/싱글톤.md)</br>
 ┃　　　╊━　[AOT.md](./스프링 Spring/AOT.md)</br>
-┃　　　╊━　[ApplicationEventPublisher.md](./스프링 Spring/ApplicationEventPublisher.md)</br>
 ┃　　　┗━　[Spring 6.0과 Spring Boot 3.0.md](./스프링 Spring/Spring 6.0과 Spring Boot 3.0.md)</br>
 ╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)</br>
 ┃　　　╊━　[API 아키텍처](./아키텍처 및 방법론/API 아키텍처)</br>
@@ -260,6 +264,7 @@
 ┃　　　　　　　╊━　[함수](./언어 Language/Kotlin/함수)</br>
 ┃　　　　　　　┃　　　┗━　[기본인자.md](./언어 Language/Kotlin/함수/기본인자.md)</br>
 ┃　　　　　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
+┃　　　　　　　╊━　[Label.md](./언어 Language/Kotlin/Label.md)</br>
 ┃　　　　　　　╊━　[Sequences.md](./언어 Language/Kotlin/Sequences.md)</br>
 ┃　　　　　　　╊━　[Stream.md](./언어 Language/Kotlin/Stream.md)</br>
 ┃　　　　　　　╊━　[람다 표현식.md](./언어 Language/Kotlin/람다 표현식.md)</br>
