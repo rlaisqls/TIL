@@ -233,7 +233,11 @@
 ┃　　　╊━　[MSA](./아키텍처 및 방법론/MSA)</br>
 ┃　　　┃　　　╊━　[MSA의 장단점.md](./아키텍처 및 방법론/MSA/MSA의 장단점.md)</br>
 ┃　　　┃　　　╊━　[메시지 브로커.md](./아키텍처 및 방법론/MSA/메시지 브로커.md)</br>
+┃　　　┃　　　╊━　[사가 패턴.md](./아키텍처 및 방법론/MSA/사가 패턴.md)</br>
+┃　　　┃　　　╊━　[사가 편성.md](./아키텍처 및 방법론/MSA/사가 편성.md)</br>
 ┃　　　┃　　　╊━　[시맨틱 버저닝.md](./아키텍처 및 방법론/MSA/시맨틱 버저닝.md)</br>
+┃　　　┃　　　╊━　[통신.md](./아키텍처 및 방법론/MSA/통신.md)</br>
+┃　　　┃　　　╊━　[트랜잭션 격리.md](./아키텍처 및 방법론/MSA/트랜잭션 격리.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 로그 테일링 패턴.md](./아키텍처 및 방법론/MSA/트랜잭션 로그 테일링 패턴.md)</br>
 ┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　╊━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
@@ -276,7 +280,6 @@
 ┃　　　　　　　╊━　[Stream.md](./언어 Language/Kotlin/Stream.md)</br>
 ┃　　　　　　　╊━　[람다 표현식.md](./언어 Language/Kotlin/람다 표현식.md)</br>
 ┃　　　　　　　┗━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
-╊━　[　hello.kt](./　hello.kt)</br>
 ┗━　[README.md](./README.md)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
