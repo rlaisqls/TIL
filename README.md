@@ -44,6 +44,7 @@
 ┃　　　┗━　[응집도와 결합도.md](./객체지향 OOP/응집도와 결합도.md)</br>
 ╊━　[네트워크 Network](./네트워크 Network)</br>
 ┃　　　╊━　[CDN.md](./네트워크 Network/CDN.md)</br>
+┃　　　╊━　[DNS레코드유형.md](./네트워크 Network/DNS레코드유형.md)</br>
 ┃　　　╊━　[Ethernet과 TokenRing.md](./네트워크 Network/Ethernet과 TokenRing.md)</br>
 ┃　　　╊━　[HTTP.md](./네트워크 Network/HTTP.md)</br>
 ┃　　　╊━　[HTTP Options.md](./네트워크 Network/HTTP Options.md)</br>
@@ -70,6 +71,7 @@
 ┃　　　┃　　　┃　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/실전/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　┃　　　┃　　　╊━　[NodePort와 ServicePort와 targetPort.md](./데브옵스 DevOps/Kubernetes/실전/NodePort와 ServicePort와 targetPort.md)</br>
 ┃　　　┃　　　┃　　　╊━　[SpringBoot 서비스를 위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/실전/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
+┃　　　┃　　　┃　　　╊━　[ingress.md](./데브옵스 DevOps/Kubernetes/실전/ingress.md)</br>
 ┃　　　┃　　　┃　　　╊━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/실전/minukube 시작하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/실전/환경변수 설정.md)</br>
 ┃　　　┃　　　╊━　[이론](./데브옵스 DevOps/Kubernetes/이론)</br>
@@ -275,6 +277,7 @@
 ┃　　　　　　　╊━　[함수](./언어 Language/Kotlin/함수)</br>
 ┃　　　　　　　┃　　　┗━　[기본인자.md](./언어 Language/Kotlin/함수/기본인자.md)</br>
 ┃　　　　　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
+┃　　　　　　　╊━　[Kapt.md](./언어 Language/Kotlin/Kapt.md)</br>
 ┃　　　　　　　╊━　[Label.md](./언어 Language/Kotlin/Label.md)</br>
 ┃　　　　　　　╊━　[Sequences.md](./언어 Language/Kotlin/Sequences.md)</br>
 ┃　　　　　　　╊━　[Stream.md](./언어 Language/Kotlin/Stream.md)</br>
