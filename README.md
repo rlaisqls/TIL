@@ -67,13 +67,6 @@
 ┃　　　╊━　[Kubernetes](./데브옵스 DevOps/Kubernetes)</br>
 ┃　　　┃　　　╊━　[ArgoCD](./데브옵스 DevOps/Kubernetes/ArgoCD)</br>
 ┃　　　┃　　　┃　　　┗━　[ArgoCD 설치.md](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
-┃　　　┃　　　╊━　[실전](./데브옵스 DevOps/Kubernetes/실전)</br>
-┃　　　┃　　　┃　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/실전/K8s를 위한 SpringBoot 개발.md)</br>
-┃　　　┃　　　┃　　　╊━　[NodePort와 ServicePort와 targetPort.md](./데브옵스 DevOps/Kubernetes/실전/NodePort와 ServicePort와 targetPort.md)</br>
-┃　　　┃　　　┃　　　╊━　[SpringBoot 서비스를 위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/실전/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
-┃　　　┃　　　┃　　　╊━　[ingress.md](./데브옵스 DevOps/Kubernetes/실전/ingress.md)</br>
-┃　　　┃　　　┃　　　╊━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/실전/minukube 시작하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/실전/환경변수 설정.md)</br>
 ┃　　　┃　　　╊━　[이론](./데브옵스 DevOps/Kubernetes/이론)</br>
 ┃　　　┃　　　┃　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
@@ -83,7 +76,14 @@
 ┃　　　┃　　　┃　　　╊━　[Pod.md](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
-┃　　　┃　　　┗━　[Kubernetes.md](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
+┃　　　┃　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/K8s를 위한 SpringBoot 개발.md)</br>
+┃　　　┃　　　╊━　[Kubernetes.md](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
+┃　　　┃　　　╊━　[NGINX Ingress Basic Auth.md](./데브옵스 DevOps/Kubernetes/NGINX Ingress Basic Auth.md)</br>
+┃　　　┃　　　╊━　[NodePort와 ServicePort와 targetPort.md](./데브옵스 DevOps/Kubernetes/NodePort와 ServicePort와 targetPort.md)</br>
+┃　　　┃　　　╊━　[SpringBoot 서비스를 위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
+┃　　　┃　　　╊━　[ingress.md](./데브옵스 DevOps/Kubernetes/ingress.md)</br>
+┃　　　┃　　　╊━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/minukube 시작하기.md)</br>
+┃　　　┃　　　┗━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/환경변수 설정.md)</br>
 ┃　　　╊━　[Logging](./데브옵스 DevOps/Logging)</br>
 ┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog)</br>
 ┃　　　┃　　　　　　　╊━　[datadog APM기능 사용하기.md](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
@@ -277,7 +277,6 @@
 ┃　　　　　　　╊━　[함수](./언어 Language/Kotlin/함수)</br>
 ┃　　　　　　　┃　　　┗━　[기본인자.md](./언어 Language/Kotlin/함수/기본인자.md)</br>
 ┃　　　　　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
-┃　　　　　　　╊━　[Kapt.md](./언어 Language/Kotlin/Kapt.md)</br>
 ┃　　　　　　　╊━　[Label.md](./언어 Language/Kotlin/Label.md)</br>
 ┃　　　　　　　╊━　[Sequences.md](./언어 Language/Kotlin/Sequences.md)</br>
 ┃　　　　　　　╊━　[Stream.md](./언어 Language/Kotlin/Stream.md)</br>
