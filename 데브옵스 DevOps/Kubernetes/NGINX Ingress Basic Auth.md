@@ -45,6 +45,15 @@ $ kubectl get secret basic-auth -o yaml
 
 서비스의 Ingress 설정시 annotations 프로퍼티에 다음과 같은 설정을 해준다.
 
+```bash
+$ kubectl create -f ingress.yml
+ingress "external-auth" created
+
+$ kubectl get ing external-auth
+NAME            HOSTS                         ADDRESS       PORTS     AGE
+external-auth   external-auth-01.sample.com   172.17.4.99   80        13s
+```
+
 ```yml
 # auth-ingress.yaml
 apiVersion: networking.k8s.io/v1beta1
@@ -76,14 +85,7 @@ spec:
 External Basic Auth는 외부 Basic Auth 서비스를 이용하여 인증을 하는 방식이다. 사용자가 직접 개발한 custom authentication 서버에 연동할 수도 있고, 외부 LDAP 서버를 통하여 인증 체계를 구성하는 등 유연하게 사용할 수 있다.
 
 ```yml
-$ kubectl create -f ingress.yaml
-ingress "external-auth" created
-
-$ kubectl get ing external-auth
-NAME            HOSTS                         ADDRESS       PORTS     AGE
-external-auth   external-auth-01.sample.com   172.17.4.99   80        13s
-
-$ kubectl get ing external-auth -o yaml
+# ingress.yml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
