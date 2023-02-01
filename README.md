@@ -54,6 +54,7 @@
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？.md](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ╊━　[데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　╊━　[Container](./데브옵스 DevOps/Container)</br>
+┃　　　┃　　　╊━　[CNI.md](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　╊━　[ContainerRuntime.md](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
 ┃　　　┃　　　┗━　[Container Orchestration.md](./데브옵스 DevOps/Container/Container Orchestration.md)</br>
 ┃　　　╊━　[Docker](./데브옵스 DevOps/Docker)</br>
@@ -61,6 +62,7 @@
 ┃　　　┃　　　╊━　[Prune.md](./데브옵스 DevOps/Docker/Prune.md)</br>
 ┃　　　┃　　　╊━　[README.md](./데브옵스 DevOps/Docker/README.md)</br>
 ┃　　　┃　　　╊━　[가상화와 컨테이너.md](./데브옵스 DevOps/Docker/가상화와 컨테이너.md)</br>
+┃　　　┃　　　╊━　[도커 네트워크.md](./데브옵스 DevOps/Docker/도커 네트워크.md)</br>
 ┃　　　┃　　　╊━　[도커 명령어.md](./데브옵스 DevOps/Docker/도커 명령어.md)</br>
 ┃　　　┃　　　╊━　[도커 스토리지.md](./데브옵스 DevOps/Docker/도커 스토리지.md)</br>
 ┃　　　┃　　　┗━　[도커 아키텍처.md](./데브옵스 DevOps/Docker/도커 아키텍처.md)</br>
@@ -75,11 +77,13 @@
 ┃　　　┃　　　┃　　　╊━　[K8s의 도커런타임 사용중단.md](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Pod.md](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
-┃　　　┃　　　┃　　　┗━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
+┃　　　┃　　　┃　　　╊━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
+┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시.md](./데브옵스 DevOps/Kubernetes/이론/가상 IP와 서비스 프록시.md)</br>
 ┃　　　┃　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　┃　　　╊━　[Kubernetes.md](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　╊━　[NGINX Ingress Basic Auth.md](./데브옵스 DevOps/Kubernetes/NGINX Ingress Basic Auth.md)</br>
 ┃　　　┃　　　╊━　[NodePort와 ServicePort와 targetPort.md](./데브옵스 DevOps/Kubernetes/NodePort와 ServicePort와 targetPort.md)</br>
+┃　　　┃　　　╊━　[ServiceDNS.md](./데브옵스 DevOps/Kubernetes/ServiceDNS.md)</br>
 ┃　　　┃　　　╊━　[SpringBoot 서비스를 위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
 ┃　　　┃　　　╊━　[ingress.md](./데브옵스 DevOps/Kubernetes/ingress.md)</br>
 ┃　　　┃　　　╊━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/minukube 시작하기.md)</br>
@@ -92,6 +96,7 @@
 ┃　　　┃　　　╊━　[Swap메모리.md](./데브옵스 DevOps/linux/Swap메모리.md)</br>
 ┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./데브옵스 DevOps/linux/bash_profile과 bashrc.md)</br>
 ┃　　　┃　　　╊━　[namespace와 cgroup.md](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　╊━　[network namespaces.md](./데브옵스 DevOps/linux/network namespaces.md)</br>
 ┃　　　┃　　　┗━　[zshrc.md](./데브옵스 DevOps/linux/zshrc.md)</br>
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
