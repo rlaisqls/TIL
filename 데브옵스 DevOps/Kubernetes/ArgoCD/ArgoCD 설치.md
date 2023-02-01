@@ -56,13 +56,11 @@ $ argocd account update-password
 
 Argo CD는 Git repository를 3분에 한번씩 pollin 하면서 실제 kubernetes cluster 와 다른점을 확인한다. 따라서 배포시에 운이 없다면 최대 3분을 기다려야 Argo CD가 변경된 image를 배포하게 된다. 이렇게 Polling 으로 인한 delay를 없애고 싶다면 Git repository 에 Argo CD로 webhook을 만들어 놓으면 된다.
 
-아래 링크를 참고하자.
-
 https://argo-cd.readthedocs.io/en/stable/operator-manual/webhook/
 
-위와 같이 webhook 을 만들어 놓았다면 반드시 Argo CD의 load balancer에 Github 의 webhook 관련 API 도 inbound로 열어줘야 한다.
+webhook 을 만들어 놓았다면 반드시 Argo CD의 load balancer에 Github의 webhook 관련 API를 inbound로 열어줘야 한다.
 
-아래 링크에 GitHub 의 IP 주소 관련 내용과 실제 inbound 에 넣줘야 하는 IP를 확인할 수 있는 링크이다.
+GitHub 의 IP 주소 관련 내용과 실제 inbound 에 넣줘야 하는 IP를 확인할 수 있는 링크이다.
 
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses
 
