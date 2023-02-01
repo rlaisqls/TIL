@@ -6,7 +6,7 @@ K8s의 포트는 노드와 서비스, 컨테이너별로 나뉘어있다. 이 �
 
 ![image](https://user-images.githubusercontent.com/81006587/205223298-aef6933f-31a9-41d2-beb8-4884e2090efa.png)
 
-NodePort는 각 노드의 클러스터 레벨엣서 노출되는 포트, (그림에서 `30001`)
+NodePort는 각 노드의 클러스터 레벨에서 노출되는 포트, (그림에서 `30001`)
 
 Port는 서비스의 포트, (`80`)
 
