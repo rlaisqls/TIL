@@ -10,7 +10,7 @@
 
 [인그레스](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/#ingress-v1-networking-k8s-io)는 외부에서 서비스로 접속이 가능한 URL, 로드 밸런스 트래픽, SSL / TLS 종료 그리고 이름-기반의 가상 호스팅을 제공하도록 구성할 수 있다. 인그레스 컨트롤러는 일반적으로 로드 밸런서를 사용해서 인그레스를 수행할 책임이 있으며, 트래픽을 처리하는데 도움이 되도록 에지 라우터 또는 추가 프런트 엔드를 구성할 수도 있다.
 
-인그레스는 임의의 포트 또는 프로토콜을 노출시키지 않는다. HTTP와 HTTPS 이외의 서비스를 인터넷에 노출하려면 보통 [Service.Type=NodePort](https://kubernetes.io/ko/docs/concepts/services-networking/service/#type-nodeport) 또는 [Service.Type=LoadBalancer](https://kubernetes.io/ko/docs/concepts/services-networking/service/#loadbalancer) 유형의 서비스를 사용한다.
+인그레스는 임의의 포트 또는 프로토콜을 노출시키지 않는다. HTTP와 HTTPS 이외의 서비스를 인터넷에 노출하려면 [Service.Type=NodePort](https://kubernetes.io/ko/docs/concepts/services-networking/service/#type-nodeport) 또는 [Service.Type=LoadBalancer](https://kubernetes.io/ko/docs/concepts/services-networking/service/#loadbalancer) 유형의 서비스를 사용해야한다.
 
 ## Ingress 리소스 구성하기
 

@@ -4,7 +4,7 @@ K8s의 포트는 노드와 서비스, 컨테이너별로 나뉘어있다. 이 �
 
 만약에 하나의 서비스에 2개의 노드가 있고, 그 노드에 각각 하나의 포드가 있다고 하면 아래 그림과 같은 모양이 된다.
 
-![image](https://user-images.githubusercontent.com/81006587/205223298-aef6933f-31a9-41d2-beb8-4884e2090efa.png)
+<img src="https://user-images.githubusercontent.com/81006587/205223298-aef6933f-31a9-41d2-beb8-4884e2090efa.png" height=400px>
 
 NodePort는 각 노드의 클러스터 레벨에서 노출되는 포트, (그림에서 `30001`)
 
