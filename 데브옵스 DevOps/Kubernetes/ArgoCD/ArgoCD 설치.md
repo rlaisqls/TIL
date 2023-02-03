@@ -6,14 +6,14 @@
 
 Argo CD를 kubernetes cluster에 설치한다.
 
-```js
+```yml
 $ kubectl create namespace argocd
 $ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/ha/install.yaml
 ```
 
 Argo CD의 CLI를 설치한다.
 
-```js
+```yml
 $ curl -sSL -o ~/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
 $ chmod +x ~/bin/argocd
 ```

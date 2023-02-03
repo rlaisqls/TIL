@@ -131,8 +131,8 @@ spec:
     app: myapp
   ports:
   - targetPort: 80	
-    port: 80      
-    nodePort: 30008	
+    port: 80
+    nodePort: 30008
 status:
   loadBalancer:	# 프로비저닝된 로드 밸런서 정보
     ingress:
@@ -161,20 +161,9 @@ spec:
 
 ### CLI 명령어로 파드에 서비스 적용하기
 
-서비스는 YAML 형태로 정의하는 것이 좋지만, 생성된 파드를 간단히 외부에 노출시키고자 할 때에는 CLI 명령어로 보다 간편하게 수행할 수도 있다. kubectl create service <서비스유형> ... 형태로 할 수도 있지만, 특정 리소스에 한해 즉시 노출시키고자 한다면 kubectl expose 명령을 이용하여 서비스 배포와 노출을 동시에 진행 가능하다.
+서비스는 YAML 형태로 정의하는 것이 좋지만, 생성된 파드를 간단히 외부에 노출시키고자 할 때에는 CLI 명령어로 보다 간편하게 수행할 수도 있다. 특정 리소스에 한해 즉시 노출시키고자 한다면 kubectl expose 명령을 이용하여 서비스 배포와 노출을 동시에 진행 가능하다.
 
-```js
-# Create a new pod called custom-nginx using the nginx image and expose it on container port 8080.
-kubectl run custom-nginx --image=nginx --port=8080 && kubectl expose pod custom-nginx
-```
-
-예를 들어 redis라는 파드의 6379 포트를 ClusterIP로 클러스터에 노출시켜야 한다고 가정해보자. 서비스를 직접 생성하여 연결하려면 아래와 같은 명령을 생각해 볼 수 있다.
-
-```js
-kubectl create service clusterip redis --tcp=6379:6379
-```
-
-그러나 위와 같은 접근법에는 문제가 하나 있다. 명령어를 통한 서비스 생성시 `spec.selector는 app=redis`로 고정되며, 따로 YAML로 빼서 다시 수정하지 않는 이상 실제 연결하고자 하는 파드의 레이블 정보를 반영할 수 없다. 따라서 이런 경우에는 서비스를 직접 만들기보다는, 다음과 같이 kubectl expose pod 명령을 사용하는 것이 좋다.
+(이렇게 해도 내부적으로 ClusterIP 타입의 service가 생성되긴 한다.)
 
 ```js
 kubectl expose pod redis --port=6379 --name redis-service

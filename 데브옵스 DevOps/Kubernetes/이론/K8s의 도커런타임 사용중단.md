@@ -12,9 +12,9 @@ GKE 및 EKS 등의 관리 Kubernetes 서비스를 사용하는 경우 오퍼레�
 
 > Deprecation<br/>Docker support in the kubelet is now deprecated and will be removed in a future release. The kubelet uses a module called “dockershim” which implements CRI support for Docker and it has seen maintenance issues in the Kubernetes community. We encourage you to evaluate moving to a container runtime that is a full-fledged implementation of CRI (v1alpha1 or v1 compliant) as they become available. (#94624, @dims) [SIG Node]
 
-쿠버네티스는  컨테이너 런타임과 통신 할 때 CRI라는 표준 인터페이스 API 를 사용하지만  Docker는 이를  지원하지 않는다.
+쿠버네티스는 컨테이너 런타임과 통신 할 때 CRI라는 표준 인터페이스 API 를 사용하지만 Docker는 이를 지원하지 않는다.
 
-이런 이유로 쿠버네티스는  “dockershim”라는 브리지 용 서비스로 Docker API와 CRI의 변환을 해주었으나 , 이것이 deprecation 되면서 앞으로 마이너 릴리스 된 후에 도커가 삭제될 예정이다. 라는 뜻의 글이다.
+이런 이유로 쿠버네티스는 “dockershim”라는 브리지용 서비스로 Docker API와 CRI의 변환을 해주었으나, 이것이 deprecation 되면서 앞으로 마이너 릴리스 된 후에 도커가 삭제될 예정이다. 라는 뜻의 글이다.
 
 ## 쿠버네티스는 왜 도커 지원을 중단했을까?
 
@@ -28,7 +28,7 @@ Docker는 Kubernetes에 통합되도록 설계되어 있지 않기 때문에 많
 
 개발용으로 Docker 를 사용하는 것은 쿠버네티스 클러스터의 런타임과는 아무 상관이 없다.
 
-또한 OCI 표준을 준수하는 이미지는 도구에 관계없이 쿠버네티스에서 동일하게 사용할 수 있다. containerd 와 CRI-O는 기존 도커 이미지와 호환성이 뛰어난다.
+또한 OCI 표준을 준수하는 이미지는 도구에 관계없이 쿠버네티스에서 동일하게 사용할 수 있다. containerd와 CRI-O는 기존 도커 이미지와 호환성이 뛰어나다.
 
 이것이 바로 컨테이너 표준이 만들어진 이유이다.
 
