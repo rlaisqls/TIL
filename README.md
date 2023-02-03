@@ -79,6 +79,7 @@
 ┃　　　┃　　　┃　　　╊━　[Pod 생성과정.md](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Service와 port.md](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
 ┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시.md](./데브옵스 DevOps/Kubernetes/이론/가상 IP와 서비스 프록시.md)</br>
+┃　　　┃　　　╊━　[DNS in k8s.md](./데브옵스 DevOps/Kubernetes/DNS in k8s.md)</br>
 ┃　　　┃　　　╊━　[K8s를 위한 SpringBoot 개발.md](./데브옵스 DevOps/Kubernetes/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　┃　　　╊━　[Kubernetes.md](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　╊━　[NGINX Ingress Basic Auth.md](./데브옵스 DevOps/Kubernetes/NGINX Ingress Basic Auth.md)</br>

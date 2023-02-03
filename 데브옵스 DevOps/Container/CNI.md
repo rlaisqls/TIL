@@ -12,3 +12,14 @@ CNI는 컨테이너 네트워크 작업을 수행하는 코드가 대략적으�
 CNI를 구현하는 플러그인으론 BRIDGE, VLAN, IPVLAN, MACVLAN, DHCP, Calico, Canal, romana, Weave, Flannel, NSX 등등이 있다.
 
 (도커는 CNM이라는 별도 네트워킹을 구현하기 떄문에, CNI에 호환되지 않는다.)
+
+## CNI Plugin이 하는 일
+
+- 컨테이너를 ADD, DELETE, CHECK할 수 있어야한다.
+- container id, network ns 등등의 파라미터를 지원해야한다.
+- Pod에 IP 주소를 할당하고 관리해야한다.
+- 조회 결과 반환시, 특정한 형식에 맞추어야한다. (JSON)
+
+## IPAM
+
+CNI 설정 파일은 CNI 플러그인의 유형, 사용할 서브넷과 라우트를 명시하는 IPAM(IP Address Management )이라는 섹션을 가지고있다. 하드코딩 없이 적절한 플러그인을 호출할 수 있도록 하는 역할을 한다.
