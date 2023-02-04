@@ -86,8 +86,10 @@
 ┃　　　┃　　　╊━　[NodePort와 ServicePort와 targetPort.md](./데브옵스 DevOps/Kubernetes/NodePort와 ServicePort와 targetPort.md)</br>
 ┃　　　┃　　　╊━　[ServiceDNS.md](./데브옵스 DevOps/Kubernetes/ServiceDNS.md)</br>
 ┃　　　┃　　　╊━　[SpringBoot 서비스를 위한 Kubernetes 설정.md](./데브옵스 DevOps/Kubernetes/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
+┃　　　┃　　　╊━　[etcd.md](./데브옵스 DevOps/Kubernetes/etcd.md)</br>
 ┃　　　┃　　　╊━　[ingress.md](./데브옵스 DevOps/Kubernetes/ingress.md)</br>
 ┃　　　┃　　　╊━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/minukube 시작하기.md)</br>
+┃　　　┃　　　╊━　[test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
 ┃　　　┃　　　┗━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/환경변수 설정.md)</br>
 ┃　　　╊━　[Logging](./데브옵스 DevOps/Logging)</br>
 ┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog)</br>
@@ -261,8 +263,12 @@
 ┃　　　┃　　　┃　　　╊━　[Permanent to Metaspace.md](./언어 Language/JAVA/JVM/Permanent to Metaspace.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Runtime Data Area.md](./언어 Language/JAVA/JVM/Runtime Data Area.md)</br>
 ┃　　　┃　　　┃　　　┗━　[메모리누수.md](./언어 Language/JAVA/JVM/메모리누수.md)</br>
+┃　　　┃　　　╊━　[Thread](./언어 Language/JAVA/Thread)</br>
+┃　　　┃　　　┃　　　╊━　[Thread.md](./언어 Language/JAVA/Thread/Thread.md)</br>
+┃　　　┃　　　┃　　　┗━　[Thread 상태.md](./언어 Language/JAVA/Thread/Thread 상태.md)</br>
 ┃　　　┃　　　╊━　[Inner static class.md](./언어 Language/JAVA/Inner static class.md)</br>
 ┃　　　┃　　　╊━　[JDKProxy와 CGLibProxy.md](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
+┃　　　┃　　　╊━　[netty의 스레드 풀링 패턴.md](./언어 Language/JAVA/netty의 스레드 풀링 패턴.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/JAVA/제네릭과 variance.md)</br>
 ┃　　　┗━　[Kotlin](./언어 Language/Kotlin)</br>
 ┃　　　　　　　╊━　[변수](./언어 Language/Kotlin/변수)</br>
