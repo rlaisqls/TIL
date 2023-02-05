@@ -137,11 +137,14 @@ Etcd 프로세스에 의해 commit된 데이터는 db(파일시스템)에 보관
 
 <img src="https://user-images.githubusercontent.com/81006587/216815479-aa7411c0-f7b9-4b67-bd64-ba9b4f33506d.png" height=300px>
 
-Etcd는 db에 데이터를 저장할 때 revision 값과 함께 저장한다. 위 그림을 살펴보면, x라는 key에 대해서 value를 달리해서 여러 번 write를 했을 때 하나의 공간에 계속하여 덮어쓰는 것이 아니라 history를 계속하여 저장하는 구조이다. 파일시스템이 메모리와 비교했을 때 볼륨에 있어 비교적 풍부한 컴퓨팅 리소스임은 분명하지만 그럼에도 불구하고 revision에 대해 별다른 관리를 하지 않으며 계속 write 하기만 한다면, 호스트 OS의 디스크 공간 부족으로 인해 etcd 프로세스는 언젠가 반드시 중단될 것이다.
+Etcd는 db에 데이터를 저장할 때 revision 값과 함께 저장한다. 위 그림을 살펴보면, x라는 key에 대해서 value를 달리해서 여러 번 write를 했을 때 하나의 공간에 계속하여 덮어쓰는 것이 아니라 history를 계속하여 저장하는 구조이다.
 
-<img src="https://user-images.githubusercontent.com/81006587/216815581-6af2e260-cf8c-4afa-b8d1-1be87e68c6b7.png" height=300px>
+불필요한 revision의 과도한 리소스 사용을 피하고자 etcd는 `compaction`(압축) 기능을 제공한다. Compaction으로 삭제한 revision 데이터는 다시 조회가 불가능해진다.
 
-불필요한 revision의 과도한 리소스 사용을 피하고자 etcd는 `compaction`(압축) 기능을 제공한다. Compaction으로 삭제한 revision 데이터는 더는 etcd 클러스터에서 조회할 수 없다. Compaction은 etcd가 제공하는 CLI 도구인 etcdctl을 사용해 간단하게 할 수 있다.
+> Compactor records latest revisions every 5-minute, until it reaches the first compaction period 
+https://etcd.io/docs/v3.4/op-guide/maintenance/
+
+공식 문서를 보면, 매 5분동안의 최신 revision만 남기고 삭제하는 것이 기본 설정이라는 것을 알 수 있다.
 
 ## 자동 컴팩션(Auto compaction)
 
@@ -150,7 +153,7 @@ Etcd는 운영자가 별도로 조치하지 않아도 일정 revision 또는 주
 ### Revision 모드
 <img src="https://user-images.githubusercontent.com/81006587/216817159-e90f414b-ab4c-4deb-961f-eda41744a0b3.png" height=300px>
 
-Auto-compaction-mode revision으로 지정하면 5분마다 최신 revision – auto-compaction-retention까지만 db에 남기고 compaction한다. Auto-compaction-retention의 값이 1,000이고 5분마다 500 revision의 데이터가 생성된다고 가정하면 5분마다 500 revision이 계속하여 compaction된다.
+Auto-compaction-mode revision으로 지정하면 위에서 말했던 것처럼 5분마다 최신 revision – auto-compaction-retention까지만 db에 남기고 compaction한다. Auto-compaction-retention의 값이 1,000이고 5분마다 500 revision의 데이터가 생성된다고 가정하면 5분마다 500 revision이 계속하여 compaction된다.
 
 ### Periodic 모드
 
@@ -183,7 +186,7 @@ etcd의 메타데이터에는 etcd 클러스터를 식별하기 위한 uuid와 e
 
 ---
 
-침고
+참고
 
 - https://etcd.io/docs/
 - https://tech.kakao.com/2021/12/20/kubernetes-etcd/
