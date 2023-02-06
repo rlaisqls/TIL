@@ -12,7 +12,7 @@ https://helm.sh/ko/docs/intro/install/
 
 Datadog Operator를 Helm을 통해 설치하는 명령어는 다음과 같다.
 
-```js
+```bash
 $ helm repo add datadog https://helm.datadoghq.com
 $ helm install -n datadog --create-namespace --set fullnameOverride="dd-op" mwp-datadog-operator datadog/datadog-operator
 ```
@@ -86,7 +86,7 @@ Datadog cluster agent도 설치되어 효율적인 운영이 가능하다.
 
 설정을 적용한다.
 
-```js
+```bash
 $ kubectl apply -f datadog-operator.yaml
 ```
 
