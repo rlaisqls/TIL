@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 246
+files            : 247
 derectories      : 61
-avg_file_length  : 2185
+avg_file_length  : 2182
 ```
 
 ./TIL</br>
@@ -26,7 +26,8 @@ avg_file_length  : 2185
 ┃　　　┃　　　╊━　[netty.md](./개발/비동기/netty.md)</br>
 ┃　　　┃　　　╊━　[netty 사례연구.md](./개발/비동기/netty 사례연구.md)</br>
 ┃　　　┃　　　┗━　[코루틴.md](./개발/비동기/코루틴.md)</br>
-┃　　　┗━　[Logback.md](./개발/Logback.md)</br>
+┃　　　╊━　[Logback.md](./개발/Logback.md)</br>
+┃　　　┗━　[직렬화 serialVersionUID.md](./개발/직렬화 serialVersionUID.md)</br>
 ╊━　[객체지향 OOP](./객체지향 OOP)</br>
 ┃　　　╊━　[디자인패턴](./객체지향 OOP/디자인패턴)</br>
 ┃　　　┃　　　╊━　[1. 생성패턴](./객체지향 OOP/디자인패턴/1. 생성패턴)</br>
