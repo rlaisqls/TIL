@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 249
+files            : 250
 derectories      : 62
-avg_file_length  : 2212
+avg_file_length  : 2209
 ```
 
 ./TIL</br>
@@ -23,7 +23,8 @@ avg_file_length  : 2212
 ┃　　　┃　　　┗━　[tomcat 구성요소.md](./개발/WAS/tomcat 구성요소.md)</br>
 ┃　　　╊━　[netty](./개발/netty)</br>
 ┃　　　┃　　　╊━　[netty server 예제.md](./개발/netty/netty server 예제.md)</br>
-┃　　　┃　　　┗━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
+┃　　　┃　　　╊━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
+┃　　　┃　　　┗━　[netty의 기본 Component 및 Architecture.md](./개발/netty/netty의 기본 Component 및 Architecture.md)</br>
 ┃　　　╊━　[비동기](./개발/비동기)</br>
 ┃　　　┃　　　╊━　[Coroutine vs Reactor.md](./개발/비동기/Coroutine vs Reactor.md)</br>
 ┃　　　┃　　　╊━　[netty 사례연구.md](./개발/비동기/netty 사례연구.md)</br>
@@ -315,7 +316,9 @@ avg_file_length  : 2212
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
-┗━　[README.md](./README.md)</br>
+╊━　[README.md](./README.md)</br>
+╊━　[XX7SqTJB](./XX7SqTJB)</br>
+┗━　[test.html](./test.html)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
