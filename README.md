@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 252
+files            : 249
 derectories      : 62
-avg_file_length  : 2193
+avg_file_length  : 2212
 ```
 
 ./TIL</br>
@@ -26,10 +26,8 @@ avg_file_length  : 2193
 ┃　　　┃　　　┗━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
 ┃　　　╊━　[비동기](./개발/비동기)</br>
 ┃　　　┃　　　╊━　[Coroutine vs Reactor.md](./개발/비동기/Coroutine vs Reactor.md)</br>
-┃　　　┃　　　╊━　[netty.md](./개발/비동기/netty.md)</br>
 ┃　　　┃　　　╊━　[netty 사례연구.md](./개발/비동기/netty 사례연구.md)</br>
 ┃　　　┃　　　┗━　[코루틴.md](./개발/비동기/코루틴.md)</br>
-┃　　　╊━　[Logback.md](./개발/Logback.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID.md](./개발/직렬화 serialVersionUID.md)</br>
 ╊━　[객체지향 OOP](./객체지향 OOP)</br>
 ┃　　　╊━　[디자인패턴](./객체지향 OOP/디자인패턴)</br>
@@ -235,8 +233,7 @@ avg_file_length  : 2193
 ┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)</br>
 ┃　　　┃　　　╊━　[@Controller.md](./스프링 Spring/WebFlux/@Controller.md)</br>
 ┃　　　┃　　　╊━　[RouterFunctions.md](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
-┃　　　┃　　　╊━　[WebFlux.md](./스프링 Spring/WebFlux/WebFlux.md)</br>
-┃　　　┃　　　┗━　[netty.md](./스프링 Spring/WebFlux/netty.md)</br>
+┃　　　┃　　　┗━　[WebFlux.md](./스프링 Spring/WebFlux/WebFlux.md)</br>
 ┃　　　╊━　[Web MVC](./스프링 Spring/Web MVC)</br>
 ┃　　　┃　　　╊━　[Request 처리과정.md](./스프링 Spring/Web MVC/Request 처리과정.md)</br>
 ┃　　　┃　　　┗━　[SpringServletContainerInitializer.md](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
