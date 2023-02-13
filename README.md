@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 252
-derectories      : 62
-avg_file_length  : 2207
+files            : 256
+derectories      : 63
+avg_file_length  : 2198
 ```
 
 ./TIL</br>
@@ -124,6 +124,11 @@ avg_file_length  : 2207
 ┃　　　┃　　　╊━　[namespace와 cgroup.md](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
 ┃　　　┃　　　╊━　[network namespaces.md](./데브옵스 DevOps/linux/network namespaces.md)</br>
 ┃　　　┃　　　┗━　[zshrc.md](./데브옵스 DevOps/linux/zshrc.md)</br>
+┃　　　╊━　[nginx](./데브옵스 DevOps/nginx)</br>
+┃　　　┃　　　╊━　[nginx certbot.md](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
+┃　　　┃　　　╊━　[nginx 명령어.md](./데브옵스 DevOps/nginx/nginx 명령어.md)</br>
+┃　　　┃　　　╊━　[nginx설정.md](./데브옵스 DevOps/nginx/nginx설정.md)</br>
+┃　　　┃　　　┗━　[리버스 프록시.md](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　╊━　[openssl로 pemKey 만들고 접속하기.md](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
@@ -318,7 +323,8 @@ avg_file_length  : 2207
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
-┗━　[README.md](./README.md)</br>
+╊━　[README.md](./README.md)</br>
+┗━　[XXD7lTFC](./XXD7lTFC)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
