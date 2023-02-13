@@ -3,7 +3,7 @@
 ```
 files            : 252
 derectories      : 62
-avg_file_length  : 2206
+avg_file_length  : 2207
 ```
 
 ./TIL</br>
@@ -125,7 +125,7 @@ avg_file_length  : 2206
 ┃　　　┃　　　╊━　[network namespaces.md](./데브옵스 DevOps/linux/network namespaces.md)</br>
 ┃　　　┃　　　┗━　[zshrc.md](./데브옵스 DevOps/linux/zshrc.md)</br>
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
-┃　　　╊━　[opensslpemkey만들기.md](./데브옵스 DevOps/opensslpemkey만들기.md)</br>
+┃　　　╊━　[openssl로 pemKey 만들고 접속하기.md](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
 ╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)</br>
 ┃　　　╊━　[DB설계](./데이터베이스 DataBase/DB설계)</br>
