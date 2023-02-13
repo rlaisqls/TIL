@@ -16,7 +16,6 @@ public class ValidationGroups {
     interface SizeCheckGroup {};
     interface PatternCheckGroup {};
 }
-}
 ```
 
 검증 종류로만 그룹을 나누고 싶다면 이런식으로 그룹을 나눌 수 있다. 다른 방식으로 그룹을 묶어주고 싶다면 코드를 바꾸면 된다.
