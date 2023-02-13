@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 250
+files            : 252
 derectories      : 62
-avg_file_length  : 2209
+avg_file_length  : 2206
 ```
 
 ./TIL</br>
@@ -125,6 +125,7 @@ avg_file_length  : 2209
 ┃　　　┃　　　╊━　[network namespaces.md](./데브옵스 DevOps/linux/network namespaces.md)</br>
 ┃　　　┃　　　┗━　[zshrc.md](./데브옵스 DevOps/linux/zshrc.md)</br>
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
+┃　　　╊━　[opensslpemkey만들기.md](./데브옵스 DevOps/opensslpemkey만들기.md)</br>
 ┃　　　┗━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
 ╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)</br>
 ┃　　　╊━　[DB설계](./데이터베이스 DataBase/DB설계)</br>
@@ -230,7 +231,8 @@ avg_file_length  : 2209
 ┃　　　┃　　　┃　　　┗━　[Mockk.md](./스프링 Spring/TestCode/Kotlin/Mockk.md)</br>
 ┃　　　┃　　　┗━　[Mock과 Spy.md](./스프링 Spring/TestCode/Mock과 Spy.md)</br>
 ┃　　　╊━　[Validation](./스프링 Spring/Validation)</br>
-┃　　　┃　　　┗━　[@GroupSequence.md](./스프링 Spring/Validation/@GroupSequence.md)</br>
+┃　　　┃　　　╊━　[@GroupSequence.md](./스프링 Spring/Validation/@GroupSequence.md)</br>
+┃　　　┃　　　┗━　[@Valid와 @Validated.md](./스프링 Spring/Validation/@Valid와 @Validated.md)</br>
 ┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)</br>
 ┃　　　┃　　　╊━　[@Controller.md](./스프링 Spring/WebFlux/@Controller.md)</br>
 ┃　　　┃　　　╊━　[RouterFunctions.md](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
@@ -317,8 +319,7 @@ avg_file_length  : 2209
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ╊━　[README.md](./README.md)</br>
-╊━　[XX7SqTJB](./XX7SqTJB)</br>
-┗━　[test.html](./test.html)</br>
+┗━　[XXqWUMtC](./XXqWUMtC)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
