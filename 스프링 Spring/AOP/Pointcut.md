@@ -71,7 +71,7 @@ within은 특정 패키지 안에 있는 클래스에 AOP를 적용하도록 한
 
 - service 패키지에 있는 모든 joinPoint(메서드):
 ```js
-within(com.xyz.service.*)
+                
 ```
 
 - service 패키지 또는 그 하위 패키지에 있는 joinPoint(메서드):
