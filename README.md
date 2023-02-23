@@ -127,7 +127,7 @@ avg_file_length  : 2198
 ┃　　　╊━　[nginx](./데브옵스 DevOps/nginx)</br>
 ┃　　　┃　　　╊━　[nginx certbot.md](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
 ┃　　　┃　　　╊━　[nginx 명령어.md](./데브옵스 DevOps/nginx/nginx 명령어.md)</br>
-┃　　　┃　　　╊━　[nginx설정.md](./데브옵스 DevOps/nginx/nginx설정.md)</br>
+┃　　　┃　　　╊━　[nginx 설정.md](./데브옵스 DevOps/nginx/nginx 설정.md)</br>
 ┃　　　┃　　　┗━　[리버스 프록시.md](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　╊━　[openssl로 pemKey 만들고 접속하기.md](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
