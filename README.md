@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 256
+files            : 255
 derectories      : 63
-avg_file_length  : 2198
+avg_file_length  : 2204
 ```
 
 ./TIL</br>
@@ -23,8 +23,7 @@ avg_file_length  : 2198
 ┃　　　┃　　　┗━　[tomcat 구성요소.md](./개발/WAS/tomcat 구성요소.md)</br>
 ┃　　　╊━　[netty](./개발/netty)</br>
 ┃　　　┃　　　╊━　[netty server 예제.md](./개발/netty/netty server 예제.md)</br>
-┃　　　┃　　　╊━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
-┃　　　┃　　　┗━　[netty의 기본 Component 및 Architecture.md](./개발/netty/netty의 기본 Component 및 Architecture.md)</br>
+┃　　　┃　　　┗━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
 ┃　　　╊━　[비동기](./개발/비동기)</br>
 ┃　　　┃　　　╊━　[Coroutine vs Reactor.md](./개발/비동기/Coroutine vs Reactor.md)</br>
 ┃　　　┃　　　╊━　[netty 사례연구.md](./개발/비동기/netty 사례연구.md)</br>
