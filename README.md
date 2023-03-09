@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 256
+files            : 257
 derectories      : 63
-avg_file_length  : 2211
+avg_file_length  : 2189
 ```
 
 ./TIL</br>
@@ -83,6 +83,7 @@ avg_file_length  : 2211
 ┃　　　┃　　　╊━　[DockerSwarm.md](./데브옵스 DevOps/Docker/DockerSwarm.md)</br>
 ┃　　　┃　　　╊━　[Prune.md](./데브옵스 DevOps/Docker/Prune.md)</br>
 ┃　　　┃　　　╊━　[README.md](./데브옵스 DevOps/Docker/README.md)</br>
+┃　　　┃　　　╊━　[docker.sock permission　denied.md](./데브옵스 DevOps/Docker/docker.sock permission　denied.md)</br>
 ┃　　　┃　　　╊━　[가상화와 컨테이너.md](./데브옵스 DevOps/Docker/가상화와 컨테이너.md)</br>
 ┃　　　┃　　　╊━　[도커 네트워크.md](./데브옵스 DevOps/Docker/도커 네트워크.md)</br>
 ┃　　　┃　　　╊━　[도커 명령어.md](./데브옵스 DevOps/Docker/도커 명령어.md)</br>
@@ -324,7 +325,7 @@ avg_file_length  : 2211
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ╊━　[README.md](./README.md)</br>
-┗━　[kk.html](./kk.html)</br>
+┗━　[XXXxKHzG](./XXXxKHzG)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
