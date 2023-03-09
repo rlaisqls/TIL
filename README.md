@@ -3,7 +3,7 @@
 ```
 files            : 256
 derectories      : 63
-avg_file_length  : 2209
+avg_file_length  : 2211
 ```
 
 ./TIL</br>
@@ -324,7 +324,6 @@ avg_file_length  : 2209
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ╊━　[README.md](./README.md)</br>
-╊━　[XXHOpOIL](./XXHOpOIL)</br>
 ┗━　[kk.html](./kk.html)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
