@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 257
-derectories      : 63
-avg_file_length  : 2189
+files            : 258
+derectories      : 64
+avg_file_length  : 2185
 ```
 
 ./TIL</br>
@@ -28,6 +28,7 @@ avg_file_length  : 2189
 ┃　　　┃　　　╊━　[Coroutine vs Reactor.md](./개발/비동기/Coroutine vs Reactor.md)</br>
 ┃　　　┃　　　╊━　[netty 사례연구.md](./개발/비동기/netty 사례연구.md)</br>
 ┃　　　┃　　　┗━　[코루틴.md](./개발/비동기/코루틴.md)</br>
+┃　　　╊━　[회고](./개발/회고)</br>
 ┃　　　┗━　[직렬화 serialVersionUID.md](./개발/직렬화 serialVersionUID.md)</br>
 ╊━　[객체지향 OOP](./객체지향 OOP)</br>
 ┃　　　╊━　[디자인패턴](./객체지향 OOP/디자인패턴)</br>
@@ -123,7 +124,8 @@ avg_file_length  : 2189
 ┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./데브옵스 DevOps/linux/bash_profile과 bashrc.md)</br>
 ┃　　　┃　　　╊━　[namespace와 cgroup.md](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
 ┃　　　┃　　　╊━　[network namespaces.md](./데브옵스 DevOps/linux/network namespaces.md)</br>
-┃　　　┃　　　┗━　[zshrc.md](./데브옵스 DevOps/linux/zshrc.md)</br>
+┃　　　┃　　　╊━　[zshrc.md](./데브옵스 DevOps/linux/zshrc.md)</br>
+┃　　　┃　　　┗━　[환경변수와 프로세스.md](./데브옵스 DevOps/linux/환경변수와 프로세스.md)</br>
 ┃　　　╊━　[nginx](./데브옵스 DevOps/nginx)</br>
 ┃　　　┃　　　╊━　[nginx certbot.md](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
 ┃　　　┃　　　╊━　[nginx docker.md](./데브옵스 DevOps/nginx/nginx docker.md)</br>
@@ -324,8 +326,7 @@ avg_file_length  : 2189
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
-╊━　[README.md](./README.md)</br>
-┗━　[XXXxKHzG](./XXXxKHzG)</br>
+┗━　[README.md](./README.md)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
