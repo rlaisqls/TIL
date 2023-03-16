@@ -14,6 +14,7 @@ avg_file_length  : 2185
 ┃　　　┗━　[hooks](./Git/hooks)</br>
 ┃　　　　　　　╊━　[Githooks.md](./Git/hooks/Githooks.md)</br>
 ┃　　　　　　　╊━　[githook을 위한 perl command.md](./Git/hooks/githook을 위한 perl command.md)</br>
+┃　　　　　　　╊━　[ㅁㄴㅇㅁㄴㅇ](./Git/hooks/ㅁㄴㅇㅁㄴㅇ)</br>
 ┃　　　　　　　╊━　[파일트리 자동생성.md](./Git/hooks/파일트리 자동생성.md)</br>
 ┃　　　　　　　┗━　[파일트리 자동생성 V2.md](./Git/hooks/파일트리 자동생성 V2.md)</br>
 ╊━　[개발](./개발)</br>
@@ -329,7 +330,7 @@ avg_file_length  : 2185
 ┗━　[README.md](./README.md)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
-╊━　[pre━commit](./pre━commit)</br>
+╊━　[post━commit](./post━commit)</br>
 ┗━　[readme_template.md](./readme_template.md)</br>
 
 

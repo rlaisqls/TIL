@@ -26,7 +26,7 @@
 ## 텍스트 치환
 
 ```
-s/{before}/{after{/;
+s/{before}/{after}/;
 ```
 
 https://www.perl.com/pub/2004/08/09/commandline.html/
