@@ -333,7 +333,6 @@ avg_file_length  : 2168
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ╊━　[README.md](./README.md)</br>
-╊━　[XXzcTyOB](./XXzcTyOB)</br>
 ╊━　[dsvs](./dsvs)</br>
 ┗━　[sad](./sad)</br>
 .
