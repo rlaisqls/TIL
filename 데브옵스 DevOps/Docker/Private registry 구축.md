@@ -48,13 +48,36 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 3d407c3736dd        registry            "/entrypoint.sh /e..."   About a minute ago   Up About a minute   0.0.0.0:5000->5000/tcp   repo-registry
 ```
 
+만약 레지스트리에 비밀번호를 설정하고 싶다면 이렇게 하면 된다.
+
+```
+# 사용자 정보 담을 파일 경로 생성
+cd ~
+mkdir .registry_auth
+      
+# 사용자 정보담은 파일 생성
+docker run --entrypoint htpasswd httpd -Bbn {user} {password} > /home/admin/.registry_auth/htpasswd
+      
+# registry 컨테이너 띄우기
+docker run -d \
+--name registry \
+--restart=always \
+-p 5000:5000 \
+-v /home/admin/registry_data:/var/lib/registry \
+-v /home/admin/registry_auth:/auth \
+-e "REGISTRY_AUTH=htpasswd" \
+-e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" \
+-e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \
+registry
+```
+
 ### 3. 이미지 push
 
-다음과 같은 형식으로 이미지를 buil하고 push할 수 있다.
+다음과 같은 형식으로 이미지를 build하고 push할 수 있다.
 
 Dockerfile이 있다고 가정했을때, 이렇게 해주면 된다.
 
 ```bash
-docker build -t {주소(IP:Port)}/{레포지토리 이름}/{이미지 이름}}:{버전} .
-docker push {주소(IP:Port)}/{레포지토리 이름}/{이미지 이름}}:{버전}
+docker build -t {주소(IP:Port)}/{레포지토리 이름}:{버전} .
+docker push {주소(IP:Port)}/{레포지토리 이름}:{버전}
 ```
