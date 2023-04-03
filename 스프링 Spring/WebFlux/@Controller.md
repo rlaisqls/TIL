@@ -7,7 +7,7 @@
 스프링부트 프로젝트를 생성하여 `build.gradle`에 Dependencies를 설정한다. 필요한 의존성과, webflux 의존성을 설정해준다.
 
 ```groovy
-implementation 'org.springframework.boot:spring-boot-starter-webflux' //webflux!!
+implementation 'org.springframework.boot:spring-boot-starter-webflux'
 ```
 
 ### Flux 반환 유형
