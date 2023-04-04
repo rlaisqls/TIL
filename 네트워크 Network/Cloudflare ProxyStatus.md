@@ -1,4 +1,6 @@
 
+![image](https://user-images.githubusercontent.com/81006587/226903631-28bd8162-d435-48bd-a9bc-5abfc9bb8c63.png)
+
 Proxy status는 Cloudflare가 DNS의 레코드를 어떻게 관리하느냐에 대한 것이다.
 
 만약 `A`, `AAAA`, 혹은 `CNAME` record에 Proxy status를 Proxied라고 설정하게 된다면, DNS 쿼리를 날렸을때 실제 IP가 아닌 Cloudflare Anycast IP를 먼저 거치게 한다.
