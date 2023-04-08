@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 269
+files            : 270
 derectories      : 66
-avg_file_length  : 2180
+avg_file_length  : 2179
 ```
 
 ./TIL</br>
@@ -22,9 +22,9 @@ avg_file_length  : 2180
 ┃　　　╊━　[WAS](./개발/WAS)</br>
 ┃　　　┃　　　┗━　[tomcat 구성요소.md](./개발/WAS/tomcat 구성요소.md)</br>
 ┃　　　╊━　[netty](./개발/netty)</br>
-┃　　　┃　　　╊━　[\010webFlux와 netty.md](./개발/netty/\010webFlux와 netty.md)</br>
 ┃　　　┃　　　╊━　[netty server 예제.md](./개발/netty/netty server 예제.md)</br>
-┃　　　┃　　　┗━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
+┃　　　┃　　　╊━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
+┃　　　┃　　　┗━　[webFlux와 netty.md](./개발/netty/webFlux와 netty.md)</br>
 ┃　　　╊━　[비동기](./개발/비동기)</br>
 ┃　　　┃　　　╊━　[Coroutine vs Reactor.md](./개발/비동기/Coroutine vs Reactor.md)</br>
 ┃　　　┃　　　╊━　[netty 사례연구.md](./개발/비동기/netty 사례연구.md)</br>
@@ -236,7 +236,8 @@ avg_file_length  : 2180
 ┃　　　┃　　　╊━　[N+1 문제.md](./스프링 Spring/JPA/N+1 문제.md)</br>
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
-┃　　　┃　　　┗━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
+┃　　　┃　　　╊━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
+┃　　　┃　　　┗━　[트랜잭션 전파 설정.md](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
 ┃　　　┃　　　╊━　[CSRF.md](./스프링 Spring/SpringSecurity/CSRF.md)</br>
