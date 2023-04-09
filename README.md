@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 270
+files            : 272
 derectories      : 66
-avg_file_length  : 2179
+avg_file_length  : 2163
 ```
 
 ./TIL</br>
@@ -237,6 +237,7 @@ avg_file_length  : 2179
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
 ┃　　　┃　　　╊━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
+┃　　　┃　　　╊━　[트랜잭션 readOnly 전파.md](./스프링 Spring/JPA/트랜잭션 readOnly 전파.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 전파 설정.md](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
@@ -310,6 +311,7 @@ avg_file_length  : 2179
 ┃　　　┃　　　┃　　　┗━　[Thread 상태.md](./언어 Language/JAVA/Thread/Thread 상태.md)</br>
 ┃　　　┃　　　╊━　[Inner static class.md](./언어 Language/JAVA/Inner static class.md)</br>
 ┃　　　┃　　　╊━　[JDKProxy와 CGLibProxy.md](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
+┃　　　┃　　　╊━　[예외와 에러.md](./언어 Language/JAVA/예외와 에러.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/JAVA/제네릭과 variance.md)</br>
 ┃　　　╊━　[Kotlin](./언어 Language/Kotlin)</br>
 ┃　　　┃　　　╊━　[변수](./언어 Language/Kotlin/변수)</br>
@@ -340,8 +342,7 @@ avg_file_length  : 2179
 ╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　┗━　[선형회귀직선.md](./인공지능/선형회귀직선.md)</br>
-╊━　[README.md](./README.md)</br>
-┗━　[XXK97CPB](./XXK97CPB)</br>
+┗━　[README.md](./README.md)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
