@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 272
+files            : 273
 derectories      : 66
-avg_file_length  : 2173
+avg_file_length  : 2175
 ```
 
 ./TIL</br>
@@ -18,7 +18,9 @@ avg_file_length  : 2173
 ┃　　　　　　　┗━　[파일트리 자동생성 V2.md](./Git/hooks/파일트리 자동생성 V2.md)</br>
 ╊━　[개발](./개발)</br>
 ┃　　　╊━　[Gradle](./개발/Gradle)</br>
-┃　　　┃　　　┗━　[DependencyHandler.md](./개발/Gradle/DependencyHandler.md)</br>
+┃　　　┃　　　╊━　[DependencyHandler.md](./개발/Gradle/DependencyHandler.md)</br>
+┃　　　┃　　　╊━　[Gradle LifeCycle.md](./개발/Gradle/Gradle LifeCycle.md)</br>
+┃　　　┃　　　┗━　[멀티모듈.md](./개발/Gradle/멀티모듈.md)</br>
 ┃　　　╊━　[WAS](./개발/WAS)</br>
 ┃　　　┃　　　┗━　[tomcat 구성요소.md](./개발/WAS/tomcat 구성요소.md)</br>
 ┃　　　╊━　[netty](./개발/netty)</br>
@@ -294,8 +296,7 @@ avg_file_length  : 2173
 ┃　　　┃　　　╊━　[트랜잭션 격리.md](./아키텍처 및 방법론/MSA/트랜잭션 격리.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 로그 테일링 패턴.md](./아키텍처 및 방법론/MSA/트랜잭션 로그 테일링 패턴.md)</br>
 ┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
-┃　　　╊━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
-┃　　　┗━　[멀티모듈.md](./아키텍처 및 방법론/멀티모듈.md)</br>
+┃　　　┗━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ╊━　[알고리즘 Algorithm](./알고리즘 Algorithm)</br>
 ┃　　　┗━　[세그먼트트리.md](./알고리즘 Algorithm/세그먼트트리.md)</br>
 ╊━　[언어 Language](./언어 Language)</br>
