@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 281
+files            : 280
 derectories      : 66
-avg_file_length  : 2156
+avg_file_length  : 2163
 ```
 
 ./TIL</br>
@@ -240,7 +240,6 @@ avg_file_length  : 2156
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
 ┃　　　┃　　　╊━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
-┃　　　┃　　　╊━　[트랜잭션 readOnly 전파.md](./스프링 Spring/JPA/트랜잭션 readOnly 전파.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 전파 설정.md](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
