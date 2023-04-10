@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 280
-derectories      : 66
+files            : 281
+derectories      : 67
 avg_file_length  : 2174
 ```
 
@@ -175,6 +175,10 @@ avg_file_length  : 2174
 ┃　　　┃　　　╊━　[NoSQL 데이터유형.md](./데이터베이스 DataBase/NoSQL/NoSQL 데이터유형.md)</br>
 ┃　　　┃　　　┗━　[NoSQL에는 ACID가 없다고？.md](./데이터베이스 DataBase/NoSQL/NoSQL에는 ACID가 없다고？.md)</br>
 ┃　　　╊━　[SQL](./데이터베이스 DataBase/SQL)</br>
+┃　　　┃　　　╊━　[최적화](./데이터베이스 DataBase/SQL/최적화)</br>
+┃　　　┃　　　┃　　　╊━　[DB 커넥션 풀.md](./데이터베이스 DataBase/SQL/최적화/DB 커넥션 풀.md)</br>
+┃　　　┃　　　┃　　　╊━　[옵티마이저.md](./데이터베이스 DataBase/SQL/최적화/옵티마이저.md)</br>
+┃　　　┃　　　┃　　　┗━　[조인 수행원리.md](./데이터베이스 DataBase/SQL/최적화/조인 수행원리.md)</br>
 ┃　　　┃　　　╊━　[쿼리종류](./데이터베이스 DataBase/SQL/쿼리종류)</br>
 ┃　　　┃　　　┃　　　╊━　[DCL.md](./데이터베이스 DataBase/SQL/쿼리종류/DCL.md)</br>
 ┃　　　┃　　　┃　　　╊━　[DDL.md](./데이터베이스 DataBase/SQL/쿼리종류/DDL.md)</br>
@@ -192,10 +196,8 @@ avg_file_length  : 2174
 ┃　　　┃　　　╊━　[SELECT쿼리 실행순서.md](./데이터베이스 DataBase/SQL/SELECT쿼리 실행순서.md)</br>
 ┃　　　┃　　　╊━　[계층형 질의.md](./데이터베이스 DataBase/SQL/계층형 질의.md)</br>
 ┃　　　┃　　　╊━　[서브쿼리.md](./데이터베이스 DataBase/SQL/서브쿼리.md)</br>
-┃　　　┃　　　╊━　[옵티마이저.md](./데이터베이스 DataBase/SQL/옵티마이저.md)</br>
 ┃　　　┃　　　╊━　[윈도우 함수.md](./데이터베이스 DataBase/SQL/윈도우 함수.md)</br>
 ┃　　　┃　　　╊━　[제약조건.md](./데이터베이스 DataBase/SQL/제약조건.md)</br>
-┃　　　┃　　　╊━　[조인 수행원리.md](./데이터베이스 DataBase/SQL/조인 수행원리.md)</br>
 ┃　　　┃　　　╊━　[집계함수.md](./데이터베이스 DataBase/SQL/집계함수.md)</br>
 ┃　　　┃　　　┗━　[집합연산자.md](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
 ┃　　　┗━　[Column, Row기반DB.md](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
