@@ -3,7 +3,7 @@
 ```
 files            : 280
 derectories      : 66
-avg_file_length  : 2163
+avg_file_length  : 2174
 ```
 
 ./TIL</br>
@@ -339,10 +339,10 @@ avg_file_length  : 2163
 ┃　　　┃　　　╊━　[함수](./언어 Language/Kotlin/함수)</br>
 ┃　　　┃　　　┃　　　┗━　[기본인자.md](./언어 Language/Kotlin/함수/기본인자.md)</br>
 ┃　　　┃　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
+┃　　　┃　　　╊━　[Inline━Funtions과 Reified.md](./언어 Language/Kotlin/Inline━Funtions과 Reified.md)</br>
 ┃　　　┃　　　╊━　[Label.md](./언어 Language/Kotlin/Label.md)</br>
 ┃　　　┃　　　╊━　[NoArg에러.md](./언어 Language/Kotlin/NoArg에러.md)</br>
 ┃　　　┃　　　╊━　[Sequences.md](./언어 Language/Kotlin/Sequences.md)</br>
-┃　　　┃　　　╊━　[Stream.md](./언어 Language/Kotlin/Stream.md)</br>
 ┃　　　┃　　　╊━　[람다 표현식.md](./언어 Language/Kotlin/람다 표현식.md)</br>
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
