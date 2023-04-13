@@ -18,6 +18,7 @@ JDBC는 완전한 블로킹 API이었고, RDBMS는 NoSQL에 비해 자체 리액
 ## 단점
 
 - 기술측면에서 숙련도가 높지 않다. JPA만큼 커뮤니티가 크지 않다.
+- Type safe한 쿼리를 작성할 방법이 많이 없다. (jdsl 등 여러 라이브러리들이 만들어지고는 있다.)
 - Hibernate/Spring data jpa는 정말 잘 만들어져있으며 제공하는 기능도 많다. 반면 spring data r2dbc는 부가 기능이 많이 없고, 관련 라이브러리나 데이터가 부족한 편이다.
 
 관련 글 : [R2DBC 사용](R2DBC%E2%80%85%EC%82%AC%EC%9A%A9.md)

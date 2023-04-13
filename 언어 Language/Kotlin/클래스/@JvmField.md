@@ -28,7 +28,8 @@ public final class Bar {
 
 ```kotlin
 class Bar {
-    var barSize = 0
+   @JvmField
+   var barSize = 0
 }
 ```
 
