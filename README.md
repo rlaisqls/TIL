@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 281
+files            : 284
 derectories      : 67
-avg_file_length  : 2174
+avg_file_length  : 2160
 ```
 
 ./TIL</br>
@@ -34,6 +34,7 @@ avg_file_length  : 2174
 ┃　　　┃　　　╊━　[netty 사례연구.md](./개발/비동기/netty 사례연구.md)</br>
 ┃　　　┃　　　┗━　[코루틴.md](./개발/비동기/코루틴.md)</br>
 ┃　　　╊━　[회고](./개발/회고)</br>
+┃　　　╊━　[mermaid 문법.md](./개발/mermaid 문법.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID.md](./개발/직렬화 serialVersionUID.md)</br>
 ╊━　[객체지향 OOP](./객체지향 OOP)</br>
 ┃　　　╊━　[디자인패턴](./객체지향 OOP/디자인패턴)</br>
@@ -171,6 +172,7 @@ avg_file_length  : 2174
 ┃　　　┃　　　┃　　　┗━　[PostgreSQL명령어.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL명령어.md)</br>
 ┃　　　┃　　　╊━　[redis](./데이터베이스 DataBase/NoSQL/redis)</br>
 ┃　　　┃　　　┃　　　╊━　[Redis.md](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
+┃　　　┃　　　┃　　　╊━　[Redis 명령어.md](./데이터베이스 DataBase/NoSQL/redis/Redis 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
 ┃　　　┃　　　╊━　[NoSQL 데이터유형.md](./데이터베이스 DataBase/NoSQL/NoSQL 데이터유형.md)</br>
 ┃　　　┃　　　┗━　[NoSQL에는 ACID가 없다고？.md](./데이터베이스 DataBase/NoSQL/NoSQL에는 ACID가 없다고？.md)</br>
@@ -242,6 +244,7 @@ avg_file_length  : 2174
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
 ┃　　　┃　　　╊━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
+┃　　　┃　　　╊━　[트랜잭션 readOnly 전파.md](./스프링 Spring/JPA/트랜잭션 readOnly 전파.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 전파 설정.md](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
