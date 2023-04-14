@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 284
+files            : 286
 derectories      : 67
-avg_file_length  : 2160
+avg_file_length  : 2177
 ```
 
 ./TIL</br>
@@ -144,7 +144,8 @@ avg_file_length  : 2160
 ┃　　　┃　　　┗━　[리버스 프록시.md](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　╊━　[openssl로 pemKey 만들고 접속하기.md](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
-┃　　　┗━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
+┃　　　╊━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
+┃　　　┗━　[운영체제.md](./데브옵스 DevOps/운영체제.md)</br>
 ╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)</br>
 ┃　　　╊━　[DB설계](./데이터베이스 DataBase/DB설계)</br>
 ┃　　　┃　　　╊━　[DBMS와 RDBMS.md](./데이터베이스 DataBase/DB설계/DBMS와 RDBMS.md)</br>
@@ -324,6 +325,7 @@ avg_file_length  : 2160
 ┃　　　┃　　　╊━　[JAVA.md](./언어 Language/JAVA/JAVA.md)</br>
 ┃　　　┃　　　╊━　[JDKProxy와 CGLibProxy.md](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
 ┃　　　┃　　　╊━　[jar.md](./언어 Language/JAVA/jar.md)</br>
+┃　　　┃　　　╊━　[record.md](./언어 Language/JAVA/record.md)</br>
 ┃　　　┃　　　╊━　[예외와 에러.md](./언어 Language/JAVA/예외와 에러.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/JAVA/제네릭과 variance.md)</br>
 ┃　　　╊━　[Kotlin](./언어 Language/Kotlin)</br>
@@ -355,7 +357,8 @@ avg_file_length  : 2160
 ╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　┗━　[선형회귀직선.md](./인공지능/선형회귀직선.md)</br>
-┗━　[README.md](./README.md)</br>
+╊━　[README.md](./README.md)</br>
+┗━　[XXDjqJpC](./XXDjqJpC)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
