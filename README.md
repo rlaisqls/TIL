@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 286
-derectories      : 67
-avg_file_length  : 2177
+files            : 285
+derectories      : 68
+avg_file_length  : 2181
 ```
 
 ./TIL</br>
@@ -21,7 +21,6 @@ avg_file_length  : 2177
 ┃　　　┃　　　╊━　[DependencyHandler.md](./개발/Gradle/DependencyHandler.md)</br>
 ┃　　　┃　　　╊━　[Git action gradle caching.md](./개발/Gradle/Git action gradle caching.md)</br>
 ┃　　　┃　　　╊━　[Gradle LifeCycle.md](./개발/Gradle/Gradle LifeCycle.md)</br>
-┃　　　┃　　　╊━　[Task use output of task without declaring an dependency.md](./개발/Gradle/Task use output of task without declaring an dependency.md)</br>
 ┃　　　┃　　　┗━　[멀티모듈.md](./개발/Gradle/멀티모듈.md)</br>
 ┃　　　╊━　[WAS](./개발/WAS)</br>
 ┃　　　┃　　　┗━　[tomcat 구성요소.md](./개발/WAS/tomcat 구성요소.md)</br>
@@ -129,23 +128,24 @@ avg_file_length  : 2177
 ┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog)</br>
 ┃　　　┃　　　　　　　╊━　[datadog APM기능 사용하기.md](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
 ┃　　　┃　　　　　　　┗━　[helmChart로 Agent 설치.md](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
-┃　　　╊━　[linux](./데브옵스 DevOps/linux)</br>
-┃　　　┃　　　╊━　[Swap메모리.md](./데브옵스 DevOps/linux/Swap메모리.md)</br>
-┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./데브옵스 DevOps/linux/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　╊━　[namespace와 cgroup.md](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
-┃　　　┃　　　╊━　[network namespaces.md](./데브옵스 DevOps/linux/network namespaces.md)</br>
-┃　　　┃　　　╊━　[zshrc.md](./데브옵스 DevOps/linux/zshrc.md)</br>
-┃　　　┃　　　┗━　[환경변수와 프로세스.md](./데브옵스 DevOps/linux/환경변수와 프로세스.md)</br>
 ┃　　　╊━　[nginx](./데브옵스 DevOps/nginx)</br>
 ┃　　　┃　　　╊━　[nginx certbot.md](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
 ┃　　　┃　　　╊━　[nginx docker.md](./데브옵스 DevOps/nginx/nginx docker.md)</br>
 ┃　　　┃　　　╊━　[nginx 명령어.md](./데브옵스 DevOps/nginx/nginx 명령어.md)</br>
 ┃　　　┃　　　╊━　[nginx 설정.md](./데브옵스 DevOps/nginx/nginx 설정.md)</br>
 ┃　　　┃　　　┗━　[리버스 프록시.md](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
+┃　　　╊━　[운영체제](./데브옵스 DevOps/운영체제)</br>
+┃　　　┃　　　╊━　[linux](./데브옵스 DevOps/운영체제/linux)</br>
+┃　　　┃　　　┃　　　╊━　[Swap메모리.md](./데브옵스 DevOps/운영체제/linux/Swap메모리.md)</br>
+┃　　　┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./데브옵스 DevOps/운영체제/linux/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　┃　　　╊━　[namespace와 cgroup.md](./데브옵스 DevOps/운영체제/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　┃　　　╊━　[network namespaces.md](./데브옵스 DevOps/운영체제/linux/network namespaces.md)</br>
+┃　　　┃　　　┃　　　╊━　[zshrc.md](./데브옵스 DevOps/운영체제/linux/zshrc.md)</br>
+┃　　　┃　　　┃　　　┗━　[환경변수와 프로세스.md](./데브옵스 DevOps/운영체제/linux/환경변수와 프로세스.md)</br>
+┃　　　┃　　　┗━　[임계영역과 상호배제.md](./데브옵스 DevOps/운영체제/임계영역과 상호배제.md)</br>
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　╊━　[openssl로 pemKey 만들고 접속하기.md](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
-┃　　　╊━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
-┃　　　┗━　[운영체제.md](./데브옵스 DevOps/운영체제.md)</br>
+┃　　　┗━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
 ╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)</br>
 ┃　　　╊━　[DB설계](./데이터베이스 DataBase/DB설계)</br>
 ┃　　　┃　　　╊━　[DBMS와 RDBMS.md](./데이터베이스 DataBase/DB설계/DBMS와 RDBMS.md)</br>
@@ -357,8 +357,7 @@ avg_file_length  : 2177
 ╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　┗━　[선형회귀직선.md](./인공지능/선형회귀직선.md)</br>
-╊━　[README.md](./README.md)</br>
-┗━　[XXDjqJpC](./XXDjqJpC)</br>
+┗━　[README.md](./README.md)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
