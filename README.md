@@ -3,7 +3,7 @@
 ```
 files            : 286
 derectories      : 68
-avg_file_length  : 2174
+avg_file_length  : 2184
 ```
 
 ./TIL</br>
@@ -358,8 +358,7 @@ avg_file_length  : 2174
 ╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　┗━　[선형회귀직선.md](./인공지능/선형회귀직선.md)</br>
-╊━　[README.md](./README.md)</br>
-┗━　[XXbVjIF6](./XXbVjIF6)</br>
+┗━　[README.md](./README.md)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
