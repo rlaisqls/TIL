@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 285
+files            : 286
 derectories      : 68
-avg_file_length  : 2181
+avg_file_length  : 2174
 ```
 
 ./TIL</br>
@@ -22,6 +22,14 @@ avg_file_length  : 2181
 ┃　　　┃　　　╊━　[Git action gradle caching.md](./개발/Gradle/Git action gradle caching.md)</br>
 ┃　　　┃　　　╊━　[Gradle LifeCycle.md](./개발/Gradle/Gradle LifeCycle.md)</br>
 ┃　　　┃　　　┗━　[멀티모듈.md](./개발/Gradle/멀티모듈.md)</br>
+┃　　　╊━　[TestCode](./개발/TestCode)</br>
+┃　　　┃　　　╊━　[Kotlin](./개발/TestCode/Kotlin)</br>
+┃　　　┃　　　┃　　　╊━　[Found interface kotlin.time.TimeMark, but class was expected.md](./개발/TestCode/Kotlin/Found interface kotlin.time.TimeMark, but class was expected.md)</br>
+┃　　　┃　　　┃　　　╊━　[Kotest.md](./개발/TestCode/Kotlin/Kotest.md)</br>
+┃　　　┃　　　┃　　　╊━　[Kotest Assertions.md](./개발/TestCode/Kotlin/Kotest Assertions.md)</br>
+┃　　　┃　　　┃　　　╊━　[Kotest Specs.md](./개발/TestCode/Kotlin/Kotest Specs.md)</br>
+┃　　　┃　　　┃　　　┗━　[Mockk.md](./개발/TestCode/Kotlin/Mockk.md)</br>
+┃　　　┃　　　┗━　[Mock과 Spy.md](./개발/TestCode/Mock과 Spy.md)</br>
 ┃　　　╊━　[WAS](./개발/WAS)</br>
 ┃　　　┃　　　┗━　[tomcat 구성요소.md](./개발/WAS/tomcat 구성요소.md)</br>
 ┃　　　╊━　[netty](./개발/netty)</br>
@@ -251,13 +259,6 @@ avg_file_length  : 2181
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
 ┃　　　┃　　　╊━　[CSRF.md](./스프링 Spring/SpringSecurity/CSRF.md)</br>
 ┃　　　┃　　　┗━　[authn과 authz.md](./스프링 Spring/SpringSecurity/authn과 authz.md)</br>
-┃　　　╊━　[TestCode](./스프링 Spring/TestCode)</br>
-┃　　　┃　　　╊━　[Kotlin](./스프링 Spring/TestCode/Kotlin)</br>
-┃　　　┃　　　┃　　　╊━　[Kotest.md](./스프링 Spring/TestCode/Kotlin/Kotest.md)</br>
-┃　　　┃　　　┃　　　╊━　[Kotest Assertions.md](./스프링 Spring/TestCode/Kotlin/Kotest Assertions.md)</br>
-┃　　　┃　　　┃　　　╊━　[Kotest Specs.md](./스프링 Spring/TestCode/Kotlin/Kotest Specs.md)</br>
-┃　　　┃　　　┃　　　┗━　[Mockk.md](./스프링 Spring/TestCode/Kotlin/Mockk.md)</br>
-┃　　　┃　　　┗━　[Mock과 Spy.md](./스프링 Spring/TestCode/Mock과 Spy.md)</br>
 ┃　　　╊━　[Validation](./스프링 Spring/Validation)</br>
 ┃　　　┃　　　╊━　[@GroupSequence.md](./스프링 Spring/Validation/@GroupSequence.md)</br>
 ┃　　　┃　　　┗━　[@Valid와 @Validated.md](./스프링 Spring/Validation/@Valid와 @Validated.md)</br>
@@ -357,7 +358,8 @@ avg_file_length  : 2181
 ╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　┗━　[선형회귀직선.md](./인공지능/선형회귀직선.md)</br>
-┗━　[README.md](./README.md)</br>
+╊━　[README.md](./README.md)</br>
+┗━　[XXbVjIF6](./XXbVjIF6)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
