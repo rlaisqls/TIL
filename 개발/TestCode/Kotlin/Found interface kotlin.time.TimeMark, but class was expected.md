@@ -58,7 +58,7 @@ java.lang.IncompatibleClassChangeError: Found interface kotlin.time.TimeMark, bu
 
 <img width="821" alt="image" src="https://user-images.githubusercontent.com/81006587/232177109-3616e884-1b59-4759-8d2f-12f2541fbc9f.png">
 
-kotest 5.4.0 버전에서는 Kotlin 1.6에서 1.7로 넘어가면서 생긴 TimeMark의 변화에 대응하기 위해서, TimeMark와 비슷한 기능을 하는 Compat을 만들어서 사용하고 있는 것을 볼 수 있다.
+kotest 5.3.1 이상 버전에서는 Kotlin 1.6에서 1.7로 넘어가면서 생긴 TimeMark의 변화에 대응하기 위해서, TimeMark와 비슷한 기능을 하는 Compat을 만들어서 사용하고 있는 것을 볼 수 있다.
 
 프로젝트에서도 kotest를 5.4.0으로 변경하면서 문제를 해결헀다.
 
