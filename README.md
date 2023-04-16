@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 286
-derectories      : 68
-avg_file_length  : 2184
+files            : 280
+derectories      : 67
+avg_file_length  : 2255
 ```
 
 ./TIL</br>
@@ -89,8 +89,6 @@ avg_file_length  : 2184
 ┃　　　╊━　[TLS 인증서 발급 절차를 이해해보자.md](./네트워크 Network/TLS 인증서 발급 절차를 이해해보자.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？.md](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ╊━　[데브옵스 DevOps](./데브옵스 DevOps)</br>
-┃　　　╊━　[AWS](./데브옵스 DevOps/AWS)</br>
-┃　　　┃　　　┗━　[ACL.md](./데브옵스 DevOps/AWS/ACL.md)</br>
 ┃　　　╊━　[Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　╊━　[CNI.md](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　╊━　[ContainerRuntime.md](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
@@ -181,7 +179,6 @@ avg_file_length  : 2184
 ┃　　　┃　　　┃　　　┗━　[PostgreSQL명령어.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL명령어.md)</br>
 ┃　　　┃　　　╊━　[redis](./데이터베이스 DataBase/NoSQL/redis)</br>
 ┃　　　┃　　　┃　　　╊━　[Redis.md](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
-┃　　　┃　　　┃　　　╊━　[Redis 명령어.md](./데이터베이스 DataBase/NoSQL/redis/Redis 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
 ┃　　　┃　　　╊━　[NoSQL 데이터유형.md](./데이터베이스 DataBase/NoSQL/NoSQL 데이터유형.md)</br>
 ┃　　　┃　　　┗━　[NoSQL에는 ACID가 없다고？.md](./데이터베이스 DataBase/NoSQL/NoSQL에는 ACID가 없다고？.md)</br>
@@ -253,7 +250,6 @@ avg_file_length  : 2184
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
 ┃　　　┃　　　╊━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
-┃　　　┃　　　╊━　[트랜잭션 readOnly 전파.md](./스프링 Spring/JPA/트랜잭션 readOnly 전파.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 전파 설정.md](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
@@ -264,7 +260,6 @@ avg_file_length  : 2184
 ┃　　　┃　　　┗━　[@Valid와 @Validated.md](./스프링 Spring/Validation/@Valid와 @Validated.md)</br>
 ┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)</br>
 ┃　　　┃　　　╊━　[@Controller.md](./스프링 Spring/WebFlux/@Controller.md)</br>
-┃　　　┃　　　╊━　[ErrorWebExceptionHandler.md](./스프링 Spring/WebFlux/ErrorWebExceptionHandler.md)</br>
 ┃　　　┃　　　╊━　[R2DBC.md](./스프링 Spring/WebFlux/R2DBC.md)</br>
 ┃　　　┃　　　╊━　[R2DBC 사용.md](./스프링 Spring/WebFlux/R2DBC 사용.md)</br>
 ┃　　　┃　　　╊━　[RouterFunctions.md](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
@@ -325,7 +320,6 @@ avg_file_length  : 2184
 ┃　　　┃　　　╊━　[Inner static class.md](./언어 Language/JAVA/Inner static class.md)</br>
 ┃　　　┃　　　╊━　[JAVA.md](./언어 Language/JAVA/JAVA.md)</br>
 ┃　　　┃　　　╊━　[JDKProxy와 CGLibProxy.md](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
-┃　　　┃　　　╊━　[jar.md](./언어 Language/JAVA/jar.md)</br>
 ┃　　　┃　　　╊━　[record.md](./언어 Language/JAVA/record.md)</br>
 ┃　　　┃　　　╊━　[예외와 에러.md](./언어 Language/JAVA/예외와 에러.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/JAVA/제네릭과 variance.md)</br>
@@ -349,7 +343,6 @@ avg_file_length  : 2184
 ┃　　　┃　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
 ┃　　　┃　　　╊━　[Inline━Funtions과 Reified.md](./언어 Language/Kotlin/Inline━Funtions과 Reified.md)</br>
 ┃　　　┃　　　╊━　[Label.md](./언어 Language/Kotlin/Label.md)</br>
-┃　　　┃　　　╊━　[NoArg에러.md](./언어 Language/Kotlin/NoArg에러.md)</br>
 ┃　　　┃　　　╊━　[Sequences.md](./언어 Language/Kotlin/Sequences.md)</br>
 ┃　　　┃　　　╊━　[람다 표현식.md](./언어 Language/Kotlin/람다 표현식.md)</br>
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
