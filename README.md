@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 280
-derectories      : 67
-avg_file_length  : 2255
+files            : 292
+derectories      : 69
+avg_file_length  : 2187
 ```
 
 ./TIL</br>
@@ -71,7 +71,8 @@ avg_file_length  : 2255
 ┃　　　┃　　　┃　　　╊━　[책임연쇄 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/책임연쇄 패턴.md)</br>
 ┃　　　┃　　　┃　　　╊━　[커맨드 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/커맨드 패턴.md)</br>
 ┃　　　┃　　　┃　　　┗━　[템플릿메소드 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/템플릿메소드 패턴.md)</br>
-┃　　　┃　　　┗━　[디자인패턴.md](./객체지향 OOP/디자인패턴/디자인패턴.md)</br>
+┃　　　┃　　　╊━　[디자인패턴.md](./객체지향 OOP/디자인패턴/디자인패턴.md)</br>
+┃　　　┃　　　┗━　[위임 패턴(Delegate Pattern)</br>.md](./객체지향 OOP/디자인패턴/위임 패턴(Delegate Pattern)</br>.md)</br>
 ┃　　　╊━　[SOLID.md](./객체지향 OOP/SOLID.md)</br>
 ┃　　　┗━　[응집도와 결합도.md](./객체지향 OOP/응집도와 결합도.md)</br>
 ╊━　[네트워크 Network](./네트워크 Network)</br>
@@ -89,6 +90,8 @@ avg_file_length  : 2255
 ┃　　　╊━　[TLS 인증서 발급 절차를 이해해보자.md](./네트워크 Network/TLS 인증서 발급 절차를 이해해보자.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？.md](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ╊━　[데브옵스 DevOps](./데브옵스 DevOps)</br>
+┃　　　╊━　[AWS](./데브옵스 DevOps/AWS)</br>
+┃　　　┃　　　┗━　[ACL.md](./데브옵스 DevOps/AWS/ACL.md)</br>
 ┃　　　╊━　[Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　╊━　[CNI.md](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　╊━　[ContainerRuntime.md](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
@@ -179,6 +182,7 @@ avg_file_length  : 2255
 ┃　　　┃　　　┃　　　┗━　[PostgreSQL명령어.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL명령어.md)</br>
 ┃　　　┃　　　╊━　[redis](./데이터베이스 DataBase/NoSQL/redis)</br>
 ┃　　　┃　　　┃　　　╊━　[Redis.md](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
+┃　　　┃　　　┃　　　╊━　[Redis 명령어.md](./데이터베이스 DataBase/NoSQL/redis/Redis 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
 ┃　　　┃　　　╊━　[NoSQL 데이터유형.md](./데이터베이스 DataBase/NoSQL/NoSQL 데이터유형.md)</br>
 ┃　　　┃　　　┗━　[NoSQL에는 ACID가 없다고？.md](./데이터베이스 DataBase/NoSQL/NoSQL에는 ACID가 없다고？.md)</br>
@@ -245,10 +249,12 @@ avg_file_length  : 2255
 ┃　　　┃　　　╊━　[Hibernate dialect.md](./스프링 Spring/JPA/Hibernate dialect.md)</br>
 ┃　　　┃　　　╊━　[Hibernate 쿼리실행순서.md](./스프링 Spring/JPA/Hibernate 쿼리실행순서.md)</br>
 ┃　　　┃　　　╊━　[Id로 연관관계 객체 저장.md](./스프링 Spring/JPA/Id로 연관관계 객체 저장.md)</br>
+┃　　　┃　　　╊━　[JDBC Object Mapping Fundamentalsentity.md](./스프링 Spring/JPA/JDBC Object Mapping Fundamentalsentity.md)</br>
 ┃　　　┃　　　╊━　[JPA.md](./스프링 Spring/JPA/JPA.md)</br>
 ┃　　　┃　　　╊━　[N+1 문제.md](./스프링 Spring/JPA/N+1 문제.md)</br>
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
+┃　　　┃　　　╊━　[Save or Update.md](./스프링 Spring/JPA/Save or Update.md)</br>
 ┃　　　┃　　　╊━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 전파 설정.md](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
@@ -259,9 +265,12 @@ avg_file_length  : 2255
 ┃　　　┃　　　╊━　[@GroupSequence.md](./스프링 Spring/Validation/@GroupSequence.md)</br>
 ┃　　　┃　　　┗━　[@Valid와 @Validated.md](./스프링 Spring/Validation/@Valid와 @Validated.md)</br>
 ┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)</br>
+┃　　　┃　　　╊━　[R2DBC](./스프링 Spring/WebFlux/R2DBC)</br>
+┃　　　┃　　　┃　　　╊━　[R2DBC.md](./스프링 Spring/WebFlux/R2DBC/R2DBC.md)</br>
+┃　　　┃　　　┃　　　╊━　[R2DBC Object Mapping Fundamentalsentity.md](./스프링 Spring/WebFlux/R2DBC/R2DBC Object Mapping Fundamentalsentity.md)</br>
+┃　　　┃　　　┃　　　╊━　[R2DBC custom codec.md](./스프링 Spring/WebFlux/R2DBC/R2DBC custom codec.md)</br>
+┃　　　┃　　　┃　　　┗━　[R2DBC 사용.md](./스프링 Spring/WebFlux/R2DBC/R2DBC 사용.md)</br>
 ┃　　　┃　　　╊━　[@Controller.md](./스프링 Spring/WebFlux/@Controller.md)</br>
-┃　　　┃　　　╊━　[R2DBC.md](./스프링 Spring/WebFlux/R2DBC.md)</br>
-┃　　　┃　　　╊━　[R2DBC 사용.md](./스프링 Spring/WebFlux/R2DBC 사용.md)</br>
 ┃　　　┃　　　╊━　[RouterFunctions.md](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
 ┃　　　┃　　　╊━　[WebClient.md](./스프링 Spring/WebFlux/WebClient.md)</br>
 ┃　　　┃　　　╊━　[WebFilter.md](./스프링 Spring/WebFlux/WebFilter.md)</br>
@@ -270,6 +279,7 @@ avg_file_length  : 2255
 ┃　　　┃　　　╊━　[Request 처리과정.md](./스프링 Spring/Web MVC/Request 처리과정.md)</br>
 ┃　　　┃　　　┗━　[SpringServletContainerInitializer.md](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
 ┃　　　╊━　[기본원리](./스프링 Spring/기본원리)</br>
+┃　　　┃　　　╊━　[@Autowired　빈　주입　스캔　원리.md](./스프링 Spring/기본원리/@Autowired　빈　주입　스캔　원리.md)</br>
 ┃　　　┃　　　╊━　[@ComponentScan.md](./스프링 Spring/기본원리/@ComponentScan.md)</br>
 ┃　　　┃　　　╊━　[@Component VS @Service.md](./스프링 Spring/기본원리/@Component VS @Service.md)</br>
 ┃　　　┃　　　╊━　[Ioc와 DI.md](./스프링 Spring/기본원리/Ioc와 DI.md)</br>
@@ -303,6 +313,7 @@ avg_file_length  : 2255
 ┃　　　┃　　　╊━　[트랜잭션 격리.md](./아키텍처 및 방법론/MSA/트랜잭션 격리.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 로그 테일링 패턴.md](./아키텍처 및 방법론/MSA/트랜잭션 로그 테일링 패턴.md)</br>
 ┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
+┃　　　╊━　[Domain과 Entity 의존성 분리.md](./아키텍처 및 방법론/Domain과 Entity 의존성 분리.md)</br>
 ┃　　　┗━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ╊━　[알고리즘 Algorithm](./알고리즘 Algorithm)</br>
 ┃　　　┗━　[세그먼트트리.md](./알고리즘 Algorithm/세그먼트트리.md)</br>
@@ -320,6 +331,7 @@ avg_file_length  : 2255
 ┃　　　┃　　　╊━　[Inner static class.md](./언어 Language/JAVA/Inner static class.md)</br>
 ┃　　　┃　　　╊━　[JAVA.md](./언어 Language/JAVA/JAVA.md)</br>
 ┃　　　┃　　　╊━　[JDKProxy와 CGLibProxy.md](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
+┃　　　┃　　　╊━　[jar.md](./언어 Language/JAVA/jar.md)</br>
 ┃　　　┃　　　╊━　[record.md](./언어 Language/JAVA/record.md)</br>
 ┃　　　┃　　　╊━　[예외와 에러.md](./언어 Language/JAVA/예외와 에러.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/JAVA/제네릭과 variance.md)</br>
@@ -343,7 +355,9 @@ avg_file_length  : 2255
 ┃　　　┃　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
 ┃　　　┃　　　╊━　[Inline━Funtions과 Reified.md](./언어 Language/Kotlin/Inline━Funtions과 Reified.md)</br>
 ┃　　　┃　　　╊━　[Label.md](./언어 Language/Kotlin/Label.md)</br>
+┃　　　┃　　　╊━　[NoArg에러.md](./언어 Language/Kotlin/NoArg에러.md)</br>
 ┃　　　┃　　　╊━　[Sequences.md](./언어 Language/Kotlin/Sequences.md)</br>
+┃　　　┃　　　╊━　[field 상속.md](./언어 Language/Kotlin/field 상속.md)</br>
 ┃　　　┃　　　╊━　[람다 표현식.md](./언어 Language/Kotlin/람다 표현식.md)</br>
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
