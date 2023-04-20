@@ -38,7 +38,7 @@ Access Pattern을 분석하여 collection들이 정의된 후에는, collection 
 
 Reference는 데이터를 정규화하여 쓰기를 빠르게 하고, embed는 데이터를 비정규화하여 읽기를 빠르게 한다. 일반적으로 최대한 정규화하여 중복을 제거하는 것이 바람직하다고 여겨지는 RDB와 달리, MongoDB는 적절한 수준의 비정규화가 필요한 경우가 많다. NoSQL의 경우 RDB처럼 복잡한 Join 연산이 불가능하기 때문에, 정규화를 수행하여 collection을 많이 쪼개놓은 경우에 필요한 복잡한 데이터로 재구성하는 것이 어려울 수도 있다.
 
-embed와 reference가 사용되기 좋은 상황을 정리하여 나타내자며 아래 표와 같다.
+embed와 reference가 사용되기 좋은 상황을 정리하여 나타내자면 아래 표와 같다.
 
 |embed 권장|reference|
 |-|-|

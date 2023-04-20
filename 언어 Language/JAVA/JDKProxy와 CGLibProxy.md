@@ -44,11 +44,14 @@ CGLib는 Enhancer라는 클래스를 바탕으로 Proxy를 생성한다.
 ```java
 // 1. Enhancer 객체를 생성
 Enhancer enhancer = new Enhancer();
+
 // 2. setSuperclass() 메소드에 프록시할 클래스 지정
 enhancer.setSuperclass(BoardServiceImpl.class);
 enhancer.setCallback(NoOp.INSTANCE);
+
 // 3. enhancer.create()로 프록시 생성
 Object obj = enhancer.create();
+
 // 4. 프록시를 통해서 간접 접근
 BoardServiceImpl boardService = (BoardServiceImpl)obj;
 boardService.writePost(postDTO);
