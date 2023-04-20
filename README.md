@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 290
-derectories      : 69
-avg_file_length  : 2240
+files            : 287
+derectories      : 70
+avg_file_length  : 2265
 ```
 
 ./TIL</br>
@@ -256,7 +256,6 @@ avg_file_length  : 2240
 ┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)</br>
 ┃　　　┃　　　╊━　[R2DBC](./스프링 Spring/WebFlux/R2DBC)</br>
 ┃　　　┃　　　┃　　　╊━　[R2DBC.md](./스프링 Spring/WebFlux/R2DBC/R2DBC.md)</br>
-┃　　　┃　　　┃　　　╊━　[R2DBC Object Mapping Fundamentalsentity.md](./스프링 Spring/WebFlux/R2DBC/R2DBC Object Mapping Fundamentalsentity.md)</br>
 ┃　　　┃　　　┃　　　┗━　[R2DBC 사용.md](./스프링 Spring/WebFlux/R2DBC/R2DBC 사용.md)</br>
 ┃　　　┃　　　╊━　[@Controller.md](./스프링 Spring/WebFlux/@Controller.md)</br>
 ┃　　　┃　　　╊━　[RouterFunctions.md](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
@@ -301,7 +300,6 @@ avg_file_length  : 2240
 ┃　　　┃　　　╊━　[트랜잭션 격리.md](./아키텍처 및 방법론/MSA/트랜잭션 격리.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 로그 테일링 패턴.md](./아키텍처 및 방법론/MSA/트랜잭션 로그 테일링 패턴.md)</br>
 ┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
-┃　　　╊━　[Domain과 Entity 의존성 분리.md](./아키텍처 및 방법론/Domain과 Entity 의존성 분리.md)</br>
 ┃　　　┗━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ╊━　[알고리즘 Algorithm](./알고리즘 Algorithm)</br>
 ┃　　　┗━　[세그먼트트리.md](./알고리즘 Algorithm/세그먼트트리.md)</br>
@@ -319,7 +317,6 @@ avg_file_length  : 2240
 ┃　　　┃　　　╊━　[Inner static class.md](./언어 Language/JAVA/Inner static class.md)</br>
 ┃　　　┃　　　╊━　[JAVA.md](./언어 Language/JAVA/JAVA.md)</br>
 ┃　　　┃　　　╊━　[JDKProxy와 CGLibProxy.md](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
-┃　　　┃　　　╊━　[jar.md](./언어 Language/JAVA/jar.md)</br>
 ┃　　　┃　　　╊━　[record.md](./언어 Language/JAVA/record.md)</br>
 ┃　　　┃　　　╊━　[예외와 에러.md](./언어 Language/JAVA/예외와 에러.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/JAVA/제네릭과 variance.md)</br>
@@ -334,7 +331,6 @@ avg_file_length  : 2240
 ┃　　　┃　　　┃　　　╊━　[@JvmStatic.md](./언어 Language/Kotlin/클래스/@JvmStatic.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Object.md](./언어 Language/Kotlin/클래스/Object.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Sealed Class, interface.md](./언어 Language/Kotlin/클래스/Sealed Class, interface.md)</br>
-┃　　　┃　　　┃　　　╊━　[value class.md](./언어 Language/Kotlin/클래스/value class.md)</br>
 ┃　　　┃　　　┃　　　╊━　[생성자.md](./언어 Language/Kotlin/클래스/생성자.md)</br>
 ┃　　　┃　　　┃　　　╊━　[코틀린에서의 Static.md](./언어 Language/Kotlin/클래스/코틀린에서의 Static.md)</br>
 ┃　　　┃　　　┃　　　╊━　[클래스 상속.md](./언어 Language/Kotlin/클래스/클래스 상속.md)</br>
@@ -350,6 +346,8 @@ avg_file_length  : 2240
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
+╊━　[운영체제](./운영체제)</br>
+┃　　　┗━　[TAS.md](./운영체제/TAS.md)</br>
 ╊━　[운영체제 Operating System](./운영체제 Operating System)</br>
 ┃　　　╊━　[linux](./운영체제 Operating System/linux)</br>
 ┃　　　┃　　　╊━　[Swap메모리.md](./운영체제 Operating System/linux/Swap메모리.md)</br>
