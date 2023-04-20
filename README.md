@@ -350,16 +350,16 @@ avg_file_length  : 2240
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
-╊━　[운영체제](./운영체제)</br>
-┃　　　╊━　[linux](./운영체제/linux)</br>
-┃　　　┃　　　╊━　[Swap메모리.md](./운영체제/linux/Swap메모리.md)</br>
-┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./운영체제/linux/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　╊━　[namespace와 cgroup.md](./운영체제/linux/namespace와 cgroup.md)</br>
-┃　　　┃　　　╊━　[network namespaces.md](./운영체제/linux/network namespaces.md)</br>
-┃　　　┃　　　╊━　[zshrc.md](./운영체제/linux/zshrc.md)</br>
-┃　　　┃　　　┗━　[환경변수와 프로세스.md](./운영체제/linux/환경변수와 프로세스.md)</br>
-┃　　　╊━　[TAS.md](./운영체제/TAS.md)</br>
-┃　　　┗━　[임계영역과 상호배제.md](./운영체제/임계영역과 상호배제.md)</br>
+╊━　[운영체제 Operating System](./운영체제 Operating System)</br>
+┃　　　╊━　[linux](./운영체제 Operating System/linux)</br>
+┃　　　┃　　　╊━　[Swap메모리.md](./운영체제 Operating System/linux/Swap메모리.md)</br>
+┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./운영체제 Operating System/linux/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　╊━　[namespace와 cgroup.md](./운영체제 Operating System/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　╊━　[network namespaces.md](./운영체제 Operating System/linux/network namespaces.md)</br>
+┃　　　┃　　　╊━　[zshrc.md](./운영체제 Operating System/linux/zshrc.md)</br>
+┃　　　┃　　　┗━　[환경변수와 프로세스.md](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
+┃　　　╊━　[TAS.md](./운영체제 Operating System/TAS.md)</br>
+┃　　　┗━　[임계영역과 상호배제.md](./운영체제 Operating System/임계영역과 상호배제.md)</br>
 ╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　┗━　[선형회귀직선.md](./인공지능/선형회귀직선.md)</br>
