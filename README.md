@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 289
+files            : 290
 derectories      : 69
-avg_file_length  : 2227
+avg_file_length  : 2230
 ```
 
 ./TIL</br>
@@ -358,11 +358,13 @@ avg_file_length  : 2227
 ┃　　　┃　　　╊━　[network namespaces.md](./운영체제/linux/network namespaces.md)</br>
 ┃　　　┃　　　╊━　[zshrc.md](./운영체제/linux/zshrc.md)</br>
 ┃　　　┃　　　┗━　[환경변수와 프로세스.md](./운영체제/linux/환경변수와 프로세스.md)</br>
+┃　　　╊━　[TAS.md](./운영체제/TAS.md)</br>
 ┃　　　┗━　[임계영역과 상호배제.md](./운영체제/임계영역과 상호배제.md)</br>
 ╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　┗━　[선형회귀직선.md](./인공지능/선형회귀직선.md)</br>
-┗━　[README.md](./README.md)</br>
+╊━　[README.md](./README.md)</br>
+┗━　[XX30AkIF](./XX30AkIF)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
