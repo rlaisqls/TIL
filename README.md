@@ -3,7 +3,7 @@
 ```
 files            : 292
 derectories      : 69
-avg_file_length  : 2187
+avg_file_length  : 2207
 ```
 
 ./TIL</br>
@@ -143,15 +143,6 @@ avg_file_length  : 2187
 ┃　　　┃　　　╊━　[nginx 명령어.md](./데브옵스 DevOps/nginx/nginx 명령어.md)</br>
 ┃　　　┃　　　╊━　[nginx 설정.md](./데브옵스 DevOps/nginx/nginx 설정.md)</br>
 ┃　　　┃　　　┗━　[리버스 프록시.md](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
-┃　　　╊━　[운영체제](./데브옵스 DevOps/운영체제)</br>
-┃　　　┃　　　╊━　[linux](./데브옵스 DevOps/운영체제/linux)</br>
-┃　　　┃　　　┃　　　╊━　[Swap메모리.md](./데브옵스 DevOps/운영체제/linux/Swap메모리.md)</br>
-┃　　　┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./데브옵스 DevOps/운영체제/linux/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　┃　　　╊━　[namespace와 cgroup.md](./데브옵스 DevOps/운영체제/linux/namespace와 cgroup.md)</br>
-┃　　　┃　　　┃　　　╊━　[network namespaces.md](./데브옵스 DevOps/운영체제/linux/network namespaces.md)</br>
-┃　　　┃　　　┃　　　╊━　[zshrc.md](./데브옵스 DevOps/운영체제/linux/zshrc.md)</br>
-┃　　　┃　　　┃　　　┗━　[환경변수와 프로세스.md](./데브옵스 DevOps/운영체제/linux/환경변수와 프로세스.md)</br>
-┃　　　┃　　　┗━　[임계영역과 상호배제.md](./데브옵스 DevOps/운영체제/임계영역과 상호배제.md)</br>
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　╊━　[openssl로 pemKey 만들고 접속하기.md](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
@@ -245,6 +236,7 @@ avg_file_length  : 2187
 ┃　　　┃　　　┃　　　╊━　[1차캐시.md](./스프링 Spring/JPA/캐싱/1차캐시.md)</br>
 ┃　　　┃　　　┃　　　╊━　[2차캐시.md](./스프링 Spring/JPA/캐싱/2차캐시.md)</br>
 ┃　　　┃　　　┃　　　┗━　[영속성 컨텍스트.md](./스프링 Spring/JPA/캐싱/영속성 컨텍스트.md)</br>
+┃　　　┃　　　╊━　[\010Persistable.md](./스프링 Spring/JPA/\010Persistable.md)</br>
 ┃　　　┃　　　╊━　[Cascade.md](./스프링 Spring/JPA/Cascade.md)</br>
 ┃　　　┃　　　╊━　[Hibernate dialect.md](./스프링 Spring/JPA/Hibernate dialect.md)</br>
 ┃　　　┃　　　╊━　[Hibernate 쿼리실행순서.md](./스프링 Spring/JPA/Hibernate 쿼리실행순서.md)</br>
@@ -254,7 +246,6 @@ avg_file_length  : 2187
 ┃　　　┃　　　╊━　[N+1 문제.md](./스프링 Spring/JPA/N+1 문제.md)</br>
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
-┃　　　┃　　　╊━　[Save or Update.md](./스프링 Spring/JPA/Save or Update.md)</br>
 ┃　　　┃　　　╊━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 전파 설정.md](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
 ┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
@@ -346,6 +337,7 @@ avg_file_length  : 2187
 ┃　　　┃　　　┃　　　╊━　[@JvmStatic.md](./언어 Language/Kotlin/클래스/@JvmStatic.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Object.md](./언어 Language/Kotlin/클래스/Object.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Sealed Class, interface.md](./언어 Language/Kotlin/클래스/Sealed Class, interface.md)</br>
+┃　　　┃　　　┃　　　╊━　[value class.md](./언어 Language/Kotlin/클래스/value class.md)</br>
 ┃　　　┃　　　┃　　　╊━　[생성자.md](./언어 Language/Kotlin/클래스/생성자.md)</br>
 ┃　　　┃　　　┃　　　╊━　[코틀린에서의 Static.md](./언어 Language/Kotlin/클래스/코틀린에서의 Static.md)</br>
 ┃　　　┃　　　┃　　　╊━　[클래스 상속.md](./언어 Language/Kotlin/클래스/클래스 상속.md)</br>
@@ -355,17 +347,26 @@ avg_file_length  : 2187
 ┃　　　┃　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
 ┃　　　┃　　　╊━　[Inline━Funtions과 Reified.md](./언어 Language/Kotlin/Inline━Funtions과 Reified.md)</br>
 ┃　　　┃　　　╊━　[Label.md](./언어 Language/Kotlin/Label.md)</br>
-┃　　　┃　　　╊━　[NoArg에러.md](./언어 Language/Kotlin/NoArg에러.md)</br>
 ┃　　　┃　　　╊━　[Sequences.md](./언어 Language/Kotlin/Sequences.md)</br>
 ┃　　　┃　　　╊━　[field 상속.md](./언어 Language/Kotlin/field 상속.md)</br>
 ┃　　　┃　　　╊━　[람다 표현식.md](./언어 Language/Kotlin/람다 표현식.md)</br>
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
+╊━　[운영체제](./운영체제)</br>
+┃　　　╊━　[linux](./운영체제/linux)</br>
+┃　　　┃　　　╊━　[Swap메모리.md](./운영체제/linux/Swap메모리.md)</br>
+┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./운영체제/linux/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　╊━　[namespace와 cgroup.md](./운영체제/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　╊━　[network namespaces.md](./운영체제/linux/network namespaces.md)</br>
+┃　　　┃　　　╊━　[zshrc.md](./운영체제/linux/zshrc.md)</br>
+┃　　　┃　　　┗━　[환경변수와 프로세스.md](./운영체제/linux/환경변수와 프로세스.md)</br>
+┃　　　┗━　[임계영역과 상호배제.md](./운영체제/임계영역과 상호배제.md)</br>
 ╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　┗━　[선형회귀직선.md](./인공지능/선형회귀직선.md)</br>
-┗━　[README.md](./README.md)</br>
+╊━　[README.md](./README.md)</br>
+┗━　[XX6akA33](./XX6akA33)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
