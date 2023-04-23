@@ -56,37 +56,147 @@ function TestAndSet(boolean_ref lock) {
 
 ## SpinLock
 
-test_and_set 의 성질을 활용하여 SpinLock을 구현할 수 있다.
-
-## 상호배제
-
-TAS를 이용해서 상호배제를 구현할 수도 있다.
+TAS 의 성질을 활용하여 SpinLock을 구현할 수 있다.
 
 ```c
-volatile int lock = 0;
+#include <iostream>
+#include <thread>
+#include <atomic>
+#include <vector>
+#define SIZE 5
+using namespace std;
 
-void critical() {
-    // Spin lock: loop forever until we get the lock; we know the lock was
-    // successfully obtained after exiting this while loop because the 
-    // test_and_set() function locks the lock and returns the previous lock 
-    // value. If the previous lock value was 1 then the lock was **already**
-    // locked by another thread or process. Once the previous lock value
-    // was 0, however, then it indicates the lock was **not** locked before we
-    // locked it, but now it **is** locked because we locked it, indicating
-    // we own the lock.
-    while (test_and_set(&lock) == 1);  
-    critical section  // only one process can be in this section at a time
-    lock = 0;  // release lock when finished with the critical section
+atomic_flag flag;
+void foo(int id)
+{
+	//! get lock.
+	while (flag.test_and_set());
+
+	//! critical section.
+	cout << id << " enter ciritical section." << endl;
+	this_thread::sleep_for(chrono::milliseconds(1500));
+
+	//! release lock.
+	cout << id << " release lock." << endl;
+	flag.clear();
+}
+
+int main()
+{
+	vector<thread> t_arr;
+	for (int i = 0; i < SIZE; i++) t_arr.emplace_back(foo, i);
+	for (int i = 0; i < SIZE; i++) t_arr[i].join();
+	cout << "done" << endl;
 }
 ```
 
-**진행 흐름**
-- 가장 먼저 TestAndSet을 실행하는 프로세스가 `while(TestAndSet(&lock));` 루프에서 `lock = ture`로 바꾸고 `false`를 반환받아 while문을 빠져나오며 임계 구역에 진입한다.
-- 다른 프로세스는 `lock = false`가 될때까지 while루프를 빠져나오지 못하고 계속 대기하게 된다.
-- 임계구역에 진입했던 프로세스가 임계구역을 빠져나오면서 `lock = false`를 수행하여 lock을 풀어주면 대기하던 다른 프로세스가 임계구역에 진입하게 된다.
+제일 먼저 TAS를 실행한 쓰레드만 반복문을 빠져나올 수 있고, 이외의 다른 쓰레드는 clear 가 발생될 때 까지 반복문에 갇혀서 대기하게 된다.
+
+즉, while을 빠져나온 쓰레드는 프로세스 내에서 1개만 존재하며,
+
+상호배제 원리에 의하여 while 이하에 임계영역이 형성된다.
+
+## counter
+
+TAS로 atomic한 카운터도 구현할 수 있다.
+
+먼저 쓰레드에 안전하지 않은 버전부터 살펴보자.
+
+```c
+#include <stdio.h>
+#include <thread>
+#include <atomic>
+#include <vector>
+using namespace std;
+
+#define THREAD_N 10000
+#define LOOPED_N 10000
+
+class Counter {
+	int value;
+public:
+	Counter() :value(0) {};
+	void count() { value += 1; }
+	int get() { return value; }
+};
+
+Counter counter;
+
+void multiCount() {
+	int T = LOOPED_N;
+	while (T--) counter.count();
+}
+
+int main() {
+	vector<thread> t_arr;
+
+	for (int i = 0; i < THREAD_N; i++) t_arr.emplace_back(multiCount);
+	for (int i = 0; i < THREAD_N; i++) t_arr[i].join();
+
+	printf("Desired : %10d \n", THREAD_N * LOOPED_N);
+	printf("Acquire : %10d \n", counter.get());
+    
+    // Result (22.2790s)
+    // Desired :  100000000
+    // Acquire :   85096169
+}
+```
+
+10000개의 스레드가 각각 10,000번 count 하도록 했으니 결과값은 100,000,000이 나와야 한다. 
+
+하지만 위 코드에서 정확한 값이 나오지 않은 이유는, 여러 스레드의 동작이 겹쳤기 때문이다.
+
+예를 들어 `v = 100`인 상태에서, 이미 어떤 쓰레드가 `v = 100 + 1` 으로 갱신중하려 함에도 불구하고, `v = 100 + 1` 로 갱신하려는 다른 쓰레드가 있었기에 발생한 것 이다.
+
+```c
+#include <stdio.h>
+#include <thread>
+#include <atomic>
+#include <vector>
+using namespace std;
+
+#define THREAD_N 10000
+#define LOOPED_N 10000
+
+class AtomicCounter {
+	atomic_flag flag; // 달라진 부분
+	int value;
+public:
+	AtomicCounter() :value(0) {};
+	void count() { // 달라진 부분
+		while (flag.test_and_set());
+		value += 1;
+		flag.clear();
+	}
+	int get() { return value; }
+};
+
+AtomicCounter counter;
+
+void multiCount() {
+	int T = LOOPED_N;
+	while (T--) counter.count();
+}
+
+int main() {
+	vector<thread> t_arr;
+	for (int i = 0; i < THREAD_N; i++) t_arr.emplace_back(multiCount);
+	for (int i = 0; i < THREAD_N; i++) t_arr[i].join();
+    
+	printf("Desired : %10d \n", THREAD_N * LOOPED_N);
+	printf("Acquire : %10d \n", counter.get());
+    
+    // Result is, (75.7520s)
+    // Desired : 100000000
+    // Acquire : 100000000
+}
+```
+
+TAS를 통해서 값을 그냥 증가시키지 않고, 한 쓰레드만 값을 증가시킬 수 있도록 순서를 직렬화 하면 문제를 해결할 수 있다.
 
 ---
 
 참고
 
 - https://en.wikipedia.org/wiki/Test-and-set
+- https://gobyexample.com/atomic-counters

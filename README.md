@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 287
-derectories      : 70
-avg_file_length  : 2265
+files            : 289
+derectories      : 69
+avg_file_length  : 2259
 ```
 
 ./TIL</br>
@@ -36,11 +36,12 @@ avg_file_length  : 2265
 ┃　　　┃　　　╊━　[netty server 예제.md](./개발/netty/netty server 예제.md)</br>
 ┃　　　┃　　　╊━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
 ┃　　　┃　　　┗━　[webFlux와 netty.md](./개발/netty/webFlux와 netty.md)</br>
+┃　　　╊━　[reactor](./개발/reactor)</br>
+┃　　　┃　　　┗━　[Reactor.md](./개발/reactor/Reactor.md)</br>
 ┃　　　╊━　[비동기](./개발/비동기)</br>
 ┃　　　┃　　　╊━　[Coroutine vs Reactor.md](./개발/비동기/Coroutine vs Reactor.md)</br>
 ┃　　　┃　　　╊━　[netty 사례연구.md](./개발/비동기/netty 사례연구.md)</br>
 ┃　　　┃　　　┗━　[코루틴.md](./개발/비동기/코루틴.md)</br>
-┃　　　╊━　[회고](./개발/회고)</br>
 ┃　　　╊━　[mermaid 문법.md](./개발/mermaid 문법.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID.md](./개발/직렬화 serialVersionUID.md)</br>
 ╊━　[객체지향 OOP](./객체지향 OOP)</br>
@@ -346,8 +347,6 @@ avg_file_length  : 2265
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
-╊━　[운영체제](./운영체제)</br>
-┃　　　┗━　[TAS.md](./운영체제/TAS.md)</br>
 ╊━　[운영체제 Operating System](./운영체제 Operating System)</br>
 ┃　　　╊━　[linux](./운영체제 Operating System/linux)</br>
 ┃　　　┃　　　╊━　[Swap메모리.md](./운영체제 Operating System/linux/Swap메모리.md)</br>
@@ -359,9 +358,12 @@ avg_file_length  : 2265
 ┃　　　╊━　[TAS.md](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[임계영역과 상호배제.md](./운영체제 Operating System/임계영역과 상호배제.md)</br>
 ╊━　[인공지능](./인공지능)</br>
+┃　　　╊━　[Optimizer.md](./인공지능/Optimizer.md)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
-┃　　　┗━　[선형회귀직선.md](./인공지능/선형회귀직선.md)</br>
-┗━　[README.md](./README.md)</br>
+┃　　　╊━　[선형회귀.md](./인공지능/선형회귀.md)</br>
+┃　　　┗━　[퍼셉트론.md](./인공지능/퍼셉트론.md)</br>
+╊━　[README.md](./README.md)</br>
+┗━　[XXhAfd6k](./XXhAfd6k)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
