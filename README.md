@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 296
+files            : 300
 derectories      : 69
-avg_file_length  : 2287
+avg_file_length  : 2298
 ```
 
 ./TIL</br>
@@ -31,7 +31,8 @@ avg_file_length  : 2287
 ┃　　　┃　　　┃　　　┗━　[Mockk.md](./개발/TestCode/Kotlin/Mockk.md)</br>
 ┃　　　┃　　　┗━　[Mock과 Spy.md](./개발/TestCode/Mock과 Spy.md)</br>
 ┃　　　╊━　[WAS](./개발/WAS)</br>
-┃　　　┃　　　┗━　[tomcat 구성요소.md](./개발/WAS/tomcat 구성요소.md)</br>
+┃　　　┃　　　╊━　[tomcat 구성요소.md](./개발/WAS/tomcat 구성요소.md)</br>
+┃　　　┃　　　┗━　[웹서버와 WAS.md](./개발/WAS/웹서버와 WAS.md)</br>
 ┃　　　╊━　[netty](./개발/netty)</br>
 ┃　　　┃　　　╊━　[netty server 예제.md](./개발/netty/netty server 예제.md)</br>
 ┃　　　┃　　　╊━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
@@ -94,6 +95,7 @@ avg_file_length  : 2287
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？.md](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ╊━　[데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　╊━　[AWS](./데브옵스 DevOps/AWS)</br>
+┃　　　┃　　　┗━　[KMS.md](./데브옵스 DevOps/AWS/KMS.md)</br>
 ┃　　　╊━　[Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　╊━　[CNI.md](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　╊━　[ContainerRuntime.md](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
@@ -137,7 +139,9 @@ avg_file_length  : 2287
 ┃　　　┃　　　┗━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/환경변수 설정.md)</br>
 ┃　　　╊━　[Logging](./데브옵스 DevOps/Logging)</br>
 ┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog)</br>
+┃　　　┃　　　　　　　╊━　[datadog.md](./데브옵스 DevOps/Logging/datadog/datadog.md)</br>
 ┃　　　┃　　　　　　　╊━　[datadog APM기능 사용하기.md](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
+┃　　　┃　　　　　　　╊━　[datadog 아키텍처.md](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
 ┃　　　┃　　　　　　　┗━　[helmChart로 Agent 설치.md](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
 ┃　　　╊━　[nginx](./데브옵스 DevOps/nginx)</br>
 ┃　　　┃　　　╊━　[nginx certbot.md](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
