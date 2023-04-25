@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 292
+files            : 295
 derectories      : 69
-avg_file_length  : 2274
+avg_file_length  : 2278
 ```
 
 ./TIL</br>
@@ -358,8 +358,11 @@ avg_file_length  : 2274
 ┃　　　┃　　　╊━　[zshrc.md](./운영체제 Operating System/linux/zshrc.md)</br>
 ┃　　　┃　　　┗━　[환경변수와 프로세스.md](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
 ┃　　　╊━　[TAS.md](./운영체제 Operating System/TAS.md)</br>
+┃　　　╊━　[운영체제 유형.md](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　╊━　[유저, 커널레벨 스레드.md](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
-┃　　　┗━　[임계영역과 상호배제.md](./운영체제 Operating System/임계영역과 상호배제.md)</br>
+┃　　　╊━　[임계영역과 상호배제.md](./운영체제 Operating System/임계영역과 상호배제.md)</br>
+┃　　　╊━　[프로세스의 개념.md](./운영체제 Operating System/프로세스의 개념.md)</br>
+┃　　　┗━　[프로세스의 관리.md](./운영체제 Operating System/프로세스의 관리.md)</br>
 ╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[Optimizer.md](./인공지능/Optimizer.md)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
