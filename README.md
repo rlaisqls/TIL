@@ -3,7 +3,7 @@
 ```
 files            : 296
 derectories      : 69
-avg_file_length  : 2277
+avg_file_length  : 2287
 ```
 
 ./TIL</br>
@@ -237,7 +237,6 @@ avg_file_length  : 2277
 ┃　　　┃　　　┃　　　╊━　[1차캐시.md](./스프링 Spring/JPA/캐싱/1차캐시.md)</br>
 ┃　　　┃　　　┃　　　╊━　[2차캐시.md](./스프링 Spring/JPA/캐싱/2차캐시.md)</br>
 ┃　　　┃　　　┃　　　┗━　[영속성 컨텍스트.md](./스프링 Spring/JPA/캐싱/영속성 컨텍스트.md)</br>
-┃　　　┃　　　╊━　[\010Persistable.md](./스프링 Spring/JPA/\010Persistable.md)</br>
 ┃　　　┃　　　╊━　[Cascade.md](./스프링 Spring/JPA/Cascade.md)</br>
 ┃　　　┃　　　╊━　[Hibernate dialect.md](./스프링 Spring/JPA/Hibernate dialect.md)</br>
 ┃　　　┃　　　╊━　[Hibernate 쿼리실행순서.md](./스프링 Spring/JPA/Hibernate 쿼리실행순서.md)</br>
@@ -246,6 +245,7 @@ avg_file_length  : 2277
 ┃　　　┃　　　╊━　[JPA.md](./스프링 Spring/JPA/JPA.md)</br>
 ┃　　　┃　　　╊━　[N+1 문제.md](./스프링 Spring/JPA/N+1 문제.md)</br>
 ┃　　　┃　　　╊━　[OrphanRemoval.md](./스프링 Spring/JPA/OrphanRemoval.md)</br>
+┃　　　┃　　　╊━　[Persistable.md](./스프링 Spring/JPA/Persistable.md)</br>
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
 ┃　　　┃　　　╊━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 전파 설정.md](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
@@ -341,7 +341,7 @@ avg_file_length  : 2277
 ┃　　　┃　　　╊━　[함수](./언어 Language/Kotlin/함수)</br>
 ┃　　　┃　　　┃　　　┗━　[기본인자.md](./언어 Language/Kotlin/함수/기본인자.md)</br>
 ┃　　　┃　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
-┃　　　┃　　　╊━　[Inline━Funtions과 Reified.md](./언어 Language/Kotlin/Inline━Funtions과 Reified.md)</br>
+┃　　　┃　　　╊━　[InlineFuntion과 Reified.md](./언어 Language/Kotlin/InlineFuntion과 Reified.md)</br>
 ┃　　　┃　　　╊━　[Label.md](./언어 Language/Kotlin/Label.md)</br>
 ┃　　　┃　　　╊━　[Sequences.md](./언어 Language/Kotlin/Sequences.md)</br>
 ┃　　　┃　　　╊━　[field 상속.md](./언어 Language/Kotlin/field 상속.md)</br>
