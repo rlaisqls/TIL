@@ -59,7 +59,7 @@ Subscriber가 unbound mode에서 작업하고 source가 도달 가능한 가장 
 
 Rx Reactive 라이브러리는 Hot과 Cold라는 두 가지의 리액티브 시퀀스를 구별한다. 이러한 구분은 주로 reactive stream이 subscriber에게 어떻게 반응하는지와 관련된다.
 
-- Cold sequence는 각 subscriber에게 데이터 소스를 포함하여 시퀀스가 새로 시작된다. 예를 들어, source가 HTTP 통신을 사용한다면, 새로운 HTTP 요청이 각 구독마다 새로 만들어진다.
+- Cold sequence는 각 subscriber에게 데이터 소스를 포함하여 시퀀스가 새로 시작한다. 예를 들어, source가 HTTP 통신을 사용한다면, 새로운 HTTP 요청이 각 구독마다 새로 만들어진다.
 - Hot sequence는 각 subscriber에 대해 시퀀스가 처음부터 시작되지 않는다. 대신에, 나중에 들어온 subscriber는 구독 후 방출되는 신호를 수신한다. 그러나, Hot reactive stream은 전체 또는 일부 방출된 이력을 캐싱하거나 재현할 수 있다. Hot sequence는 아무도 구독하지 않은 경우에도 Hot sequence가 방출될 수 있다.
 
 source가 생산해내는 데이터의 특징에 따라 Hot과 Cold 중 어떤걸 사용해야 할지 생각을 하면 좋을 것 같다.
