@@ -67,8 +67,7 @@ TAS 의 성질을 활용하여 SpinLock을 구현할 수 있다.
 using namespace std;
 
 atomic_flag flag;
-void foo(int id)
-{
+void foo(int id) {
 	//! get lock.
 	while (flag.test_and_set());
 
@@ -81,8 +80,7 @@ void foo(int id)
 	flag.clear();
 }
 
-int main()
-{
+int main() {
 	vector<thread> t_arr;
 	for (int i = 0; i < SIZE; i++) t_arr.emplace_back(foo, i);
 	for (int i = 0; i < SIZE; i++) t_arr[i].join();

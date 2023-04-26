@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 304
+files            : 305
 derectories      : 69
-avg_file_length  : 2298
+avg_file_length  : 2293
 ```
 
 ./TIL</br>
@@ -366,6 +366,7 @@ avg_file_length  : 2298
 ┃　　　┃　　　╊━　[zshrc.md](./운영체제 Operating System/linux/zshrc.md)</br>
 ┃　　　┃　　　┗━　[환경변수와 프로세스.md](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
 ┃　　　╊━　[TAS.md](./운영체제 Operating System/TAS.md)</br>
+┃　　　╊━　[c언어 컴파일과정.md](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　╊━　[생산자━소비자 문제.md](./운영체제 Operating System/생산자━소비자 문제.md)</br>
 ┃　　　╊━　[운영체제 유형.md](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　╊━　[유저, 커널레벨 스레드.md](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
