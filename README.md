@@ -1,44 +1,45 @@
 # TIL
 
 ```
-files            : 303
+files            : 304
 derectories      : 69
-avg_file_length  : 2287
+avg_file_length  : 2292
 ```
 
 ./TIL</br>
-╊━　[Git](./Git)
-┃　　　╊━　[Flow](./Git/Flow)
+╊━　[Git](./Git)</br>
+┃　　　╊━　[Flow](./Git/Flow)</br>
 ┃　　　┃　　　╊━　[GitFlow.md](./Git/Flow/GitFlow.md)</br>
 ┃　　　┃　　　┗━　[GithubFlow.md](./Git/Flow/GithubFlow.md)</br>
-┃　　　┗━　[hooks](./Git/hooks)
+┃　　　┗━　[hooks](./Git/hooks)</br>
 ┃　　　　　　　╊━　[Githooks.md](./Git/hooks/Githooks.md)</br>
 ┃　　　　　　　╊━　[githook을 위한 perl command.md](./Git/hooks/githook을 위한 perl command.md)</br>
-┃　　　　　　　╊━　[파일트리 자동생성.md](./Git/hooks/파일트리 자동생성.md)</br>
-┃　　　　　　　┗━　[파일트리 자동생성 V2.md](./Git/hooks/파일트리 자동생성 V2.md)</br>
-╊━　[개발](./개발)
-┃　　　╊━　[Gradle](./개발/Gradle)
+┃　　　　　　　╊━　[파일트리 자동생성 V1.md](./Git/hooks/파일트리 자동생성 V1.md)</br>
+┃　　　　　　　╊━　[파일트리 자동생성 V2.md](./Git/hooks/파일트리 자동생성 V2.md)</br>
+┃　　　　　　　┗━　[파일트리 자동생성 V3.md](./Git/hooks/파일트리 자동생성 V3.md)</br>
+╊━　[개발](./개발)</br>
+┃　　　╊━　[Gradle](./개발/Gradle)</br>
 ┃　　　┃　　　╊━　[DependencyHandler.md](./개발/Gradle/DependencyHandler.md)</br>
 ┃　　　┃　　　╊━　[Git action gradle caching.md](./개발/Gradle/Git action gradle caching.md)</br>
 ┃　　　┃　　　╊━　[Gradle LifeCycle.md](./개발/Gradle/Gradle LifeCycle.md)</br>
 ┃　　　┃　　　┗━　[멀티모듈.md](./개발/Gradle/멀티모듈.md)</br>
-┃　　　╊━　[TestCode](./개발/TestCode)
-┃　　　┃　　　╊━　[Kotlin](./개발/TestCode/Kotlin)
+┃　　　╊━　[TestCode](./개발/TestCode)</br>
+┃　　　┃　　　╊━　[Kotlin](./개발/TestCode/Kotlin)</br>
 ┃　　　┃　　　┃　　　╊━　[Found interface kotlin.time.TimeMark, but class was expected.md](./개발/TestCode/Kotlin/Found interface kotlin.time.TimeMark, but class was expected.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Kotest.md](./개발/TestCode/Kotlin/Kotest.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Kotest Assertions.md](./개발/TestCode/Kotlin/Kotest Assertions.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Kotest Specs.md](./개발/TestCode/Kotlin/Kotest Specs.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Mockk.md](./개발/TestCode/Kotlin/Mockk.md)</br>
 ┃　　　┃　　　┗━　[Mock과 Spy.md](./개발/TestCode/Mock과 Spy.md)</br>
-┃　　　╊━　[WAS](./개발/WAS)
+┃　　　╊━　[WAS](./개발/WAS)</br>
 ┃　　　┃　　　╊━　[tomcat 구성요소.md](./개발/WAS/tomcat 구성요소.md)</br>
 ┃　　　┃　　　┗━　[웹서버와 WAS.md](./개발/WAS/웹서버와 WAS.md)</br>
-┃　　　╊━　[netty](./개발/netty)
+┃　　　╊━　[netty](./개발/netty)</br>
 ┃　　　┃　　　╊━　[netty server 예제.md](./개발/netty/netty server 예제.md)</br>
 ┃　　　┃　　　╊━　[netty 메시지 전송 흐름.md](./개발/netty/netty 메시지 전송 흐름.md)</br>
 ┃　　　┃　　　┗━　[webFlux와 netty.md](./개발/netty/webFlux와 netty.md)</br>
-┃　　　╊━　[비동기](./개발/비동기)
-┃　　　┃　　　╊━　[reactor](./개발/비동기/reactor)
+┃　　　╊━　[비동기](./개발/비동기)</br>
+┃　　　┃　　　╊━　[reactor](./개발/비동기/reactor)</br>
 ┃　　　┃　　　┃　　　╊━　[Callback과 Futures.md](./개발/비동기/reactor/Callback과 Futures.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Reactor.md](./개발/비동기/reactor/Reactor.md)</br>
 ┃　　　┃　　　╊━　[Coroutine vs Reactor.md](./개발/비동기/Coroutine vs Reactor.md)</br>
@@ -48,15 +49,15 @@ avg_file_length  : 2287
 ┃　　　┃　　　┗━　[코루틴.md](./개발/비동기/코루틴.md)</br>
 ┃　　　╊━　[mermaid 문법.md](./개발/mermaid 문법.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID.md](./개발/직렬화 serialVersionUID.md)</br>
-╊━　[객체지향 OOP](./객체지향 OOP)
-┃　　　╊━　[디자인패턴](./객체지향 OOP/디자인패턴)
-┃　　　┃　　　╊━　[1. 생성패턴](./객체지향 OOP/디자인패턴/1. 생성패턴)
+╊━　[객체지향 OOP](./객체지향 OOP)</br>
+┃　　　╊━　[디자인패턴](./객체지향 OOP/디자인패턴)</br>
+┃　　　┃　　　╊━　[1. 생성패턴](./객체지향 OOP/디자인패턴/1. 생성패턴)</br>
 ┃　　　┃　　　┃　　　╊━　[빌더 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/빌더 패턴.md)</br>
 ┃　　　┃　　　┃　　　╊━　[싱글톤 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/싱글톤 패턴.md)</br>
 ┃　　　┃　　　┃　　　╊━　[추상팩토리 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/추상팩토리 패턴.md)</br>
 ┃　　　┃　　　┃　　　╊━　[팩토리메소드 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/팩토리메소드 패턴.md)</br>
 ┃　　　┃　　　┃　　　┗━　[프로토타입 패턴.md](./객체지향 OOP/디자인패턴/1. 생성패턴/프로토타입 패턴.md)</br>
-┃　　　┃　　　╊━　[2. 구조패턴](./객체지향 OOP/디자인패턴/2. 구조패턴)
+┃　　　┃　　　╊━　[2. 구조패턴](./객체지향 OOP/디자인패턴/2. 구조패턴)</br>
 ┃　　　┃　　　┃　　　╊━　[데코레이터 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/데코레이터 패턴.md)</br>
 ┃　　　┃　　　┃　　　╊━　[브릿지 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/브릿지 패턴.md)</br>
 ┃　　　┃　　　┃　　　╊━　[어댑터 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/어댑터 패턴.md)</br>
@@ -64,7 +65,7 @@ avg_file_length  : 2287
 ┃　　　┃　　　┃　　　╊━　[퍼사드 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/퍼사드 패턴.md)</br>
 ┃　　　┃　　　┃　　　╊━　[프록시 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/프록시 패턴.md)</br>
 ┃　　　┃　　　┃　　　┗━　[플라이웨이트 패턴.md](./객체지향 OOP/디자인패턴/2. 구조패턴/플라이웨이트 패턴.md)</br>
-┃　　　┃　　　╊━　[3. 행위패턴](./객체지향 OOP/디자인패턴/3. 행위패턴)
+┃　　　┃　　　╊━　[3. 행위패턴](./객체지향 OOP/디자인패턴/3. 행위패턴)</br>
 ┃　　　┃　　　┃　　　╊━　[메멘토 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/메멘토 패턴.md)</br>
 ┃　　　┃　　　┃　　　╊━　[방문자 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/방문자 패턴.md)</br>
 ┃　　　┃　　　┃　　　╊━　[상태 패턴.md](./객체지향 OOP/디자인패턴/3. 행위패턴/상태 패턴.md)</br>
@@ -80,7 +81,7 @@ avg_file_length  : 2287
 ┃　　　┃　　　┗━　[위임 패턴(Delegate Pattern).md](./객체지향 OOP/디자인패턴/위임 패턴(Delegate Pattern).md)</br>
 ┃　　　╊━　[SOLID.md](./객체지향 OOP/SOLID.md)</br>
 ┃　　　┗━　[응집도와 결합도.md](./객체지향 OOP/응집도와 결합도.md)</br>
-╊━　[네트워크 Network](./네트워크 Network)
+╊━　[네트워크 Network](./네트워크 Network)</br>
 ┃　　　╊━　[CDN.md](./네트워크 Network/CDN.md)</br>
 ┃　　　╊━　[Cloudflare ProxyStatus.md](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
 ┃　　　╊━　[DNS레코드유형.md](./네트워크 Network/DNS레코드유형.md)</br>
@@ -95,14 +96,14 @@ avg_file_length  : 2287
 ┃　　　╊━　[TLS 인증서 발급 절차를 이해해보자.md](./네트워크 Network/TLS 인증서 발급 절차를 이해해보자.md)</br>
 ┃　　　╊━　[java로 간단한 socket 프로그램만들기.md](./네트워크 Network/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？.md](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
-╊━　[데브옵스 DevOps](./데브옵스 DevOps)
-┃　　　╊━　[AWS](./데브옵스 DevOps/AWS)
+╊━　[데브옵스 DevOps](./데브옵스 DevOps)</br>
+┃　　　╊━　[AWS](./데브옵스 DevOps/AWS)</br>
 ┃　　　┃　　　┗━　[KMS.md](./데브옵스 DevOps/AWS/KMS.md)</br>
-┃　　　╊━　[Container](./데브옵스 DevOps/Container)
+┃　　　╊━　[Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　╊━　[CNI.md](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　╊━　[ContainerRuntime.md](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
 ┃　　　┃　　　┗━　[Container Orchestration.md](./데브옵스 DevOps/Container/Container Orchestration.md)</br>
-┃　　　╊━　[Docker](./데브옵스 DevOps/Docker)
+┃　　　╊━　[Docker](./데브옵스 DevOps/Docker)</br>
 ┃　　　┃　　　╊━　[DockerSwarm.md](./데브옵스 DevOps/Docker/DockerSwarm.md)</br>
 ┃　　　┃　　　╊━　[Private registry 구축.md](./데브옵스 DevOps/Docker/Private registry 구축.md)</br>
 ┃　　　┃　　　╊━　[Prune.md](./데브옵스 DevOps/Docker/Prune.md)</br>
@@ -114,10 +115,10 @@ avg_file_length  : 2287
 ┃　　　┃　　　╊━　[도커 명령어.md](./데브옵스 DevOps/Docker/도커 명령어.md)</br>
 ┃　　　┃　　　╊━　[도커 스토리지.md](./데브옵스 DevOps/Docker/도커 스토리지.md)</br>
 ┃　　　┃　　　┗━　[도커 아키텍처.md](./데브옵스 DevOps/Docker/도커 아키텍처.md)</br>
-┃　　　╊━　[Kubernetes](./데브옵스 DevOps/Kubernetes)
-┃　　　┃　　　╊━　[ArgoCD](./데브옵스 DevOps/Kubernetes/ArgoCD)
+┃　　　╊━　[Kubernetes](./데브옵스 DevOps/Kubernetes)</br>
+┃　　　┃　　　╊━　[ArgoCD](./데브옵스 DevOps/Kubernetes/ArgoCD)</br>
 ┃　　　┃　　　┃　　　┗━　[ArgoCD 설치.md](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
-┃　　　┃　　　╊━　[이론](./데브옵스 DevOps/Kubernetes/이론)
+┃　　　┃　　　╊━　[이론](./데브옵스 DevOps/Kubernetes/이론)</br>
 ┃　　　┃　　　┃　　　╊━　[Deployments.md](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Endpoints.md](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Helm.md](./데브옵스 DevOps/Kubernetes/이론/Helm.md)</br>
@@ -137,15 +138,15 @@ avg_file_length  : 2287
 ┃　　　┃　　　╊━　[etcd.md](./데브옵스 DevOps/Kubernetes/etcd.md)</br>
 ┃　　　┃　　　╊━　[ingress.md](./데브옵스 DevOps/Kubernetes/ingress.md)</br>
 ┃　　　┃　　　╊━　[minukube 시작하기.md](./데브옵스 DevOps/Kubernetes/minukube 시작하기.md)</br>
-┃　　　┃　　　╊━　[test.yml](./데브옵스 DevOps/Kubernetes/test.yml)
+┃　　　┃　　　╊━　[test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
 ┃　　　┃　　　┗━　[환경변수 설정.md](./데브옵스 DevOps/Kubernetes/환경변수 설정.md)</br>
-┃　　　╊━　[Logging](./데브옵스 DevOps/Logging)
-┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog)
+┃　　　╊━　[Logging](./데브옵스 DevOps/Logging)</br>
+┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog)</br>
 ┃　　　┃　　　　　　　╊━　[datadog.md](./데브옵스 DevOps/Logging/datadog/datadog.md)</br>
 ┃　　　┃　　　　　　　╊━　[datadog APM기능 사용하기.md](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
 ┃　　　┃　　　　　　　╊━　[datadog 아키텍처.md](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
 ┃　　　┃　　　　　　　┗━　[helmChart로 Agent 설치.md](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
-┃　　　╊━　[nginx](./데브옵스 DevOps/nginx)
+┃　　　╊━　[nginx](./데브옵스 DevOps/nginx)</br>
 ┃　　　┃　　　╊━　[nginx certbot.md](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
 ┃　　　┃　　　╊━　[nginx docker.md](./데브옵스 DevOps/nginx/nginx docker.md)</br>
 ┃　　　┃　　　╊━　[nginx 명령어.md](./데브옵스 DevOps/nginx/nginx 명령어.md)</br>
@@ -154,8 +155,8 @@ avg_file_length  : 2287
 ┃　　　╊━　[CI／CD파이프라인.md](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　╊━　[openssl로 pemKey 만들고 접속하기.md](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[데브옵스.md](./데브옵스 DevOps/데브옵스.md)</br>
-╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)
-┃　　　╊━　[DB설계](./데이터베이스 DataBase/DB설계)
+╊━　[데이터베이스 DataBase](./데이터베이스 DataBase)</br>
+┃　　　╊━　[DB설계](./데이터베이스 DataBase/DB설계)</br>
 ┃　　　┃　　　╊━　[DBMS와 RDBMS.md](./데이터베이스 DataBase/DB설계/DBMS와 RDBMS.md)</br>
 ┃　　　┃　　　╊━　[데이터모델링.md](./데이터베이스 DataBase/DB설계/데이터모델링.md)</br>
 ┃　　　┃　　　╊━　[무결성 제약조건.md](./데이터베이스 DataBase/DB설계/무결성 제약조건.md)</br>
@@ -164,32 +165,32 @@ avg_file_length  : 2287
 ┃　　　┃　　　╊━　[정규화와 반정규화.md](./데이터베이스 DataBase/DB설계/정규화와 반정규화.md)</br>
 ┃　　　┃　　　╊━　[테이블분할.md](./데이터베이스 DataBase/DB설계/테이블분할.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 ACID와 격리수준.md](./데이터베이스 DataBase/DB설계/트랜잭션 ACID와 격리수준.md)</br>
-┃　　　╊━　[MQ](./데이터베이스 DataBase/MQ)
+┃　　　╊━　[MQ](./데이터베이스 DataBase/MQ)</br>
 ┃　　　┃　　　╊━　[Docker로 Kafka 실행.md](./데이터베이스 DataBase/MQ/Docker로 Kafka 실행.md)</br>
 ┃　　　┃　　　╊━　[RabbitMQ.md](./데이터베이스 DataBase/MQ/RabbitMQ.md)</br>
 ┃　　　┃　　　╊━　[Spring with Kafka.md](./데이터베이스 DataBase/MQ/Spring with Kafka.md)</br>
 ┃　　　┃　　　┗━　[메시지큐.md](./데이터베이스 DataBase/MQ/메시지큐.md)</br>
-┃　　　╊━　[NoSQL](./데이터베이스 DataBase/NoSQL)
-┃　　　┃　　　╊━　[MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB)
+┃　　　╊━　[NoSQL](./데이터베이스 DataBase/NoSQL)</br>
+┃　　　┃　　　╊━　[MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB)</br>
 ┃　　　┃　　　┃　　　╊━　[Homebrew로 MongoDB설치하기.md](./데이터베이스 DataBase/NoSQL/MongoDB/Homebrew로 MongoDB설치하기.md)</br>
 ┃　　　┃　　　┃　　　╊━　[MongoDB.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB.md)</br>
 ┃　　　┃　　　┃　　　╊━　[MongoDB Document로 POJO 상속받기.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB Document로 POJO 상속받기.md)</br>
 ┃　　　┃　　　┃　　　╊━　[MongoDB 스키마설계 고려사항.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB 스키마설계 고려사항.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MongoDB 유저관리.md](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB 유저관리.md)</br>
-┃　　　┃　　　╊━　[PostgreSQL](./데이터베이스 DataBase/NoSQL/PostgreSQL)
+┃　　　┃　　　╊━　[PostgreSQL](./데이터베이스 DataBase/NoSQL/PostgreSQL)</br>
 ┃　　　┃　　　┃　　　╊━　[PostgreSQL.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL.md)</br>
 ┃　　　┃　　　┃　　　┗━　[PostgreSQL명령어.md](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL명령어.md)</br>
-┃　　　┃　　　╊━　[redis](./데이터베이스 DataBase/NoSQL/redis)
+┃　　　┃　　　╊━　[redis](./데이터베이스 DataBase/NoSQL/redis)</br>
 ┃　　　┃　　　┃　　　╊━　[Redis.md](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Spring Redis Phantomkey.md](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
 ┃　　　┃　　　╊━　[NoSQL 데이터유형.md](./데이터베이스 DataBase/NoSQL/NoSQL 데이터유형.md)</br>
 ┃　　　┃　　　┗━　[NoSQL에는 ACID가 없다고？.md](./데이터베이스 DataBase/NoSQL/NoSQL에는 ACID가 없다고？.md)</br>
-┃　　　╊━　[SQL](./데이터베이스 DataBase/SQL)
-┃　　　┃　　　╊━　[최적화](./데이터베이스 DataBase/SQL/최적화)
+┃　　　╊━　[SQL](./데이터베이스 DataBase/SQL)</br>
+┃　　　┃　　　╊━　[최적화](./데이터베이스 DataBase/SQL/최적화)</br>
 ┃　　　┃　　　┃　　　╊━　[DB 커넥션 풀.md](./데이터베이스 DataBase/SQL/최적화/DB 커넥션 풀.md)</br>
 ┃　　　┃　　　┃　　　╊━　[옵티마이저.md](./데이터베이스 DataBase/SQL/최적화/옵티마이저.md)</br>
 ┃　　　┃　　　┃　　　┗━　[조인 수행원리.md](./데이터베이스 DataBase/SQL/최적화/조인 수행원리.md)</br>
-┃　　　┃　　　╊━　[쿼리종류](./데이터베이스 DataBase/SQL/쿼리종류)
+┃　　　┃　　　╊━　[쿼리종류](./데이터베이스 DataBase/SQL/쿼리종류)</br>
 ┃　　　┃　　　┃　　　╊━　[DCL.md](./데이터베이스 DataBase/SQL/쿼리종류/DCL.md)</br>
 ┃　　　┃　　　┃　　　╊━　[DDL.md](./데이터베이스 DataBase/SQL/쿼리종류/DDL.md)</br>
 ┃　　　┃　　　┃　　　╊━　[DML.md](./데이터베이스 DataBase/SQL/쿼리종류/DML.md)</br>
@@ -211,9 +212,9 @@ avg_file_length  : 2287
 ┃　　　┃　　　╊━　[집계함수.md](./데이터베이스 DataBase/SQL/집계함수.md)</br>
 ┃　　　┃　　　┗━　[집합연산자.md](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
 ┃　　　┗━　[Column, Row기반DB.md](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
-╊━　[스프링 Spring](./스프링 Spring)
-┃　　　╊━　[AOP](./스프링 Spring/AOP)
-┃　　　┃　　　╊━　[트랜잭션](./스프링 Spring/AOP/트랜잭션)
+╊━　[스프링 Spring](./스프링 Spring)</br>
+┃　　　╊━　[AOP](./스프링 Spring/AOP)</br>
+┃　　　┃　　　╊━　[트랜잭션](./스프링 Spring/AOP/트랜잭션)</br>
 ┃　　　┃　　　┃　　　╊━　[TransactionAttributeSource.md](./스프링 Spring/AOP/트랜잭션/TransactionAttributeSource.md)</br>
 ┃　　　┃　　　┃　　　╊━　[트랜잭션.md](./스프링 Spring/AOP/트랜잭션/트랜잭션.md)</br>
 ┃　　　┃　　　┃　　　┗━　[트랜잭션 전파.md](./스프링 Spring/AOP/트랜잭션/트랜잭션 전파.md)</br>
@@ -222,14 +223,14 @@ avg_file_length  : 2287
 ┃　　　┃　　　╊━　[CustomAnnotation.md](./스프링 Spring/AOP/CustomAnnotation.md)</br>
 ┃　　　┃　　　╊━　[Pointcut.md](./스프링 Spring/AOP/Pointcut.md)</br>
 ┃　　　┃　　　┗━　[ProxyFactoryBean.md](./스프링 Spring/AOP/ProxyFactoryBean.md)</br>
-┃　　　╊━　[Event](./스프링 Spring/Event)
+┃　　　╊━　[Event](./스프링 Spring/Event)</br>
 ┃　　　┃　　　╊━　[@TransactionalEventListener.md](./스프링 Spring/Event/@TransactionalEventListener.md)</br>
 ┃　　　┃　　　┗━　[ApplicationEventPublisher.md](./스프링 Spring/Event/ApplicationEventPublisher.md)</br>
-┃　　　╊━　[JPA](./스프링 Spring/JPA)
-┃　　　┃　　　╊━　[JPQL](./스프링 Spring/JPA/JPQL)
+┃　　　╊━　[JPA](./스프링 Spring/JPA)</br>
+┃　　　┃　　　╊━　[JPQL](./스프링 Spring/JPA/JPQL)</br>
 ┃　　　┃　　　┃　　　╊━　[FetchJoin.md](./스프링 Spring/JPA/JPQL/FetchJoin.md)</br>
 ┃　　　┃　　　┃　　　┗━　[경로표현식.md](./스프링 Spring/JPA/JPQL/경로표현식.md)</br>
-┃　　　┃　　　╊━　[QuerydslJpa](./스프링 Spring/JPA/QuerydslJpa)
+┃　　　┃　　　╊━　[QuerydslJpa](./스프링 Spring/JPA/QuerydslJpa)</br>
 ┃　　　┃　　　┃　　　╊━　[Paging.md](./스프링 Spring/JPA/QuerydslJpa/Paging.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Projection.md](./스프링 Spring/JPA/QuerydslJpa/Projection.md)</br>
 ┃　　　┃　　　┃　　　╊━　[QClass.md](./스프링 Spring/JPA/QuerydslJpa/QClass.md)</br>
@@ -239,7 +240,7 @@ avg_file_length  : 2287
 ┃　　　┃　　　┃　　　╊━　[기본문법.md](./스프링 Spring/JPA/QuerydslJpa/기본문법.md)</br>
 ┃　　　┃　　　┃　　　╊━　[동적쿼리.md](./스프링 Spring/JPA/QuerydslJpa/동적쿼리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[벌크연산.md](./스프링 Spring/JPA/QuerydslJpa/벌크연산.md)</br>
-┃　　　┃　　　╊━　[캐싱](./스프링 Spring/JPA/캐싱)
+┃　　　┃　　　╊━　[캐싱](./스프링 Spring/JPA/캐싱)</br>
 ┃　　　┃　　　┃　　　╊━　[1차캐시.md](./스프링 Spring/JPA/캐싱/1차캐시.md)</br>
 ┃　　　┃　　　┃　　　╊━　[2차캐시.md](./스프링 Spring/JPA/캐싱/2차캐시.md)</br>
 ┃　　　┃　　　┃　　　┗━　[영속성 컨텍스트.md](./스프링 Spring/JPA/캐싱/영속성 컨텍스트.md)</br>
@@ -255,15 +256,15 @@ avg_file_length  : 2287
 ┃　　　┃　　　╊━　[ReadOnlyQuery 최적화.md](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
 ┃　　　┃　　　╊━　[벌크연산.md](./스프링 Spring/JPA/벌크연산.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 전파 설정.md](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
-┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)
+┃　　　╊━　[SpringSecurity](./스프링 Spring/SpringSecurity)</br>
 ┃　　　┃　　　╊━　[CORS.md](./스프링 Spring/SpringSecurity/CORS.md)</br>
 ┃　　　┃　　　╊━　[CSRF.md](./스프링 Spring/SpringSecurity/CSRF.md)</br>
 ┃　　　┃　　　┗━　[authn과 authz.md](./스프링 Spring/SpringSecurity/authn과 authz.md)</br>
-┃　　　╊━　[Validation](./스프링 Spring/Validation)
+┃　　　╊━　[Validation](./스프링 Spring/Validation)</br>
 ┃　　　┃　　　╊━　[@GroupSequence.md](./스프링 Spring/Validation/@GroupSequence.md)</br>
 ┃　　　┃　　　┗━　[@Valid와 @Validated.md](./스프링 Spring/Validation/@Valid와 @Validated.md)</br>
-┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)
-┃　　　┃　　　╊━　[R2DBC](./스프링 Spring/WebFlux/R2DBC)
+┃　　　╊━　[WebFlux](./스프링 Spring/WebFlux)</br>
+┃　　　┃　　　╊━　[R2DBC](./스프링 Spring/WebFlux/R2DBC)</br>
 ┃　　　┃　　　┃　　　╊━　[R2DBC.md](./스프링 Spring/WebFlux/R2DBC/R2DBC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[R2DBC 사용.md](./스프링 Spring/WebFlux/R2DBC/R2DBC 사용.md)</br>
 ┃　　　┃　　　╊━　[@Controller.md](./스프링 Spring/WebFlux/@Controller.md)</br>
@@ -271,10 +272,10 @@ avg_file_length  : 2287
 ┃　　　┃　　　╊━　[WebClient.md](./스프링 Spring/WebFlux/WebClient.md)</br>
 ┃　　　┃　　　╊━　[WebFilter.md](./스프링 Spring/WebFlux/WebFilter.md)</br>
 ┃　　　┃　　　┗━　[WebFlux.md](./스프링 Spring/WebFlux/WebFlux.md)</br>
-┃　　　╊━　[Web MVC](./스프링 Spring/Web MVC)
+┃　　　╊━　[Web MVC](./스프링 Spring/Web MVC)</br>
 ┃　　　┃　　　╊━　[Request 처리과정.md](./스프링 Spring/Web MVC/Request 처리과정.md)</br>
 ┃　　　┃　　　┗━　[SpringServletContainerInitializer.md](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
-┃　　　╊━　[기본원리](./스프링 Spring/기본원리)
+┃　　　╊━　[기본원리](./스프링 Spring/기본원리)</br>
 ┃　　　┃　　　╊━　[@Autowired 빈 주입 스캔 원리.md](./스프링 Spring/기본원리/@Autowired 빈 주입 스캔 원리.md)</br>
 ┃　　　┃　　　╊━　[@ComponentScan.md](./스프링 Spring/기본원리/@ComponentScan.md)</br>
 ┃　　　┃　　　╊━　[@Component VS @Service.md](./스프링 Spring/기본원리/@Component VS @Service.md)</br>
@@ -287,19 +288,19 @@ avg_file_length  : 2287
 ┃　　　┃　　　┗━　[싱글톤.md](./스프링 Spring/기본원리/싱글톤.md)</br>
 ┃　　　╊━　[AOT.md](./스프링 Spring/AOT.md)</br>
 ┃　　　┗━　[Spring 6.0과 Spring Boot 3.0.md](./스프링 Spring/Spring 6.0과 Spring Boot 3.0.md)</br>
-╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)
-┃　　　╊━　[API 아키텍처](./아키텍처 및 방법론/API 아키텍처)
+╊━　[아키텍처 및 방법론](./아키텍처 및 방법론)</br>
+┃　　　╊━　[API 아키텍처](./아키텍처 및 방법론/API 아키텍처)</br>
 ┃　　　┃　　　╊━　[GraphQL.md](./아키텍처 및 방법론/API 아키텍처/GraphQL.md)</br>
 ┃　　　┃　　　╊━　[REST.md](./아키텍처 및 방법론/API 아키텍처/REST.md)</br>
 ┃　　　┃　　　╊━　[RPC.md](./아키텍처 및 방법론/API 아키텍처/RPC.md)</br>
 ┃　　　┃　　　┗━　[SOAP.md](./아키텍처 및 방법론/API 아키텍처/SOAP.md)</br>
-┃　　　╊━　[DDD](./아키텍처 및 방법론/DDD)
+┃　　　╊━　[DDD](./아키텍처 및 방법론/DDD)</br>
 ┃　　　┃　　　╊━　[DDD.md](./아키텍처 및 방법론/DDD/DDD.md)</br>
 ┃　　　┃　　　╊━　[DDD의 아키텍처.md](./아키텍처 및 방법론/DDD/DDD의 아키텍처.md)</br>
 ┃　　　┃　　　╊━　[도메인영역.md](./아키텍처 및 방법론/DDD/도메인영역.md)</br>
 ┃　　　┃　　　╊━　[이벤트 스토밍.md](./아키텍처 및 방법론/DDD/이벤트 스토밍.md)</br>
 ┃　　　┃　　　┗━　[컨트랙트.md](./아키텍처 및 방법론/DDD/컨트랙트.md)</br>
-┃　　　╊━　[MSA](./아키텍처 및 방법론/MSA)
+┃　　　╊━　[MSA](./아키텍처 및 방법론/MSA)</br>
 ┃　　　┃　　　╊━　[MSA의 장단점.md](./아키텍처 및 방법론/MSA/MSA의 장단점.md)</br>
 ┃　　　┃　　　╊━　[메시지 브로커.md](./아키텍처 및 방법론/MSA/메시지 브로커.md)</br>
 ┃　　　┃　　　╊━　[사가 패턴.md](./아키텍처 및 방법론/MSA/사가 패턴.md)</br>
@@ -310,18 +311,18 @@ avg_file_length  : 2287
 ┃　　　┃　　　┗━　[트랜잭션 로그 테일링 패턴.md](./아키텍처 및 방법론/MSA/트랜잭션 로그 테일링 패턴.md)</br>
 ┃　　　╊━　[CQRS.md](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture.md](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
-╊━　[알고리즘 Algorithm](./알고리즘 Algorithm)
+╊━　[알고리즘 Algorithm](./알고리즘 Algorithm)</br>
 ┃　　　┗━　[세그먼트트리.md](./알고리즘 Algorithm/세그먼트트리.md)</br>
-╊━　[언어 Language](./언어 Language)
-┃　　　╊━　[JAVA](./언어 Language/JAVA)
-┃　　　┃　　　╊━　[JVM](./언어 Language/JAVA/JVM)
+╊━　[언어 Language](./언어 Language)</br>
+┃　　　╊━　[JAVA](./언어 Language/JAVA)</br>
+┃　　　┃　　　╊━　[JVM](./언어 Language/JAVA/JVM)</br>
 ┃　　　┃　　　┃　　　╊━　[Heap영역 구조와 GC.md](./언어 Language/JAVA/JVM/Heap영역 구조와 GC.md)</br>
 ┃　　　┃　　　┃　　　╊━　[JVM 구성요소.md](./언어 Language/JAVA/JVM/JVM 구성요소.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Java Bytecode.md](./언어 Language/JAVA/JVM/Java Bytecode.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Permanent to Metaspace.md](./언어 Language/JAVA/JVM/Permanent to Metaspace.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Runtime Data Area.md](./언어 Language/JAVA/JVM/Runtime Data Area.md)</br>
 ┃　　　┃　　　┃　　　┗━　[메모리누수.md](./언어 Language/JAVA/JVM/메모리누수.md)</br>
-┃　　　┃　　　╊━　[Thread](./언어 Language/JAVA/Thread)
+┃　　　┃　　　╊━　[Thread](./언어 Language/JAVA/Thread)</br>
 ┃　　　┃　　　┃　　　╊━　[Thread 상태.md](./언어 Language/JAVA/Thread/Thread 상태.md)</br>
 ┃　　　┃　　　┃　　　┗━　[wait()과　notifyAll().md](./언어 Language/JAVA/Thread/wait()과　notifyAll().md)</br>
 ┃　　　┃　　　╊━　[Inner static class.md](./언어 Language/JAVA/Inner static class.md)</br>
@@ -330,13 +331,13 @@ avg_file_length  : 2287
 ┃　　　┃　　　╊━　[record.md](./언어 Language/JAVA/record.md)</br>
 ┃　　　┃　　　╊━　[예외와 에러.md](./언어 Language/JAVA/예외와 에러.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/JAVA/제네릭과 variance.md)</br>
-┃　　　╊━　[Kotlin](./언어 Language/Kotlin)
-┃　　　┃　　　╊━　[변수](./언어 Language/Kotlin/변수)
+┃　　　╊━　[Kotlin](./언어 Language/Kotlin)</br>
+┃　　　┃　　　╊━　[변수](./언어 Language/Kotlin/변수)</br>
 ┃　　　┃　　　┃　　　╊━　[List와 MutableList.md](./언어 Language/Kotlin/변수/List와 MutableList.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Nullable.md](./언어 Language/Kotlin/변수/Nullable.md)</br>
 ┃　　　┃　　　┃　　　╊━　[const.md](./언어 Language/Kotlin/변수/const.md)</br>
 ┃　　　┃　　　┃　　　┗━　[val과 var.md](./언어 Language/Kotlin/변수/val과 var.md)</br>
-┃　　　┃　　　╊━　[클래스](./언어 Language/Kotlin/클래스)
+┃　　　┃　　　╊━　[클래스](./언어 Language/Kotlin/클래스)</br>
 ┃　　　┃　　　┃　　　╊━　[@JvmField.md](./언어 Language/Kotlin/클래스/@JvmField.md)</br>
 ┃　　　┃　　　┃　　　╊━　[@JvmStatic.md](./언어 Language/Kotlin/클래스/@JvmStatic.md)</br>
 ┃　　　┃　　　┃　　　╊━　[Object.md](./언어 Language/Kotlin/클래스/Object.md)</br>
@@ -345,7 +346,7 @@ avg_file_length  : 2287
 ┃　　　┃　　　┃　　　╊━　[코틀린에서의 Static.md](./언어 Language/Kotlin/클래스/코틀린에서의 Static.md)</br>
 ┃　　　┃　　　┃　　　╊━　[클래스 상속.md](./언어 Language/Kotlin/클래스/클래스 상속.md)</br>
 ┃　　　┃　　　┃　　　┗━　[필드와 접근자 메서드.md](./언어 Language/Kotlin/클래스/필드와 접근자 메서드.md)</br>
-┃　　　┃　　　╊━　[함수](./언어 Language/Kotlin/함수)
+┃　　　┃　　　╊━　[함수](./언어 Language/Kotlin/함수)</br>
 ┃　　　┃　　　┃　　　┗━　[기본인자.md](./언어 Language/Kotlin/함수/기본인자.md)</br>
 ┃　　　┃　　　╊━　[Collections.md](./언어 Language/Kotlin/Collections.md)</br>
 ┃　　　┃　　　╊━　[InlineFuntion과 Reified.md](./언어 Language/Kotlin/InlineFuntion과 Reified.md)</br>
@@ -356,8 +357,8 @@ avg_file_length  : 2287
 ┃　　　┃　　　╊━　[범위 지정 함수.md](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance.md](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>.md](./언어 Language/자바<？>와 코틀린<*>.md)</br>
-╊━　[운영체제 Operating System](./운영체제 Operating System)
-┃　　　╊━　[linux](./운영체제 Operating System/linux)
+╊━　[운영체제 Operating System](./운영체제 Operating System)</br>
+┃　　　╊━　[linux](./운영체제 Operating System/linux)</br>
 ┃　　　┃　　　╊━　[Swap메모리.md](./운영체제 Operating System/linux/Swap메모리.md)</br>
 ┃　　　┃　　　╊━　[bash_profile과 bashrc.md](./운영체제 Operating System/linux/bash_profile과 bashrc.md)</br>
 ┃　　　┃　　　╊━　[namespace와 cgroup.md](./운영체제 Operating System/linux/namespace와 cgroup.md)</br>
@@ -371,15 +372,15 @@ avg_file_length  : 2287
 ┃　　　╊━　[임계영역과 상호배제.md](./운영체제 Operating System/임계영역과 상호배제.md)</br>
 ┃　　　╊━　[프로세스의 개념.md](./운영체제 Operating System/프로세스의 개념.md)</br>
 ┃　　　┗━　[프로세스의 관리.md](./운영체제 Operating System/프로세스의 관리.md)</br>
-╊━　[인공지능](./인공지능)
+╊━　[인공지능](./인공지능)</br>
 ┃　　　╊━　[Optimizer.md](./인공지능/Optimizer.md)</br>
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　╊━　[선형회귀.md](./인공지능/선형회귀.md)</br>
 ┃　　　┗━　[퍼셉트론.md](./인공지능/퍼셉트론.md)</br>
 ┗━　[README.md](./README.md)</br>
 .
-╊━　[debug.log](./debug.log)
-╊━　[pre━commit](./pre━commit)
+╊━　[debug.log](./debug.log)</br>
+╊━　[pre━commit](./pre━commit)</br>
 ┗━　[readme_template.md](./readme_template.md)</br>
 
 
