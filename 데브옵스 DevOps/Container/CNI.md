@@ -22,4 +22,4 @@ CNI를 구현하는 플러그인으론 BRIDGE, VLAN, IPVLAN, MACVLAN, DHCP, Cali
 
 ## IPAM
 
-CNI 설정 파일은 CNI 플러그인의 유형, 사용할 서브넷과 라우트를 명시하는 IPAM(IP Address Management )이라는 섹션을 가지고있다. 하드코딩 없이 적절한 플러그인을 호출할 수 있도록 하는 역할을 한다.
+CNI 설정 파일은 CNI 플러그인의 유형, 사용할 서브넷과 라우트를 명시하는 IPAM(IP Address Management)이라는 섹션을 가지고있다. 하드코딩 없이 적절한 플러그인을 호출할 수 있도록 하는 역할을 한다.
