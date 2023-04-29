@@ -18,7 +18,7 @@ Data-Keys work completely differently. Let’s say we have a backend system whic
 
 Here is how the API call is made as well as the output given: 
 
-```json
+```js
 $ aws kms generate-data-key --key-id zzzzzzzz-yyyy-zzzz-yyyy-zzzzzzzzzzzz --key-spec AES_256
 
 Anonymized output: 
