@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 305
+files            : 308
 derectories      : 69
-avg_file_length  : 2293
+avg_file_length  : 2304
 ```
 
 ./TIL</br>
@@ -98,7 +98,9 @@ avg_file_length  : 2293
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？.md](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ╊━　[데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　╊━　[AWS](./데브옵스 DevOps/AWS)</br>
-┃　　　┃　　　┗━　[KMS.md](./데브옵스 DevOps/AWS/KMS.md)</br>
+┃　　　┃　　　╊━　[EBS.md](./데브옵스 DevOps/AWS/EBS.md)</br>
+┃　　　┃　　　╊━　[KMS.md](./데브옵스 DevOps/AWS/KMS.md)</br>
+┃　　　┃　　　┗━　[KMS Datakey.md](./데브옵스 DevOps/AWS/KMS Datakey.md)</br>
 ┃　　　╊━　[Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　╊━　[CNI.md](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　╊━　[ContainerRuntime.md](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
@@ -211,7 +213,8 @@ avg_file_length  : 2293
 ┃　　　┃　　　╊━　[제약조건.md](./데이터베이스 DataBase/SQL/제약조건.md)</br>
 ┃　　　┃　　　╊━　[집계함수.md](./데이터베이스 DataBase/SQL/집계함수.md)</br>
 ┃　　　┃　　　┗━　[집합연산자.md](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
-┃　　　┗━　[Column, Row기반DB.md](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
+┃　　　╊━　[Column, Row기반DB.md](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
+┃　　　┗━　[DB 암호화.md](./데이터베이스 DataBase/DB 암호화.md)</br>
 ╊━　[스프링 Spring](./스프링 Spring)</br>
 ┃　　　╊━　[AOP](./스프링 Spring/AOP)</br>
 ┃　　　┃　　　╊━　[트랜잭션](./스프링 Spring/AOP/트랜잭션)</br>
