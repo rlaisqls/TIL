@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 311
+files            : 316
 derectories      : 70
-avg_file_length  : 2335
+avg_file_length  : 2380
 ```
 
 ./TIL</br>
@@ -48,9 +48,12 @@ avg_file_length  : 2335
 ┃　　　┃　　　╊━　[netty 사례연구.md](./개발/비동기/netty 사례연구.md)</br>
 ┃　　　┃　　　┗━　[코루틴.md](./개발/비동기/코루틴.md)</br>
 ┃　　　╊━　[암호화](./개발/암호화)</br>
+┃　　　┃　　　╊━　[AES&IV.md](./개발/암호화/AES&IV.md)</br>
 ┃　　　┃　　　╊━　[Cipher.md](./개발/암호화/Cipher.md)</br>
 ┃　　　┃　　　┗━　[DB 암호화.md](./개발/암호화/DB 암호화.md)</br>
+┃　　　╊━　[CustomAnnotation.md](./개발/CustomAnnotation.md)</br>
 ┃　　　╊━　[mermaid 문법.md](./개발/mermaid 문법.md)</br>
+┃　　　╊━　[project.md](./개발/project.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID.md](./개발/직렬화 serialVersionUID.md)</br>
 ╊━　[객체지향 OOP](./객체지향 OOP)</br>
 ┃　　　╊━　[디자인패턴](./객체지향 OOP/디자인패턴)</br>
@@ -102,6 +105,7 @@ avg_file_length  : 2335
 ╊━　[데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　╊━　[AWS](./데브옵스 DevOps/AWS)</br>
 ┃　　　┃　　　╊━　[EBS.md](./데브옵스 DevOps/AWS/EBS.md)</br>
+┃　　　┃　　　╊━　[Encryption context.md](./데브옵스 DevOps/AWS/Encryption context.md)</br>
 ┃　　　┃　　　╊━　[KMS.md](./데브옵스 DevOps/AWS/KMS.md)</br>
 ┃　　　┃　　　┗━　[KMS Datakey.md](./데브옵스 DevOps/AWS/KMS Datakey.md)</br>
 ┃　　　╊━　[Container](./데브옵스 DevOps/Container)</br>
@@ -226,7 +230,6 @@ avg_file_length  : 2335
 ┃　　　┃　　　┃　　　┗━　[트랜잭션 전파.md](./스프링 Spring/AOP/트랜잭션/트랜잭션 전파.md)</br>
 ┃　　　┃　　　╊━　[AOP.md](./스프링 Spring/AOP/AOP.md)</br>
 ┃　　　┃　　　╊━　[AdviceAnnotation.md](./스프링 Spring/AOP/AdviceAnnotation.md)</br>
-┃　　　┃　　　╊━　[CustomAnnotation.md](./스프링 Spring/AOP/CustomAnnotation.md)</br>
 ┃　　　┃　　　╊━　[Pointcut.md](./스프링 Spring/AOP/Pointcut.md)</br>
 ┃　　　┃　　　┗━　[ProxyFactoryBean.md](./스프링 Spring/AOP/ProxyFactoryBean.md)</br>
 ┃　　　╊━　[Event](./스프링 Spring/Event)</br>
@@ -250,7 +253,9 @@ avg_file_length  : 2335
 ┃　　　┃　　　┃　　　╊━　[1차캐시.md](./스프링 Spring/JPA/캐싱/1차캐시.md)</br>
 ┃　　　┃　　　┃　　　╊━　[2차캐시.md](./스프링 Spring/JPA/캐싱/2차캐시.md)</br>
 ┃　　　┃　　　┃　　　┗━　[영속성 컨텍스트.md](./스프링 Spring/JPA/캐싱/영속성 컨텍스트.md)</br>
+┃　　　┃　　　╊━　[@GeneratedValue 코드보기.md](./스프링 Spring/JPA/@GeneratedValue 코드보기.md)</br>
 ┃　　　┃　　　╊━　[Cascade.md](./스프링 Spring/JPA/Cascade.md)</br>
+┃　　　┃　　　╊━　[GenerateValue Column에 값을 넣는다면.md](./스프링 Spring/JPA/GenerateValue Column에 값을 넣는다면.md)</br>
 ┃　　　┃　　　╊━　[Hibernate dialect.md](./스프링 Spring/JPA/Hibernate dialect.md)</br>
 ┃　　　┃　　　╊━　[Hibernate 쿼리실행순서.md](./스프링 Spring/JPA/Hibernate 쿼리실행순서.md)</br>
 ┃　　　┃　　　╊━　[Id로 연관관계 객체 저장.md](./스프링 Spring/JPA/Id로 연관관계 객체 저장.md)</br>
@@ -385,7 +390,8 @@ avg_file_length  : 2335
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　╊━　[선형회귀.md](./인공지능/선형회귀.md)</br>
 ┃　　　┗━　[퍼셉트론.md](./인공지능/퍼셉트론.md)</br>
-┗━　[README.md](./README.md)</br>
+╊━　[README.md](./README.md)</br>
+┗━　[XXn8C0h8](./XXn8C0h8)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
