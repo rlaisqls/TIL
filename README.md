@@ -390,8 +390,7 @@ avg_file_length  : 2380
 ┃　　　╊━　[경사하강법.md](./인공지능/경사하강법.md)</br>
 ┃　　　╊━　[선형회귀.md](./인공지능/선형회귀.md)</br>
 ┃　　　┗━　[퍼셉트론.md](./인공지능/퍼셉트론.md)</br>
-╊━　[README.md](./README.md)</br>
-┗━　[XXn8C0h8](./XXn8C0h8)</br>
+┗━　[README.md](./README.md)</br>
 .
 ╊━　[debug.log](./debug.log)</br>
 ╊━　[pre━commit](./pre━commit)</br>
