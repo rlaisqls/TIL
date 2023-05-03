@@ -30,19 +30,32 @@ public Authors findAuthorsByFullName(String fullName) { ... }
 
 This method-level annotation should be used <u>when you want to update (put) the cache without avoiding the method from being executed</u>. This means that the method will always be executed — according to the `@CachePut` options — and its result will be stored in the cache.
 
-The main difference between @Cacheable and @CachePut is that the first might avoid executing the method, while the second will run the method and put its results in the cache, even if there is already an existing key associated with the given parameters. Since they have different behaviors, annotating the same method with both @CachePut and @Cacheable should be avoided.
+The main difference between `@Cacheable` and `@CachePut` is that the first might avoid executing the method, while the second will run the method and put its results in the cache, even if there is already an existing key associated with the given parameters. Since they have different behaviors, annotating the same method with both `@CachePut` and `@Cacheable` should be avoided.
 
 ## @CacheEvict
 
-This method-level annotation allows you to remove (evict) data previously stored in the cache. By annotating a method with @CacheEvict you can specify the removal of one or all values so that fresh values can be loaded into the cache again. If you want to remove a specific value, you should pass the cache key as an argument to the annotation, as in the following example:
+This method-level annotation allows you to remove (evict) data previously stored in the cache. By annotating a method with `@CacheEvict` you can specify the removal of one or all values so that fresh values can be loaded into the cache again. If you want to remove a specific value, you should pass the cache key as an argument to the annotation, as in the following example:
 
+```java
 @CacheEvict(value="authors", key="#authorId")
 public void evictSingleAuthor(Int authorId) { ... }
+```
+
 While if you want to clear an entire cache you can the parameter allEntries in conjunction with the name of cache to be cleared:
 
+```java
 @CacheEvict(value="authors", allEntries=true)
 public String evictAllAuthorsCached() { ... }
-This annotation is extremely important because size is the main problem of caches. A possible solution to this problem is to compress data before caching, as explained here. On the other hand, the best approach should be to avoid keeping data that you are not using too often in the caches. In fact, since caches can become large very quickly, you should update stale data with @CachePut and remove unused data with @CacheEvict. In particular, having a method to clean all the caches of your Spring Boot application easily can become essential. If you are interested in implementing an API aimed at this, you can follow this tutorial.
+```
+
+`@CacheEvict` is extremely important because size is the main problem of caches.
+
+A possible solution to this problem is to compress data before caching, as explained here. On the other hand, the best approach should be to avoid keeping data that you are not using too often in the caches. In fact, since caches can become large very quickly, you should update stale data with @CachePut and remove unused data with `@CacheEvict`.` 
+
+In particular, having a method to clean all the caches of your Spring Boot application easily can become essential. It can be called in type of method like this :
+
+- when the data changes
+- When you want to periodically empty the cache
 
 ## @CacheConfig
 This class-level annotation allows you to specify some of the cache configurations in one place, so you do not have to repeat them multiple times:
