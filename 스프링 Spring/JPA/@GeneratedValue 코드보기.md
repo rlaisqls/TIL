@@ -1,3 +1,5 @@
+# @GeneratedValue 코드보기
+
 GeneratedValue는 jakarta에 정의되어있고, Id에 새로운 값을 자동으로 생성해줄 전략을 지정하기 위한 어노테이션이다.
 
 ```java
@@ -459,7 +461,7 @@ public class SimpleValue implements KeyValue {
 원래 String으로 저장되어있던 설정 정보가 `createIdentifierGenerator`에서 클래스 참조로 바뀐다. `IdentifierGenerator`를 상속받아서 구현한 경우, 저 안에서 스캔되어서 들어간다고 생각하면 된다.
 
 <details>
-<summary>`IdentigierGenerator` 코드 보기</summary>
+<summary>`IdentifierGenerator` 코드 보기</summary>
 
 ```java
 /**
