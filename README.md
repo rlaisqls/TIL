@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 316
+files            : 320
 derectories      : 70
-avg_file_length  : 2380
+avg_file_length  : 2374
 ```
 
 ./TIL</br>
@@ -379,6 +379,7 @@ avg_file_length  : 2380
 ┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
 ┃　　　┗━　[TAS](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
+┃　　　┗━　[교착상태](./운영체제 Operating System/교착상태.md)</br>
 ┃　　　┗━　[생산자━소비자 문제](./운영체제 Operating System/생산자━소비자 문제.md)</br>
 ┃　　　┗━　[운영체제 유형](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
@@ -386,11 +387,15 @@ avg_file_length  : 2380
 ┃　　　┗━　[프로세스의 개념](./운영체제 Operating System/프로세스의 개념.md)</br>
 ┃　　　┗━　[프로세스의 관리](./운영체제 Operating System/프로세스의 관리.md)</br>
 ┗━　[📁　인공지능](./인공지능)</br>
+┃　　　┗━　[Keras](./인공지능/Keras.md)</br>
 ┃　　　┗━　[Optimizer](./인공지능/Optimizer.md)</br>
 ┃　　　┗━　[경사하강법](./인공지능/경사하강법.md)</br>
+┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능/배, 자동차, 비행기 분류하기.md)</br>
 ┃　　　┗━　[선형회귀](./인공지능/선형회귀.md)</br>
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
+┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XXnZQOtD](./XXnZQOtD)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
