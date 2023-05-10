@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 321
+files            : 322
 derectories      : 70
-avg_file_length  : 2378
+avg_file_length  : 2387
 ```
 
 ./TIL</br>
@@ -228,11 +228,12 @@ avg_file_length  : 2378
 ┃　　　┃　　　┃　　　┗━　[TransactionAttributeSource](./스프링 Spring/AOP/트랜잭션/TransactionAttributeSource.md)</br>
 ┃　　　┃　　　┃　　　┗━　[트랜잭션](./스프링 Spring/AOP/트랜잭션/트랜잭션.md)</br>
 ┃　　　┃　　　┃　　　┗━　[트랜잭션 전파](./스프링 Spring/AOP/트랜잭션/트랜잭션 전파.md)</br>
-┃　　　┃　　　┗━　[AOP](./스프링 Spring/AOP/AOP.md)</br>
 ┃　　　┃　　　┗━　[AdviceAnnotation](./스프링 Spring/AOP/AdviceAnnotation.md)</br>
 ┃　　　┃　　　┗━　[Aspectj](./스프링 Spring/AOP/Aspectj.md)</br>
 ┃　　　┃　　　┗━　[Pointcut](./스프링 Spring/AOP/Pointcut.md)</br>
 ┃　　　┃　　　┗━　[ProxyFactoryBean](./스프링 Spring/AOP/ProxyFactoryBean.md)</br>
+┃　　　┃　　　┗━　[Spring AOP](./스프링 Spring/AOP/Spring AOP.md)</br>
+┃　　　┃　　　┗━　[Spring에서 aspectj weaving사용하기](./스프링 Spring/AOP/Spring에서 aspectj weaving사용하기.md)</br>
 ┃　　　┗━　[📁　Event](./스프링 Spring/Event)</br>
 ┃　　　┃　　　┗━　[@TransactionalEventListener](./스프링 Spring/Event/@TransactionalEventListener.md)</br>
 ┃　　　┃　　　┗━　[ApplicationEventPublisher](./스프링 Spring/Event/ApplicationEventPublisher.md)</br>
