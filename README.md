@@ -3,7 +3,7 @@
 ```
 files            : 320
 derectories      : 70
-avg_file_length  : 2374
+avg_file_length  : 2373
 ```
 
 ./TIL</br>
