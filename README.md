@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 320
+files            : 321
 derectories      : 70
-avg_file_length  : 2373
+avg_file_length  : 2378
 ```
 
 ./TIL</br>
@@ -230,6 +230,7 @@ avg_file_length  : 2373
 ┃　　　┃　　　┃　　　┗━　[트랜잭션 전파](./스프링 Spring/AOP/트랜잭션/트랜잭션 전파.md)</br>
 ┃　　　┃　　　┗━　[AOP](./스프링 Spring/AOP/AOP.md)</br>
 ┃　　　┃　　　┗━　[AdviceAnnotation](./스프링 Spring/AOP/AdviceAnnotation.md)</br>
+┃　　　┃　　　┗━　[Aspectj](./스프링 Spring/AOP/Aspectj.md)</br>
 ┃　　　┃　　　┗━　[Pointcut](./스프링 Spring/AOP/Pointcut.md)</br>
 ┃　　　┃　　　┗━　[ProxyFactoryBean](./스프링 Spring/AOP/ProxyFactoryBean.md)</br>
 ┃　　　┗━　[📁　Event](./스프링 Spring/Event)</br>
