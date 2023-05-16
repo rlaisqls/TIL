@@ -3,7 +3,7 @@
 ```
 files            : 323
 derectories      : 70
-avg_file_length  : 2439
+avg_file_length  : 2442
 ```
 
 ./TIL</br>
@@ -382,7 +382,7 @@ avg_file_length  : 2439
 ┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
 ┃　　　┗━　[TAS](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
-┃　　　┗━　[교착상태](./운영체제 Operating System/교착상태.md)</br>
+┃　　　┗━　[교착상태와 스케줄링](./운영체제 Operating System/교착상태와 스케줄링.md)</br>
 ┃　　　┗━　[생산자━소비자 문제](./운영체제 Operating System/생산자━소비자 문제.md)</br>
 ┃　　　┗━　[운영체제 유형](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
