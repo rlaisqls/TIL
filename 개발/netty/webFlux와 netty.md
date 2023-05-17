@@ -24,6 +24,8 @@ netty는 channel에서 발생하는 이벤트를 EventLoop가 처리하는 구�
 
 Netty에서는 멀티 스레드 이벤트 루프의 단점인 발생 순서와 실행 순서가 일치하지 않는다는 문제를 아래와 같은 방법으로 해결한다.
 
+![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/8a3c4208-21a9-42a7-a159-f5433db3d6a2)
+
 - Netty의 이벤트는 Channel에서 발생한다.
 - 각각의 이벤트 루프 객체는 개인의 이벤트 큐를 가지고 있다.
 - Netty Channel은 하나의 이벤트 루프에 등록된다.
