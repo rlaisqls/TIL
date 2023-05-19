@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 332
+files            : 333
 derectories      : 72
-avg_file_length  : 2535
+avg_file_length  : 2571
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -40,14 +40,15 @@ avg_file_length  : 2535
 ┃　　　┃　　　┗━　[웹서버와 WAS](./개발/WAS/웹서버와 WAS.md)</br>
 ┃　　　┗━　[📁　netty](./개발/netty)</br>
 ┃　　　┃　　　┗━　[HashedWheelTimer](./개발/netty/HashedWheelTimer.md)</br>
-┃　　　┃　　　┗━　[netty coroutine에 대한 탐구](./개발/netty/netty coroutine에 대한 탐구.md)</br>
 ┃　　　┃　　　┗━　[netty server 예제](./개발/netty/netty server 예제.md)</br>
 ┃　　　┃　　　┗━　[netty 메시지 전송 흐름](./개발/netty/netty 메시지 전송 흐름.md)</br>
 ┃　　　┃　　　┗━　[netty의 thread 모델](./개발/netty/netty의 thread 모델.md)</br>
 ┃　　　┃　　　┗━　[webFlux와 netty](./개발/netty/webFlux와 netty.md)</br>
 ┃　　　┗━　[📁　비동기](./개발/비동기)</br>
 ┃　　　┃　　　┗━　[📁　coroutine](./개발/비동기/coroutine)</br>
+┃　　　┃　　　┃　　　┗━　[Channel](./개발/비동기/coroutine/Channel.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Coroutine CPS](./개발/비동기/coroutine/Coroutine CPS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Coroutine Delay](./개발/비동기/coroutine/Coroutine Delay.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Coroutine Dispatcher](./개발/비동기/coroutine/Coroutine Dispatcher.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Coroutine Scope, Context](./개발/비동기/coroutine/Coroutine Scope, Context.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Integration](./개발/비동기/coroutine/Integration.md)</br>
