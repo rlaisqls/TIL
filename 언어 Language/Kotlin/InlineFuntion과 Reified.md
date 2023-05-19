@@ -118,4 +118,47 @@ inline fun <reified T> doSomething(someValue: T) {
 
 inline keyword는 1~3줄 정도 길이의 함수에 사용하는 것이 효과적일 수 있다.
 
-특정 메소드를 인라인 방식에서 제외 하고 싶다면 noinline을 사용하자.
+## noinline
+
+인자 앞에 noinline 키워드를 붙이면 해당 인자는 inline에서 제외된다. 따라서 noinline 키워드가 붙은 인자는 다른 함수의 인자로 전달하는 것이 가능하다.
+
+```kotlin
+inline fun doSomething(action1: () -> Unit, noinline action2: () -> Unit) {
+    action1()
+    anotherFunc(action2)
+}
+
+fun anotherFunc(action: () -> Unit) {
+    action()
+}
+
+fun main() {
+    doSomething({
+        println("1")
+    }, {
+        println("2")
+    })
+}
+```
+
+
+## cross inline
+
+crossinline은 lambda 가 non-local return 을 허용하지 않아야 한다는 것을 이야기한다. inline 되는 higher order function 에서 lambda 를 소비하는 것이 아니라 다른 곳으로 전달할 때 마킹을 해준다.
+
+```kotlin
+inline fun foo(crossinline f: () -> Unit) {
+    /**
+     * 다른 고차함수에서 func를 호출시엔 crossinline 을 표시해주어야 함.
+     */
+    bar { f() }
+}
+
+fun bar(f: () -> Unit) {
+    f()
+}
+```
+ 
+예제를 보면 f lambda 는 바로 소비되지 않고, boo 로 한번 더 전달이 된다.
+
+전달이 되지 않는다면 inline 함수이기 때문에 non-local return 이 허용되지만, 한번 더 전달되므로 non-local return을 할 수 없게 되고, 이것을 명시적으로 알리기 위해(함수 사용자 & compiler) crossinline 으로 마킹해준다.
