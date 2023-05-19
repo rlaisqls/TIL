@@ -165,7 +165,7 @@ Unit 메서드 : Unit
     }
 ```
 
-```
+```kotlin
 //io.mockk.impl.instantiation.AnyValueGenerator
 open class AnyValueGenerator {
     open fun anyValue(cls: KClass<*>, isNullable: Boolean, orInstantiateVia: () -> Any?): Any? {

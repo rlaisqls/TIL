@@ -110,6 +110,7 @@ future.cancel(mayInterruptIfRunngin);
 장기 실행 작업은 실행 큐에 넣지 않아야 하며, 그렇지 않으면 동일한 스레드에서 다른 작업을 실행할 수 없게 된다. 블로킹 호출을 해야하거나 장기 실행 작업을 실행해야 하는 경우 전용 EventExecutor를 사용하느 것이 좋다.
 
 ###  EventLoop와 스레드 할당
+
 Channel에 이벤트와 입출력을 지원하는 EventLoop는 EventLoopGroup에 포함된다. EventLoop가 생성 및 할당되는 방법은 전송의 구현에 따라 다르다.
 
 - 비동기 전송

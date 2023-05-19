@@ -157,7 +157,7 @@ public class EchoHandler implements Handler {
 
 > Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers & clients. Netty is a NIO client server framework which enables quick and easy development of network applications such as protocol servers and clients. It greatly simplifies and streamlines network programming such as TCP and UDP socket server.
 
-Netty는 비동기식 이벤트 기반 네트워크 애플리케이션 프레임워크이다. Netty 자체로도 많이 사용하지만 고성능 네트워크 처리를 위해 Armeria를 포함해서 [정말 많은 프레임워크나 라이브러리](https://netty.io/wiki/related-projects.html)에서 사용되고 있다. 이와 같은 Netty도 기본적으로는 지금까지 살펴본 Java NIO의 Selector와 Reactor 패턴을 기반으로 구현돼 있다.
+Netty는 비동기식 이벤트 기반 네트워크 애플리케이션 프레임워크이다. Netty 자체로도 많이 사용하지만 고성능 네트워크 처리를 위해 [정말 많은 프레임워크나 라이브러리](https://netty.io/wiki/related-projects.html)에서 사용되고 있다. 이와 같은 Netty도 기본적으로는 지금까지 살펴본 Java NIO의 Selector와 Reactor 패턴을 기반으로 구현돼 있다.
 
 ### node.js
 

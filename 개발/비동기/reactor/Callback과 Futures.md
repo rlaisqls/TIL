@@ -87,7 +87,7 @@ userService.getFavorites(userId) // --(1)
 
 ## Future
 
-`Future`는 java8에서 CompletableFuture를 지원하기 시작하면서 사용성이 개선되었지만, 약간의 불편한 점이 여전히 있다.
+java8에서 CompletableFuture를 지원하기 시작하면서 `Future`의 사용성이 개선되었지만, 약간의 불편한 점이 여전히 있다.
 
 - `get()` 메서드를 호출하면 쉽게 blocking 된다.
 - lazy computation을 지원하지 않는다.
@@ -121,7 +121,8 @@ assertThat(results).contains(
 		"Name NameBart has stats 104",
 		"Name NameHenry has stats 105",
 		"Name NameNicole has stats 106",
-		"Name NameABSLAJNFOAJNFOANFANSF has stats 121");
+		"Name NameABSLAJNFOAJNFOANFANSF has stats 121"
+);
 ```
 
 1. id의 목록을 반환하는 `CompletableFuture`를 정의한다.
@@ -130,6 +131,8 @@ assertThat(results).contains(
 4. `CompletableFuture.allOf`에 array를 넣어서 모든 작업이 수행한 결과값인 Future를 반환하도록 해준다.
 5. 여기서 번거로운 부분이 하나 있는데, `allOf`는 `CompletableFuture<Void>`를 반환하기 때문에 우리는 `join()`을 사용해서 값을 다시 collecting하고 `thenApply` 해줘야한다.
 6. 전체 비동기 파이프라인이 trigger되면 우리는 그것이 processing 되길 기다리고, 그 값이 실제로 반환되면 assert해볼 수 있다.
+
+## reactor
 
 다음은 reactor를 사용해서 코드를 작성한 예시이다.
 
@@ -161,7 +164,7 @@ assertThat(results).containsExactly(
 3. 두 값을 합쳐서 결과값을 만든다.
 4. 실제 production 코드라면 `Flux`를 추가로 결합하거나 구독해서 사용했겠지만, 여기선 List를 `Mono`로 묶어서 `blocking`한 다음 테스트해주었다.
 
-마찬가지로 코드량이 훨씬 줄어들었고, 중요한 흐름이 더 잘 명시된다.
+코드량이 훨씬 줄어들었고, 중요한 흐름이 더 잘 명시된다.
 
 ## 결론
 

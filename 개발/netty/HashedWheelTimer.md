@@ -184,35 +184,88 @@ Based on explaination in front,
 
 - For every sec, we go the key for that second and hold the lock on the list and scan through the list, expire all the task which have counter 0 and decrease the counter of rest of the task tuples.
 
+It's wheel is maintain of inner class `HashedWheelBucket`'s array. `HashedWheelBucket` is a linked list of `HashedWheelTimeout` that contains information about each added timeout.
+
 ```java
-    /**
-     * Bucket that stores HashedWheelTimeouts. These are stored in a linked-list like datastructure to allow easy
-     * removal of HashedWheelTimeouts in the middle. Also the HashedWheelTimeout act as nodes themself and so no
-     * extra object creation is needed.
-     */
-    private static final class HashedWheelBucket {
-        // Used for the linked-list datastructure
-        private HashedWheelTimeout head;
-        private HashedWheelTimeout tail;
+    private static HashedWheelBucket[] createWheel(int ticksPerWheel) {
+        //ticksPerWheel may not be greater than 2^30
+        checkInRange(ticksPerWheel, 1, 1073741824, "ticksPerWheel");
 
-        /**
-         * Add {@link HashedWheelTimeout} to this bucket.
-         */
-        public void addTimeout(HashedWheelTimeout timeout) {
-            assert timeout.bucket == null;
-            timeout.bucket = this;
-            if (head == null) {
-                head = tail = timeout;
-            } else {
-                tail.next = timeout;
-                timeout.prev = tail;
-                tail = timeout;
-            }
+        ticksPerWheel = normalizeTicksPerWheel(ticksPerWheel);
+        HashedWheelBucket[] wheel = new HashedWheelBucket[ticksPerWheel];
+        for (int i = 0; i < wheel.length; i ++) {
+            wheel[i] = new HashedWheelBucket();
         }
+        return wheel;
+    }
+```
 
-        /**
-         * Expire all {@link HashedWheelTimeout}s for the given {@code deadline}.
-         */
+You can increase or decrease the accuracy of the execution timing by specifying smaller or larger tick duration in the constructor. In most network applications, I/O timeout does not need to be accurate. Therefore, the default tick duration is 100 milliseconds and you will not need to try different configurations in most cases.
+
+And **HashedWheelTimer creates a new thread whenever it is instantiated and started**. Therefore, you should make sure to create only one instance and share it across your application. One of the common mistakes, that makes your application unresponsive, is to create a new instance for every connection.
+
+```java
+    public HashedWheelTimer(
+            ThreadFactory threadFactory,
+            long tickDuration, TimeUnit unit, int ticksPerWheel, boolean leakDetection,
+            long maxPendingTimeouts, Executor taskExecutor) {
+        
+        ...
+        workerThread = threadFactory.newThread(worker);
+        ...
+    }
+```
+
+The generated worker thread acts as a timer by moving the cursor and checking each timeout.
+
+```java
+    private final class Worker implements Runnable {
+        ...
+       @Override
+        public void run() {
+            // Initialize the startTime.
+            startTime = System.nanoTime();
+            if (startTime == 0) {
+                // We use 0 as an indicator for the uninitialized value here, so make sure it's not 0 when initialized.
+                startTime = 1;
+            }
+
+            // Notify the other threads waiting for the initialization at start().
+            startTimeInitialized.countDown();
+
+            do {
+                final long deadline = waitForNextTick();
+                if (deadline > 0) {
+                    int idx = (int) (tick & mask);
+                    processCancelledTasks();
+                    HashedWheelBucket bucket =
+                            wheel[idx];
+                    transferTimeoutsToBuckets();
+                    bucket.expireTimeouts(deadline);
+                    tick++;
+                }
+            } while (WORKER_STATE_UPDATER.get(HashedWheelTimer.this) == WORKER_STATE_STARTED);
+
+            // Fill the unprocessedTimeouts so we can return them from stop() method.
+            for (HashedWheelBucket bucket: wheel) {
+                bucket.clearTimeouts(unprocessedTimeouts);
+            }
+            for (;;) {
+                HashedWheelTimeout timeout = timeouts.poll();
+                if (timeout == null) {
+                    break;
+                }
+                if (!timeout.isCancelled()) {
+                    unprocessedTimeouts.add(timeout);
+                }
+            }
+            processCancelledTasks();
+        }
+        ...
+    }
+```
+
+```java
         public void expireTimeouts(long deadline) {
             HashedWheelTimeout timeout = head;
 
@@ -236,78 +289,7 @@ Based on explaination in front,
                 timeout = next;
             }
         }
-
-        public HashedWheelTimeout remove(HashedWheelTimeout timeout) {
-            HashedWheelTimeout next = timeout.next;
-            // remove timeout that was either processed or cancelled by updating the linked-list
-            if (timeout.prev != null) {
-                timeout.prev.next = next;
-            }
-            if (timeout.next != null) {
-                timeout.next.prev = timeout.prev;
-            }
-
-            if (timeout == head) {
-                // if timeout is also the tail we need to adjust the entry too
-                if (timeout == tail) {
-                    tail = null;
-                    head = null;
-                } else {
-                    head = next;
-                }
-            } else if (timeout == tail) {
-                // if the timeout is the tail modify the tail to be the prev node.
-                tail = timeout.prev;
-            }
-            // null out prev, next and bucket to allow for GC.
-            timeout.prev = null;
-            timeout.next = null;
-            timeout.bucket = null;
-            timeout.timer.pendingTimeouts.decrementAndGet();
-            return next;
-        }
-
-        /**
-         * Clear this bucket and return all not expired / cancelled {@link Timeout}s.
-         */
-        public void clearTimeouts(Set<Timeout> set) {
-            for (;;) {
-                HashedWheelTimeout timeout = pollTimeout();
-                if (timeout == null) {
-                    return;
-                }
-                if (timeout.isExpired() || timeout.isCancelled()) {
-                    continue;
-                }
-                set.add(timeout);
-            }
-        }
-
-        private HashedWheelTimeout pollTimeout() {
-            HashedWheelTimeout head = this.head;
-            if (head == null) {
-                return null;
-            }
-            HashedWheelTimeout next = head.next;
-            if (next == null) {
-                tail = this.head =  null;
-            } else {
-                this.head = next;
-                next.prev = null;
-            }
-
-            // null out prev and next to allow for GC.
-            head.next = null;
-            head.prev = null;
-            head.bucket = null;
-            return head;
-        }
-    }
 ```
-
-You can increase or decrease the accuracy of the execution timing by specifying smaller or larger tick duration in the constructor. In most network applications, I/O timeout does not need to be accurate. Therefore, the default tick duration is 100 milliseconds and you will not need to try different configurations in most cases.
-
-**HashedWheelTimer creates a new thread whenever it is instantiated and started**. Therefore, you should make sure to create only one instance and share it across your application. One of the common mistakes, that makes your application unresponsive, is to create a new instance for every connection.
 
 ---
 reference

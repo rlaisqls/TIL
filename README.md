@@ -1,10 +1,14 @@
 # TIL
 
 ```
-files            : 326
-derectories      : 70
-avg_file_length  : 2436
+files            : 332
+derectories      : 72
+avg_file_length  : 2535
 ```
+
+1. 학습한 지식을 md 파일로 정리합니다. 
+2. 머릿속에 있는 막연한 개념을 글로 적어 구체화합니다.
+3. 이 repository에 기록된 지식을 완전히 이해하고 응용할 수 있도록 합니다.
 
 ./TIL</br>
 ┗━　[📁　Git](./Git)</br>
@@ -42,6 +46,12 @@ avg_file_length  : 2436
 ┃　　　┃　　　┗━　[netty의 thread 모델](./개발/netty/netty의 thread 모델.md)</br>
 ┃　　　┃　　　┗━　[webFlux와 netty](./개발/netty/webFlux와 netty.md)</br>
 ┃　　　┗━　[📁　비동기](./개발/비동기)</br>
+┃　　　┃　　　┗━　[📁　coroutine](./개발/비동기/coroutine)</br>
+┃　　　┃　　　┃　　　┗━　[Coroutine CPS](./개발/비동기/coroutine/Coroutine CPS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Coroutine Dispatcher](./개발/비동기/coroutine/Coroutine Dispatcher.md)</br>
+┃　　　┃　　　┃　　　┗━　[Coroutine Scope, Context](./개발/비동기/coroutine/Coroutine Scope, Context.md)</br>
+┃　　　┃　　　┃　　　┗━　[Integration](./개발/비동기/coroutine/Integration.md)</br>
+┃　　　┃　　　┃　　　┗━　[코루틴](./개발/비동기/coroutine/코루틴.md)</br>
 ┃　　　┃　　　┗━　[📁　reactor](./개발/비동기/reactor)</br>
 ┃　　　┃　　　┃　　　┗━　[Callback과 Futures](./개발/비동기/reactor/Callback과 Futures.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Reactor　Pattern과 event loop](./개발/비동기/reactor/Reactor　Pattern과 event loop.md)</br>
@@ -51,7 +61,6 @@ avg_file_length  : 2436
 ┃　　　┃　　　┗━　[Flow](./개발/비동기/Flow.md)</br>
 ┃　　　┃　　　┗━　[cold stream과 hot stream](./개발/비동기/cold stream과 hot stream.md)</br>
 ┃　　　┃　　　┗━　[netty 사례연구](./개발/비동기/netty 사례연구.md)</br>
-┃　　　┃　　　┗━　[코루틴](./개발/비동기/코루틴.md)</br>
 ┃　　　┗━　[📁　암호화](./개발/암호화)</br>
 ┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
 ┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
@@ -393,14 +402,18 @@ avg_file_length  : 2436
 ┃　　　┗━　[프로세스의 개념](./운영체제 Operating System/프로세스의 개념.md)</br>
 ┃　　　┗━　[프로세스의 관리](./운영체제 Operating System/프로세스의 관리.md)</br>
 ┗━　[📁　인공지능](./인공지능)</br>
+┃　　　┗━　[📁　실습](./인공지능/실습)</br>
+┃　　　┃　　　┗━　[MNIST 숫자 판별](./인공지능/실습/MNIST 숫자 판별.md)</br>
+┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능/실습/배, 자동차, 비행기 분류하기.md)</br>
+┃　　　┗━　[DropOut](./인공지능/DropOut.md)</br>
 ┃　　　┗━　[Keras](./인공지능/Keras.md)</br>
 ┃　　　┗━　[Optimizer](./인공지능/Optimizer.md)</br>
 ┃　　　┗━　[경사하강법](./인공지능/경사하강법.md)</br>
-┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능/배, 자동차, 비행기 분류하기.md)</br>
 ┃　　　┗━　[선형회귀](./인공지능/선형회귀.md)</br>
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XXHN7VB5](./XXHN7VB5)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
