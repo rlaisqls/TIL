@@ -83,7 +83,11 @@ public suspend inline fun <T> suspendCoroutine(crossinline block: (Continuation<
 }
 ```
 
-Inside of it is just regular lambda that doesn't have a suspend modifier. so it is kind of reverse separation to coroutine builder. so when you launch a croutine by regular function and you want turn into suspending lambda, can use this.
+Inside of it is just regular lambda that doesn't have a suspend modifier. so it is kind of reverse separation to coroutine builder. It takes a lambda with a `Continuation` parameter as an argument. The function uses this `Continuation` object to suspend the current coroutine until the callback is called. Once this happens, the `Continuation` object resumes the coroutine and passes the result of the callback back to the calling code.
+
+**By definition, a call to any suspend function may yield control to other coroutines** within the same [coroutine dispatcher](./Coroutine%E2%80%85Dispatcher.md). So this is exactly what happens with the function that we’ve just constructed with the help of the `suspendCoroutine()` call.
+
+The `suspendCancellableCoroutine()` works similarly to the `suspendCoroutine()`, with the difference being that it uses a CancellableContinuation, and the produced function will react if the coroutine it runs in is canceled.
 
 This atually inspired by the operator that named call with current continuation in the Lisp FEM language called scheme.
 

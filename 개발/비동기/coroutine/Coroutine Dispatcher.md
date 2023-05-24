@@ -378,3 +378,4 @@ reference
 - https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html
 - https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-dispatcher/
 - https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide
+- https://medium.com/@lucianoalmeida1/an-overview-on-kotlin-coroutines-d55e123e137b
