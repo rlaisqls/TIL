@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 333
-derectories      : 72
-avg_file_length  : 2571
+files            : 336
+derectories      : 73
+avg_file_length  : 2569
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -46,6 +46,8 @@ avg_file_length  : 2571
 ┃　　　┃　　　┗━　[webFlux와 netty](./개발/netty/webFlux와 netty.md)</br>
 ┃　　　┗━　[📁　비동기](./개발/비동기)</br>
 ┃　　　┃　　　┗━　[📁　coroutine](./개발/비동기/coroutine)</br>
+┃　　　┃　　　┃　　　┗━　[📁　thread](./개발/비동기/coroutine/thread)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[공유객체 스레드 동기화](./개발/비동기/coroutine/thread/공유객체 스레드 동기화.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Channel](./개발/비동기/coroutine/Channel.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Coroutine CPS](./개발/비동기/coroutine/Coroutine CPS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Coroutine Delay](./개발/비동기/coroutine/Coroutine Delay.md)</br>
@@ -57,7 +59,6 @@ avg_file_length  : 2571
 ┃　　　┃　　　┃　　　┗━　[Callback과 Futures](./개발/비동기/reactor/Callback과 Futures.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Reactor　Pattern과 event loop](./개발/비동기/reactor/Reactor　Pattern과 event loop.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Reactor](./개발/비동기/reactor/Reactor.md)</br>
-┃　　　┃　　　┃　　　┗━　[coroutine and reactor](./개발/비동기/reactor/coroutine and reactor.md)</br>
 ┃　　　┃　　　┗━　[Coroutine vs Reactor](./개발/비동기/Coroutine vs Reactor.md)</br>
 ┃　　　┃　　　┗━　[Flow](./개발/비동기/Flow.md)</br>
 ┃　　　┃　　　┗━　[cold stream과 hot stream](./개발/비동기/cold stream과 hot stream.md)</br>
@@ -66,8 +67,10 @@ avg_file_length  : 2571
 ┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
 ┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
 ┃　　　┃　　　┗━　[DB 암호화](./개발/암호화/DB 암호화.md)</br>
+┃　　　┗━　[Artillery](./개발/Artillery.md)</br>
 ┃　　　┗━　[CustomAnnotation](./개발/CustomAnnotation.md)</br>
-┃　　　┗━　[mermaid 문법](./개발/mermaid 문법.md)</br>
+┃　　　┗━　[Intellij Profiling tools](./개발/Intellij Profiling tools.md)</br>
+┃　　　┗━　[mermaid 문법](./개발/mermaid 문법.md)</br>
 ┃　　　┗━　[project](./개발/project.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID](./개발/직렬화 serialVersionUID.md)</br>
 ┗━　[📁　객체지향 OOP](./객체지향 OOP)</br>
@@ -351,6 +354,7 @@ avg_file_length  : 2571
 ┃　　　┃　　　┃　　　┗━　[Runtime Data Area](./언어 Language/JAVA/JVM/Runtime Data Area.md)</br>
 ┃　　　┃　　　┃　　　┗━　[메모리누수](./언어 Language/JAVA/JVM/메모리누수.md)</br>
 ┃　　　┃　　　┗━　[📁　Thread](./언어 Language/JAVA/Thread)</br>
+┃　　　┃　　　┃　　　┗━　[@Volatile](./언어 Language/JAVA/Thread/@Volatile.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Thread 상태](./언어 Language/JAVA/Thread/Thread 상태.md)</br>
 ┃　　　┃　　　┃　　　┗━　[wait()과　notifyAll()](./언어 Language/JAVA/Thread/wait()과　notifyAll().md)</br>
 ┃　　　┃　　　┗━　[Inner static class](./언어 Language/JAVA/Inner static class.md)</br>
@@ -414,6 +418,7 @@ avg_file_length  : 2571
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XXM7JgPr](./XXM7JgPr)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
