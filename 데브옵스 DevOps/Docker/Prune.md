@@ -15,19 +15,19 @@ docker container prune
 `--filter` 옵션으로 특정 오브젝트만 삭제할 수도 있다.
 
 ```
-# 중지된 지 1시간 이상 지난 이미지만 삭제
+# 중지된 지 1시간 이상 지난 컨테이너만 삭제
 docker container prune --filter until=1h
 
-# env 키가 있는 이미지
+# env 키가 있는 컨테이너
 docker container prune --filter label=env
 
-# env 키가 없는 이미지
+# env 키가 없는 컨테이너
 docker container prune --filter label!=env
 
-# env 키의 값이 development인 이미지
+# env 키의 값이 development인 컨테이너
 docker container prune --filter label=env=development
 
-# env 키의 값이 production이 아닌 이미지
+# env 키의 값이 production이 아닌 컨테이너
 docker container prune --filter label!=env=production
 ```
 

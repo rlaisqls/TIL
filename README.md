@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 336
+files            : 337
 derectories      : 73
-avg_file_length  : 2569
+avg_file_length  : 2563
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -352,6 +352,7 @@ avg_file_length  : 2569
 ┃　　　┃　　　┃　　　┗━　[Java Bytecode](./언어 Language/JAVA/JVM/Java Bytecode.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Permanent to Metaspace](./언어 Language/JAVA/JVM/Permanent to Metaspace.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Runtime Data Area](./언어 Language/JAVA/JVM/Runtime Data Area.md)</br>
+┃　　　┃　　　┃　　　┗━　[TLAB과 PLAB](./언어 Language/JAVA/JVM/TLAB과 PLAB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[메모리누수](./언어 Language/JAVA/JVM/메모리누수.md)</br>
 ┃　　　┃　　　┗━　[📁　Thread](./언어 Language/JAVA/Thread)</br>
 ┃　　　┃　　　┃　　　┗━　[@Volatile](./언어 Language/JAVA/Thread/@Volatile.md)</br>
