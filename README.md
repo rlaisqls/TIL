@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 339
+files            : 342
 derectories      : 74
-avg_file_length  : 2582
+avg_file_length  : 2580
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -129,6 +129,7 @@ avg_file_length  : 2582
 ┃　　　┃　　　┗━　[Encryption context](./데브옵스 DevOps/AWS/Encryption context.md)</br>
 ┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/KMS.md)</br>
 ┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/KMS Datakey.md)</br>
+┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/VPC.md)</br>
 ┃　　　┗━　[📁　Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　┗━　[ContainerRuntime](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
@@ -177,6 +178,7 @@ avg_file_length  : 2582
 ┃　　　┃　　　　　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
 ┃　　　┃　　　　　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
 ┃　　　┗━　[📁　nginx](./데브옵스 DevOps/nginx)</br>
+┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/nginx/location block.md)</br>
 ┃　　　┃　　　┗━　[nginx certbot](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
 ┃　　　┃　　　┗━　[nginx docker](./데브옵스 DevOps/nginx/nginx docker.md)</br>
 ┃　　　┃　　　┗━　[nginx 명령어](./데브옵스 DevOps/nginx/nginx 명령어.md)</br>
@@ -202,6 +204,7 @@ avg_file_length  : 2582
 ┃　　　┃　　　┗━　[메시지큐](./데이터베이스 DataBase/MQ/메시지큐.md)</br>
 ┃　　　┗━　[📁　NoSQL](./데이터베이스 DataBase/NoSQL)</br>
 ┃　　　┃　　　┗━　[📁　MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB)</br>
+┃　　　┃　　　┃　　　┗━　[BinData](./데이터베이스 DataBase/NoSQL/MongoDB/BinData.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Homebrew로 MongoDB설치하기](./데이터베이스 DataBase/NoSQL/MongoDB/Homebrew로 MongoDB설치하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MongoDB Document로 POJO 상속받기](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB Document로 POJO 상속받기.md)</br>
@@ -422,6 +425,7 @@ avg_file_length  : 2582
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XX87eqBu](./XX87eqBu)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
