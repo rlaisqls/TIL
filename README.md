@@ -3,7 +3,7 @@
 ```
 files            : 342
 derectories      : 74
-avg_file_length  : 2590
+avg_file_length  : 2593
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -425,7 +425,6 @@ avg_file_length  : 2590
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[📁　XXmp7Y91](./XXmp7Y91)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
