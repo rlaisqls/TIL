@@ -3,7 +3,7 @@
 ```
 files            : 342
 derectories      : 74
-avg_file_length  : 2580
+avg_file_length  : 2590
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -126,9 +126,9 @@ avg_file_length  : 2580
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
 ┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/EBS.md)</br>
-┃　　　┃　　　┗━　[Encryption context](./데브옵스 DevOps/AWS/Encryption context.md)</br>
 ┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/KMS.md)</br>
 ┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/KMS Datakey.md)</br>
+┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
 ┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/VPC.md)</br>
 ┃　　　┗━　[📁　Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI.md)</br>
@@ -425,6 +425,7 @@ avg_file_length  : 2580
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XXmp7Y91](./XXmp7Y91)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
