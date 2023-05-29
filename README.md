@@ -3,7 +3,7 @@
 ```
 files            : 342
 derectories      : 74
-avg_file_length  : 2593
+avg_file_length  : 2596
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
