@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 342
+files            : 347
 derectories      : 74
-avg_file_length  : 2596
+avg_file_length  : 2674
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -125,11 +125,15 @@ avg_file_length  : 2596
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
+┃　　　┃　　　┗━　[AWS and cloud computing](./데브옵스 DevOps/AWS/AWS and cloud computing.md)</br>
 ┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/EBS.md)</br>
+┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/IAM.md)</br>
 ┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/KMS.md)</br>
 ┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/KMS Datakey.md)</br>
 ┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
+┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/S3.md)</br>
 ┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/VPC.md)</br>
+┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
 ┃　　　┗━　[📁　Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　┗━　[ContainerRuntime](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
@@ -365,6 +369,7 @@ avg_file_length  : 2596
 ┃　　　┃　　　┃　　　┗━　[Thread 상태](./언어 Language/JAVA/Thread/Thread 상태.md)</br>
 ┃　　　┃　　　┃　　　┗━　[wait()과　notifyAll()](./언어 Language/JAVA/Thread/wait()과　notifyAll().md)</br>
 ┃　　　┃　　　┗━　[Inner static class](./언어 Language/JAVA/Inner static class.md)</br>
+┃　　　┃　　　┗━　[JAR과 WAR](./언어 Language/JAVA/JAR과 WAR.md)</br>
 ┃　　　┃　　　┗━　[JAVA](./언어 Language/JAVA/JAVA.md)</br>
 ┃　　　┃　　　┗━　[JDKProxy와 CGLibProxy](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
 ┃　　　┃　　　┗━　[record](./언어 Language/JAVA/record.md)</br>
@@ -425,6 +430,7 @@ avg_file_length  : 2596
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XXlLhX0m](./XXlLhX0m)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
