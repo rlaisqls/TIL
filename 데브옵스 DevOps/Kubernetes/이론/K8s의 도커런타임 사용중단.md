@@ -4,7 +4,7 @@
 
 Source : https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/
 
-쿠버네티스 는 버전 v1.20 이후 Docker를 컨테이너 런타임으로거의 사용을 중지하겠다고 알렸다.(`2020.12.02`)
+쿠버네티스는 버전 v1.20 이후 Docker를 컨테이너 런타임으로서 사용하지 않겠다고 알렸다.(`2020.12.02`)
 
 GKE 및 EKS 등의 관리 Kubernetes 서비스를 사용하는 경우 오퍼레이터에서 지원되는 버전의 런타임을 사용하는 것을 확인하고 쿠버네티스 릴리스에서 도커 지원이 만료되기 전에 변경 해야한다.
 
@@ -12,7 +12,7 @@ GKE 및 EKS 등의 관리 Kubernetes 서비스를 사용하는 경우 오퍼레�
 
 > Deprecation<br/>Docker support in the kubelet is now deprecated and will be removed in a future release. The kubelet uses a module called “dockershim” which implements CRI support for Docker and it has seen maintenance issues in the Kubernetes community. We encourage you to evaluate moving to a container runtime that is a full-fledged implementation of CRI (v1alpha1 or v1 compliant) as they become available. (#94624, @dims) [SIG Node]
 
-쿠버네티스는 컨테이너 런타임과 통신 할 때 CRI라는 표준 인터페이스 API 를 사용하지만 Docker는 이를 지원하지 않는다.
+쿠버네티스는 컨테이너 런타임과 통신 할 때 CRI라는 표준 인터페이스 API를 사용하지만 Docker는 이를 지원하지 않는다.
 
 이런 이유로 쿠버네티스는 “dockershim”라는 브리지용 서비스로 Docker API와 CRI의 변환을 해주었으나, 이것이 deprecation 되면서 앞으로 마이너 릴리스 된 후에 도커가 삭제될 예정이다. 라는 뜻의 글이다.
 
