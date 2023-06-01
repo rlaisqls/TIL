@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 347
-derectories      : 74
-avg_file_length  : 2674
+files            : 353
+derectories      : 77
+avg_file_length  : 2749
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -125,14 +125,22 @@ avg_file_length  : 2674
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
+┃　　　┃　　　┗━　[📁　Netwok](./데브옵스 DevOps/AWS/Netwok)</br>
+┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwok/ENI.md)</br>
+┃　　　┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Netwok/Region과 Zone.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwok/VPC.md)</br>
+┃　　　┃　　　┗━　[📁　Security](./데브옵스 DevOps/AWS/Security)</br>
+┃　　　┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/Security/IAM.md)</br>
+┃　　　┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/Security/KMS.md)</br>
+┃　　　┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/Security/KMS Datakey.md)</br>
+┃　　　┃　　　┗━　[📁　Storage](./데브옵스 DevOps/AWS/Storage)</br>
+┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Storage/EBS.md)</br>
+┃　　　┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/Storage/S3.md)</br>
+┃　　　┃　　　┃　　　┗━　[Snowball](./데브옵스 DevOps/AWS/Storage/Snowball.md)</br>
 ┃　　　┃　　　┗━　[AWS and cloud computing](./데브옵스 DevOps/AWS/AWS and cloud computing.md)</br>
-┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/EBS.md)</br>
-┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/IAM.md)</br>
-┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/KMS.md)</br>
-┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/KMS Datakey.md)</br>
-┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
-┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/S3.md)</br>
-┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/VPC.md)</br>
+┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/CloudFront.md)</br>
+┃　　　┃　　　┗━　[EC2](./데브옵스 DevOps/AWS/EC2.md)</br>
+┃　　　┃　　　┗━　[Storage Gateway](./데브옵스 DevOps/AWS/Storage Gateway.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
 ┃　　　┗━　[📁　Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI.md)</br>
@@ -189,6 +197,7 @@ avg_file_length  : 2674
 ┃　　　┃　　　┗━　[nginx 설정](./데브옵스 DevOps/nginx/nginx 설정.md)</br>
 ┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
+┃　　　┗━　[GPG](./데브옵스 DevOps/GPG.md)</br>
 ┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[데브옵스](./데브옵스 DevOps/데브옵스.md)</br>
 ┗━　[📁　데이터베이스 DataBase](./데이터베이스 DataBase)</br>
@@ -430,6 +439,7 @@ avg_file_length  : 2674
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XXGMpyvo](./XXGMpyvo)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
