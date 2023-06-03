@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 353
-derectories      : 77
-avg_file_length  : 2749
+files            : 362
+derectories      : 80
+avg_file_length  : 2860
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -123,8 +123,13 @@ avg_file_length  : 2749
 ┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/TLS 인증서 발급 절차를 이해해보자.md)</br>
 ┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
+┃　　　┗━　[서브넷](./네트워크 Network/서브넷.md)</br>
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
+┃　　　┃　　　┗━　[📁　Database](./데브옵스 DevOps/AWS/Database)</br>
+┃　　　┃　　　┃　　　┗━　[RDS](./데브옵스 DevOps/AWS/Database/RDS.md)</br>
+┃　　　┃　　　┗━　[📁　Monitoring](./데브옵스 DevOps/AWS/Monitoring)</br>
+┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Monitoring/CloudWatch.md)</br>
 ┃　　　┃　　　┗━　[📁　Netwok](./데브옵스 DevOps/AWS/Netwok)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwok/ENI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Netwok/Region과 Zone.md)</br>
@@ -133,6 +138,9 @@ avg_file_length  : 2749
 ┃　　　┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/Security/IAM.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/Security/KMS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/Security/KMS Datakey.md)</br>
+┃　　　┃　　　┃　　　┗━　[NACLs](./데브옵스 DevOps/AWS/Security/NACLs.md)</br>
+┃　　　┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Security/Security Groups.md)</br>
+┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Security/WAF.md)</br>
 ┃　　　┃　　　┗━　[📁　Storage](./데브옵스 DevOps/AWS/Storage)</br>
 ┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Storage/EBS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/Storage/S3.md)</br>
@@ -158,6 +166,9 @@ avg_file_length  : 2749
 ┃　　　┃　　　┗━　[도커 명령어](./데브옵스 DevOps/Docker/도커 명령어.md)</br>
 ┃　　　┃　　　┗━　[도커 스토리지](./데브옵스 DevOps/Docker/도커 스토리지.md)</br>
 ┃　　　┃　　　┗━　[도커 아키텍처](./데브옵스 DevOps/Docker/도커 아키텍처.md)</br>
+┃　　　┗━　[📁　IaC](./데브옵스 DevOps/IaC)</br>
+┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform.md)</br>
+┃　　　┃　　　┗━　[Terraform with AWS](./데브옵스 DevOps/IaC/Terraform with AWS.md)</br>
 ┃　　　┗━　[📁　Kubernetes](./데브옵스 DevOps/Kubernetes)</br>
 ┃　　　┃　　　┗━　[📁　ArgoCD](./데브옵스 DevOps/Kubernetes/ArgoCD)</br>
 ┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
@@ -189,6 +200,14 @@ avg_file_length  : 2749
 ┃　　　┃　　　　　　　┗━　[datadog APM기능 사용하기](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
 ┃　　　┃　　　　　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
 ┃　　　┃　　　　　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
+┃　　　┗━　[📁　linux](./데브옵스 DevOps/linux)</br>
+┃　　　┃　　　┗━　[LVM](./데브옵스 DevOps/linux/LVM.md)</br>
+┃　　　┃　　　┗━　[Swap메모리](./데브옵스 DevOps/linux/Swap메모리.md)</br>
+┃　　　┃　　　┗━　[bash_profile과 bashrc](./데브옵스 DevOps/linux/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　┗━　[namespace와 cgroup](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　┗━　[network namespaces](./데브옵스 DevOps/linux/network namespaces.md)</br>
+┃　　　┃　　　┗━　[zshrc](./데브옵스 DevOps/linux/zshrc.md)</br>
+┃　　　┃　　　┗━　[환경변수와 프로세스](./데브옵스 DevOps/linux/환경변수와 프로세스.md)</br>
 ┃　　　┗━　[📁　nginx](./데브옵스 DevOps/nginx)</br>
 ┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/nginx/location block.md)</br>
 ┃　　　┃　　　┗━　[nginx certbot](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
@@ -411,13 +430,6 @@ avg_file_length  : 2749
 ┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ┗━　[📁　운영체제 Operating System](./운영체제 Operating System)</br>
-┃　　　┗━　[📁　linux](./운영체제 Operating System/linux)</br>
-┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/Swap메모리.md)</br>
-┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/namespace와 cgroup.md)</br>
-┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network namespaces.md)</br>
-┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/zshrc.md)</br>
-┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
 ┃　　　┗━　[TAS](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[교착상태와 스케줄링](./운영체제 Operating System/교착상태와 스케줄링.md)</br>
@@ -439,6 +451,7 @@ avg_file_length  : 2749
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XXcyNLou](./XXcyNLou)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
