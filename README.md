@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 362
+files            : 370
 derectories      : 80
-avg_file_length  : 2860
+avg_file_length  : 2881
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -127,12 +127,17 @@ avg_file_length  : 2860
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
 ┃　　　┃　　　┗━　[📁　Database](./데브옵스 DevOps/AWS/Database)</br>
+┃　　　┃　　　┃　　　┗━　[Aurora](./데브옵스 DevOps/AWS/Database/Aurora.md)</br>
+┃　　　┃　　　┃　　　┗━　[DynamoDB](./데브옵스 DevOps/AWS/Database/DynamoDB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RDS](./데브옵스 DevOps/AWS/Database/RDS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Database/Redshift.md)</br>
 ┃　　　┃　　　┗━　[📁　Monitoring](./데브옵스 DevOps/AWS/Monitoring)</br>
+┃　　　┃　　　┃　　　┗━　[CloudTrail](./데브옵스 DevOps/AWS/Monitoring/CloudTrail.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Monitoring/CloudWatch.md)</br>
 ┃　　　┃　　　┗━　[📁　Netwok](./데브옵스 DevOps/AWS/Netwok)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwok/ENI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Netwok/Region과 Zone.md)</br>
+┃　　　┃　　　┃　　　┗━　[Route53](./데브옵스 DevOps/AWS/Netwok/Route53.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwok/VPC.md)</br>
 ┃　　　┃　　　┗━　[📁　Security](./데브옵스 DevOps/AWS/Security)</br>
 ┃　　　┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/Security/IAM.md)</br>
@@ -143,6 +148,7 @@ avg_file_length  : 2860
 ┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Security/WAF.md)</br>
 ┃　　　┃　　　┗━　[📁　Storage](./데브옵스 DevOps/AWS/Storage)</br>
 ┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Storage/EBS.md)</br>
+┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/Storage/S3.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Snowball](./데브옵스 DevOps/AWS/Storage/Snowball.md)</br>
 ┃　　　┃　　　┗━　[AWS and cloud computing](./데브옵스 DevOps/AWS/AWS and cloud computing.md)</br>
@@ -167,7 +173,9 @@ avg_file_length  : 2860
 ┃　　　┃　　　┗━　[도커 스토리지](./데브옵스 DevOps/Docker/도커 스토리지.md)</br>
 ┃　　　┃　　　┗━　[도커 아키텍처](./데브옵스 DevOps/Docker/도커 아키텍처.md)</br>
 ┃　　　┗━　[📁　IaC](./데브옵스 DevOps/IaC)</br>
+┃　　　┃　　　┗━　[Ansible](./데브옵스 DevOps/IaC/Ansible.md)</br>
 ┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform.md)</br>
+┃　　　┃　　　┗━　[Terraform import와 Terraforming](./데브옵스 DevOps/IaC/Terraform import와 Terraforming.md)</br>
 ┃　　　┃　　　┗━　[Terraform with AWS](./데브옵스 DevOps/IaC/Terraform with AWS.md)</br>
 ┃　　　┗━　[📁　Kubernetes](./데브옵스 DevOps/Kubernetes)</br>
 ┃　　　┃　　　┗━　[📁　ArgoCD](./데브옵스 DevOps/Kubernetes/ArgoCD)</br>
