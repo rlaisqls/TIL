@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 370
-derectories      : 80
-avg_file_length  : 2881
+files            : 385
+derectories      : 81
+avg_file_length  : 2892
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -118,6 +118,7 @@ avg_file_length  : 2881
 ┃　　　┗━　[IP](./네트워크 Network/IP.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
 ┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/SO_REUSEADDR.md)</br>
+┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
 ┃　　　┗━　[TCP와 UDP](./네트워크 Network/TCP와 UDP.md)</br>
 ┃　　　┗━　[TLS](./네트워크 Network/TLS.md)</br>
 ┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/TLS 인증서 발급 절차를 이해해보자.md)</br>
@@ -131,14 +132,20 @@ avg_file_length  : 2881
 ┃　　　┃　　　┃　　　┗━　[DynamoDB](./데브옵스 DevOps/AWS/Database/DynamoDB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RDS](./데브옵스 DevOps/AWS/Database/RDS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Database/Redshift.md)</br>
+┃　　　┃　　　┗━　[📁　Deploy](./데브옵스 DevOps/AWS/Deploy)</br>
+┃　　　┃　　　┃　　　┗━　[CloudFormation](./데브옵스 DevOps/AWS/Deploy/CloudFormation.md)</br>
+┃　　　┃　　　┃　　　┗━　[ElasticBeanstalk](./데브옵스 DevOps/AWS/Deploy/ElasticBeanstalk.md)</br>
 ┃　　　┃　　　┗━　[📁　Monitoring](./데브옵스 DevOps/AWS/Monitoring)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudTrail](./데브옵스 DevOps/AWS/Monitoring/CloudTrail.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Monitoring/CloudWatch.md)</br>
 ┃　　　┃　　　┗━　[📁　Netwok](./데브옵스 DevOps/AWS/Netwok)</br>
+┃　　　┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/Netwok/API Gateway.md)</br>
+┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwok/ELB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwok/ENI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Netwok/Region과 Zone.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Route53](./데브옵스 DevOps/AWS/Netwok/Route53.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwok/VPC.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwok/VPN.md)</br>
 ┃　　　┃　　　┗━　[📁　Security](./데브옵스 DevOps/AWS/Security)</br>
 ┃　　　┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/Security/IAM.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/Security/KMS.md)</br>
@@ -151,57 +158,65 @@ avg_file_length  : 2881
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/Storage/S3.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Snowball](./데브옵스 DevOps/AWS/Storage/Snowball.md)</br>
+┃　　　┃　　　┃　　　┗━　[Storage Gateway](./데브옵스 DevOps/AWS/Storage/Storage Gateway.md)</br>
 ┃　　　┃　　　┗━　[AWS and cloud computing](./데브옵스 DevOps/AWS/AWS and cloud computing.md)</br>
+┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Auto Scaling.md)</br>
 ┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/CloudFront.md)</br>
 ┃　　　┃　　　┗━　[EC2](./데브옵스 DevOps/AWS/EC2.md)</br>
-┃　　　┃　　　┗━　[Storage Gateway](./데브옵스 DevOps/AWS/Storage Gateway.md)</br>
+┃　　　┃　　　┗━　[ECS](./데브옵스 DevOps/AWS/ECS.md)</br>
+┃　　　┃　　　┗━　[Fargate](./데브옵스 DevOps/AWS/Fargate.md)</br>
+┃　　　┃　　　┗━　[Kinesis](./데브옵스 DevOps/AWS/Kinesis.md)</br>
+┃　　　┃　　　┗━　[Lambda](./데브옵스 DevOps/AWS/Lambda.md)</br>
+┃　　　┃　　　┗━　[SAA 준비](./데브옵스 DevOps/AWS/SAA 준비.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
 ┃　　　┗━　[📁　Container](./데브옵스 DevOps/Container)</br>
+┃　　　┃　　　┗━　[📁　Docker](./데브옵스 DevOps/Container/Docker)</br>
+┃　　　┃　　　┃　　　┗━　[DockerSwarm](./데브옵스 DevOps/Container/Docker/DockerSwarm.md)</br>
+┃　　　┃　　　┃　　　┗━　[Private registry 구축](./데브옵스 DevOps/Container/Docker/Private registry 구축.md)</br>
+┃　　　┃　　　┃　　　┗━　[Prune](./데브옵스 DevOps/Container/Docker/Prune.md)</br>
+┃　　　┃　　　┃　　　┗━　[README](./데브옵스 DevOps/Container/Docker/README.md)</br>
+┃　　　┃　　　┃　　　┗━　[dockersock 권한에러](./데브옵스 DevOps/Container/Docker/dockersock 권한에러.md)</br>
+┃　　　┃　　　┃　　　┗━　[가상화와 컨테이너](./데브옵스 DevOps/Container/Docker/가상화와 컨테이너.md)</br>
+┃　　　┃　　　┃　　　┗━　[도커 네트워크](./데브옵스 DevOps/Container/Docker/도커 네트워크.md)</br>
+┃　　　┃　　　┃　　　┗━　[도커 네트워크 명령어](./데브옵스 DevOps/Container/Docker/도커 네트워크 명령어.md)</br>
+┃　　　┃　　　┃　　　┗━　[도커 명령어](./데브옵스 DevOps/Container/Docker/도커 명령어.md)</br>
+┃　　　┃　　　┃　　　┗━　[도커 스토리지](./데브옵스 DevOps/Container/Docker/도커 스토리지.md)</br>
+┃　　　┃　　　┃　　　┗━　[도커 아키텍처](./데브옵스 DevOps/Container/Docker/도커 아키텍처.md)</br>
+┃　　　┃　　　┗━　[📁　Kubernetes](./데브옵스 DevOps/Container/Kubernetes)</br>
+┃　　　┃　　　┃　　　┗━　[📁　ArgoCD](./데브옵스 DevOps/Container/Kubernetes/ArgoCD)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
+┃　　　┃　　　┃　　　┗━　[📁　이론](./데브옵스 DevOps/Container/Kubernetes/이론)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Container/Kubernetes/이론/Deployments.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Container/Kubernetes/이론/Endpoints.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Container/Kubernetes/이론/Helm.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Container/Kubernetes/이론/K8s Architecture.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Container/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pod](./데브옵스 DevOps/Container/Kubernetes/이론/Pod.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pod 생성과정](./데브옵스 DevOps/Container/Kubernetes/이론/Pod 생성과정.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Container/Kubernetes/이론/Service와 port.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Container/Kubernetes/이론/가상 IP와 서비스 프록시.md)</br>
+┃　　　┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Container/Kubernetes/DNS in k8s.md)</br>
+┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Container/Kubernetes/K8s를 위한 SpringBoot 개발.md)</br>
+┃　　　┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Container/Kubernetes/Kubernetes.md)</br>
+┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Container/Kubernetes/NGINX Ingress Basic Auth.md)</br>
+┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Container/Kubernetes/NodePort와 ServicePort와 targetPort.md)</br>
+┃　　　┃　　　┃　　　┗━　[ServiceDNS](./데브옵스 DevOps/Container/Kubernetes/ServiceDNS.md)</br>
+┃　　　┃　　　┃　　　┗━　[SpringBoot 서비스를 위한 Kubernetes 설정](./데브옵스 DevOps/Container/Kubernetes/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
+┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Container/Kubernetes/etcd.md)</br>
+┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Container/Kubernetes/ingress.md)</br>
+┃　　　┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Container/Kubernetes/minukube 시작하기.md)</br>
+┃　　　┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Container/Kubernetes/test.yml)</br>
+┃　　　┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Container/Kubernetes/환경변수 설정.md)</br>
 ┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　┗━　[ContainerRuntime](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
 ┃　　　┃　　　┗━　[Container Orchestration](./데브옵스 DevOps/Container/Container Orchestration.md)</br>
-┃　　　┗━　[📁　Docker](./데브옵스 DevOps/Docker)</br>
-┃　　　┃　　　┗━　[DockerSwarm](./데브옵스 DevOps/Docker/DockerSwarm.md)</br>
-┃　　　┃　　　┗━　[Private registry 구축](./데브옵스 DevOps/Docker/Private registry 구축.md)</br>
-┃　　　┃　　　┗━　[Prune](./데브옵스 DevOps/Docker/Prune.md)</br>
-┃　　　┃　　　┗━　[README](./데브옵스 DevOps/Docker/README.md)</br>
-┃　　　┃　　　┗━　[dockersock 권한에러](./데브옵스 DevOps/Docker/dockersock 권한에러.md)</br>
-┃　　　┃　　　┗━　[가상화와 컨테이너](./데브옵스 DevOps/Docker/가상화와 컨테이너.md)</br>
-┃　　　┃　　　┗━　[도커 네트워크](./데브옵스 DevOps/Docker/도커 네트워크.md)</br>
-┃　　　┃　　　┗━　[도커 네트워크 명령어](./데브옵스 DevOps/Docker/도커 네트워크 명령어.md)</br>
-┃　　　┃　　　┗━　[도커 명령어](./데브옵스 DevOps/Docker/도커 명령어.md)</br>
-┃　　　┃　　　┗━　[도커 스토리지](./데브옵스 DevOps/Docker/도커 스토리지.md)</br>
-┃　　　┃　　　┗━　[도커 아키텍처](./데브옵스 DevOps/Docker/도커 아키텍처.md)</br>
 ┃　　　┗━　[📁　IaC](./데브옵스 DevOps/IaC)</br>
 ┃　　　┃　　　┗━　[Ansible](./데브옵스 DevOps/IaC/Ansible.md)</br>
+┃　　　┃　　　┗━　[Configuration Drift](./데브옵스 DevOps/IaC/Configuration Drift.md)</br>
 ┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform.md)</br>
 ┃　　　┃　　　┗━　[Terraform import와 Terraforming](./데브옵스 DevOps/IaC/Terraform import와 Terraforming.md)</br>
 ┃　　　┃　　　┗━　[Terraform with AWS](./데브옵스 DevOps/IaC/Terraform with AWS.md)</br>
-┃　　　┗━　[📁　Kubernetes](./데브옵스 DevOps/Kubernetes)</br>
-┃　　　┃　　　┗━　[📁　ArgoCD](./데브옵스 DevOps/Kubernetes/ArgoCD)</br>
-┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
-┃　　　┃　　　┗━　[📁　이론](./데브옵스 DevOps/Kubernetes/이론)</br>
-┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/이론/Deployments.md)</br>
-┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/이론/Endpoints.md)</br>
-┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/이론/Helm.md)</br>
-┃　　　┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Kubernetes/이론/K8s Architecture.md)</br>
-┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
-┃　　　┃　　　┃　　　┗━　[Pod](./데브옵스 DevOps/Kubernetes/이론/Pod.md)</br>
-┃　　　┃　　　┃　　　┗━　[Pod 생성과정](./데브옵스 DevOps/Kubernetes/이론/Pod 생성과정.md)</br>
-┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Kubernetes/이론/Service와 port.md)</br>
-┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/이론/가상 IP와 서비스 프록시.md)</br>
-┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Kubernetes/DNS in k8s.md)</br>
-┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Kubernetes/K8s를 위한 SpringBoot 개발.md)</br>
-┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
-┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Kubernetes/NGINX Ingress Basic Auth.md)</br>
-┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/NodePort와 ServicePort와 targetPort.md)</br>
-┃　　　┃　　　┗━　[ServiceDNS](./데브옵스 DevOps/Kubernetes/ServiceDNS.md)</br>
-┃　　　┃　　　┗━　[SpringBoot 서비스를 위한 Kubernetes 설정](./데브옵스 DevOps/Kubernetes/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
-┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/etcd.md)</br>
-┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/ingress.md)</br>
-┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Kubernetes/minukube 시작하기.md)</br>
-┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
-┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/환경변수 설정.md)</br>
+┃　　　┃　　　┗━　[Understanding Ansible, Terraform, Puppet, Chef, and Salt](./데브옵스 DevOps/IaC/Understanding Ansible, Terraform, Puppet, Chef, and Salt.md)</br>
 ┃　　　┗━　[📁　Logging](./데브옵스 DevOps/Logging)</br>
 ┃　　　┃　　　┗━　[📁　datadog](./데브옵스 DevOps/Logging/datadog)</br>
 ┃　　　┃　　　　　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog/datadog.md)</br>
@@ -212,6 +227,7 @@ avg_file_length  : 2881
 ┃　　　┃　　　┗━　[LVM](./데브옵스 DevOps/linux/LVM.md)</br>
 ┃　　　┃　　　┗━　[Swap메모리](./데브옵스 DevOps/linux/Swap메모리.md)</br>
 ┃　　　┃　　　┗━　[bash_profile과 bashrc](./데브옵스 DevOps/linux/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/linux/eBPF.md)</br>
 ┃　　　┃　　　┗━　[namespace와 cgroup](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
 ┃　　　┃　　　┗━　[network namespaces](./데브옵스 DevOps/linux/network namespaces.md)</br>
 ┃　　　┃　　　┗━　[zshrc](./데브옵스 DevOps/linux/zshrc.md)</br>
