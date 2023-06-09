@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 385
-derectories      : 81
-avg_file_length  : 2892
+files            : 387
+derectories      : 85
+avg_file_length  : 2874
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -109,27 +109,33 @@ avg_file_length  : 2892
 ┃　　　┗━　[SOLID](./객체지향 OOP/SOLID.md)</br>
 ┃　　　┗━　[응집도와 결합도](./객체지향 OOP/응집도와 결합도.md)</br>
 ┗━　[📁　네트워크 Network](./네트워크 Network)</br>
+┃　　　┗━　[📁　L1 network access layer](./네트워크 Network/L1 network access layer)</br>
+┃　　　┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/L1 network access layer/Ethernet과 TokenRing.md)</br>
+┃　　　┗━　[📁　L2 internet layer](./네트워크 Network/L2 internet layer)</br>
+┃　　　┃　　　┗━　[IP](./네트워크 Network/L2 internet layer/IP.md)</br>
+┃　　　┃　　　┗━　[서브넷](./네트워크 Network/L2 internet layer/서브넷.md)</br>
+┃　　　┗━　[📁　L3 transport　layer](./네트워크 Network/L3 transport　layer)</br>
+┃　　　┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/L3 transport　layer/SO_REUSEADDR.md)</br>
+┃　　　┃　　　┗━　[TCP와 UDP](./네트워크 Network/L3 transport　layer/TCP와 UDP.md)</br>
+┃　　　┗━　[📁　L4 appplication layer](./네트워크 Network/L4 appplication layer)</br>
+┃　　　┃　　　┗━　[DNS 레코드유형](./네트워크 Network/L4 appplication layer/DNS 레코드유형.md)</br>
+┃　　　┃　　　┗━　[HTTP](./네트워크 Network/L4 appplication layer/HTTP.md)</br>
+┃　　　┃　　　┗━　[HTTP Options](./네트워크 Network/L4 appplication layer/HTTP Options.md)</br>
+┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/TLS.md)</br>
+┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/TLS 인증서 발급 절차를 이해해보자.md)</br>
+┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[CDN](./네트워크 Network/CDN.md)</br>
 ┃　　　┗━　[Cloudflare ProxyStatus](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
-┃　　　┗━　[DNS 레코드유형](./네트워크 Network/DNS 레코드유형.md)</br>
-┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/Ethernet과 TokenRing.md)</br>
-┃　　　┗━　[HTTP](./네트워크 Network/HTTP.md)</br>
-┃　　　┗━　[HTTP Options](./네트워크 Network/HTTP Options.md)</br>
-┃　　　┗━　[IP](./네트워크 Network/IP.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
-┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/SO_REUSEADDR.md)</br>
 ┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
-┃　　　┗━　[TCP와 UDP](./네트워크 Network/TCP와 UDP.md)</br>
-┃　　　┗━　[TLS](./네트워크 Network/TLS.md)</br>
-┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/TLS 인증서 발급 절차를 이해해보자.md)</br>
-┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
-┃　　　┗━　[서브넷](./네트워크 Network/서브넷.md)</br>
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
 ┃　　　┃　　　┗━　[📁　Database](./데브옵스 DevOps/AWS/Database)</br>
 ┃　　　┃　　　┃　　　┗━　[Aurora](./데브옵스 DevOps/AWS/Database/Aurora.md)</br>
 ┃　　　┃　　　┃　　　┗━　[DynamoDB](./데브옵스 DevOps/AWS/Database/DynamoDB.md)</br>
+┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Database/EFS.md)</br>
+┃　　　┃　　　┃　　　┗━　[FSx](./데브옵스 DevOps/AWS/Database/FSx.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RDS](./데브옵스 DevOps/AWS/Database/RDS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Database/Redshift.md)</br>
 ┃　　　┃　　　┗━　[📁　Deploy](./데브옵스 DevOps/AWS/Deploy)</br>
