@@ -4,20 +4,6 @@ In 2006, Amazon Web Services(AWS) began offering IT infrastructure services(clou
 
 Today, AWS procides a highly reliable, scalable, low-cost infrastructure platform in the cloud that powers hundreads of thousands of businesses in 190 countries around the world.
 
-## AWS Well-Architected
-
-AWS provide [Well-Architecture Framework](https://aws.amazon.com/ko/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc&wa-guidance-whitepapers.sort-by=item.additionalFields.sortDate&wa-guidance-whitepapers.sort-order=desc) to build a secure, high-performance, resilient and efficient infrastructure for a wide variety of applications and workloads. AWS Well-Architected provides a consistent approach to helping customers and partners evaluate architectures and implement scalable designs.
-
-The framework is based on six pillars:
-- Operational Excellence
-- Security
-- Reliability
-- Performance Efficiency
-- Cost Optimization
-- Sustainability
-
-Further reading about each pillars: [Well-Architected](Well-Architected.md)
-
 ## Cloud computing
 
 Cloud computing is the on-demand delivery of compute power, database, storage, applications, and other IT resources through a cloud services platform via the internet with pay-as-you-go pricing. With cloud computing, you don't need to make large upfront investments in hardware and spend a log of time on the heaby lifting of managing that hardware. Instead, you can provision exactly the right type and size of computinng resources you need to power you newest bright idea or operate you IT department.

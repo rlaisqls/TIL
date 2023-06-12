@@ -2,8 +2,8 @@
 
 ```
 files            : 388
-derectories      : 85
-avg_file_length  : 2884
+derectories      : 88
+avg_file_length  : 2890
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -132,49 +132,52 @@ avg_file_length  : 2884
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
+┃　　　┃　　　┗━　[📁　Analytics](./데브옵스 DevOps/AWS/Analytics)</br>
+┃　　　┃　　　┃　　　┗━　[Kinesis](./데브옵스 DevOps/AWS/Analytics/Kinesis.md)</br>
+┃　　　┃　　　┗━　[📁　Computing](./데브옵스 DevOps/AWS/Computing)</br>
+┃　　　┃　　　┃　　　┗━　[📁　Container](./데브옵스 DevOps/AWS/Computing/Container)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ECS](./데브옵스 DevOps/AWS/Computing/Container/ECS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/Auto Scaling.md)</br>
+┃　　　┃　　　┃　　　┗━　[EC2](./데브옵스 DevOps/AWS/Computing/EC2.md)</br>
+┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./데브옵스 DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
+┃　　　┃　　　┃　　　┗━　[Fargate](./데브옵스 DevOps/AWS/Computing/Fargate.md)</br>
+┃　　　┃　　　┃　　　┗━　[Lambda](./데브옵스 DevOps/AWS/Computing/Lambda.md)</br>
 ┃　　　┃　　　┗━　[📁　Database](./데브옵스 DevOps/AWS/Database)</br>
 ┃　　　┃　　　┃　　　┗━　[Aurora](./데브옵스 DevOps/AWS/Database/Aurora.md)</br>
 ┃　　　┃　　　┃　　　┗━　[DynamoDB](./데브옵스 DevOps/AWS/Database/DynamoDB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Database/EFS.md)</br>
-┃　　　┃　　　┃　　　┗━　[FSx](./데브옵스 DevOps/AWS/Database/FSx.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RDS](./데브옵스 DevOps/AWS/Database/RDS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Database/Redshift.md)</br>
 ┃　　　┃　　　┗━　[📁　Deploy](./데브옵스 DevOps/AWS/Deploy)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFormation](./데브옵스 DevOps/AWS/Deploy/CloudFormation.md)</br>
-┃　　　┃　　　┃　　　┗━　[ElasticBeanstalk](./데브옵스 DevOps/AWS/Deploy/ElasticBeanstalk.md)</br>
-┃　　　┃　　　┗━　[📁　Monitoring](./데브옵스 DevOps/AWS/Monitoring)</br>
-┃　　　┃　　　┃　　　┗━　[CloudTrail](./데브옵스 DevOps/AWS/Monitoring/CloudTrail.md)</br>
-┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Monitoring/CloudWatch.md)</br>
-┃　　　┃　　　┗━　[📁　Netwok](./데브옵스 DevOps/AWS/Netwok)</br>
-┃　　　┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/Netwok/API Gateway.md)</br>
-┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwok/ELB.md)</br>
-┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwok/ENI.md)</br>
-┃　　　┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Netwok/Region과 Zone.md)</br>
-┃　　　┃　　　┃　　　┗━　[Route53](./데브옵스 DevOps/AWS/Netwok/Route53.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwok/VPC.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwok/VPN.md)</br>
+┃　　　┃　　　┗━　[📁　Management and governance](./데브옵스 DevOps/AWS/Management and governance)</br>
+┃　　　┃　　　┃　　　┗━　[CloudTrail](./데브옵스 DevOps/AWS/Management and governance/CloudTrail.md)</br>
+┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Management and governance/CloudWatch.md)</br>
+┃　　　┃　　　┗━　[📁　Netwoking](./데브옵스 DevOps/AWS/Netwoking)</br>
+┃　　　┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/Netwoking/API Gateway.md)</br>
+┃　　　┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/Netwoking/CloudFront.md)</br>
+┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwoking/ELB.md)</br>
+┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwoking/ENI.md)</br>
+┃　　　┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Netwoking/Region과 Zone.md)</br>
+┃　　　┃　　　┃　　　┗━　[Route53](./데브옵스 DevOps/AWS/Netwoking/Route53.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwoking/VPC.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwoking/VPN.md)</br>
 ┃　　　┃　　　┗━　[📁　Security](./데브옵스 DevOps/AWS/Security)</br>
 ┃　　　┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/Security/IAM.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/Security/KMS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/Security/KMS Datakey.md)</br>
-┃　　　┃　　　┃　　　┗━　[NACLs](./데브옵스 DevOps/AWS/Security/NACLs.md)</br>
-┃　　　┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Security/Security Groups.md)</br>
 ┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Security/WAF.md)</br>
 ┃　　　┃　　　┗━　[📁　Storage](./데브옵스 DevOps/AWS/Storage)</br>
 ┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Storage/EBS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
+┃　　　┃　　　┃　　　┗━　[FSx](./데브옵스 DevOps/AWS/Storage/FSx.md)</br>
 ┃　　　┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/Storage/S3.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Snowball](./데브옵스 DevOps/AWS/Storage/Snowball.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Storage Gateway](./데브옵스 DevOps/AWS/Storage/Storage Gateway.md)</br>
-┃　　　┃　　　┗━　[AWS and cloud computing](./데브옵스 DevOps/AWS/AWS and cloud computing.md)</br>
-┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Auto Scaling.md)</br>
-┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/CloudFront.md)</br>
-┃　　　┃　　　┗━　[EC2](./데브옵스 DevOps/AWS/EC2.md)</br>
-┃　　　┃　　　┗━　[ECS](./데브옵스 DevOps/AWS/ECS.md)</br>
-┃　　　┃　　　┗━　[Fargate](./데브옵스 DevOps/AWS/Fargate.md)</br>
-┃　　　┃　　　┗━　[Kinesis](./데브옵스 DevOps/AWS/Kinesis.md)</br>
-┃　　　┃　　　┗━　[Lambda](./데브옵스 DevOps/AWS/Lambda.md)</br>
+┃　　　┃　　　┗━　[AWS cloud computing](./데브옵스 DevOps/AWS/AWS cloud computing.md)</br>
+┃　　　┃　　　┗━　[NACLs](./데브옵스 DevOps/AWS/NACLs.md)</br>
 ┃　　　┃　　　┗━　[SAA 준비](./데브옵스 DevOps/AWS/SAA 준비.md)</br>
+┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Security Groups.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
 ┃　　　┗━　[📁　Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[📁　Docker](./데브옵스 DevOps/Container/Docker)</br>
