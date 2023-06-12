@@ -4,8 +4,8 @@ Snowball is a giant physical disk that is used for migrating high quantities of 
 
 ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/30ca9d39-7718-4343-8764-679a0e86145f)
 
-## key Details
-  
+---
+
 - Snowball is a strong choice for a data transfer job if you need a secure an dquick data transfer renging in the terabytes to many petabytes into AWS.
 
 - Snowball can also be the right choich if tyou don't want to make expensice upgrades to your existing network infrastructure, if tou frequently experience large basklogs of data, if you're located in a physically isolated environment, or if you're in an area where high-speed internet connections are not available or cost-prohibitive.

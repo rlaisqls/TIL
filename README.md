@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 389
+files            : 388
 derectories      : 85
-avg_file_length  : 2877
+avg_file_length  : 2884
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -218,7 +218,6 @@ avg_file_length  : 2877
 ┃　　　┃　　　┗━　[ContainerRuntime](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
 ┃　　　┃　　　┗━　[Container Orchestration](./데브옵스 DevOps/Container/Container Orchestration.md)</br>
 ┃　　　┗━　[📁　IaC](./데브옵스 DevOps/IaC)</br>
-┃　　　┃　　　┗━　[Ansible](./데브옵스 DevOps/IaC/Ansible.md)</br>
 ┃　　　┃　　　┗━　[Configuration Drift](./데브옵스 DevOps/IaC/Configuration Drift.md)</br>
 ┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform.md)</br>
 ┃　　　┃　　　┗━　[Terraform import와 Terraforming](./데브옵스 DevOps/IaC/Terraform import와 Terraforming.md)</br>

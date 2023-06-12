@@ -1,10 +1,10 @@
 ## Elastic Block Store (EBS)
 
-An Amazon EBS bolume is a durable, block-level storage device that you can attach to a single EC2 instance. You can think of EBS as a cloud-based virtual hard dist. You can use EBS volumes as primary storage for data that requires frequent updates, such as the system drive for an instance or storage for a database application. You can also use them for throughput-intensive applications that perform continuous disk scans.
+An Amazon EBS volume is a durable, block-level storage device that you can attach to a single EC2 instance. You can think of EBS as a cloud-based virtual hard dist. You can use EBS volumes as primary storage for data that requires frequent updates, such as the system drive for an instance or storage for a database application. You can also use them for throughput-intensive applications that perform continuous disk scans.
 
 <img width="629" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/819d29a7-008a-44bf-9db0-25ea9e810e9f">
 
-## Key Details
+---
 
 - EBS columes persist independently from the runnign life of an EV2 instance. 
 

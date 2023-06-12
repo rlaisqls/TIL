@@ -32,6 +32,8 @@ AWS LAmbda leys you run code without provisioning or managing servers. You pay o
 
 - AWS X-Ray allows you to debug your Lambda function in case of unexpected behavior.
 
+- **Lambda can run up to 15 minuates per execution**
+
 ## Lambda@Edge
 
 - You can use Lambda@Edge to allow your Lambda functions to customize the content that CloudFront delivers.

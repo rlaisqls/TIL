@@ -30,6 +30,8 @@ You can create a network interface, attach is to an instance, detach it from an 
 
 Each instance has a default network interface, called the primary network interface. You cannot detach a primary network interface from an instance. You can create an dattach additional network interfaces. 
 
+If you attach two or more network interfaces from the same subnet to an instance, you might encounter networking issues such as asymmetric routing. If possible, use a secondary private IPv4 address on the primary network interface instead.
+
 ### public IPv4 addresses for network interfaces
 
 In a VPC, all subnets have a mofifiable attribute that determines whether network interfaces created in that subnet (and therefore instances launched into that subnet) are assigned a public IPv4 address. The public IPv4 address is assigned from Amazon's pool of public IPv4 addresses. When you launch an instance, the IP address is assigned to the primary network interface that's ceated.
