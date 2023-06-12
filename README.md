@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 387
+files            : 389
 derectories      : 85
-avg_file_length  : 2874
+avg_file_length  : 2877
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -128,6 +128,7 @@ avg_file_length  : 2874
 ┃　　　┗━　[Cloudflare ProxyStatus](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
 ┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
+┃　　　┗━　[Switch](./네트워크 Network/Switch.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
@@ -278,6 +279,7 @@ avg_file_length  : 2874
 ┃　　　┃　　　┗━　[📁　redis](./데이터베이스 DataBase/NoSQL/redis)</br>
 ┃　　　┃　　　┃　　　┗━　[Redis](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Spring Redis Phantomkey](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
+┃　　　┃　　　┗━　[Memcached VS Redis](./데이터베이스 DataBase/NoSQL/Memcached VS Redis.md)</br>
 ┃　　　┃　　　┗━　[NoSQL 데이터유형](./데이터베이스 DataBase/NoSQL/NoSQL 데이터유형.md)</br>
 ┃　　　┃　　　┗━　[NoSQL에는 ACID가 없다고？](./데이터베이스 DataBase/NoSQL/NoSQL에는 ACID가 없다고？.md)</br>
 ┃　　　┗━　[📁　SQL](./데이터베이스 DataBase/SQL)</br>

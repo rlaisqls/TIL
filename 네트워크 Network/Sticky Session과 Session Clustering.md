@@ -20,3 +20,7 @@ LB에서 세션문제를 해결하기 위한 다른 방법으론 Session Cluster
 하지만 이 방식은 scale out 관점에서 새로운 서버가 하나 뜰 때마다 기존에 존재하던 WAS에 새로운 서버의 IP/Port를 입력해서 클러스터링 해줘야 하는 단점이 있다.
 
 그렇기 때문에 Session server를 Redis로 따로 두고 관리하는 방식도 있다. Redis Session 서버의 중요성이 올라가고, 해당 세션 서버가 죽는 순간 모든 세션이 사라지기 때문에 이 Redis 서버의 다중화도 고려해보아야 한다.
+
+---
+참고
+- https://aws.amazon.com/ko/blogs/aws/new-elastic-load-balancing-feature-sticky-sessions/
