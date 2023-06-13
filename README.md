@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 392
+files            : 394
 derectories      : 87
-avg_file_length  : 2932
+avg_file_length  : 2935
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -150,24 +150,26 @@ avg_file_length  : 2932
 ┃　　　┃　　　┃　　　┗━　[DynamoDB](./데브옵스 DevOps/AWS/Database/DynamoDB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Database/EFS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RDS](./데브옵스 DevOps/AWS/Database/RDS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Database/Redshift.md)</br>
 ┃　　　┃　　　┗━　[📁　Management and governance](./데브옵스 DevOps/AWS/Management and governance)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFormation](./데브옵스 DevOps/AWS/Management and governance/CloudFormation.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudTrail](./데브옵스 DevOps/AWS/Management and governance/CloudTrail.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Management and governance/CloudWatch.md)</br>
-┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Management and governance/Redshift.md)</br>
 ┃　　　┃　　　┗━　[📁　Netwoking](./데브옵스 DevOps/AWS/Netwoking)</br>
 ┃　　　┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/Netwoking/API Gateway.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/Netwoking/CloudFront.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwoking/ELB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwoking/ENI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Route53](./데브옵스 DevOps/AWS/Netwoking/Route53.md)</br>
+┃　　　┃　　　┃　　　┗━　[Transit Gateway](./데브옵스 DevOps/AWS/Netwoking/Transit Gateway.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwoking/VPC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwoking/VPN.md)</br>
+┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Netwoking/WAF.md)</br>
 ┃　　　┃　　　┗━　[📁　Security](./데브옵스 DevOps/AWS/Security)</br>
+┃　　　┃　　　┃　　　┗━　[Cognito](./데브옵스 DevOps/AWS/Security/Cognito.md)</br>
 ┃　　　┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/Security/IAM.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/Security/KMS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/Security/KMS Datakey.md)</br>
-┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Security/WAF.md)</br>
 ┃　　　┃　　　┗━　[📁　Storage](./데브옵스 DevOps/AWS/Storage)</br>
 ┃　　　┃　　　┃　　　┗━　[DayaSync](./데브옵스 DevOps/AWS/Storage/DayaSync.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Storage/EBS.md)</br>
