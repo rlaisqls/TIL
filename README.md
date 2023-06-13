@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 388
-derectories      : 88
-avg_file_length  : 2890
+files            : 392
+derectories      : 87
+avg_file_length  : 2933
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -60,8 +60,8 @@ avg_file_length  : 2890
 ┃　　　┃　　　┃　　　┗━　[코루틴](./개발/비동기/coroutine/코루틴.md)</br>
 ┃　　　┃　　　┗━　[📁　reactor](./개발/비동기/reactor)</br>
 ┃　　　┃　　　┃　　　┗━　[Callback과 Futures](./개발/비동기/reactor/Callback과 Futures.md)</br>
-┃　　　┃　　　┃　　　┗━　[Reactor　Pattern과 event loop](./개발/비동기/reactor/Reactor　Pattern과 event loop.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Reactor](./개발/비동기/reactor/Reactor.md)</br>
+┃　　　┃　　　┃　　　┗━　[Reactor Pattern과 event loop](./개발/비동기/reactor/Reactor Pattern과 event loop.md)</br>
 ┃　　　┃　　　┗━　[Coroutine vs Reactor](./개발/비동기/Coroutine vs Reactor.md)</br>
 ┃　　　┃　　　┗━　[Flow](./개발/비동기/Flow.md)</br>
 ┃　　　┃　　　┗━　[cold stream과 hot stream](./개발/비동기/cold stream과 hot stream.md)</br>
@@ -114,9 +114,9 @@ avg_file_length  : 2890
 ┃　　　┗━　[📁　L2 internet layer](./네트워크 Network/L2 internet layer)</br>
 ┃　　　┃　　　┗━　[IP](./네트워크 Network/L2 internet layer/IP.md)</br>
 ┃　　　┃　　　┗━　[서브넷](./네트워크 Network/L2 internet layer/서브넷.md)</br>
-┃　　　┗━　[📁　L3 transport　layer](./네트워크 Network/L3 transport　layer)</br>
-┃　　　┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/L3 transport　layer/SO_REUSEADDR.md)</br>
-┃　　　┃　　　┗━　[TCP와 UDP](./네트워크 Network/L3 transport　layer/TCP와 UDP.md)</br>
+┃　　　┗━　[📁　L3 transport layer](./네트워크 Network/L3 transport layer)</br>
+┃　　　┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/L3 transport layer/SO_REUSEADDR.md)</br>
+┃　　　┃　　　┗━　[TCP와 UDP](./네트워크 Network/L3 transport layer/TCP와 UDP.md)</br>
 ┃　　　┗━　[📁　L4 appplication layer](./네트워크 Network/L4 appplication layer)</br>
 ┃　　　┃　　　┗━　[DNS 레코드유형](./네트워크 Network/L4 appplication layer/DNS 레코드유형.md)</br>
 ┃　　　┃　　　┗━　[HTTP](./네트워크 Network/L4 appplication layer/HTTP.md)</br>
@@ -133,6 +133,9 @@ avg_file_length  : 2890
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
 ┃　　　┃　　　┗━　[📁　Analytics](./데브옵스 DevOps/AWS/Analytics)</br>
+┃　　　┃　　　┃　　　┗━　[Athena](./데브옵스 DevOps/AWS/Analytics/Athena.md)</br>
+┃　　　┃　　　┃　　　┗━　[EMR](./데브옵스 DevOps/AWS/Analytics/EMR.md)</br>
+┃　　　┃　　　┃　　　┗━　[Glue](./데브옵스 DevOps/AWS/Analytics/Glue.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kinesis](./데브옵스 DevOps/AWS/Analytics/Kinesis.md)</br>
 ┃　　　┃　　　┗━　[📁　Computing](./데브옵스 DevOps/AWS/Computing)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　Container](./데브옵스 DevOps/AWS/Computing/Container)</br>
@@ -147,18 +150,16 @@ avg_file_length  : 2890
 ┃　　　┃　　　┃　　　┗━　[DynamoDB](./데브옵스 DevOps/AWS/Database/DynamoDB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Database/EFS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RDS](./데브옵스 DevOps/AWS/Database/RDS.md)</br>
-┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Database/Redshift.md)</br>
-┃　　　┃　　　┗━　[📁　Deploy](./데브옵스 DevOps/AWS/Deploy)</br>
-┃　　　┃　　　┃　　　┗━　[CloudFormation](./데브옵스 DevOps/AWS/Deploy/CloudFormation.md)</br>
 ┃　　　┃　　　┗━　[📁　Management and governance](./데브옵스 DevOps/AWS/Management and governance)</br>
+┃　　　┃　　　┃　　　┗━　[CloudFormation](./데브옵스 DevOps/AWS/Management and governance/CloudFormation.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudTrail](./데브옵스 DevOps/AWS/Management and governance/CloudTrail.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Management and governance/CloudWatch.md)</br>
+┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Management and governance/Redshift.md)</br>
 ┃　　　┃　　　┗━　[📁　Netwoking](./데브옵스 DevOps/AWS/Netwoking)</br>
 ┃　　　┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/Netwoking/API Gateway.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/Netwoking/CloudFront.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwoking/ELB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwoking/ENI.md)</br>
-┃　　　┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Netwoking/Region과 Zone.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Route53](./데브옵스 DevOps/AWS/Netwoking/Route53.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwoking/VPC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwoking/VPN.md)</br>
@@ -168,14 +169,16 @@ avg_file_length  : 2890
 ┃　　　┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/Security/KMS Datakey.md)</br>
 ┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Security/WAF.md)</br>
 ┃　　　┃　　　┗━　[📁　Storage](./데브옵스 DevOps/AWS/Storage)</br>
+┃　　　┃　　　┃　　　┗━　[DayaSync](./데브옵스 DevOps/AWS/Storage/DayaSync.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Storage/EBS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[FSx](./데브옵스 DevOps/AWS/Storage/FSx.md)</br>
 ┃　　　┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/Storage/S3.md)</br>
-┃　　　┃　　　┃　　　┗━　[Snowball](./데브옵스 DevOps/AWS/Storage/Snowball.md)</br>
+┃　　　┃　　　┃　　　┗━　[Snow Famliy](./데브옵스 DevOps/AWS/Storage/Snow Famliy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Storage Gateway](./데브옵스 DevOps/AWS/Storage/Storage Gateway.md)</br>
 ┃　　　┃　　　┗━　[AWS cloud computing](./데브옵스 DevOps/AWS/AWS cloud computing.md)</br>
 ┃　　　┃　　　┗━　[NACLs](./데브옵스 DevOps/AWS/NACLs.md)</br>
+┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
 ┃　　　┃　　　┗━　[SAA 준비](./데브옵스 DevOps/AWS/SAA 준비.md)</br>
 ┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Security Groups.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
