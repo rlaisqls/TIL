@@ -12,7 +12,7 @@ It is far more effective as an AWS database due to the 5x and 3x performance mul
 
 - By default, there are 2 copies in a minimum of 3 availability zones for 6 total copies of all of your Aurora data. This makes it possible for it to handel the potential loss of up to 2 copis of your data without impacting write availability and up to 3 copies of yout data without impacting read availability.
 
-- Aurora replication differs from RDS replicas in the sense that it is possible for Aurora's replicas to be both a standby as part of a multi-AZ configuration as well as a target for read traffic. In RDS, the multi-AS standby cannot be configured to be a read endpoint and only read replicas can serve that function.
+- Aurora replication differs from RDS replicas in the sense that it is possible for Aurora's replicas to be both a standby as part of a multi-AZ configuration as well as a target for read traffic. In RDS, the multi-AZ standby cannot be configured to be a read endpoint and only read replicas can serve that function.
 
 - With Aurora replication, you can have up to fifteen copies. If you want downstream MySQL or PostgreSQL as you replicated copies, then you can only have 5 or 1.
 

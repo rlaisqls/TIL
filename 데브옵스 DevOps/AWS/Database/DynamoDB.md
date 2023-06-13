@@ -53,7 +53,7 @@ Amazon DynamoDB is a key-balue and document database that delivers single-digit 
 
 - A DynamoDB stream is an ordered flow of information about changes to items in an Amazon DynamoDB table. When you enable a stream on a table, DynamoDB captures information about every modification to data items in the table.
 
-- Amazon DynamoDB is integrated with AWS Lambde so that you can create triggers_piece of code that automatically respond to events in DynamoDB Streams.
+- Amazon DynamoDB is integrated with AWS Lambda so that you can create triggers_piece of code that automatically respond to events in DynamoDB Streams.
     Immediately after an item in the table is modified, a new record appears in the table's stream. AWS Lambda polls the stream and invokes your Lambda function synchronously when it detects new stream records. The Lambda function can perform any actions you specify, such as sending a notification or initiating a workflow.
 
 - Whenever an application creates, updates, or deletes items in the table, DynamoDB Streams writes a stream record with the primary key attribute(s) of the items that were modified. A stream record contains information about a data modification to a single item in a DynamoDB table. You can configure the stream so that the stream records capture additional information, such as the "before" and "after" images of modified items.

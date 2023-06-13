@@ -10,17 +10,17 @@ EC2 has an extemely reduced time frame for provisioning and booting new instance
 
 - You can launch different types of instances from a single AMI. An instance type essentially determines the hardware of the host computer used for your instance. Each instance type offers different compute and memory capabilities. You should select an instance type based on the amount of memory and computing power that you need for the applicatio or software that you plan to run on top of the instance.
 
-- You can lanch multiple instances of an AMI, as shown in the follwing figure:
+- You can lanch multiple instances of an AMI, as shown in the follwing figure:<br>
     ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/8805dad9-5b2e-4017-a9ca-bd5efb754c8b)
   
 - You have the option of using dedicated tenancy with your instance. This means that with an AWS data center, you have exclusive access to physical hardware. Dedicated tenancy ensures that your EC2 instances are run on hardware specific to your account.
   Naturally, this option incurs a high cost, but is makes sense if you work with technology that has a strict licensing policy. 
-  ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/7a908a35-9415-4bf9-82a7-95ed6d4950ce)
+  <img src="https://github.com/rlaisqls/rlaisqls/assets/81006587/7a908a35-9415-4bf9-82a7-95ed6d4950ce" height=300px/>
 
 - With EC2 VM Import, you can import existing VMs into AWS as long as those hosts use VMware ESX, CMware Workstation, Microsoft Hyper-V, or Citrix Xen vietualization formats.
 
 - When you launch a new EC2 instance, EC2 attempts to place the instance in such a way that all of your VMs are spread out across different hardware to limit failure to a single location. You can use placement groups to influence the placement of a group of interdependent instances that meet the needs of your workload. 
-    ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/7a908a35-9415-4bf9-82a7-95ed6d4950ce)
+    <img src="https://github.com/rlaisqls/rlaisqls/assets/81006587/7a908a35-9415-4bf9-82a7-95ed6d4950ce" height=300px/>
 
 - When you launch an instance in Amazon EC2, you hae the option of passing user data to the instance whan the instance starts. This user data can be used to run commo nautomated configuration tasks or scripts. For example, you can pass a bash script that ensures htop is installed on the new EC2 host and is always active.
 
@@ -83,23 +83,30 @@ Note: Reserved Instances that are terminated are billed until the end of their t
 - There are three different types of EC2 placement groups:
     1. Clustered Placement Groups
        - Clustered Placement Grouping is when you put all of your EC2 instances in a single availability zone. This is recommended for applications that need the lowest latency possible and require the highest neywork throughput.
-       - Only certain instances can be launched into this group (compute optimized, GPU optimized, storage optimized, and memory optimized).
+       - Only certain instances can be launched into this group (compute optimized, GPU optimized, storage optimized, and memory optimized).<br>
         ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/05388d12-24f0-425c-8c15-a2e6d6da00f2)
 
     2. Spread Placement Groups
        - Spread Placement Grouping is when you put each individual EC2 instance on top of its own distinct hardware so that failure is isolated.
-       - Your VMs live on separate racks, with separate network inputs and separate power requirements. Spread placement groups are recommended for applications that have a small number of critical instances that should be kept separate from each other.
+       - Your VMs live on separate racks, with separate network inputs and separate power requirements. Spread placement groups are recommended for applications that have a small number of critical instances that should be kept separate from each other.<br>
         ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/ef0d7b55-c74b-4b49-9457-17b51f9a49b2)
 
     3. Partitioned Placement Groups
         - Partitioned Placement Grouping is similar to Spread placement grouping, but differs because you can have multiple EC2 instances within a single partition. Failure instead is isolated to a partition (say 3 or 4 instances instead of 1), yet you enjoy the benefits of close proximity for improved network performance.
         - With this placement group, you have multiple instances livingtogether on the same hardware inside of different availity zones acress one or more regions.
-        - If you would like a balance of risk tolerance and network performance, use Partitioned Placement Groups.
+        - If you would like a balance of risk tolerance and network performance, use Partitioned Placement Groups.<br>
         ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/19af9966-f14a-4509-a324-9a17ad0ad624)
 
 - Each placement group name within your AWS must be unique
   
 - You can move an existing instance into a placement group provided that it is in a stopped state. You can move the instance via the CLI or an AWS SDK, but not the console. You can also take a snapshot of the existing instance, convert it into an AMI, and launch it into the placement group where you desire it to be. 
+
+## AWS Nitro System
+
+The AWS Nitro System is the underlying platform for the latest generation of EC2 instances that enables AWS to innovate faster, further reduce cost for our customers, and deliver added benefits like increased security and new instance types. With the latest set of enhancements to the Nitro system, all new C5/C5d/C5n, M5/M5d/M5n/M5dn, R5/R5d/R5n/R5dn, and P3dn instances now support 36% higher EBS-optimized instance bandwidth, up to 19 Gbps. Also, 6, 9, and 12 TB Amazon EC2 High Memory instances can now support 19 Gbps of EBS-optimized instance bandwidth, a 36% increase from 14 Gbps. 
+
+This performance increase enables you to speed up sections of your workflows dependent on EBS-optimized instance performance. For storage intensive workloads, you will have an opportunity to use smaller instance sizes and still meet your EBS-optimized instance performance requirement, thereby saving costs. With this performance increase, you will be able to handle unplanned spikes in EBS-optimized instance demand without any impact to your application performance. 
+
 
 ---
 reference

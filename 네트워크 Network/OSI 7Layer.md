@@ -14,7 +14,7 @@ OSI 모형은 국제표준화기구(ISO)에서 개발한 모델로, 컴퓨터 �
   - 장치 간 신호를 전달하는 물리 계층을 이용하여 네트워크 상의 주변 장치들 간 데이터를 전송한다. 포인트 투 포인트(Point to Point) 간 신뢰성있는 전송을 보장하기 위한 계층이다. 즉, 네트워크 위의 두 개체가 데이터를 주고받는 과정에서 오류를 잡아내는 것이 목적이다. 네트워크 브릿지나 스위치 등이 이 계층에서 동작하며, 직접 이어진 곳에만 연결할 수 있다.
 
  - ### 대표 프로토콜
-    <a href="https://github.com/rlaisqls/TIL/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/Ethernet%EA%B3%BC%20Token%20ring.md#-ethernet">Ethernet,<a/> <a href="https://github.com/rlaisqls/TIL/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/Ethernet%EA%B3%BC%20Token%20ring.md#-token-ring">Token ring, </a>PPP
+    [Ethernet, Token ring](./L1%E2%80%85network%E2%80%85access%E2%80%85layer/Ethernet%EA%B3%BC%E2%80%85TokenRing.md), PPP
 
 ## 3. 네트워크 계층(Network Layer)
  - 여러개의 노드를 거쳐 패킷을 최종 수신대상에게 전달(End-To-End)하기 위한 경로 설정을 담당한다. 호스트를 식별하고 라우팅 등의 패킷포워딩을 수행하여 패킷이 목적지에 도달할 수 있도록 한다.

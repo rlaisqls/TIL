@@ -3,7 +3,7 @@
 ```
 files            : 392
 derectories      : 87
-avg_file_length  : 2933
+avg_file_length  : 2932
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -235,15 +235,6 @@ avg_file_length  : 2933
 ┃　　　┃　　　　　　　┗━　[datadog APM기능 사용하기](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
 ┃　　　┃　　　　　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
 ┃　　　┃　　　　　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
-┃　　　┗━　[📁　linux](./데브옵스 DevOps/linux)</br>
-┃　　　┃　　　┗━　[LVM](./데브옵스 DevOps/linux/LVM.md)</br>
-┃　　　┃　　　┗━　[Swap메모리](./데브옵스 DevOps/linux/Swap메모리.md)</br>
-┃　　　┃　　　┗━　[bash_profile과 bashrc](./데브옵스 DevOps/linux/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/linux/eBPF.md)</br>
-┃　　　┃　　　┗━　[namespace와 cgroup](./데브옵스 DevOps/linux/namespace와 cgroup.md)</br>
-┃　　　┃　　　┗━　[network namespaces](./데브옵스 DevOps/linux/network namespaces.md)</br>
-┃　　　┃　　　┗━　[zshrc](./데브옵스 DevOps/linux/zshrc.md)</br>
-┃　　　┃　　　┗━　[환경변수와 프로세스](./데브옵스 DevOps/linux/환경변수와 프로세스.md)</br>
 ┃　　　┗━　[📁　nginx](./데브옵스 DevOps/nginx)</br>
 ┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/nginx/location block.md)</br>
 ┃　　　┃　　　┗━　[nginx certbot](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
@@ -467,6 +458,15 @@ avg_file_length  : 2933
 ┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ┗━　[📁　운영체제 Operating System](./운영체제 Operating System)</br>
+┃　　　┗━　[📁　linux](./운영체제 Operating System/linux)</br>
+┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/LVM.md)</br>
+┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/Swap메모리.md)</br>
+┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　┗━　[eBPF](./운영체제 Operating System/linux/eBPF.md)</br>
+┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/namespace와 cgroup.md)</br>
+┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network namespaces.md)</br>
+┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/zshrc.md)</br>
+┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
 ┃　　　┗━　[TAS](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[교착상태와 스케줄링](./운영체제 Operating System/교착상태와 스케줄링.md)</br>
