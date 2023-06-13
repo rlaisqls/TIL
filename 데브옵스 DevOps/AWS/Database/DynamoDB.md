@@ -25,7 +25,7 @@ Amazon DynamoDB is a key-balue and document database that delivers single-digit 
 
 - If you face a scenario that the schema, or the structure of your data, to change frequently, then you have to pick a database which procides a non-rigid and flexible way of adding or removing new types of data. This is a classic example of choosing between a relational database and non-relational (NoSQL) database. In this scenario, pick DynamoDB.
 
-- A relational database system does not scal well for the following readons:
+- A relational database system does not scale well for the following readons:
     - It normalizes data and stores it on multiple tables that require multiple queries to write to disk.
     - It generally incurs the performance costs of an ACID-compliant transaction system.
     - It uses expensive joins to reassemble required views of query results.

@@ -52,3 +52,10 @@ RDS is managed service that makes it easy to set up, operate and scale a relatio
   
 - You can have read replicas with Multi-AZ turned on or have the read replica in an entirely separate region. You can even have read replicas of read replicas, but watch out for latency or replication lag.
     The caveat for Read Replicas is that they are subject to small amounts of replication lag. This is because they might be missing some of the latest transactions as they are not updated as quickly as primaries. Application designers need to consider which queries have tolerance to slightly stale data. Those queries should be executed on the read replica, while those demanding completely up-to-date data should run on the primary node.
+
+
+---
+reference 
+- https://aws.amazon.com/ko/rds/
+- https://aws.amazon.com/ko/rds/features/
+- https://aws.amazon.com/ko/rds/faqs/

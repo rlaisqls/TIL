@@ -42,3 +42,8 @@ It is far more effective as an AWS database due to the 5x and 3x performance mul
 - It also helps the cluster to scale the capacity to handle simultaneous SELECT queries, proportional to the number of Aurora Replicas in the cluster. Each Aurora DB cluster has one reader endpoint.
   
 -  If the cluster contains one or more Aurora Replicas, the reader endpoint load-balances each connection request among the Aurora Replicas. In that case, you can only perform read-only statements such as SELECT in that session. If the cluster only contains a primary instance and no Aurora Replicas, the reader endpoint connects to the primary instance directly. In that case, you can perform write operations through the endpoint.
+
+---
+reference
+- https://aws.amazon.com/rds/aurora/
+- https://aws.amazon.com/rds/aurora/features/

@@ -37,4 +37,9 @@ Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the
 
 - If Enhanced VPC Routing is not enabled, Amazon Redshift routes traffic through the Internet, including traffic to other services within the AWS network.
 
-- By using Enhanced VPC Routing, you can use standard VPC features, such as VPC security groups, network access control lists (ACLs), VPC endpoints, VPC endpoint policies, internet gateways, and Domain Name System (DNS) servers.
+- By using Enhanced VPC Routing, you can use standard VPC features, such as VPC security groups, network access control lists (ACLs), VPC endpoints, VPC endpoint policies, internet gateways, and Domain Name System (DNS) servers.]
+
+---
+reference
+- https://aws.amazon.com/redshift/?nc1=h_ls
+- https://aws.amazon.com/redshift/features/?nc=sn&loc=2&dn=1

@@ -70,3 +70,7 @@ Amazon CloudWatch is a monitoring and observablility service. It provides you wi
 - CloudWatch dashboards are customizable home pages in the CloudWatch console that you can use to monitor your resources in a single view
 
 - These dashboards integrate with CloudWatch Metrics and CloudWatch Alarms to create customized views of the metrics and alarms for your AWS resources.
+
+---
+reference
+- https://aws.amazon.com/cloudwatch/faqs/

@@ -19,3 +19,8 @@ EFS provides a simple and fully managed elastic NFS file system for use within A
 - Data is stored across multiple AZs in a region and EFS ensures read after write consistency.
 
 - It is best for file storage that is accessed by a fleet of servers rather than just one server
+
+---
+reference
+- https://aws.amazon.com/efs/
+- https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/AmazonEFS.html

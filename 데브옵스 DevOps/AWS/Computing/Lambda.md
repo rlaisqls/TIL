@@ -46,3 +46,8 @@ AWS LAmbda leys you run code without provisioning or managing servers. You pay o
     ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/54e7a0eb-ffa9-4fa2-a3b3-9fb70b9e7562)
 
 - You'd use Lambda@Edge to simplify and reduce origin infrastructure.
+
+---
+reference
+- https://aws.amazon.com/lambda/
+- https://aws.amazon.com/lambda/features/

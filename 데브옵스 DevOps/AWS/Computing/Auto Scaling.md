@@ -43,3 +43,8 @@ Amazon EC2 Auto Scaling provides several ways for you to scale your Auto Scaling
 - Auto Scaling allows you to suspend and then resume one or more of the Auto Scaling processes in your Auto Scaling Group. This can be very useful when you want to investigate a problem in you application without triggering the Auto Scaling process when making changes.
 
 - You cannot modify a launch configuration after you've created it. If you want to change the launch configuration for an Auto Scaling group, you must create a new launch configuration and update your Auto Scaling group to inherit this new launch configuration.
+
+---
+reference
+- https://docs.aws.amazon.com/ko_kr/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html
+- https://aws.amazon.com/autoscaling/

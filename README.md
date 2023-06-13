@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 394
+files            : 395
 derectories      : 87
-avg_file_length  : 2935
+avg_file_length  : 2932
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -245,6 +245,7 @@ avg_file_length  : 2935
 ┃　　　┃　　　┗━　[nginx 설정](./데브옵스 DevOps/nginx/nginx 설정.md)</br>
 ┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
+┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
 ┃　　　┗━　[GPG](./데브옵스 DevOps/GPG.md)</br>
 ┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[데브옵스](./데브옵스 DevOps/데브옵스.md)</br>

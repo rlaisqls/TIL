@@ -1,3 +1,7 @@
+# Snowcone
+
+Snowcone is the smallest AWS Snow family data transfer device. It can delivery 8TB Storage. Send data offline via device delivery or to AWS via AWS DataSync over the Internet
+
 # Snowball
 
 Snowball is a giant physical disk that is used for migrating high quantities of data into AWS. It is a peta-byte scale data transport solution. Using a large disk like Snowball helps to circumvent common large scale data transfer problems such as high network costs, long transfer times, and security concerns. Snowballs are extremely secure by defign and once the data transfer is complete, the snow balls are wiped clean of your data.
@@ -8,7 +12,7 @@ Snowball is a giant physical disk that is used for migrating high quantities of 
 
 - Snowball is a strong choice for a data transfer job if you need a secure an dquick data transfer renging in the terabytes to many petabytes into AWS.
 
-- Snowball can also be the right choich if tyou don't want to make expensice upgrades to your existing network infrastructure, if tou frequently experience large basklogs of data, if you're located in a physically isolated environment, or if you're in an area where high-speed internet connections are not available or cost-prohibitive.
+- Snowball can also be the right choice if you don't want to make expensice upgrades to your existing network infrastructure, if tou frequently experience large basklogs of data, if you're located in a physically isolated environment, or if you're in an area where high-speed internet connections are not available or cost-prohibitive.
 
 - As a rule of thumb, if it takes more than one week to upload your data to AWS using the spare capacity of you existing internet connection, the you should condider using Snowball.
 

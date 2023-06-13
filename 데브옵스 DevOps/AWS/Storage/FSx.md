@@ -32,3 +32,8 @@ Amazon FSx for Lustre makes it easy and cost effective to launch and run the ope
 - Since the Lustre file system is designed for high-performance computing workloads that typically run on compute clusters, choose EFS for normal Linux file system if your requirements don't match this use case.
 
 - FSx Lustre has the ability to store and retrieve data directly on S3 on its own.
+
+---
+reference
+- https://aws.amazon.com/fsx/
+- https://aws.amazon.com/ko/fsx/windows/

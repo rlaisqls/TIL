@@ -79,7 +79,7 @@ NAT Gateway 또는 NAT 인스턴스는 Public 서브넷에서 동작해야 하�
 
 ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/f7638f72-5175-451c-b8f1-794fa7602d8a)
 
-다른 VPC와 연결하기 위해서는 VPC Peering은 두 VPC 간에 트래픽을 라우팅할 수 있도록 서로 다른 VPC 간의 네트워크 연결을 제공한다.
+다른 VPC와 연결하기 위해서는 두 VPC 간에 트래픽을 라우팅할 수 있도록 서로 다른 VPC 간의 네트워크를 이어줘야하는데, 이것을 VPC Peering이라 부른다.
 
 이렇게 묶어주면 서로 다른 VPC의 인스턴스에서 동일한 네트워크에 속한 것처럼 통신이 가능하다.
 
