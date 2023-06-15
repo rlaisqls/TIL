@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 395
-derectories      : 87
-avg_file_length  : 2932
+files            : 397
+derectories      : 88
+avg_file_length  : 2933
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -38,6 +38,8 @@ avg_file_length  : 2932
 ┃　　　┗━　[📁　WAS](./개발/WAS)</br>
 ┃　　　┃　　　┗━　[tomcat 구성요소](./개발/WAS/tomcat 구성요소.md)</br>
 ┃　　　┃　　　┗━　[웹서버와 WAS](./개발/WAS/웹서버와 WAS.md)</br>
+┃　　　┗━　[📁　apache](./개발/apache)</br>
+┃　　　┃　　　┗━　[Spark](./개발/apache/Spark.md)</br>
 ┃　　　┗━　[📁　netty](./개발/netty)</br>
 ┃　　　┃　　　┗━　[HashedWheelTimer](./개발/netty/HashedWheelTimer.md)</br>
 ┃　　　┃　　　┗━　[netty server 예제](./개발/netty/netty server 예제.md)</br>
@@ -243,6 +245,7 @@ avg_file_length  : 2932
 ┃　　　┃　　　┗━　[nginx docker](./데브옵스 DevOps/nginx/nginx docker.md)</br>
 ┃　　　┃　　　┗━　[nginx 명령어](./데브옵스 DevOps/nginx/nginx 명령어.md)</br>
 ┃　　　┃　　　┗━　[nginx 설정](./데브옵스 DevOps/nginx/nginx 설정.md)</br>
+┃　　　┃　　　┗━　[sites━available](./데브옵스 DevOps/nginx/sites━available.md)</br>
 ┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
