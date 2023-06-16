@@ -33,7 +33,7 @@ route
 
 `red`와 `blue`라는 네트워크 인터페이스를 만들어놓았다고 해보자
 
-두 인터페이스를 연결된 상태로 생성한다. (아직 이 인터페이스가 네임스페이스와 등록되진 않았다.)
+두 인터페이스를 [veth](veth.md)로 연결되도록 한다. (아직 이 인터페이스가 네임스페이스와 등록되진 않았다.)
 ```js
 ip link add veth-red type veth peer name veth-blue
 ```

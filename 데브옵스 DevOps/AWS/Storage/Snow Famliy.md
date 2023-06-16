@@ -21,10 +21,22 @@ Snowball is a giant physical disk that is used for migrating high quantities of 
 - Here is a reference for when Snowball should be considered based on the number of days it would take to make the same transfer over san internet connection:
 ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/1bdce7f4-49b4-4f94-844d-ea1256c3b5ad)
 
-## Snowball Edge and Snowmobile
+## Snowball Edge
 
 - Snowball Edge is a specific type of Snowball that comes with both compute and storage capabilities via AWS Lambda and specvific EC2 instance types. This means you can run code within your snowball while your data is en route to an Amazon data center.
     This enables support of local workloads in remote or offline locations and as a result, Snowball Edge does not need to be limited to a data transfer service. An interesting use case is with airliners. Planes sometimes fly with snowball edges onboeard so they can store large amounts of flight data and compute necessary functions for the plane's own systems. Snobal Edges can also be clustered locally for even better performance.
+
+Snowball Edge diveces have the following options for device donfigurations:
+
+- **Snowball Edge Storage Optimized(for data transfer):** This Snowball Edge device option has a 100TB(80TB usable) storage capacity
+
+- **Snowball Edge Storage Optimized (with EC2 compute functionality):** This Snowball Edge device optoion has up to 80TB of usable storage space, 40 vCPUs, and 80 GiB of memory for compute functionallity. It also comes with 1TB of additional SSD storage space for block volumes attached to EC2 AMIs.
+
+- **Snowball Edge Compute Optimized:** This Snowball Edge device option has the most compute functionality. with 52 vCPUs, 208 GiB of memory, and 42TB(39.5 TB usable) plus 7.68 TB of dedicated MVMe SSD for compute instances for block storage volumes for EC2 compute instances, and 42 TB fo HDD capacity for either object storage or block storage volumes.
+
+- **Snowball Edge Compute Optimizzed with GPU:** This Snowball Edge device option is identical to the Compute Optimized option, except for an installed GPU, equivalent to the on available in the P3 Amazon EC2 instance type. It has 42TB(39.5 TB of HDD storage that can be used for a combination of Amazon S3 compatible object storage and Amazon EBS compatible block storage volumes) plus 7.68 TB of dedicated NVMe SSD for compute instances. 
+
+## Snowmobile
 
 - Snowmobile is an exabyte-scale data transfer solution. It is a data transport solution for 100 petabytes of data and is contained within a 45-foot shipping container hauled by a semi-truck. This massive transfer makes sense if you want to move your entire data center with years of data into the cloud.
 

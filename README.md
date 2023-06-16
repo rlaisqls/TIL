@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 394
-derectories      : 88
-avg_file_length  : 2946
+files            : 399
+derectories      : 90
+avg_file_length  : 2952
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -130,6 +130,7 @@ avg_file_length  : 2946
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
 ┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
 ┃　　　┗━　[Switch](./네트워크 Network/Switch.md)</br>
+┃　　　┗━　[네트워크](./네트워크 Network/네트워크.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┗━　[📁　데브옵스 DevOps](./데브옵스 DevOps)</br>
 ┃　　　┗━　[📁　AWS](./데브옵스 DevOps/AWS)</br>
@@ -463,13 +464,19 @@ avg_file_length  : 2946
 ┃　　　┗━　[자바<？>와 코틀린<*>](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ┗━　[📁　운영체제 Operating System](./운영체제 Operating System)</br>
 ┃　　　┗━　[📁　linux](./운영체제 Operating System/linux)</br>
+┃　　　┃　　　┗━　[📁　network](./운영체제 Operating System/linux/network)</br>
+┃　　　┃　　　┃　　　┗━　[📁　주요명령어](./운영체제 Operating System/linux/network/주요명령어)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ifconfig](./운영체제 Operating System/linux/network/주요명령어/ifconfig.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ping과 netstat](./운영체제 Operating System/linux/network/주요명령어/ping과 netstat.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[route로 라우팅 테이블 확인하기](./운영체제 Operating System/linux/network/주요명령어/route로 라우팅 테이블 확인하기.md)</br>
+┃　　　┃　　　┃　　　┗━　[Virtual Networking Interface](./운영체제 Operating System/linux/network/Virtual Networking Interface.md)</br>
+┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/network/namespace와 cgroup.md)</br>
+┃　　　┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network/network namespaces.md)</br>
 ┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/LVM.md)</br>
 ┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/Swap메모리.md)</br>
 ┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　┗━　[eBPF](./운영체제 Operating System/linux/eBPF.md)</br>
-┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/namespace와 cgroup.md)</br>
-┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network namespaces.md)</br>
 ┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/zshrc.md)</br>
+┃　　　┃　　　┗━　[리눅스 부팅 과정](./운영체제 Operating System/linux/리눅스 부팅 과정.md)</br>
 ┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
 ┃　　　┗━　[TAS](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
