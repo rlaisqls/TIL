@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 399
+files            : 402
 derectories      : 90
-avg_file_length  : 2952
+avg_file_length  : 2953
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -311,6 +311,7 @@ avg_file_length  : 2952
 ┃　　　┃　　　┗━　[집계함수](./데이터베이스 DataBase/SQL/집계함수.md)</br>
 ┃　　　┃　　　┗━　[집합연산자](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
 ┃　　　┗━　[Column, Row기반DB](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
+┃　　　┗━　[OLAP](./데이터베이스 DataBase/OLAP.md)</br>
 ┗━　[📁　스프링 Spring](./스프링 Spring)</br>
 ┃　　　┗━　[📁　AOP](./스프링 Spring/AOP)</br>
 ┃　　　┃　　　┗━　[📁　트랜잭션](./스프링 Spring/AOP/트랜잭션)</br>
@@ -489,7 +490,9 @@ avg_file_length  : 2952
 ┃　　　┗━　[프로세스의 관리](./운영체제 Operating System/프로세스의 관리.md)</br>
 ┗━　[📁　인공지능](./인공지능)</br>
 ┃　　　┗━　[📁　실습](./인공지능/실습)</br>
+┃　　　┃　　　┗━　[CNN](./인공지능/실습/CNN.md)</br>
 ┃　　　┃　　　┗━　[MNIST 숫자 판별](./인공지능/실습/MNIST 숫자 판별.md)</br>
+┃　　　┃　　　┗━　[RNN](./인공지능/실습/RNN.md)</br>
 ┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능/실습/배, 자동차, 비행기 분류하기.md)</br>
 ┃　　　┗━　[DropOut](./인공지능/DropOut.md)</br>
 ┃　　　┗━　[Keras](./인공지능/Keras.md)</br>
