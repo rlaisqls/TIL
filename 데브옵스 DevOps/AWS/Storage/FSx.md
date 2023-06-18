@@ -33,6 +33,13 @@ Amazon FSx for Lustre makes it easy and cost effective to launch and run the ope
 
 - FSx Lustre has the ability to store and retrieve data directly on S3 on its own.
 
+## Amazon FSx for NetApp ONTAP
+
+- Amazon FSx for NetApp ONTAP is a storage service that allows you to launch and run fully managed NetApp ONTAP file systems in the AWS Cloud. It provides the familiar features, performance, capabilities, and APIs of NetApp file systems with the agility, scalability, and simplicity of a fully managed AWS service.
+
+- Amazon FSx for NetApp ONTAP offers high-performance file storage that’s broadly accessible from Linux, Windows, and macOS compute instances via the industry-standard NFS, SMB, and iSCSI protocols. It enables you to use ONTAP’s widely adopted data management capabilities, like snapshots, clones, and replication, with the click of a button. In addition, it provides low-cost storage capacity that’s fully elastic and virtually unlimited in size, and supports compression and deduplication to help you further reduce storage costs.
+
+
 ---
 reference
 - https://aws.amazon.com/fsx/

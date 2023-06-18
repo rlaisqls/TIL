@@ -13,7 +13,7 @@ AWS Auto Scaling lets you build scaling plans that automate how groups of differ
 Amazon EC2 Auto Scaling provides several ways for you to scale your Auto Scaling group.
 
 - **Maintain current instance levels at all times:** You can configure your Auto Scaling group to maintain a specified number of running instances at all times. 
-  o maintain the current instance levels, Amazon EC2 Auto Scaling performs a periodic health check on running instances within an Auto Scaling group. When Amazon EC2 Auto Scaling finds an unhealthy instance, it terminates that instance and launches a new one. 
+  To maintain the current instance levels, Amazon EC2 Auto Scaling performs a periodic health check on running instances within an Auto Scaling group. When Amazon EC2 Auto Scaling finds an unhealthy instance, it terminates that instance and launches a new one. 
 
 - **Scale manually:** Manual scaling is the most basic way to scale your resources, where you specify only the change in the maximum, minimum, or desired capacity of your Auto Scaling group.
 

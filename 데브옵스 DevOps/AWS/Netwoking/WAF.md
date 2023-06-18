@@ -1,6 +1,6 @@
 # Web Application Firewall (WAF)
 
-AWS WAF is a web application thet let you allow or block the HTTP(s) requesys that are bound for CloudFront, API Gateway, Application Load Balancers, EC2, and other Layer 7 entry points into you AWS Environment. AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns that you can define, WAF's default rule-set addresses issues like the OWASP top 10 security risks and is regularly updated whenever new vulnerabilities are discovered.
+AWS WAF is a web application thet let you allow or block the HTTP(s) requests that are bound for CloudFront, API Gateway, Application Load Balancers, EC2, and other Layer 7 entry points into you AWS Environment. AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns that you can define, WAF's default rule-set addresses issues like the OWASP top 10 security risks and is regularly updated whenever new vulnerabilities are discovered.
 
 ---
 

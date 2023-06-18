@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 402
-derectories      : 90
-avg_file_length  : 2953
+files            : 408
+derectories      : 92
+avg_file_length  : 2939
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -41,15 +41,6 @@ avg_file_length  : 2953
 ┃　　　┃　　　┗━　[웹서버와 WAS](./개발/WAS/웹서버와 WAS.md)</br>
 ┃　　　┗━　[📁　apache](./개발/apache)</br>
 ┃　　　┃　　　┗━　[Spark](./개발/apache/Spark.md)</br>
-┃　　　┗━　[📁　netty](./개발/netty)</br>
-┃　　　┃　　　┗━　[HashedWheelTimer](./개발/netty/HashedWheelTimer.md)</br>
-┃　　　┃　　　┗━　[netty server 예제](./개발/netty/netty server 예제.md)</br>
-┃　　　┃　　　┗━　[netty 메시지 전송 흐름](./개발/netty/netty 메시지 전송 흐름.md)</br>
-┃　　　┃　　　┗━　[netty의 thread 모델](./개발/netty/netty의 thread 모델.md)</br>
-┃　　　┃　　　┗━　[webFlux와 netty](./개발/netty/webFlux와 netty.md)</br>
-┃　　　┗━　[📁　node.js](./개발/node.js)</br>
-┃　　　┃　　　┗━　[module.exports와 exports](./개발/node.js/module.exports와 exports.md)</br>
-┃　　　┃　　　┗━　[puppeteer](./개발/node.js/puppeteer.md)</br>
 ┃　　　┗━　[📁　비동기](./개발/비동기)</br>
 ┃　　　┃　　　┗━　[📁　coroutine](./개발/비동기/coroutine)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　thread](./개발/비동기/coroutine/thread)</br>
@@ -73,7 +64,18 @@ avg_file_length  : 2953
 ┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
 ┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
 ┃　　　┃　　　┗━　[DB 암호화](./개발/암호화/DB 암호화.md)</br>
+┃　　　┗━　[📁　프레임워크](./개발/프레임워크)</br>
+┃　　　┃　　　┗━　[📁　netty](./개발/프레임워크/netty)</br>
+┃　　　┃　　　┃　　　┗━　[HashedWheelTimer](./개발/프레임워크/netty/HashedWheelTimer.md)</br>
+┃　　　┃　　　┃　　　┗━　[netty server 예제](./개발/프레임워크/netty/netty server 예제.md)</br>
+┃　　　┃　　　┃　　　┗━　[netty 메시지 전송 흐름](./개발/프레임워크/netty/netty 메시지 전송 흐름.md)</br>
+┃　　　┃　　　┃　　　┗━　[netty의 thread 모델](./개발/프레임워크/netty/netty의 thread 모델.md)</br>
+┃　　　┃　　　┃　　　┗━　[webFlux와 netty](./개발/프레임워크/netty/webFlux와 netty.md)</br>
+┃　　　┃　　　┗━　[📁　node.js](./개발/프레임워크/node.js)</br>
+┃　　　┃　　　　　　　┗━　[module.exports와 exports](./개발/프레임워크/node.js/module.exports와 exports.md)</br>
+┃　　　┃　　　　　　　┗━　[puppeteer](./개발/프레임워크/node.js/puppeteer.md)</br>
 ┃　　　┗━　[CustomAnnotation](./개발/CustomAnnotation.md)</br>
+┃　　　┗━　[Fine━Grained와 Coarse━Grained](./개발/Fine━Grained와 Coarse━Grained.md)</br>
 ┃　　　┗━　[Intellij Profiling tools](./개발/Intellij Profiling tools.md)</br>
 ┃　　　┗━　[mermaid 문법](./개발/mermaid 문법.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID](./개발/직렬화 serialVersionUID.md)</br>
@@ -113,19 +115,20 @@ avg_file_length  : 2953
 ┃　　　┗━　[📁　L1 network access layer](./네트워크 Network/L1 network access layer)</br>
 ┃　　　┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/L1 network access layer/Ethernet과 TokenRing.md)</br>
 ┃　　　┗━　[📁　L2 internet layer](./네트워크 Network/L2 internet layer)</br>
+┃　　　┃　　　┗━　[CIDR](./네트워크 Network/L2 internet layer/CIDR.md)</br>
 ┃　　　┃　　　┗━　[IP](./네트워크 Network/L2 internet layer/IP.md)</br>
 ┃　　　┃　　　┗━　[서브넷](./네트워크 Network/L2 internet layer/서브넷.md)</br>
 ┃　　　┗━　[📁　L3 transport layer](./네트워크 Network/L3 transport layer)</br>
 ┃　　　┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/L3 transport layer/SO_REUSEADDR.md)</br>
 ┃　　　┃　　　┗━　[TCP와 UDP](./네트워크 Network/L3 transport layer/TCP와 UDP.md)</br>
 ┃　　　┗━　[📁　L4 appplication layer](./네트워크 Network/L4 appplication layer)</br>
+┃　　　┃　　　┗━　[CDN](./네트워크 Network/L4 appplication layer/CDN.md)</br>
 ┃　　　┃　　　┗━　[DNS 레코드유형](./네트워크 Network/L4 appplication layer/DNS 레코드유형.md)</br>
 ┃　　　┃　　　┗━　[HTTP](./네트워크 Network/L4 appplication layer/HTTP.md)</br>
 ┃　　　┃　　　┗━　[HTTP Options](./네트워크 Network/L4 appplication layer/HTTP Options.md)</br>
 ┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/TLS.md)</br>
 ┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/TLS 인증서 발급 절차를 이해해보자.md)</br>
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
-┃　　　┗━　[CDN](./네트워크 Network/CDN.md)</br>
 ┃　　　┗━　[Cloudflare ProxyStatus](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
 ┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
@@ -183,6 +186,7 @@ avg_file_length  : 2953
 ┃　　　┃　　　┗━　[AWS cloud computing](./데브옵스 DevOps/AWS/AWS cloud computing.md)</br>
 ┃　　　┃　　　┗━　[NACLs](./데브옵스 DevOps/AWS/NACLs.md)</br>
 ┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
+┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
 ┃　　　┃　　　┗━　[SAA 준비](./데브옵스 DevOps/AWS/SAA 준비.md)</br>
 ┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Security Groups.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
@@ -227,6 +231,9 @@ avg_file_length  : 2953
 ┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　┗━　[ContainerRuntime](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
 ┃　　　┃　　　┗━　[Container Orchestration](./데브옵스 DevOps/Container/Container Orchestration.md)</br>
+┃　　　┗━　[📁　DR](./데브옵스 DevOps/DR)</br>
+┃　　　┃　　　┗━　[Fail　over와 서버 이중화](./데브옵스 DevOps/DR/Fail　over와 서버 이중화.md)</br>
+┃　　　┃　　　┗━　[Pilot Light & Warm Standby](./데브옵스 DevOps/DR/Pilot Light & Warm Standby.md)</br>
 ┃　　　┗━　[📁　IaC](./데브옵스 DevOps/IaC)</br>
 ┃　　　┃　　　┗━　[Configuration Drift](./데브옵스 DevOps/IaC/Configuration Drift.md)</br>
 ┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform.md)</br>
@@ -311,6 +318,7 @@ avg_file_length  : 2953
 ┃　　　┃　　　┗━　[집계함수](./데이터베이스 DataBase/SQL/집계함수.md)</br>
 ┃　　　┃　　　┗━　[집합연산자](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
 ┃　　　┗━　[Column, Row기반DB](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
+┃　　　┗━　[Data Lake와 Warehouse](./데이터베이스 DataBase/Data Lake와 Warehouse.md)</br>
 ┃　　　┗━　[OLAP](./데이터베이스 DataBase/OLAP.md)</br>
 ┗━　[📁　스프링 Spring](./스프링 Spring)</br>
 ┃　　　┗━　[📁　AOP](./스프링 Spring/AOP)</br>
@@ -502,6 +510,7 @@ avg_file_length  : 2953
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XXfma8di](./XXfma8di)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>

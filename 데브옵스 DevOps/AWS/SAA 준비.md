@@ -2,7 +2,7 @@
 
 dump 문제를 풀고 헷갈리거나 미흡했던 개념 위주로 정리합니다.
 
-이미 이해한 문제 해설은 적어두지 않았습니다.
+쉬운 문제 해설은 적어두지 않았습니다.
 
 > 참고링크<br>- https://www.youtube.com/watch?v=BFKs3zkl0Cw&list=PLyABYqulvUwaow4m_e2AJYlOjmWTOIjcM&pp=iAQB<br>- https://explore.skillbuilder.aws/learn/course/external/view/elearning/14776/exam-prep-aws-certified-solutions-architect-associate-saa-c03-english-with-practice-material
 
@@ -100,3 +100,7 @@ A company wants to create a multi-instance application which requires low latenc
 A e-commerce company hosts its internet-facing containerized web applicatio on an Amazon EKS cluster. The EKS cluster is situated within a VPC's private subnet. The EKS cluster is accessed by developers using a bastion server on a public network. As per new compliance requirement, security policy prohibits use of bastion hosts and public internet access to the EKS cluster. Which of the following is most cost-effective solution?
 
 - Establish a VPN connection.
+
+---
+
+A company needs a relational database with 1 minute Recovery Time Objective (RTO) and 1 second Recovery Point Objective (RPO) for multi-region disaster recovery. Which solution should you recommend?

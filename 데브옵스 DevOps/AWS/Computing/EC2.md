@@ -107,8 +107,42 @@ The AWS Nitro System is the underlying platform for the latest generation of EC2
 
 This performance increase enables you to speed up sections of your workflows dependent on EBS-optimized instance performance. For storage intensive workloads, you will have an opportunity to use smaller instance sizes and still meet your EBS-optimized instance performance requirement, thereby saving costs. With this performance increase, you will be able to handle unplanned spikes in EBS-optimized instance demand without any impact to your application performance. 
 
+## Instance Familiy
+
+Amazon EC2 provides a variety of instance types so you can choose the type that best meets your requirements. Instance types are named based on their family, generation, additional capabilities, and size. The first position of the instance type name indicates the instance family, for example c. The second position indicates the instance generation, for example 5. The remaining letters before the period indicate additional capabilities, such as instance store volumes. After the period (.) is the instance size, such as small or 4xlarge, or metal for bare metal instances.
+
+#### Instance families
+
+- C – Compute
+- D – Dense storage
+- F – FPGA
+- G – GPU
+- Hpc – High performance computing
+- I – I/O
+- Inf – AWS Inferentia
+- M – Most scenarios
+- P – GPU
+- R – Random access memory
+- T – Turbo
+- Trn – AWS Tranium
+- U – Ultra-high memory
+- VT – Video transcoding
+- X – Extra-large memory
+
+#### Additional capabilities
+
+- a – AMD processors
+- g – AWS Graviton processors
+- i – Intel processors
+- d – Instance store volumes
+- n – Network and EBS optimized
+- e – Extra storage or memory
+- z – High performance
+
+
 
 ---
 reference
 - https://aws.amazon.com/ec2/faqs/
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
+- https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/WindowsGuide/instance-types.html
