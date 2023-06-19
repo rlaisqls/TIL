@@ -2,8 +2,6 @@
 
 dump 문제를 풀고 헷갈리거나 미흡했던 개념 위주로 정리합니다.
 
-쉬운 문제 해설은 적어두지 않았습니다.
-
 > 참고링크<br>- https://www.youtube.com/watch?v=BFKs3zkl0Cw&list=PLyABYqulvUwaow4m_e2AJYlOjmWTOIjcM&pp=iAQB<br>- https://explore.skillbuilder.aws/learn/course/external/view/elearning/14776/exam-prep-aws-certified-solutions-architect-associate-saa-c03-english-with-practice-material
 
 ---

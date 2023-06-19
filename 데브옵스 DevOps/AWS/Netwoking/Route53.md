@@ -52,9 +52,9 @@ Amazon Route 53 is a highly available and scalable Domain Name System(DNS) servi
 
 - **Weighted Routing** is used when you want to split your traffic based on assigned weights. For example, if you want 80% of your traffic to go to one AZ and the rest to goto another, use Weighted Routing. This policy is very useful for testing feature changes and due to the traffic splitting characteristics, it can double as a means to perform blue-grean deployments. When creating Whighted Routing, you need to specify a new record for each IP address. You cannot group the various IPs under one record like with Simpele Routing.
 
-- **Latency-base Routing**, as the name implies, is based on setting up routing based on what would be the lowest latency for a given user. To use latency-based routing, you must create a latency resource record set in the same region as the corresponding #C2 or ELB resource receiving the traffix. When Route53 receives a query for your site, it selects the record set that gives the user the quickest speed. When creating Latency-based Routing, you need to specify a enw record for each IP.
+- **Latency-base Routing**, as the name implies, is based on setting up routing based on what would be the lowest latency for a given user. To use latency-based routing, you must create a latency resource record set in the same region as the corresponding EC2 or ELB resource receiving the traffix. When Route53 receives a query for your site, it selects the record set that gives the user the quickest speed. When creating Latency-based Routing, you need to specify a end record for each IP.
 
-- **Failover Routing** is used when you want to configure an active-passive failover set up. Route53 will monitor the health of your primary so that it can failover when needed. You can also manually set up health cheks to monitor all endpoints if you want more detailed ruls.
+- **Failover Routing** is used when you want to configure an active-passive failover set up. Route53 will monitor the health of your primary so that it can failover when needed. You can also manually set up health checks to monitor all endpoints if you want more detailed ruls.
 
 - **Geolocation Routing** lets you choose where traffic will be sent based on the geographic location of your users.
 

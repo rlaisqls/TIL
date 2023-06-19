@@ -1,4 +1,4 @@
-# Pilot Light & Warm Standby
+# DR strategies
 
 DR is a crucial part of your Business Continuity Plan. How can we architect for disaster recovery (DR), which is the process of preparing for and recovering from a disaster?
 

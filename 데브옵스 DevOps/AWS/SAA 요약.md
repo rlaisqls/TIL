@@ -1,17 +1,29 @@
 ## Analytics
 - QuickSight: Visualization
 
-
 ## Compute
-- EC2: Elastic Compute Cloud
+- [EC2](./Computing/EC2.md): Elastic Compute Cloud
+
+- [API Gateway](./Netwoking/API%E2%80%85Gateway.md): REST 및 Websocker API를 생성, 유지, 관리
+
+# Database
+- [EFS](./Database/EFS.md): File System
+- [DynamoDB](./Database/DynamoDB.md): NoSQL
+- [RDS](./Database/RDS.md): RDBMS
+- [Aurora](./Database/Aurora.md): 안정성과 고가용성을 겸비한 RDBMS (Serverless 가능)
+- [Redshift](./Database/Redshift.md): fully managed, petabyte-scale data warehouse service in the cloud.
 
 ## Management and governance
+- [CloudWatch](./Management%E2%80%85and%E2%80%85governance/CloudWatch.md): 애플리케이션 지표, 로그 모니터링
+  - [EventBridge](https://docs.aws.amazon.com/ko_kr/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html): 변경 사항 실시간 전달
 - [CloudTrail](./Management%E2%80%85and%E2%80%85governance/CloudTrail.md): 권한이나 Policy에 대한 기록 트래킹
-- [CloudFormation](./Management%E2%80%85and%E2%80%85governance/CloudFormation.md): 클라우드 전체 배포 관리
+- [CloudFormation](./Management%E2%80%85and%E2%80%85governance/CloudFormation.md): 클라우드 리소스 전체 모델링 관리
+  - Origin Shield: Caching Layer
 
 ## Networking
 - [WAF](./Netwoking/WAF.md): 7계층 방화벽, origin 변조나 script/SQL inject 방지
 - Shield: DDos 방지
+- [VPC](./Netwoking/VPC.md): 가상 네트워크, 다른 네트워크와 논리적 분리
 
 ## Security
 - [Cognito](./Security/Cognite.md): User pools, Identity pools 제공

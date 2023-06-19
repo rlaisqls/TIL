@@ -39,7 +39,7 @@ Finally, Amazon CloudFront uses additional optimizations - e.g. wider TCP initia
   - **RTMP:** streaming content, adobe, etc
   
 - Edge locations are not just read only, They can be written to which will then return the write value back to the origin.
-  
+
 - Cached content can be manually invalidated or cleared beyond the TTL, but this does incur a cost.
   
 - You can invalidate the distribution of certain objects or entire directories so that content is loaded directly from the origin every time. Invalidation content is also hepful when debugging if content pulled from the origin seems correct, but pulling that same content from an edge location seems incorrect.
@@ -53,6 +53,12 @@ Finally, Amazon CloudFront uses additional optimizations - e.g. wider TCP initia
   - Capture requests that are sent to the CloudFront API.
   
 - An Origin Access Identity (OAI) is used for charing private content via CloudFront. The OAI is a virtual user that will be used to give your CloudFront distribution permission to fetch a private object from your origin. (e.q. S3 bucket).
+
+- You can set origin groups and configuring specific origin failover options. When any of the following occur:
+  - The primary origin returns an HTTP status code that you’ve configured for failover
+  - CloudFront fails to connect to the primary origin
+  - The response from the primary origin takes too long (times out)
+  Then CloudFront routes the request to the secondary origin in the origin group.
 
 ### CloudFront Signed URLs and Signed Cookies
 
