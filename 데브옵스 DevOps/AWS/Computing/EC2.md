@@ -38,7 +38,7 @@ EC2 has an extemely reduced time frame for provisioning and booting new instance
 
 - **Reserved instance** ensure that you keep exclusive use of an instance on 1 or 3 year contract terms. The long-term commitment procides significantly reduced discounts at the hourly rate.
 
-- **Spot instances** take advantage of Amazon's exess capacity and work in an interesting manner. In order to use them, you must financially bid for access. 
+- **Spot instances** take advantage of Amazon's excess capacity and work in an interesting manner. In order to use them, you must financially bid for access. 
 
 ## Standard Reserved vs. Converible Reserved vs. Scheduled Reserved
 

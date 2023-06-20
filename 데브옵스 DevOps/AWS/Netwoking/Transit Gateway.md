@@ -41,8 +41,12 @@ VPC has low cost since you need to pay only for data transfer, however transit g
 - You need network-level segmentation. (possible with multiple TGW route tables)
 - You need multiple VPCs connectivity to On-premises.
 
+<img width="593" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/89a9273a-31bd-43a4-bcbd-fb7eef007d33">
+<img width="584" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/ff829cf2-57d0-4c1e-a9a4-34f84872659f">
+
 ---
 
 reference
 - https://aws.amazon.com/transit-gateway/?nc1=h_ls
 - https://medium.com/awesome-cloud/aws-difference-between-vpc-peering-and-transit-gateway-comparison-aws-vpc-peering-vs-aws-transit-gateway-3640a464be2d
+- https://dev.classmethod.jp/articles/different-from-vpc-peering-and-transit-gateway/
