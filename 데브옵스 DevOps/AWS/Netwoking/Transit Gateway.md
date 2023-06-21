@@ -26,7 +26,7 @@ VPC has low cost since you need to pay only for data transfer, however transit g
 
 |Service|Advantages|Disadvantages|
 |-|-|-|
-|VPC|- Low cost since you need to pay only for data transfer.<br>- No bandwidth limit.|- Complex at scale. Each new VPC increases the complexity of the network. Harder to maintain route tables compared to TGW.<br>- No transit routing.<br>- Maximum 125 peering connections per VPC.|
+|VPC peering|- Low cost since you need to pay only for data transfer.<br>- No bandwidth limit.|- Complex at scale. Each new VPC increases the complexity of the network. Harder to maintain route tables compared to TGW.<br>- No transit routing.<br>- Maximum 125 peering connections per VPC.|
 |Transit Gateway|- Simplified management of VPC connections. Each spoke VPC only needs to connect to the TGW to gain access to other connected VPCs.<br>- Supports more VPCs compared to VPC peering.<br>- TGW Route Tables per attachment allow for fine-grained routing.|- Additional hop introduces some latency.<br>- Extra cost of hourly charge per attachment in addition to data fees.|
 
 **Choose VPC Peering if:**

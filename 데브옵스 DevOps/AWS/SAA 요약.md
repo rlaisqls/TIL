@@ -3,7 +3,10 @@
 
 ## Compute
 - [EC2](./Computing/EC2.md): Elastic Compute Cloud
-
+  - 종류
+    - **On-Demand instances**: 서버 대여, 시간 당 지불
+    - **Reserved instance**: 1~3년간 대여
+    - **Spot instances**: 사용자 제시 가격(입찰가격)을 정해놓고 저렴할 때 이용
 - [API Gateway](./Netwoking/API%E2%80%85Gateway.md): REST 및 Websocker API를 생성, 유지, 관리
 
 # Database

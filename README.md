@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 414
+files            : 415
 derectories      : 92
-avg_file_length  : 2967
+avg_file_length  : 2983
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -21,6 +21,7 @@ avg_file_length  : 2967
 ┃　　　┃　　　┗━　[파일트리 자동생성 V1](./Git/hooks/파일트리 자동생성 V1.md)</br>
 ┃　　　┃　　　┗━　[파일트리 자동생성 V2](./Git/hooks/파일트리 자동생성 V2.md)</br>
 ┃　　　┃　　　┗━　[파일트리 자동생성 V3](./Git/hooks/파일트리 자동생성 V3.md)</br>
+┃　　　┗━　[GitLab](./Git/GitLab.md)</br>
 ┃　　　┗━　[자동커밋](./Git/자동커밋.md)</br>
 ┗━　[📁　개발](./개발)</br>
 ┃　　　┗━　[📁　Gradle](./개발/Gradle)</br>
@@ -75,7 +76,6 @@ avg_file_length  : 2967
 ┃　　　┃　　　　　　　┗━　[module.exports와 exports](./개발/프레임워크/node.js/module.exports와 exports.md)</br>
 ┃　　　┃　　　　　　　┗━　[puppeteer](./개발/프레임워크/node.js/puppeteer.md)</br>
 ┃　　　┗━　[CustomAnnotation](./개발/CustomAnnotation.md)</br>
-┃　　　┗━　[Elastic Serch](./개발/Elastic Serch.md)</br>
 ┃　　　┗━　[Fine━Grained와 Coarse━Grained](./개발/Fine━Grained와 Coarse━Grained.md)</br>
 ┃　　　┗━　[Intellij Profiling tools](./개발/Intellij Profiling tools.md)</br>
 ┃　　　┗━　[Keycloak](./개발/Keycloak.md)</br>
@@ -262,6 +262,7 @@ avg_file_length  : 2967
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
 ┃　　　┗━　[ELK](./데브옵스 DevOps/ELK.md)</br>
+┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Elastic Search.md)</br>
 ┃　　　┗━　[GPG](./데브옵스 DevOps/GPG.md)</br>
 ┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[데브옵스](./데브옵스 DevOps/데브옵스.md)</br>
@@ -516,7 +517,6 @@ avg_file_length  : 2967
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[📁　XXunv8o3](./XXunv8o3)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
