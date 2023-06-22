@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 415
-derectories      : 92
-avg_file_length  : 2983
+files            : 420
+derectories      : 93
+avg_file_length  : 2980
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -175,6 +175,7 @@ avg_file_length  : 2983
 ┃　　　┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Netwoking/Security Groups.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Transit Gateway](./데브옵스 DevOps/AWS/Netwoking/Transit Gateway.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwoking/VPC.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPC Mapping Service](./데브옵스 DevOps/AWS/Netwoking/VPC Mapping Service.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwoking/VPN.md)</br>
 ┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Netwoking/WAF.md)</br>
 ┃　　　┃　　　┗━　[📁　Security](./데브옵스 DevOps/AWS/Security)</br>
@@ -247,10 +248,15 @@ avg_file_length  : 2983
 ┃　　　┃　　　┗━　[Understanding Ansible, Terraform, Puppet, Chef, and Salt](./데브옵스 DevOps/IaC/Understanding Ansible, Terraform, Puppet, Chef, and Salt.md)</br>
 ┃　　　┗━　[📁　Logging](./데브옵스 DevOps/Logging)</br>
 ┃　　　┃　　　┗━　[📁　datadog](./데브옵스 DevOps/Logging/datadog)</br>
-┃　　　┃　　　　　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog/datadog.md)</br>
-┃　　　┃　　　　　　　┗━　[datadog APM기능 사용하기](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
-┃　　　┃　　　　　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
-┃　　　┃　　　　　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
+┃　　　┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog/datadog.md)</br>
+┃　　　┃　　　┃　　　┗━　[datadog APM기능 사용하기](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
+┃　　　┃　　　┃　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
+┃　　　┃　　　┃　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
+┃　　　┃　　　┗━　[📁　elk](./데브옵스 DevOps/Logging/elk)</br>
+┃　　　┃　　　　　　　┗━　[+ELK Docker━compose](./데브옵스 DevOps/Logging/elk/+ELK Docker━compose.md)</br>
+┃　　　┃　　　　　　　┗━　[+ELK Stack](./데브옵스 DevOps/Logging/elk/+ELK Stack.md)</br>
+┃　　　┃　　　　　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Logging/elk/ElasticSearch 검색 명령어.md)</br>
+┃　　　┃　　　　　　　┗━　[Logstash](./데브옵스 DevOps/Logging/elk/Logstash.md)</br>
 ┃　　　┗━　[📁　nginx](./데브옵스 DevOps/nginx)</br>
 ┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/nginx/location block.md)</br>
 ┃　　　┃　　　┗━　[nginx certbot](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
@@ -261,7 +267,6 @@ avg_file_length  : 2983
 ┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
-┃　　　┗━　[ELK](./데브옵스 DevOps/ELK.md)</br>
 ┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Elastic Search.md)</br>
 ┃　　　┗━　[GPG](./데브옵스 DevOps/GPG.md)</br>
 ┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
@@ -488,6 +493,7 @@ avg_file_length  : 2983
 ┃　　　┃　　　┃　　　┗━　[Virtual Networking Interface](./운영체제 Operating System/linux/network/Virtual Networking Interface.md)</br>
 ┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/network/namespace와 cgroup.md)</br>
 ┃　　　┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network/network namespaces.md)</br>
+┃　　　┃　　　┗━　[+chmod](./운영체제 Operating System/linux/+chmod.md)</br>
 ┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/LVM.md)</br>
 ┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/Swap메모리.md)</br>
 ┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/bash_profile과 bashrc.md)</br>

@@ -25,13 +25,12 @@ one_hot_test_labels = tf.keras.utils.to_categorical(test_labels, 10)
 
 print(one_hot_train_labels[:10])
 
-
 model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.Dense(input_dim=784, units=128, activation='relu'))
 model.add(tf.keras.layers.Dropout(0.2))
 model.add(tf.keras.layers.Dense(units=10, activation='softmax'))
 
-model.compile(optimizer=tf.optimizers.Adam(learning_rate=0.01),loss='categorical_crossentropy', metrics=['accuracy'])
+model.compile(optimizer=tf.optimizers.Adam(learning_rate=0.01), loss='categorical_crossentropy', metrics=['accuracy'])
 
 model.summary()
 history = model.fit(train_images, one_hot_train_labels, epochs=1, batch_size=10)
@@ -89,3 +88,7 @@ model.add(tf.keras.layers.Dense(units=10, activation='softmax'))
 ```
 
 <img width="652" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/3fd9534e-3d02-4e7a-884c-834ff2ac623c">
+
+---
+참고
+- https://keras.io/ko/getting-started/sequential-model-guide/
