@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 421
-derectories      : 93
-avg_file_length  : 3084
+files            : 429
+derectories      : 97
+avg_file_length  : 3079
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -137,6 +137,7 @@ avg_file_length  : 3084
 ┃　　　┗━　[ACME](./네트워크 Network/ACME.md)</br>
 ┃　　　┗━　[Cloudflare ProxyStatus](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
+┃　　　┗━　[SSH config](./네트워크 Network/SSH config.md)</br>
 ┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
 ┃　　　┗━　[Switch](./네트워크 Network/Switch.md)</br>
 ┃　　　┗━　[네트워크](./네트워크 Network/네트워크.md)</br>
@@ -242,10 +243,14 @@ avg_file_length  : 3084
 ┃　　　┃　　　┗━　[DR strategies](./데브옵스 DevOps/DR/DR strategies.md)</br>
 ┃　　　┃　　　┗━　[Fail　over와 서버 이중화](./데브옵스 DevOps/DR/Fail　over와 서버 이중화.md)</br>
 ┃　　　┗━　[📁　IaC](./데브옵스 DevOps/IaC)</br>
+┃　　　┃　　　┗━　[📁　Terraform](./데브옵스 DevOps/IaC/Terraform)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform/Terraform.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform import와 Terraforming](./데브옵스 DevOps/IaC/Terraform/Terraform import와 Terraforming.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform with AWS](./데브옵스 DevOps/IaC/Terraform/Terraform with AWS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform 키워드](./데브옵스 DevOps/IaC/Terraform/Terraform 키워드.md)</br>
+┃　　　┃　　　┃　　　┗━　[aws 서버　네트워크 구축](./데브옵스 DevOps/IaC/Terraform/aws 서버　네트워크 구축.md)</br>
 ┃　　　┃　　　┗━　[Configuration Drift](./데브옵스 DevOps/IaC/Configuration Drift.md)</br>
-┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform.md)</br>
-┃　　　┃　　　┗━　[Terraform import와 Terraforming](./데브옵스 DevOps/IaC/Terraform import와 Terraforming.md)</br>
-┃　　　┃　　　┗━　[Terraform with AWS](./데브옵스 DevOps/IaC/Terraform with AWS.md)</br>
+┃　　　┃　　　┗━　[Phoenix Server](./데브옵스 DevOps/IaC/Phoenix Server.md)</br>
 ┃　　　┃　　　┗━　[Understanding Ansible, Terraform, Puppet, Chef, and Salt](./데브옵스 DevOps/IaC/Understanding Ansible, Terraform, Puppet, Chef, and Salt.md)</br>
 ┃　　　┗━　[📁　Logging](./데브옵스 DevOps/Logging)</br>
 ┃　　　┃　　　┗━　[📁　datadog](./데브옵스 DevOps/Logging/datadog)</br>
@@ -269,6 +274,7 @@ avg_file_length  : 3084
 ┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
 ┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Elastic Search.md)</br>
 ┃　　　┗━　[GPG](./데브옵스 DevOps/GPG.md)</br>
+┃　　　┗━　[Packer](./데브옵스 DevOps/Packer.md)</br>
 ┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[데브옵스](./데브옵스 DevOps/데브옵스.md)</br>
 ┗━　[📁　데이터베이스 DataBase](./데이터베이스 DataBase)</br>
@@ -485,6 +491,10 @@ avg_file_length  : 3084
 ┃　　　┗━　[자바<？>와 코틀린<*>](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ┗━　[📁　운영체제 Operating System](./운영체제 Operating System)</br>
 ┃　　　┗━　[📁　linux](./운영체제 Operating System/linux)</br>
+┃　　　┃　　　┗━　[📁　authentication](./운영체제 Operating System/linux/authentication)</br>
+┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/authentication/chmod.md)</br>
+┃　　　┃　　　┗━　[📁　memory](./운영체제 Operating System/linux/memory)</br>
+┃　　　┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/memory/Swap메모리.md)</br>
 ┃　　　┃　　　┗━　[📁　network](./운영체제 Operating System/linux/network)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　주요명령어](./운영체제 Operating System/linux/network/주요명령어)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ifconfig](./운영체제 Operating System/linux/network/주요명령어/ifconfig.md)</br>
@@ -493,12 +503,14 @@ avg_file_length  : 3084
 ┃　　　┃　　　┃　　　┗━　[Virtual Networking Interface](./운영체제 Operating System/linux/network/Virtual Networking Interface.md)</br>
 ┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/network/namespace와 cgroup.md)</br>
 ┃　　　┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network/network namespaces.md)</br>
+┃　　　┃　　　┗━　[📁　process](./운영체제 Operating System/linux/process)</br>
+┃　　　┃　　　┃　　　┗━　[+Background process](./운영체제 Operating System/linux/process/+Background process.md)</br>
+┃　　　┃　　　┗━　[+Linux 구조](./운영체제 Operating System/linux/+Linux 구조.md)</br>
 ┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/LVM.md)</br>
-┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/Swap메모리.md)</br>
+┃　　　┃　　　┗━　[Linux 부팅 과정](./운영체제 Operating System/linux/Linux 부팅 과정.md)</br>
+┃　　　┃　　　┗━　[Linux 특징 및 관련용어](./운영체제 Operating System/linux/Linux 특징 및 관련용어.md)</br>
 ┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/chmod.md)</br>
 ┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/zshrc.md)</br>
-┃　　　┃　　　┗━　[리눅스 부팅 과정](./운영체제 Operating System/linux/리눅스 부팅 과정.md)</br>
 ┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
 ┃　　　┗━　[TAS](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
@@ -524,7 +536,6 @@ avg_file_length  : 3084
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[📁　XXr3W7X1](./XXr3W7X1)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
