@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 420
+files            : 421
 derectories      : 93
-avg_file_length  : 2980
+avg_file_length  : 3084
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -134,6 +134,7 @@ avg_file_length  : 2980
 ┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/TLS.md)</br>
 ┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/TLS 인증서 발급 절차를 이해해보자.md)</br>
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
+┃　　　┗━　[ACME](./네트워크 Network/ACME.md)</br>
 ┃　　　┗━　[Cloudflare ProxyStatus](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
 ┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
@@ -253,8 +254,7 @@ avg_file_length  : 2980
 ┃　　　┃　　　┃　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
 ┃　　　┃　　　┃　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
 ┃　　　┃　　　┗━　[📁　elk](./데브옵스 DevOps/Logging/elk)</br>
-┃　　　┃　　　　　　　┗━　[+ELK Docker━compose](./데브옵스 DevOps/Logging/elk/+ELK Docker━compose.md)</br>
-┃　　　┃　　　　　　　┗━　[+ELK Stack](./데브옵스 DevOps/Logging/elk/+ELK Stack.md)</br>
+┃　　　┃　　　　　　　┗━　[ELK Stack](./데브옵스 DevOps/Logging/elk/ELK Stack.md)</br>
 ┃　　　┃　　　　　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Logging/elk/ElasticSearch 검색 명령어.md)</br>
 ┃　　　┃　　　　　　　┗━　[Logstash](./데브옵스 DevOps/Logging/elk/Logstash.md)</br>
 ┃　　　┗━　[📁　nginx](./데브옵스 DevOps/nginx)</br>
@@ -493,10 +493,10 @@ avg_file_length  : 2980
 ┃　　　┃　　　┃　　　┗━　[Virtual Networking Interface](./운영체제 Operating System/linux/network/Virtual Networking Interface.md)</br>
 ┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/network/namespace와 cgroup.md)</br>
 ┃　　　┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network/network namespaces.md)</br>
-┃　　　┃　　　┗━　[+chmod](./운영체제 Operating System/linux/+chmod.md)</br>
 ┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/LVM.md)</br>
 ┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/Swap메모리.md)</br>
 ┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/chmod.md)</br>
 ┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/zshrc.md)</br>
 ┃　　　┃　　　┗━　[리눅스 부팅 과정](./운영체제 Operating System/linux/리눅스 부팅 과정.md)</br>
 ┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
@@ -517,12 +517,14 @@ avg_file_length  : 2980
 ┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능/실습/배, 자동차, 비행기 분류하기.md)</br>
 ┃　　　┗━　[DropOut](./인공지능/DropOut.md)</br>
 ┃　　　┗━　[Keras](./인공지능/Keras.md)</br>
-┃　　　┗━　[경사하강법](./인공지능/경사하강법.md)</br>
+┃　　　┗━　[Optimizer](./인공지능/Optimizer.md)</br>
+┃　　　┗━　[RNN](./인공지능/RNN.md)</br>
 ┃　　　┗━　[선형회귀](./인공지능/선형회귀.md)</br>
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XXr3W7X1](./XXr3W7X1)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
