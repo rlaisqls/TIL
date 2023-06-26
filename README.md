@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 429
-derectories      : 97
-avg_file_length  : 3079
+files            : 441
+derectories      : 100
+avg_file_length  : 3069
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -493,10 +493,20 @@ avg_file_length  : 3079
 ┃　　　┗━　[📁　linux](./운영체제 Operating System/linux)</br>
 ┃　　　┃　　　┗━　[📁　authentication](./운영체제 Operating System/linux/authentication)</br>
 ┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/authentication/chmod.md)</br>
+┃　　　┃　　　┃　　　┗━　[사용자 관리](./운영체제 Operating System/linux/authentication/사용자 관리.md)</br>
+┃　　　┃　　　┗━　[📁　disk &　dir](./운영체제 Operating System/linux/disk &　dir)</br>
+┃　　　┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/disk &　dir/LVM.md)</br>
+┃　　　┃　　　┃　　　┗━　[Linux 디렉토리 구조](./운영체제 Operating System/linux/disk &　dir/Linux 디렉토리 구조.md)</br>
+┃　　　┃　　　┃　　　┗━　[RAID](./운영체제 Operating System/linux/disk &　dir/RAID.md)</br>
+┃　　　┃　　　┃　　　┗━　[Symbolic Link](./운영체제 Operating System/linux/disk &　dir/Symbolic Link.md)</br>
+┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./운영체제 Operating System/linux/disk &　dir/파일 관리 명령어.md)</br>
+┃　　　┃　　　┗━　[📁　kernel](./운영체제 Operating System/linux/kernel)</br>
+┃　　　┃　　　┃　　　┗━　[커널 모듈](./운영체제 Operating System/linux/kernel/커널 모듈.md)</br>
 ┃　　　┃　　　┗━　[📁　memory](./운영체제 Operating System/linux/memory)</br>
 ┃　　　┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/memory/Swap메모리.md)</br>
 ┃　　　┃　　　┗━　[📁　network](./운영체제 Operating System/linux/network)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　주요명령어](./운영체제 Operating System/linux/network/주요명령어)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[arp](./운영체제 Operating System/linux/network/주요명령어/arp.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ifconfig](./운영체제 Operating System/linux/network/주요명령어/ifconfig.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ping과 netstat](./운영체제 Operating System/linux/network/주요명령어/ping과 netstat.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[route로 라우팅 테이블 확인하기](./운영체제 Operating System/linux/network/주요명령어/route로 라우팅 테이블 확인하기.md)</br>
@@ -504,14 +514,19 @@ avg_file_length  : 3079
 ┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/network/namespace와 cgroup.md)</br>
 ┃　　　┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network/network namespaces.md)</br>
 ┃　　　┃　　　┗━　[📁　process](./운영체제 Operating System/linux/process)</br>
-┃　　　┃　　　┃　　　┗━　[+Background process](./운영체제 Operating System/linux/process/+Background process.md)</br>
-┃　　　┃　　　┗━　[+Linux 구조](./운영체제 Operating System/linux/+Linux 구조.md)</br>
-┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/LVM.md)</br>
+┃　　　┃　　　┃　　　┗━　[signal](./운영체제 Operating System/linux/process/signal.md)</br>
+┃　　　┃　　　┃　　　┗━　[top](./운영체제 Operating System/linux/process/top.md)</br>
+┃　　　┃　　　┃　　　┗━　[프로세스 관리](./운영체제 Operating System/linux/process/프로세스 관리.md)</br>
+┃　　　┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/process/환경변수와 프로세스.md)</br>
+┃　　　┃　　　┗━　[📁　shell](./운영체제 Operating System/linux/shell)</br>
+┃　　　┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/shell/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/shell/zshrc.md)</br>
+┃　　　┃　　　┗━　[Linux Package](./운영체제 Operating System/linux/Linux Package.md)</br>
+┃　　　┃　　　┗━　[Linux 배포판](./운영체제 Operating System/linux/Linux 배포판.md)</br>
 ┃　　　┃　　　┗━　[Linux 부팅 과정](./운영체제 Operating System/linux/Linux 부팅 과정.md)</br>
 ┃　　　┃　　　┗━　[Linux 특징 및 관련용어](./운영체제 Operating System/linux/Linux 특징 및 관련용어.md)</br>
-┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/zshrc.md)</br>
-┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/환경변수와 프로세스.md)</br>
+┃　　　┃　　　┗━　[X window](./운영체제 Operating System/linux/X window.md)</br>
+┃　　　┃　　　┗━　[명령어들](./운영체제 Operating System/linux/명령어들.md)</br>
 ┃　　　┗━　[TAS](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[교착상태와 스케줄링](./운영체제 Operating System/교착상태와 스케줄링.md)</br>
