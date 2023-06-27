@@ -7,7 +7,7 @@
 - 활성화 함수로 탄젠트 하이퍼볼릭을 많이 사용함
 - Cell 안에 Unit이 여러개 들어가고, 각 Cell마다 은닉상태를 가짐
 
-![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/52396652-c977-4ebd-bd35-a5dc18784d83)
+<img width="837" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/c10319a8-31b8-4ed9-9ff9-f8be61ea687b">
 
 ## 유형
 
@@ -22,11 +22,11 @@
 
 - 모든 RNN은 neural network 모듈을 반복시키는 체인과 같은 형태를 하고 있다. 기본적인 RNN에서 이렇게 반복되는 모듈은 굉장히 단순한 구조를 가지고 있다. 예를 들어 tanh layer 한 층을 들 수 있다.
   - 아래는 RNN의 일반적인 모습이다.
-    ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/2ba9e37a-c098-4751-b755-d0e5dfa1343f)
+    <img width="828" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/02a1a10e-1f8b-410e-8bbd-b8d9a1272597">
 
 - LSTM도 똑같이 체인과 같은 구조를 가지고 있지만, 각 반복 모듈은 다른 구조를 갖고 있다. 단순한 neural network layer 한 층 대신에, 3개의 게이트가 특별한 방식으로 서로 정보를 주고 받도록 되어 있다.
     - LSTM 반복 모듈의 모습이다.
-      ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/f721945a-098d-4fc7-a715-b98d97641d54)
+      <img width="782" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/23007c2d-15d6-4492-a0b0-9725096b357c">
 
 - LSTM의 게이트 3개
   - 삭제 게이트(forget gate layer) : 셀 상태에서 감소 및 삭제시킬 기억을 결정
