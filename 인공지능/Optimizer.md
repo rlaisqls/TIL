@@ -28,9 +28,13 @@
 4. 2~3 과정을 지정한 횟수나 비용함수값이 일정 임계값 이하로 수렴할때까지 반복한다.
     - 전체를 한번 도는걸 1 epoch이라 한다.
 
+
+ ---
+
+
 ## 배치 경사 하강법
 
-![image](https://github.com/rlaisqls/TIL/assets/81006587/633e77d9-4c05-4ed1-bf3c-b7a2c5f484ba)
+<img width="435" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/633e77d9-4c05-4ed1-bf3c-b7a2c5f484ba">
 
 
 배치 경사 하강법은 경사 하강법의 손실 함수의 기울기 계산에 **전체 학습 데이터셋**에 대한 에러를 구한 뒤 기울기를 한 번만 계산하여 모델의 파라미터를 업데이트하는 방식을 의미한다.
@@ -41,11 +45,16 @@
 - 초기 W값에 따라 지역적 최소값에 빠지는 경우가 발생한다.
     - 이를 해결하기 위해 학습률을 상태에 따라 적응적으로 조절할 필요가 있다. (Stochastic Gradient Descent)
     
-        <img width="595" alt="image" src="https://user-images.githubusercontent.com/81006587/230717724-4ef4924a-c178-44d1-aabb-b091b4b4799c.png">
+        <img width="405" alt="image" src="https://user-images.githubusercontent.com/81006587/230717724-4ef4924a-c178-44d1-aabb-b091b4b4799c.png">
+
+
+ ---
+
 
 ## 확률적 경사 하강법 (Stochastic Gradient Descent, SGD)
 
-![image](https://github.com/rlaisqls/TIL/assets/81006587/f07e34d4-c7e7-46ee-bf18-3fca5ce6abf9)
+ <img width="437" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/f07e34d4-c7e7-46ee-bf18-3fca5ce6abf9">
+
 
 - 전체 학습 데이터를 사용하지 않고 확률적으로 선택한 샘플의 일부만을 사용하고, 진동하며 결과값으로 수렴한다.
 - 일부 데이터만 사용하기 때문에 학습 속도가 매우 빠르다.
@@ -63,9 +72,13 @@ keras.optimizers.SGD(lr=0.1)
 
 확률적 경사 하강법의 노이즈를 줄이면서도 전체 배치보다 더 효율적인 방법으로는 미니배치 경사 하강법이 있다.
 
+
+ ---
+
+
 ## 미니배치 경사 하강법
 
-![image](https://user-images.githubusercontent.com/81006587/230538678-c5917ce6-926a-48bc-991b-6bfbae2012a0.png)
+ <img width="457" alt="image" src="https://user-images.githubusercontent.com/81006587/230538678-c5917ce6-926a-48bc-991b-6bfbae2012a0.png">
 
 SGD와 BGD의 절충안으로 배치 크기를 줄여 확률적 경사 하강법을 이용하는 방법이다.
 
@@ -78,6 +91,10 @@ SGD와 BGD의 절충안으로 배치 크기를 줄여 확률적 경사 하강법
 - BGD에 비해 Local Minima를 어느정도 회피할 수 있다.
 - 최적해에 더 가까이 도달할 수 있으나 local optima 현상이 발생할 수 있다. local optima의 문제는 무수히 많은 임의의 parameter로부터 시작하면 해결된다. (학습량 늘리기)
 
+
+ ---
+
+
 ## 모멘텀
 
 - 모멘텀은 SGD의 높은 편차를 줄이고 수렴을 부드럽게 하기 위해 고안되었다. 
@@ -86,7 +103,7 @@ SGD와 BGD의 절충안으로 배치 크기를 줄여 확률적 경사 하강법
 
 - γ는 현재 기울기 값(현재 가속도)뿐만 아니라 (과거의 가속도로 인한) 현재 속도를 함께 고려하여 이동 속도를 나타내는 momentum term이다.
 
-<img width="215" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/864eba83-7923-4d5d-b919-c9031e4dfff3">
+  <img width="215" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/864eba83-7923-4d5d-b919-c9031e4dfff3">
 
 - 이전 gradient들의 영향력을 매 업데이트마다 γ배 씩 감소
 - momentum term γ는 보통 0.9 정도로 정함
@@ -100,13 +117,19 @@ SGD와 BGD의 절충안으로 배치 크기를 줄여 확률적 경사 하강법
 - 모멘텀은 좋은 방법일 수 있지만, 모멘텀이 너무 높으면 알고리즘이 minima를 놓치고 건너뛰어버릴 우려가 있다.
 - NAG는 '앞을 내다보는' 알고리즘이다. NAG에서는 momentum step을 먼저 고려하여, momentum step을 먼저 이동했다고 생각한 후 그 자리에서의 gradient를 구해서 gradient step을 이동한다. 
 
-<img width="281" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/f2c7b820-76e1-4bcb-9cb9-081f2c0427f9">
+  <img width="281" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/f2c7b820-76e1-4bcb-9cb9-081f2c0427f9">
 
 - 식을 보면 gradient와 momentum step이 독립적으로 계산되는 것이 아님을 알 수 있다.
 
 - 모멘텀에 비해 멈춰야 할 지점(minima)에서 제동을 걸기 쉽다. 일단 모멘텀으로 이동을 반 정도 한 후, 어떤 방식으로 이동해야 할 지 결정할 수 있다. 하지만 여전히 하이퍼 파라미터 값을 수동으로 결정해줘야 한다는 단점이 존재한다.
 
+
+ ---
+
+
 ## Adagrad
+
+![image](https://github.com/rlaisqls/TIL/assets/81006587/59b475fd-6a40-4f61-94a7-dede7ebaeb20)
 
 - 위에 설명한 모든 옵티마이저의 단점 중 하나는 학습률이 모든 파라미터와 각 cycle에 대해 일정하다는 것이다.
 
@@ -115,30 +138,31 @@ SGD와 BGD의 절충안으로 배치 크기를 줄여 확률적 경사 하강법
 - 이 알고리즘의 기본적인 아이디어는 ‘지금까지 많이 변화하지 않은 변수들은 step size를 크게 하고, 지금까지 많이 변화했던 변수들은 step size를 작게 하자’ 라는 것이다.
   
   - 자주 등장하거나 변화를 많이 한 변수들의 경우 optimum에 가까이 있을 확률이 높기 때문에 작은 크기로 이동하면서 세밀한 값을 조정하고, 적게 변화한 변수들은 optimum 값에 도달하기 위해서는 많이 이동해야할 확률이 높기 때문에 먼저 빠르게 loss 값을 줄이는 방향으로 이동하려는 방식이라고 생각할 수 있겠다.
-
-Adagrad의 한 스텝을 수식화하면,
-
-
- 
-- Gt는 k차원 벡터, ‘time step t까지 각 변수가 이동한 gradient의 sum of squares’ -> <img width="13" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/771bdeab-6073-42ad-abde-5adcb99e8f97">를 업데이트 할 때 Gt의 루트값에 반비례한 크기로 이동
-- <img width="13" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/37c33d7d-8df7-4086-a227-c912997409f3">은 0으로 나누어지는 것을 방지하는 smoothing term
   
-- 각 학습 파라미터에 대해 학습률이 바뀌기 때문에 수동으로 조정할 필요가 없지만, 이계도함수를 계산해야 하기 때문에 계산 비용이 많이 든다. 또, Adagrad에는 학습을 진행하면 진행할 수록 학습률이 줄어든다는 문제점이 있다. 
+- 각 학습 파라미터에 대해 학습률이 바뀌기 때문에 수동으로 조정할 필요가 없지만, 이계도함수를 계산해야 하기 때문에 계산 비용이 많이 든다.
+- 또, Adagrad에는 학습을 진행하면 진행할 수록 학습률이 줄어든다는 문제점이 있다. 
 - Gt에 계속 제곱한 값을 넣어주기 때문에 값이 계속 커지므로, 학습이 오래 진행될 경우 학습률이 너무 작아져 결국 거의 움직이지 않게 된다. 즉, 최솟값에 도달하기도 전에 학습률이 0에 수렴해버릴 수도 있다.
- 
+
+   <img width="430" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/bb328aee-425c-4ec5-aca5-37ced8ab6eaf">
+
+
+---
 
  ## Adam (Adaptive Moment Estimation)
 
 - Adagrad나 RMSProp처럼 각 파라미터마다 다른 크기의 업데이트를 진행하는 방법이다.
-- Adam의 직관은 local minima를 뛰어넘을 수 있다는 이유만으로 빨리 굴러가는 것이 아닌, minima의 탐색을 위해 조심스럽게 속도를 줄이고자 하는 것이다.
+- Adam의 원리를 간단히 설명하면 local minima를 뛰어넘을 수 있다는 이유만으로 빨리 굴러가는 것이 아닌, minima의 탐색을 위해 조심스럽게 속도를 줄이고자 하는 것이다.
 - Adam은 AdaDelta와 같이 decaying average of squared gradients를 저장할 뿐만 아니라, 과거 gradient 
-의 decaying average도 저장한다. 
+의 decaying average도 저장한다.
+
     <img width="322" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/fa2547dd-661d-4889-b046-87db920009fc">
 
 - mt와 vt가 학습 초기에 0으로 biased 되는 것을 방지하기 위해 uncentered variance of the gradients인 ^mt, ^vt를 계산해준다.
+  
     <img width="146" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/f3ead0a6-515b-4ec1-8e7b-5cea21525ec2">
 
 - 이 보정된 값들을 가지고 파라미터를 업데이트한다. 기존에 Gt 자리에 ^vt를 넣고, gradient 자리에 ^mt를 넣으면 된다.
+  
     <img width="230" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/db20377f-9222-436f-a870-466b7ed509b1">
 
 - β1의 값은 0.9, β2는 0.999, ε은 (10 x exp(-8))이다.
