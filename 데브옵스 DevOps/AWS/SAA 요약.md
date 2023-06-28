@@ -24,11 +24,9 @@
   - Origin Shield: Caching Layer
 
 ## Networking
-- [WAF](./Netwoking/WAF.md): 7계층 방화벽, origin 변조나 script/SQL inject 방지
+- [WAF]: SQL injection, macious ip 등 막아주는 7계층 방화벽
 - Shield: DDos 방지
 - [VPC](./Netwoking/VPC.md): 가상 네트워크, 다른 네트워크와 논리적 분리
-
-- [WAF]: SQL injection, macious ip 등 막아주는 7계층 방화벽
 - [Security Groups](./Netwoking/Security%E2%80%85Groups.md): instance 수준의 control access, stateful, allow만 가능
 - [NACLs](./Netwoking/NACLs.md): subnet 수준의 control access, allow만 가능, stateless, allow와 disallow 가능
 
