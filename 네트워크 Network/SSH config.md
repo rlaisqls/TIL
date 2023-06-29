@@ -12,7 +12,7 @@ sudo vi /etc/ssh/ssh_config
 # dev
 Host dev
     HostName x.x.x.x
-    User ec2-user
+    User ec2-user 
     IdentityFile /user/rlaisqls/...
  
 # ops

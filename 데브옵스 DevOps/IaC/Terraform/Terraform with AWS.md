@@ -6,7 +6,7 @@ AWS Provider로 간단한 인프라를 구성해보자.
 
 생성된 계정에 할당된 access key와 secret key로 다음과 같은 aws.tf 파일을 생성한다.
 
-```json
+```hcl
 provider "aws" {
   access_key = "ACCESS-KEY"
   secret_key = "SECRET-KEY"
@@ -22,7 +22,7 @@ Terraform을 사용하면 API Gateway, App Autoscaleing, CloudFomation, CloudFro
 
 VPC부터 Terraform으로 구성해서 사용해보자. vpc.tf라는 파일을 만들어서 다음 내용을 입력한다.
 
-```json
+```hcl
 resource "aws_vpc" "example" {
   cidr_block = "172.10.0.0/20"
   tags {
@@ -49,7 +49,7 @@ example이라는 VPC를 정의하고 서브넷을 정의할 때는 앞에서 정
 
 VPC에서 사용할 시큐리티 그룹을 정의해보자. 다음 파일은 security-group.tf의 내용이다.
 
-```json
+```hcl
 resource "aws_security_group" "example-allow-all" {
   name = "example-allow_all"
   description = "Allow all inbound traffic"
@@ -236,7 +236,7 @@ State path: terraform.tfstate
 
 설정한 VPC, Subnet, Security Group이 모두 정상적으로 만들어 진 것을 볼 수 있다.
 
-```json
+```hcl
 resource "aws_vpc" "example" {
   cidr_block = "172.10.0.0/20"
   tags {
@@ -247,9 +247,9 @@ resource "aws_vpc" "example" {
 
 앞에서 정의한 VPC 구성을 보면 여기서 리소스 이름의 example은 실제 AWS 구성되는 이름과는 아무런 상관이 없고 Terraform에서 참조하기 위해서 이름을 할당한 것일 뿐이다. 그래서 VPC의 이름으로 표시되는 것은 tags에서 `Name = "example"`로 설정한 이름이 지정된다.
 
-추가로 apply한 마지막 로그를 보면 `State path: terraform.tfstate`라고 나온 걸 볼 수 있는데 이는 적용한 인프라의 상태를 관리하는 파일로 다음과 같이 JSON으로 되어 있다. 적용된 인프라를 이 파일에서 관리하고 있으므로 Terraform으로 인프라를 관리한다면 `terraform.tfstate` 파일도 Git 등으로 관리하고 보관해야 한다. 이후 적용하면 `terraform.tfstate.backup `파일이 하나 생기면서 마지막 버전을 하나 더 보관한다.
+추가로 apply한 마지막 로그를 보면 `State path: terraform.tfstate`라고 나온 걸 볼 수 있는데 이는 적용한 인프라의 상태를 관리하는 파일로 다음과 같이 hcl으로 되어 있다. 적용된 인프라를 이 파일에서 관리하고 있으므로 Terraform으로 인프라를 관리한다면 `terraform.tfstate` 파일도 Git 등으로 관리하고 보관해야 한다. 이후 적용하면 `terraform.tfstate.backup `파일이 하나 생기면서 마지막 버전을 하나 더 보관한다.
 
-```json
+```hcl
 {
     "version": 3,
     "terraform_version": "0.8.2",
@@ -381,7 +381,7 @@ resource "aws_vpc" "example" {
 
 이제 EC2 인스턴스를 구성해 보자. `aws-ec2.tf`라는 파일로 다음의 내용을 넣는다.
 
-```json
+```hcl
 variable "key_pair" {
   default = "outsider-aws"
 }
@@ -626,7 +626,7 @@ AWS 웹 콘솔에 가면 3대가 잘 뜬 걸 볼 수 있다.
 ## 리소스 그래프
 `terraform graph` 명령어를 사용하면 설정한 리소스의 의존성 그래프를 그릴 수 있다.
 
-```json
+```hcl
 $ terraform graph
 digraph {
   compound = "true"

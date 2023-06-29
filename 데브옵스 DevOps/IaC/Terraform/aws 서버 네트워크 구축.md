@@ -2,7 +2,7 @@
 
 ### 1. 네트워크 구성
 
-```json
+```hcl
 resource "aws_vpc" "scenario_1_vpc" {
   cidr_block = "172.16.0.0/26"
   tags = {
@@ -18,7 +18,7 @@ resource "aws_vpc" "scenario_1_vpc" {
 
 VPC를 구축한 다음엔 다음 코드로 서브넷팅을 할 차례다.
 
-```json
+```hcl
 resource "aws_subnet" "scenario-1-public-subnet" {
   vpc_id = aws_vpc.scenario_1_vpc.id
   cidr_block = "172.16.0.0/28"
@@ -51,7 +51,7 @@ resource "aws_subnet" "scenario-1-private-subnet-2" {
 
 public 서브넷을 만들기 위해선 internet gateway를 정의해야한다.
 
-```json
+```hcl
 resource "aws_internet_gateway" "scenario_1_igw" {
   vpc_id = aws_vpc.scenario_1_vpc.id
   tags = {
@@ -65,7 +65,7 @@ resource "aws_internet_gateway" "scenario_1_igw" {
 
 internet gateway를 생성 했다면 router가 참조할수 있는 routing table들을 생성해주는 작업이 필요하다.
 
-```json
+```hcl
 resource "aws_route_table" "scenario_1_public_route_table" {
   vpc_id = aws_vpc.scenario_1_vpc.id
   route {
@@ -93,7 +93,7 @@ resource "aws_route_table_association" "scenario_1_private_rt_1_association" {
   subnet_id      = aws_subnet.scenario-1-private-subnet.id
   route_table_id = aws_route_table.scenario_1_private_route_table.id
 }
-s
+
 resource "aws_route_table_association" "scenario_1_private_rt_2_association" {
   subnet_id      = aws_subnet.scenario-1-private-subnet-2.id
   route_table_id = aws_route_table.scenario_1_private_route_table.id
@@ -112,7 +112,7 @@ resource "aws_route_table_association" "scenario_1_private_rt_2_association" {
 - AWS가 제공하는 security group은 특정 IP 대역뿐만 아니라 특정 security group에 속해 있는 instance와의 통신만 허용하는것이 가능하다.
 - 이 점에 착안하며 웹서버를 위한 security group을 생성한후 데이터베이스는 웹서버가 속한 security group의 소스들만 통신을 허용하도록 구성해야 한다.
 
-```json
+```hcl
 resource "aws_security_group" "scenario_1_ec2" {
   description = "Allow"
   vpc_id      = aws_vpc.scenario_1_vpc.id
