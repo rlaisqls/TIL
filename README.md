@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 453
+files            : 454
 derectories      : 100
-avg_file_length  : 3043
+avg_file_length  : 3038
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -170,6 +170,7 @@ avg_file_length  : 3043
 ┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Management and governance/CloudWatch.md)</br>
 ┃　　　┃　　　┗━　[📁　Netwoking](./데브옵스 DevOps/AWS/Netwoking)</br>
 ┃　　　┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/Netwoking/API Gateway.md)</br>
+┃　　　┃　　　┃　　　┗━　[Bastion Host](./데브옵스 DevOps/AWS/Netwoking/Bastion Host.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/Netwoking/CloudFront.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwoking/ELB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwoking/ENI.md)</br>
@@ -563,7 +564,6 @@ avg_file_length  : 3043
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[📁　XX5XhVDj](./XX5XhVDj)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
