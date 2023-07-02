@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 454
-derectories      : 100
-avg_file_length  : 3038
+files            : 455
+derectories      : 101
+avg_file_length  : 3034
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -42,6 +42,8 @@ avg_file_length  : 3038
 ┃　　　┃　　　┗━　[웹서버와 WAS](./개발/WAS/웹서버와 WAS.md)</br>
 ┃　　　┗━　[📁　apache](./개발/apache)</br>
 ┃　　　┃　　　┗━　[Spark](./개발/apache/Spark.md)</br>
+┃　　　┗━　[📁　go](./개발/go)</br>
+┃　　　┃　　　┗━　[gomod와 gosum](./개발/go/gomod와 gosum.md)</br>
 ┃　　　┗━　[📁　비동기](./개발/비동기)</br>
 ┃　　　┃　　　┗━　[📁　coroutine](./개발/비동기/coroutine)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　thread](./개발/비동기/coroutine/thread)</br>
