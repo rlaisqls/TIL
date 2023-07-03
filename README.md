@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 455
-derectories      : 101
-avg_file_length  : 3034
+files            : 460
+derectories      : 102
+avg_file_length  : 3054
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -253,6 +253,8 @@ avg_file_length  : 3034
 ┃　　　┃　　　┃　　　┗━　[Terraform with AWS](./데브옵스 DevOps/IaC/Terraform/Terraform with AWS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Terraform 키워드](./데브옵스 DevOps/IaC/Terraform/Terraform 키워드.md)</br>
 ┃　　　┃　　　┃　　　┗━　[aws 서버　네트워크 구축](./데브옵스 DevOps/IaC/Terraform/aws 서버　네트워크 구축.md)</br>
+┃　　　┃　　　┗━　[Ansible](./데브옵스 DevOps/IaC/Ansible.md)</br>
+┃　　　┃　　　┗━　[Cobbler](./데브옵스 DevOps/IaC/Cobbler.md)</br>
 ┃　　　┃　　　┗━　[Configuration Drift](./데브옵스 DevOps/IaC/Configuration Drift.md)</br>
 ┃　　　┃　　　┗━　[Phoenix Server](./데브옵스 DevOps/IaC/Phoenix Server.md)</br>
 ┃　　　┃　　　┗━　[Understanding Ansible, Terraform, Puppet, Chef, and Salt](./데브옵스 DevOps/IaC/Understanding Ansible, Terraform, Puppet, Chef, and Salt.md)</br>
@@ -266,14 +268,17 @@ avg_file_length  : 3034
 ┃　　　┃　　　　　　　┗━　[ELK Stack](./데브옵스 DevOps/Logging/elk/ELK Stack.md)</br>
 ┃　　　┃　　　　　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Logging/elk/ElasticSearch 검색 명령어.md)</br>
 ┃　　　┃　　　　　　　┗━　[Logstash](./데브옵스 DevOps/Logging/elk/Logstash.md)</br>
-┃　　　┗━　[📁　nginx](./데브옵스 DevOps/nginx)</br>
-┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/nginx/location block.md)</br>
-┃　　　┃　　　┗━　[nginx certbot](./데브옵스 DevOps/nginx/nginx certbot.md)</br>
-┃　　　┃　　　┗━　[nginx docker](./데브옵스 DevOps/nginx/nginx docker.md)</br>
-┃　　　┃　　　┗━　[nginx 명령어](./데브옵스 DevOps/nginx/nginx 명령어.md)</br>
-┃　　　┃　　　┗━　[nginx 설정](./데브옵스 DevOps/nginx/nginx 설정.md)</br>
-┃　　　┃　　　┗━　[sites━available](./데브옵스 DevOps/nginx/sites━available.md)</br>
-┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/nginx/리버스 프록시.md)</br>
+┃　　　┗━　[📁　Proxy](./데브옵스 DevOps/Proxy)</br>
+┃　　　┃　　　┗━　[📁　nginx](./데브옵스 DevOps/Proxy/nginx)</br>
+┃　　　┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/Proxy/nginx/location block.md)</br>
+┃　　　┃　　　┃　　　┗━　[nginx certbot](./데브옵스 DevOps/Proxy/nginx/nginx certbot.md)</br>
+┃　　　┃　　　┃　　　┗━　[nginx docker](./데브옵스 DevOps/Proxy/nginx/nginx docker.md)</br>
+┃　　　┃　　　┃　　　┗━　[nginx 명령어](./데브옵스 DevOps/Proxy/nginx/nginx 명령어.md)</br>
+┃　　　┃　　　┃　　　┗━　[nginx 설정](./데브옵스 DevOps/Proxy/nginx/nginx 설정.md)</br>
+┃　　　┃　　　┃　　　┗━　[sites━available](./데브옵스 DevOps/Proxy/nginx/sites━available.md)</br>
+┃　　　┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/Proxy/nginx/리버스 프록시.md)</br>
+┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
+┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/Envoy.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
 ┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Elastic Search.md)</br>
@@ -498,6 +503,7 @@ avg_file_length  : 3034
 ┃　　　┃　　　┗━　[📁　authority](./운영체제 Operating System/linux/authority)</br>
 ┃　　　┃　　　┃　　　┗━　[chattr](./운영체제 Operating System/linux/authority/chattr.md)</br>
 ┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/authority/chmod.md)</br>
+┃　　　┃　　　┃　　　┗━　[chown](./운영체제 Operating System/linux/authority/chown.md)</br>
 ┃　　　┃　　　┃　　　┗━　[사용자 관리](./운영체제 Operating System/linux/authority/사용자 관리.md)</br>
 ┃　　　┃　　　┗━　[📁　disk &　dir](./운영체제 Operating System/linux/disk &　dir)</br>
 ┃　　　┃　　　┃　　　┗━　[+백업](./운영체제 Operating System/linux/disk &　dir/+백업.md)</br>
