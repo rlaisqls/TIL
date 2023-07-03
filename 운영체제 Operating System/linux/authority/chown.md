@@ -1,4 +1,4 @@
-# chown 
+# chown
 
 리눅스에서 파일은 어떤 Onwer, Group에 속해있다.
 
