@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 460
+files            : 463
 derectories      : 102
-avg_file_length  : 3054
+avg_file_length  : 3064
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -229,6 +229,7 @@ avg_file_length  : 3054
 ┃　　　┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Container/Kubernetes/이론/Service와 port.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Container/Kubernetes/이론/가상 IP와 서비스 프록시.md)</br>
 ┃　　　┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Container/Kubernetes/DNS in k8s.md)</br>
+┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Container/Kubernetes/HTTPProxy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Container/Kubernetes/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Container/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Container/Kubernetes/NGINX Ingress Basic Auth.md)</br>
@@ -279,6 +280,7 @@ avg_file_length  : 3054
 ┃　　　┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/Proxy/nginx/리버스 프록시.md)</br>
 ┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
 ┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/Envoy.md)</br>
+┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
 ┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Elastic Search.md)</br>
@@ -315,6 +317,7 @@ avg_file_length  : 3054
 ┃　　　┃　　　┗━　[📁　redis](./데이터베이스 DataBase/NoSQL/redis)</br>
 ┃　　　┃　　　┃　　　┗━　[Redis](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Spring Redis Phantomkey](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
+┃　　　┃　　　┗━　[Cassandra](./데이터베이스 DataBase/NoSQL/Cassandra.md)</br>
 ┃　　　┃　　　┗━　[Memcached VS Redis](./데이터베이스 DataBase/NoSQL/Memcached VS Redis.md)</br>
 ┃　　　┃　　　┗━　[NoSQL 데이터유형](./데이터베이스 DataBase/NoSQL/NoSQL 데이터유형.md)</br>
 ┃　　　┃　　　┗━　[NoSQL에는 ACID가 없다고？](./데이터베이스 DataBase/NoSQL/NoSQL에는 ACID가 없다고？.md)</br>
@@ -572,6 +575,7 @@ avg_file_length  : 3054
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
+┗━　[📁　XX0OB3uS](./XX0OB3uS)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
