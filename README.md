@@ -575,7 +575,7 @@ avg_file_length  : 3064
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[📁　XX0OB3uS](./XX0OB3uS)</br>
+┗━　[📁　XXn7JTrF](./XXn7JTrF)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
