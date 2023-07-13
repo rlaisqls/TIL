@@ -11,15 +11,15 @@ Amazon Kinesis makes it easy to collect, process, and analyze real-time, streami
 - It is a fully managed service that automatically scales to match the throuput of your data before loading it, minimizing the amount of storage used at the destination and increading security.
 
 - There are three different types of Kinesis:
-    - Kinesis Streams
+    - **Kinesis Streams**
       - Kinesis Streams works where the data producers stream their data into Kinesis Streams which can retain the data from one day up until 7 days. Once inside Kinesis Streams, the data is contained within shards.
       - Kinesis Streams can continously capture and store terabytes of data per hour from hundreds of thousands of sources such as website clickstreams, financial transactinos, cocial media feeds, IT logs, and location-tracking events. For example: puchase requests from a large online store like Amazon, stock prices, Netflix content, Twitch content, online gaming data, Uber positioning and directions, etc.
 
-    - Kinesis Firehose
+    - **Kinesis Firehose**
       - Amazon Kinesis Firehose is the easiesy way to load streaming data into data stores and analytics tools. When data is streamed into Kinesis Firehose, there is no persistent storage there to hold onto it. The data has to be analyzed as it comes in so it's optional to have Lambda functinos inside your Kinesis Firehose. Once processed, you send the data elsewhere.
       - Kinesis Firehose can capture, transform, and load streaming data into Amazon S3, Amazon Redshift, Amazon Elasticsearch Service, and Splunk, enabling near real-time analytics with existing business intellijgence tools and dashboards you're already using today.
 
-    - Kinesis Analytics
+    - **Kinesis Analytics**
       - Kinesis Analytics work with both Kinesis Streams and Kinesis Firehose and can analyze data on the fly. The data within Kinesis Analytics also gets sent elsewhere once it is finished processing. It analyzes your data inside of the Kinesis service itselt.
 
 - artition keys are used with Kinesis so you can organize data by shard. This way, input from a particular device can be assigned a key that will limit its destination to a specific shard.

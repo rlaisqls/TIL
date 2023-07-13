@@ -34,7 +34,7 @@ Snowball Edge diveces have the following options for device donfigurations:
 
 - **Snowball Edge Compute Optimized:** This Snowball Edge device option has the most compute functionality. with 52 vCPUs, 208 GiB of memory, and 42TB(39.5 TB usable) plus 7.68 TB of dedicated MVMe SSD for compute instances for block storage volumes for EC2 compute instances, and 42 TB fo HDD capacity for either object storage or block storage volumes.
 
-- **Snowball Edge Compute Optimizzed with GPU:** This Snowball Edge device option is identical to the Compute Optimized option, except for an installed GPU, equivalent to the on available in the P3 Amazon EC2 instance type. It has 42TB(39.5 TB of HDD storage that can be used for a combination of Amazon S3 compatible object storage and Amazon EBS compatible block storage volumes) plus 7.68 TB of dedicated NVMe SSD for compute instances. 
+- **Snowball Edge Compute Optimized with GPU:** This Snowball Edge device option is identical to the Compute Optimized option, except for an installed GPU, equivalent to the on available in the P3 Amazon EC2 instance type. It has 42TB(39.5 TB of HDD storage that can be used for a combination of Amazon S3 compatible object storage and Amazon EBS compatible block storage volumes) plus 7.68 TB of dedicated NVMe SSD for compute instances. 
 
 ## Snowmobile
 
