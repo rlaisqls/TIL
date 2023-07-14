@@ -4,7 +4,7 @@ Amazon Kinesis makes it easy to collect, process, and analyze real-time, streami
 
 ---
 
-- Amazon Kinesis makes it easy to load and analyze the large columes of data entering AWS.
+- Amazon Kinesis makes it easy to load and analyze the large volumes of data entering AWS.
 
 - Kinisis is used for processing real-time data streams (data that is generated continuously) from devices constantly sending data into AWS so that said data can be collected and analyzed.
 

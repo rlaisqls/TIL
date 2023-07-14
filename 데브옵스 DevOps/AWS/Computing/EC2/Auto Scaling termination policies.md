@@ -6,11 +6,11 @@ The default termination policy applies multiple termination criteria before sele
 
 - Determine whether any of the instances eligible for termination use the oldest launch template or launch configuration:
     - **[For Auto Scaling groups that use a launch template]**
-        Determine whether any of the instances use the oldest launch template, unless there are instances that use a launch configuration. Amazon EC2 Auto Scaling terminates instances that use a launch configuration before it terminates instances that use a launch template.
+        - Determine whether any of the instances use the oldest launch template, unless there are instances that use a launch configuration. Amazon EC2 Auto Scaling terminates instances that use a launch configuration before it terminates instances that use a launch template.
     - **[For Auto Scaling groups that use a launch configuration]**
-        Determine whether any of the instances use the oldest launch configuration.
-        After applying the preceding criteria, if there are multiple unprotected instances to terminate, determine which instances are closest to the next billing hour. If there are multiple unprotected instances closest to the next billing hour, terminate one of these instances at random.
-        Note that terminating the instance closest to the next billing hour helps you maximize the use of your instances that have an hourly charge. Alternatively, if your Auto Scaling group uses Amazon Linux, Windows, or Ubuntu, your EC2 usage is billed in one-second increments. For more information, see Amazon EC2 pricing.
+        - Determine whether any of the instances use the oldest launch configuration.
+        - After applying the preceding criteria, if there are multiple unprotected instances to terminate, determine which instances are closest to the next billing hour. If there are multiple unprotected instances closest to the next billing hour, terminate one of these instances at random.
+        - Note that terminating the instance closest to the next billing hour helps you maximize the use of your instances that have an hourly charge. Alternatively, if your Auto Scaling group uses Amazon Linux, Windows, or Ubuntu, your EC2 usage is billed in one-second increments. For more information, see Amazon EC2 pricing.
 
 ---
 reference

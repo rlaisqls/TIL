@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 472
+files            : 473
 derectories      : 104
-avg_file_length  : 3175
+avg_file_length  : 3238
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -160,6 +160,7 @@ avg_file_length  : 3175
 ┃　　　┃　　　┃　　　┃　　　┗━　[EC2](./데브옵스 DevOps/AWS/Computing/EC2/EC2.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EC2 Fleet](./데브옵스 DevOps/AWS/Computing/EC2/EC2 Fleet.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Elastic Fabric Adapter](./데브옵스 DevOps/AWS/Computing/EC2/Elastic Fabric Adapter.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Instance Store](./데브옵스 DevOps/AWS/Computing/EC2/Instance Store.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Spot Block](./데브옵스 DevOps/AWS/Computing/EC2/Spot Block.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/Auto Scaling.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./데브옵스 DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
@@ -209,9 +210,9 @@ avg_file_length  : 3175
 ┃　　　┃　　　┃　　　┗━　[Storage Gateway](./데브옵스 DevOps/AWS/Storage/Storage Gateway.md)</br>
 ┃　　　┃　　　┗━　[AWS cloud computing](./데브옵스 DevOps/AWS/AWS cloud computing.md)</br>
 ┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트](./데브옵스 DevOps/AWS/SAA 오답노트.md)</br>
+┃　　　┃　　　┗━　[SAA 오답노트 1━3](./데브옵스 DevOps/AWS/SAA 오답노트 1━3.md)</br>
+┃　　　┃　　　┗━　[SAA 오답노트 4━6](./데브옵스 DevOps/AWS/SAA 오답노트 4━6.md)</br>
 ┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
-┃　　　┃　　　┗━　[SAA 준비](./데브옵스 DevOps/AWS/SAA 준비.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
 ┃　　　┗━　[📁　Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[📁　Docker](./데브옵스 DevOps/Container/Docker)</br>
@@ -586,7 +587,7 @@ avg_file_length  : 3175
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[📁　XXCb7btW](./XXCb7btW)</br>
+┗━　[📁　XXeqcU4E](./XXeqcU4E)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>

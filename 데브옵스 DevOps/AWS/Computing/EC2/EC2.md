@@ -23,7 +23,7 @@ EC2 has an extemely reduced time frame for provisioning and booting new instance
 
   <img src="https://github.com/rlaisqls/rlaisqls/assets/81006587/7a908a35-9415-4bf9-82a7-95ed6d4950ce" height=300px/>
 
-- When you launch an instance in Amazon EC2, you hae the option of passing user data to the instance whan the instance starts. This user data can be used to run commo nautomated configuration tasks or scripts. For example, you can pass a bash script that ensures htop is installed on the new EC2 host and is always active.
+- When you launch an instance in Amazon EC2, you have the option of passing user data to the instance when the instance starts. This user data can be used to run common automated configuration tasks or scripts. For example, you can pass a bash script that ensures htop is installed on the new EC2 host and is always active.
 
 - By default, the public IP address of an EC2 Instance is released when the instance is stopped even if its stopped temporarliy. Therefor, it is best to refer to an instance by its external DNS hostname. If you require a persistent public IP address that can be associated to the same instancee, use an Elestic IP address which is basically a static IP address instead.
 
