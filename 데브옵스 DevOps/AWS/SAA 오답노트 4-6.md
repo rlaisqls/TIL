@@ -248,3 +248,194 @@ Incorrect options:
   - This operation may result in data loss and won't help with the exceptions, so this option is incorrect.
 
 ---
+
+- The EBS volume was configured as the root volume of the Amazon EC2 instance. On termination of the instance, the default behavior is to also terminate the attached root volume
+
+---
+
+- A company hires experienced specialists to analyze the customer service calls attended by its call center representatives. Now, the company wants to move to AWS Cloud and is looking at an automated solution to analyze customer service calls for sentiment analysis via ad-hoc SQL queries.
+    As a Solutions Architect, which of the following solutions would you recommend?
+
+- Answer: Use Amazon Transcribe to convert audio files to text and Amazon Athena to understand the underlying customer sentiments
+  - Amazon Transcribe is an automatic speech recognition (ASR) service that makes it easy to convert audio to text. One key feature of the service is called speaker identification, which you can use to label each individual speaker when transcribing multi-speaker audio files. You can specify Amazon Transcribe to identify 2–10 speakers in the audio clip.
+  - Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run. To leverage Athena, you can simply point to your data in Amazon S3, define the schema, and start querying using standard SQL. Most results are delivered within seconds.
+  - Analyzing multi-speaker audio files using Amazon Transcribe and Amazon Athena:
+  - ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/270f3abd-a126-419d-b81e-66b4cf277dea)
+
+---
+
+- A retail company wants to establish encrypted network connectivity between its on-premises data center and AWS Cloud. The company wants to get the solution up and running in the fastest possible time and it should also support encryption in transit.
+    As a solutions architect, which of the following solutions would you suggest to the company?
+
+- Answer: Use Site-to-Site VPN to establish encrypted network connectivity between the on-premises data center and AWS Cloud
+  - You can securely extend your data center or branch office network to the cloud with an AWS Site-to-Site VPN connection. A VPC VPN Connection utilizes IPSec to establish encrypted network connectivity between your on-premises network and Amazon VPC over the Internet. IPsec is a protocol suite for securing IP communications by authenticating and encrypting each IP packet in a data stream.
+
+  - To encrypt the data in transit that traverses AWS Direct Connect, you must use the transit encryption options for that service. As **AWS Direct Connect does not support encrypted network connectivity between an on-premises data center and AWS Cloud**, therefore this option is incorrect.
+
+---
+
+**it is not possible to modify a launch configuration once it is created. Hence, this option is incorrect.**
+
+---
+
+- An application hosted on Amazon EC2 contains sensitive personal information about all its customers and needs to be protected from all types of cyber-attacks. The company is considering using the AWS Web Application Firewall (WAF) to handle this requirement.
+    Can you identify the correct solution leveraging the capabilities of WAF?
+
+- Answer: Create a CloudFront distribution for the application on Amazon EC2 instances. Deploy AWS WAF on Amazon CloudFront to provide the necessary safety measures
+  
+  - When you use AWS WAF with CloudFront, you can protect your applications running on any HTTP webserver, whether it's a webserver that's running in Amazon Elastic Compute Cloud (Amazon EC2) or a web server that you manage privately. You can also configure CloudFront to require HTTPS between CloudFront and your own webserver, as well as between viewers and CloudFront.
+  
+  - **AWS WAF is tightly integrated with Amazon CloudFront and the Application Load Balancer (ALB)**, services that AWS customers commonly use to deliver content for their websites and applications.
+  
+  - When you use AWS WAF on Amazon CloudFront, your rules run in all AWS Edge Locations, located around the world close to your end-users. This means security doesn’t come at the expense of performance. Blocked requests are stopped before they reach your web servers. When you use AWS WAF on Application Load Balancer, your rules run in the region and can be used to protect internet-facing as well as internal load balancers.
+
+---
+
+- S3 One Zone-IA is a good choice for storing secondary backup copies of on-premises data or easily re-creatable data. The given scenario clearly states that the business-critical data is not easy to reproduce, so this option is incorrect.
+
+---
+
+- A financial services firm uses a high-frequency trading system and wants to write the log files into Amazon S3. The system will also read these log files in parallel on a near real-time basis. The engineering team wants to address any data discrepancies that might arise when the trading system overwrites an existing log file and then tries to read that specific log file.
+    Which of the following options BEST describes the capabilities of Amazon S3 relevant to this scenario?
+
+- Answer: **A process replaces an existing object and immediately tries to read it. Amazon S3 always returns the latest version of the object**
+
+  - Amazon S3 delivers strong read-after-write consistency automatically, without changes to performance or availability, without sacrificing regional isolation for applications, and at no additional cost.
+
+  - After a successful write of a new object or an overwrite of an existing object, any subsequent read request immediately receives the latest version of the object. S3 also provides strong consistency for list operations, so after a write, you can immediately perform a listing of the objects in a bucket with any changes reflected.
+
+  - Strong read-after-write consistency helps when you need to immediately read an object after a write. For example, strong read-after-write consistency when you often read and list immediately after writing objects.
+
+  - To summarize, all S3 GET, PUT, and LIST operations, as well as operations that change object tags, ACLs, or metadata, are strongly consistent. What you write is what you will read, and the results of a LIST will be an accurate reflection of what’s in the bucket.
+
+---
+
+- An application with global users across AWS Regions had suffered an issue when the Elastic Load Balancer (ELB) in a Region malfunctioned thereby taking down the traffic with it. The manual intervention cost the company significant time and resulted in major revenue loss.
+    What should a solutions architect recommend to reduce internet latency and add automatic failover across AWS Regions?
+
+- Answer: **Set up AWS Global Accelerator and add endpoints to cater to users in different geographic locations**
+
+  - As your application architecture grows, so does the complexity, with longer user-facing IP lists and more nuanced traffic routing logic. AWS Global Accelerator solves this by providing you with two static IPs that are anycast from our globally distributed edge locations, giving you a single entry point to your application, regardless of how many AWS Regions it’s deployed in. This allows you to add or remove origins, Availability Zones or Regions without reducing your application availability. Your traffic routing is managed manually, or in console with endpoint traffic dials and weights. If your application endpoint has a failure or availability issue, AWS Global Accelerator will automatically redirect your new connections to a healthy endpoint within seconds.
+
+  - By using AWS Global Accelerator, you can:
+
+        1. Associate the static IP addresses provided by AWS Global Accelerator to regional AWS resources or endpoints, such as Network Load Balancers, Application Load Balancers, EC2 Instances, and Elastic IP addresses. The IP addresses are anycast from AWS edge locations so they provide onboarding to the AWS global network close to your users.
+
+        2. Easily move endpoints between Availability Zones or AWS Regions without needing to update your DNS configuration or change client-facing applications.
+
+        3. Dial traffic up or down for a specific AWS Region by configuring a traffic dial percentage for your endpoint groups. This is especially useful for testing performance and releasing updates.
+
+        4. Control the proportion of traffic directed to each endpoint within an endpoint group by assigning weights across the endpoints.
+
+- Incorrect: Set up an Amazon Route 53 geoproximity routing policy to route traffic
+  - Geoproximity routing lets Amazon Route 53 route traffic to your resources based on the geographic location of your users and your resources.
+  - Unlike Global Accelerator, managing and routing to different instances, ELBs and other AWS resources will become an operational overhead as the resource count reaches into the hundreds. With inbuilt features like Static anycast IP addresses, fault tolerance using network zones, Global performance-based routing, TCP Termination at the Edge - Global Accelerator is the right choice for multi-region, low latency use cases.
+
+---
+
+**Database cloning is only available for Aurora and not for RDS.**
+
+---
+
+**Data transfer pricing over Direct Connect is lower than data transfer pricing over the internet.**
+
+---
+
+- A company wants to ensure high availability for its RDS database. The development team wants to opt for Multi-AZ deployment and they would like to understand what happens when the primary instance of the Multi-AZ configuration goes down.
+    As a Solutions Architect, which of the following will you identify as the outcome of the scenario?
+
+- Answer: **The CNAME record will be updated to point to the standby DB**
+  - Amazon RDS provides high availability and failover support for DB instances using Multi-AZ deployments. Amazon RDS uses several different technologies to provide failover support. Multi-AZ deployments for MariaDB, MySQL, Oracle, and PostgreSQL DB instances use Amazon's failover technology. SQL Server DB instances use SQL Server Database Mirroring (DBM) or Always On Availability Groups (AGs).
+
+  - In a Multi-AZ deployment, Amazon RDS automatically provisions and maintains a synchronous standby replica in a different Availability Zone. The primary DB instance is synchronously replicated across Availability Zones to a standby replica to provide data redundancy, eliminate I/O freezes, and minimize latency spikes during system backups. Running a DB instance with high availability can enhance availability during planned system maintenance, and help protect your databases against DB instance failure and Availability Zone disruption.
+
+  - Failover is automatically handled by Amazon RDS so that you can resume database operations as quickly as possible without administrative intervention. When failing over, Amazon RDS simply flips the canonical name record (CNAME) for your DB instance to point at the standby, which is in turn promoted to become the new primary. Multi-AZ means the URL is the same, the failover is automated, and the CNAME will automatically be updated to point to the standby database.
+
+---
+
+- An engineering team wants to orchestrate multiple Amazon ECS task types running on EC2 instances that are part of the ECS cluster. The output and state data for all tasks need to be stored. The amount of data output by each task is approximately 20 MB and there could be hundreds of tasks running at a time. As old outputs are archived, the storage size is not expected to exceed 1 TB.
+    As a solutions architect, which of the following would you recommend as an optimized solution for high-frequency reading and writing?
+
+Amazon EFS file systems are distributed across an unconstrained number of storage servers. This distributed data storage design enables file systems to grow elastically to petabyte scale. It also enables massively parallel access from compute instances, including Amazon EC2, Amazon ECS, and AWS Lambda, to your data.
+
+- **Use Amazon EFS with Provisioned Throughput mode**
+  
+  - Provisioned Throughput mode is available for applications with high throughput to storage (MiB/s per TiB) ratios, or with requirements greater than those allowed by the Bursting Throughput mode. For example, say you're using Amazon EFS for development tools, web serving, or content management applications where the amount of data in your file system is low relative to throughput demands. Your file system can now get the high levels of throughput your applications require without having to pad your file system.
+  
+  - If your file system is in the Provisioned Throughput mode, you can increase the Provisioned Throughput of your file system as often as you want. You can decrease your file system throughput in Provisioned Throughput mode as long as it's been more than 24 hours since the last decrease. Additionally, you can change between Provisioned Throughput mode and the default Bursting Throughput mode as long as it’s been more than 24 hours since the last throughput mode change.
+
+- **Use Amazon EFS with Bursting Throughput mode**
+  
+  - With Bursting Throughput mode, a file system's throughput scales as the amount of data stored in the standard storage class grows. File-based workloads are typically spiky, driving high levels of throughput for short periods of time, and low levels of throughput the rest of the time. To accommodate this, Amazon EFS is designed to burst to high throughput levels for periods of time. By default, AWS recommends that you run your application in the Bursting Throughput mode. But, if you're planning to migrate large amounts of data into your file system, consider switching to Provisioned Throughput mode.
+
+  - The use-case mentions that the solution should be optimized for high-frequency reading and writing even when the old outputs are archived, therefore Provisioned Throughput mode is a better fit as it guarantees high levels of throughput your applications require without having to pad your file system.
+
+---
+
+- You are deploying a critical monolith application that must be deployed on a single web server, as it hasn't been created to work in distributed mode. Still, you want to make sure your setup can automatically recover from the failure of an AZ.
+    Which of the following options should be combined to form the MOST cost-efficient solution? (Select three)
+
+- **Create an auto-scaling group that spans across 2 AZ, which min=1, max=1, desired=1**
+
+  - Amazon EC2 Auto Scaling helps you ensure that you have the correct number of Amazon EC2 instances available to handle the load for your application. You create collections of EC2 instances, called Auto Scaling groups. You can specify the minimum number of instances in each Auto Scaling group, and Amazon EC2 Auto Scaling ensures that your group never goes below this size.
+  - So we have an ASG with desired=1, across two AZ, so that if an instance goes down, it is automatically recreated in another AZ. So this option is correct.
+
+- Create an Elastic IP and use the EC2 user-data script to attach it
+
+  - Application Load Balancer (ALB) operates at the request level (layer 7), routing traffic to targets – EC2 instances, containers, IP addresses, and Lambda functions based on the content of the request. Ideal for advanced load balancing of HTTP and HTTPS traffic, Application Load Balancer provides advanced request routing targeted at delivery of modern application architectures, including microservices and container-based applications.
+
+  - An Elastic IP address is a static IPv4 address designed for dynamic cloud computing.
+    - An Elastic IP address is associated with your AWS account. With an Elastic IP address, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account.
+
+  - Now, between the ALB and the Elastic IP. If we use an ALB, things will still work, but we will have to pay for the provisioned ALB which sends traffic to only one EC2 instance. Instead, to minimize costs, we must use an Elastic IP.
+
+- Assign an EC2 Instance Role to perform the necessary API calls
+
+  - For that Elastic IP to be attached to our EC2 instance, we must use an EC2 user data script, and our EC2 instance must have the correct IAM permissions to perform the API call, so we need an EC2 instance role.
+
+---
+
+**Redis does not support multi-threading**
+
+---
+
+DB 엔진 유지 관리
+- 데이터베이스 엔진 수준으로 업그레이드하려면 가동 중지가 필요합니다. RDS DB 인스턴스가 다중 AZ 배포를 사용하더라도 기본 및 대기 DB 인스턴스는 동시에 업그레이드됩니다. 이로 인해 업그레이드가 완료될 때까지 가동 중지가 발생하고 가동 중지 기간은 DB 인스턴스의 크기에 따라 달라집니다. 자세한 내용은 DB 인스턴스 엔진 버전 업그레이드의 DB 엔진 섹션을 참조하세요.
+
+- 참고: SQL Server DB 인스턴스를 다중 AZ 배포로 업그레이드하는 경우 기본 및 대기 인스턴스가 모두 업그레이드됩니다. Amazon RDS는 롤링 업그레이드를 수행하므로 장애 조치 기간에만 중단됩니다. 자세한 내용은 다중 AZ 및 인 메모리 최적화 고려 사항을 참조하세요.
+
+---
+
+- The engineering team at a startup is evaluating the most optimal block storage volume type for the EC2 instances hosting its flagship application. The storage volume should support very low latency but it does not need to persist the data when the instance terminates. As a solutions architect, you have proposed using Instance Store volumes to meet these requirements.
+    Which of the following would you identify as the key characteristics of the Instance Store volumes? (Select two)
+
+- **You can't detach an instance store volume from one instance and attach it to a different instance**
+  - You can specify instance store volumes for an instance only when you launch it. You can't detach an instance store volume from one instance and attach it to a different instance. The data in an instance store persists only during the lifetime of its associated instance. If an instance reboots (intentionally or unintentionally), data in the instance store persists.
+
+- **If you create an AMI from an instance, the data on its instance store volumes isn't preserved**
+  - If you create an AMI from an instance, the data on its instance store volumes isn't preserved and isn't present on the instance store volumes of the instances that you launch from the AMI.
+
+Incorrect options:
+
+- Instance store is reset when you stop or terminate an instance. Instance store data is preserved during hibernation
+  - **When you stop, hibernate, or terminate an instance, every block of storage in the instance store is reset.** Therefore, this option is incorrect.
+
+- You can specify instance store volumes for an instance when you launch or restart it
+  - **You can specify instance store volumes for an instance only when you launch it.**
+
+- An instance store is a network storage type
+  - **An instance store provides temporary block-level storage for your instance.** This storage is located on disks that are physically attached to the host computer.
+
+
+---
+
+**you should create a read-replica with the same compute capacity and the same storage capacity as the primary.**
+
+
+
+
+
+
+
+
+

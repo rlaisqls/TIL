@@ -10,7 +10,7 @@ The default termination policy applies multiple termination criteria before sele
     - **[For Auto Scaling groups that use a launch configuration]**
         - Determine whether any of the instances use the oldest launch configuration.
         - After applying the preceding criteria, if there are multiple unprotected instances to terminate, determine which instances are closest to the next billing hour. If there are multiple unprotected instances closest to the next billing hour, terminate one of these instances at random.
-        - Note that terminating the instance closest to the next billing hour helps you maximize the use of your instances that have an hourly charge. Alternatively, if your Auto Scaling group uses Amazon Linux, Windows, or Ubuntu, your EC2 usage is billed in one-second increments. For more information, see Amazon EC2 pricing.
+        - Note that terminating the instance closest to the next billing hour helps you maximize the use of your instances that have an hourly charge. Alternatively, if your Auto Scaling group uses Amazon Linux, Windows, or Ubuntu, your EC2 usage is billed in one-second increments. For more information, see Amazon EC2 pricing
 
 ---
 reference

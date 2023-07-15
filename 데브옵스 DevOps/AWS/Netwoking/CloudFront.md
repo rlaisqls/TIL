@@ -60,6 +60,20 @@ Finally, Amazon CloudFront uses additional optimizations - e.g. wider TCP initia
   - The response from the primary origin takes too long (times out)
   Then CloudFront routes the request to the secondary origin in the origin group.
 
+### With S3
+
+Amazon CloudFront with an S3 bucket as the origin can help speed up both uploads and downloads for video files.
+
+When you configure CloudFront with an S3 bucket as the origin, CloudFront acts as a content delivery network (CDN) that caches your video files in edge locations around the world. This means that when a user requests a video file, CloudFront serves it from the edge location nearest to the user, reducing the distance and network latency between the user and the file.
+
+For downloads, CloudFront can significantly improve the performance by delivering the video files from the nearest edge location, resulting in faster download times. Users can benefit from reduced latency and improved data transfer speeds, particularly when accessing the files from geographically distant locations.
+
+For uploads, CloudFront can also help in certain scenarios. When you configure CloudFront with an S3 bucket as the origin, CloudFront can act as a proxy for the upload process. Instead of directly uploading the video file to the S3 bucket, the file can be uploaded to the CloudFront edge location nearest to the user. From there, CloudFront can route the upload request to the origin S3 bucket.
+
+This approach can be beneficial in cases where the user and the S3 bucket are geographically distant. Uploading the file to the nearby CloudFront edge location can reduce the upload latency, as the data has a shorter distance to travel. However, it's worth noting that CloudFront is primarily designed for content delivery and may not provide significant improvements for all upload scenarios, especially when dealing with larger file sizes or specific network conditions.
+
+Overall, utilizing CloudFront with an S3 bucket as the origin can improve both upload and download performance for video files by leveraging its global edge locations and caching capabilities.
+
 ### CloudFront Signed URLs and Signed Cookies
 
 - CloudFront signed URLs and signed cookies provide the same basic functionality: they allow you to control who can access your content. These features exist because many companies that distribute content via the internet want to resrict access to documents, businesss data, media streams, or content that is intended for selected users. As an example, users who have paid a fee should be able to access private content that users on the free tier shouldn't.
