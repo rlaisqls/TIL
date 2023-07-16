@@ -271,8 +271,6 @@ EFS 성능 모드
 - Redshift Spectrum : S3 의 exabyte 급 데이터 처리를 가능하게 함
 
 - SQS의 중복문제를 궁극적으로 해결하고 싶을 경우, SWF를 쓰는 것이 좋음
-  
-- RDS 가 Failover 되어 도메인이 변경될 경우, Route 53 내에서 바뀌는 것은 CNAME 임
 
 - SSL/TLS 인증서를 안전하게 import 할 수 있게 도와주는 서비스는 ACM, IAM cert store
 
@@ -281,7 +279,7 @@ EFS 성능 모드
 - Trusted Advisor 는 비용 최적화, 성능, 보안, 내결함성, 서비스 한도 등을 체크하여 사용자에게 알려줌
 
 - Aurora Failover
-  - ReadReplica가 있는 경우:CNAME이 정상 복제본을 가리키도록 변경되며, 해당 복제본이 승격됨
+  - ReadReplica가 있는 경우 : CNAME이 정상 복제본을 가리키도록 변경되며, 해당 복제본이 승격됨
   - Read Replica가 없는 경우 : 동일한 AZ에 새 인스턴스를 하나 생성시도, 생성이 어려운 경우 다른AZ에 생성 시도
 - CloudHSM은 키 또는 자격 증명에 대한 액세스 권한을 가지지 않으므로 자격 증명을 분실할 경우 키 복구 불가
 
