@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 482
-derectories      : 109
-avg_file_length  : 3291
+files            : 485
+derectories      : 110
+avg_file_length  : 3328
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -232,6 +232,7 @@ avg_file_length  : 3291
 ┃　　　┃　　　┃　　　┗━　[도커 아키텍처](./데브옵스 DevOps/Container/Docker/도커 아키텍처.md)</br>
 ┃　　　┃　　　┗━　[📁　Kubernetes](./데브옵스 DevOps/Container/Kubernetes)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　ArgoCD](./데브옵스 DevOps/Container/Kubernetes/ArgoCD)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ApplicationSets](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/ApplicationSets.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Apps of Apps](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/Apps of Apps.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Health Check](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/Health Check.md)</br>
@@ -242,6 +243,9 @@ avg_file_length  : 3291
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Container/Kubernetes/Node/Assigning Pods to Nodes.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Node](./데브옵스 DevOps/Container/Kubernetes/Node/Node.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Container/Kubernetes/Node/NodePort와 ServicePort와 targetPort.md)</br>
+┃　　　┃　　　┃　　　┗━　[📁　helm](./데브옵스 DevOps/Container/Kubernetes/helm)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Container/Kubernetes/helm/Chart Development Tips.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Container/Kubernetes/helm/Values Files.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　ingress](./데브옵스 DevOps/Container/Kubernetes/ingress)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Container/Kubernetes/ingress/Contour CRD 설치.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Container/Kubernetes/ingress/HTTPProxy.md)</br>
@@ -600,8 +604,9 @@ avg_file_length  : 3291
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
+┗━　[📁　+pre━commit.sh](./+pre━commit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[📁　XXWc0EuT](./XXWc0EuT)</br>
+┗━　[📁　XXr1sL5T](./XXr1sL5T)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
