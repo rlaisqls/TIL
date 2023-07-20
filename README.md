@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 485
-derectories      : 110
-avg_file_length  : 3328
+files            : 490
+derectories      : 111
+avg_file_length  : 3348
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -235,13 +235,13 @@ avg_file_length  : 3328
 ┃　　　┃　　　┃　　　┃　　　┗━　[ApplicationSets](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/ApplicationSets.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Apps of Apps](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/Apps of Apps.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Config Management Plugins](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/Config Management Plugins.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Health Check](./데브옵스 DevOps/Container/Kubernetes/ArgoCD/Health Check.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　DNS](./데브옵스 DevOps/Container/Kubernetes/DNS)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Container/Kubernetes/DNS/DNS in k8s.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ServiceDNS](./데브옵스 DevOps/Container/Kubernetes/DNS/ServiceDNS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　Node](./데브옵스 DevOps/Container/Kubernetes/Node)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Container/Kubernetes/Node/Assigning Pods to Nodes.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Node](./데브옵스 DevOps/Container/Kubernetes/Node/Node.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Container/Kubernetes/Node/NodePort와 ServicePort와 targetPort.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　helm](./데브옵스 DevOps/Container/Kubernetes/helm)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Container/Kubernetes/helm/Chart Development Tips.md)</br>
@@ -251,24 +251,30 @@ avg_file_length  : 3328
 ┃　　　┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Container/Kubernetes/ingress/HTTPProxy.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Container/Kubernetes/ingress/NGINX Ingress Basic Auth.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Container/Kubernetes/ingress/ingress.md)</br>
+┃　　　┃　　　┃　　　┗━　[📁　기본](./데브옵스 DevOps/Container/Kubernetes/기본)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[📁　object](./데브옵스 DevOps/Container/Kubernetes/기본/object)</br>
+┃　　　┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Container/Kubernetes/기본/object/Annotation.md)</br>
+┃　　　┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Container/Kubernetes/기본/object/Deployments.md)</br>
+┃　　　┃　　　┃　　　┃　　　┃　　　┗━　[Labels and Selectors](./데브옵스 DevOps/Container/Kubernetes/기본/object/Labels and Selectors.md)</br>
+┃　　　┃　　　┃　　　┃　　　┃　　　┗━　[Pod](./데브옵스 DevOps/Container/Kubernetes/기본/object/Pod.md)</br>
+┃　　　┃　　　┃　　　┃　　　┃　　　┗━　[Pod 생성과정](./데브옵스 DevOps/Container/Kubernetes/기본/object/Pod 생성과정.md)</br>
+┃　　　┃　　　┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Container/Kubernetes/기본/object/Service와 port.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Container/Kubernetes/기본/CRD.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Container/Kubernetes/기본/Endpoints.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Container/Kubernetes/기본/Helm.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Container/Kubernetes/기본/K8s Architecture.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Container/Kubernetes/기본/K8s의 도커런타임 사용중단.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Container/Kubernetes/기본/etcd.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Container/Kubernetes/기본/가상 IP와 서비스 프록시.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　실습](./데브옵스 DevOps/Container/Kubernetes/실습)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Container/Kubernetes/실습/EKS ALB.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Container/Kubernetes/실습/EKS kubecofig.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Container/Kubernetes/실습/K8s를 위한 SpringBoot 개발.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pulling images from ECR on Kubernetes](./데브옵스 DevOps/Container/Kubernetes/실습/Pulling images from ECR on Kubernetes.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[SpringBoot 서비스를 위한 Kubernetes 설정](./데브옵스 DevOps/Container/Kubernetes/실습/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[kubectl context](./데브옵스 DevOps/Container/Kubernetes/실습/kubectl context.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Container/Kubernetes/실습/minukube 시작하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[📁　이론](./데브옵스 DevOps/Container/Kubernetes/이론)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Container/Kubernetes/이론/Deployments.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Container/Kubernetes/이론/Endpoints.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Container/Kubernetes/이론/Helm.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Container/Kubernetes/이론/K8s Architecture.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Container/Kubernetes/이론/K8s의 도커런타임 사용중단.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Pod](./데브옵스 DevOps/Container/Kubernetes/이론/Pod.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Pod 생성과정](./데브옵스 DevOps/Container/Kubernetes/이론/Pod 생성과정.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Container/Kubernetes/이론/Service와 port.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Container/Kubernetes/이론/가상 IP와 서비스 프록시.md)</br>
-┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Container/Kubernetes/CRD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Container/Kubernetes/Kubernetes.md)</br>
-┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Container/Kubernetes/etcd.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Container/Kubernetes/test.yml)</br>
 ┃　　　┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Container/Kubernetes/환경변수 설정.md)</br>
 ┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI.md)</br>
@@ -604,9 +610,7 @@ avg_file_length  : 3328
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
-┗━　[📁　+pre━commit.sh](./+pre━commit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[📁　XXr1sL5T](./XXr1sL5T)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>

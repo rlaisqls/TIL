@@ -1,4 +1,4 @@
-# Coroutine CPS
+# Coroutine CPS(Continuation-Passing-Style)
 
 Kotlin coroutines are managed at the JVM level using the concept of **"continuations."** Continuations are a programming technique that allows suspending the execution of a function at a certain point and resuming it later from where it left off. Coroutines build upon this concept to provide a high-level and efficient way to write asynchronous code.
 
