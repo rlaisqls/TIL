@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 493
-derectories      : 112
-avg_file_length  : 3343
+files            : 494
+derectories      : 113
+avg_file_length  : 3347
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -321,6 +321,8 @@ avg_file_length  : 3343
 ┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
 ┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/Envoy.md)</br>
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
+┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
+┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
 ┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Elastic Search.md)</br>
@@ -615,7 +617,6 @@ avg_file_length  : 3343
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[📁　+autocommit.sh](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[📁　XXAzP3Jl](./XXAzP3Jl)</br>
 .
 ┗━　[📁　debug.log](./debug.log)</br>
 ┗━　[📁　pre━commit](./pre━commit)</br>
