@@ -65,3 +65,13 @@ API 서버는 요청을 받으면 etcd 저장소와 통신할 뿐, **실제로 �
 큐블릿이 Pod를 관리한다면 프록시는 Pod로 연결되는 네트워크를 관리한다. TCP, UDP, SCTP 스트림을 포워딩하고 여러개의 Pod를 라운드로빈 형태로 묶어 서비스를 제공할 수 있다.
 
 초기에는 Kube-proxy 자체가 프록시 서버로 동작하면서 실제 요청을 프록시 서버가 받고 각 Pod에 전달해 주었는데 시간이 지나면서 iptables를 설정하는 방식으로 변경되었다. iptables에 등록된 규칙이 많아지면 느려지는 문제가 발생하여 최근에는 IPVS를 지원하기 시작했다.
+
+### Container runtime
+
+컨테이너 런타임은 컨테이너 실행을 담당하는 소프트웨어이다.
+
+Kubernetes는 containerd, CRI-O 및 기타 Kubernetes CRI(Container Runtime Interface) 구현과 같은 컨테이너 런타임을 지원한다.
+
+---
+참고
+- https://kubernetes.io/docs/concepts/overview/components/

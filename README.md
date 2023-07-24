@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 496
-derectories      : 113
-avg_file_length  : 3397
+files            : 508
+derectories      : 114
+avg_file_length  : 3492
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -123,7 +123,10 @@ avg_file_length  : 3397
 ┃　　　┃　　　┗━　[CIDR](./네트워크 Network/L2 internet layer/CIDR.md)</br>
 ┃　　　┃　　　┗━　[ICMP](./네트워크 Network/L2 internet layer/ICMP.md)</br>
 ┃　　　┃　　　┗━　[IP](./네트워크 Network/L2 internet layer/IP.md)</br>
+┃　　　┃　　　┗━　[IPAM](./네트워크 Network/L2 internet layer/IPAM.md)</br>
+┃　　　┃　　　┗━　[IPVS](./네트워크 Network/L2 internet layer/IPVS.md)</br>
 ┃　　　┃　　　┗━　[NAT](./네트워크 Network/L2 internet layer/NAT.md)</br>
+┃　　　┃　　　┗━　[secondary IP](./네트워크 Network/L2 internet layer/secondary IP.md)</br>
 ┃　　　┃　　　┗━　[서브넷](./네트워크 Network/L2 internet layer/서브넷.md)</br>
 ┃　　　┗━　[📁　L3 transport layer](./네트워크 Network/L3 transport layer)</br>
 ┃　　　┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/L3 transport layer/SO_REUSEADDR.md)</br>
@@ -136,7 +139,6 @@ avg_file_length  : 3397
 ┃　　　┃　　　┗━　[HTTP Options](./네트워크 Network/L4 appplication layer/HTTP Options.md)</br>
 ┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/TLS.md)</br>
 ┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/TLS 인증서 발급 절차를 이해해보자.md)</br>
-┃　　　┃　　　┗━　[iptables](./네트워크 Network/L4 appplication layer/iptables.md)</br>
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[ACME](./네트워크 Network/ACME.md)</br>
 ┃　　　┗━　[Cloudflare ProxyStatus](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
@@ -262,19 +264,24 @@ avg_file_length  : 3397
 ┃　　　┃　　　┃　　　┗━　[Install Calico](./데브옵스 DevOps/Kubernetes/CNI/Install Calico.md)</br>
 ┃　　　┃　　　┗━　[📁　DNS](./데브옵스 DevOps/Kubernetes/DNS)</br>
 ┃　　　┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Kubernetes/DNS/DNS in k8s.md)</br>
+┃　　　┃　　　┃　　　┗━　[External DNS](./데브옵스 DevOps/Kubernetes/DNS/External DNS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ServiceDNS](./데브옵스 DevOps/Kubernetes/DNS/ServiceDNS.md)</br>
-┃　　　┃　　　┗━　[📁　Node](./데브옵스 DevOps/Kubernetes/Node)</br>
-┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/Node/Assigning Pods to Nodes.md)</br>
-┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/Node/NodePort와 ServicePort와 targetPort.md)</br>
+┃　　　┃　　　┗━　[📁　EKS](./데브옵스 DevOps/Kubernetes/EKS)</br>
+┃　　　┃　　　┃　　　┗━　[Amazon VPC CNI](./데브옵스 DevOps/Kubernetes/EKS/Amazon VPC CNI.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS Control Plane](./데브옵스 DevOps/Kubernetes/EKS/EKS Control Plane.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./데브옵스 DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
 ┃　　　┃　　　┗━　[📁　helm](./데브옵스 DevOps/Kubernetes/helm)</br>
 ┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/helm/Chart Development Tips.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/helm/Values Files.md)</br>
-┃　　　┃　　　┗━　[📁　ingress](./데브옵스 DevOps/Kubernetes/ingress)</br>
-┃　　　┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Kubernetes/ingress/Contour CRD 설치.md)</br>
-┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Kubernetes/ingress/HTTPProxy.md)</br>
-┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Kubernetes/ingress/NGINX Ingress Basic Auth.md)</br>
-┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/ingress/ingress.md)</br>
 ┃　　　┃　　　┗━　[📁　기본](./데브옵스 DevOps/Kubernetes/기본)</br>
+┃　　　┃　　　┃　　　┗━　[📁　Node](./데브옵스 DevOps/Kubernetes/기본/Node)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/기본/Node/Assigning Pods to Nodes.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/기본/Node/NodePort와 ServicePort와 targetPort.md)</br>
+┃　　　┃　　　┃　　　┗━　[📁　ingress](./데브옵스 DevOps/Kubernetes/기본/ingress)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Kubernetes/기본/ingress/Contour CRD 설치.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Kubernetes/기본/ingress/HTTPProxy.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Kubernetes/기본/ingress/NGINX Ingress Basic Auth.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/기본/ingress/ingress.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　object](./데브옵스 DevOps/Kubernetes/기본/object)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Kubernetes/기본/object/Annotation.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/기본/object/Deployments.md)</br>
@@ -290,6 +297,7 @@ avg_file_length  : 3397
 ┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/기본/etcd.md)</br>
 ┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/기본/가상 IP와 서비스 프록시.md)</br>
 ┃　　　┃　　　┗━　[📁　실습](./데브옵스 DevOps/Kubernetes/실습)</br>
+┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/실습/EKS ALB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/실습/EKS kubecofig.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Kubernetes/실습/K8s를 위한 SpringBoot 개발.md)</br>
@@ -297,7 +305,10 @@ avg_file_length  : 3397
 ┃　　　┃　　　┃　　　┗━　[SpringBoot 서비스를 위한 Kubernetes 설정](./데브옵스 DevOps/Kubernetes/실습/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[kubectl context](./데브옵스 DevOps/Kubernetes/실습/kubectl context.md)</br>
 ┃　　　┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Kubernetes/실습/minukube 시작하기.md)</br>
+┃　　　┃　　　┗━　[+Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/+Node and Pod Network Layout.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
+┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network Troubleshooting.md)</br>
+┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/Kubernetes/eBPF.md)</br>
 ┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
 ┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/환경변수 설정.md)</br>
 ┃　　　┗━　[📁　Logging](./데브옵스 DevOps/Logging)</br>
@@ -570,7 +581,9 @@ avg_file_length  : 3397
 ┃　　　┃　　　┃　　　┃　　　┗━　[ping과 netstat](./운영체제 Operating System/linux/network/주요명령어/ping과 netstat.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[route로 라우팅 테이블 확인하기](./운영체제 Operating System/linux/network/주요명령어/route로 라우팅 테이블 확인하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[DNS 서버](./운영체제 Operating System/linux/network/DNS 서버.md)</br>
+┃　　　┃　　　┃　　　┗━　[Netfilter](./운영체제 Operating System/linux/network/Netfilter.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Virtual Networking Interface](./운영체제 Operating System/linux/network/Virtual Networking Interface.md)</br>
+┃　　　┃　　　┃　　　┗━　[iptables](./운영체제 Operating System/linux/network/iptables.md)</br>
 ┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/network/namespace와 cgroup.md)</br>
 ┃　　　┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network/network namespaces.md)</br>
 ┃　　　┃　　　┃　　　┗━　[네트워크 침해](./운영체제 Operating System/linux/network/네트워크 침해.md)</br>
