@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 508
-derectories      : 114
-avg_file_length  : 3492
+files            : 517
+derectories      : 115
+avg_file_length  : 3620
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -18,9 +18,7 @@ avg_file_length  : 3492
 ┃　　　┗━　[📁　hooks](./Git/hooks)</br>
 ┃　　　┃　　　┗━　[Githooks](./Git/hooks/Githooks.md)</br>
 ┃　　　┃　　　┗━　[githook을 위한 perl command](./Git/hooks/githook을 위한 perl command.md)</br>
-┃　　　┃　　　┗━　[파일트리 자동생성 V1](./Git/hooks/파일트리 자동생성 V1.md)</br>
-┃　　　┃　　　┗━　[파일트리 자동생성 V2](./Git/hooks/파일트리 자동생성 V2.md)</br>
-┃　　　┃　　　┗━　[파일트리 자동생성 V3](./Git/hooks/파일트리 자동생성 V3.md)</br>
+┃　　　┃　　　┗━　[파일트리 자동생성](./Git/hooks/파일트리 자동생성.md)</br>
 ┃　　　┗━　[GitLab](./Git/GitLab.md)</br>
 ┃　　　┗━　[자동커밋](./Git/자동커밋.md)</br>
 ┗━　[📁　개발](./개발)</br>
@@ -185,6 +183,7 @@ avg_file_length  : 3492
 ┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Management and governance/CloudWatch.md)</br>
 ┃　　　┃　　　┗━　[📁　Netwoking](./데브옵스 DevOps/AWS/Netwoking)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　elb](./데브옵스 DevOps/AWS/Netwoking/elb)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Application Load　Balancer components](./데브옵스 DevOps/AWS/Netwoking/elb/Application Load　Balancer components.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Connection Draining](./데브옵스 DevOps/AWS/Netwoking/elb/Connection Draining.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwoking/elb/ELB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/Netwoking/API Gateway.md)</br>
@@ -223,6 +222,7 @@ avg_file_length  : 3492
 ┃　　　┗━　[📁　Container](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[📁　Docker](./데브옵스 DevOps/Container/Docker)</br>
 ┃　　　┃　　　┃　　　┗━　[DockerSwarm](./데브옵스 DevOps/Container/Docker/DockerSwarm.md)</br>
+┃　　　┃　　　┃　　　┗━　[Overlay Network](./데브옵스 DevOps/Container/Docker/Overlay Network.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Private registry 구축](./데브옵스 DevOps/Container/Docker/Private registry 구축.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Prune](./데브옵스 DevOps/Container/Docker/Prune.md)</br>
 ┃　　　┃　　　┃　　　┗━　[README](./데브옵스 DevOps/Container/Docker/README.md)</br>
@@ -287,27 +287,34 @@ avg_file_length  : 3492
 ┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/기본/object/Deployments.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Labels and Selectors](./데브옵스 DevOps/Kubernetes/기본/object/Labels and Selectors.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Pod](./데브옵스 DevOps/Kubernetes/기본/object/Pod.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pod Readiness and Probes](./데브옵스 DevOps/Kubernetes/기본/object/Pod Readiness and Probes.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Pod 생성과정](./데브옵스 DevOps/Kubernetes/기본/object/Pod 생성과정.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Kubernetes/기본/object/Service와 port.md)</br>
+┃　　　┃　　　┃　　　┗━　[CNI Specification](./데브옵스 DevOps/Kubernetes/기본/CNI Specification.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/기본/CRD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/기본/Endpoints.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/기본/Helm.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Kubernetes/기본/K8s Architecture.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/기본/K8s의 도커런타임 사용중단.md)</br>
+┃　　　┃　　　┃　　　┗━　[Kube━proxy](./데브옵스 DevOps/Kubernetes/기본/Kube━proxy.md)</br>
+┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./데브옵스 DevOps/Kubernetes/기본/NetworkPolicy.md)</br>
+┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/기본/StatefulSets.md)</br>
 ┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/기본/etcd.md)</br>
 ┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/기본/가상 IP와 서비스 프록시.md)</br>
 ┃　　　┃　　　┗━　[📁　실습](./데브옵스 DevOps/Kubernetes/실습)</br>
 ┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/실습/EKS ALB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/실습/EKS kubecofig.md)</br>
+┃　　　┃　　　┃　　　┗━　[Install Cilium](./데브옵스 DevOps/Kubernetes/실습/Install Cilium.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Kubernetes/실습/K8s를 위한 SpringBoot 개발.md)</br>
+┃　　　┃　　　┃　　　┗━　[NetworkPolicy Cilium example](./데브옵스 DevOps/Kubernetes/실습/NetworkPolicy Cilium example.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Pulling images from ECR on Kubernetes](./데브옵스 DevOps/Kubernetes/실습/Pulling images from ECR on Kubernetes.md)</br>
 ┃　　　┃　　　┃　　　┗━　[SpringBoot 서비스를 위한 Kubernetes 설정](./데브옵스 DevOps/Kubernetes/실습/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[kubectl context](./데브옵스 DevOps/Kubernetes/실습/kubectl context.md)</br>
 ┃　　　┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Kubernetes/실습/minukube 시작하기.md)</br>
-┃　　　┃　　　┗━　[+Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/+Node and Pod Network Layout.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network Troubleshooting.md)</br>
+┃　　　┃　　　┗━　[Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/Node and Pod Network Layout.md)</br>
 ┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/Kubernetes/eBPF.md)</br>
 ┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
 ┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/환경변수 설정.md)</br>
@@ -333,6 +340,8 @@ avg_file_length  : 3492
 ┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
 ┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/Envoy.md)</br>
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
+┃　　　┗━　[📁　Service Mesh](./데브옵스 DevOps/Service Mesh)</br>
+┃　　　┃　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/Istio Arcitecture.md)</br>
 ┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
 ┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
@@ -598,6 +607,7 @@ avg_file_length  : 3492
 ┃　　　┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/shell/bash_profile과 bashrc.md)</br>
 ┃　　　┃　　　┃　　　┗━　[shell](./운영체제 Operating System/linux/shell/shell.md)</br>
 ┃　　　┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/shell/zshrc.md)</br>
+┃　　　┃　　　┗━　[IP masquerading](./운영체제 Operating System/linux/IP masquerading.md)</br>
 ┃　　　┃　　　┗━　[Linux Package](./운영체제 Operating System/linux/Linux Package.md)</br>
 ┃　　　┃　　　┗━　[Linux 배포판](./운영체제 Operating System/linux/Linux 배포판.md)</br>
 ┃　　　┃　　　┗━　[Linux 부팅 과정](./운영체제 Operating System/linux/Linux 부팅 과정.md)</br>

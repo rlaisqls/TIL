@@ -8,7 +8,6 @@ kubernetes 에서 ingress 상에서 https를 서비스하는데 지원을 해주
 kubectl create namespace cert-manager
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.13.1/cert-manager.yaml
 
-
 or
 
 kubectl apply --validate=false -f https://raw.githubusercontent.com/jetstack/cert-manager/v0.13.1/deploy/manifests/00-crds.yaml
