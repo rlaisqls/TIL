@@ -229,26 +229,13 @@ In the previous example, nmap detects three open ports and guesses which service
 
 `nmap` has a dizzying number of options, which change the scan behavior and level of detail provided. As with other commands, we will summarize some key options, but we highly recommend reading `nmap`’s help/man pages.
 
-common options.
+**common options**
 
 |Option|Syntax|Description|
-Additional detection
-
-`-A`
-
-Enable OS detection, version detection, and more.
-
-Decrease verbosity
-
-`-d`
-
-Decrease the command verbosity. Using multiple d’s (e.g., -dd) increases the effect.
-
-Increase verbosity
-
-`-v`
-
-Increase the command verbosity. Using multiple v’s (e.g., -vv) increases the effect.
+|-|-|-|
+|Additional detection|`-A`|Enable OS detection, version detection, and more.|
+|Decrease verbosity|`-d`|Decrease the command verbosity. Using multiple d’s (e.g., -dd) increases the effect.|
+|Increase verbosity|`-v`|Increase the command verbosity. Using multiple v’s (e.g., -vv) increases the effect.|
 
 ## netstat
 netstat can display a wide range of information about a machine’s network stack and connections:
@@ -294,6 +281,7 @@ tcp6     0    0 [::]:3000       [::]:*       LISTEN     613/grafana-server
 **common options**
 
 |Option|Syntax|Description|
+|-|-|-|
 |Show all sockets|`netstat -a`|Shows all sockets, not only open connections.|
 |Show statistics|`netstat -s`|Shows networking statistics. By default, netstat shows stats from all protocols.|
 |Show listening sockets|`netstat -l`|Shows sockets that are listening. This is an easy way to find running services.|

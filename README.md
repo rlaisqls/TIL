@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 517
+files            : 518
 derectories      : 115
-avg_file_length  : 3620
+avg_file_length  : 3616
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -342,6 +342,7 @@ avg_file_length  : 3620
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
 ┃　　　┗━　[📁　Service Mesh](./데브옵스 DevOps/Service Mesh)</br>
 ┃　　　┃　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/Istio Arcitecture.md)</br>
+┃　　　┃　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Service Mesh/Istio Configuration Profiles.md)</br>
 ┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
 ┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
