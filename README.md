@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 518
+files            : 522
 derectories      : 115
-avg_file_length  : 3616
+avg_file_length  : 3623
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -267,9 +267,11 @@ avg_file_length  : 3616
 ┃　　　┃　　　┃　　　┗━　[External DNS](./데브옵스 DevOps/Kubernetes/DNS/External DNS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ServiceDNS](./데브옵스 DevOps/Kubernetes/DNS/ServiceDNS.md)</br>
 ┃　　　┃　　　┗━　[📁　EKS](./데브옵스 DevOps/Kubernetes/EKS)</br>
+┃　　　┃　　　┃　　　┗━　[AWS Load Balancer Controller](./데브옵스 DevOps/Kubernetes/EKS/AWS Load Balancer Controller.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Amazon VPC CNI](./데브옵스 DevOps/Kubernetes/EKS/Amazon VPC CNI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Control Plane](./데브옵스 DevOps/Kubernetes/EKS/EKS Control Plane.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./데브옵스 DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
+┃　　　┃　　　┃　　　┗━　[NLB IP mode](./데브옵스 DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
 ┃　　　┃　　　┗━　[📁　helm](./데브옵스 DevOps/Kubernetes/helm)</br>
 ┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/helm/Chart Development Tips.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/helm/Values Files.md)</br>
@@ -299,6 +301,7 @@ avg_file_length  : 3616
 ┃　　　┃　　　┃　　　┗━　[Kube━proxy](./데브옵스 DevOps/Kubernetes/기본/Kube━proxy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./데브옵스 DevOps/Kubernetes/기본/NetworkPolicy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/기본/StatefulSets.md)</br>
+┃　　　┃　　　┃　　　┗━　[Taints and Tolerations](./데브옵스 DevOps/Kubernetes/기본/Taints and Tolerations.md)</br>
 ┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/기본/etcd.md)</br>
 ┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/기본/가상 IP와 서비스 프록시.md)</br>
 ┃　　　┃　　　┗━　[📁　실습](./데브옵스 DevOps/Kubernetes/실습)</br>
@@ -341,6 +344,7 @@ avg_file_length  : 3616
 ┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/Envoy.md)</br>
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
 ┃　　　┗━　[📁　Service Mesh](./데브옵스 DevOps/Service Mesh)</br>
+┃　　　┃　　　┗━　[Istioctl](./데브옵스 DevOps/Service Mesh/Istioctl.md)</br>
 ┃　　　┃　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/Istio Arcitecture.md)</br>
 ┃　　　┃　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Service Mesh/Istio Configuration Profiles.md)</br>
 ┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
