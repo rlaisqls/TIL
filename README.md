@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 522
-derectories      : 115
-avg_file_length  : 3623
+files            : 523
+derectories      : 116
+avg_file_length  : 3619
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -344,9 +344,11 @@ avg_file_length  : 3623
 ┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/Envoy.md)</br>
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
 ┃　　　┗━　[📁　Service Mesh](./데브옵스 DevOps/Service Mesh)</br>
-┃　　　┃　　　┗━　[Istioctl](./데브옵스 DevOps/Service Mesh/Istioctl.md)</br>
-┃　　　┃　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/Istio Arcitecture.md)</br>
-┃　　　┃　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Service Mesh/Istio Configuration Profiles.md)</br>
+┃　　　┃　　　┗━　[📁　istio](./데브옵스 DevOps/Service Mesh/istio)</br>
+┃　　　┃　　　　　　　┗━　[Istioctl](./데브옵스 DevOps/Service Mesh/istio/Istioctl.md)</br>
+┃　　　┃　　　　　　　┗━　[Istio And Envoy](./데브옵스 DevOps/Service Mesh/istio/Istio And Envoy.md)</br>
+┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/istio/Istio Arcitecture.md)</br>
+┃　　　┃　　　　　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Service Mesh/istio/Istio Configuration Profiles.md)</br>
 ┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
 ┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
