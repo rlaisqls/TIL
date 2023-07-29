@@ -3,7 +3,7 @@
 ```
 files            : 523
 derectories      : 116
-avg_file_length  : 3619
+avg_file_length  : 3620
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -260,7 +260,7 @@ avg_file_length  : 3619
 ┃　　　┃　　　┃　　　┗━　[Health Check](./데브옵스 DevOps/Kubernetes/ArgoCD/Health Check.md)</br>
 ┃　　　┃　　　┗━　[📁　CNI](./데브옵스 DevOps/Kubernetes/CNI)</br>
 ┃　　　┃　　　┃　　　┗━　[Calico](./데브옵스 DevOps/Kubernetes/CNI/Calico.md)</br>
-┃　　　┃　　　┃　　　┗━　[Calico and Istio](./데브옵스 DevOps/Kubernetes/CNI/Calico and Istio.md)</br>
+┃　　　┃　　　┃　　　┗━　[Calico Architecture](./데브옵스 DevOps/Kubernetes/CNI/Calico Architecture.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Install Calico](./데브옵스 DevOps/Kubernetes/CNI/Install Calico.md)</br>
 ┃　　　┃　　　┗━　[📁　DNS](./데브옵스 DevOps/Kubernetes/DNS)</br>
 ┃　　　┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Kubernetes/DNS/DNS in k8s.md)</br>
