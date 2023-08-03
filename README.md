@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 524
+files            : 523
 derectories      : 116
-avg_file_length  : 3616
+avg_file_length  : 3620
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -140,7 +140,6 @@ avg_file_length  : 3616
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[ACME](./네트워크 Network/ACME.md)</br>
 ┃　　　┗━　[Cloudflare ProxyStatus](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
-┃　　　┗━　[Connection Reset by peer](./네트워크 Network/Connection Reset by peer.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
 ┃　　　┗━　[SSH config](./네트워크 Network/SSH config.md)</br>
 ┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
