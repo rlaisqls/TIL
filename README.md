@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 524
-derectories      : 116
-avg_file_length  : 3624
+files            : 525
+derectories      : 117
+avg_file_length  : 3621
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -329,9 +329,11 @@ avg_file_length  : 3624
 ┃　　　┃　　　┃　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
 ┃　　　┃　　　┃　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
 ┃　　　┃　　　┗━　[📁　elk](./데브옵스 DevOps/Logging/elk)</br>
-┃　　　┃　　　　　　　┗━　[ELK Stack](./데브옵스 DevOps/Logging/elk/ELK Stack.md)</br>
-┃　　　┃　　　　　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Logging/elk/ElasticSearch 검색 명령어.md)</br>
-┃　　　┃　　　　　　　┗━　[Logstash](./데브옵스 DevOps/Logging/elk/Logstash.md)</br>
+┃　　　┃　　　┃　　　┗━　[ELK Stack](./데브옵스 DevOps/Logging/elk/ELK Stack.md)</br>
+┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Logging/elk/ElasticSearch 검색 명령어.md)</br>
+┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Logging/elk/Logstash.md)</br>
+┃　　　┃　　　┗━　[📁　prometheus](./데브옵스 DevOps/Logging/prometheus)</br>
+┃　　　┃　　　　　　　┗━　[prometheus](./데브옵스 DevOps/Logging/prometheus/prometheus.md)</br>
 ┃　　　┗━　[📁　Proxy](./데브옵스 DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[📁　nginx](./데브옵스 DevOps/Proxy/nginx)</br>
 ┃　　　┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/Proxy/nginx/location block.md)</br>
