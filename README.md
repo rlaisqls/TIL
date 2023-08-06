@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 525
+files            : 526
 derectories      : 117
 avg_file_length  : 3621
 ```
@@ -352,6 +352,7 @@ avg_file_length  : 3621
 ┃　　　┃　　　　　　　┗━　[Istio And Envoy](./데브옵스 DevOps/Service Mesh/istio/Istio And Envoy.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/istio/Istio Arcitecture.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Service Mesh/istio/Istio Configuration Profiles.md)</br>
+┃　　　┃　　　　　　　┗━　[gateway log debug 하는 법](./데브옵스 DevOps/Service Mesh/istio/gateway log debug 하는 법.md)</br>
 ┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
 ┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
