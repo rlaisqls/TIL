@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 526
+files            : 531
 derectories      : 117
-avg_file_length  : 3621
+avg_file_length  : 3619
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -303,9 +303,11 @@ avg_file_length  : 3621
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./데브옵스 DevOps/Kubernetes/기본/NetworkPolicy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/기본/StatefulSets.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Taints and Tolerations](./데브옵스 DevOps/Kubernetes/기본/Taints and Tolerations.md)</br>
+┃　　　┃　　　┃　　　┗━　[Workloads](./데브옵스 DevOps/Kubernetes/기본/Workloads.md)</br>
 ┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/기본/etcd.md)</br>
 ┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/기본/가상 IP와 서비스 프록시.md)</br>
 ┃　　　┃　　　┗━　[📁　실습](./데브옵스 DevOps/Kubernetes/실습)</br>
+┃　　　┃　　　┃　　　┗━　[+Git━sync와 사이드카 패턴](./데브옵스 DevOps/Kubernetes/실습/+Git━sync와 사이드카 패턴.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/실습/EKS ALB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/실습/EKS kubecofig.md)</br>
@@ -316,12 +318,13 @@ avg_file_length  : 3621
 ┃　　　┃　　　┃　　　┗━　[SpringBoot 서비스를 위한 Kubernetes 설정](./데브옵스 DevOps/Kubernetes/실습/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[kubectl context](./데브옵스 DevOps/Kubernetes/실습/kubectl context.md)</br>
 ┃　　　┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Kubernetes/실습/minukube 시작하기.md)</br>
+┃　　　┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/실습/환경변수 설정.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
+┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./데브옵스 DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
 ┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network Troubleshooting.md)</br>
 ┃　　　┃　　　┗━　[Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/Node and Pod Network Layout.md)</br>
 ┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/Kubernetes/eBPF.md)</br>
 ┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
-┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/환경변수 설정.md)</br>
 ┃　　　┗━　[📁　Logging](./데브옵스 DevOps/Logging)</br>
 ┃　　　┃　　　┗━　[📁　datadog](./데브옵스 DevOps/Logging/datadog)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog/datadog.md)</br>
@@ -348,10 +351,12 @@ avg_file_length  : 3621
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
 ┃　　　┗━　[📁　Service Mesh](./데브옵스 DevOps/Service Mesh)</br>
 ┃　　　┃　　　┗━　[📁　istio](./데브옵스 DevOps/Service Mesh/istio)</br>
+┃　　　┃　　　　　　　┗━　[+Dry run](./데브옵스 DevOps/Service Mesh/istio/+Dry run.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istioctl](./데브옵스 DevOps/Service Mesh/istio/Istioctl.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio And Envoy](./데브옵스 DevOps/Service Mesh/istio/Istio And Envoy.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/istio/Istio Arcitecture.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Service Mesh/istio/Istio Configuration Profiles.md)</br>
+┃　　　┃　　　　　　　┗━　[Istio authorization](./데브옵스 DevOps/Service Mesh/istio/Istio authorization.md)</br>
 ┃　　　┃　　　　　　　┗━　[gateway log debug 하는 법](./데브옵스 DevOps/Service Mesh/istio/gateway log debug 하는 법.md)</br>
 ┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
 ┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
