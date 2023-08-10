@@ -1,247 +1,63 @@
 # Istio authorization
 
-Istio는 `ClusterRbacConfig`를 통해 접근 제어를 활성화하고 ServiceRole에 권한 Rule을 정의한 후 ServiceRoleBinding을 통해 특정 대상에 해당 ServiceRole에 지정하여 접근 재어를 수행한다. 네임스페이스, 서비스, HTTP 메소드별 접근제어를 통한 권한 제어를 실습 해보고, Istio Authorization 구성 방법에 대해 알아보자.
+Istio는 `ClusterRbacConfig`를 통해 ServiceRole에 권한 Rule을 정의한 후 ServiceRoleBinding을 통해 특정 대상에 해당 ServiceRole에 지정하여 접근 제어를 수행한다. mesh, namespace, workload 범위에서의 access control을 적용할 수 있다.
 
-### 준비작업
+Istio authorization을 사용했을 때 얻을 수 있는 이점은 아래와 같다.
 
-1. k8s, helm 설치
-2. Istio 초기화 (namespace, CRDs)
-   
-```bash
-$ wget https://github.com/istio/istio/releases/download/1.8.2/istio-1.8.2-osx.tar.gz
-$ tar -vxzf istio-1.8.2-osx.tar.gz
-$ cd istio-1.8.2
-$ kubectl create namespace istio-system
-$ helm template install/kubernetes/helm/istio-init --name istio-init --namespace istio-system | kubectl apply -f -
-```
+- 간단한 API: AuthorizationPolicy CRD를 통해 쉬운 접근 제어가 가능하다.
+- 유연한 설정: CUSTOM, DENY 및 ALLOW 등 Istio 특성에 대한 사용자 지정 조건을 자유롭게 정의할 수 있다.
+- 고성능: Envoy native를 사용하기에 성능이 우수하다.
+- 높은 호환성: gRPC, HTTP, HTTPS, HTTP/2, plain TCP 등 여러 프로토콜을 지원하여 상황에 맞게 사용할 수 있다.
 
-3. Istio ingresgateway는 노드 포트로 설치
+![image](https://github.com/rlaisqls/TIL/assets/81006587/dbb9146a-ffbf-48d5-8208-560772f0a939)
 
-```bash
-$ helm template install/kubernetes/helm/istio --name istio --namespace istio-system \
---set gateways.istio-ingressgateway.type=NodePort \
-| kubectl apply -f -
-```
+## Authorization policy
 
-4. Istio pod 정상상태 확인 및 대기
-   
-```bash
-$ kubectl get pod -n istio-system
-```
+아무 설정도 하지 않은 상태의 Workload는 기본적으로 모든 요청을 허용하는데, 특정 규칙에 따른 access control을 사용하기 위해선 Authorization policy를 적용하면 된다. 
 
-5. bookinfo 설치
-   
-```bash
-$ kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)
-$ kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
-$ kubectl apply -f samples/bookinfo/networking/destination-rule-all.yaml
-```
+Authorization policy는 `ALLOW`, `DENY`, `CUSTOM` action을 지원한다. 한 workload에 여러 정책을 적용할 수도 있다. 각 action들은 아래와 같은 순서로 검증된다.
 
-6. `/productpage` 정상 동작여부 확인
+<img width="386" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/a5a4c4ee-6159-4639-b378-7e0233b9247d">
 
-```bash
-$ INGRESS_URL=http://$(minikube ip -p istio-security):$(k get svc/istio-ingressgateway -n istio-system -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}')/productpage
-$ curl -I $INGRESS_URL
-```
+### 코드 예시
 
-7. productpage 와 reviews 의 서비스를 위한 ServiceAccount 생성
+Authorization policy는 selector, action, rule 목록 이렇게 총 3개 부분으로 구성되어있다.
 
-```bash
-$ kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo-add-serviceaccount.yaml)
-```
-
-8. 브라우저에서 `/productpage` URL 접속해보기
-
-```bash
-echo $INGRESS_URL
-```
-
-### Istio authorization 활성화
-
-- ClusterRbacConfig를 구성하여 네임스페이스 “default”에 대한 Istio authorization을 활성화한다.
+- `selector`: policy의 타겟 지정
+- `action`: `ALLOW`, `DENY`, `CUSTOM` 중 하나의 action
+- `rules`: 적용 규칙
+  - `from`: 요청하는 주체에 대한 규칙
+  - `to`: 요청을 처리하는 주체에 대한 규칙
+  - `when`: 적용할 경우에 대한 condition 정의
 
 ```yaml
-$ kubectl apply -f - <<EOF
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ClusterRbacConfig
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
 metadata:
-  name: default
+ name: httpbin
+ namespace: foo
 spec:
-  mode: 'ON_WITH_INCLUSION'
-  inclusion:
-    namespaces: ["default"]
-EOF
+ selector:
+   matchLabels:
+     app: httpbin
+     version: v1
+ action: ALLOW
+ rules:
+ - from:
+   - source:
+       principals: ["cluster.local/ns/default/sa/sleep"]
+   - source:
+       namespaces: ["dev"]
+   to:
+   - operation:
+       methods: ["GET"]
+   when:
+   - key: request.auth.claims[iss]
+     values: ["https://accounts.google.com"]
 ```
 
-authorization 대상을 지정하지 않았으므로 `/productpage`에 요청을 보내면 `RBAC: access denied`가 반환된다.
-
-```bash
-$ curl $INGRESS_URL
-RBAC: access denied
-```
-
----
-
-# Namespace-level 접근 제어
-
-- 네임스페이스 레벨에서 접근 제어를 정의한다.
-- app 라벨이 `[“productpage”, “details”, “reviews”, “ratings”]` 인 서비스의 `“GET”` 호출에 대해 ServiceRole을 정의하고 전체 사용자에게 ServiceRole을 부여한다. **(ServiceRoleBinding)**
-
-```yaml
-$ kubectl apply -f - <<EOF
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRole
-metadata:
-  name: my-role
-  namespace: default
-spec:
-  rules:
-  - services: ["*"]
-    methods: ["GET"]
-    constraints:
-    - key: "destination.labels[app]"
-      values: ["productpage", "details", "reviews", "ratings"]
----
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRoleBinding
-metadata:
-  name: my-role-binding
-  namespace: default
-spec:
-  subjects:
-    - user: "*"
-  roleRef:
-    kind: ServiceRole
-    name: "my-role"
-EOF
-```
-
-결과: `“RBAC: access denied”` 에서 정상적인 화면으로 전환된다.
-
-```yaml
-$ echo $INGRESS_URL
-```
-
-### cleanup
-
-```bash
-$ kubectl delete ServiceRole --all
-$ kubectl delete ServiceRoleBinding --all
-```
-
----
-
-# Service-level 접근 제어
-
-### #1. productpage 서비스 접근 허용
-
-- 네임스페이스가 아닌 특정 서비스에 대해서 접근 제어를 허용하는 예제
-
-- ServiceRole에 특정 서비스(`productpage.default.svc.cluster.local`)의 GET 메소드에 대한 ServiceRole을 부여하도록 정의하고 전체 사용자에게 ServiceRole를 부여(ServiceRoleBinding)한다.
-
-```yml
-$ kubectl apply -f - <<EOF
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRole
-metadata:
-  name: my-role
-  namespace: default
-spec:
-  rules:
-  - services: ["productpage.default.svc.cluster.local"]
-    methods: ["GET"]
----
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRoleBinding
-metadata:
-  name: my-role-binding
-  namespace: default
-spec:
-  subjects:
-  - user: "*"
-  roleRef:
-    kind: ServiceRole
-    name: "my-role"
-EOF
-```
-
-- 결과: `/productpage`는 정상적으로 조회되지만 Detail 과 Review 부분은 에러가 발생한다.
-
-```bash
-$ echo $INGRESS_URL
-```
-
-### #2. details & reviews 서비스 접근 허용
-
-- details과 reviews의 서비스에도 ServiceRole을 부여해보자.
-- ServiceRole 이름을 새로 생성했으므로 이전 ServiceRole, ServiceRoleBinding과 함께 적용된다.
-
-```yml
-$ kubectl apply -f - <<EOF
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRole
-metadata:
-  name: details-reviews-viewer  
-  namespace: default
-spec:
-  rules:
-  - services: ["details.default.svc.cluster.local", "reviews.default.svc.cluster.local"]
-    methods: ["GET"]
----
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRoleBinding
-metadata:
-  name: bind-details-reviews
-  namespace: default
-spec:
-  subjects:
-  - user: "*"
-  roleRef:
-    kind: ServiceRole
-    name: "details-reviews-viewer"
-EOF
-```
-
-```yml
-$ kubectl apply -f - <<EOF
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRole
-metadata:
-  name: ratings-viewer
-  namespace: default
-spec:
-  rules:
-  - services: ["ratings.default.svc.cluster.local"]
-    methods: ["GET"]
----
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRoleBinding
-metadata:
-  name: bind-ratings
-  namespace: default
-spec:
-  subjects:
-  - user: "*"
-  roleRef:
-    kind: ServiceRole
-    name: "ratings-viewer"
-EOF
-```
-
-결과: review, rating이 정상적으로 조회된다.
-
-```bash
-$ echo $INGRESS_URL
-```
-
-### cleanup
-
-```bash
-$ kubectl delete servicerole --all
-$ kubectl delete servicerolebinding --all
-$ kubectl delete clusterrbacconfig --all
-```
 
 ---
 참고
 - https://rafabene.com/istio-tutorial/istio-tutorial/1.2.x/8rbac.html
+- https://istio.io/latest/docs/concepts/security/#authorization

@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 531
+files            : 533
 derectories      : 117
-avg_file_length  : 3618
+avg_file_length  : 3632
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -273,18 +273,20 @@ avg_file_length  : 3618
 ┃　　　┃　　　┃　　　┗━　[EKS Control Plane](./데브옵스 DevOps/Kubernetes/EKS/EKS Control Plane.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./데브옵스 DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NLB IP mode](./데브옵스 DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
+┃　　　┃　　　┗━　[📁　Network](./데브옵스 DevOps/Kubernetes/Network)</br>
+┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Kubernetes/Network/HTTPProxy.md)</br>
+┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./데브옵스 DevOps/Kubernetes/Network/NetworkPolicy.md)</br>
+┃　　　┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network/Network Troubleshooting.md)</br>
+┃　　　┃　　　┃　　　┗━　[Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/Network/Node and Pod Network Layout.md)</br>
+┃　　　┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/Kubernetes/Network/eBPF.md)</br>
 ┃　　　┃　　　┗━　[📁　helm](./데브옵스 DevOps/Kubernetes/helm)</br>
 ┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/helm/Chart Development Tips.md)</br>
+┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/helm/Helm.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/helm/Values Files.md)</br>
 ┃　　　┃　　　┗━　[📁　기본](./데브옵스 DevOps/Kubernetes/기본)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　Node](./데브옵스 DevOps/Kubernetes/기본/Node)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/기본/Node/Assigning Pods to Nodes.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/기본/Node/NodePort와 ServicePort와 targetPort.md)</br>
-┃　　　┃　　　┃　　　┗━　[📁　ingress](./데브옵스 DevOps/Kubernetes/기본/ingress)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Kubernetes/기본/ingress/Contour CRD 설치.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Kubernetes/기본/ingress/HTTPProxy.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Kubernetes/기본/ingress/NGINX Ingress Basic Auth.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/기본/ingress/ingress.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　object](./데브옵스 DevOps/Kubernetes/기본/object)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Kubernetes/기본/object/Annotation.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/기본/object/Deployments.md)</br>
@@ -296,18 +298,17 @@ avg_file_length  : 3618
 ┃　　　┃　　　┃　　　┗━　[CNI Specification](./데브옵스 DevOps/Kubernetes/기본/CNI Specification.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/기본/CRD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/기본/Endpoints.md)</br>
-┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/기본/Helm.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Kubernetes/기본/K8s Architecture.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/기본/K8s의 도커런타임 사용중단.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kube━proxy](./데브옵스 DevOps/Kubernetes/기본/Kube━proxy.md)</br>
-┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./데브옵스 DevOps/Kubernetes/기본/NetworkPolicy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/기본/StatefulSets.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Taints and Tolerations](./데브옵스 DevOps/Kubernetes/기본/Taints and Tolerations.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Workloads](./데브옵스 DevOps/Kubernetes/기본/Workloads.md)</br>
 ┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/기본/etcd.md)</br>
+┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/기본/ingress.md)</br>
 ┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/기본/가상 IP와 서비스 프록시.md)</br>
+┃　　　┃　　　┃　　　┗━　[사이드카 패턴](./데브옵스 DevOps/Kubernetes/기본/사이드카 패턴.md)</br>
 ┃　　　┃　　　┗━　[📁　실습](./데브옵스 DevOps/Kubernetes/실습)</br>
-┃　　　┃　　　┃　　　┗━　[+Git━sync와 사이드카 패턴](./데브옵스 DevOps/Kubernetes/실습/+Git━sync와 사이드카 패턴.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/실습/EKS ALB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/실습/EKS kubecofig.md)</br>
@@ -321,9 +322,6 @@ avg_file_length  : 3618
 ┃　　　┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/실습/환경변수 설정.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./데브옵스 DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
-┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network Troubleshooting.md)</br>
-┃　　　┃　　　┗━　[Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/Node and Pod Network Layout.md)</br>
-┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/Kubernetes/eBPF.md)</br>
 ┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
 ┃　　　┗━　[📁　Logging](./데브옵스 DevOps/Logging)</br>
 ┃　　　┃　　　┗━　[📁　datadog](./데브옵스 DevOps/Logging/datadog)</br>
@@ -339,6 +337,7 @@ avg_file_length  : 3618
 ┃　　　┃　　　　　　　┗━　[prometheus](./데브옵스 DevOps/Logging/prometheus/prometheus.md)</br>
 ┃　　　┗━　[📁　Proxy](./데브옵스 DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[📁　nginx](./데브옵스 DevOps/Proxy/nginx)</br>
+┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Proxy/nginx/NGINX Ingress Basic Auth.md)</br>
 ┃　　　┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/Proxy/nginx/location block.md)</br>
 ┃　　　┃　　　┃　　　┗━　[nginx certbot](./데브옵스 DevOps/Proxy/nginx/nginx certbot.md)</br>
 ┃　　　┃　　　┃　　　┗━　[nginx docker](./데브옵스 DevOps/Proxy/nginx/nginx docker.md)</br>
@@ -347,6 +346,7 @@ avg_file_length  : 3618
 ┃　　　┃　　　┃　　　┗━　[sites━available](./데브옵스 DevOps/Proxy/nginx/sites━available.md)</br>
 ┃　　　┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/Proxy/nginx/리버스 프록시.md)</br>
 ┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
+┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Proxy/Contour CRD 설치.md)</br>
 ┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/Envoy.md)</br>
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
 ┃　　　┗━　[📁　Service Mesh](./데브옵스 DevOps/Service Mesh)</br>
@@ -356,7 +356,9 @@ avg_file_length  : 3618
 ┃　　　┃　　　　　　　┗━　[Istio And Envoy](./데브옵스 DevOps/Service Mesh/istio/Istio And Envoy.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/istio/Istio Arcitecture.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Service Mesh/istio/Istio Configuration Profiles.md)</br>
+┃　　　┃　　　　　　　┗━　[Istio RBAC](./데브옵스 DevOps/Service Mesh/istio/Istio RBAC.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio authorization](./데브옵스 DevOps/Service Mesh/istio/Istio authorization.md)</br>
+┃　　　┃　　　　　　　┗━　[Resource Annotations & Labels](./데브옵스 DevOps/Service Mesh/istio/Resource Annotations & Labels.md)</br>
 ┃　　　┃　　　　　　　┗━　[gateway log debug 하는 법](./데브옵스 DevOps/Service Mesh/istio/gateway log debug 하는 법.md)</br>
 ┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
 ┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
