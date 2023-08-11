@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 533
-derectories      : 117
-avg_file_length  : 3632
+files            : 539
+derectories      : 118
+avg_file_length  : 3636
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -221,6 +221,12 @@ avg_file_length  : 3632
 ┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
 ┃　　　┗━　[📁　Container](./데브옵스 DevOps/Container)</br>
+┃　　　┃　　　┗━　[📁　CNI](./데브옵스 DevOps/Container/CNI)</br>
+┃　　　┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI/CNI.md)</br>
+┃　　　┃　　　┃　　　┗━　[Calico](./데브옵스 DevOps/Container/CNI/Calico.md)</br>
+┃　　　┃　　　┃　　　┗━　[Calico Architecture](./데브옵스 DevOps/Container/CNI/Calico Architecture.md)</br>
+┃　　　┃　　　┃　　　┗━　[End user RBAC](./데브옵스 DevOps/Container/CNI/End user RBAC.md)</br>
+┃　　　┃　　　┃　　　┗━　[Install Calico](./데브옵스 DevOps/Container/CNI/Install Calico.md)</br>
 ┃　　　┃　　　┗━　[📁　Docker](./데브옵스 DevOps/Container/Docker)</br>
 ┃　　　┃　　　┃　　　┗━　[DockerSwarm](./데브옵스 DevOps/Container/Docker/DockerSwarm.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Overlay Network](./데브옵스 DevOps/Container/Docker/Overlay Network.md)</br>
@@ -234,12 +240,13 @@ avg_file_length  : 3632
 ┃　　　┃　　　┃　　　┗━　[도커 명령어](./데브옵스 DevOps/Container/Docker/도커 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[도커 스토리지](./데브옵스 DevOps/Container/Docker/도커 스토리지.md)</br>
 ┃　　　┃　　　┃　　　┗━　[도커 아키텍처](./데브옵스 DevOps/Container/Docker/도커 아키텍처.md)</br>
-┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI.md)</br>
 ┃　　　┃　　　┗━　[ContainerRuntime](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
 ┃　　　┃　　　┗━　[Container Orchestration](./데브옵스 DevOps/Container/Container Orchestration.md)</br>
 ┃　　　┗━　[📁　DR](./데브옵스 DevOps/DR)</br>
 ┃　　　┃　　　┗━　[DR strategies](./데브옵스 DevOps/DR/DR strategies.md)</br>
 ┃　　　┃　　　┗━　[Fail over와 서버 이중화](./데브옵스 DevOps/DR/Fail over와 서버 이중화.md)</br>
+┃　　　┗━　[📁　Dashboad](./데브옵스 DevOps/Dashboad)</br>
+┃　　　┃　　　┗━　[kiali with prometheus](./데브옵스 DevOps/Dashboad/kiali with prometheus.md)</br>
 ┃　　　┗━　[📁　IaC](./데브옵스 DevOps/IaC)</br>
 ┃　　　┃　　　┗━　[📁　Terraform](./데브옵스 DevOps/IaC/Terraform)</br>
 ┃　　　┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform/Terraform.md)</br>
@@ -259,10 +266,6 @@ avg_file_length  : 3632
 ┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Config Management Plugins](./데브옵스 DevOps/Kubernetes/ArgoCD/Config Management Plugins.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Health Check](./데브옵스 DevOps/Kubernetes/ArgoCD/Health Check.md)</br>
-┃　　　┃　　　┗━　[📁　CNI](./데브옵스 DevOps/Kubernetes/CNI)</br>
-┃　　　┃　　　┃　　　┗━　[Calico](./데브옵스 DevOps/Kubernetes/CNI/Calico.md)</br>
-┃　　　┃　　　┃　　　┗━　[Calico Architecture](./데브옵스 DevOps/Kubernetes/CNI/Calico Architecture.md)</br>
-┃　　　┃　　　┃　　　┗━　[Install Calico](./데브옵스 DevOps/Kubernetes/CNI/Install Calico.md)</br>
 ┃　　　┃　　　┗━　[📁　DNS](./데브옵스 DevOps/Kubernetes/DNS)</br>
 ┃　　　┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Kubernetes/DNS/DNS in k8s.md)</br>
 ┃　　　┃　　　┃　　　┗━　[External DNS](./데브옵스 DevOps/Kubernetes/DNS/External DNS.md)</br>
@@ -298,7 +301,6 @@ avg_file_length  : 3632
 ┃　　　┃　　　┃　　　┗━　[CNI Specification](./데브옵스 DevOps/Kubernetes/기본/CNI Specification.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/기본/CRD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/기본/Endpoints.md)</br>
-┃　　　┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Kubernetes/기본/K8s Architecture.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/기본/K8s의 도커런타임 사용중단.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kube━proxy](./데브옵스 DevOps/Kubernetes/기본/Kube━proxy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/기본/StatefulSets.md)</br>
@@ -320,6 +322,7 @@ avg_file_length  : 3632
 ┃　　　┃　　　┃　　　┗━　[kubectl context](./데브옵스 DevOps/Kubernetes/실습/kubectl context.md)</br>
 ┃　　　┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Kubernetes/실습/minukube 시작하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/실습/환경변수 설정.md)</br>
+┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Kubernetes/K8s Architecture.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./데브옵스 DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
 ┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
@@ -334,7 +337,11 @@ avg_file_length  : 3632
 ┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Logging/elk/ElasticSearch 검색 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Logging/elk/Logstash.md)</br>
 ┃　　　┃　　　┗━　[📁　prometheus](./데브옵스 DevOps/Logging/prometheus)</br>
+┃　　　┃　　　　　　　┗━　[Prometheus using Thanos](./데브옵스 DevOps/Logging/prometheus/Prometheus using Thanos.md)</br>
+┃　　　┃　　　　　　　┗━　[Thanos](./데브옵스 DevOps/Logging/prometheus/Thanos.md)</br>
 ┃　　　┃　　　　　　　┗━　[prometheus](./데브옵스 DevOps/Logging/prometheus/prometheus.md)</br>
+┃　　　┃　　　　　　　┗━　[prometheus glossary](./데브옵스 DevOps/Logging/prometheus/prometheus glossary.md)</br>
+┃　　　┃　　　　　　　┗━　[prometheus storage](./데브옵스 DevOps/Logging/prometheus/prometheus storage.md)</br>
 ┃　　　┗━　[📁　Proxy](./데브옵스 DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[📁　nginx](./데브옵스 DevOps/Proxy/nginx)</br>
 ┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Proxy/nginx/NGINX Ingress Basic Auth.md)</br>
@@ -351,7 +358,7 @@ avg_file_length  : 3632
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
 ┃　　　┗━　[📁　Service Mesh](./데브옵스 DevOps/Service Mesh)</br>
 ┃　　　┃　　　┗━　[📁　istio](./데브옵스 DevOps/Service Mesh/istio)</br>
-┃　　　┃　　　　　　　┗━　[+Dry run](./데브옵스 DevOps/Service Mesh/istio/+Dry run.md)</br>
+┃　　　┃　　　　　　　┗━　[Dry run](./데브옵스 DevOps/Service Mesh/istio/Dry run.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istioctl](./데브옵스 DevOps/Service Mesh/istio/Istioctl.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio And Envoy](./데브옵스 DevOps/Service Mesh/istio/Istio And Envoy.md)</br>
 ┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/istio/Istio Arcitecture.md)</br>
