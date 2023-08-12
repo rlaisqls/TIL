@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 539
-derectories      : 118
-avg_file_length  : 3636
+files            : 540
+derectories      : 119
+avg_file_length  : 3634
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -337,11 +337,13 @@ avg_file_length  : 3636
 ┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Logging/elk/ElasticSearch 검색 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Logging/elk/Logstash.md)</br>
 ┃　　　┃　　　┗━　[📁　prometheus](./데브옵스 DevOps/Logging/prometheus)</br>
-┃　　　┃　　　　　　　┗━　[Prometheus using Thanos](./데브옵스 DevOps/Logging/prometheus/Prometheus using Thanos.md)</br>
-┃　　　┃　　　　　　　┗━　[Thanos](./데브옵스 DevOps/Logging/prometheus/Thanos.md)</br>
-┃　　　┃　　　　　　　┗━　[prometheus](./데브옵스 DevOps/Logging/prometheus/prometheus.md)</br>
-┃　　　┃　　　　　　　┗━　[prometheus glossary](./데브옵스 DevOps/Logging/prometheus/prometheus glossary.md)</br>
-┃　　　┃　　　　　　　┗━　[prometheus storage](./데브옵스 DevOps/Logging/prometheus/prometheus storage.md)</br>
+┃　　　┃　　　┃　　　┗━　[Prometheus using Thanos](./데브옵스 DevOps/Logging/prometheus/Prometheus using Thanos.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus](./데브옵스 DevOps/Logging/prometheus/prometheus.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus glossary](./데브옵스 DevOps/Logging/prometheus/prometheus glossary.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus storage](./데브옵스 DevOps/Logging/prometheus/prometheus storage.md)</br>
+┃　　　┃　　　┗━　[📁　thanos](./데브옵스 DevOps/Logging/thanos)</br>
+┃　　　┃　　　　　　　┗━　[Rule](./데브옵스 DevOps/Logging/thanos/Rule.md)</br>
+┃　　　┃　　　　　　　┗━　[Thanos](./데브옵스 DevOps/Logging/thanos/Thanos.md)</br>
 ┃　　　┗━　[📁　Proxy](./데브옵스 DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[📁　nginx](./데브옵스 DevOps/Proxy/nginx)</br>
 ┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Proxy/nginx/NGINX Ingress Basic Auth.md)</br>

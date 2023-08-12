@@ -23,3 +23,8 @@
 - **Request AWS GovCloud (US) account root user access keys from AWS Support.**
 
 - **In the event that an AWS Key Management Service key becomes unmanageable, you can recover it by contacting AWS Support as the root user.**
+
+---
+reference
+- https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html
