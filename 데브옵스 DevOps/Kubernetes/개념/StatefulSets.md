@@ -80,3 +80,4 @@ StatefulSets offer functionality for a specific use case in Kubernetes. They sho
 ---
 reference
 - https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+- https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/

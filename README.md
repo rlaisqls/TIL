@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 540
-derectories      : 119
-avg_file_length  : 3635
+files            : 546
+derectories      : 121
+avg_file_length  : 3664
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -20,6 +20,7 @@ avg_file_length  : 3635
 ┃　　　┃　　　┗━　[githook을 위한 perl command](./Git/hooks/githook을 위한 perl command.md)</br>
 ┃　　　┃　　　┗━　[파일트리 자동생성](./Git/hooks/파일트리 자동생성.md)</br>
 ┃　　　┗━　[GitLab](./Git/GitLab.md)</br>
+┃　　　┗━　[Self━hosted Runner](./Git/Self━hosted Runner.md)</br>
 ┃　　　┗━　[자동커밋](./Git/자동커밋.md)</br>
 ┗━　[📁　개발](./개발)</br>
 ┃　　　┗━　[📁　Gradle](./개발/Gradle)</br>
@@ -78,7 +79,6 @@ avg_file_length  : 3635
 ┃　　　┗━　[CustomAnnotation](./개발/CustomAnnotation.md)</br>
 ┃　　　┗━　[Fine━Grained와 Coarse━Grained](./개발/Fine━Grained와 Coarse━Grained.md)</br>
 ┃　　　┗━　[Intellij Profiling tools](./개발/Intellij Profiling tools.md)</br>
-┃　　　┗━　[Keycloak](./개발/Keycloak.md)</br>
 ┃　　　┗━　[Makefile](./개발/Makefile.md)</br>
 ┃　　　┗━　[mermaid 문법](./개발/mermaid 문법.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID](./개발/직렬화 serialVersionUID.md)</br>
@@ -139,6 +139,8 @@ avg_file_length  : 3635
 ┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/TLS.md)</br>
 ┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/TLS 인증서 발급 절차를 이해해보자.md)</br>
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
+┃　　　┗━　[📁　error](./네트워크 Network/error)</br>
+┃　　　┃　　　┗━　[Context deadline exceeded](./네트워크 Network/error/Context deadline exceeded.md)</br>
 ┃　　　┗━　[ACME](./네트워크 Network/ACME.md)</br>
 ┃　　　┗━　[Cloudflare ProxyStatus](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
@@ -273,10 +275,12 @@ avg_file_length  : 3635
 ┃　　　┃　　　┗━　[📁　EKS](./데브옵스 DevOps/Kubernetes/EKS)</br>
 ┃　　　┃　　　┃　　　┗━　[AWS Load Balancer Controller](./데브옵스 DevOps/Kubernetes/EKS/AWS Load Balancer Controller.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Amazon VPC CNI](./데브옵스 DevOps/Kubernetes/EKS/Amazon VPC CNI.md)</br>
+┃　　　┃　　　┃　　　┗━　[EBS CSI driver](./데브옵스 DevOps/Kubernetes/EKS/EBS CSI driver.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Control Plane](./데브옵스 DevOps/Kubernetes/EKS/EKS Control Plane.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./데브옵스 DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NLB IP mode](./데브옵스 DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
 ┃　　　┃　　　┗━　[📁　Network](./데브옵스 DevOps/Kubernetes/Network)</br>
+┃　　　┃　　　┃　　　┗━　[Debugging DNS Resolution](./데브옵스 DevOps/Kubernetes/Network/Debugging DNS Resolution.md)</br>
 ┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Kubernetes/Network/HTTPProxy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./데브옵스 DevOps/Kubernetes/Network/NetworkPolicy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network/Network Troubleshooting.md)</br>
@@ -286,30 +290,31 @@ avg_file_length  : 3635
 ┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/helm/Chart Development Tips.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/helm/Helm.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/helm/Values Files.md)</br>
-┃　　　┃　　　┗━　[📁　기본](./데브옵스 DevOps/Kubernetes/기본)</br>
-┃　　　┃　　　┃　　　┗━　[📁　Node](./데브옵스 DevOps/Kubernetes/기본/Node)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/기본/Node/Assigning Pods to Nodes.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/기본/Node/NodePort와 ServicePort와 targetPort.md)</br>
-┃　　　┃　　　┃　　　┗━　[📁　object](./데브옵스 DevOps/Kubernetes/기본/object)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Kubernetes/기본/object/Annotation.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/기본/object/Deployments.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Labels and Selectors](./데브옵스 DevOps/Kubernetes/기본/object/Labels and Selectors.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Pod](./데브옵스 DevOps/Kubernetes/기본/object/Pod.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Pod Readiness and Probes](./데브옵스 DevOps/Kubernetes/기본/object/Pod Readiness and Probes.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Pod 생성과정](./데브옵스 DevOps/Kubernetes/기본/object/Pod 생성과정.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Kubernetes/기본/object/Service와 port.md)</br>
-┃　　　┃　　　┃　　　┗━　[CNI Specification](./데브옵스 DevOps/Kubernetes/기본/CNI Specification.md)</br>
-┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/기본/CRD.md)</br>
-┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/기본/Endpoints.md)</br>
-┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/기본/K8s의 도커런타임 사용중단.md)</br>
-┃　　　┃　　　┃　　　┗━　[Kube━proxy](./데브옵스 DevOps/Kubernetes/기본/Kube━proxy.md)</br>
-┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/기본/StatefulSets.md)</br>
-┃　　　┃　　　┃　　　┗━　[Taints and Tolerations](./데브옵스 DevOps/Kubernetes/기본/Taints and Tolerations.md)</br>
-┃　　　┃　　　┃　　　┗━　[Workloads](./데브옵스 DevOps/Kubernetes/기본/Workloads.md)</br>
-┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/기본/etcd.md)</br>
-┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/기본/ingress.md)</br>
-┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/기본/가상 IP와 서비스 프록시.md)</br>
-┃　　　┃　　　┃　　　┗━　[사이드카 패턴](./데브옵스 DevOps/Kubernetes/기본/사이드카 패턴.md)</br>
+┃　　　┃　　　┗━　[📁　개념](./데브옵스 DevOps/Kubernetes/개념)</br>
+┃　　　┃　　　┃　　　┗━　[📁　Node](./데브옵스 DevOps/Kubernetes/개념/Node)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node/Assigning Pods to Nodes.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/개념/Node/NodePort와 ServicePort와 targetPort.md)</br>
+┃　　　┃　　　┃　　　┗━　[📁　object](./데브옵스 DevOps/Kubernetes/개념/object)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Kubernetes/개념/object/Annotation.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/개념/object/Deployments.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Labels and Selectors](./데브옵스 DevOps/Kubernetes/개념/object/Labels and Selectors.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pod](./데브옵스 DevOps/Kubernetes/개념/object/Pod.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pod Readiness and Probes](./데브옵스 DevOps/Kubernetes/개념/object/Pod Readiness and Probes.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pod 생성과정](./데브옵스 DevOps/Kubernetes/개념/object/Pod 생성과정.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Kubernetes/개념/object/Service와 port.md)</br>
+┃　　　┃　　　┃　　　┗━　[CNI Specification](./데브옵스 DevOps/Kubernetes/개념/CNI Specification.md)</br>
+┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/개념/CRD.md)</br>
+┃　　　┃　　　┃　　　┗━　[CSIDriver](./데브옵스 DevOps/Kubernetes/개념/CSIDriver.md)</br>
+┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/개념/Endpoints.md)</br>
+┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/개념/K8s의 도커런타임 사용중단.md)</br>
+┃　　　┃　　　┃　　　┗━　[Kube━proxy](./데브옵스 DevOps/Kubernetes/개념/Kube━proxy.md)</br>
+┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/개념/StatefulSets.md)</br>
+┃　　　┃　　　┃　　　┗━　[Taints and Tolerations](./데브옵스 DevOps/Kubernetes/개념/Taints and Tolerations.md)</br>
+┃　　　┃　　　┃　　　┗━　[Workloads](./데브옵스 DevOps/Kubernetes/개념/Workloads.md)</br>
+┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/개념/etcd.md)</br>
+┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/개념/ingress.md)</br>
+┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/개념/가상 IP와 서비스 프록시.md)</br>
+┃　　　┃　　　┃　　　┗━　[사이드카 패턴](./데브옵스 DevOps/Kubernetes/개념/사이드카 패턴.md)</br>
 ┃　　　┃　　　┗━　[📁　실습](./데브옵스 DevOps/Kubernetes/실습)</br>
 ┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/실습/EKS ALB.md)</br>
@@ -335,6 +340,7 @@ avg_file_length  : 3635
 ┃　　　┃　　　┗━　[📁　elk](./데브옵스 DevOps/Logging/elk)</br>
 ┃　　　┃　　　┃　　　┗━　[ELK Stack](./데브옵스 DevOps/Logging/elk/ELK Stack.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Logging/elk/ElasticSearch 검색 명령어.md)</br>
+┃　　　┃　　　┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Logging/elk/Elastic Search.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Logging/elk/Logstash.md)</br>
 ┃　　　┃　　　┗━　[📁　prometheus](./데브옵스 DevOps/Logging/prometheus)</br>
 ┃　　　┃　　　┃　　　┗━　[Prometheus using Thanos](./데브옵스 DevOps/Logging/prometheus/Prometheus using Thanos.md)</br>
@@ -371,12 +377,14 @@ avg_file_length  : 3635
 ┃　　　┃　　　　　　　┗━　[gateway log debug 하는 법](./데브옵스 DevOps/Service Mesh/istio/gateway log debug 하는 법.md)</br>
 ┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
 ┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
+┃　　　┗━　[📁　tools](./데브옵스 DevOps/tools)</br>
+┃　　　┃　　　┗━　[GPG](./데브옵스 DevOps/tools/GPG.md)</br>
+┃　　　┃　　　┗━　[Keycloak](./데브옵스 DevOps/tools/Keycloak.md)</br>
+┃　　　┃　　　┗━　[Packer](./데브옵스 DevOps/tools/Packer.md)</br>
+┃　　　┃　　　┗━　[minio](./데브옵스 DevOps/tools/minio.md)</br>
+┃　　　┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./데브옵스 DevOps/tools/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
-┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Elastic Search.md)</br>
-┃　　　┗━　[GPG](./데브옵스 DevOps/GPG.md)</br>
-┃　　　┗━　[Packer](./데브옵스 DevOps/Packer.md)</br>
-┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./데브옵스 DevOps/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[데브옵스](./데브옵스 DevOps/데브옵스.md)</br>
 ┗━　[📁　데이터베이스 DataBase](./데이터베이스 DataBase)</br>
 ┃　　　┗━　[📁　DB설계](./데이터베이스 DataBase/DB설계)</br>

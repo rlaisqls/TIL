@@ -1,5 +1,7 @@
 # Prometheus using Thanos
 
+![image](https://github.com/rlaisqls/TIL/assets/81006587/dc8953cd-7b3d-4733-9b4c-bac0edbc9d4f)
+
 ### Prometheus
 
 [Prometheus](prometheus.md) is an **open source systems monitoring and alerting toolkit** that is widely adopted as a standard monitoring tool with self-managed and provider-managed Kubernetes. Prometheus provides many useful features, such as dynamic service discovery, powerful queries, and seamless alert notification integration. Beyond certain scale, however, problems arise when basic Prometheus capabilities do not meet requirements such as:
@@ -93,7 +95,7 @@ minio:
 
 For Helm 3:
 
-```bitnami
+```bash
 $ kubectl create namespace monitoring
 helm install kube-prometheus \
     --set prometheus.thanos.create=true \
