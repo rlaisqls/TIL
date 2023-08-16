@@ -140,8 +140,6 @@ Amazon EC2 provides a variety of instance types so you can choose the type that 
 - e – Extra storage or memory
 - z – High performance
 
-
-
 ---
 reference
 - https://aws.amazon.com/ec2/faqs/

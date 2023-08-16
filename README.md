@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 546
-derectories      : 121
-avg_file_length  : 3664
+files            : 551
+derectories      : 122
+avg_file_length  : 3695
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -189,20 +189,22 @@ avg_file_length  : 3664
 ┃　　　┃　　　┃　　　┃　　　┗━　[Application Load　Balancer components](./데브옵스 DevOps/AWS/Netwoking/elb/Application Load　Balancer components.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Connection Draining](./데브옵스 DevOps/AWS/Netwoking/elb/Connection Draining.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwoking/elb/ELB.md)</br>
+┃　　　┃　　　┃　　　┗━　[📁　security](./데브옵스 DevOps/AWS/Netwoking/security)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[NACLs](./데브옵스 DevOps/AWS/Netwoking/security/NACLs.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Netwoking/security/Security Groups.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Netwoking/security/WAF.md)</br>
 ┃　　　┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/Netwoking/API Gateway.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Bastion Host](./데브옵스 DevOps/AWS/Netwoking/Bastion Host.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/Netwoking/CloudFront.md)</br>
+┃　　　┃　　　┃　　　┗━　[EC2 Instance Connect Endpoint](./데브옵스 DevOps/AWS/Netwoking/EC2 Instance Connect Endpoint.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwoking/ENI.md)</br>
-┃　　　┃　　　┃　　　┗━　[NACLs](./데브옵스 DevOps/AWS/Netwoking/NACLs.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NAT gateway & NAT instance](./데브옵스 DevOps/AWS/Netwoking/NAT gateway & NAT instance.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Route53](./데브옵스 DevOps/AWS/Netwoking/Route53.md)</br>
-┃　　　┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Netwoking/Security Groups.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Transit Gateway](./데브옵스 DevOps/AWS/Netwoking/Transit Gateway.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwoking/VPC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPC Mapping Service](./데브옵스 DevOps/AWS/Netwoking/VPC Mapping Service.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPC endpoint](./데브옵스 DevOps/AWS/Netwoking/VPC endpoint.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwoking/VPN.md)</br>
-┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Netwoking/WAF.md)</br>
 ┃　　　┃　　　┗━　[📁　Security](./데브옵스 DevOps/AWS/Security)</br>
 ┃　　　┃　　　┃　　　┗━　[Cognito](./데브옵스 DevOps/AWS/Security/Cognito.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Conformance Packs & Security Hub](./데브옵스 DevOps/AWS/Security/Conformance Packs & Security Hub.md)</br>
@@ -268,18 +270,21 @@ avg_file_length  : 3664
 ┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Config Management Plugins](./데브옵스 DevOps/Kubernetes/ArgoCD/Config Management Plugins.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Health Check](./데브옵스 DevOps/Kubernetes/ArgoCD/Health Check.md)</br>
-┃　　　┃　　　┗━　[📁　DNS](./데브옵스 DevOps/Kubernetes/DNS)</br>
-┃　　　┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Kubernetes/DNS/DNS in k8s.md)</br>
-┃　　　┃　　　┃　　　┗━　[External DNS](./데브옵스 DevOps/Kubernetes/DNS/External DNS.md)</br>
-┃　　　┃　　　┃　　　┗━　[ServiceDNS](./데브옵스 DevOps/Kubernetes/DNS/ServiceDNS.md)</br>
 ┃　　　┃　　　┗━　[📁　EKS](./데브옵스 DevOps/Kubernetes/EKS)</br>
 ┃　　　┃　　　┃　　　┗━　[AWS Load Balancer Controller](./데브옵스 DevOps/Kubernetes/EKS/AWS Load Balancer Controller.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Amazon VPC CNI](./데브옵스 DevOps/Kubernetes/EKS/Amazon VPC CNI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EBS CSI driver](./데브옵스 DevOps/Kubernetes/EKS/EBS CSI driver.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/EKS/EKS ALB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Control Plane](./데브옵스 DevOps/Kubernetes/EKS/EKS Control Plane.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./데브옵스 DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/EKS/EKS kubecofig.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NLB IP mode](./데브옵스 DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
 ┃　　　┃　　　┗━　[📁　Network](./데브옵스 DevOps/Kubernetes/Network)</br>
+┃　　　┃　　　┃　　　┗━　[📁　DNS](./데브옵스 DevOps/Kubernetes/Network/DNS)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[CoreDNS](./데브옵스 DevOps/Kubernetes/Network/DNS/CoreDNS.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Kubernetes/Network/DNS/DNS in k8s.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[External DNS](./데브옵스 DevOps/Kubernetes/Network/DNS/External DNS.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ServiceDNS](./데브옵스 DevOps/Kubernetes/Network/DNS/ServiceDNS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Debugging DNS Resolution](./데브옵스 DevOps/Kubernetes/Network/Debugging DNS Resolution.md)</br>
 ┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Kubernetes/Network/HTTPProxy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./데브옵스 DevOps/Kubernetes/Network/NetworkPolicy.md)</br>
@@ -317,8 +322,7 @@ avg_file_length  : 3664
 ┃　　　┃　　　┃　　　┗━　[사이드카 패턴](./데브옵스 DevOps/Kubernetes/개념/사이드카 패턴.md)</br>
 ┃　　　┃　　　┗━　[📁　실습](./데브옵스 DevOps/Kubernetes/실습)</br>
 ┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/실습/EKS ALB.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/실습/EKS kubecofig.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS Spot Instances with Karpenter](./데브옵스 DevOps/Kubernetes/실습/EKS Spot Instances with Karpenter.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Install Cilium](./데브옵스 DevOps/Kubernetes/실습/Install Cilium.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Kubernetes/실습/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy Cilium example](./데브옵스 DevOps/Kubernetes/실습/NetworkPolicy Cilium example.md)</br>
@@ -328,28 +332,30 @@ avg_file_length  : 3664
 ┃　　　┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Kubernetes/실습/minukube 시작하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/실습/환경변수 설정.md)</br>
 ┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Kubernetes/K8s Architecture.md)</br>
+┃　　　┃　　　┗━　[Karpenter](./데브옵스 DevOps/Kubernetes/Karpenter.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./데브옵스 DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
 ┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
-┃　　　┗━　[📁　Logging](./데브옵스 DevOps/Logging)</br>
-┃　　　┃　　　┗━　[📁　datadog](./데브옵스 DevOps/Logging/datadog)</br>
-┃　　　┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Logging/datadog/datadog.md)</br>
-┃　　　┃　　　┃　　　┗━　[datadog APM기능 사용하기](./데브옵스 DevOps/Logging/datadog/datadog APM기능 사용하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Logging/datadog/datadog 아키텍처.md)</br>
-┃　　　┃　　　┃　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Logging/datadog/helmChart로 Agent 설치.md)</br>
-┃　　　┃　　　┗━　[📁　elk](./데브옵스 DevOps/Logging/elk)</br>
-┃　　　┃　　　┃　　　┗━　[ELK Stack](./데브옵스 DevOps/Logging/elk/ELK Stack.md)</br>
-┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Logging/elk/ElasticSearch 검색 명령어.md)</br>
-┃　　　┃　　　┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Logging/elk/Elastic Search.md)</br>
-┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Logging/elk/Logstash.md)</br>
-┃　　　┃　　　┗━　[📁　prometheus](./데브옵스 DevOps/Logging/prometheus)</br>
-┃　　　┃　　　┃　　　┗━　[Prometheus using Thanos](./데브옵스 DevOps/Logging/prometheus/Prometheus using Thanos.md)</br>
-┃　　　┃　　　┃　　　┗━　[prometheus](./데브옵스 DevOps/Logging/prometheus/prometheus.md)</br>
-┃　　　┃　　　┃　　　┗━　[prometheus glossary](./데브옵스 DevOps/Logging/prometheus/prometheus glossary.md)</br>
-┃　　　┃　　　┃　　　┗━　[prometheus storage](./데브옵스 DevOps/Logging/prometheus/prometheus storage.md)</br>
-┃　　　┃　　　┗━　[📁　thanos](./데브옵스 DevOps/Logging/thanos)</br>
-┃　　　┃　　　　　　　┗━　[Rule](./데브옵스 DevOps/Logging/thanos/Rule.md)</br>
-┃　　　┃　　　　　　　┗━　[Thanos](./데브옵스 DevOps/Logging/thanos/Thanos.md)</br>
+┃　　　┗━　[📁　Monitoring](./데브옵스 DevOps/Monitoring)</br>
+┃　　　┃　　　┗━　[📁　datadog](./데브옵스 DevOps/Monitoring/datadog)</br>
+┃　　　┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Monitoring/datadog/datadog.md)</br>
+┃　　　┃　　　┃　　　┗━　[datadog APM 기능 사용하기](./데브옵스 DevOps/Monitoring/datadog/datadog APM 기능 사용하기.md)</br>
+┃　　　┃　　　┃　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Monitoring/datadog/datadog 아키텍처.md)</br>
+┃　　　┃　　　┃　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Monitoring/datadog/helmChart로 Agent 설치.md)</br>
+┃　　　┃　　　┗━　[📁　elk](./데브옵스 DevOps/Monitoring/elk)</br>
+┃　　　┃　　　┃　　　┗━　[ELK Stack](./데브옵스 DevOps/Monitoring/elk/ELK Stack.md)</br>
+┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Monitoring/elk/ElasticSearch 검색 명령어.md)</br>
+┃　　　┃　　　┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Monitoring/elk/Elastic Search.md)</br>
+┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Monitoring/elk/Logstash.md)</br>
+┃　　　┃　　　┗━　[📁　prometheus](./데브옵스 DevOps/Monitoring/prometheus)</br>
+┃　　　┃　　　┃　　　┗━　[Prometheus using Thanos](./데브옵스 DevOps/Monitoring/prometheus/Prometheus using Thanos.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus](./데브옵스 DevOps/Monitoring/prometheus/prometheus.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus glossary](./데브옵스 DevOps/Monitoring/prometheus/prometheus glossary.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus storage](./데브옵스 DevOps/Monitoring/prometheus/prometheus storage.md)</br>
+┃　　　┃　　　┗━　[📁　thanos](./데브옵스 DevOps/Monitoring/thanos)</br>
+┃　　　┃　　　┃　　　┗━　[Rule](./데브옵스 DevOps/Monitoring/thanos/Rule.md)</br>
+┃　　　┃　　　┃　　　┗━　[Thanos](./데브옵스 DevOps/Monitoring/thanos/Thanos.md)</br>
+┃　　　┃　　　┗━　[telemetry](./데브옵스 DevOps/Monitoring/telemetry.md)</br>
 ┃　　　┗━　[📁　Proxy](./데브옵스 DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[📁　nginx](./데브옵스 DevOps/Proxy/nginx)</br>
 ┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Proxy/nginx/NGINX Ingress Basic Auth.md)</br>
@@ -607,11 +613,11 @@ avg_file_length  : 3664
 ┃　　　┃　　　┃　　　┗━　[chown](./운영체제 Operating System/linux/authority/chown.md)</br>
 ┃　　　┃　　　┃　　　┗━　[사용자 관리](./운영체제 Operating System/linux/authority/사용자 관리.md)</br>
 ┃　　　┃　　　┗━　[📁　disk & dir](./운영체제 Operating System/linux/disk & dir)</br>
-┃　　　┃　　　┃　　　┗━　[+백업](./운영체제 Operating System/linux/disk & dir/+백업.md)</br>
 ┃　　　┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/disk & dir/LVM.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Linux 디렉토리 구조](./운영체제 Operating System/linux/disk & dir/Linux 디렉토리 구조.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RAID](./운영체제 Operating System/linux/disk & dir/RAID.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Symbolic Link](./운영체제 Operating System/linux/disk & dir/Symbolic Link.md)</br>
+┃　　　┃　　　┃　　　┗━　[백업](./운영체제 Operating System/linux/disk & dir/백업.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./운영체제 Operating System/linux/disk & dir/파일 관리 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./운영체제 Operating System/linux/disk & dir/파일 시스템.md)</br>
 ┃　　　┃　　　┗━　[📁　kernel](./운영체제 Operating System/linux/kernel)</br>
