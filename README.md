@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 551
-derectories      : 122
-avg_file_length  : 3695
+files            : 556
+derectories      : 125
+avg_file_length  : 3725
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -264,12 +264,6 @@ avg_file_length  : 3695
 ┃　　　┃　　　┗━　[Phoenix Server](./데브옵스 DevOps/IaC/Phoenix Server.md)</br>
 ┃　　　┃　　　┗━　[Understanding Ansible, Terraform, Puppet, Chef, and Salt](./데브옵스 DevOps/IaC/Understanding Ansible, Terraform, Puppet, Chef, and Salt.md)</br>
 ┃　　　┗━　[📁　Kubernetes](./데브옵스 DevOps/Kubernetes)</br>
-┃　　　┃　　　┗━　[📁　ArgoCD](./데브옵스 DevOps/Kubernetes/ArgoCD)</br>
-┃　　　┃　　　┃　　　┗━　[ApplicationSets](./데브옵스 DevOps/Kubernetes/ArgoCD/ApplicationSets.md)</br>
-┃　　　┃　　　┃　　　┗━　[Apps of Apps](./데브옵스 DevOps/Kubernetes/ArgoCD/Apps of Apps.md)</br>
-┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Kubernetes/ArgoCD/ArgoCD 설치.md)</br>
-┃　　　┃　　　┃　　　┗━　[Config Management Plugins](./데브옵스 DevOps/Kubernetes/ArgoCD/Config Management Plugins.md)</br>
-┃　　　┃　　　┃　　　┗━　[Health Check](./데브옵스 DevOps/Kubernetes/ArgoCD/Health Check.md)</br>
 ┃　　　┃　　　┗━　[📁　EKS](./데브옵스 DevOps/Kubernetes/EKS)</br>
 ┃　　　┃　　　┃　　　┗━　[AWS Load Balancer Controller](./데브옵스 DevOps/Kubernetes/EKS/AWS Load Balancer Controller.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Amazon VPC CNI](./데브옵스 DevOps/Kubernetes/EKS/Amazon VPC CNI.md)</br>
@@ -291,11 +285,26 @@ avg_file_length  : 3695
 ┃　　　┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network/Network Troubleshooting.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/Network/Node and Pod Network Layout.md)</br>
 ┃　　　┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/Kubernetes/Network/eBPF.md)</br>
-┃　　　┃　　　┗━　[📁　helm](./데브옵스 DevOps/Kubernetes/helm)</br>
-┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/helm/Chart Development Tips.md)</br>
-┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/helm/Helm.md)</br>
-┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/helm/Values Files.md)</br>
+┃　　　┃　　　┗━　[📁　tools](./데브옵스 DevOps/Kubernetes/tools)</br>
+┃　　　┃　　　┃　　　┗━　[📁　ArgoCD](./데브옵스 DevOps/Kubernetes/tools/ArgoCD)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ApplicationSets](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/ApplicationSets.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Apps of Apps](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/Apps of Apps.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/ArgoCD 설치.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Config Management Plugins](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/Config Management Plugins.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Health Check](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/Health Check.md)</br>
+┃　　　┃　　　┃　　　┗━　[📁　Karpenter](./데브옵스 DevOps/Kubernetes/tools/Karpenter)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter](./데브옵스 DevOps/Kubernetes/tools/Karpenter/Karpenter.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter best practices](./데브옵스 DevOps/Kubernetes/tools/Karpenter/Karpenter best practices.md)</br>
+┃　　　┃　　　┃　　　┗━　[📁　helm](./데브옵스 DevOps/Kubernetes/tools/helm)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/tools/helm/Chart Development Tips.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/tools/helm/Helm.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/tools/helm/Values Files.md)</br>
 ┃　　　┃　　　┗━　[📁　개념](./데브옵스 DevOps/Kubernetes/개념)</br>
+┃　　　┃　　　┃　　　┗━　[📁　Auth](./데브옵스 DevOps/Kubernetes/개념/Auth)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Authenticating](./데브옵스 DevOps/Kubernetes/개념/Auth/Authenticating.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[OIDC Authentication with Dex](./데브옵스 DevOps/Kubernetes/개념/Auth/OIDC Authentication with Dex.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Token Webhook with Guard](./데브옵스 DevOps/Kubernetes/개념/Auth/Token Webhook with Guard.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[k8s 클러스터 root CA를 통한 사용자 인증](./데브옵스 DevOps/Kubernetes/개념/Auth/k8s 클러스터 root CA를 통한 사용자 인증.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　Node](./데브옵스 DevOps/Kubernetes/개념/Node)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node/Assigning Pods to Nodes.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/개념/Node/NodePort와 ServicePort와 targetPort.md)</br>
@@ -332,7 +341,6 @@ avg_file_length  : 3695
 ┃　　　┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Kubernetes/실습/minukube 시작하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/실습/환경변수 설정.md)</br>
 ┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Kubernetes/K8s Architecture.md)</br>
-┃　　　┃　　　┗━　[Karpenter](./데브옵스 DevOps/Kubernetes/Karpenter.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./데브옵스 DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
 ┃　　　┃　　　┗━　[📁　test.yml](./데브옵스 DevOps/Kubernetes/test.yml)</br>
