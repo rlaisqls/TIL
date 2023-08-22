@@ -313,6 +313,7 @@ Commands usually take the form openssl [sub-command] [arguments] [options]. open
 
 `openssl s_client -connect` will connect to a server and display detailed information about the server’s certificate. Here is the default invocation:
 
+
 ```bash
 openssl s_client -connect k8s.io:443
 CONNECTED(00000003)
@@ -358,6 +359,12 @@ Verify return code: 0 (ok)
 ```
 
 If you are using a self-signed CA, you can use -CAfile <path> to use that CA. This will allow you to establish and verify connections against a self-signed certificate.
+
+
+```bash
+openssl x509 -text -noout -in ca.crt 
+
+```
 
 ## cURL
 cURL is a data transfer tool that supports multiple protocols, notably HTTP and HTTPS.
