@@ -88,11 +88,17 @@ Remember, debugging Envoy filters can be complex, so having a good understanding
 ---
 
 ```bash
-$ kubectl port-forward deployment/istio-ingressgateway -n istio-system 15000
-$ curl -XPOST "localhost:15000/logging?wasm=debug"
-$ curl -XPOST "localhost:15000/logging?filter=debug"
-$ curl -XPOST "localhost:15000/logging?main=debug"
-$ curl -XPOST "localhost:15000/logging?config=debug"
-$ curl -XPOST "localhost:15000/logging?client=debug"
-$ kubectl logs -l app=istio-ingressgateway -n istio-system
+kubectl port-forward deployment/istio-ingressgateway -n istio-system 15000
+curl -X POST "localhost:15000/logging?wasm=debug"
+curl -X POST "localhost:15000/logging?filter=debug"
+curl -X POST "localhost:15000/logging?main=debug"
+curl -X POST "localhost:15000/logging?config=debug"
+curl -X POST "localhost:15000/logging?client=debug"
+kubectl logs -l app=istio-ingressgateway -n istio-system
 ```
+
+curl -X POST "localhost:15000/logging?wasm=warning"
+curl -X POST "localhost:15000/logging?filter=warning"
+curl -X POST "localhost:15000/logging?main=warning"
+curl -X POST "localhost:15000/logging?config=warning"
+curl -X POST "localhost:15000/logging?client=warning"

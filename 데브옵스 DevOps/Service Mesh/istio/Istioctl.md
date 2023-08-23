@@ -56,7 +56,7 @@ ENDPOINT                                                STATUS      OUTLIER CHEC
 
 
 ```bash
-istioctl proxy-config bootstrap -n istio-system  istio-ingressgateway-559fb9c9d9-5b9ft
+istioctl proxy-config bootstrap -n istio-system istio-ingressgateway-559fb9c9d9-5b9ft
 {
     "bootstrap": {
         "node": {
@@ -93,4 +93,8 @@ istioctl proxy-config bootstrap -n istio-system  istio-ingressgateway-559fb9c9d9
 
 ```yaml
 istioctl x internal-debug configz
+```
+
+```bash
+istioctl proxy-config listeners istio-ingressgateway-5dbdb957bc-5n67b -n istio-system --port 8080 -o json
 ```
