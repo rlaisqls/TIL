@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 562
-derectories      : 127
-avg_file_length  : 3760
+files            : 564
+derectories      : 128
+avg_file_length  : 3761
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -132,13 +132,15 @@ avg_file_length  : 3760
 ┃　　　┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/L3 transport layer/SO_REUSEADDR.md)</br>
 ┃　　　┃　　　┗━　[TCP와 UDP](./네트워크 Network/L3 transport layer/TCP와 UDP.md)</br>
 ┃　　　┗━　[📁　L4 appplication layer](./네트워크 Network/L4 appplication layer)</br>
+┃　　　┃　　　┗━　[📁　tls](./네트워크 Network/L4 appplication layer/tls)</br>
+┃　　　┃　　　┃　　　┗━　[SNI](./네트워크 Network/L4 appplication layer/tls/SNI.md)</br>
+┃　　　┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/tls/TLS.md)</br>
+┃　　　┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/tls/TLS 인증서 발급 절차를 이해해보자.md)</br>
 ┃　　　┃　　　┗━　[CDN](./네트워크 Network/L4 appplication layer/CDN.md)</br>
 ┃　　　┃　　　┗━　[DHCP](./네트워크 Network/L4 appplication layer/DHCP.md)</br>
 ┃　　　┃　　　┗━　[DNS 레코드유형](./네트워크 Network/L4 appplication layer/DNS 레코드유형.md)</br>
 ┃　　　┃　　　┗━　[HTTP](./네트워크 Network/L4 appplication layer/HTTP.md)</br>
 ┃　　　┃　　　┗━　[HTTP Options](./네트워크 Network/L4 appplication layer/HTTP Options.md)</br>
-┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/TLS.md)</br>
-┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/TLS 인증서 발급 절차를 이해해보자.md)</br>
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[📁　error](./네트워크 Network/error)</br>
 ┃　　　┃　　　┗━　[Context deadline exceeded](./네트워크 Network/error/Context deadline exceeded.md)</br>
@@ -287,7 +289,18 @@ avg_file_length  : 3760
 ┃　　　┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network/Network Troubleshooting.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/Network/Node and Pod Network Layout.md)</br>
 ┃　　　┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/Kubernetes/Network/eBPF.md)</br>
-┃　　　┃　　　┗━　[📁　PV](./데브옵스 DevOps/Kubernetes/PV)</br>
+┃　　　┃　　　┗━　[📁　Service Mesh](./데브옵스 DevOps/Kubernetes/Service Mesh)</br>
+┃　　　┃　　　┃　　　┗━　[📁　istio](./데브옵스 DevOps/Kubernetes/Service Mesh/istio)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Dry run](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Dry run.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istioctl](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istioctl.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio And Envoy](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio And Envoy.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio Arcitecture.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio Configuration Profiles.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio RBAC](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio RBAC.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio authorization](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio authorization.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Resource Annotations & Labels](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Resource Annotations & Labels.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[ServiceEntry](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/ServiceEntry.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[gateway log debug 하는 법](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/gateway log debug 하는 법.md)</br>
 ┃　　　┃　　　┗━　[📁　tools](./데브옵스 DevOps/Kubernetes/tools)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　ArgoCD](./데브옵스 DevOps/Kubernetes/tools/ArgoCD)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ApplicationSets](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/ApplicationSets.md)</br>
@@ -303,12 +316,6 @@ avg_file_length  : 3760
 ┃　　　┃　　　┃　　　　　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/tools/helm/Helm.md)</br>
 ┃　　　┃　　　┃　　　　　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/tools/helm/Values Files.md)</br>
 ┃　　　┃　　　┗━　[📁　개념](./데브옵스 DevOps/Kubernetes/개념)</br>
-┃　　　┃　　　┃　　　┗━　[📁　Auth](./데브옵스 DevOps/Kubernetes/개념/Auth)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Authenticating](./데브옵스 DevOps/Kubernetes/개념/Auth/Authenticating.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[OIDC Authentication with Dex](./데브옵스 DevOps/Kubernetes/개념/Auth/OIDC Authentication with Dex.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Security Context for a Pod or Container](./데브옵스 DevOps/Kubernetes/개념/Auth/Security Context for a Pod or Container.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Token Webhook with Guard](./데브옵스 DevOps/Kubernetes/개념/Auth/Token Webhook with Guard.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[k8s 클러스터 root CA를 통한 사용자 인증](./데브옵스 DevOps/Kubernetes/개념/Auth/k8s 클러스터 root CA를 통한 사용자 인증.md)</br>
 ┃　　　┃　　　┃　　　┗━　[📁　Node](./데브옵스 DevOps/Kubernetes/개념/Node)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node/Assigning Pods to Nodes.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/개념/Node/NodePort와 ServicePort와 targetPort.md)</br>
@@ -338,6 +345,12 @@ avg_file_length  : 3760
 ┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/개념/가상 IP와 서비스 프록시.md)</br>
 ┃　　　┃　　　┃　　　┗━　[사이드카 패턴](./데브옵스 DevOps/Kubernetes/개념/사이드카 패턴.md)</br>
 ┃　　　┃　　　┗━　[📁　실습](./데브옵스 DevOps/Kubernetes/실습)</br>
+┃　　　┃　　　┃　　　┗━　[📁　Auth](./데브옵스 DevOps/Kubernetes/실습/Auth)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Authenticating](./데브옵스 DevOps/Kubernetes/실습/Auth/Authenticating.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[OIDC Authentication with Dex](./데브옵스 DevOps/Kubernetes/실습/Auth/OIDC Authentication with Dex.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Security Context for a Pod or Container](./데브옵스 DevOps/Kubernetes/실습/Auth/Security Context for a Pod or Container.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Token Webhook with Guard](./데브옵스 DevOps/Kubernetes/실습/Auth/Token Webhook with Guard.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[k8s 클러스터 root CA를 통한 사용자 인증](./데브옵스 DevOps/Kubernetes/실습/Auth/k8s 클러스터 root CA를 통한 사용자 인증.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Spot Instances with Karpenter](./데브옵스 DevOps/Kubernetes/실습/EKS Spot Instances with Karpenter.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Install Cilium](./데브옵스 DevOps/Kubernetes/실습/Install Cilium.md)</br>
@@ -373,6 +386,8 @@ avg_file_length  : 3760
 ┃　　　┃　　　┃　　　┗━　[Thanos](./데브옵스 DevOps/Monitoring/thanos/Thanos.md)</br>
 ┃　　　┃　　　┗━　[telemetry](./데브옵스 DevOps/Monitoring/telemetry.md)</br>
 ┃　　　┗━　[📁　Proxy](./데브옵스 DevOps/Proxy)</br>
+┃　　　┃　　　┗━　[📁　envoy](./데브옵스 DevOps/Proxy/envoy)</br>
+┃　　　┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/envoy/Envoy.md)</br>
 ┃　　　┃　　　┗━　[📁　nginx](./데브옵스 DevOps/Proxy/nginx)</br>
 ┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Proxy/nginx/NGINX Ingress Basic Auth.md)</br>
 ┃　　　┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/Proxy/nginx/location block.md)</br>
@@ -384,19 +399,7 @@ avg_file_length  : 3760
 ┃　　　┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/Proxy/nginx/리버스 프록시.md)</br>
 ┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
 ┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Proxy/Contour CRD 설치.md)</br>
-┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/Envoy.md)</br>
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
-┃　　　┗━　[📁　Service Mesh](./데브옵스 DevOps/Service Mesh)</br>
-┃　　　┃　　　┗━　[📁　istio](./데브옵스 DevOps/Service Mesh/istio)</br>
-┃　　　┃　　　　　　　┗━　[Dry run](./데브옵스 DevOps/Service Mesh/istio/Dry run.md)</br>
-┃　　　┃　　　　　　　┗━　[Istioctl](./데브옵스 DevOps/Service Mesh/istio/Istioctl.md)</br>
-┃　　　┃　　　　　　　┗━　[Istio And Envoy](./데브옵스 DevOps/Service Mesh/istio/Istio And Envoy.md)</br>
-┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Service Mesh/istio/Istio Arcitecture.md)</br>
-┃　　　┃　　　　　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Service Mesh/istio/Istio Configuration Profiles.md)</br>
-┃　　　┃　　　　　　　┗━　[Istio RBAC](./데브옵스 DevOps/Service Mesh/istio/Istio RBAC.md)</br>
-┃　　　┃　　　　　　　┗━　[Istio authorization](./데브옵스 DevOps/Service Mesh/istio/Istio authorization.md)</br>
-┃　　　┃　　　　　　　┗━　[Resource Annotations & Labels](./데브옵스 DevOps/Service Mesh/istio/Resource Annotations & Labels.md)</br>
-┃　　　┃　　　　　　　┗━　[gateway log debug 하는 법](./데브옵스 DevOps/Service Mesh/istio/gateway log debug 하는 법.md)</br>
 ┃　　　┗━　[📁　architecture](./데브옵스 DevOps/architecture)</br>
 ┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
 ┃　　　┗━　[📁　tools](./데브옵스 DevOps/tools)</br>
