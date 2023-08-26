@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 564
+files            : 565
 derectories      : 128
-avg_file_length  : 3761
+avg_file_length  : 3760
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -270,6 +270,7 @@ avg_file_length  : 3761
 ┃　　　┗━　[📁　Kubernetes](./데브옵스 DevOps/Kubernetes)</br>
 ┃　　　┃　　　┗━　[📁　EKS](./데브옵스 DevOps/Kubernetes/EKS)</br>
 ┃　　　┃　　　┃　　　┗━　[AWS Load Balancer Controller](./데브옵스 DevOps/Kubernetes/EKS/AWS Load Balancer Controller.md)</br>
+┃　　　┃　　　┃　　　┗━　[Add IAM to RBAC](./데브옵스 DevOps/Kubernetes/EKS/Add IAM to RBAC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Amazon VPC CNI](./데브옵스 DevOps/Kubernetes/EKS/Amazon VPC CNI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EBS CSI driver](./데브옵스 DevOps/Kubernetes/EKS/EBS CSI driver.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/EKS/EKS ALB.md)</br>
