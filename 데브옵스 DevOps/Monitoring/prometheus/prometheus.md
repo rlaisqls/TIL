@@ -22,6 +22,6 @@ Prometheus's main features are:
 
 This diagram illustrates the architecture of Prometeus and some of its ecosstem components.
 
-![image](https://github.com/rlaisqls/TIL/assets/81006587/0ac4982d-1f75-44f0-bdda-a56eea4cb1c5)
+![image](https://github.com/rlaisqls/TIL/assets/81006587/42f0f8a0-f205-4814-b475-728dc28e1132)
 
 Prometheus scrapes metrics from instrumented jobs, either directly or via an intermediary push gateway for short-lived jobs. It stores all scraped samples locally and runs rules over this data to wither aggregate and record new time series from existing data or generate alerts. Grafaba ir itger API consumers can be used to visualize the collected data.
