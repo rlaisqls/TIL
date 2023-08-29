@@ -17,7 +17,7 @@ wordpress/
       values.yaml              # Chart의 기본 설정값
       charts/                  # 이 차트가 의존하는 차트가 들어 있는 디렉터리
       templates/               # 설정값과 결함하여 menifest를 만들 template
-      templates/NOTES.txt      # O선택사항) 짧은 사용 참고 사항이 포함된 텍스트파일
+      templates/NOTES.txt      # (선택사항) 짧은 사용 참고 사항이 포함된 텍스트파일
 ```
 
 # 컴포넌트

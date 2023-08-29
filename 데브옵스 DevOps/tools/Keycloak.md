@@ -1,7 +1,6 @@
 # Keycloak
 
-[Keycloak](https://www.keycloak.org/)은 ID 및 액세스 관리 솔루션을 제공하는 오픈소스이다.
-쉽게 말하면 인증(Authentication)과 인가(Authorization)을 쉽게 해주고 SSO(Single-Sign-On)을 가능하게 해주는 오픈소스이다.
+[Keycloak](https://www.keycloak.org/)은 ID 및 액세스 관리 솔루션을 제공하고, 인증(Authentication)과 인가(Authorization)을 쉽게 해주고 SSO(Single-Sign-On)을 가능하게 해주는 오픈소스이다.
 
 ### SSO란?
 
