@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 567
+files            : 569
 derectories      : 128
-avg_file_length  : 3759
+avg_file_length  : 3765
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -64,6 +64,7 @@ avg_file_length  : 3759
 ┃　　　┃　　　┗━　[netty 사례연구](./개발/비동기/netty 사례연구.md)</br>
 ┃　　　┗━　[**암호화**](./개발/암호화)</br>
 ┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
+┃　　　┃　　　┗━　[Certificate formats](./개발/암호화/Certificate formats.md)</br>
 ┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
 ┃　　　┃　　　┗━　[DB 암호화](./개발/암호화/DB 암호화.md)</br>
 ┃　　　┗━　[**프레임워크**](./개발/프레임워크)</br>
@@ -277,6 +278,7 @@ avg_file_length  : 3759
 ┃　　　┃　　　┃　　　┗━　[EKS Control Plane](./데브옵스 DevOps/Kubernetes/EKS/EKS Control Plane.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./데브옵스 DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/EKS/EKS kubecofig.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS 인증과정](./데브옵스 DevOps/Kubernetes/EKS/EKS 인증과정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NLB IP mode](./데브옵스 DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
 ┃　　　┃　　　┗━　[**Network**](./데브옵스 DevOps/Kubernetes/Network)</br>
 ┃　　　┃　　　┃　　　┗━　[**DNS**](./데브옵스 DevOps/Kubernetes/Network/DNS)</br>
