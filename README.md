@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 569
+files            : 570
 derectories      : 128
-avg_file_length  : 3765
+avg_file_length  : 3758
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -120,6 +120,7 @@ avg_file_length  : 3765
 ┃　　　┗━　[**L1 link layer**](./네트워크 Network/L1 link layer)</br>
 ┃　　　┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/L1 link layer/Ethernet과 TokenRing.md)</br>
 ┃　　　┃　　　┗━　[VLAN](./네트워크 Network/L1 link layer/VLAN.md)</br>
+┃　　　┃　　　┗━　[아날로그, 디지털　신호와 전송](./네트워크 Network/L1 link layer/아날로그, 디지털　신호와 전송.md)</br>
 ┃　　　┗━　[**L2 internet layer**](./네트워크 Network/L2 internet layer)</br>
 ┃　　　┃　　　┗━　[CIDR](./네트워크 Network/L2 internet layer/CIDR.md)</br>
 ┃　　　┃　　　┗━　[ICMP](./네트워크 Network/L2 internet layer/ICMP.md)</br>
