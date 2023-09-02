@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 570
+files            : 572
 derectories      : 128
-avg_file_length  : 3758
+avg_file_length  : 3754
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -217,6 +217,7 @@ avg_file_length  : 3758
 ┃　　　┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/Security/IAM.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/Security/KMS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/Security/KMS Datakey.md)</br>
+┃　　　┃　　　┃　　　┗━　[MalformedPolicyDocument](./데브옵스 DevOps/AWS/Security/MalformedPolicyDocument.md)</br>
 ┃　　　┃　　　┗━　[**Storage**](./데브옵스 DevOps/AWS/Storage)</br>
 ┃　　　┃　　　┃　　　┗━　[DayaSync](./데브옵스 DevOps/AWS/Storage/DayaSync.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
@@ -316,9 +317,10 @@ avg_file_length  : 3758
 ┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter](./데브옵스 DevOps/Kubernetes/tools/Karpenter/Karpenter.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter best practices](./데브옵스 DevOps/Kubernetes/tools/Karpenter/Karpenter best practices.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**helm**](./데브옵스 DevOps/Kubernetes/tools/helm)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/tools/helm/Chart Development Tips.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/tools/helm/Helm.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/tools/helm/Values Files.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/tools/helm/Chart Development Tips.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/tools/helm/Helm.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/tools/helm/Values Files.md)</br>
+┃　　　┃　　　┃　　　┗━　[Node Termination Handler](./데브옵스 DevOps/Kubernetes/tools/Node Termination Handler.md)</br>
 ┃　　　┃　　　┗━　[**개념**](./데브옵스 DevOps/Kubernetes/개념)</br>
 ┃　　　┃　　　┃　　　┗━　[**Node**](./데브옵스 DevOps/Kubernetes/개념/Node)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node/Assigning Pods to Nodes.md)</br>
