@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 572
+files            : 576
 derectories      : 128
-avg_file_length  : 3754
+avg_file_length  : 3746
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -176,6 +176,7 @@ avg_file_length  : 3754
 ┃　　　┃　　　┃　　　┃　　　┗━　[Elastic Fabric Adapter](./데브옵스 DevOps/AWS/Computing/EC2/Elastic Fabric Adapter.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Instance Store](./데브옵스 DevOps/AWS/Computing/EC2/Instance Store.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Spot Block](./데브옵스 DevOps/AWS/Computing/EC2/Spot Block.md)</br>
+┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./데브옵스 DevOps/AWS/Computing/ASG Lifecycle Hook.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/Auto Scaling.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./데브옵스 DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Fargate](./데브옵스 DevOps/AWS/Computing/Fargate.md)</br>
@@ -322,15 +323,18 @@ avg_file_length  : 3754
 ┃　　　┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/tools/helm/Values Files.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node Termination Handler](./데브옵스 DevOps/Kubernetes/tools/Node Termination Handler.md)</br>
 ┃　　　┃　　　┗━　[**개념**](./데브옵스 DevOps/Kubernetes/개념)</br>
-┃　　　┃　　　┃　　　┗━　[**Node**](./데브옵스 DevOps/Kubernetes/개념/Node)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node/Assigning Pods to Nodes.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/개념/Node/NodePort와 ServicePort와 targetPort.md)</br>
+┃　　　┃　　　┃　　　┗━　[**Node Scheduling**](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/Assigning Pods to Nodes.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Taints and Tolerations](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/Taints and Tolerations.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[cordon, drain](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/cordon, drain.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**Volume**](./데브옵스 DevOps/Kubernetes/개념/Volume)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[CSIDriver](./데브옵스 DevOps/Kubernetes/개념/Volume/CSIDriver.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[attachdetach━controller](./데브옵스 DevOps/Kubernetes/개념/Volume/attachdetach━controller.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**object**](./데브옵스 DevOps/Kubernetes/개념/object)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Kubernetes/개념/object/Annotation.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/개념/object/CRD.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployment　Status](./데브옵스 DevOps/Kubernetes/개념/object/Deployment　Status.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployment　Strategy](./데브옵스 DevOps/Kubernetes/개념/object/Deployment　Strategy.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/개념/object/Deployments.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Events](./데브옵스 DevOps/Kubernetes/개념/object/Events.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Labels and Selectors](./데브옵스 DevOps/Kubernetes/개념/object/Labels and Selectors.md)</br>
@@ -345,7 +349,7 @@ avg_file_length  : 3754
 ┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/개념/Endpoints.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/개념/K8s의 도커런타임 사용중단.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kube━proxy](./데브옵스 DevOps/Kubernetes/개념/Kube━proxy.md)</br>
-┃　　　┃　　　┃　　　┗━　[Taints and Tolerations](./데브옵스 DevOps/Kubernetes/개념/Taints and Tolerations.md)</br>
+┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/개념/NodePort와 ServicePort와 targetPort.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Workloads](./데브옵스 DevOps/Kubernetes/개념/Workloads.md)</br>
 ┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/개념/etcd.md)</br>
 ┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/개념/가상 IP와 서비스 프록시.md)</br>
