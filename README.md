@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 576
+files            : 579
 derectories      : 128
-avg_file_length  : 3746
+avg_file_length  : 3752
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -176,6 +176,7 @@ avg_file_length  : 3746
 ┃　　　┃　　　┃　　　┃　　　┗━　[Elastic Fabric Adapter](./데브옵스 DevOps/AWS/Computing/EC2/Elastic Fabric Adapter.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Instance Store](./데브옵스 DevOps/AWS/Computing/EC2/Instance Store.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Spot Block](./데브옵스 DevOps/AWS/Computing/EC2/Spot Block.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[State Change Event](./데브옵스 DevOps/AWS/Computing/EC2/State Change Event.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./데브옵스 DevOps/AWS/Computing/ASG Lifecycle Hook.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/Auto Scaling.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./데브옵스 DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
@@ -282,7 +283,9 @@ avg_file_length  : 3746
 ┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./데브옵스 DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/EKS/EKS kubecofig.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS 인증과정](./데브옵스 DevOps/Kubernetes/EKS/EKS 인증과정.md)</br>
+┃　　　┃　　　┃　　　┗━　[IP addresse prefix](./데브옵스 DevOps/Kubernetes/EKS/IP addresse prefix.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NLB IP mode](./데브옵스 DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
+┃　　　┃　　　┃　　　┗━　[Node not Ready](./데브옵스 DevOps/Kubernetes/EKS/Node not Ready.md)</br>
 ┃　　　┃　　　┗━　[**Network**](./데브옵스 DevOps/Kubernetes/Network)</br>
 ┃　　　┃　　　┃　　　┗━　[**DNS**](./데브옵스 DevOps/Kubernetes/Network/DNS)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[CoreDNS](./데브옵스 DevOps/Kubernetes/Network/DNS/CoreDNS.md)</br>
