@@ -1,6 +1,6 @@
 # Kube-proxy
 
-`kube-proxy` is another per-node daemon in Kubernetes, like Kubelet.
+Networking is a crucial part of Kubernetes. Behind the Kubernetes network, there is a component that work under the hood. It trandlates your Services into some usable networkign rules. This componenet is called Kube-Proxy. `kube-proxy` is another per-node daemon in Kubernetes, like Kubelet.
 
 `kube-proxy` provides **basic load balancing functionality within the cluster**. It implements services and relies on Endpoints/EndpointSlices. It may help to reference that section, but the following is the relevant and quick explanation:
 

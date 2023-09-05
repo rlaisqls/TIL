@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 579
+files            : 582
 derectories      : 128
-avg_file_length  : 3752
+avg_file_length  : 3783
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -281,6 +281,7 @@ avg_file_length  : 3752
 ┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/EKS/EKS ALB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Control Plane](./데브옵스 DevOps/Kubernetes/EKS/EKS Control Plane.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./데브옵스 DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS Spot Instances with Karpenter](./데브옵스 DevOps/Kubernetes/EKS/EKS Spot Instances with Karpenter.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/EKS/EKS kubecofig.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS 인증과정](./데브옵스 DevOps/Kubernetes/EKS/EKS 인증과정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[IP addresse prefix](./데브옵스 DevOps/Kubernetes/EKS/IP addresse prefix.md)</br>
@@ -325,6 +326,7 @@ avg_file_length  : 3752
 ┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/tools/helm/Helm.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/tools/helm/Values Files.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node Termination Handler](./데브옵스 DevOps/Kubernetes/tools/Node Termination Handler.md)</br>
+┃　　　┃　　　┃　　　┗━　[OPA Gatekeeper](./데브옵스 DevOps/Kubernetes/tools/OPA Gatekeeper.md)</br>
 ┃　　　┃　　　┗━　[**개념**](./데브옵스 DevOps/Kubernetes/개념)</br>
 ┃　　　┃　　　┃　　　┗━　[**Node Scheduling**](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/Assigning Pods to Nodes.md)</br>
@@ -349,9 +351,10 @@ avg_file_length  : 3752
 ┃　　　┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/개념/object/StatefulSets.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/개념/object/ingress.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CNI Specification](./데브옵스 DevOps/Kubernetes/개념/CNI Specification.md)</br>
+┃　　　┃　　　┃　　　┗━　[Disruption Budget](./데브옵스 DevOps/Kubernetes/개념/Disruption Budget.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/개념/Endpoints.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/개념/K8s의 도커런타임 사용중단.md)</br>
-┃　　　┃　　　┃　　　┗━　[Kube━proxy](./데브옵스 DevOps/Kubernetes/개념/Kube━proxy.md)</br>
+┃　　　┃　　　┃　　　┗━　[Kubeproxy](./데브옵스 DevOps/Kubernetes/개념/Kubeproxy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/개념/NodePort와 ServicePort와 targetPort.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Workloads](./데브옵스 DevOps/Kubernetes/개념/Workloads.md)</br>
 ┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/개념/etcd.md)</br>
@@ -364,8 +367,8 @@ avg_file_length  : 3752
 ┃　　　┃　　　┃　　　┃　　　┗━　[Security Context for a Pod or Container](./데브옵스 DevOps/Kubernetes/실습/Auth/Security Context for a Pod or Container.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Token Webhook with Guard](./데브옵스 DevOps/Kubernetes/실습/Auth/Token Webhook with Guard.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[k8s 클러스터 root CA를 통한 사용자 인증](./데브옵스 DevOps/Kubernetes/실습/Auth/k8s 클러스터 root CA를 통한 사용자 인증.md)</br>
+┃　　　┃　　　┃　　　┗━　[10 most common mistakes using kubernetes](./데브옵스 DevOps/Kubernetes/실습/10 most common mistakes using kubernetes.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS Spot Instances with Karpenter](./데브옵스 DevOps/Kubernetes/실습/EKS Spot Instances with Karpenter.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Install Cilium](./데브옵스 DevOps/Kubernetes/실습/Install Cilium.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Kubernetes/실습/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy Cilium example](./데브옵스 DevOps/Kubernetes/실습/NetworkPolicy Cilium example.md)</br>
