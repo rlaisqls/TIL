@@ -2,7 +2,6 @@
 
 ![image](https://github.com/rlaisqls/TIL/assets/81006587/982c9e69-b39d-454e-8fed-6753ff221d1a)
 
-
 ### Core
 
 - **Prometheus**
@@ -52,7 +51,7 @@
 
 ### Query
 
-- Promdash
+- **Promdash**
   - Promdash was a native dashboard builder for Prometheus. It has been deprecated and replaced by Grafana.
 
 - **PromQL**

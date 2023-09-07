@@ -2,7 +2,7 @@
 
 ## Objective
 
-- Make volume attachment and detachment independent of any single nodes’ availability
+- Make volume attachment and detachment independent of any single node's availability
   - If a node or kubelet goes down, the volumes attached to that node should be detached so that they are free to be attached to other nodes.
 - Secure Cloud Provider Credentials
   - Because each kubelet is responsible for triggering attach/detach logic, every node currently needs (often broad) permissions. These permissions should be limited to the master. For Google Compute Engine (GCE), for example, this means nodes should no longer need the computer-rw auth scope.

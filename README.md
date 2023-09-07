@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 585
+files            : 586
 derectories      : 129
-avg_file_length  : 3797
+avg_file_length  : 3796
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -329,6 +329,7 @@ avg_file_length  : 3797
 ┃　　　┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/tools/helm/Chart Development Tips.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/tools/helm/Helm.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/tools/helm/Values Files.md)</br>
+┃　　　┃　　　┃　　　┗━　[Install Cilium](./데브옵스 DevOps/Kubernetes/tools/Install Cilium.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node Termination Handler](./데브옵스 DevOps/Kubernetes/tools/Node Termination Handler.md)</br>
 ┃　　　┃　　　┃　　　┗━　[OPA Gatekeeper](./데브옵스 DevOps/Kubernetes/tools/OPA Gatekeeper.md)</br>
 ┃　　　┃　　　┗━　[**개념**](./데브옵스 DevOps/Kubernetes/개념)</br>
@@ -373,7 +374,6 @@ avg_file_length  : 3797
 ┃　　　┃　　　┃　　　┃　　　┗━　[k8s 클러스터 root CA를 통한 사용자 인증](./데브옵스 DevOps/Kubernetes/실습/Auth/k8s 클러스터 root CA를 통한 사용자 인증.md)</br>
 ┃　　　┃　　　┃　　　┗━　[10 most common mistakes using kubernetes](./데브옵스 DevOps/Kubernetes/실습/10 most common mistakes using kubernetes.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
-┃　　　┃　　　┃　　　┗━　[Install Cilium](./데브옵스 DevOps/Kubernetes/실습/Install Cilium.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Kubernetes/실습/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy Cilium example](./데브옵스 DevOps/Kubernetes/실습/NetworkPolicy Cilium example.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Pulling images from ECR on Kubernetes](./데브옵스 DevOps/Kubernetes/실습/Pulling images from ECR on Kubernetes.md)</br>
@@ -661,6 +661,7 @@ avg_file_length  : 3797
 ┃　　　┃　　　┃　　　┗━　[백업](./운영체제 Operating System/linux/disk & dir/백업.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./운영체제 Operating System/linux/disk & dir/파일 관리 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./운영체제 Operating System/linux/disk & dir/파일 시스템.md)</br>
+┃　　　┃　　　┃　　　┗━　[파일 종류](./운영체제 Operating System/linux/disk & dir/파일 종류.md)</br>
 ┃　　　┃　　　┗━　[**kernel**](./운영체제 Operating System/linux/kernel)</br>
 ┃　　　┃　　　┃　　　┗━　[커널 모듈](./운영체제 Operating System/linux/kernel/커널 모듈.md)</br>
 ┃　　　┃　　　┗━　[**memory**](./운영체제 Operating System/linux/memory)</br>

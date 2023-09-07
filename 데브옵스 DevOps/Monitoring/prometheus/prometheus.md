@@ -25,3 +25,10 @@ This diagram illustrates the architecture of Prometeus and some of its ecosstem 
 ![image](https://github.com/rlaisqls/TIL/assets/81006587/42f0f8a0-f205-4814-b475-728dc28e1132)
 
 Prometheus scrapes metrics from instrumented jobs, either directly or via an intermediary push gateway for short-lived jobs. It stores all scraped samples locally and runs rules over this data to wither aggregate and record new time series from existing data or generate alerts. Grafaba ir itger API consumers can be used to visualize the collected data.
+
+You can get more information in this link
+
+---
+reference
+- https://prometheus.io/docs/introduction/overview/
+- https://github.com/prometheus/prometheus

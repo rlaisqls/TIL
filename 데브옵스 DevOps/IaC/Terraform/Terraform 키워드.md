@@ -1,12 +1,14 @@
 # resource
 
 resource는 테라폼에서 가장 중요한 요소이다. resource 블록은 하나 이상의 인프라스트럭처의 오브젝트를 기술한다. 아래는 providers로 AWS를 사용하고 있을 때 인스턴스를 사용하는 예제이다.
+
 ```hcl
 resource "aws_instance" "web" {
   ami           = "ami-a1b2c3d4"
   instance_type = "t2.micro"
 }
 ```
+
 위에 첫 번째 라인을 살펴보면 resource 옆에 첫 번째 자리는 리소스 타입으로 “aws_instance”를 써주고 두 번째 자리에는 “web”을 적어줬다. 리소스 타입은 사전에 정의된 AWS 리소스 이름이다. 여기서 “aws_instance”는 인스턴스를 나타내고 있다. aws라는 프로바이더 정보를 prefix로 사용하고 있는 것을 알 수 있다. HCL에서 key-value 조합으로 코드를 쓸 때 등호(=)는 보통 라인을 맞춰서 사용한다. 
 
 resource 옆 두 번째 자리에 `web`은 실제 생성되는 리소스의 이름과 별개로 테라폼 내에서 사용될 이름을 써준 것이다. 또한 providers에 따라 사용 가능한 resource 타입이 다르다.
