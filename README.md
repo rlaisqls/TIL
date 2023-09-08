@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 586
+files            : 587
 derectories      : 129
-avg_file_length  : 3796
+avg_file_length  : 3793
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -658,6 +658,7 @@ avg_file_length  : 3796
 ┃　　　┃　　　┃　　　┗━　[Linux 디렉토리 구조](./운영체제 Operating System/linux/disk & dir/Linux 디렉토리 구조.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RAID](./운영체제 Operating System/linux/disk & dir/RAID.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Symbolic Link](./운영체제 Operating System/linux/disk & dir/Symbolic Link.md)</br>
+┃　　　┃　　　┃　　　┗━　[file 관련 systemcall](./운영체제 Operating System/linux/disk & dir/file 관련 systemcall.md)</br>
 ┃　　　┃　　　┃　　　┗━　[백업](./운영체제 Operating System/linux/disk & dir/백업.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./운영체제 Operating System/linux/disk & dir/파일 관리 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./운영체제 Operating System/linux/disk & dir/파일 시스템.md)</br>
