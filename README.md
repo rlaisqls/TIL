@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 587
+files            : 589
 derectories      : 129
-avg_file_length  : 3793
+avg_file_length  : 3791
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -119,6 +119,7 @@ avg_file_length  : 3793
 ┗━　[**네트워크 Network**](./네트워크 Network)</br>
 ┃　　　┗━　[**L1 link layer**](./네트워크 Network/L1 link layer)</br>
 ┃　　　┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/L1 link layer/Ethernet과 TokenRing.md)</br>
+┃　　　┃　　　┗━　[MTU](./네트워크 Network/L1 link layer/MTU.md)</br>
 ┃　　　┃　　　┗━　[VLAN](./네트워크 Network/L1 link layer/VLAN.md)</br>
 ┃　　　┃　　　┗━　[데이터링크 제어(DLC)](./네트워크 Network/L1 link layer/데이터링크 제어(DLC).md)</br>
 ┃　　　┃　　　┗━　[아날로그, 디지털　신호와 전송](./네트워크 Network/L1 link layer/아날로그, 디지털　신호와 전송.md)</br>
@@ -133,12 +134,14 @@ avg_file_length  : 3793
 ┃　　　┃　　　┗━　[서브넷](./네트워크 Network/L2 internet layer/서브넷.md)</br>
 ┃　　　┗━　[**L3 transport layer**](./네트워크 Network/L3 transport layer)</br>
 ┃　　　┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/L3 transport layer/SO_REUSEADDR.md)</br>
+┃　　　┃　　　┗━　[SSH config](./네트워크 Network/L3 transport layer/SSH config.md)</br>
 ┃　　　┃　　　┗━　[TCP와 UDP](./네트워크 Network/L3 transport layer/TCP와 UDP.md)</br>
 ┃　　　┗━　[**L4 appplication layer**](./네트워크 Network/L4 appplication layer)</br>
 ┃　　　┃　　　┗━　[**tls**](./네트워크 Network/L4 appplication layer/tls)</br>
 ┃　　　┃　　　┃　　　┗━　[SNI](./네트워크 Network/L4 appplication layer/tls/SNI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/tls/TLS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/tls/TLS 인증서 발급 절차를 이해해보자.md)</br>
+┃　　　┃　　　┗━　[ACME](./네트워크 Network/L4 appplication layer/ACME.md)</br>
 ┃　　　┃　　　┗━　[CDN](./네트워크 Network/L4 appplication layer/CDN.md)</br>
 ┃　　　┃　　　┗━　[DHCP](./네트워크 Network/L4 appplication layer/DHCP.md)</br>
 ┃　　　┃　　　┗━　[DNS 레코드유형](./네트워크 Network/L4 appplication layer/DNS 레코드유형.md)</br>
@@ -147,13 +150,10 @@ avg_file_length  : 3793
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[**error**](./네트워크 Network/error)</br>
 ┃　　　┃　　　┗━　[Context deadline exceeded](./네트워크 Network/error/Context deadline exceeded.md)</br>
-┃　　　┗━　[ACME](./네트워크 Network/ACME.md)</br>
-┃　　　┗━　[Cloudflare ProxyStatus](./네트워크 Network/Cloudflare ProxyStatus.md)</br>
-┃　　　┗━　[MTU](./네트워크 Network/MTU.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
-┃　　　┗━　[SSH config](./네트워크 Network/SSH config.md)</br>
 ┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
 ┃　　　┗━　[Switch](./네트워크 Network/Switch.md)</br>
+┃　　　┗━　[bandwidth](./네트워크 Network/bandwidth.md)</br>
 ┃　　　┗━　[네트워크](./네트워크 Network/네트워크.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┗━　[**데브옵스 DevOps**](./데브옵스 DevOps)</br>
@@ -238,8 +238,6 @@ avg_file_length  : 3793
 ┃　　　┃　　　┗━　[**CNI**](./데브옵스 DevOps/Container/CNI)</br>
 ┃　　　┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI/CNI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Calico](./데브옵스 DevOps/Container/CNI/Calico.md)</br>
-┃　　　┃　　　┃　　　┗━　[Calico Architecture](./데브옵스 DevOps/Container/CNI/Calico Architecture.md)</br>
-┃　　　┃　　　┃　　　┗━　[End user RBAC](./데브옵스 DevOps/Container/CNI/End user RBAC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Install Calico](./데브옵스 DevOps/Container/CNI/Install Calico.md)</br>
 ┃　　　┃　　　┗━　[**Docker**](./데브옵스 DevOps/Container/Docker)</br>
 ┃　　　┃　　　┃　　　┗━　[DockerSwarm](./데브옵스 DevOps/Container/Docker/DockerSwarm.md)</br>
@@ -256,11 +254,10 @@ avg_file_length  : 3793
 ┃　　　┃　　　┃　　　┗━　[도커 아키텍처](./데브옵스 DevOps/Container/Docker/도커 아키텍처.md)</br>
 ┃　　　┃　　　┗━　[ContainerRuntime](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
 ┃　　　┃　　　┗━　[Container Orchestration](./데브옵스 DevOps/Container/Container Orchestration.md)</br>
+┃　　　┃　　　┗━　[cAdvisor](./데브옵스 DevOps/Container/cAdvisor.md)</br>
 ┃　　　┗━　[**DR**](./데브옵스 DevOps/DR)</br>
 ┃　　　┃　　　┗━　[DR strategies](./데브옵스 DevOps/DR/DR strategies.md)</br>
 ┃　　　┃　　　┗━　[Fail over와 서버 이중화](./데브옵스 DevOps/DR/Fail over와 서버 이중화.md)</br>
-┃　　　┗━　[**Dashboad**](./데브옵스 DevOps/Dashboad)</br>
-┃　　　┃　　　┗━　[kiali with prometheus](./데브옵스 DevOps/Dashboad/kiali with prometheus.md)</br>
 ┃　　　┗━　[**IaC**](./데브옵스 DevOps/IaC)</br>
 ┃　　　┃　　　┗━　[**Terraform**](./데브옵스 DevOps/IaC/Terraform)</br>
 ┃　　　┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform/Terraform.md)</br>
@@ -374,6 +371,7 @@ avg_file_length  : 3793
 ┃　　　┃　　　┃　　　┃　　　┗━　[k8s 클러스터 root CA를 통한 사용자 인증](./데브옵스 DevOps/Kubernetes/실습/Auth/k8s 클러스터 root CA를 통한 사용자 인증.md)</br>
 ┃　　　┃　　　┃　　　┗━　[10 most common mistakes using kubernetes](./데브옵스 DevOps/Kubernetes/실습/10 most common mistakes using kubernetes.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
+┃　　　┃　　　┃　　　┗━　[End user RBAC](./데브옵스 DevOps/Kubernetes/실습/End user RBAC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Kubernetes/실습/K8s를 위한 SpringBoot 개발.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy Cilium example](./데브옵스 DevOps/Kubernetes/실습/NetworkPolicy Cilium example.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Pulling images from ECR on Kubernetes](./데브옵스 DevOps/Kubernetes/실습/Pulling images from ECR on Kubernetes.md)</br>
@@ -386,6 +384,8 @@ avg_file_length  : 3793
 ┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./데브옵스 DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
 ┃　　　┃　　　┗━　[**test.yml**](./데브옵스 DevOps/Kubernetes/test.yml)</br>
 ┃　　　┗━　[**Monitoring**](./데브옵스 DevOps/Monitoring)</br>
+┃　　　┃　　　┗━　[**Dashboad**](./데브옵스 DevOps/Monitoring/Dashboad)</br>
+┃　　　┃　　　┃　　　┗━　[kiali with prometheus](./데브옵스 DevOps/Monitoring/Dashboad/kiali with prometheus.md)</br>
 ┃　　　┃　　　┗━　[**datadog**](./데브옵스 DevOps/Monitoring/datadog)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Monitoring/datadog/datadog.md)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog APM 기능 사용하기](./데브옵스 DevOps/Monitoring/datadog/datadog APM 기능 사용하기.md)</br>
@@ -399,11 +399,13 @@ avg_file_length  : 3793
 ┃　　　┃　　　┗━　[**prometheus**](./데브옵스 DevOps/Monitoring/prometheus)</br>
 ┃　　　┃　　　┃　　　┗━　[Prometheus using Thanos](./데브옵스 DevOps/Monitoring/prometheus/Prometheus using Thanos.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus](./데브옵스 DevOps/Monitoring/prometheus/prometheus.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus glossaries](./데브옵스 DevOps/Monitoring/prometheus/prometheus glossaries.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus glossary](./데브옵스 DevOps/Monitoring/prometheus/prometheus glossary.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus storage](./데브옵스 DevOps/Monitoring/prometheus/prometheus storage.md)</br>
 ┃　　　┃　　　┗━　[**thanos**](./데브옵스 DevOps/Monitoring/thanos)</br>
 ┃　　　┃　　　┃　　　┗━　[Rule](./데브옵스 DevOps/Monitoring/thanos/Rule.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Thanos](./데브옵스 DevOps/Monitoring/thanos/Thanos.md)</br>
+┃　　　┃　　　┗━　[Grok exporter](./데브옵스 DevOps/Monitoring/Grok exporter.md)</br>
 ┃　　　┃　　　┗━　[telemetry](./데브옵스 DevOps/Monitoring/telemetry.md)</br>
 ┃　　　┗━　[**Proxy**](./데브옵스 DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[**envoy**](./데브옵스 DevOps/Proxy/envoy)</br>

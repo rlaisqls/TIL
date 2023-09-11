@@ -44,3 +44,8 @@ The following table summarizes the main Calico features.
 |User interfaces|CLIs: kubectl and calicoctl|
 |APIs|• Calico API for Calico resources <br/>• Installation API for operator installation and configuration|
 |Support and maintenance|Community-driven. Calico powers 2M+ nodes daily across 166 countries.|
+
+---
+reference
+- https://www.calicolabs.com/
+- https://www.tigera.io/project-calico/

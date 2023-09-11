@@ -1,6 +1,6 @@
 # prometheus glossary
 
-<img src="https://github.com/rlaisqls/TIL/assets/81006587/982c9e69-b39d-454e-8fed-6753ff221d1a" height=300px>
+![image](https://github.com/rlaisqls/TIL/assets/81006587/982c9e69-b39d-454e-8fed-6753ff221d1a)
 
 ### Core
 
@@ -20,7 +20,7 @@
 
 - **Alert**
   - An alert is <u>the outcome of an alerting rule</u> in Prometheus that is actively firing. Alerts are sent from Prometheus to the Alertmanager.
-
+ 
 - **Notification**
   - A notification represents a group of one or more alerts, and is sent by the Alertmanager to email, Pagerduty, Slack etc.
 
