@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 589
+files            : 588
 derectories      : 129
-avg_file_length  : 3791
+avg_file_length  : 3781
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -246,6 +246,7 @@ avg_file_length  : 3791
 ┃　　　┃　　　┃　　　┗━　[Prune](./데브옵스 DevOps/Container/Docker/Prune.md)</br>
 ┃　　　┃　　　┃　　　┗━　[README](./데브옵스 DevOps/Container/Docker/README.md)</br>
 ┃　　　┃　　　┃　　　┗━　[dockersock 권한에러](./데브옵스 DevOps/Container/Docker/dockersock 권한에러.md)</br>
+┃　　　┃　　　┃　　　┗━　[exec user process caused “exec　format　error”](./데브옵스 DevOps/Container/Docker/exec user process caused “exec　format　error”.md)</br>
 ┃　　　┃　　　┃　　　┗━　[가상화와 컨테이너](./데브옵스 DevOps/Container/Docker/가상화와 컨테이너.md)</br>
 ┃　　　┃　　　┃　　　┗━　[도커 네트워크](./데브옵스 DevOps/Container/Docker/도커 네트워크.md)</br>
 ┃　　　┃　　　┃　　　┗━　[도커 네트워크 명령어](./데브옵스 DevOps/Container/Docker/도커 네트워크 명령어.md)</br>
@@ -397,9 +398,7 @@ avg_file_length  : 3791
 ┃　　　┃　　　┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Monitoring/elk/Elastic Search.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Monitoring/elk/Logstash.md)</br>
 ┃　　　┃　　　┗━　[**prometheus**](./데브옵스 DevOps/Monitoring/prometheus)</br>
-┃　　　┃　　　┃　　　┗━　[Prometheus using Thanos](./데브옵스 DevOps/Monitoring/prometheus/Prometheus using Thanos.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus](./데브옵스 DevOps/Monitoring/prometheus/prometheus.md)</br>
-┃　　　┃　　　┃　　　┗━　[prometheus glossaries](./데브옵스 DevOps/Monitoring/prometheus/prometheus glossaries.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus glossary](./데브옵스 DevOps/Monitoring/prometheus/prometheus glossary.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus storage](./데브옵스 DevOps/Monitoring/prometheus/prometheus storage.md)</br>
 ┃　　　┃　　　┗━　[**thanos**](./데브옵스 DevOps/Monitoring/thanos)</br>
