@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 588
+files            : 590
 derectories      : 129
-avg_file_length  : 3781
+avg_file_length  : 3783
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -330,6 +330,7 @@ avg_file_length  : 3781
 ┃　　　┃　　　┃　　　┗━　[Install Cilium](./데브옵스 DevOps/Kubernetes/tools/Install Cilium.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node Termination Handler](./데브옵스 DevOps/Kubernetes/tools/Node Termination Handler.md)</br>
 ┃　　　┃　　　┃　　　┗━　[OPA Gatekeeper](./데브옵스 DevOps/Kubernetes/tools/OPA Gatekeeper.md)</br>
+┃　　　┃　　　┃　　　┗━　[node━shell](./데브옵스 DevOps/Kubernetes/tools/node━shell.md)</br>
 ┃　　　┃　　　┗━　[**개념**](./데브옵스 DevOps/Kubernetes/개념)</br>
 ┃　　　┃　　　┃　　　┗━　[**Node Scheduling**](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/Assigning Pods to Nodes.md)</br>
@@ -399,6 +400,7 @@ avg_file_length  : 3781
 ┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Monitoring/elk/Logstash.md)</br>
 ┃　　　┃　　　┗━　[**prometheus**](./데브옵스 DevOps/Monitoring/prometheus)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus](./데브옵스 DevOps/Monitoring/prometheus/prometheus.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus agent mode](./데브옵스 DevOps/Monitoring/prometheus/prometheus agent mode.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus glossary](./데브옵스 DevOps/Monitoring/prometheus/prometheus glossary.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus storage](./데브옵스 DevOps/Monitoring/prometheus/prometheus storage.md)</br>
 ┃　　　┃　　　┗━　[**thanos**](./데브옵스 DevOps/Monitoring/thanos)</br>

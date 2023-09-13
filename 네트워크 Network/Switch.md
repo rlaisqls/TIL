@@ -32,7 +32,7 @@ L2 스위치는 스위치 패킷이 왔을 때, 그 패킷의 목적지가 어�
 
 Timer가 경과되면 해당 Entry는 MAC Table에서 삭제된다. TTL 같은 개념이다
 
-![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/61f7ab12-6216-4532-99ff-9be20cea4bf0)
+<img src="https://github.com/rlaisqls/rlaisqls/assets/81006587/61f7ab12-6216-4532-99ff-9be20cea4bf0" width=200px>
 
 패킷 정보를 읽어서 MAC 주소를 판단하는 것도 아래와 같은 여러 방식들이 있는데, 주로 cut-through를 사용한다고 한다.
 
