@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 590
-derectories      : 129
+files            : 592
+derectories      : 130
 avg_file_length  : 3783
 ```
 
@@ -122,6 +122,7 @@ avg_file_length  : 3783
 ┃　　　┃　　　┗━　[MTU](./네트워크 Network/L1 link layer/MTU.md)</br>
 ┃　　　┃　　　┗━　[VLAN](./네트워크 Network/L1 link layer/VLAN.md)</br>
 ┃　　　┃　　　┗━　[데이터링크 제어(DLC)](./네트워크 Network/L1 link layer/데이터링크 제어(DLC).md)</br>
+┃　　　┃　　　┗━　[매체 접근 제어(MAC)](./네트워크 Network/L1 link layer/매체 접근 제어(MAC).md)</br>
 ┃　　　┃　　　┗━　[아날로그, 디지털　신호와 전송](./네트워크 Network/L1 link layer/아날로그, 디지털　신호와 전송.md)</br>
 ┃　　　┗━　[**L2 internet layer**](./네트워크 Network/L2 internet layer)</br>
 ┃　　　┃　　　┗━　[CIDR](./네트워크 Network/L2 internet layer/CIDR.md)</br>
@@ -398,6 +399,8 @@ avg_file_length  : 3783
 ┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Monitoring/elk/ElasticSearch 검색 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Monitoring/elk/Elastic Search.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Monitoring/elk/Logstash.md)</br>
+┃　　　┃　　　┗━　[**grafana**](./데브옵스 DevOps/Monitoring/grafana)</br>
+┃　　　┃　　　┃　　　┗━　[Loki Canary](./데브옵스 DevOps/Monitoring/grafana/Loki Canary.md)</br>
 ┃　　　┃　　　┗━　[**prometheus**](./데브옵스 DevOps/Monitoring/prometheus)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus](./데브옵스 DevOps/Monitoring/prometheus/prometheus.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus agent mode](./데브옵스 DevOps/Monitoring/prometheus/prometheus agent mode.md)</br>

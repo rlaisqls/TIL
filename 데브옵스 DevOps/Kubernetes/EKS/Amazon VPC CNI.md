@@ -1,8 +1,8 @@
 # Amazon VPC CNI
 
-The AWS-provided VPC CNI is the default networking add-on that runs on Kubernetes worker nodes for EKS clusters. VPC CNI add-on is installed by default when you provision EKS clusters.
+- The AWS-provided VPC CNI is the default networking add-on that runs on Kubernetes worker nodes for EKS clusters. VPC CNI add-on is installed by default when you provision EKS clusters.
 
-The VPC CNI provides configuration options for pre-allocation of ENIs and IP addresses for fast Pod startup times. Refer to [Amazon VPC CNI](Amazon VPC CNI.md) for recommended plugin management best practices. 
+- The VPC CNI provides configuration options for pre-allocation of ENIs and IP addresses for fast Pod startup times.\
 
 ### VPC CNI components
 
@@ -16,6 +16,8 @@ Amazon VPC CNI has two components:
 When an instance is created, EC2 creates and attaches a primary ENI associated with a primary subnet. The primary subnet may be public or private. The Pods that run in hostNetwork mode use the primary IP address assigned to the node primary ENI and share the same network namespace as the host.
 
 **The CNI plugin manages ENI on the node.** When a node is provisioned, the CNI plugin automatically allocates a pool of slots (IPs or Prefix's) from the node's subnet to the primary ENI. This pool is known as the _warm pool_, and its size id determined by the node's instance type.
+
+---
 
 Depending on CNI settings, a slot may be an <u>IP address or a prefix</u>. When a slot on an ENI has been assigned, the CNI may attach additional ENIs with warm pool of slots to the nodes. 
 
@@ -33,19 +35,22 @@ AWS suggests setting the maximum Pods per EKS user guide to avoid exhaustion of 
 
 Secondary IP mode is the default mode for VPC CNI. This guide provides a generic overview of VPC CNI behavior when Secondary IP mode is enabled. The functionality of ipamd (allocation of IP addresses) may vary depending on the configuration settings for VPC CNI, such as [Prefix Mode](https://aws.github.io/aws-eks-best-practices/networking/prefix-mode/index_linux/), [Security Groups Per Pod](https://aws.github.io/aws-eks-best-practices/networking/sgpp/), and [Custom Networking.](https://aws.github.io/aws-eks-best-practices/networking/custom-networking/)
 
-The Amazon VPC CNI is deployed as a Kubernetes Daemonset named aws-node on worker nodes. When a worker node is provisioned, it has a default ENI, called the primary ENI, attached to it. The CNI allocates a warm pool of ENIs and secondary IP addresses from the subnet attached to the node's primary ENI. By default, ipamd attempts to allocate an additional ENI to the node. The IPAMD allocates additional ENI when a single Pod is scheduled and assigned a secondary IP address from the primay ENI. This "warm" ENI enables faster Pod networking. As the pool of secondary IP addresses runs out, the CNI adds another ENI to assign more.
+The Amazon VPC CNI is deployed as a Kubernetes Daemonset named aws-node on worker nodes. When a worker node is provisioned, it has a default ENI, called the primary ENI, attached to it.
+
+The CNI allocates a warm pool of ENIs and secondary IP addresses from the subnet attached to the node's primary ENI. By default, ipamd attempts to allocate an additional ENI to the node. The IPAMD allocates additional ENI when a single Pod is scheduled and assigned a secondary IP address from the primay ENI. This "warm" ENI enables faster Pod networking. As the pool of secondary IP addresses runs out, the CNI adds another ENI to assign more.
 
 The number of ENIs and IP addreses in a pool are configured through environment variables called `WARM_ENI_TARGET`, `WARM_IP_TARGET`, `MINIMUM_IP_TARGET`. The `aws-node` Daemonset will periodically check that a sufficient number of ENIs are attached. A sufficient number of ENIs are attached when all pf the `WARM_ENI_TARGET`, or `WARM_IP_TARGET` and `MINIMUM_IP_TARGET` conditions are met. If there are insufficient ENIs attached, the CNI will make an API call to EC2 to attach more until `MAX_ENI` limit is reached.
 
 - `WARM_ENI_TARGET` - Integer, Values > 0 indicate requirement Enabled
   - The number of Warm ENIs to be maintained. An ENI is "warm" when it is attached as a secondary ENI to a node, but it is not in use by any Pod. More specifically, no IP addresses of the ENI have been associated with a Pod.
+  
   - Example: Consider an instance with 2 ENIs, each ENI supporting 5 IP addresses. `WARM_ENI_TARGET` is set to 1. If exactly 5 addresses are associated with the instance, the CNI maintains 2 ENIs attached to the instance. The first ENI is in use, and all 5 possible IP addresses of this ENI are used.
-  - The second ENI is “warm” with all 5 IP addresses in pool. If another Pod is launched on the instance, a 6th IP address will be needed. The CNI will assign this 6th Pod an IP address from the second ENI and from 5 IPs from the pool. The second ENI is now in use, and no longer in a “warm” status. The CNI will allocate a 3rd ENI to maintain at least 1 warm ENI.
+    The second ENI is “warm” with all 5 IP addresses in pool. If another Pod is launched on the instance, a 6th IP address will be needed. The CNI will assign this 6th Pod an IP address from the second ENI and from 5 IPs from the pool. The second ENI is now in use, and no longer in a “warm” status. The CNI will allocate a 3rd ENI to maintain at least 1 warm ENI.
 
     > The warm ENIs still consume IP addresses from the CIDR of your VPC. IP addresses are “unused” or “warm” until they are associated with a workload, such as a Pod.
 
 - `WARM_IP_TARGET`, Integer, Values > 0 indicate requirement Enabled
-  - The number of Warm IP addresses to be maintaines. A warm IP is available on an actively attached ENI, but has not been assigned to a Pod. In other words, the number of Warm IPs available is th enumber of IPs that may be assigned to a Pord without requiring an additional ENI.
+  - The number of Warm IP addresses to be maintaines. A warm IP is available on an actively attached ENI, but has not been assigned to a Pod. In other words, the number of Warm IPs available is the number of IPs that may be assigned to a Pod without requiring an additional ENI.
   - Example: Consider an instance with 1 ENI, each ENI supporting 20 IP addresses `WARM_IP_TARGET` is set to 5. `WARM_ENI_TARGET` is set to 0. Only 1 ENI will be attached until a 16th IP address is needed. Then, the CNI will attach a second ENI, consuming 20 possible addresses from the subnet CIDR.
   
 - `MINIMUM_IP_TARGET`, Integer, Values > 0 indicate requirement Enabled
@@ -70,7 +75,7 @@ As described above in Secondary IP mode, each Pod receives one secondary private
 
 You can use the following formula to determin maximum number of Pods you can deploy on a node.
 
-```
+```bash
 (Number of network interfaces for the instance type × (the number of IP addresses per network interface - 1)) + 2
 ```
 
