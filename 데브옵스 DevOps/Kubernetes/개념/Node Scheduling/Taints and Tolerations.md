@@ -6,6 +6,16 @@ Node affinity is a property of Pods that attracts them to a set of nodes (either
 
 Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes. One or more tains are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints.
 
+In a nutshell
+- `taint` : Set per node. Pod is not scheduled for the node you set up
+- `Toleration` : Taint can be ignored
+
+There are three options available for taint.
+
+- `NoSchedule` : Pod is not scheduled without tolerance, not applied to existing pods.
+- `PreferredNoSchedule`: If there is no tolerance, you do not want to schedule a pod but it is not mandatory, but if there are insufficient resources in the cluster, the pod can also be scheduled on nodes with taint.
+- `NoExecute`: If there is no tolerance, the pod will not be scheduled, and if there is no tolerance, the existing pod will be terminated.
+
 ## Concepts
 
 You add a taint to a node using `kubectl taint`
