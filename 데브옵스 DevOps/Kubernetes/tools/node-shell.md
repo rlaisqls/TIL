@@ -28,7 +28,7 @@ $ kubectl krew install kvaps/node-shell
 $ vi ~/.zshrc
 
 # ~/.zshrc or  ~/.bash_profile 하단에 해당 내용 추가하기
-# export PATH="${PATH}:${HOME}/.krew/bin"
+$ export PATH="${PATH}:${HOME}/.krew/bin"
 
 # 변경내용 적용하기
 $ source ~/.zshrc
