@@ -1,14 +1,15 @@
 # TIL
 
 ```
-files            : 592
+files            : 594
 derectories      : 130
-avg_file_length  : 3790
+avg_file_length  : 3782
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
 2. 머릿속에 있는 막연한 개념을 글로 적어 구체화합니다.
-3. 이 repository에 기록된 지식을 완전히 이해하고 응용할 수 있도록 합니다.
+3. 이 repository에 기록된 지식을 이해하고 응용할 수 있도록 합니다.
+4. 기록한 것을 완전히 숙지하지 못하더라도 관련된 것에서 다시 개념을 상기하도록 합니다.
 
 ./TIL</br>
 ┗━　[**Git**](./Git)</br>
@@ -117,13 +118,14 @@ avg_file_length  : 3790
 ┃　　　┗━　[SOLID](./객체지향 OOP/SOLID.md)</br>
 ┃　　　┗━　[응집도와 결합도](./객체지향 OOP/응집도와 결합도.md)</br>
 ┗━　[**네트워크 Network**](./네트워크 Network)</br>
-┃　　　┗━　[**L1 link layer**](./네트워크 Network/L1 link layer)</br>
-┃　　　┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/L1 link layer/Ethernet과 TokenRing.md)</br>
-┃　　　┃　　　┗━　[MTU](./네트워크 Network/L1 link layer/MTU.md)</br>
-┃　　　┃　　　┗━　[VLAN](./네트워크 Network/L1 link layer/VLAN.md)</br>
-┃　　　┃　　　┗━　[데이터링크 제어(DLC)](./네트워크 Network/L1 link layer/데이터링크 제어(DLC).md)</br>
-┃　　　┃　　　┗━　[매체 접근 제어(MAC)](./네트워크 Network/L1 link layer/매체 접근 제어(MAC).md)</br>
-┃　　　┃　　　┗━　[아날로그, 디지털　신호와 전송](./네트워크 Network/L1 link layer/아날로그, 디지털　신호와 전송.md)</br>
+┃　　　┗━　[**L1 network access layer**](./네트워크 Network/L1 network access layer)</br>
+┃　　　┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/L1 network access layer/Ethernet과 TokenRing.md)</br>
+┃　　　┃　　　┗━　[MTU](./네트워크 Network/L1 network access layer/MTU.md)</br>
+┃　　　┃　　　┗━　[NIC](./네트워크 Network/L1 network access layer/NIC.md)</br>
+┃　　　┃　　　┗━　[VLAN](./네트워크 Network/L1 network access layer/VLAN.md)</br>
+┃　　　┃　　　┗━　[데이터링크 제어(DLC)](./네트워크 Network/L1 network access layer/데이터링크 제어(DLC).md)</br>
+┃　　　┃　　　┗━　[매체 접근 제어(MAC)](./네트워크 Network/L1 network access layer/매체 접근 제어(MAC).md)</br>
+┃　　　┃　　　┗━　[아날로그, 디지털　신호와 전송](./네트워크 Network/L1 network access layer/아날로그, 디지털　신호와 전송.md)</br>
 ┃　　　┗━　[**L2 internet layer**](./네트워크 Network/L2 internet layer)</br>
 ┃　　　┃　　　┗━　[CIDR](./네트워크 Network/L2 internet layer/CIDR.md)</br>
 ┃　　　┃　　　┗━　[ICMP](./네트워크 Network/L2 internet layer/ICMP.md)</br>
@@ -172,6 +174,7 @@ avg_file_length  : 3790
 ┃　　　┃　　　┃　　　┗━　[**EC2**](./데브옵스 DevOps/AWS/Computing/EC2)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling termination policies](./데브옵스 DevOps/AWS/Computing/EC2/Auto Scaling termination policies.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Computing/EC2/EBS.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EBS gp2 vs gp3](./데브옵스 DevOps/AWS/Computing/EC2/EBS gp2 vs gp3.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EBS vs Instance Store](./데브옵스 DevOps/AWS/Computing/EC2/EBS vs Instance Store.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EC2](./데브옵스 DevOps/AWS/Computing/EC2/EC2.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EC2 Fleet](./데브옵스 DevOps/AWS/Computing/EC2/EC2 Fleet.md)</br>
@@ -203,7 +206,6 @@ avg_file_length  : 3790
 ┃　　　┃　　　┃　　　┃　　　┗━　[NACLs](./데브옵스 DevOps/AWS/Netwoking/security/NACLs.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Netwoking/security/Security Groups.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Netwoking/security/WAF.md)</br>
-┃　　　┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/Netwoking/API Gateway.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Bastion Host](./데브옵스 DevOps/AWS/Netwoking/Bastion Host.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/Netwoking/CloudFront.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EC2 Instance Connect Endpoint](./데브옵스 DevOps/AWS/Netwoking/EC2 Instance Connect Endpoint.md)</br>
@@ -229,6 +231,7 @@ avg_file_length  : 3790
 ┃　　　┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/Storage/S3.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Snow Famliy](./데브옵스 DevOps/AWS/Storage/Snow Famliy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Storage Gateway](./데브옵스 DevOps/AWS/Storage/Storage Gateway.md)</br>
+┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/API Gateway.md)</br>
 ┃　　　┃　　　┗━　[AWS cloud computing](./데브옵스 DevOps/AWS/AWS cloud computing.md)</br>
 ┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
 ┃　　　┃　　　┗━　[SAA 오답노트 1━3](./데브옵스 DevOps/AWS/SAA 오답노트 1━3.md)</br>
@@ -732,6 +735,7 @@ avg_file_length  : 3790
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[**+autocommit.sh**](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
+┗━　[**asd.txt**](./asd.txt)</br>
 .
 ┗━　[**debug.log**](./debug.log)</br>
 ┗━　[**pre━commit**](./pre━commit)</br>

@@ -124,11 +124,11 @@ EFS 성능 모드
 - S3는 HTTPS를 이용하여 SSL, HTTP Endpoint에 접근할 수 있음
 - Versioning이 활성화된 Bucket은 소유자만이 지울 수 있음
 
-- CloudWatch의 경우 최대2주까지 보관
+- CloudWatch는 데이터를 최대 2주까지 보관
 - CRR은 S3 오브젝트의 Metadata 와 ACL을 복제함
 - S3 스탠다드 클래스의 최소 사이즈는 1 Byte
 - Multi AZ가 활성화된 상태에서는 Primary RDS 가 아닌 Standby가 Backup 실시
-- infrastructure를 다른 리전에 복사 및 배포하고 싶을 경우, Cloudformation을 사용해야함
+- infrastructure를 다른 리전에 복사 및 배포하고 싶을 경우, Cloud formation을 사용해야함
 - StorageGateway with CachedVolume은 자주 사용되는 데이터만 Cache하고 나머지 데이터를 S3 에 저장함
 - Reserved instance를 사용하다가 나중에 다시 사용해야할 경우, 스냅샷을 떠놓고 종료해야 함
 - S3 RRS 는 99.99%의 가용성과 내구성을 보장하며, 재생성이 쉬운 데이터를 보관함
@@ -240,13 +240,13 @@ EFS 성능 모드
 
 
 - AWS SSO가 STS를 이용하여 권한을 발급함
-  - STS: AWS Security Token Service(AWS STS)를 사용하면 AWS 리소스에 대한 액세스를 제어할 수 있는 임시 보안 자격 증명을 생성하여 신뢰받는 사용자에게 제공할 수 있습니다. 
+  - STS: AWS Security Token Service(AWS STS)를 사용하면 AWS 리소스에 대한 액세스를 제어할 수 있는 임시 보안 자격 증명을 생성하여 신뢰받는 사용자에게 제공할 수 있다. 
 
-- EBS volume 의 백업을 자동화하기 위해서는 DLM(Data Lifecycle Manager)를 쓰는
+- EBS volume의 백업을 자동화하기 위해서는 DLM(Data Lifecycle Manager)를 쓰는
 것이 좋음
 - Autoscaling cool down 정책
 - scaling action 이 발동되기 전에는 launch 나 termination 을 하지 않음 - 기본값은 300 초임
--cooldown은scaleout후 발동되는 것
+- cooldown은scaleout후 발동되는 것
 
 - EC2의 경우 Region당 20개가 한계이며 별도의 요청이 있으면 그 이상의 생성이 가능
 
@@ -266,7 +266,7 @@ EFS 성능 모드
   - Transit Gateway : A VPC가 Peering된 B VPC를 통해 C VPC로 갈 수 없음
   - EdgetoEdgeRouting : Peering을 통해 다른 서비스로의 이동이 불가능함 - 이미 생성된 Autoscaling 의 시작구성은 변경할 수 없음
   
-- VPC 내 IP 대역은 /16 ~ /28 사이이며, 새로운 서브넷을 생성하면 main route table에 연계됨(172.16.0.0/16)
+- VPC 내 IP 대역은 `/16` ~ `/28` 사이이며, 새로운 서브넷을 생성하면 main route table에 연계됨(`172.16.0.0/16`)
   
 - Redshift Spectrum : S3 의 exabyte 급 데이터 처리를 가능하게 함
 
@@ -283,16 +283,16 @@ EFS 성능 모드
   - Read Replica가 없는 경우 : 동일한 AZ에 새 인스턴스를 하나 생성시도, 생성이 어려운 경우 다른AZ에 생성 시도
 - CloudHSM은 키 또는 자격 증명에 대한 액세스 권한을 가지지 않으므로 자격 증명을 분실할 경우 키 복구 불가
 
-- APIGateway는 오로지 HTTPSendpoints만을 게시함
+- API Gateway는 오로지 HTTP Sendpoints만을 게시함
 
-- EBS 의 스냅샷의 경우, 하나의 스냅샷을 유지하면서 변경된 부분만 증분함(하나의 스냅샷만이 유지됨)
+- EBS의 스냅샷의 경우, 하나의 스냅샷을 유지하면서 변경된 부분만 증분함 (하나의 스냅샷만이 유지됨)
 - 예약 인스턴스의 경우, 비용을 아끼려면 마켓플레이스에 팔거나 인스턴스를 종료시켜야 함
   
 - Elastic beanstalk의 application file은 S3 에 쌓고 로그는 선택적으로 S3 혹은 Cloudwatch Log 에 쌓임
   
-- ENI에는 고정된MAC주소가 지정됨
+- ENI에는 고정된 MAC주소가 지정됨
 
-- 온프레미스 AD 로 디렉터리 요청을 하기 위해서는 AD Connector 가 필요하며 IAM Role을 생성해 권한을 정의함
+- 온프레미스 AD로 디렉터리 요청을 하기 위해서는 AD Connector가 필요하며 IAM Role을 생성해 권한을 정의함
 - PrivateLink 를 사용하면 VPC 를 지원하는 AWS 서비스, 다른 계정에서 호스팅하는 서비스에 연결 가능
 - 낮은 대기시간 및 높은 네트워크 처리량을 보장하는 EC2 디자인은 향상된 네트워킹과 Placement Group
 - IGW는 대역폭에 대한 제한이 없음
@@ -300,10 +300,14 @@ EFS 성능 모드
 - AWS Directory service 는 AD connector 를 사용하여 온프레미스 AD 사용자와
 그룹에 할당할 수 있으며IAM정책에 따라 사용자 액세스 제어
 
-- Autoscaling 은 손상된 인스턴스가 확인될 경우 이를 종료한 후!!! 새로운 인스턴스로 교체함
+- Auto scaling 은 손상된 인스턴스가 확인될 경우 이를 종료한 후!!! 새로운 인스턴스로 교체함
 
 - ALB 는 Cognito 와 통합되어 OIDC ID 공급자 인증을 지원함
 - DynamoDB 의 경우, 읽기/쓰기 용량을 결정해야 하며 Lambda, Kinesis 는 용량을 결정하지 않음
 
 - 부서당 AWS 계정을 만든 상태에서 단일 Direct Connect 회로를 주문하면 가상 인터페이스를 구성하고 부서 계정번호로 태그를 걸면 가능
 - VPC Peering의 경우 기본적으로 NACL에서 거부
+
+Shield is DDoS protection and also located "at the edge". GuardDuty is intelligent threat detection. That means without much configuration, it reads your CloudTrail, Config and VPC FlowLogs and notifies if something unexpected happened. That is usually for infrastructure.
+
+Amazon Inspector is more for applications. It's an automated security assessment service that helps improve the security and compliance of applications.

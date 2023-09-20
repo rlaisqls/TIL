@@ -1,14 +1,14 @@
 ## Characteristics
 
 - **Instance Store:**
-  - Ephemeral storage: Data stored in Instance Store volumes is tied to the lifecycle of the EC2 instance. If the instance is stopped, terminated, or experiences a failure, the data is lost.
-  - High I/O performance: Instance Store provides high I/O performance and low latency since the storage is directly attached to the physical host of the EC2 instance.
-  - Instance-dependent: Instance Store volumes are specific to the instance and cannot be detached or reattached to other instances.
+  - **Ephemeral storage:** Data stored in Instance Store volumes is tied to the lifecycle of the EC2 instance. If the instance is stopped, terminated, or experiences a failure, the data is lost.
+  - **High I/O performance:** Instance Store provides high I/O performance and low latency since the storage is directly attached to the physical host of the EC2 instance.
+  - **Instance-dependent:** Instance Store volumes are specific to the instance and cannot be detached or reattached to other instances.
 
 - **EBS:**
-  - Persistent storage: Data stored in EBS volumes persists independently of the EC2 instance. It remains even if the instance is stopped or terminated.
-  - Various volume types: EBS offers different volume types with varying performance characteristics and cost considerations.
-  - Flexible attachment: EBS volumes can be detached from one instance and attached to another, providing flexibility and easy data migration.
+  - **Persistent storage:** Data stored in EBS volumes persists independently of the EC2 instance. It remains even if the instance is stopped or terminated.
+  - **Various volume types:** EBS offers different volume types with varying performance characteristics and cost considerations.
+  - **Flexible attachment**: EBS volumes can be detached from one instance and attached to another, providing flexibility and easy data migration.
 
 ## Use case
 
