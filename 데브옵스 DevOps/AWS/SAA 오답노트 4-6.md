@@ -32,6 +32,8 @@ Answer:
   
   - (Direct Connect is a highly secure, physical connection. It is also a costly solution and hence does not make much sense to set up the connection and keep it only as a backup.)
 
+  -  AWS Direct Connect does not involve the Internet; instead, it uses dedicated, private network connections between your intranet and Amazon VPC. **Direct Connect involves significant monetary investment and takes at least a month to set up.**
+
 - **Use Site to Site VPN as a backup connection**
   
   - AWS Site-to-Site VPN enables you to securely connect your on-premises network or branch office site to your Amazon Virtual Private Cloud (Amazon VPC).

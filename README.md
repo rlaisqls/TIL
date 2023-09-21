@@ -3,7 +3,7 @@
 ```
 files            : 594
 derectories      : 130
-avg_file_length  : 3782
+avg_file_length  : 3785
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -172,6 +172,8 @@ avg_file_length  : 3782
 ┃　　　┃　　　┃　　　┗━　[**Container**](./데브옵스 DevOps/AWS/Computing/Container)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ECS](./데브옵스 DevOps/AWS/Computing/Container/ECS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**EC2**](./데브옵스 DevOps/AWS/Computing/EC2)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./데브옵스 DevOps/AWS/Computing/EC2/ASG Lifecycle Hook.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/EC2/Auto Scaling.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling termination policies](./데브옵스 DevOps/AWS/Computing/EC2/Auto Scaling termination policies.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Computing/EC2/EBS.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EBS gp2 vs gp3](./데브옵스 DevOps/AWS/Computing/EC2/EBS gp2 vs gp3.md)</br>
@@ -182,8 +184,6 @@ avg_file_length  : 3782
 ┃　　　┃　　　┃　　　┃　　　┗━　[Instance Store](./데브옵스 DevOps/AWS/Computing/EC2/Instance Store.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Spot Block](./데브옵스 DevOps/AWS/Computing/EC2/Spot Block.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[State Change Event](./데브옵스 DevOps/AWS/Computing/EC2/State Change Event.md)</br>
-┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./데브옵스 DevOps/AWS/Computing/ASG Lifecycle Hook.md)</br>
-┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/Auto Scaling.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./데브옵스 DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Fargate](./데브옵스 DevOps/AWS/Computing/Fargate.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Lambda](./데브옵스 DevOps/AWS/Computing/Lambda.md)</br>

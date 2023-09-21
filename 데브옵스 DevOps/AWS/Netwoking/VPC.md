@@ -98,8 +98,8 @@ VPC Peering 연결 순서는 아래와 같다.
 기존 온프레미스와의 연결을 통해 하이브리드 환경을 구성하는 것도 가능하다.
 
 - **AWS Client VPN :** VPN 소프트웨어 클라이언트를 사용하여 사용자를 AWS 또는 온프레미스 리소스에 연결하는 방식이다.
-- **AWS Site-to-Site VPN :** 데이터 센터와 AWS Cloud(VPN Gateway / Transit Gateway) 사이에 암호화된 보안 연결 생성하는 방식이다. Site-to-Site VPN 연결은 VPC에 추가된 가상 프라이빗 게이트웨이와, 데이터 센터에 위치하는 고객 게이트웨이로 구성된다.
-- **AWS Direct Connect :** AWS Cloud 환경으로 인터넷이 아닌 전용 네트워크 연결 생성하는 방식이다. (※ AWS 리소스에 대한 최단 경로)
+- **AWS Site-to-Site VPN :** 데이터 센터와 AWS Cloud(VPN Gateway / Transit Gateway) 사이에 암호화된 보안 연결을 생성하는 방식이다. Site-to-Site VPN 연결은 VPC에 추가된 가상 프라이빗 게이트웨이와, 데이터 센터에 위치하는 고객 게이트웨이로 구성된다.
+- **AWS Direct Connect :** AWS Cloud 환경으로 인터넷이 아닌 전용 네트워크 연결을 생성하는 방식이다. (※ AWS 리소스에 대한 최단 경로)
 
 ---
 출처

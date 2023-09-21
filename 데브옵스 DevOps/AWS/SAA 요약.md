@@ -13,7 +13,7 @@
     - cluster: HPC
 - [API Gateway](./Netwoking/API%E2%80%85Gateway.md): REST 및 Websocker API를 생성, 유지, 관리
 
-# Database
+## Database
 - [EFS](./Database/EFS.md): File System
 - [DynamoDB](./Database/DynamoDB.md): NoSQL
 - [RDS](./Database/RDS.md): RDBMS
@@ -58,6 +58,22 @@
     - Intelligent Tiering: 특정 기간동안 접근되지 않으면 더 싼 Storage로 옮겨줌
     - Glacier: Data achiving을 위한 저장소, 조회하려면 몇 시간씩 걸릴 수 있음
 - [Amazon Macie](https://docs.aws.amazon.com/ko_kr/macie/latest/user/what-is-macie.html) : S3에서 민감한 데이터 감지, 보안 및 액세스 제어를 위한 데이터 평가 및 모니터링
+
+## data
+
+- kinesis: 비디오와 데이터 스트림을 실시간으로 손 쉽게 수집 및 처리, 분석
+  - Kinesis Data Streams: 데이터 스트림을 분석하는 사용자 정의 애플리케이션 개발에 사용
+  - Kinesis Data Firehose: 데이터 스트림을 AWS 데이터 저장소에 적재 (S3나 redshift, elasticsearch 등)
+  - Kinesis Data Analytics: SQL을 사용해 데이터 스트림 분석
+    - Kinesis Data Stream 또는 Firehose에 쉽게 연결하고 SQL 검색을 할 수 있다.
+    - 수행 결과를 다시 Data Stream 또는 Fireshose로 보냄
+    - 스트리밍 소스에 연결 → SQL 코드를 쉽게 작성 → 지속적으로 SQL 결과를 전달함
+    - 데이터를 처리하기 위한 2가지 컨셉을 사용하고 있다.
+      - 스트림(인-메모리 테이블) → 가상의 테이블 or view라고 봐야 함
+      - 펌프(연속 쿼리) → 실제 데이터를 앞서 만든 view에 넣어주는 역할
+  - Kinesis Video Streams: 분석을 위한 비디오 스트림 캡쳐 및 처리, 저장
+
+---
 
 - **AWS 스토리지간 데이터 복사**
   - DataSync: 파일시스템간 데이터 복사가 필요할때 사용.
@@ -152,7 +168,7 @@ EFS 성능 모드
 - SQS는 최소 한번 메시지를 전달하지만 순서를 보장하지 못 하고, 중복전송을 할 가능성이 있음
 - IAM을 이용해 EC2의 Root Account 에 접근하는 것을 막을 수 없음(Root account는 모든 서비스에 접근 가능)
   
-- VPC Peering은 인접 VPC 에 대한 Routing Table 필요
+- VPC Peering은 인접 VPC에 대한 Routing Table 필요
 - VPC Peering은 두 VPC간 두 개의 Peering을 생성할 수 없으며, 다른 Region의 VPC이 가능하고, CIDR block이 충돌하는 경우 사용 불가능
   
 - SQS의 짧은 폴링 구성은 Receive Message Wait Time 을 0 초로 만드는 것임
