@@ -300,7 +300,7 @@ Incorrect options:
 - A financial services firm uses a high-frequency trading system and wants to write the log files into Amazon S3. The system will also read these log files in parallel on a near real-time basis. The engineering team wants to address any data discrepancies that might arise when the trading system overwrites an existing log file and then tries to read that specific log file.
     Which of the following options BEST describes the capabilities of Amazon S3 relevant to this scenario?
 
-- Answer: **A process replaces an existing object and immediately tries to read it. Amazon S3 always returns the latest version of the object**
+- Answer: **A process replacas an existing object and immediately tries to read it. Amazon S3 always returns the latest version of the object**
 
   - Amazon S3 delivers strong read-after-write consistency automatically, without changes to performance or availability, without sacrificing regional isolation for applications, and at no additional cost.
 
@@ -433,8 +433,20 @@ Incorrect options:
 
 **you should create a read-replica with the same compute capacity and the same storage capacity as the primary.**
 
+---
 
+- A company runs an ecommerce application on Amazon EC2 instances behind an Application Load Balancer. The instances run in an Amazon EC2 Auto Scaling group across multiple Availability Zones. The Auto Scaling group scales based on CPU utilization metrics. The ecommerce application stores the transaction data in a MySQL 8.0 database that is hosted on a large EC2 instance.
+  The database's performance degrades quickly as application load increases. The application handles more read requests than write transactions. The company wants a solution that will automatically scale the database to meet the demand of unpredictable read workloads while maintaining high availability. Which solution will meet these requirements?
 
+- I would recommend option C: Use AWS Network Firewall to create the required rules for traffic inspection and traffic filtering for the production VPC.
+  AWS Network Firewall is a managed firewall service that provides filtering for both inbound and outbound network traffic. It allows you to create rules for traffic inspection and filtering, which can help protect your production VPC.
+  Option A: Amazon GuardDuty is a threat detection service, not a traffic inspection or filtering service.
+  Option B: Traffic Mirroring is a feature that allows you to replicate and send a copy of network traffic from a VPC to another VPC or on-premises location. It is not a service that performs traffic inspection or filtering.
+  Option D: AWS Firewall Manager is a security management service that helps you to centrally configure and manage firewalls across your accounts. It is not a service that performs traffic inspection or filtering.
+
+---
+
+ Incorrect: Amazon QuickSight only support users(standard version) and groups (enterprise version). QuickSight don't support IAM. We use users and groups to view the QuickSight dashboard
 
 
 

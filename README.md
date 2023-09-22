@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 594
-derectories      : 130
-avg_file_length  : 3785
+files            : 597
+derectories      : 131
+avg_file_length  : 3786
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -115,6 +115,7 @@ avg_file_length  : 3785
 ┃　　　┃　　　┃　　　┗━　[템플릿메소드 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/템플릿메소드 패턴.md)</br>
 ┃　　　┃　　　┗━　[디자인패턴](./객체지향 OOP/디자인패턴/디자인패턴.md)</br>
 ┃　　　┃　　　┗━　[위임 패턴(Delegate Pattern)](./객체지향 OOP/디자인패턴/위임 패턴(Delegate Pattern).md)</br>
+┃　　　┗━　[Exponential Backoff And Jitter](./객체지향 OOP/Exponential Backoff And Jitter.md)</br>
 ┃　　　┗━　[SOLID](./객체지향 OOP/SOLID.md)</br>
 ┃　　　┗━　[응집도와 결합도](./객체지향 OOP/응집도와 결합도.md)</br>
 ┗━　[**네트워크 Network**](./네트워크 Network)</br>
@@ -224,6 +225,7 @@ avg_file_length  : 3785
 ┃　　　┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/Security/KMS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/Security/KMS Datakey.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MalformedPolicyDocument](./데브옵스 DevOps/AWS/Security/MalformedPolicyDocument.md)</br>
+┃　　　┃　　　┃　　　┗━　[Microsoft Active Directory](./데브옵스 DevOps/AWS/Security/Microsoft Active Directory.md)</br>
 ┃　　　┃　　　┗━　[**Storage**](./데브옵스 DevOps/AWS/Storage)</br>
 ┃　　　┃　　　┃　　　┗━　[DayaSync](./데브옵스 DevOps/AWS/Storage/DayaSync.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
@@ -710,6 +712,8 @@ avg_file_length  : 3785
 ┃　　　┃　　　┗━　[iptables 방화벽 설정](./운영체제 Operating System/linux/iptables 방화벽 설정.md)</br>
 ┃　　　┃　　　┗━　[mail](./운영체제 Operating System/linux/mail.md)</br>
 ┃　　　┃　　　┗━　[명령어들](./운영체제 Operating System/linux/명령어들.md)</br>
+┃　　　┗━　[**window**](./운영체제 Operating System/window)</br>
+┃　　　┃　　　┗━　[Active Directory Domain Services](./운영체제 Operating System/window/Active Directory Domain Services.md)</br>
 ┃　　　┗━　[TAS](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[교착상태와 스케줄링](./운영체제 Operating System/교착상태와 스케줄링.md)</br>
