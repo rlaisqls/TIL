@@ -228,7 +228,7 @@ EFS 성능 모드
 - AWS IoT Core
   - AWS에 연결된 디바이스들이AWSService와 쉽게 상호작용하도록 돕는 서비스
 - EC2 에 호스팅된 Database(Raid array)를 백업시 다운타임을 최소화하는 방법
-  - 모든RAIDarray로 쓰기 작동을 멈춤
+  - 모든 RAID array로 쓰기 작동을 멈춤
   - 모든 cache를 disk에 flush함
   - EC2가 RAID에 쓰기작업을 하지 않는지 확인
   - RAID에 대한 모든 디스크 관련 활동을 중지하는 단계를 수행한 후 스냅샷 생성

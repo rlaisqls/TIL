@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 597
+files            : 601
 derectories      : 131
-avg_file_length  : 3786
+avg_file_length  : 3819
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -211,6 +211,7 @@ avg_file_length  : 3786
 ┃　　　┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/Netwoking/CloudFront.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EC2 Instance Connect Endpoint](./데브옵스 DevOps/AWS/Netwoking/EC2 Instance Connect Endpoint.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwoking/ENI.md)</br>
+┃　　　┃　　　┃　　　┗━　[Global Accelerator](./데브옵스 DevOps/AWS/Netwoking/Global Accelerator.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NAT gateway & NAT instance](./데브옵스 DevOps/AWS/Netwoking/NAT gateway & NAT instance.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Route53](./데브옵스 DevOps/AWS/Netwoking/Route53.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Transit Gateway](./데브옵스 DevOps/AWS/Netwoking/Transit Gateway.md)</br>
@@ -219,6 +220,7 @@ avg_file_length  : 3786
 ┃　　　┃　　　┃　　　┗━　[VPC endpoint](./데브옵스 DevOps/AWS/Netwoking/VPC endpoint.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwoking/VPN.md)</br>
 ┃　　　┃　　　┗━　[**Security**](./데브옵스 DevOps/AWS/Security)</br>
+┃　　　┃　　　┃　　　┗━　[AWS Managed Microsoft AD](./데브옵스 DevOps/AWS/Security/AWS Managed Microsoft AD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Cognito](./데브옵스 DevOps/AWS/Security/Cognito.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Conformance Packs & Security Hub](./데브옵스 DevOps/AWS/Security/Conformance Packs & Security Hub.md)</br>
 ┃　　　┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/Security/IAM.md)</br>
@@ -226,11 +228,13 @@ avg_file_length  : 3786
 ┃　　　┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/Security/KMS Datakey.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MalformedPolicyDocument](./데브옵스 DevOps/AWS/Security/MalformedPolicyDocument.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Microsoft Active Directory](./데브옵스 DevOps/AWS/Security/Microsoft Active Directory.md)</br>
+┃　　　┃　　　┃　　　┗━　[WAF & Firewall Manager & Shield Advanced](./데브옵스 DevOps/AWS/Security/WAF & Firewall Manager & Shield Advanced.md)</br>
 ┃　　　┃　　　┗━　[**Storage**](./데브옵스 DevOps/AWS/Storage)</br>
 ┃　　　┃　　　┃　　　┗━　[DayaSync](./데브옵스 DevOps/AWS/Storage/DayaSync.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[FSx](./데브옵스 DevOps/AWS/Storage/FSx.md)</br>
 ┃　　　┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/Storage/S3.md)</br>
+┃　　　┃　　　┃　　　┗━　[S3 Glacier Vault Lock](./데브옵스 DevOps/AWS/Storage/S3 Glacier Vault Lock.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Snow Famliy](./데브옵스 DevOps/AWS/Storage/Snow Famliy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Storage Gateway](./데브옵스 DevOps/AWS/Storage/Storage Gateway.md)</br>
 ┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/API Gateway.md)</br>

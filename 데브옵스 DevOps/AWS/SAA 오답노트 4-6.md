@@ -448,8 +448,53 @@ Incorrect options:
 
  Incorrect: Amazon QuickSight only support users(standard version) and groups (enterprise version). QuickSight don't support IAM. We use users and groups to view the QuickSight dashboard
 
+---
+
+- A development team runs monthly resource-intensive tests on its general purpose Amazon RDS for MySQL DB instance with Performance Insights enabled. The testing lasts for 48 hours once a month and is the only process that uses the database. The team wants to reduce the cost of running the tests without reducing the compute and memory attributes of the DB instance.
+  Which solution meets these requirements MOST cost-effectively?
+
+- A. Stop the DB instance when tests are completed. Restart the DB instance when required.
+  - By stopping the DB although you are not paying for DB hours you are still paying for Provisioned IOPs, the storage for Stopped DB is more than Snapshot of underlying EBS vol. and Automated Back ups.
+- C. Create a snapshot when tests are completed. Terminate the DB instance and restore the snapshot when required.
+  - Create a manual Snapshot of DB and shift to S3- Standard and Restore form Manual Snapshot when required.
+
+---
+
+- The data stored on the Snowball Edge device can be copied into the S3 bucket and later transitioned into AWS Glacier via a lifecycle policy. You can't directly copy data from Snowball Edge devices into AWS Glacier.
+
+---
+
+- **Only Standard SQS queue is allowed as an Amazon S3 event notification destination, whereas FIFO SQS queue is not allowed.**
+
+- The Amazon S3 notification feature enables you to receive notifications when certain events happen in your bucket. To enable notifications, you must first add a notification configuration that identifies the events you want Amazon S3 to publish and the destinations where you want Amazon S3 to send the notifications.
+  - Amazon S3 supports the following destinations where it can publish events:
+  - Amazon Simple Notification Service (Amazon SNS) topic
+  - Amazon Simple Queue Service (Amazon SQS) queue
+  - AWS Lambda
+
+- Currently, the Standard SQS queue is only allowed as an Amazon S3 event notification destination, whereas the FIFO SQS queue is not allowed.
+
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventNotifications.html
+
+---
+
+- Use a Web Application Firewall and setup a rate-based rule
+
+- AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources. AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns you define.
+  The correct answer is to use WAF (which has integration on top of your ALB) and define a rate-based rule.
 
 
+- AWS Shield Advanced will **give you DDoS protection overall, and you cannot set up rate-based rules in Shield.**
 
+---
 
+**Any database engine level upgrade for an RDS DB instance with Multi-AZ deployment triggers both the primary and standby DB instances to be upgraded at the same time. This causes downtime until the upgrade is complete
+**
 
+---
+
+**Multi-Attach is supported exclusively on Provisioned IOPS SSD volumes.**
+
+---
+
+<img width="653" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/7ed50244-bf79-4a79-b7c6-66e0fc8ff360">
