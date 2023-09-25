@@ -69,17 +69,17 @@
 
 ## 채널화 방식
 
-링크의 가용 대역폭을 지국들 사이에서 시간적으로, 주파수상으로, 또는 코딩을 통해 나누어서 다중 접근
+링크의 가용 대역폭을 지국들 사이에서 시간적으로, 주파수상으로, 또는 코딩을 통해 나누어서 다중 접근할 수 있도록 채널화한다.
 
-- 주파수 분할 다중 접근(FDMA, frequency division multiple access)
+- **주파수 분할 다중 접근(FDMA, frequency division multiple access)**
   - 사용 사능한 대역폭은 모든 지국들에 의해 공유
   - 각 지국들은 할당된 대역을 사용하여 데이터를 전송
   - 각각의 대역은 특정 지국을 위해 예약되어 있음
-- 시간 분할 다중 접근(TDMA, time-division multiple access)
+- **시간 분할 다중 접근(TDMA, time-division multiple access)**
   - 지국들이 시간상에서 채널을 공유
   - 각 지국은 자신이 데이터를 전송할 수 있는 타임 슬롯을 할당 받음
   - 각 지국은 할당받은 타임 슬롯에 자신의 데이터를 전송
-- 코드 분할 다중 접근(CDMA, code-division multiple access)
+- **코드 분할 다중 접근(CDMA, code-division multiple access)**
   - 링크이 전체 대역폭을 하나의 채널에서 점유
   - 모든 지국들은 시분할 없이 동시에 데이터를 송신 가능
 

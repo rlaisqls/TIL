@@ -19,4 +19,7 @@
 
 - The above VPC has an attached virtual private gateway (note: not an internet gateway) and there is a remote network that includes a customer gateway which you must configure to enable the VPN connection. You set up the routing so that any traffic from the VPC bound for your network is routed to the virtual private gateway.
 
-- Summary: VPNs connect your on-prem with your VPC over the internet.
+- In summary, VPNs connect your on-prem with your VPC over the internet.
+
+---
+

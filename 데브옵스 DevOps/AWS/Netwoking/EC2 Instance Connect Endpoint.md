@@ -2,7 +2,7 @@
 
 Imagine trying to connect to an EC2 instance within your VPC over the Internet. Typically, you’d first have to connect to a bastion host with a public IP address that your administrator set up over an IGW in your VPC, and then use port forwarding to reach your destination.
 
-[EC2 Instance Connect (EIC) Endpoint](https://aws.amazon.com/about-aws/whats-new/2023/06/amazon-ec2-instance-connect-ssh-rdp-public-ip-address/), a new feature that allows you to connect securely to you instances and other VPC resources from the Internet. With EIC Endpoint, **you no longer need an IGW** in your VPC, a public IP address on your resource, a bastion host, or any agent to connect to your resources. EIC Endpoint combines identity-based and network-based access controls, providing the isolation, control, and logging needed to meet your organization's security requirements.
+[EC2 Instance Connect (EIC) Endpoint](https://aws.amazon.com/about-aws/whats-new/2023/06/amazon-ec2-instance-connect-ssh-rdp-public-ip-address/) is allows you to connect securely to you instances and other VPC resources from the Internet. With EIC Endpoint, **you no longer need an IGW** in your VPC, a public IP address on your resource, a bastion host, or any agent to connect to your resources. EIC Endpoint combines identity-based and network-based access controls, providing the isolation, control, and logging needed to meet your organization's security requirements.
 
 As a bonus, your organization administrator is also relieved of the **operational overhead** of maintaining and patching bastion hosts for connectivity. EIC Endpoint works with the [AWS Management Console](https://aws.amazon.com/console/) and [AWS CLI](https://aws.amazon.com/cli/). Futhermore, it gives you the flexibility to continue using your favorite tools, such as PuTTY and OpenSSH.
 
@@ -122,7 +122,6 @@ EIC Endpoint provides a secure solution to connect to your instances via SSH or 
 
 ---
 reference
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
 - https://aws.amazon.com/ko/blogs/compute/secure-connectivity-from-public-to-private-introducing-ec2-instance-connect-endpoint-june-13-2023/
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect-Endpoint.html
 

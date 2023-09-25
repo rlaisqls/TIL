@@ -1,15 +1,15 @@
 # TIL
 
 ```
-files            : 601
+files            : 604
 derectories      : 131
-avg_file_length  : 3819
+avg_file_length  : 3827
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
 2. 머릿속에 있는 막연한 개념을 글로 적어 구체화합니다.
 3. 이 repository에 기록된 지식을 이해하고 응용할 수 있도록 합니다.
-4. 기록한 것을 완전히 숙지하지 못하더라도 관련된 것에서 다시 개념을 상기하도록 합니다.
+4. 기록한 것을 완전히 숙지하지 못하더라도 기록을 보고 개념을 다시 상기하도록 합니다.
 
 ./TIL</br>
 ┗━　[**Git**](./Git)</br>
@@ -132,6 +132,7 @@ avg_file_length  : 3819
 ┃　　　┃　　　┗━　[ICMP](./네트워크 Network/L2 internet layer/ICMP.md)</br>
 ┃　　　┃　　　┗━　[IP](./네트워크 Network/L2 internet layer/IP.md)</br>
 ┃　　　┃　　　┗━　[IPAM](./네트워크 Network/L2 internet layer/IPAM.md)</br>
+┃　　　┃　　　┗━　[IPSec](./네트워크 Network/L2 internet layer/IPSec.md)</br>
 ┃　　　┃　　　┗━　[IPVS](./네트워크 Network/L2 internet layer/IPVS.md)</br>
 ┃　　　┃　　　┗━　[NAT](./네트워크 Network/L2 internet layer/NAT.md)</br>
 ┃　　　┃　　　┗━　[secondary IP](./네트워크 Network/L2 internet layer/secondary IP.md)</br>
@@ -209,6 +210,7 @@ avg_file_length  : 3819
 ┃　　　┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Netwoking/security/WAF.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Bastion Host](./데브옵스 DevOps/AWS/Netwoking/Bastion Host.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/Netwoking/CloudFront.md)</br>
+┃　　　┃　　　┃　　　┗━　[Direct Connect Gateway](./데브옵스 DevOps/AWS/Netwoking/Direct Connect Gateway.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EC2 Instance Connect Endpoint](./데브옵스 DevOps/AWS/Netwoking/EC2 Instance Connect Endpoint.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwoking/ENI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Global Accelerator](./데브옵스 DevOps/AWS/Netwoking/Global Accelerator.md)</br>
@@ -219,6 +221,7 @@ avg_file_length  : 3819
 ┃　　　┃　　　┃　　　┗━　[VPC Mapping Service](./데브옵스 DevOps/AWS/Netwoking/VPC Mapping Service.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPC endpoint](./데브옵스 DevOps/AWS/Netwoking/VPC endpoint.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwoking/VPN.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPN Options](./데브옵스 DevOps/AWS/Netwoking/VPN Options.md)</br>
 ┃　　　┃　　　┗━　[**Security**](./데브옵스 DevOps/AWS/Security)</br>
 ┃　　　┃　　　┃　　　┗━　[AWS Managed Microsoft AD](./데브옵스 DevOps/AWS/Security/AWS Managed Microsoft AD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Cognito](./데브옵스 DevOps/AWS/Security/Cognito.md)</br>
@@ -743,7 +746,6 @@ avg_file_length  : 3819
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[**+autocommit.sh**](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**asd.txt**](./asd.txt)</br>
 .
 ┗━　[**debug.log**](./debug.log)</br>
 ┗━　[**pre━commit**](./pre━commit)</br>
