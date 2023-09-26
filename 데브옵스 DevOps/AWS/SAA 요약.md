@@ -83,6 +83,12 @@
 
 ---
 
+**Shield** - Amazon Elastic Compute Cloud (EC2), Elastic Load Balancing (ELB), Amazon CloudFront, AWS Global Accelerator, and Route 53.
+
+**WAF** - Amazon CloudFront, the Application Load Balancer (ALB), Amazon API Gateway, and AWS AppSync
+
+---
+
 - **AWS 스토리지간 데이터 복사**
   - DataSync: 파일시스템간 데이터 복사가 필요할때 사용.
   - Database Migration Service: 데이터 베이스에 특화된 서비스. 무중단 및 지속적인 동기화가 가능하다. 데이터베이스를 대상으로 복제가 필요할 경우 사용.
@@ -119,7 +125,6 @@
 
 - CloudWatch는 데이터를 최대 2주까지 보관
 - CRR은 S3 오브젝트의 Metadata 와 ACL을 복제함
-- S3 스탠다드 클래스의 최소 사이즈는 1 Byte
 - Multi AZ가 활성화된 상태에서는 Primary RDS 가 아닌 Standby가 Backup 실시
 - infrastructure를 다른 리전에 복사 및 배포하고 싶을 경우, Cloud formation을 사용해야함
 - StorageGateway with CachedVolume은 자주 사용되는 데이터만 Cache하고 나머지 데이터를 S3 에 저장함
@@ -133,8 +138,8 @@
 - Read Replica 의 Multi-AZ 복사는 불가능
 - RDS가 삭제될 때, automatic backup은 자동으로 삭제되며, final snapshot이 생성되어 남음 (설정을 활성화했을 경우)
 - EC2 메타 데이터 얻는 법 : curl http://169.254.169.254/latest/meta-data/public-hostname
-- Read Replica 는 MySQL, PostgreSQL, MariaDB, Aurora, Oracle 서비스만 가능(MPMAO)
-- Multi-AZRDSStandby에서는 동기식 복제를 지원함
+- Read Replica 는 MySQL, PostgreSQL, MariaDB, Aurora, Oracle 서비스만 가능
+- Multi-AZ RDS Standby에서는 동기식 복제를 지원함
 
 ---
 
@@ -148,7 +153,7 @@
 - VPC Peering은 인접 VPC에 대한 Routing Table 필요
 - VPC Peering은 두 VPC간 두 개의 Peering을 생성할 수 없으며, 다른 Region의 VPC이 가능하고, CIDR block이 충돌하는 경우 사용 불가능
   
-- SQS의 짧은 폴링 구성은 Receive Message Wait Time 을 0 초로 만드는 것임
+- SQS의 짧은 폴링 구성은 Receive Message Wait Time을 0초로 만드는 것임
   - 짧은 폴링을 쓸 경우, 처리되지 못하는 메시지가 발생할 수 있음
   - SQS Standard는 FIFO를 보장하지 않음
   - SQS queue에서 메시지를 실행하기만 하고 지우지 않으면 그 메시지가 queue로 돌아가 다시 실행됨
@@ -163,43 +168,44 @@
   - 이 에러가 뜰 경우, 로그인시 ID와 private key를 확인해야 함
   
 - RDS와 Dynamo DB
-  - Schema가flexible한 경우RDS를 사용
-  - Scale up/down 은 RDS 가 아닌 Dynamo DB 가능
+  - Schema가flexible한 경우 RDS를 사용
+  - Scale up/down 은 RDS가 아닌 Dynamo DB 가능
   - RDS는 다음과 같은 이유로 확장성(Scaleup/down)이 떨어짐
-  - 데이터를 정상화하고 디스크에 쓰려면 여러 개의 쿼리가 필요한 여러 테이블에 저장한다.
-  - 일반적으로 ACID 준수 트랜잭션 시스템의 성능 비용을 발생시킨다.
-  - 고가의 조인을 이용하여 조회 결과의 필요한 뷰를 재조립한다.
-  - RDBMS 의 경우, 세부적인 구현이나 성능을 걱정하지 않고 유연성을 목적으로 설계. 일반적으로 쿼리 최적화가 스키마 설계에 영향을 미치지 않지만, 정규화가 아주 중요
+    - 데이터를 정상화하고 디스크에 쓰려면 여러 개의 쿼리가 필요한 여러 테이블에 저장한다.
+    - 일반적으로 ACID 준수 트랜잭션 시스템의 성능 비용을 발생시킨다.
+    - 고가의 조인을 이용하여 조회 결과의 필요한 뷰를 재조립한다.
+    - RDBMS 의 경우, 세부적인 구현이나 성능을 걱정하지 않고 유연성을 목적으로 설계. 일반적으로 쿼리 최적화가 스키마 설계에 영향을 미치지 않지만, 정규화가 아주 중요
   
 - DynamoDB is not a totally schemaless database since the very definition of a schema is just the model or structure of your data.
   - DynamoDB 의 경우, 가장 중요하고 범용적인 쿼리를 가능한 빠르고 저렴하게 수행할 수 있도록 스키마를 설계. 사용자의 데이터 구조는 사용자 비즈니스 사용 사례의 특정 요구 사항에 적합
   
 - 온프레미스에서 사용하던 고유의 IP 를 가져오기 위해서는 **ROA(Route Origin Authorization)**을 사용하여 Amazon ASN 이 해당 주소를 광고하도록 허용하게 함
 - AWS 내부가 아닌 외부에서 AWS 에 access 할 수 있도록 하기 위해 SAML(SSO)을 연동하면 됨
-- RDS 내 보다 면밀한 모니터링을 위해서는 Enhanced Monitoring 을 하는 것이 좋음
+- RDS 내 보다 면밀한 모니터링을 위해서는 Enhanced Monitoring을 하는 것이 좋음
 
 - Redshift
   - 쿼리 큐를 정의하는 방식은 WLM(Workload management)가 있음
   - Redshift에서 클러스터와 VPC 외부의 COPY, UNLOAD 트래픽을 모니터링하기 위해서는 Enhanced VPC routing 을 사용해야함
+  
 - API Gateway 에는 트래픽 쏠림으로 인한 병목현상을 막아주는 Throttling Limit 기능이 존재
 - Memory utilization, disk swap utilization, disk space utilization, page file utilization, log collection 은 custom monitoring 항목
 - EC2에 에이전트를 설치하고 해당 항목을 감시해야 함
 - ELB를 쓰지 않으려면, EC2에 공인 IP를 할당하고 스크립트로 헬스체크를 하고 Failover하는 것이 좋음
   
-- Cloudfront 의 Signed URL: RTMP를 사용할 경우 SignedCookie를 지원하지 않으므로 사용
+- Cloudfront의 Signed URL: RTMP를 사용할 경우 Signed Cookie를 지원하지 않으므로 사용
   - 개별 파일에 대한 액세스를 제공하려는 경우
-  - 클라이언트가 Cookie 를 지원하지 않을 경우
-- Cloudfront 의 Signed Cookie
+  - 클라이언트가 Cookie를 지원하지 않을 경우
+- Cloudfront의 Signed Cookie
   - HLS 형식의 비디오 파일 전체 또는 웹 사이트의 구독자 영역에 있는 파일 전체 등 제한된 파일 여러 개에 대한 액세스 권한을 제공하려는 경우
-  - 현재의URL을 변경하고 싶지 않은 경우
+  - 현재의 URL을 변경하고 싶지 않은 경우
 - EBS 스냅샷이 진행되는 동안 EBS의 읽기 및 쓰기는 영향을 받지 않음
 
-- 온프레미스에서 이미 메시지 큐 서비스를 사용하고 있다면 MQ 로 넘어가는 것이 유리함
+- 온프레미스에서 이미 메시지 큐 서비스를 사용하고 있다면 MQ로 넘어가는 것이 유리함
 - 오로라에는 Endpoint가 있어 트래픽을 분산할 수 있음
 
-- Lambda 의 배포방법(기존 Lambda 함수에서 새로운 Lambda 함수로)
+- Lambda의 배포방법 (기존 Lambda 함수에서 새로운 Lambda 함수로)
   - Canary : 트래픽이 2번에 걸쳐 이동하여 2번째 이동에서 이동할 트래픽 비율, 간격을 정할 수 있음
-  - Linear : 트래픽을 동일한 비율로 이동시키며 증분간 간격이 돌이하고, 비율과 간격시간을 정할 수 있음
+  - Linear : 트래픽을 동일한 비율로 이동시키며 증분간 간격이 동일하고, 비율과 간격시간을 정할 수 있음
   - All-at-once : 한 번에 이동
 
 - AWS IoT Core
@@ -210,27 +216,25 @@
   - EC2가 RAID에 쓰기작업을 하지 않는지 확인
   - RAID에 대한 모든 디스크 관련 활동을 중지하는 단계를 수행한 후 스냅샷 생성
   
-- 기본적으로 data at rest 를 암호화하는 솔루션은 Storage Gateway 와 Glacier
-- PFS 가 지원되는 솔루션은 Cloudfront 와 ELB
+- 기본적으로 data at rest를 암호화하는 솔루션은 Storage Gateway 와 Glacier
+- PFS가 지원되는 솔루션은 Cloudfront 와 ELB
 
 - EBS의 특징
   - EBS를 생성할 경우, 다른 AZ가 아닌 해당 AZ에만 자동으로 복제됨
   - EBS는 해당 AZ 어느 EC2든 연결할 수 있음
 - 서비스 사용중인 상태에서 volume type(gp2, io1, standard), size, IOPS를 바꿀 수 있음
-- APIGateway는 받거나 처리한 양만큼은 요금을 지불하면 됨
+- API Gateway는 받거나 처리한 양만큼 요금을 지불하면 됨
 
 - SNI(Server Name Indication)
   - 여러 도메인을 하나의 IP주소로 연결하는 TLS의 확장 표준 중 하나(인증서에서 사용하는 방식)
   - SNI를 사용하게 되면 하나의 웹서버에서 여러 도메인의 웹사이트를 서비스하는 경우에도 인증서를 사용한 HTTPS 활성화가 가능
 
-
 - S3
-  - S3 에서 사용 가능한 Event Notification Service 는 SQS, SNS, Lambda
-  - Standard에서 IA, OneZONE_IA로 가려면 30일을 기다려야 함
-  - S3 에서 모든 액세스 요청에 대한 자세한 정보를 확인하고 싶다면 Server Access Log를 사용 가능
+  - S3에서 사용 가능한 Event Notification Service는 SQS, SNS, Lambda
+  - Standard에서 IA, Onezone IA로 가려면 30일을 기다려야 함
+  - S3에서 모든 액세스 요청에 대한 자세한 정보를 확인하고 싶다면 Server Access Log를 사용 가능
   - Cloudwatch는 ec2 메모리 사용 관련 지표가 없으므로 인스턴스 내 스크립트를 통해 지표를 생성하고 Cloudwatch로 보내야 함
   - 확장 모니터링의 경우, 인스턴스 내 에이전트에서 정보를 받기 때문에 메모리 관련 정보를 얻음
-
 
 - AWS SSO가 STS를 이용하여 권한을 발급함
   - STS: AWS Security Token Service(AWS STS)를 사용하면 AWS 리소스에 대한 액세스를 제어할 수 있는 임시 보안 자격 증명을 생성하여 신뢰받는 사용자에게 제공할 수 있다. 
@@ -238,8 +242,8 @@
 - EBS volume의 백업을 자동화하기 위해서는 DLM(Data Lifecycle Manager)를 쓰는
 것이 좋음
 - Autoscaling cool down 정책
-- scaling action 이 발동되기 전에는 launch 나 termination 을 하지 않음 - 기본값은 300 초임
-- cooldown은scaleout후 발동되는 것
+- scaling action 이 발동되기 전에는 launch나 termination 을 하지 않음 - 기본값은 300 초임
+- cooldown은 scaleout 후 발동되는 것
 
 - EC2의 경우 Region당 20개가 한계이며 별도의 요청이 있으면 그 이상의 생성이 가능
 
@@ -281,7 +285,7 @@
 - EBS의 스냅샷의 경우, 하나의 스냅샷을 유지하면서 변경된 부분만 증분함 (하나의 스냅샷만이 유지됨)
 - 예약 인스턴스의 경우, 비용을 아끼려면 마켓플레이스에 팔거나 인스턴스를 종료시켜야 함
   
-- Elastic beanstalk의 application file은 S3 에 쌓고 로그는 선택적으로 S3 혹은 Cloudwatch Log 에 쌓임
+- Elastic beanstalk의 application file은 S3에 쌓이고 로그는 선택적으로 S3 혹은 Cloudwatch Log에 쌓임
   
 - ENI에는 고정된 MAC주소가 지정됨
 

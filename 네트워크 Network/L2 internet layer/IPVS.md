@@ -2,7 +2,7 @@
 
 IP Virtual Server (IPVS) is a Linux connection (L4) load balancer. 
 
-![image](https://github.com/rlaisqls/TIL/assets/81006587/baab90be-20db-4b95-91cb-e2859c2b1b45)
+<img src="https://github.com/rlaisqls/TIL/assets/81006587/baab90be-20db-4b95-91cb-e2859c2b1b45" height=400px>
 
 iptables can do simple L4 load balancing by randomly routing connections, with the randomness shaped by the weights on individual DNAT rules. **IPVS supports multiple load balancing modes (in contrast with the iptables one), which are outlined in below Table.** This allows IPVS to spread load more effectively than iptables, depending on IPVS configuration and traffic patterns.
 

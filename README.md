@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 604
+files            : 610
 derectories      : 131
-avg_file_length  : 3827
+avg_file_length  : 3745
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -170,9 +170,12 @@ avg_file_length  : 3827
 ┃　　　┃　　　┃　　　┗━　[EMR](./데브옵스 DevOps/AWS/Analytics/EMR.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Glue](./데브옵스 DevOps/AWS/Analytics/Glue.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kinesis](./데브옵스 DevOps/AWS/Analytics/Kinesis.md)</br>
+┃　　　┃　　　┃　　　┗━　[Lake Formation](./데브옵스 DevOps/AWS/Analytics/Lake Formation.md)</br>
 ┃　　　┃　　　┗━　[**Computing**](./데브옵스 DevOps/AWS/Computing)</br>
 ┃　　　┃　　　┃　　　┗━　[**Container**](./데브옵스 DevOps/AWS/Computing/Container)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ECS](./데브옵스 DevOps/AWS/Computing/Container/ECS.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ECS Getting started on Fargate](./데브옵스 DevOps/AWS/Computing/Container/ECS Getting started on Fargate.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ECS 요소](./데브옵스 DevOps/AWS/Computing/Container/ECS 요소.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**EC2**](./데브옵스 DevOps/AWS/Computing/EC2)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./데브옵스 DevOps/AWS/Computing/EC2/ASG Lifecycle Hook.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/EC2/Auto Scaling.md)</br>
@@ -184,6 +187,7 @@ avg_file_length  : 3827
 ┃　　　┃　　　┃　　　┃　　　┗━　[EC2 Fleet](./데브옵스 DevOps/AWS/Computing/EC2/EC2 Fleet.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Elastic Fabric Adapter](./데브옵스 DevOps/AWS/Computing/EC2/Elastic Fabric Adapter.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Instance Store](./데브옵스 DevOps/AWS/Computing/EC2/Instance Store.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Scaling cooldowns](./데브옵스 DevOps/AWS/Computing/EC2/Scaling cooldowns.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Spot Block](./데브옵스 DevOps/AWS/Computing/EC2/Spot Block.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[State Change Event](./데브옵스 DevOps/AWS/Computing/EC2/State Change Event.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./데브옵스 DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
@@ -244,7 +248,8 @@ avg_file_length  : 3827
 ┃　　　┃　　　┗━　[AWS cloud computing](./데브옵스 DevOps/AWS/AWS cloud computing.md)</br>
 ┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
 ┃　　　┃　　　┗━　[SAA 오답노트 1━3](./데브옵스 DevOps/AWS/SAA 오답노트 1━3.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트 4━6](./데브옵스 DevOps/AWS/SAA 오답노트 4━6.md)</br>
+┃　　　┃　　　┗━　[SAA 오답노트 4━6　copy](./데브옵스 DevOps/AWS/SAA 오답노트 4━6　copy.md)</br>
+┃　　　┃　　　┗━　[SAA 오답노트 examtopic](./데브옵스 DevOps/AWS/SAA 오답노트 examtopic.md)</br>
 ┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
 ┃　　　┗━　[**Container**](./데브옵스 DevOps/Container)</br>
@@ -510,7 +515,8 @@ avg_file_length  : 3827
 ┃　　　┃　　　┗━　[제약조건](./데이터베이스 DataBase/SQL/제약조건.md)</br>
 ┃　　　┃　　　┗━　[집계함수](./데이터베이스 DataBase/SQL/집계함수.md)</br>
 ┃　　　┃　　　┗━　[집합연산자](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
-┃　　　┗━　[Column, Row기반DB](./데이터베이스 DataBase/Column, Row기반DB.md)</br>
+┃　　　┗━　[Change Date Capture](./데이터베이스 DataBase/Change Date Capture.md)</br>
+┃　　　┗━　[Column, Row기반 DB](./데이터베이스 DataBase/Column, Row기반 DB.md)</br>
 ┃　　　┗━　[Data Lake와 Warehouse](./데이터베이스 DataBase/Data Lake와 Warehouse.md)</br>
 ┃　　　┗━　[OLAP](./데이터베이스 DataBase/OLAP.md)</br>
 ┗━　[**스프링 Spring**](./스프링 Spring)</br>
@@ -745,6 +751,7 @@ avg_file_length  : 3827
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[**+autocommit.sh**](./+autocommit.sh)</br>
+┗━　[**+test.txt**](./+test.txt)</br>
 ┗━　[README](./README.md)</br>
 .
 ┗━　[**debug.log**](./debug.log)</br>
