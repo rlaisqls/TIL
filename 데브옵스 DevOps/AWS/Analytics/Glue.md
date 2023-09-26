@@ -6,7 +6,7 @@ AWS Glue uses other AWS services to orchestrate your ETL (extract, transform, an
 
 AWS Glue takes care of provisioning and managing the resources that are required to run your workload. You don't need to create the infrastructure for an ETL tool because AWS Glue does it for you. When resources are required, to reduce startup time, AWS Glue uses an instance from its warm pool of instances to run your workload.
 
-With AWS Glue, you create jobs using table definitions in your Data Catalog. Jobs consist of scripts that contain the programming logic that performs the transformation. You use triggers to initiate jobs either on a schedule or as a result of a specified event. You determine where your target data resides and which source data populates your target. With your input, AWS Glue generates the code that's required to transform your data from source to target. You can also provide scripts in the AWS Glue console or API to process your data.
+With AWS Glue, you create jobs using table definitions in your Data Catalog. **Jobs consist of scripts that contain the programming logic that performs the transformation**. You use triggers to initiate jobs either on a schedule or as a result of a specified event. You determine where your target data resides and which source data populates your target. With your input, AWS Glue generates the code that's required to transform your data from source to target. You can also provide scripts in the AWS Glue console or API to process your data.
 
 ### Data sources and destinations
 
@@ -44,7 +44,7 @@ Through Apache-licensed serializers and deserializers, the Schema Registry integ
 - Apache Flink
 - Amazon Kinesis Data Analytics for Apache Flink
 - Amazon Lambda
-  
+
 When data streaming applications are integrated with the Schema Registry, you can improve data quality and safeguard against unexpected changes using compatibility checks that govern schema evolution. Additionally, you can create or update Amazon Glue tables and partitions using Apache Avro schemas stored within the registry.
 
 ---
@@ -59,7 +59,6 @@ When data streaming applications are integrated with the Schema Registry, you ca
 - Amazon Glue provides both visual and code-based interfaces to make data integration easier. Users can easily find and access data using the Amazon Glue Data Catalog. Data engineers and ETL (extract, transform, and load) developers can create and run ETL workflows. Data analysts and data scientists can use Amazon Glue DataBrew to visually enrich, clean, and normalize data without writing code.
 
 - Amazon Glue provides all of the capabilities needed for data integration so that you can start analyzing your data and putting it to use in minutes instead of months.
-
   
 ---
 

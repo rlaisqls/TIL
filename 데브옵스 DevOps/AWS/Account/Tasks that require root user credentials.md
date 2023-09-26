@@ -6,7 +6,7 @@
 
 - **Activate IAM access to the Billing and Cost Management console.**
 
-- **View certain tax invoices.** An IAM user with the aws-portal:ViewBilling permission can view and download VAT invoices from AWS Europe, but not AWS Inc. or Amazon Internet Services Private Limited (AISPL).
+- **View certain tax invoices.** An IAM user with the `aws-portal:ViewBilling` permission can view and download VAT invoices from AWS Europe, but not AWS Inc. or Amazon Internet Services Private Limited (AISPL).
 
 - **Close your AWS account.**
 

@@ -12,7 +12,6 @@ AWS Instance Store는 EC2 인스턴스에 연결된 로컬 디스크로서 저�
 
 <img width="892" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/d57b62f1-6a97-4666-99af-ab36c462fd00">
 
-
 ---
 
 - The engineering team at a startup is evaluating the most optimal block storage volume type for the EC2 instances hosting its flagship application. The storage volume should support very low latency but it does not need to persist the data when the instance terminates. As a solutions architect, you have proposed using Instance Store volumes to meet these requirements.

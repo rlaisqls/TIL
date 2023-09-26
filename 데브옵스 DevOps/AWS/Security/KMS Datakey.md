@@ -2,7 +2,7 @@
 
 ## 1. Intro
 
-IAM and KMS are easily one of the most 2 important services in terms of AWS security. KMS is used extensively for cryptographic operations not only within the AWS universe itself, but also in various hybrid architectures. It is a solid service which offers a wide variety of cryptographic services and possibilities. In this article, we will compare from a security point of view, the usage of CMK's kms:encrypt versus data-keys.
+IAM and KMS are easily one of the most 2 important services in terms of AWS security. KMS is used extensively for cryptographic operations not only within the AWS universe itself, but also in various hybrid architectures. It is a solid service which offers a wide variety of cryptographic services and possibilities. In this article, we will compare from a security point of view, the usage of CMK's `kms:encrypt` versus data-keys.
 
 There is a lot to like about the CMK’s `kms:encrypt/decrypt` functionality from a security perspective. It encrypts and decrypts data purely through the AWS KMS APIs. Access to the cryptographic APIs is managed through IAM `roles/policies`, the KMS CMK’s key policy, and grants. Therefore, <u>the actual cryptographic keys never leave the KMS service, while having full granularity on cryptographic access control.</u> For instance, I can allow person/System A to only encrypt data from a certain IP range or VPC-endpoint, while allowing person/System B to only decrypt it after going through 2FA.
 

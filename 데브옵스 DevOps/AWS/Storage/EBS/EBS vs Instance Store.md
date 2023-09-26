@@ -22,7 +22,6 @@
   - High-performance and predictable workloads: Provisioned IOPS SSD (io1/io2) volumes are ideal for applications requiring consistent and predictable I/O performance, such as large databases, data warehousing, and transactional workloads.
   - Cost-effective storage: Throughput Optimized HDD (st1) and Cold HDD (sc1) volumes are suitable for applications that prioritize cost savings over high IOPS, such as big data processing, log processing, and infrequently accessed data storage.
 
-
 ## Pricing
 
 When selecting between Instance Store and EBS, consider the requirements of your application. If you require persistent storage or need data to survive instance failures, EBS is the recommended option. However, if your application can tolerate the temporary nature of storage and doesn't require data persistence, Instance Store can be a cost-effective choice.

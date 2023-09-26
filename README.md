@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 610
-derectories      : 131
-avg_file_length  : 3745
+files            : 613
+derectories      : 133
+avg_file_length  : 3765
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -172,24 +172,23 @@ avg_file_length  : 3745
 ┃　　　┃　　　┃　　　┗━　[Kinesis](./데브옵스 DevOps/AWS/Analytics/Kinesis.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Lake Formation](./데브옵스 DevOps/AWS/Analytics/Lake Formation.md)</br>
 ┃　　　┃　　　┗━　[**Computing**](./데브옵스 DevOps/AWS/Computing)</br>
+┃　　　┃　　　┃　　　┗━　[**Auto Scaling**](./데브옵스 DevOps/AWS/Computing/Auto Scaling)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./데브옵스 DevOps/AWS/Computing/Auto Scaling/ASG Lifecycle Hook.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/Auto Scaling/Auto Scaling.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling termination policies](./데브옵스 DevOps/AWS/Computing/Auto Scaling/Auto Scaling termination policies.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Scaling cooldowns](./데브옵스 DevOps/AWS/Computing/Auto Scaling/Scaling cooldowns.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[State Change Event](./데브옵스 DevOps/AWS/Computing/Auto Scaling/State Change Event.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**Container**](./데브옵스 DevOps/AWS/Computing/Container)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ECS](./데브옵스 DevOps/AWS/Computing/Container/ECS.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ECS Getting started on Fargate](./데브옵스 DevOps/AWS/Computing/Container/ECS Getting started on Fargate.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ECS 요소](./데브옵스 DevOps/AWS/Computing/Container/ECS 요소.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**EC2**](./데브옵스 DevOps/AWS/Computing/EC2)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./데브옵스 DevOps/AWS/Computing/EC2/ASG Lifecycle Hook.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/EC2/Auto Scaling.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling termination policies](./데브옵스 DevOps/AWS/Computing/EC2/Auto Scaling termination policies.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Computing/EC2/EBS.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EBS gp2 vs gp3](./데브옵스 DevOps/AWS/Computing/EC2/EBS gp2 vs gp3.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EBS vs Instance Store](./데브옵스 DevOps/AWS/Computing/EC2/EBS vs Instance Store.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EC2](./데브옵스 DevOps/AWS/Computing/EC2/EC2.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EC2 Fleet](./데브옵스 DevOps/AWS/Computing/EC2/EC2 Fleet.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Elastic Fabric Adapter](./데브옵스 DevOps/AWS/Computing/EC2/Elastic Fabric Adapter.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Instance Store](./데브옵스 DevOps/AWS/Computing/EC2/Instance Store.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Scaling cooldowns](./데브옵스 DevOps/AWS/Computing/EC2/Scaling cooldowns.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Spot Block](./데브옵스 DevOps/AWS/Computing/EC2/Spot Block.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[State Change Event](./데브옵스 DevOps/AWS/Computing/EC2/State Change Event.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[RI와 Saving plan](./데브옵스 DevOps/AWS/Computing/EC2/RI와 Saving plan.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Spot Instance](./데브옵스 DevOps/AWS/Computing/EC2/Spot Instance.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./데브옵스 DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Fargate](./데브옵스 DevOps/AWS/Computing/Fargate.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Lambda](./데브옵스 DevOps/AWS/Computing/Lambda.md)</br>
@@ -198,6 +197,7 @@ avg_file_length  : 3745
 ┃　　　┃　　　┃　　　┗━　[DynamoDB](./데브옵스 DevOps/AWS/Database/DynamoDB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Database/EFS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RDS](./데브옵스 DevOps/AWS/Database/RDS.md)</br>
+┃　　　┃　　　┃　　　┗━　[RDS proxy](./데브옵스 DevOps/AWS/Database/RDS proxy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Database/Redshift.md)</br>
 ┃　　　┃　　　┗━　[**Management and governance**](./데브옵스 DevOps/AWS/Management and governance)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFormation](./데브옵스 DevOps/AWS/Management and governance/CloudFormation.md)</br>
@@ -237,6 +237,10 @@ avg_file_length  : 3745
 ┃　　　┃　　　┃　　　┗━　[Microsoft Active Directory](./데브옵스 DevOps/AWS/Security/Microsoft Active Directory.md)</br>
 ┃　　　┃　　　┃　　　┗━　[WAF & Firewall Manager & Shield Advanced](./데브옵스 DevOps/AWS/Security/WAF & Firewall Manager & Shield Advanced.md)</br>
 ┃　　　┃　　　┗━　[**Storage**](./데브옵스 DevOps/AWS/Storage)</br>
+┃　　　┃　　　┃　　　┗━　[**EBS**](./데브옵스 DevOps/AWS/Storage/EBS)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Storage/EBS/EBS.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EBS gp2 vs gp3](./데브옵스 DevOps/AWS/Storage/EBS/EBS gp2 vs gp3.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EBS vs Instance Store](./데브옵스 DevOps/AWS/Storage/EBS/EBS vs Instance Store.md)</br>
 ┃　　　┃　　　┃　　　┗━　[DayaSync](./데브옵스 DevOps/AWS/Storage/DayaSync.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[FSx](./데브옵스 DevOps/AWS/Storage/FSx.md)</br>
@@ -264,7 +268,7 @@ avg_file_length  : 3745
 ┃　　　┃　　　┃　　　┗━　[Prune](./데브옵스 DevOps/Container/Docker/Prune.md)</br>
 ┃　　　┃　　　┃　　　┗━　[README](./데브옵스 DevOps/Container/Docker/README.md)</br>
 ┃　　　┃　　　┃　　　┗━　[dockersock 권한에러](./데브옵스 DevOps/Container/Docker/dockersock 권한에러.md)</br>
-┃　　　┃　　　┃　　　┗━　[exec user process caused “exec　format　error”](./데브옵스 DevOps/Container/Docker/exec user process caused “exec　format　error”.md)</br>
+┃　　　┃　　　┃　　　┗━　[exec user process caused exec format error](./데브옵스 DevOps/Container/Docker/exec user process caused exec format error.md)</br>
 ┃　　　┃　　　┃　　　┗━　[가상화와 컨테이너](./데브옵스 DevOps/Container/Docker/가상화와 컨테이너.md)</br>
 ┃　　　┃　　　┃　　　┗━　[도커 네트워크](./데브옵스 DevOps/Container/Docker/도커 네트워크.md)</br>
 ┃　　　┃　　　┃　　　┗━　[도커 네트워크 명령어](./데브옵스 DevOps/Container/Docker/도커 네트워크 명령어.md)</br>
@@ -518,6 +522,7 @@ avg_file_length  : 3745
 ┃　　　┗━　[Change Date Capture](./데이터베이스 DataBase/Change Date Capture.md)</br>
 ┃　　　┗━　[Column, Row기반 DB](./데이터베이스 DataBase/Column, Row기반 DB.md)</br>
 ┃　　　┗━　[Data Lake와 Warehouse](./데이터베이스 DataBase/Data Lake와 Warehouse.md)</br>
+┃　　　┗━　[MySQL Replication](./데이터베이스 DataBase/MySQL Replication.md)</br>
 ┃　　　┗━　[OLAP](./데이터베이스 DataBase/OLAP.md)</br>
 ┗━　[**스프링 Spring**](./스프링 Spring)</br>
 ┃　　　┗━　[**AOP**](./스프링 Spring/AOP)</br>
@@ -751,6 +756,7 @@ avg_file_length  : 3745
 ┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
 ┗━　[**+autocommit.sh**](./+autocommit.sh)</br>
+┗━　[**+test.sh**](./+test.sh)</br>
 ┗━　[**+test.txt**](./+test.txt)</br>
 ┗━　[README](./README.md)</br>
 .

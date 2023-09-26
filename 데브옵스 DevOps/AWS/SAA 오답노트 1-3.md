@@ -18,7 +18,7 @@
   - **When you apply a retention periond to an object version ecplictly, you specify a `Retain Until Date` for the object version**
     - You can place a retention period on an object version either explictly or through a bucket default setting. When you apply a retention period to an object version expliciyly, you specify a `Retain Until Date` for the object version. Amazon S3 stores the Retain Until Date setting in the object version's metadata and protects the object version until the retention period expires.
   - **Defferent versions of a single object can have different retention mades and periods.**
-    - Like all other Object Lock settings, retention periods apply to individual object versions. Defferent versions of a single object can have different retention medes and periods.
+    - Like all other Object Lock settings, retention periods apply to individual object versions. Defferent versions of a single object can have different retention modes and periods.
     - For example, suppose that you have an object that is 15 days into a 30-day retention period, and you PUT an object into S3 with the same name and a 60-day retention period. In this case, your PUT succeeds, and S3 creates a new cersion of the object with a 60-day retention period. The olderversion maintains its original retention period and becomes deletable in 15 days.
 
 ---
@@ -50,9 +50,8 @@
 - Keyword: EBS
 
 - Answer: **Tier-1 (32TB)**
-  - Amazon Aurora features a distributed, fault-tolerant, self-healing storage system that auto-scales up to 128TB per database instance. It delivers high performance and availability with up to 15 low-latency read replicas, point-in-time recovery, continuous backup to Amazon S3, and replication across three Availability Zones (AZs).
   - For Amazon Aurora, each Read Replica is associated with a priority tier (0-15). In the event of a failover, Amazon Aurora will promote the Read Replica that has the highest priority (the lowest numbered tier).
-  - If two or more Aurora Replicas share the same priority, then Amazon RDS promotes the replica that is largest in size. If two or more Aurora Replicas share the same priority and size, then Amazon Aurora promotes an arbitrary replica in the same promotion tier.
+  - If two or more Aurora Replicas share the same priority, then Amazon RDS promotes the replica **that is largest in size**. If two or more Aurora Replicas share the same priority and size, then Amazon Aurora promotes an arbitrary replica in the same promotion tier.
   - Therefore, for this problem statement, the Tier-1 (32TB) replica will be promoted.
 
 ---

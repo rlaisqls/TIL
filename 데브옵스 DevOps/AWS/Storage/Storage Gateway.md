@@ -4,7 +4,7 @@ Storage Gateway is a service that connects on-premise environments with cloud-ba
 
 ## Storage Gateway Key Details:
 
-- The Storage Gateway service can either be a physical device or a VM image downloaded onto a host in an on-prem data center. It acts as a bridge to send or receive data from AWS.
+- The Storage Gateway service can either be a **physical device or a VM image downloaded onto a host in an on-prem data center**. It acts as a bridge to send or receive data from AWS.
 
 - Storage Gateway can sit on top of VMWare's EXCi Hypervisor for Linux machine and Microsoft's Hyper-V hypervisor for Windows machines.
   
@@ -20,11 +20,16 @@ Storage Gateway is a service that connects on-premise environments with cloud-ba
 - Tape Gateway offers a durable, cost-effective way of archiving and replicating data into S3 while getting rid of tapes (old-school data storage). The Virtual Yape Library (VTL), leveages existing tape-based backup infrastructure to store data on virtual tape cartridges that you create on the Tape Gateway. It's a great way to modernize and move backups into the cloud.
 
 ## Stored Volumes VS Cached Volumes
-  
-- Volume Gateway's **Stored Volumes** let you store data locally on-prem and backs the data up to AWS as a secondary data source. Stored Volumes allow low-latency access to entire datasets, while providing high availability over a hybrid cloud solution/ Further, you can mount Stored Volumes on application infrastructure as iSCSI drives so when data is written to these columes, the data is both written onto the on-prem hardware and asynchronously backed up as snapshots in AWS EBS or S3.
-  - In the folluwing diagram of a Stored Volume architecture, data is served to the user from the Storage Area Network, Network Attached, or Direct Attached Stoage within you data center. S3 exists just as a secure ans reliable backup.
+
+- Volume Gateway's **Stored Volumes** let you store data locally on-prem and backs the data up to AWS as a secondary data source. Stored Volumes allow low-latency access to entire datasets, while providing high availability over a hybrid cloud solution. Further, you can mount Stored Volumes on application infrastructure as iSCSI drives so when data is written to these volumes, the data is both written onto the on-prem hardware and asynchronously backed up as snapshots in AWS EBS or S3.
+  - In the following diagram of a Stored Volume architecture, data is served to the user from the Storage Area Network, Network Attached, or Direct Attached Stoage within you data center. S3 exists just as a secure ans reliable backup.
     ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/c3037bd8-5280-4346-867d-83def895e911)
 
 - Volume Gateway's Cached Volumes differ as they do not store the entire dataset locally like Stored Volumes. Instead, AWS is used as the primary data source and the local hardware is used as a caching layer. Only the most frequenfly used components are retained onto the on-prem-infrastructure while the remaining data is served from AWS. The minimizes the need to scale on-prem infrastructure while still maintaining low-latency access to the most referenced data.
   - In ther following diagram of a Cached Volume architecture, the most frequently accessed data is served to the user from the Storage Area Network, Network Attaches, or Direct Attached Storage within your data center. S3 serves the rest of the data from AWS. 
     ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/35ba8705-bb7e-4a0f-93bc-a8f41c0ba2e5)
+
+---
+reference
+- https://docs.amazonaws.cn/storagegateway/index.html
+- https://docs.amazonaws.cn/en_us/storagegateway/latest/vgw/StorageGatewayConcepts.html#storage-gateway-stored-volume-concepts

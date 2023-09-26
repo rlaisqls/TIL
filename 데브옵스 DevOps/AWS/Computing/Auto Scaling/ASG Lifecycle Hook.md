@@ -6,11 +6,11 @@ ASG를 통해 생성되는 인스턴스들은 아래와 같은 Lifecycle을 가�
 
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html
 
-- ASG가 인스턴스를 증가시키는 이벤트는 Scale out 이벤트이며, 이 때는 Pending 상태가 된다.
+- ASG가 인스턴스를 증가시키는 이벤트는 Scale out 이벤트이며, 이 때는 `Pending` 상태가 된다.
 - 인스턴스가 부트스트랩 과정을 마치고 나면 InService 상태가 된다.
 - 인스턴스가 축소되는 이벤트는 Scale in 이벤트이며, Terminating 상태를 거쳐 Terminated 상태가 된다.
 
-ASG의 Lifecycle Hook은 이 과정 중 Scale in과 Scale out 과정에 설정할 수 있다. 먼저 Scale out 이벤트에 걸게 된다면 인스턴스는 Pending 이후에 Pending:Wait 상태와 Pending:Proceed 상태를 거치게 되고, Scale in 이벤트에 걸게 된다면 인스턴스는 Terminating:Wait 상태와 Terminating:Proceed 상태를 거치게 된다.  
+ASG의 Lifecycle Hook은 이 과정 중 Scale in과 Scale out 과정에 설정할 수 있다. 먼저 Scale out 이벤트에 걸게 된다면 인스턴스는 `Pending` 이후에 `Pending:Wait` 상태와 `Pending:Proceed` 상태를 거치게 되고, Scale in 이벤트에 걸게 된다면 인스턴스는 `Terminating:Wait` 상태와 `Terminating:Proceed` 상태를 거치게 된다.  
 
 그렇기 때문에 인스턴스가 생성된 후 부트 스트랩 이후에 뭔가 추가적으로 작업해야 할 것이 있다면 `EC2_INSTANCE_LAUNCHING` 이벤트에, 인스턴스가 삭제될 때 추가적으로 작업해야 할 것이 있다면 `EC2_INSTANCE_TERMINATING` 이벤트에 Lifecycle Hook을 설정해주면 된다. 
 

@@ -176,8 +176,6 @@
     - 고가의 조인을 이용하여 조회 결과의 필요한 뷰를 재조립한다.
     - RDBMS 의 경우, 세부적인 구현이나 성능을 걱정하지 않고 유연성을 목적으로 설계. 일반적으로 쿼리 최적화가 스키마 설계에 영향을 미치지 않지만, 정규화가 아주 중요
   
-- DynamoDB is not a totally schemaless database since the very definition of a schema is just the model or structure of your data.
-  - DynamoDB 의 경우, 가장 중요하고 범용적인 쿼리를 가능한 빠르고 저렴하게 수행할 수 있도록 스키마를 설계. 사용자의 데이터 구조는 사용자 비즈니스 사용 사례의 특정 요구 사항에 적합
   
 - 온프레미스에서 사용하던 고유의 IP 를 가져오기 위해서는 **ROA(Route Origin Authorization)**을 사용하여 Amazon ASN 이 해당 주소를 광고하도록 허용하게 함
 - AWS 내부가 아닌 외부에서 AWS 에 access 할 수 있도록 하기 위해 SAML(SSO)을 연동하면 됨
