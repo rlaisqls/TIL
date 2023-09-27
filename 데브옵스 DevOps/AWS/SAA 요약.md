@@ -32,7 +32,7 @@
 - Shield: DDos 방지
 - [VPC](./Netwoking/VPC.md): 가상 네트워크, 다른 네트워크와 논리적 분리
 - [Security Groups](./Netwoking/Security%E2%80%85Groups.md): instance 수준의 control access, stateful, allow만 가능
-- [NACLs](./Netwoking/NACLs.md): subnet 수준의 control access, allow만 가능, stateless, allow와 disallow 가능
+- [NACLs](./Netwoking/NACLs.md): subnet 수준의 control access, stateless, allow와 disallow 가능
 
 ## Security
 - [Cognito](./Security/Cognite.md): User pools, Identity pools 제공
