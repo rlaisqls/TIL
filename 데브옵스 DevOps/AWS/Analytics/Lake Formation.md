@@ -4,10 +4,9 @@
 
 <img width="733" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/471181ea-62f5-4612-be25-57f0f1413eaf">
 
-
 ## Granular access permissions
 
-Customers acress lines of business (LOBs) need a way to manage granular access permissions for different users at the table and colun level. Lake Formation helps you manage fine-grained access for internal and external customers from a ventralized location and in a scalable way.
+Customers acress lines of business (LOBs) need a way to manage granular access permissions for different users at the table and column level. Lake Formation helps you manage fine-grained access for internal and external customers from a ventralized location and in a scalable way.
 
 you can manage granular permissions on datasets shared between AWS accounts using Lake Formation.
 
