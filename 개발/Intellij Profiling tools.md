@@ -14,13 +14,13 @@ Async Profiler, Java Flight Recorder 기능 등을 통해서 애플리케이션�
 
 실행 중인 애플리케이션 리소스 상태를 아래와 같이 차트 형태로 실시간 확인할 수 있다. 옵션을 통해서 데이터 확인 기간도 모든 데이터, 최근 5분 등으로 범위를 변경할 수 있다.
 
-![image](https://github.com/artilleryio/artillery-core/assets/81006587/3de30f4a-9df0-428d-b6c3-c1f7e32aa127)
+<img height=300px src="https://github.com/artilleryio/artillery-core/assets/81006587/3de30f4a-9df0-428d-b6c3-c1f7e32aa127">
 
 ## Analyze memory snapshots
 
 메모리 스냅샷 기능을 통해서 힙(heap) 메모리를 사용하는 코드를 분석하고 메모리 누수를 찾는 등 애플리케이션의 성능 문제를 분석할 수도 있다. 위에서 살펴본 라이브 차트에서 “Capture Memory Snapshot” 기능을 사용하면, 해당 시점의 메모리를 덤프하여 스냅샷으로 캡처할 수 있다.
 
-![image](https://github.com/artilleryio/artillery-core/assets/81006587/499993b4-42e1-46a0-86b8-d752767174c7)
+<img height=300px src="https://github.com/artilleryio/artillery-core/assets/81006587/499993b4-42e1-46a0-86b8-d752767174c7">
 
 캡처가 완료되면 아래와 같이 여러 정보를 분석할 수 있다. 왼쪽 프레임에서는 메모리에 할당된 각 클래스의 정보를 확인할 수 있는데 각 항목은 다음과 같다.
 
