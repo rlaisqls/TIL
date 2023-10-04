@@ -44,3 +44,38 @@ reference
 - https://en.wikipedia.org/wiki/VLAN
 - https://www.n-able.com/blog/vlan-trunking
 - https://www.networkacademy.io/ccna/ethernet/vlan-trunking
+
+
+
+L1 network access layer
+ - Ethernet과 TokenRing
+ - MTU
+ - NIC
+ - VLAN
+ - 데이터링크 제어(DLC)
+ - 매체 접근 제어(MAC)
+ - 아날로그, 디지털　신호와 전송
+L2 internet layer
+ - CIDR
+ - ICMP
+ - IP
+ - IPAM
+ - IPSec
+ - IPVS
+ - NAT
+ - secondary IP
+ - 서브넷
+L3 transport layer
+ - SSH config
+ - TCP와 UDP
+L4 appplication layer
+ - tls
+ - ACME
+ - CDN
+ - DHCP
+ - DNS 레코드유형
+ - HTTP
+ - HTTP Options
+ - java로 간단한 socket 프로그램만들기
+
+네트워크에 관련된 키워드를 TCP/IP 4계층에 따라 분류해봤는데 이 중에 잘못 분류한 단어가 있어?

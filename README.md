@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 613
+files            : 614
 derectories      : 133
-avg_file_length  : 3765
+avg_file_length  : 3772
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -121,6 +121,7 @@ avg_file_length  : 3765
 ┗━　[**네트워크 Network**](./네트워크 Network)</br>
 ┃　　　┗━　[**L1 network access layer**](./네트워크 Network/L1 network access layer)</br>
 ┃　　　┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/L1 network access layer/Ethernet과 TokenRing.md)</br>
+┃　　　┃　　　┗━　[L2 스위치와 STP](./네트워크 Network/L1 network access layer/L2 스위치와 STP.md)</br>
 ┃　　　┃　　　┗━　[MTU](./네트워크 Network/L1 network access layer/MTU.md)</br>
 ┃　　　┃　　　┗━　[NIC](./네트워크 Network/L1 network access layer/NIC.md)</br>
 ┃　　　┃　　　┗━　[VLAN](./네트워크 Network/L1 network access layer/VLAN.md)</br>
