@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 617
+files            : 619
 derectories      : 133
-avg_file_length  : 3767
+avg_file_length  : 3775
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -164,7 +164,9 @@ avg_file_length  : 3767
 ┃　　　┗━　[bandwidth](./네트워크 Network/bandwidth.md)</br>
 ┃　　　┗━　[네트워크](./네트워크 Network/네트워크.md)</br>
 ┃　　　┗━　[네트워크 보안](./네트워크 Network/네트워크 보안.md)</br>
+┃　　　┗━　[로드밸런서](./네트워크 Network/로드밸런서.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
+┃　　　┗━　[이중화](./네트워크 Network/이중화.md)</br>
 ┗━　[**데브옵스 DevOps**](./데브옵스 DevOps)</br>
 ┃　　　┗━　[**AWS**](./데브옵스 DevOps/AWS)</br>
 ┃　　　┃　　　┗━　[**Account**](./데브옵스 DevOps/AWS/Account)</br>
