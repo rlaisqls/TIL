@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 619
+files            : 620
 derectories      : 133
-avg_file_length  : 3775
+avg_file_length  : 3787
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -292,6 +292,7 @@ avg_file_length  : 3775
 ┃　　　┃　　　┃　　　┗━　[Terraform import와 Terraforming](./데브옵스 DevOps/IaC/Terraform/Terraform import와 Terraforming.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Terraform with AWS](./데브옵스 DevOps/IaC/Terraform/Terraform with AWS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Terraform 키워드](./데브옵스 DevOps/IaC/Terraform/Terraform 키워드.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terratest](./데브옵스 DevOps/IaC/Terraform/Terratest.md)</br>
 ┃　　　┃　　　┃　　　┗━　[aws 서버 네트워크 구축](./데브옵스 DevOps/IaC/Terraform/aws 서버 네트워크 구축.md)</br>
 ┃　　　┃　　　┗━　[Ansible](./데브옵스 DevOps/IaC/Ansible.md)</br>
 ┃　　　┃　　　┗━　[Cobbler](./데브옵스 DevOps/IaC/Cobbler.md)</br>
