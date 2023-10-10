@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 620
+files            : 622
 derectories      : 133
-avg_file_length  : 3787
+avg_file_length  : 3791
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -379,6 +379,7 @@ avg_file_length  : 3787
 ┃　　　┃　　　┃　　　┃　　　┗━　[Pod](./데브옵스 DevOps/Kubernetes/개념/object/Pod.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Pod Readiness and Probes](./데브옵스 DevOps/Kubernetes/개념/object/Pod Readiness and Probes.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Pod 생성과정](./데브옵스 DevOps/Kubernetes/개념/object/Pod 생성과정.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[RollingUpdate](./데브옵스 DevOps/Kubernetes/개념/object/RollingUpdate.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Kubernetes/개념/object/Service와 port.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/개념/object/StatefulSets.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/개념/object/ingress.md)</br>
@@ -441,6 +442,7 @@ avg_file_length  : 3787
 ┃　　　┗━　[**Proxy**](./데브옵스 DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[**envoy**](./데브옵스 DevOps/Proxy/envoy)</br>
 ┃　　　┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/envoy/Envoy.md)</br>
+┃　　　┃　　　┃　　　┗━　[xDS configuration](./데브옵스 DevOps/Proxy/envoy/xDS configuration.md)</br>
 ┃　　　┃　　　┗━　[**nginx**](./데브옵스 DevOps/Proxy/nginx)</br>
 ┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Proxy/nginx/NGINX Ingress Basic Auth.md)</br>
 ┃　　　┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/Proxy/nginx/location block.md)</br>
