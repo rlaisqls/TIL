@@ -22,7 +22,7 @@ Confusingly, it may also encode a CSR as the PKCS10 format can be translated int
 
 This is a (usually) PEM formatted file containing just the private-key of a specific certificate and is merely a conventional name and not a standardized one. In Apache installs, this frequently resides in /etc/ssl/private. The rights on these files are very important, and some programs will refuse to load these certificates if they are set wrong.
 
-### `.pkcs12` `.pfx``.p12`
+### `.pkcs12` `.pfx` `.p12`
 
 Originally defined by RSA in the Public-Key Cryptography Standards (abbreviated PKCS), the "12" variant was originally enhanced by Microsoft, and later submitted as RFC 7292. This is a password-protected container format that contains both public and private certificate pairs.
 
@@ -33,7 +33,7 @@ A few other formats that show up from time to time:
 ### `.der`
 A way to encode ASN.1 syntax in binary, a .pem file is just a Base64 encoded .der file. OpenSSL can convert these to .pem (openssl x509 -inform der -in to-convert.der -out converted.pem). Windows sees these as Certificate files. By default, Windows will export certificates as .DER formatted files with a different extension. Like...
 
-### `.cert .cer .crt`
+### `.cert` `.cer` `.crt`
 
 A `.pem` (or rarely `.der`) formatted file with a different extension, one that is recognized by Windows Explorer as a certificate, which .pem is not.
 
