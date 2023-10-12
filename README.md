@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 622
+files            : 624
 derectories      : 133
-avg_file_length  : 3791
+avg_file_length  : 3873
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -20,7 +20,7 @@ avg_file_length  : 3791
 ┃　　　┃　　　┗━　[githook을 위한 perl command](./Git/hooks/githook을 위한 perl command.md)</br>
 ┃　　　┃　　　┗━　[파일트리 자동생성](./Git/hooks/파일트리 자동생성.md)</br>
 ┃　　　┗━　[GitLab](./Git/GitLab.md)</br>
-┃　　　┗━　[Self━hosted Runner](./Git/Self━hosted Runner.md)</br>
+┃　　　┗━　[Selfhosted Runner](./Git/Selfhosted Runner.md)</br>
 ┃　　　┗━　[자동커밋](./Git/자동커밋.md)</br>
 ┗━　[**개발**](./개발)</br>
 ┃　　　┗━　[**Gradle**](./개발/Gradle)</br>
@@ -256,8 +256,8 @@ avg_file_length  : 3791
 ┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/API Gateway.md)</br>
 ┃　　　┃　　　┗━　[AWS cloud computing](./데브옵스 DevOps/AWS/AWS cloud computing.md)</br>
 ┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트 1━3](./데브옵스 DevOps/AWS/SAA 오답노트 1━3.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트 4━6　copy](./데브옵스 DevOps/AWS/SAA 오답노트 4━6　copy.md)</br>
+┃　　　┃　　　┗━　[SAA 오답노트 1~3](./데브옵스 DevOps/AWS/SAA 오답노트 1~3.md)</br>
+┃　　　┃　　　┗━　[SAA 오답노트 4~6](./데브옵스 DevOps/AWS/SAA 오답노트 4~6.md)</br>
 ┃　　　┃　　　┗━　[SAA 오답노트 examtopic](./데브옵스 DevOps/AWS/SAA 오답노트 examtopic.md)</br>
 ┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
@@ -290,6 +290,7 @@ avg_file_length  : 3791
 ┃　　　┃　　　┗━　[**Terraform**](./데브옵스 DevOps/IaC/Terraform)</br>
 ┃　　　┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform/Terraform.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Terraform import와 Terraforming](./데브옵스 DevOps/IaC/Terraform/Terraform import와 Terraforming.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform taint](./데브옵스 DevOps/IaC/Terraform/Terraform taint.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Terraform with AWS](./데브옵스 DevOps/IaC/Terraform/Terraform with AWS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Terraform 키워드](./데브옵스 DevOps/IaC/Terraform/Terraform 키워드.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Terratest](./데브옵스 DevOps/IaC/Terraform/Terratest.md)</br>
@@ -442,6 +443,7 @@ avg_file_length  : 3791
 ┃　　　┗━　[**Proxy**](./데브옵스 DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[**envoy**](./데브옵스 DevOps/Proxy/envoy)</br>
 ┃　　　┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/envoy/Envoy.md)</br>
+┃　　　┃　　　┃　　　┗━　[LDS](./데브옵스 DevOps/Proxy/envoy/LDS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[xDS configuration](./데브옵스 DevOps/Proxy/envoy/xDS configuration.md)</br>
 ┃　　　┃　　　┗━　[**nginx**](./데브옵스 DevOps/Proxy/nginx)</br>
 ┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Proxy/nginx/NGINX Ingress Basic Auth.md)</br>
