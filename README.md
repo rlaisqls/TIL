@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 623
-derectories      : 133
-avg_file_length  : 3874
+files            : 626
+derectories      : 135
+avg_file_length  : 3867
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -118,6 +118,7 @@ avg_file_length  : 3874
 ┃　　　┗━　[응집도와 결합도](./객체지향 OOP/응집도와 결합도.md)</br>
 ┗━　[**네트워크 Network**](./네트워크 Network)</br>
 ┃　　　┗━　[**L1 network access layer**](./네트워크 Network/L1 network access layer)</br>
+┃　　　┃　　　┗━　[CRC](./네트워크 Network/L1 network access layer/CRC.md)</br>
 ┃　　　┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/L1 network access layer/Ethernet과 TokenRing.md)</br>
 ┃　　　┃　　　┗━　[L2 스위치와 STP](./네트워크 Network/L1 network access layer/L2 스위치와 STP.md)</br>
 ┃　　　┃　　　┗━　[MTU](./네트워크 Network/L1 network access layer/MTU.md)</br>
@@ -739,31 +740,35 @@ avg_file_length  : 3874
 ┃　　　┃　　　┗━　[iptables 방화벽 설정](./운영체제 Operating System/linux/iptables 방화벽 설정.md)</br>
 ┃　　　┃　　　┗━　[mail](./운영체제 Operating System/linux/mail.md)</br>
 ┃　　　┃　　　┗━　[명령어들](./운영체제 Operating System/linux/명령어들.md)</br>
+┃　　　┗━　[**memory**](./운영체제 Operating System/memory)</br>
+┃　　　┃　　　┗━　[Memory Mapping](./운영체제 Operating System/memory/Memory Mapping.md)</br>
+┃　　　┃　　　┗━　[페이지 교체 알고리즘](./운영체제 Operating System/memory/페이지 교체 알고리즘.md)</br>
+┃　　　┗━　[**process**](./운영체제 Operating System/process)</br>
+┃　　　┃　　　┗━　[TAS](./운영체제 Operating System/process/TAS.md)</br>
+┃　　　┃　　　┗━　[교착상태와 스케줄링](./운영체제 Operating System/process/교착상태와 스케줄링.md)</br>
+┃　　　┃　　　┗━　[생산자━소비자 문제](./운영체제 Operating System/process/생산자━소비자 문제.md)</br>
+┃　　　┃　　　┗━　[임계영역과 상호배제](./운영체제 Operating System/process/임계영역과 상호배제.md)</br>
+┃　　　┃　　　┗━　[프로세스의 개념](./운영체제 Operating System/process/프로세스의 개념.md)</br>
+┃　　　┃　　　┗━　[프로세스의 관리](./운영체제 Operating System/process/프로세스의 관리.md)</br>
 ┃　　　┗━　[**window**](./운영체제 Operating System/window)</br>
 ┃　　　┃　　　┗━　[Active Directory Domain Services](./운영체제 Operating System/window/Active Directory Domain Services.md)</br>
-┃　　　┗━　[TAS](./운영체제 Operating System/TAS.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
-┃　　　┗━　[교착상태와 스케줄링](./운영체제 Operating System/교착상태와 스케줄링.md)</br>
-┃　　　┗━　[생산자━소비자 문제](./운영체제 Operating System/생산자━소비자 문제.md)</br>
 ┃　　　┗━　[운영체제 유형](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
-┃　　　┗━　[임계영역과 상호배제](./운영체제 Operating System/임계영역과 상호배제.md)</br>
-┃　　　┗━　[프로세스의 개념](./운영체제 Operating System/프로세스의 개념.md)</br>
-┃　　　┗━　[프로세스의 관리](./운영체제 Operating System/프로세스의 관리.md)</br>
-┗━　[**인공지능**](./인공지능)</br>
-┃　　　┗━　[**실습**](./인공지능/실습)</br>
-┃　　　┃　　　┗━　[CNN](./인공지능/실습/CNN.md)</br>
-┃　　　┃　　　┗━　[MNIST 숫자 판별](./인공지능/실습/MNIST 숫자 판별.md)</br>
-┃　　　┃　　　┗━　[RNN](./인공지능/실습/RNN.md)</br>
-┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능/실습/배, 자동차, 비행기 분류하기.md)</br>
-┃　　　┗━　[CNN](./인공지능/CNN.md)</br>
-┃　　　┗━　[DropOut](./인공지능/DropOut.md)</br>
-┃　　　┗━　[Keras](./인공지능/Keras.md)</br>
-┃　　　┗━　[Optimizer](./인공지능/Optimizer.md)</br>
-┃　　　┗━　[RNN](./인공지능/RNN.md)</br>
-┃　　　┗━　[선형회귀](./인공지능/선형회귀.md)</br>
-┃　　　┗━　[퍼셉트론](./인공지능/퍼셉트론.md)</br>
-┃　　　┗━　[활성화함수](./인공지능/활성화함수.md)</br>
+┗━　[**인공지능 AI**](./인공지능 AI)</br>
+┃　　　┗━　[**실습**](./인공지능 AI/실습)</br>
+┃　　　┃　　　┗━　[CNN](./인공지능 AI/실습/CNN.md)</br>
+┃　　　┃　　　┗━　[MNIST 숫자 판별](./인공지능 AI/실습/MNIST 숫자 판별.md)</br>
+┃　　　┃　　　┗━　[RNN](./인공지능 AI/실습/RNN.md)</br>
+┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능 AI/실습/배, 자동차, 비행기 분류하기.md)</br>
+┃　　　┗━　[CNN](./인공지능 AI/CNN.md)</br>
+┃　　　┗━　[DropOut](./인공지능 AI/DropOut.md)</br>
+┃　　　┗━　[Keras](./인공지능 AI/Keras.md)</br>
+┃　　　┗━　[Optimizer](./인공지능 AI/Optimizer.md)</br>
+┃　　　┗━　[RNN](./인공지능 AI/RNN.md)</br>
+┃　　　┗━　[선형회귀](./인공지능 AI/선형회귀.md)</br>
+┃　　　┗━　[퍼셉트론](./인공지능 AI/퍼셉트론.md)</br>
+┃　　　┗━　[활성화함수](./인공지능 AI/활성화함수.md)</br>
 ┗━　[**+autocommit.sh**](./+autocommit.sh)</br>
 ┗━　[**+test.sh**](./+test.sh)</br>
 ┗━　[**+test.txt**](./+test.txt)</br>
