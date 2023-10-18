@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 624
+files            : 623
 derectories      : 133
-avg_file_length  : 3873
+avg_file_length  : 3874
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -30,7 +30,6 @@ avg_file_length  : 3873
 ┃　　　┃　　　┗━　[멀티모듈](./개발/Gradle/멀티모듈.md)</br>
 ┃　　　┗━　[**TestCode**](./개발/TestCode)</br>
 ┃　　　┃　　　┗━　[**Kotlin**](./개발/TestCode/Kotlin)</br>
-┃　　　┃　　　┃　　　┗━　[Found interface kotlin.time.TimeMark, but class was expected](./개발/TestCode/Kotlin/Found interface kotlin.time.TimeMark, but class was expected.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kotest](./개발/TestCode/Kotlin/Kotest.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kotest Assertions](./개발/TestCode/Kotlin/Kotest Assertions.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kotest Specs](./개발/TestCode/Kotlin/Kotest Specs.md)</br>
@@ -78,7 +77,7 @@ avg_file_length  : 3873
 ┃　　　┃　　　　　　　┗━　[module.exports와 exports](./개발/프레임워크/node.js/module.exports와 exports.md)</br>
 ┃　　　┃　　　　　　　┗━　[puppeteer](./개발/프레임워크/node.js/puppeteer.md)</br>
 ┃　　　┗━　[CustomAnnotation](./개발/CustomAnnotation.md)</br>
-┃　　　┗━　[Fine━Grained와 Coarse━Grained](./개발/Fine━Grained와 Coarse━Grained.md)</br>
+┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
 ┃　　　┗━　[Intellij Profiling tools](./개발/Intellij Profiling tools.md)</br>
 ┃　　　┗━　[Keytool](./개발/Keytool.md)</br>
 ┃　　　┗━　[Makefile](./개발/Makefile.md)</br>
@@ -147,11 +146,11 @@ avg_file_length  : 3873
 ┃　　　┃　　　┃　　　┗━　[SNI](./네트워크 Network/L4 appplication layer/tls/SNI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/tls/TLS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/tls/TLS 인증서 발급 절차를 이해해보자.md)</br>
-┃　　　┃　　　┗━　[\010FTP Active,Passive mode](./네트워크 Network/L4 appplication layer/\010FTP Active,Passive mode.md)</br>
 ┃　　　┃　　　┗━　[ACME](./네트워크 Network/L4 appplication layer/ACME.md)</br>
 ┃　　　┃　　　┗━　[CDN](./네트워크 Network/L4 appplication layer/CDN.md)</br>
 ┃　　　┃　　　┗━　[DHCP](./네트워크 Network/L4 appplication layer/DHCP.md)</br>
 ┃　　　┃　　　┗━　[DNS 레코드유형](./네트워크 Network/L4 appplication layer/DNS 레코드유형.md)</br>
+┃　　　┃　　　┗━　[FTP Active, Passive mode](./네트워크 Network/L4 appplication layer/FTP Active, Passive mode.md)</br>
 ┃　　　┃　　　┗━　[HTTP](./네트워크 Network/L4 appplication layer/HTTP.md)</br>
 ┃　　　┃　　　┗━　[HTTP Options](./네트워크 Network/L4 appplication layer/HTTP Options.md)</br>
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
