@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 626
-derectories      : 135
-avg_file_length  : 3867
+files            : 628
+derectories      : 136
+avg_file_length  : 3861
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -127,6 +127,10 @@ avg_file_length  : 3867
 ┃　　　┃　　　┗━　[매체 접근 제어(MAC)](./네트워크 Network/L1 network access layer/매체 접근 제어(MAC).md)</br>
 ┃　　　┃　　　┗━　[아날로그, 디지털　신호와 전송](./네트워크 Network/L1 network access layer/아날로그, 디지털　신호와 전송.md)</br>
 ┃　　　┗━　[**L2 internet layer**](./네트워크 Network/L2 internet layer)</br>
+┃　　　┃　　　┗━　[**라우터**](./네트워크 Network/L2 internet layer/라우터)</br>
+┃　　　┃　　　┃　　　┗━　[라우터](./네트워크 Network/L2 internet layer/라우터/라우터.md)</br>
+┃　　　┃　　　┃　　　┗━　[라우팅 알고리즘](./네트워크 Network/L2 internet layer/라우터/라우팅 알고리즘.md)</br>
+┃　　　┃　　　┃　　　┗━　[멀티캐스트 라우팅](./네트워크 Network/L2 internet layer/라우터/멀티캐스트 라우팅.md)</br>
 ┃　　　┃　　　┗━　[CIDR](./네트워크 Network/L2 internet layer/CIDR.md)</br>
 ┃　　　┃　　　┗━　[ICMP](./네트워크 Network/L2 internet layer/ICMP.md)</br>
 ┃　　　┃　　　┗━　[IP](./네트워크 Network/L2 internet layer/IP.md)</br>
@@ -135,7 +139,6 @@ avg_file_length  : 3867
 ┃　　　┃　　　┗━　[IPVS](./네트워크 Network/L2 internet layer/IPVS.md)</br>
 ┃　　　┃　　　┗━　[NAT](./네트워크 Network/L2 internet layer/NAT.md)</br>
 ┃　　　┃　　　┗━　[secondary IP](./네트워크 Network/L2 internet layer/secondary IP.md)</br>
-┃　　　┃　　　┗━　[라우터](./네트워크 Network/L2 internet layer/라우터.md)</br>
 ┃　　　┃　　　┗━　[서브넷](./네트워크 Network/L2 internet layer/서브넷.md)</br>
 ┃　　　┗━　[**L3 transport layer**](./네트워크 Network/L3 transport layer)</br>
 ┃　　　┃　　　┗━　[4계층 장비](./네트워크 Network/L3 transport layer/4계층 장비.md)</br>
