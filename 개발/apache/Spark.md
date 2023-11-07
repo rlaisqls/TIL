@@ -11,3 +11,6 @@ Apache Spark는 빅 데이터 워크로드에 주로 사용되는 오픈 소스 
 - **다양한 워크플로 생성:** Apache Spark에는 기계 학습(MLlib), 스트림 처리(Spark Streaming) 및 그래프 처리(GraphX)용 애플리케이션을 구축하는 데 도움이 되는 몇 가지 라이브러리가 포함되어 있다. 이러한 라이브러리는 Apache Spark 에코시스템과 긴밀하게 통합되며, 다양한 사용 사례를 해결하는 데 바로 활용할 수 있다.
 
 ---
+참고
+- https://spark.apache.org/
+- https://cloud.google.com/learn/what-is-apache-spark?hl=ko

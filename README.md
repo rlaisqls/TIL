@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 629
+files            : 630
 derectories      : 136
-avg_file_length  : 3885
+avg_file_length  : 3892
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -16,7 +16,7 @@ avg_file_length  : 3885
 ┃　　　┃　　　┗━　[GitFlow](./Git/Flow/GitFlow.md)</br>
 ┃　　　┃　　　┗━　[GithubFlow](./Git/Flow/GithubFlow.md)</br>
 ┃　　　┗━　[**hooks**](./Git/hooks)</br>
-┃　　　┃　　　┗━　[Githooks](./Git/hooks/Githooks.md)</br>
+┃　　　┃　　　┗━　[GitHub hooks](./Git/hooks/GitHub hooks.md)</br>
 ┃　　　┃　　　┗━　[githook을 위한 perl command](./Git/hooks/githook을 위한 perl command.md)</br>
 ┃　　　┃　　　┗━　[파일트리 자동생성](./Git/hooks/파일트리 자동생성.md)</br>
 ┃　　　┗━　[GitLab](./Git/GitLab.md)</br>
@@ -125,7 +125,7 @@ avg_file_length  : 3885
 ┃　　　┃　　　┗━　[NIC](./네트워크 Network/L1 network access layer/NIC.md)</br>
 ┃　　　┃　　　┗━　[데이터링크 제어(DLC)](./네트워크 Network/L1 network access layer/데이터링크 제어(DLC).md)</br>
 ┃　　　┃　　　┗━　[매체 접근 제어(MAC)](./네트워크 Network/L1 network access layer/매체 접근 제어(MAC).md)</br>
-┃　　　┃　　　┗━　[아날로그, 디지털　신호와 전송](./네트워크 Network/L1 network access layer/아날로그, 디지털　신호와 전송.md)</br>
+┃　　　┃　　　┗━　[아날로그, 디지털 신호와 전송](./네트워크 Network/L1 network access layer/아날로그, 디지털 신호와 전송.md)</br>
 ┃　　　┗━　[**L2 internet layer**](./네트워크 Network/L2 internet layer)</br>
 ┃　　　┃　　　┗━　[**라우터**](./네트워크 Network/L2 internet layer/라우터)</br>
 ┃　　　┃　　　┃　　　┗━　[라우터](./네트워크 Network/L2 internet layer/라우터/라우터.md)</br>
@@ -213,7 +213,7 @@ avg_file_length  : 3885
 ┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Management and governance/CloudWatch.md)</br>
 ┃　　　┃　　　┗━　[**Netwoking**](./데브옵스 DevOps/AWS/Netwoking)</br>
 ┃　　　┃　　　┃　　　┗━　[**elb**](./데브옵스 DevOps/AWS/Netwoking/elb)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Application Load　Balancer components](./데브옵스 DevOps/AWS/Netwoking/elb/Application Load　Balancer components.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Application LoadBalancer components](./데브옵스 DevOps/AWS/Netwoking/elb/Application LoadBalancer components.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Connection Draining](./데브옵스 DevOps/AWS/Netwoking/elb/Connection Draining.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwoking/elb/ELB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**security**](./데브옵스 DevOps/AWS/Netwoking/security)</br>
@@ -660,6 +660,7 @@ avg_file_length  : 3885
 ┃　　　┃　　　┗━　[JAR과 WAR](./언어 Language/JAVA/JAR과 WAR.md)</br>
 ┃　　　┃　　　┗━　[JAVA](./언어 Language/JAVA/JAVA.md)</br>
 ┃　　　┃　　　┗━　[JDKProxy와 CGLibProxy](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
+┃　　　┃　　　┗━　[JLink & JDeps](./언어 Language/JAVA/JLink & JDeps.md)</br>
 ┃　　　┃　　　┗━　[record](./언어 Language/JAVA/record.md)</br>
 ┃　　　┃　　　┗━　[예외와 에러](./언어 Language/JAVA/예외와 에러.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/JAVA/제네릭과 variance.md)</br>
@@ -750,7 +751,7 @@ avg_file_length  : 3885
 ┃　　　┗━　[**process**](./운영체제 Operating System/process)</br>
 ┃　　　┃　　　┗━　[TAS](./운영체제 Operating System/process/TAS.md)</br>
 ┃　　　┃　　　┗━　[교착상태와 스케줄링](./운영체제 Operating System/process/교착상태와 스케줄링.md)</br>
-┃　　　┃　　　┗━　[생산자━소비자 문제](./운영체제 Operating System/process/생산자━소비자 문제.md)</br>
+┃　　　┃　　　┗━　[생산자 소비자 문제](./운영체제 Operating System/process/생산자 소비자 문제.md)</br>
 ┃　　　┃　　　┗━　[임계영역과 상호배제](./운영체제 Operating System/process/임계영역과 상호배제.md)</br>
 ┃　　　┃　　　┗━　[프로세스의 개념](./운영체제 Operating System/process/프로세스의 개념.md)</br>
 ┃　　　┃　　　┗━　[프로세스의 관리](./운영체제 Operating System/process/프로세스의 관리.md)</br>
