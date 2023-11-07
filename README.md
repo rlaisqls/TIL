@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 628
+files            : 629
 derectories      : 136
-avg_file_length  : 3864
+avg_file_length  : 3885
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -249,6 +249,7 @@ avg_file_length  : 3864
 ┃　　　┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Storage/EBS/EBS.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EBS gp2 vs gp3](./데브옵스 DevOps/AWS/Storage/EBS/EBS gp2 vs gp3.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[EBS vs Instance Store](./데브옵스 DevOps/AWS/Storage/EBS/EBS vs Instance Store.md)</br>
+┃　　　┃　　　┃　　　┗━　[AppSync](./데브옵스 DevOps/AWS/Storage/AppSync.md)</br>
 ┃　　　┃　　　┃　　　┗━　[DayaSync](./데브옵스 DevOps/AWS/Storage/DayaSync.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[FSx](./데브옵스 DevOps/AWS/Storage/FSx.md)</br>

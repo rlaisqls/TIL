@@ -72,7 +72,7 @@
         - 1인 경우: real addr 확인
     3. 실제 주소 r(a+d) 계산 및 접근
 
-Non-Contiguous Allocation은 block의 크기를 정적(page)으로 정하냐, 동적으로 정하냐(segmentation)에 따라 나눈 두가지의 방법으로 크게 나뉘고, 거기에 두 방법을 합친 Hybrid 방법이 있다.
+크게 Non-Contiguous Allocation은 block의 크기를 정적(page)으로 정하냐, 동적으로 정하냐(segmentation)에 따라 나눈 두가지의 방법이 있고, 거기에 두 방법을 합친 Hybrid 방법이 있다.
 
 ### **Paging System**
   - page(p): 프로세스의 block
