@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 630
-derectories      : 136
-avg_file_length  : 3892
+files            : 631
+derectories      : 137
+avg_file_length  : 3889
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -757,6 +757,8 @@ avg_file_length  : 3892
 ┃　　　┃　　　┗━　[프로세스의 관리](./운영체제 Operating System/process/프로세스의 관리.md)</br>
 ┃　　　┗━　[**window**](./운영체제 Operating System/window)</br>
 ┃　　　┃　　　┗━　[Active Directory Domain Services](./운영체제 Operating System/window/Active Directory Domain Services.md)</br>
+┃　　　┗━　[**보안**](./운영체제 Operating System/보안)</br>
+┃　　　┃　　　┗━　[+엑세스 제어](./운영체제 Operating System/보안/+엑세스 제어.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[운영체제 유형](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
