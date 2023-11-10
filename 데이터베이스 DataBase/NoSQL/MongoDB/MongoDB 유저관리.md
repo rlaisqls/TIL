@@ -32,7 +32,7 @@ Database를 전환하는 방법은 다음과 같다.
 
 관리자 계정을 생성해보자.
 
-```json
+```
 db.createUser( {
     user: "",
     pwd: passwordPrompt(), // 원하는 텍스트를 입력해도 된다.
@@ -45,7 +45,7 @@ db.createUser( {
 
 관리자가 아닌 일반 계정을 생성해보자.
 
-```json
+```
 db.createUser( {
     user: "",
     pwd: "",
