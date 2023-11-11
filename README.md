@@ -3,7 +3,7 @@
 ```
 files            : 632
 derectories      : 137
-avg_file_length  : 3889
+avg_file_length  : 4942
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -16,767 +16,767 @@ avg_file_length  : 3889
 ┃　　　┃　　　┗━　[GitFlow](./Git/Flow/GitFlow.md)</br>
 ┃　　　┃　　　┗━　[GithubFlow](./Git/Flow/GithubFlow.md)</br>
 ┃　　　┗━　[**hooks**](./Git/hooks)</br>
-┃　　　┃　　　┗━　[GitHub hooks](./Git/hooks/GitHub hooks.md)</br>
-┃　　　┃　　　┗━　[githook을 위한 perl command](./Git/hooks/githook을 위한 perl command.md)</br>
-┃　　　┃　　　┗━　[파일트리 자동생성](./Git/hooks/파일트리 자동생성.md)</br>
+┃　　　┃　　　┗━　[GitHub\342\200\205hooks](./Git/hooks/GitHub\342\200\205hooks.md)</br>
+┃　　　┃　　　┗━　[githook\354\235\204\342\200\205\354\234\204\355\225\234\342\200\205perl\342\200\205command](./Git/hooks/githook\354\235\204\342\200\205\354\234\204\355\225\234\342\200\205perl\342\200\205command.md)</br>
+┃　　　┃　　　┗━　[\355\214\214\354\235\274\355\212\270\353\246\254\342\200\205\354\236\220\353\217\231\354\203\235\354\204\261](./Git/hooks/\355\214\214\354\235\274\355\212\270\353\246\254\342\200\205\354\236\220\353\217\231\354\203\235\354\204\261.md)</br>
 ┃　　　┗━　[GitLab](./Git/GitLab.md)</br>
-┃　　　┗━　[Selfhosted Runner](./Git/Selfhosted Runner.md)</br>
-┃　　　┗━　[자동커밋](./Git/자동커밋.md)</br>
-┗━　[**개발**](./개발)</br>
-┃　　　┗━　[**Gradle**](./개발/Gradle)</br>
-┃　　　┃　　　┗━　[DependencyHandler](./개발/Gradle/DependencyHandler.md)</br>
-┃　　　┃　　　┗━　[Git action gradle caching](./개발/Gradle/Git action gradle caching.md)</br>
-┃　　　┃　　　┗━　[Gradle LifeCycle](./개발/Gradle/Gradle LifeCycle.md)</br>
-┃　　　┃　　　┗━　[멀티모듈](./개발/Gradle/멀티모듈.md)</br>
-┃　　　┗━　[**TestCode**](./개발/TestCode)</br>
-┃　　　┃　　　┗━　[**Kotlin**](./개발/TestCode/Kotlin)</br>
-┃　　　┃　　　┃　　　┗━　[Kotest](./개발/TestCode/Kotlin/Kotest.md)</br>
-┃　　　┃　　　┃　　　┗━　[Kotest Assertions](./개발/TestCode/Kotlin/Kotest Assertions.md)</br>
-┃　　　┃　　　┃　　　┗━　[Kotest Specs](./개발/TestCode/Kotlin/Kotest Specs.md)</br>
-┃　　　┃　　　┃　　　┗━　[Mockk](./개발/TestCode/Kotlin/Mockk.md)</br>
-┃　　　┃　　　┗━　[Mock과 Spy](./개발/TestCode/Mock과 Spy.md)</br>
-┃　　　┗━　[**WAS**](./개발/WAS)</br>
-┃　　　┃　　　┗━　[tomcat 구성요소](./개발/WAS/tomcat 구성요소.md)</br>
-┃　　　┃　　　┗━　[웹서버와 WAS](./개발/WAS/웹서버와 WAS.md)</br>
-┃　　　┗━　[**apache**](./개발/apache)</br>
-┃　　　┃　　　┗━　[Spark](./개발/apache/Spark.md)</br>
-┃　　　┗━　[**go**](./개발/go)</br>
-┃　　　┃　　　┗━　[gomod와 gosum](./개발/go/gomod와 gosum.md)</br>
-┃　　　┗━　[**비동기**](./개발/비동기)</br>
-┃　　　┃　　　┗━　[**coroutine**](./개발/비동기/coroutine)</br>
-┃　　　┃　　　┃　　　┗━　[**thread**](./개발/비동기/coroutine/thread)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[공유객체 스레드 동기화](./개발/비동기/coroutine/thread/공유객체 스레드 동기화.md)</br>
-┃　　　┃　　　┃　　　┗━　[Channel](./개발/비동기/coroutine/Channel.md)</br>
-┃　　　┃　　　┃　　　┗━　[Coroutine CPS](./개발/비동기/coroutine/Coroutine CPS.md)</br>
-┃　　　┃　　　┃　　　┗━　[Coroutine Delay](./개발/비동기/coroutine/Coroutine Delay.md)</br>
-┃　　　┃　　　┃　　　┗━　[Coroutine Dispatcher](./개발/비동기/coroutine/Coroutine Dispatcher.md)</br>
-┃　　　┃　　　┃　　　┗━　[Coroutine Scope, Context](./개발/비동기/coroutine/Coroutine Scope, Context.md)</br>
-┃　　　┃　　　┃　　　┗━　[Integration](./개발/비동기/coroutine/Integration.md)</br>
-┃　　　┃　　　┃　　　┗━　[코루틴](./개발/비동기/coroutine/코루틴.md)</br>
-┃　　　┃　　　┗━　[**reactor**](./개발/비동기/reactor)</br>
-┃　　　┃　　　┃　　　┗━　[Callback과 Futures](./개발/비동기/reactor/Callback과 Futures.md)</br>
-┃　　　┃　　　┃　　　┗━　[Reactor](./개발/비동기/reactor/Reactor.md)</br>
-┃　　　┃　　　┃　　　┗━　[Reactor Pattern과 event loop](./개발/비동기/reactor/Reactor Pattern과 event loop.md)</br>
-┃　　　┃　　　┗━　[Coroutine vs Reactor](./개발/비동기/Coroutine vs Reactor.md)</br>
-┃　　　┃　　　┗━　[Flow](./개발/비동기/Flow.md)</br>
-┃　　　┃　　　┗━　[cold stream과 hot stream](./개발/비동기/cold stream과 hot stream.md)</br>
-┃　　　┃　　　┗━　[netty 사례연구](./개발/비동기/netty 사례연구.md)</br>
-┃　　　┗━　[**암호화**](./개발/암호화)</br>
-┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
-┃　　　┃　　　┗━　[Certificate formats](./개발/암호화/Certificate formats.md)</br>
-┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
-┃　　　┃　　　┗━　[DB 암호화](./개발/암호화/DB 암호화.md)</br>
-┃　　　┗━　[**프레임워크**](./개발/프레임워크)</br>
-┃　　　┃　　　┗━　[**netty**](./개발/프레임워크/netty)</br>
-┃　　　┃　　　┃　　　┗━　[HashedWheelTimer](./개발/프레임워크/netty/HashedWheelTimer.md)</br>
-┃　　　┃　　　┃　　　┗━　[netty server 예제](./개발/프레임워크/netty/netty server 예제.md)</br>
-┃　　　┃　　　┃　　　┗━　[netty 메시지 전송 흐름](./개발/프레임워크/netty/netty 메시지 전송 흐름.md)</br>
-┃　　　┃　　　┃　　　┗━　[netty의 thread 모델](./개발/프레임워크/netty/netty의 thread 모델.md)</br>
-┃　　　┃　　　┃　　　┗━　[webFlux와 netty](./개발/프레임워크/netty/webFlux와 netty.md)</br>
-┃　　　┃　　　┗━　[**node.js**](./개발/프레임워크/node.js)</br>
-┃　　　┃　　　　　　　┗━　[module.exports와 exports](./개발/프레임워크/node.js/module.exports와 exports.md)</br>
-┃　　　┃　　　　　　　┗━　[puppeteer](./개발/프레임워크/node.js/puppeteer.md)</br>
-┃　　　┗━　[CustomAnnotation](./개발/CustomAnnotation.md)</br>
-┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
-┃　　　┗━　[Intellij Profiling tools](./개발/Intellij Profiling tools.md)</br>
-┃　　　┗━　[Keytool](./개발/Keytool.md)</br>
-┃　　　┗━　[Makefile](./개발/Makefile.md)</br>
-┃　　　┗━　[mermaid 문법](./개발/mermaid 문법.md)</br>
-┃　　　┗━　[직렬화 serialVersionUID](./개발/직렬화 serialVersionUID.md)</br>
-┗━　[**객체지향 OOP**](./객체지향 OOP)</br>
-┃　　　┗━　[**디자인패턴**](./객체지향 OOP/디자인패턴)</br>
-┃　　　┃　　　┗━　[**1. 생성패턴**](./객체지향 OOP/디자인패턴/1. 생성패턴)</br>
-┃　　　┃　　　┃　　　┗━　[빌더 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/빌더 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[싱글톤 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/싱글톤 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[추상팩토리 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/추상팩토리 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[팩토리메소드 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/팩토리메소드 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[프로토타입 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/프로토타입 패턴.md)</br>
-┃　　　┃　　　┗━　[**2. 구조패턴**](./객체지향 OOP/디자인패턴/2. 구조패턴)</br>
-┃　　　┃　　　┃　　　┗━　[데코레이터 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/데코레이터 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[브릿지 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/브릿지 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[어댑터 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/어댑터 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[컴포짓 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/컴포짓 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[퍼사드 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/퍼사드 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[프록시 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/프록시 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[플라이웨이트 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/플라이웨이트 패턴.md)</br>
-┃　　　┃　　　┗━　[**3. 행위패턴**](./객체지향 OOP/디자인패턴/3. 행위패턴)</br>
-┃　　　┃　　　┃　　　┗━　[메멘토 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/메멘토 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[방문자 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/방문자 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[상태 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/상태 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[옵저버 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/옵저버 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[이터레이터 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/이터레이터 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[인터프리터 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/인터프리터 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[전략 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/전략 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[중재자 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/중재자 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[책임연쇄 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/책임연쇄 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[커맨드 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/커맨드 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[템플릿메소드 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/템플릿메소드 패턴.md)</br>
-┃　　　┃　　　┗━　[디자인패턴](./객체지향 OOP/디자인패턴/디자인패턴.md)</br>
-┃　　　┃　　　┗━　[위임 패턴(Delegate Pattern)](./객체지향 OOP/디자인패턴/위임 패턴(Delegate Pattern).md)</br>
-┃　　　┗━　[Exponential Backoff And Jitter](./객체지향 OOP/Exponential Backoff And Jitter.md)</br>
-┃　　　┗━　[SOLID](./객체지향 OOP/SOLID.md)</br>
-┃　　　┗━　[응집도와 결합도](./객체지향 OOP/응집도와 결합도.md)</br>
-┗━　[**네트워크 Network**](./네트워크 Network)</br>
-┃　　　┗━　[**L1 network access layer**](./네트워크 Network/L1 network access layer)</br>
-┃　　　┃　　　┗━　[CRC](./네트워크 Network/L1 network access layer/CRC.md)</br>
-┃　　　┃　　　┗━　[Ethernet과 TokenRing](./네트워크 Network/L1 network access layer/Ethernet과 TokenRing.md)</br>
-┃　　　┃　　　┗━　[L2 스위치와 STP](./네트워크 Network/L1 network access layer/L2 스위치와 STP.md)</br>
-┃　　　┃　　　┗━　[MTU](./네트워크 Network/L1 network access layer/MTU.md)</br>
-┃　　　┃　　　┗━　[NIC](./네트워크 Network/L1 network access layer/NIC.md)</br>
-┃　　　┃　　　┗━　[데이터링크 제어(DLC)](./네트워크 Network/L1 network access layer/데이터링크 제어(DLC).md)</br>
-┃　　　┃　　　┗━　[매체 접근 제어(MAC)](./네트워크 Network/L1 network access layer/매체 접근 제어(MAC).md)</br>
-┃　　　┃　　　┗━　[아날로그, 디지털 신호와 전송](./네트워크 Network/L1 network access layer/아날로그, 디지털 신호와 전송.md)</br>
-┃　　　┗━　[**L2 internet layer**](./네트워크 Network/L2 internet layer)</br>
-┃　　　┃　　　┗━　[**라우터**](./네트워크 Network/L2 internet layer/라우터)</br>
-┃　　　┃　　　┃　　　┗━　[라우터](./네트워크 Network/L2 internet layer/라우터/라우터.md)</br>
-┃　　　┃　　　┃　　　┗━　[라우팅 알고리즘](./네트워크 Network/L2 internet layer/라우터/라우팅 알고리즘.md)</br>
-┃　　　┃　　　┃　　　┗━　[멀티캐스트 라우팅](./네트워크 Network/L2 internet layer/라우터/멀티캐스트 라우팅.md)</br>
-┃　　　┃　　　┗━　[CIDR](./네트워크 Network/L2 internet layer/CIDR.md)</br>
-┃　　　┃　　　┗━　[ICMP](./네트워크 Network/L2 internet layer/ICMP.md)</br>
-┃　　　┃　　　┗━　[IP](./네트워크 Network/L2 internet layer/IP.md)</br>
-┃　　　┃　　　┗━　[IPAM](./네트워크 Network/L2 internet layer/IPAM.md)</br>
-┃　　　┃　　　┗━　[IPSec](./네트워크 Network/L2 internet layer/IPSec.md)</br>
-┃　　　┃　　　┗━　[IPVS](./네트워크 Network/L2 internet layer/IPVS.md)</br>
-┃　　　┃　　　┗━　[NAT](./네트워크 Network/L2 internet layer/NAT.md)</br>
-┃　　　┃　　　┗━　[secondary IP](./네트워크 Network/L2 internet layer/secondary IP.md)</br>
-┃　　　┃　　　┗━　[서브넷](./네트워크 Network/L2 internet layer/서브넷.md)</br>
-┃　　　┗━　[**L3 transport layer**](./네트워크 Network/L3 transport layer)</br>
-┃　　　┃　　　┗━　[4계층 장비](./네트워크 Network/L3 transport layer/4계층 장비.md)</br>
-┃　　　┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/L3 transport layer/SO_REUSEADDR.md)</br>
-┃　　　┃　　　┗━　[SSH config](./네트워크 Network/L3 transport layer/SSH config.md)</br>
-┃　　　┃　　　┗━　[TCP와 UDP](./네트워크 Network/L3 transport layer/TCP와 UDP.md)</br>
-┃　　　┗━　[**L4 appplication layer**](./네트워크 Network/L4 appplication layer)</br>
-┃　　　┃　　　┗━　[**tls**](./네트워크 Network/L4 appplication layer/tls)</br>
-┃　　　┃　　　┃　　　┗━　[SNI](./네트워크 Network/L4 appplication layer/tls/SNI.md)</br>
-┃　　　┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/tls/TLS.md)</br>
-┃　　　┃　　　┃　　　┗━　[TLS 인증서 발급 절차를 이해해보자](./네트워크 Network/L4 appplication layer/tls/TLS 인증서 발급 절차를 이해해보자.md)</br>
-┃　　　┃　　　┗━　[ACME](./네트워크 Network/L4 appplication layer/ACME.md)</br>
-┃　　　┃　　　┗━　[CDN](./네트워크 Network/L4 appplication layer/CDN.md)</br>
-┃　　　┃　　　┗━　[DHCP](./네트워크 Network/L4 appplication layer/DHCP.md)</br>
-┃　　　┃　　　┗━　[DNS 레코드유형](./네트워크 Network/L4 appplication layer/DNS 레코드유형.md)</br>
-┃　　　┃　　　┗━　[FTP Active, Passive mode](./네트워크 Network/L4 appplication layer/FTP Active, Passive mode.md)</br>
-┃　　　┃　　　┗━　[HTTP](./네트워크 Network/L4 appplication layer/HTTP.md)</br>
-┃　　　┃　　　┗━　[HTTP Options](./네트워크 Network/L4 appplication layer/HTTP Options.md)</br>
-┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
-┃　　　┗━　[**error**](./네트워크 Network/error)</br>
-┃　　　┃　　　┗━　[Context deadline exceeded](./네트워크 Network/error/Context deadline exceeded.md)</br>
-┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
-┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
-┃　　　┗━　[Switch](./네트워크 Network/Switch.md)</br>
-┃　　　┗━　[bandwidth](./네트워크 Network/bandwidth.md)</br>
-┃　　　┗━　[가상화 기술](./네트워크 Network/가상화 기술.md)</br>
-┃　　　┗━　[네트워크](./네트워크 Network/네트워크.md)</br>
-┃　　　┗━　[네트워크 보안](./네트워크 Network/네트워크 보안.md)</br>
-┃　　　┗━　[로드밸런서](./네트워크 Network/로드밸런서.md)</br>
-┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
-┃　　　┗━　[이중화](./네트워크 Network/이중화.md)</br>
-┗━　[**데브옵스 DevOps**](./데브옵스 DevOps)</br>
-┃　　　┗━　[**AWS**](./데브옵스 DevOps/AWS)</br>
-┃　　　┃　　　┗━　[**Account**](./데브옵스 DevOps/AWS/Account)</br>
-┃　　　┃　　　┃　　　┗━　[Tasks that require root user credentials](./데브옵스 DevOps/AWS/Account/Tasks that require root user credentials.md)</br>
-┃　　　┃　　　┗━　[**Analytics**](./데브옵스 DevOps/AWS/Analytics)</br>
-┃　　　┃　　　┃　　　┗━　[Athena](./데브옵스 DevOps/AWS/Analytics/Athena.md)</br>
-┃　　　┃　　　┃　　　┗━　[EMR](./데브옵스 DevOps/AWS/Analytics/EMR.md)</br>
-┃　　　┃　　　┃　　　┗━　[Glue](./데브옵스 DevOps/AWS/Analytics/Glue.md)</br>
-┃　　　┃　　　┃　　　┗━　[Kinesis](./데브옵스 DevOps/AWS/Analytics/Kinesis.md)</br>
-┃　　　┃　　　┃　　　┗━　[Lake Formation](./데브옵스 DevOps/AWS/Analytics/Lake Formation.md)</br>
-┃　　　┃　　　┗━　[**Computing**](./데브옵스 DevOps/AWS/Computing)</br>
-┃　　　┃　　　┃　　　┗━　[**Auto Scaling**](./데브옵스 DevOps/AWS/Computing/Auto Scaling)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./데브옵스 DevOps/AWS/Computing/Auto Scaling/ASG Lifecycle Hook.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling](./데브옵스 DevOps/AWS/Computing/Auto Scaling/Auto Scaling.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling termination policies](./데브옵스 DevOps/AWS/Computing/Auto Scaling/Auto Scaling termination policies.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Scaling cooldowns](./데브옵스 DevOps/AWS/Computing/Auto Scaling/Scaling cooldowns.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[State Change Event](./데브옵스 DevOps/AWS/Computing/Auto Scaling/State Change Event.md)</br>
-┃　　　┃　　　┃　　　┗━　[**Container**](./데브옵스 DevOps/AWS/Computing/Container)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ECS](./데브옵스 DevOps/AWS/Computing/Container/ECS.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ECS Getting started on Fargate](./데브옵스 DevOps/AWS/Computing/Container/ECS Getting started on Fargate.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ECS 요소](./데브옵스 DevOps/AWS/Computing/Container/ECS 요소.md)</br>
-┃　　　┃　　　┃　　　┗━　[**EC2**](./데브옵스 DevOps/AWS/Computing/EC2)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EC2](./데브옵스 DevOps/AWS/Computing/EC2/EC2.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EC2 Fleet](./데브옵스 DevOps/AWS/Computing/EC2/EC2 Fleet.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Elastic Fabric Adapter](./데브옵스 DevOps/AWS/Computing/EC2/Elastic Fabric Adapter.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Instance Store](./데브옵스 DevOps/AWS/Computing/EC2/Instance Store.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[RI와 Saving plan](./데브옵스 DevOps/AWS/Computing/EC2/RI와 Saving plan.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Spot Instance](./데브옵스 DevOps/AWS/Computing/EC2/Spot Instance.md)</br>
-┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./데브옵스 DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
-┃　　　┃　　　┃　　　┗━　[Fargate](./데브옵스 DevOps/AWS/Computing/Fargate.md)</br>
-┃　　　┃　　　┃　　　┗━　[Lambda](./데브옵스 DevOps/AWS/Computing/Lambda.md)</br>
-┃　　　┃　　　┗━　[**Database**](./데브옵스 DevOps/AWS/Database)</br>
-┃　　　┃　　　┃　　　┗━　[Aurora](./데브옵스 DevOps/AWS/Database/Aurora.md)</br>
-┃　　　┃　　　┃　　　┗━　[DynamoDB](./데브옵스 DevOps/AWS/Database/DynamoDB.md)</br>
-┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Database/EFS.md)</br>
-┃　　　┃　　　┃　　　┗━　[RDS](./데브옵스 DevOps/AWS/Database/RDS.md)</br>
-┃　　　┃　　　┃　　　┗━　[RDS proxy](./데브옵스 DevOps/AWS/Database/RDS proxy.md)</br>
-┃　　　┃　　　┃　　　┗━　[Redshift](./데브옵스 DevOps/AWS/Database/Redshift.md)</br>
-┃　　　┃　　　┗━　[**Management and governance**](./데브옵스 DevOps/AWS/Management and governance)</br>
-┃　　　┃　　　┃　　　┗━　[CloudFormation](./데브옵스 DevOps/AWS/Management and governance/CloudFormation.md)</br>
-┃　　　┃　　　┃　　　┗━　[CloudTrail](./데브옵스 DevOps/AWS/Management and governance/CloudTrail.md)</br>
-┃　　　┃　　　┃　　　┗━　[CloudWatch](./데브옵스 DevOps/AWS/Management and governance/CloudWatch.md)</br>
-┃　　　┃　　　┗━　[**Netwoking**](./데브옵스 DevOps/AWS/Netwoking)</br>
-┃　　　┃　　　┃　　　┗━　[**elb**](./데브옵스 DevOps/AWS/Netwoking/elb)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Application LoadBalancer components](./데브옵스 DevOps/AWS/Netwoking/elb/Application LoadBalancer components.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Connection Draining](./데브옵스 DevOps/AWS/Netwoking/elb/Connection Draining.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ELB](./데브옵스 DevOps/AWS/Netwoking/elb/ELB.md)</br>
-┃　　　┃　　　┃　　　┗━　[**security**](./데브옵스 DevOps/AWS/Netwoking/security)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[NACLs](./데브옵스 DevOps/AWS/Netwoking/security/NACLs.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Security Groups](./데브옵스 DevOps/AWS/Netwoking/security/Security Groups.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[WAF](./데브옵스 DevOps/AWS/Netwoking/security/WAF.md)</br>
-┃　　　┃　　　┃　　　┗━　[Bastion Host](./데브옵스 DevOps/AWS/Netwoking/Bastion Host.md)</br>
-┃　　　┃　　　┃　　　┗━　[CloudFront](./데브옵스 DevOps/AWS/Netwoking/CloudFront.md)</br>
-┃　　　┃　　　┃　　　┗━　[Direct Connect Gateway](./데브옵스 DevOps/AWS/Netwoking/Direct Connect Gateway.md)</br>
-┃　　　┃　　　┃　　　┗━　[EC2 Instance Connect Endpoint](./데브옵스 DevOps/AWS/Netwoking/EC2 Instance Connect Endpoint.md)</br>
-┃　　　┃　　　┃　　　┗━　[ENI](./데브옵스 DevOps/AWS/Netwoking/ENI.md)</br>
-┃　　　┃　　　┃　　　┗━　[Global Accelerator](./데브옵스 DevOps/AWS/Netwoking/Global Accelerator.md)</br>
-┃　　　┃　　　┃　　　┗━　[NAT gateway & NAT instance](./데브옵스 DevOps/AWS/Netwoking/NAT gateway & NAT instance.md)</br>
-┃　　　┃　　　┃　　　┗━　[Route53](./데브옵스 DevOps/AWS/Netwoking/Route53.md)</br>
-┃　　　┃　　　┃　　　┗━　[Transit Gateway](./데브옵스 DevOps/AWS/Netwoking/Transit Gateway.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPC](./데브옵스 DevOps/AWS/Netwoking/VPC.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPC Mapping Service](./데브옵스 DevOps/AWS/Netwoking/VPC Mapping Service.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPC endpoint](./데브옵스 DevOps/AWS/Netwoking/VPC endpoint.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPN](./데브옵스 DevOps/AWS/Netwoking/VPN.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPN Options](./데브옵스 DevOps/AWS/Netwoking/VPN Options.md)</br>
-┃　　　┃　　　┗━　[**Security**](./데브옵스 DevOps/AWS/Security)</br>
-┃　　　┃　　　┃　　　┗━　[AWS Managed Microsoft AD](./데브옵스 DevOps/AWS/Security/AWS Managed Microsoft AD.md)</br>
-┃　　　┃　　　┃　　　┗━　[Cognito](./데브옵스 DevOps/AWS/Security/Cognito.md)</br>
-┃　　　┃　　　┃　　　┗━　[Conformance Packs & Security Hub](./데브옵스 DevOps/AWS/Security/Conformance Packs & Security Hub.md)</br>
-┃　　　┃　　　┃　　　┗━　[IAM](./데브옵스 DevOps/AWS/Security/IAM.md)</br>
-┃　　　┃　　　┃　　　┗━　[KMS](./데브옵스 DevOps/AWS/Security/KMS.md)</br>
-┃　　　┃　　　┃　　　┗━　[KMS Datakey](./데브옵스 DevOps/AWS/Security/KMS Datakey.md)</br>
-┃　　　┃　　　┃　　　┗━　[MalformedPolicyDocument](./데브옵스 DevOps/AWS/Security/MalformedPolicyDocument.md)</br>
-┃　　　┃　　　┃　　　┗━　[Microsoft Active Directory](./데브옵스 DevOps/AWS/Security/Microsoft Active Directory.md)</br>
-┃　　　┃　　　┃　　　┗━　[WAF & Firewall Manager & Shield Advanced](./데브옵스 DevOps/AWS/Security/WAF & Firewall Manager & Shield Advanced.md)</br>
-┃　　　┃　　　┗━　[**Storage**](./데브옵스 DevOps/AWS/Storage)</br>
-┃　　　┃　　　┃　　　┗━　[**EBS**](./데브옵스 DevOps/AWS/Storage/EBS)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EBS](./데브옵스 DevOps/AWS/Storage/EBS/EBS.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EBS gp2 vs gp3](./데브옵스 DevOps/AWS/Storage/EBS/EBS gp2 vs gp3.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EBS vs Instance Store](./데브옵스 DevOps/AWS/Storage/EBS/EBS vs Instance Store.md)</br>
-┃　　　┃　　　┃　　　┗━　[AppSync](./데브옵스 DevOps/AWS/Storage/AppSync.md)</br>
-┃　　　┃　　　┃　　　┗━　[DayaSync](./데브옵스 DevOps/AWS/Storage/DayaSync.md)</br>
-┃　　　┃　　　┃　　　┗━　[EFS](./데브옵스 DevOps/AWS/Storage/EFS.md)</br>
-┃　　　┃　　　┃　　　┗━　[FSx](./데브옵스 DevOps/AWS/Storage/FSx.md)</br>
-┃　　　┃　　　┃　　　┗━　[S3](./데브옵스 DevOps/AWS/Storage/S3.md)</br>
-┃　　　┃　　　┃　　　┗━　[S3 Glacier Vault Lock](./데브옵스 DevOps/AWS/Storage/S3 Glacier Vault Lock.md)</br>
-┃　　　┃　　　┃　　　┗━　[Snow Famliy](./데브옵스 DevOps/AWS/Storage/Snow Famliy.md)</br>
-┃　　　┃　　　┃　　　┗━　[Storage Gateway](./데브옵스 DevOps/AWS/Storage/Storage Gateway.md)</br>
-┃　　　┃　　　┗━　[API Gateway](./데브옵스 DevOps/AWS/API Gateway.md)</br>
-┃　　　┃　　　┗━　[AWS cloud computing](./데브옵스 DevOps/AWS/AWS cloud computing.md)</br>
-┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트 1~3](./데브옵스 DevOps/AWS/SAA 오답노트 1~3.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트 4~6](./데브옵스 DevOps/AWS/SAA 오답노트 4~6.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트 examtopic](./데브옵스 DevOps/AWS/SAA 오답노트 examtopic.md)</br>
-┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
-┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
-┃　　　┗━　[**Container**](./데브옵스 DevOps/Container)</br>
-┃　　　┃　　　┗━　[**CNI**](./데브옵스 DevOps/Container/CNI)</br>
-┃　　　┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI/CNI.md)</br>
-┃　　　┃　　　┃　　　┗━　[Calico](./데브옵스 DevOps/Container/CNI/Calico.md)</br>
-┃　　　┃　　　┃　　　┗━　[Install Calico](./데브옵스 DevOps/Container/CNI/Install Calico.md)</br>
-┃　　　┃　　　┗━　[**Docker**](./데브옵스 DevOps/Container/Docker)</br>
-┃　　　┃　　　┃　　　┗━　[DockerSwarm](./데브옵스 DevOps/Container/Docker/DockerSwarm.md)</br>
-┃　　　┃　　　┃　　　┗━　[Overlay Network](./데브옵스 DevOps/Container/Docker/Overlay Network.md)</br>
-┃　　　┃　　　┃　　　┗━　[Private registry 구축](./데브옵스 DevOps/Container/Docker/Private registry 구축.md)</br>
-┃　　　┃　　　┃　　　┗━　[Prune](./데브옵스 DevOps/Container/Docker/Prune.md)</br>
-┃　　　┃　　　┃　　　┗━　[README](./데브옵스 DevOps/Container/Docker/README.md)</br>
-┃　　　┃　　　┃　　　┗━　[dockersock 권한에러](./데브옵스 DevOps/Container/Docker/dockersock 권한에러.md)</br>
-┃　　　┃　　　┃　　　┗━　[exec user process caused exec format error](./데브옵스 DevOps/Container/Docker/exec user process caused exec format error.md)</br>
-┃　　　┃　　　┃　　　┗━　[가상화와 컨테이너](./데브옵스 DevOps/Container/Docker/가상화와 컨테이너.md)</br>
-┃　　　┃　　　┃　　　┗━　[도커 네트워크](./데브옵스 DevOps/Container/Docker/도커 네트워크.md)</br>
-┃　　　┃　　　┃　　　┗━　[도커 네트워크 명령어](./데브옵스 DevOps/Container/Docker/도커 네트워크 명령어.md)</br>
-┃　　　┃　　　┃　　　┗━　[도커 명령어](./데브옵스 DevOps/Container/Docker/도커 명령어.md)</br>
-┃　　　┃　　　┃　　　┗━　[도커 스토리지](./데브옵스 DevOps/Container/Docker/도커 스토리지.md)</br>
-┃　　　┃　　　┃　　　┗━　[도커 아키텍처](./데브옵스 DevOps/Container/Docker/도커 아키텍처.md)</br>
-┃　　　┃　　　┗━　[ContainerRuntime](./데브옵스 DevOps/Container/ContainerRuntime.md)</br>
-┃　　　┃　　　┗━　[Container Orchestration](./데브옵스 DevOps/Container/Container Orchestration.md)</br>
-┃　　　┃　　　┗━　[cAdvisor](./데브옵스 DevOps/Container/cAdvisor.md)</br>
-┃　　　┗━　[**DR**](./데브옵스 DevOps/DR)</br>
-┃　　　┃　　　┗━　[DR strategies](./데브옵스 DevOps/DR/DR strategies.md)</br>
-┃　　　┃　　　┗━　[Fail over와 서버 이중화](./데브옵스 DevOps/DR/Fail over와 서버 이중화.md)</br>
-┃　　　┗━　[**IaC**](./데브옵스 DevOps/IaC)</br>
-┃　　　┃　　　┗━　[**Terraform**](./데브옵스 DevOps/IaC/Terraform)</br>
-┃　　　┃　　　┃　　　┗━　[Terraform](./데브옵스 DevOps/IaC/Terraform/Terraform.md)</br>
-┃　　　┃　　　┃　　　┗━　[Terraform import와 Terraforming](./데브옵스 DevOps/IaC/Terraform/Terraform import와 Terraforming.md)</br>
-┃　　　┃　　　┃　　　┗━　[Terraform taint](./데브옵스 DevOps/IaC/Terraform/Terraform taint.md)</br>
-┃　　　┃　　　┃　　　┗━　[Terraform with AWS](./데브옵스 DevOps/IaC/Terraform/Terraform with AWS.md)</br>
-┃　　　┃　　　┃　　　┗━　[Terraform 키워드](./데브옵스 DevOps/IaC/Terraform/Terraform 키워드.md)</br>
-┃　　　┃　　　┃　　　┗━　[Terratest](./데브옵스 DevOps/IaC/Terraform/Terratest.md)</br>
-┃　　　┃　　　┃　　　┗━　[aws 서버 네트워크 구축](./데브옵스 DevOps/IaC/Terraform/aws 서버 네트워크 구축.md)</br>
-┃　　　┃　　　┗━　[Ansible](./데브옵스 DevOps/IaC/Ansible.md)</br>
-┃　　　┃　　　┗━　[Cobbler](./데브옵스 DevOps/IaC/Cobbler.md)</br>
-┃　　　┃　　　┗━　[Configuration Drift](./데브옵스 DevOps/IaC/Configuration Drift.md)</br>
-┃　　　┃　　　┗━　[Phoenix Server](./데브옵스 DevOps/IaC/Phoenix Server.md)</br>
-┃　　　┃　　　┗━　[Understanding Ansible, Terraform, Puppet, Chef, and Salt](./데브옵스 DevOps/IaC/Understanding Ansible, Terraform, Puppet, Chef, and Salt.md)</br>
-┃　　　┗━　[**Kubernetes**](./데브옵스 DevOps/Kubernetes)</br>
-┃　　　┃　　　┗━　[**EKS**](./데브옵스 DevOps/Kubernetes/EKS)</br>
-┃　　　┃　　　┃　　　┗━　[AWS Load Balancer Controller](./데브옵스 DevOps/Kubernetes/EKS/AWS Load Balancer Controller.md)</br>
-┃　　　┃　　　┃　　　┗━　[Add IAM to RBAC](./데브옵스 DevOps/Kubernetes/EKS/Add IAM to RBAC.md)</br>
-┃　　　┃　　　┃　　　┗━　[Amazon VPC CNI](./데브옵스 DevOps/Kubernetes/EKS/Amazon VPC CNI.md)</br>
-┃　　　┃　　　┃　　　┗━　[EBS CSI driver](./데브옵스 DevOps/Kubernetes/EKS/EBS CSI driver.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS ALB](./데브옵스 DevOps/Kubernetes/EKS/EKS ALB.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS Control Plane](./데브옵스 DevOps/Kubernetes/EKS/EKS Control Plane.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./데브옵스 DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS Spot Instances with Karpenter](./데브옵스 DevOps/Kubernetes/EKS/EKS Spot Instances with Karpenter.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./데브옵스 DevOps/Kubernetes/EKS/EKS kubecofig.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS 인증과정](./데브옵스 DevOps/Kubernetes/EKS/EKS 인증과정.md)</br>
-┃　　　┃　　　┃　　　┗━　[IP addresse prefix](./데브옵스 DevOps/Kubernetes/EKS/IP addresse prefix.md)</br>
-┃　　　┃　　　┃　　　┗━　[NLB IP mode](./데브옵스 DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
-┃　　　┃　　　┃　　　┗━　[Node not Ready](./데브옵스 DevOps/Kubernetes/EKS/Node not Ready.md)</br>
-┃　　　┃　　　┗━　[**Network**](./데브옵스 DevOps/Kubernetes/Network)</br>
-┃　　　┃　　　┃　　　┗━　[**DNS**](./데브옵스 DevOps/Kubernetes/Network/DNS)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[CoreDNS](./데브옵스 DevOps/Kubernetes/Network/DNS/CoreDNS.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[DNS in k8s](./데브옵스 DevOps/Kubernetes/Network/DNS/DNS in k8s.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[External DNS](./데브옵스 DevOps/Kubernetes/Network/DNS/External DNS.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ServiceDNS](./데브옵스 DevOps/Kubernetes/Network/DNS/ServiceDNS.md)</br>
-┃　　　┃　　　┃　　　┗━　[Debugging DNS Resolution](./데브옵스 DevOps/Kubernetes/Network/Debugging DNS Resolution.md)</br>
-┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Kubernetes/Network/HTTPProxy.md)</br>
-┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./데브옵스 DevOps/Kubernetes/Network/NetworkPolicy.md)</br>
-┃　　　┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network/Network Troubleshooting.md)</br>
-┃　　　┃　　　┃　　　┗━　[Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/Network/Node and Pod Network Layout.md)</br>
-┃　　　┃　　　┃　　　┗━　[eBPF](./데브옵스 DevOps/Kubernetes/Network/eBPF.md)</br>
-┃　　　┃　　　┗━　[**Service Mesh**](./데브옵스 DevOps/Kubernetes/Service Mesh)</br>
-┃　　　┃　　　┃　　　┗━　[**istio**](./데브옵스 DevOps/Kubernetes/Service Mesh/istio)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Dry run](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Dry run.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istioctl](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istioctl.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio And Envoy](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio And Envoy.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio Arcitecture.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio Configuration Profiles.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio RBAC](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio RBAC.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio authorization](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio authorization.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Resource Annotations & Labels](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Resource Annotations & Labels.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[ServiceEntry](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/ServiceEntry.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[gateway log debug 하는 법](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/gateway log debug 하는 법.md)</br>
-┃　　　┃　　　┗━　[**tools**](./데브옵스 DevOps/Kubernetes/tools)</br>
-┃　　　┃　　　┃　　　┗━　[**ArgoCD**](./데브옵스 DevOps/Kubernetes/tools/ArgoCD)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ApplicationSets](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/ApplicationSets.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Apps of Apps](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/Apps of Apps.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/ArgoCD 설치.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Config Management Plugins](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/Config Management Plugins.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Health Check](./데브옵스 DevOps/Kubernetes/tools/ArgoCD/Health Check.md)</br>
-┃　　　┃　　　┃　　　┗━　[**Karpenter**](./데브옵스 DevOps/Kubernetes/tools/Karpenter)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter](./데브옵스 DevOps/Kubernetes/tools/Karpenter/Karpenter.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter best practices](./데브옵스 DevOps/Kubernetes/tools/Karpenter/Karpenter best practices.md)</br>
-┃　　　┃　　　┃　　　┗━　[**Kyverno**](./데브옵스 DevOps/Kubernetes/tools/Kyverno)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Kyverno](./데브옵스 DevOps/Kubernetes/tools/Kyverno/Kyverno.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Usecases](./데브옵스 DevOps/Kubernetes/tools/Kyverno/Usecases.md)</br>
-┃　　　┃　　　┃　　　┗━　[**helm**](./데브옵스 DevOps/Kubernetes/tools/helm)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./데브옵스 DevOps/Kubernetes/tools/helm/Chart Development Tips.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/tools/helm/Helm.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/tools/helm/Values Files.md)</br>
-┃　　　┃　　　┃　　　┗━　[Install Cilium](./데브옵스 DevOps/Kubernetes/tools/Install Cilium.md)</br>
-┃　　　┃　　　┃　　　┗━　[Node Termination Handler](./데브옵스 DevOps/Kubernetes/tools/Node Termination Handler.md)</br>
-┃　　　┃　　　┃　　　┗━　[OPA Gatekeeper](./데브옵스 DevOps/Kubernetes/tools/OPA Gatekeeper.md)</br>
-┃　　　┃　　　┃　　　┗━　[node━shell](./데브옵스 DevOps/Kubernetes/tools/node━shell.md)</br>
-┃　　　┃　　　┗━　[**개념**](./데브옵스 DevOps/Kubernetes/개념)</br>
-┃　　　┃　　　┃　　　┗━　[**Node Scheduling**](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/Assigning Pods to Nodes.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Taints and Tolerations](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/Taints and Tolerations.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[cordon, drain](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/cordon, drain.md)</br>
-┃　　　┃　　　┃　　　┗━　[**Volume**](./데브옵스 DevOps/Kubernetes/개념/Volume)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[CSIDriver](./데브옵스 DevOps/Kubernetes/개념/Volume/CSIDriver.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[attachdetach━controller](./데브옵스 DevOps/Kubernetes/개념/Volume/attachdetach━controller.md)</br>
-┃　　　┃　　　┃　　　┗━　[**object**](./데브옵스 DevOps/Kubernetes/개념/object)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Kubernetes/개념/object/Annotation.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/개념/object/CRD.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Deployment　Status](./데브옵스 DevOps/Kubernetes/개념/object/Deployment　Status.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Deployment　Strategy](./데브옵스 DevOps/Kubernetes/개념/object/Deployment　Strategy.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/개념/object/Deployments.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Events](./데브옵스 DevOps/Kubernetes/개념/object/Events.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Labels and Selectors](./데브옵스 DevOps/Kubernetes/개념/object/Labels and Selectors.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[PV & PVC](./데브옵스 DevOps/Kubernetes/개념/object/PV & PVC.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Pod](./데브옵스 DevOps/Kubernetes/개념/object/Pod.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Pod Readiness and Probes](./데브옵스 DevOps/Kubernetes/개념/object/Pod Readiness and Probes.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Pod 생성과정](./데브옵스 DevOps/Kubernetes/개념/object/Pod 생성과정.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[RollingUpdate](./데브옵스 DevOps/Kubernetes/개념/object/RollingUpdate.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Service와 port](./데브옵스 DevOps/Kubernetes/개념/object/Service와 port.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[StatefulSets](./데브옵스 DevOps/Kubernetes/개념/object/StatefulSets.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ingress](./데브옵스 DevOps/Kubernetes/개념/object/ingress.md)</br>
-┃　　　┃　　　┃　　　┗━　[CNI Specification](./데브옵스 DevOps/Kubernetes/개념/CNI Specification.md)</br>
-┃　　　┃　　　┃　　　┗━　[Disruption Budget](./데브옵스 DevOps/Kubernetes/개념/Disruption Budget.md)</br>
-┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/개념/Endpoints.md)</br>
-┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/개념/K8s의 도커런타임 사용중단.md)</br>
-┃　　　┃　　　┃　　　┗━　[Kubeproxy](./데브옵스 DevOps/Kubernetes/개념/Kubeproxy.md)</br>
-┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/개념/NodePort와 ServicePort와 targetPort.md)</br>
-┃　　　┃　　　┃　　　┗━　[Workloads](./데브옵스 DevOps/Kubernetes/개념/Workloads.md)</br>
-┃　　　┃　　　┃　　　┗━　[etcd](./데브옵스 DevOps/Kubernetes/개념/etcd.md)</br>
-┃　　　┃　　　┃　　　┗━　[가상 IP와 서비스 프록시](./데브옵스 DevOps/Kubernetes/개념/가상 IP와 서비스 프록시.md)</br>
-┃　　　┃　　　┃　　　┗━　[사이드카 패턴](./데브옵스 DevOps/Kubernetes/개념/사이드카 패턴.md)</br>
-┃　　　┃　　　┗━　[**실습**](./데브옵스 DevOps/Kubernetes/실습)</br>
-┃　　　┃　　　┃　　　┗━　[**Auth**](./데브옵스 DevOps/Kubernetes/실습/Auth)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Authenticating](./데브옵스 DevOps/Kubernetes/실습/Auth/Authenticating.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[OIDC Authentication with Dex](./데브옵스 DevOps/Kubernetes/실습/Auth/OIDC Authentication with Dex.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Security Context for a Pod or Container](./데브옵스 DevOps/Kubernetes/실습/Auth/Security Context for a Pod or Container.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Token Webhook with Guard](./데브옵스 DevOps/Kubernetes/실습/Auth/Token Webhook with Guard.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[k8s 클러스터 root CA를 통한 사용자 인증](./데브옵스 DevOps/Kubernetes/실습/Auth/k8s 클러스터 root CA를 통한 사용자 인증.md)</br>
-┃　　　┃　　　┃　　　┗━　[10 most common mistakes using kubernetes](./데브옵스 DevOps/Kubernetes/실습/10 most common mistakes using kubernetes.md)</br>
-┃　　　┃　　　┃　　　┗━　[Cert manager](./데브옵스 DevOps/Kubernetes/실습/Cert manager.md)</br>
-┃　　　┃　　　┃　　　┗━　[End user RBAC](./데브옵스 DevOps/Kubernetes/실습/End user RBAC.md)</br>
-┃　　　┃　　　┃　　　┗━　[K8s를 위한 SpringBoot 개발](./데브옵스 DevOps/Kubernetes/실습/K8s를 위한 SpringBoot 개발.md)</br>
-┃　　　┃　　　┃　　　┗━　[NetworkPolicy Cilium example](./데브옵스 DevOps/Kubernetes/실습/NetworkPolicy Cilium example.md)</br>
-┃　　　┃　　　┃　　　┗━　[Pulling images from ECR on Kubernetes](./데브옵스 DevOps/Kubernetes/실습/Pulling images from ECR on Kubernetes.md)</br>
-┃　　　┃　　　┃　　　┗━　[SpringBoot 서비스를 위한 Kubernetes 설정](./데브옵스 DevOps/Kubernetes/실습/SpringBoot 서비스를 위한 Kubernetes 설정.md)</br>
-┃　　　┃　　　┃　　　┗━　[kubectl context](./데브옵스 DevOps/Kubernetes/실습/kubectl context.md)</br>
-┃　　　┃　　　┃　　　┗━　[minukube 시작하기](./데브옵스 DevOps/Kubernetes/실습/minukube 시작하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[환경변수 설정](./데브옵스 DevOps/Kubernetes/실습/환경변수 설정.md)</br>
-┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Kubernetes/K8s Architecture.md)</br>
-┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
-┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./데브옵스 DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
-┃　　　┃　　　┗━　[**test.yml**](./데브옵스 DevOps/Kubernetes/test.yml)</br>
-┃　　　┗━　[**Monitoring**](./데브옵스 DevOps/Monitoring)</br>
-┃　　　┃　　　┗━　[**Dashboad**](./데브옵스 DevOps/Monitoring/Dashboad)</br>
-┃　　　┃　　　┃　　　┗━　[kiali with prometheus](./데브옵스 DevOps/Monitoring/Dashboad/kiali with prometheus.md)</br>
-┃　　　┃　　　┗━　[**datadog**](./데브옵스 DevOps/Monitoring/datadog)</br>
-┃　　　┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Monitoring/datadog/datadog.md)</br>
-┃　　　┃　　　┃　　　┗━　[datadog APM 기능 사용하기](./데브옵스 DevOps/Monitoring/datadog/datadog APM 기능 사용하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[datadog 아키텍처](./데브옵스 DevOps/Monitoring/datadog/datadog 아키텍처.md)</br>
-┃　　　┃　　　┃　　　┗━　[helmChart로 Agent 설치](./데브옵스 DevOps/Monitoring/datadog/helmChart로 Agent 설치.md)</br>
-┃　　　┃　　　┗━　[**elk**](./데브옵스 DevOps/Monitoring/elk)</br>
-┃　　　┃　　　┃　　　┗━　[ELK Stack](./데브옵스 DevOps/Monitoring/elk/ELK Stack.md)</br>
-┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./데브옵스 DevOps/Monitoring/elk/ElasticSearch 검색 명령어.md)</br>
-┃　　　┃　　　┃　　　┗━　[Elastic Search](./데브옵스 DevOps/Monitoring/elk/Elastic Search.md)</br>
-┃　　　┃　　　┃　　　┗━　[Logstash](./데브옵스 DevOps/Monitoring/elk/Logstash.md)</br>
-┃　　　┃　　　┗━　[**grafana**](./데브옵스 DevOps/Monitoring/grafana)</br>
-┃　　　┃　　　┃　　　┗━　[Loki Canary](./데브옵스 DevOps/Monitoring/grafana/Loki Canary.md)</br>
-┃　　　┃　　　┗━　[**prometheus**](./데브옵스 DevOps/Monitoring/prometheus)</br>
-┃　　　┃　　　┃　　　┗━　[prometheus](./데브옵스 DevOps/Monitoring/prometheus/prometheus.md)</br>
-┃　　　┃　　　┃　　　┗━　[prometheus agent mode](./데브옵스 DevOps/Monitoring/prometheus/prometheus agent mode.md)</br>
-┃　　　┃　　　┃　　　┗━　[prometheus glossary](./데브옵스 DevOps/Monitoring/prometheus/prometheus glossary.md)</br>
-┃　　　┃　　　┃　　　┗━　[prometheus storage](./데브옵스 DevOps/Monitoring/prometheus/prometheus storage.md)</br>
-┃　　　┃　　　┗━　[**thanos**](./데브옵스 DevOps/Monitoring/thanos)</br>
-┃　　　┃　　　┃　　　┗━　[Rule](./데브옵스 DevOps/Monitoring/thanos/Rule.md)</br>
-┃　　　┃　　　┃　　　┗━　[Thanos](./데브옵스 DevOps/Monitoring/thanos/Thanos.md)</br>
-┃　　　┃　　　┗━　[Grok exporter](./데브옵스 DevOps/Monitoring/Grok exporter.md)</br>
-┃　　　┃　　　┗━　[telemetry](./데브옵스 DevOps/Monitoring/telemetry.md)</br>
-┃　　　┗━　[**Proxy**](./데브옵스 DevOps/Proxy)</br>
-┃　　　┃　　　┗━　[**envoy**](./데브옵스 DevOps/Proxy/envoy)</br>
-┃　　　┃　　　┃　　　┗━　[Envoy](./데브옵스 DevOps/Proxy/envoy/Envoy.md)</br>
-┃　　　┃　　　┃　　　┗━　[LDS](./데브옵스 DevOps/Proxy/envoy/LDS.md)</br>
-┃　　　┃　　　┃　　　┗━　[xDS configuration](./데브옵스 DevOps/Proxy/envoy/xDS configuration.md)</br>
-┃　　　┃　　　┗━　[**nginx**](./데브옵스 DevOps/Proxy/nginx)</br>
-┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./데브옵스 DevOps/Proxy/nginx/NGINX Ingress Basic Auth.md)</br>
-┃　　　┃　　　┃　　　┗━　[location block](./데브옵스 DevOps/Proxy/nginx/location block.md)</br>
-┃　　　┃　　　┃　　　┗━　[nginx certbot](./데브옵스 DevOps/Proxy/nginx/nginx certbot.md)</br>
-┃　　　┃　　　┃　　　┗━　[nginx docker](./데브옵스 DevOps/Proxy/nginx/nginx docker.md)</br>
-┃　　　┃　　　┃　　　┗━　[nginx 명령어](./데브옵스 DevOps/Proxy/nginx/nginx 명령어.md)</br>
-┃　　　┃　　　┃　　　┗━　[nginx 설정](./데브옵스 DevOps/Proxy/nginx/nginx 설정.md)</br>
-┃　　　┃　　　┃　　　┗━　[sites━available](./데브옵스 DevOps/Proxy/nginx/sites━available.md)</br>
-┃　　　┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/Proxy/nginx/리버스 프록시.md)</br>
-┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
-┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Proxy/Contour CRD 설치.md)</br>
-┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
-┃　　　┗━　[**architecture**](./데브옵스 DevOps/architecture)</br>
-┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
-┃　　　┗━　[**tools**](./데브옵스 DevOps/tools)</br>
-┃　　　┃　　　┗━　[Dex](./데브옵스 DevOps/tools/Dex.md)</br>
-┃　　　┃　　　┗━　[Dex K8s Authenticator](./데브옵스 DevOps/tools/Dex K8s Authenticator.md)</br>
-┃　　　┃　　　┗━　[GPG](./데브옵스 DevOps/tools/GPG.md)</br>
-┃　　　┃　　　┗━　[Keycloak](./데브옵스 DevOps/tools/Keycloak.md)</br>
-┃　　　┃　　　┗━　[Packer](./데브옵스 DevOps/tools/Packer.md)</br>
-┃　　　┃　　　┗━　[minio](./데브옵스 DevOps/tools/minio.md)</br>
-┃　　　┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./데브옵스 DevOps/tools/openssl로 pemKey 만들고 접속하기.md)</br>
-┃　　　┗━　[CI／CD파이프라인](./데브옵스 DevOps/CI／CD파이프라인.md)</br>
-┃　　　┗━　[Cloud Agnostic Design](./데브옵스 DevOps/Cloud Agnostic Design.md)</br>
-┃　　　┗━　[데브옵스](./데브옵스 DevOps/데브옵스.md)</br>
-┗━　[**데이터베이스 DataBase**](./데이터베이스 DataBase)</br>
-┃　　　┗━　[**DB설계**](./데이터베이스 DataBase/DB설계)</br>
-┃　　　┃　　　┗━　[DBMS와 RDBMS](./데이터베이스 DataBase/DB설계/DBMS와 RDBMS.md)</br>
-┃　　　┃　　　┗━　[데이터모델링](./데이터베이스 DataBase/DB설계/데이터모델링.md)</br>
-┃　　　┃　　　┗━　[무결성 제약조건](./데이터베이스 DataBase/DB설계/무결성 제약조건.md)</br>
-┃　　　┃　　　┗━　[분산데이터베이스](./데이터베이스 DataBase/DB설계/분산데이터베이스.md)</br>
-┃　　　┃　　　┗━　[스키마](./데이터베이스 DataBase/DB설계/스키마.md)</br>
-┃　　　┃　　　┗━　[정규화와 반정규화](./데이터베이스 DataBase/DB설계/정규화와 반정규화.md)</br>
-┃　　　┃　　　┗━　[테이블분할](./데이터베이스 DataBase/DB설계/테이블분할.md)</br>
-┃　　　┃　　　┗━　[트랜잭션 ACID와 격리수준](./데이터베이스 DataBase/DB설계/트랜잭션 ACID와 격리수준.md)</br>
-┃　　　┗━　[**MQ**](./데이터베이스 DataBase/MQ)</br>
-┃　　　┃　　　┗━　[Docker로 Kafka 실행](./데이터베이스 DataBase/MQ/Docker로 Kafka 실행.md)</br>
-┃　　　┃　　　┗━　[RabbitMQ](./데이터베이스 DataBase/MQ/RabbitMQ.md)</br>
-┃　　　┃　　　┗━　[Spring with Kafka](./데이터베이스 DataBase/MQ/Spring with Kafka.md)</br>
-┃　　　┃　　　┗━　[메시지큐](./데이터베이스 DataBase/MQ/메시지큐.md)</br>
-┃　　　┗━　[**NoSQL**](./데이터베이스 DataBase/NoSQL)</br>
-┃　　　┃　　　┗━　[**MongoDB**](./데이터베이스 DataBase/NoSQL/MongoDB)</br>
-┃　　　┃　　　┃　　　┗━　[BinData](./데이터베이스 DataBase/NoSQL/MongoDB/BinData.md)</br>
-┃　　　┃　　　┃　　　┗━　[Homebrew로 MongoDB설치하기](./데이터베이스 DataBase/NoSQL/MongoDB/Homebrew로 MongoDB설치하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[MongoDB](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB.md)</br>
-┃　　　┃　　　┃　　　┗━　[MongoDB Document로 POJO 상속받기](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB Document로 POJO 상속받기.md)</br>
-┃　　　┃　　　┃　　　┗━　[MongoDB 스키마설계 고려사항](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB 스키마설계 고려사항.md)</br>
-┃　　　┃　　　┃　　　┗━　[MongoDB 유저관리](./데이터베이스 DataBase/NoSQL/MongoDB/MongoDB 유저관리.md)</br>
-┃　　　┃　　　┗━　[**PostgreSQL**](./데이터베이스 DataBase/NoSQL/PostgreSQL)</br>
-┃　　　┃　　　┃　　　┗━　[PostgreSQL](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL.md)</br>
-┃　　　┃　　　┃　　　┗━　[PostgreSQL명령어](./데이터베이스 DataBase/NoSQL/PostgreSQL/PostgreSQL명령어.md)</br>
-┃　　　┃　　　┗━　[**redis**](./데이터베이스 DataBase/NoSQL/redis)</br>
-┃　　　┃　　　┃　　　┗━　[Redis](./데이터베이스 DataBase/NoSQL/redis/Redis.md)</br>
-┃　　　┃　　　┃　　　┗━　[Spring Redis Phantomkey](./데이터베이스 DataBase/NoSQL/redis/Spring Redis Phantomkey.md)</br>
-┃　　　┃　　　┗━　[Cassandra](./데이터베이스 DataBase/NoSQL/Cassandra.md)</br>
-┃　　　┃　　　┗━　[Memcached VS Redis](./데이터베이스 DataBase/NoSQL/Memcached VS Redis.md)</br>
-┃　　　┃　　　┗━　[NoSQL 데이터유형](./데이터베이스 DataBase/NoSQL/NoSQL 데이터유형.md)</br>
-┃　　　┃　　　┗━　[NoSQL에는 ACID가 없다고？](./데이터베이스 DataBase/NoSQL/NoSQL에는 ACID가 없다고？.md)</br>
-┃　　　┗━　[**SQL**](./데이터베이스 DataBase/SQL)</br>
-┃　　　┃　　　┗━　[**최적화**](./데이터베이스 DataBase/SQL/최적화)</br>
-┃　　　┃　　　┃　　　┗━　[DB 커넥션 풀](./데이터베이스 DataBase/SQL/최적화/DB 커넥션 풀.md)</br>
-┃　　　┃　　　┃　　　┗━　[옵티마이저](./데이터베이스 DataBase/SQL/최적화/옵티마이저.md)</br>
-┃　　　┃　　　┃　　　┗━　[조인 수행원리](./데이터베이스 DataBase/SQL/최적화/조인 수행원리.md)</br>
-┃　　　┃　　　┗━　[**쿼리종류**](./데이터베이스 DataBase/SQL/쿼리종류)</br>
-┃　　　┃　　　┃　　　┗━　[DCL](./데이터베이스 DataBase/SQL/쿼리종류/DCL.md)</br>
-┃　　　┃　　　┃　　　┗━　[DDL](./데이터베이스 DataBase/SQL/쿼리종류/DDL.md)</br>
-┃　　　┃　　　┃　　　┗━　[DML](./데이터베이스 DataBase/SQL/쿼리종류/DML.md)</br>
-┃　　　┃　　　┃　　　┗━　[Procedural／Nonprocedural DML](./데이터베이스 DataBase/SQL/쿼리종류/Procedural／Nonprocedural DML.md)</br>
-┃　　　┃　　　┃　　　┗━　[TCL](./데이터베이스 DataBase/SQL/쿼리종류/TCL.md)</br>
-┃　　　┃　　　┗━　[Alias](./데이터베이스 DataBase/SQL/Alias.md)</br>
-┃　　　┃　　　┗━　[FK옵션](./데이터베이스 DataBase/SQL/FK옵션.md)</br>
-┃　　　┃　　　┗━　[GROUPING SETS와 GROUPING](./데이터베이스 DataBase/SQL/GROUPING SETS와 GROUPING.md)</br>
-┃　　　┃　　　┗━　[GROUP BY와 HAVING절](./데이터베이스 DataBase/SQL/GROUP BY와 HAVING절.md)</br>
-┃　　　┃　　　┗━　[INNER JOIN과 OUTER JOIN](./데이터베이스 DataBase/SQL/INNER JOIN과 OUTER JOIN.md)</br>
-┃　　　┃　　　┗━　[ON절](./데이터베이스 DataBase/SQL/ON절.md)</br>
-┃　　　┃　　　┗━　[ORDER BY절](./데이터베이스 DataBase/SQL/ORDER BY절.md)</br>
-┃　　　┃　　　┗━　[ROLLUP과 CUBE](./데이터베이스 DataBase/SQL/ROLLUP과 CUBE.md)</br>
-┃　　　┃　　　┗━　[SELECT쿼리 실행순서](./데이터베이스 DataBase/SQL/SELECT쿼리 실행순서.md)</br>
-┃　　　┃　　　┗━　[계층형 질의](./데이터베이스 DataBase/SQL/계층형 질의.md)</br>
-┃　　　┃　　　┗━　[서브쿼리](./데이터베이스 DataBase/SQL/서브쿼리.md)</br>
-┃　　　┃　　　┗━　[윈도우 함수](./데이터베이스 DataBase/SQL/윈도우 함수.md)</br>
-┃　　　┃　　　┗━　[제약조건](./데이터베이스 DataBase/SQL/제약조건.md)</br>
-┃　　　┃　　　┗━　[집계함수](./데이터베이스 DataBase/SQL/집계함수.md)</br>
-┃　　　┃　　　┗━　[집합연산자](./데이터베이스 DataBase/SQL/집합연산자.md)</br>
-┃　　　┗━　[Change Date Capture](./데이터베이스 DataBase/Change Date Capture.md)</br>
-┃　　　┗━　[Column, Row기반 DB](./데이터베이스 DataBase/Column, Row기반 DB.md)</br>
-┃　　　┗━　[Data Lake와 Warehouse](./데이터베이스 DataBase/Data Lake와 Warehouse.md)</br>
-┃　　　┗━　[MySQL Replication](./데이터베이스 DataBase/MySQL Replication.md)</br>
-┃　　　┗━　[OLAP](./데이터베이스 DataBase/OLAP.md)</br>
-┗━　[**스프링 Spring**](./스프링 Spring)</br>
-┃　　　┗━　[**AOP**](./스프링 Spring/AOP)</br>
-┃　　　┃　　　┗━　[**트랜잭션**](./스프링 Spring/AOP/트랜잭션)</br>
-┃　　　┃　　　┃　　　┗━　[TransactionAttributeSource](./스프링 Spring/AOP/트랜잭션/TransactionAttributeSource.md)</br>
-┃　　　┃　　　┃　　　┗━　[트랜잭션](./스프링 Spring/AOP/트랜잭션/트랜잭션.md)</br>
-┃　　　┃　　　┃　　　┗━　[트랜잭션 전파](./스프링 Spring/AOP/트랜잭션/트랜잭션 전파.md)</br>
-┃　　　┃　　　┗━　[AdviceAnnotation](./스프링 Spring/AOP/AdviceAnnotation.md)</br>
-┃　　　┃　　　┗━　[Pointcut](./스프링 Spring/AOP/Pointcut.md)</br>
-┃　　　┃　　　┗━　[ProxyFactoryBean](./스프링 Spring/AOP/ProxyFactoryBean.md)</br>
-┃　　　┃　　　┗━　[Spring AOP](./스프링 Spring/AOP/Spring AOP.md)</br>
-┃　　　┃　　　┗━　[Spring에서 aspectj weaving사용하기](./스프링 Spring/AOP/Spring에서 aspectj weaving사용하기.md)</br>
-┃　　　┗━　[**Event**](./스프링 Spring/Event)</br>
-┃　　　┃　　　┗━　[@TransactionalEventListener](./스프링 Spring/Event/@TransactionalEventListener.md)</br>
-┃　　　┃　　　┗━　[ApplicationEventPublisher](./스프링 Spring/Event/ApplicationEventPublisher.md)</br>
-┃　　　┗━　[**JPA**](./스프링 Spring/JPA)</br>
-┃　　　┃　　　┗━　[**JPQL**](./스프링 Spring/JPA/JPQL)</br>
-┃　　　┃　　　┃　　　┗━　[FetchJoin](./스프링 Spring/JPA/JPQL/FetchJoin.md)</br>
-┃　　　┃　　　┃　　　┗━　[경로표현식](./스프링 Spring/JPA/JPQL/경로표현식.md)</br>
-┃　　　┃　　　┗━　[**QuerydslJpa**](./스프링 Spring/JPA/QuerydslJpa)</br>
-┃　　　┃　　　┃　　　┗━　[Paging](./스프링 Spring/JPA/QuerydslJpa/Paging.md)</br>
-┃　　　┃　　　┃　　　┗━　[Projection](./스프링 Spring/JPA/QuerydslJpa/Projection.md)</br>
-┃　　　┃　　　┃　　　┗━　[QClass](./스프링 Spring/JPA/QuerydslJpa/QClass.md)</br>
-┃　　　┃　　　┃　　　┗━　[QuerydslJpa](./스프링 Spring/JPA/QuerydslJpa/QuerydslJpa.md)</br>
-┃　　　┃　　　┃　　　┗━　[QuerydslPredicateExecutor](./스프링 Spring/JPA/QuerydslJpa/QuerydslPredicateExecutor.md)</br>
-┃　　　┃　　　┃　　　┗━　[fetchResults가 deprecated된 이유](./스프링 Spring/JPA/QuerydslJpa/fetchResults가 deprecated된 이유.md)</br>
-┃　　　┃　　　┃　　　┗━　[기본문법](./스프링 Spring/JPA/QuerydslJpa/기본문법.md)</br>
-┃　　　┃　　　┃　　　┗━　[동적쿼리](./스프링 Spring/JPA/QuerydslJpa/동적쿼리.md)</br>
-┃　　　┃　　　┃　　　┗━　[벌크연산](./스프링 Spring/JPA/QuerydslJpa/벌크연산.md)</br>
-┃　　　┃　　　┗━　[**캐싱**](./스프링 Spring/JPA/캐싱)</br>
-┃　　　┃　　　┃　　　┗━　[1차캐시](./스프링 Spring/JPA/캐싱/1차캐시.md)</br>
-┃　　　┃　　　┃　　　┗━　[2차캐시](./스프링 Spring/JPA/캐싱/2차캐시.md)</br>
-┃　　　┃　　　┃　　　┗━　[영속성 컨텍스트](./스프링 Spring/JPA/캐싱/영속성 컨텍스트.md)</br>
-┃　　　┃　　　┗━　[@GeneratedValue 코드보기](./스프링 Spring/JPA/@GeneratedValue 코드보기.md)</br>
-┃　　　┃　　　┗━　[Cascade](./스프링 Spring/JPA/Cascade.md)</br>
-┃　　　┃　　　┗━　[GenerateValue Column에 값을 넣는다면](./스프링 Spring/JPA/GenerateValue Column에 값을 넣는다면.md)</br>
-┃　　　┃　　　┗━　[Hibernate dialect](./스프링 Spring/JPA/Hibernate dialect.md)</br>
-┃　　　┃　　　┗━　[Hibernate 쿼리실행순서](./스프링 Spring/JPA/Hibernate 쿼리실행순서.md)</br>
-┃　　　┃　　　┗━　[Id로 연관관계 객체 저장](./스프링 Spring/JPA/Id로 연관관계 객체 저장.md)</br>
-┃　　　┃　　　┗━　[JDBC Object Mapping Fundamentalsentity](./스프링 Spring/JPA/JDBC Object Mapping Fundamentalsentity.md)</br>
-┃　　　┃　　　┗━　[JPA](./스프링 Spring/JPA/JPA.md)</br>
-┃　　　┃　　　┗━　[N+1 문제](./스프링 Spring/JPA/N+1 문제.md)</br>
-┃　　　┃　　　┗━　[OrphanRemoval](./스프링 Spring/JPA/OrphanRemoval.md)</br>
-┃　　　┃　　　┗━　[Persistable](./스프링 Spring/JPA/Persistable.md)</br>
-┃　　　┃　　　┗━　[ReadOnlyQuery 최적화](./스프링 Spring/JPA/ReadOnlyQuery 최적화.md)</br>
-┃　　　┃　　　┗━　[벌크연산](./스프링 Spring/JPA/벌크연산.md)</br>
-┃　　　┃　　　┗━　[트랜잭션 전파 설정](./스프링 Spring/JPA/트랜잭션 전파 설정.md)</br>
-┃　　　┗━　[**SpringSecurity**](./스프링 Spring/SpringSecurity)</br>
-┃　　　┃　　　┗━　[CORS](./스프링 Spring/SpringSecurity/CORS.md)</br>
-┃　　　┃　　　┗━　[CSRF](./스프링 Spring/SpringSecurity/CSRF.md)</br>
-┃　　　┃　　　┗━　[authn과 authz](./스프링 Spring/SpringSecurity/authn과 authz.md)</br>
-┃　　　┗━　[**Validation**](./스프링 Spring/Validation)</br>
-┃　　　┃　　　┗━　[@GroupSequence](./스프링 Spring/Validation/@GroupSequence.md)</br>
-┃　　　┃　　　┗━　[@Valid와 @Validated](./스프링 Spring/Validation/@Valid와 @Validated.md)</br>
-┃　　　┗━　[**WebFlux**](./스프링 Spring/WebFlux)</br>
-┃　　　┃　　　┗━　[**R2DBC**](./스프링 Spring/WebFlux/R2DBC)</br>
-┃　　　┃　　　┃　　　┗━　[R2DBC](./스프링 Spring/WebFlux/R2DBC/R2DBC.md)</br>
-┃　　　┃　　　┃　　　┗━　[R2DBC 사용](./스프링 Spring/WebFlux/R2DBC/R2DBC 사용.md)</br>
-┃　　　┃　　　┗━　[@Controller](./스프링 Spring/WebFlux/@Controller.md)</br>
-┃　　　┃　　　┗━　[RouterFunctions](./스프링 Spring/WebFlux/RouterFunctions.md)</br>
-┃　　　┃　　　┗━　[WebClient](./스프링 Spring/WebFlux/WebClient.md)</br>
-┃　　　┃　　　┗━　[WebFilter](./스프링 Spring/WebFlux/WebFilter.md)</br>
-┃　　　┃　　　┗━　[WebFlux](./스프링 Spring/WebFlux/WebFlux.md)</br>
-┃　　　┗━　[**Web MVC**](./스프링 Spring/Web MVC)</br>
-┃　　　┃　　　┗━　[Request 처리과정](./스프링 Spring/Web MVC/Request 처리과정.md)</br>
-┃　　　┃　　　┗━　[SpringServletContainerInitializer](./스프링 Spring/Web MVC/SpringServletContainerInitializer.md)</br>
-┃　　　┗━　[**기본원리**](./스프링 Spring/기본원리)</br>
-┃　　　┃　　　┗━　[@Autowired 빈 주입 스캔 원리](./스프링 Spring/기본원리/@Autowired 빈 주입 스캔 원리.md)</br>
-┃　　　┃　　　┗━　[@ComponentScan](./스프링 Spring/기본원리/@ComponentScan.md)</br>
-┃　　　┃　　　┗━　[@Component VS @Service](./스프링 Spring/기본원리/@Component VS @Service.md)</br>
-┃　　　┃　　　┗━　[Ioc와 DI](./스프링 Spring/기본원리/Ioc와 DI.md)</br>
-┃　　　┃　　　┗━　[Programmatic과 Declarative](./스프링 Spring/기본원리/Programmatic과 Declarative.md)</br>
-┃　　　┃　　　┗━　[Reflection과 직렬화](./스프링 Spring/기본원리/Reflection과 직렬화.md)</br>
-┃　　　┃　　　┗━　[등록된 빈 목록 출력하기](./스프링 Spring/기본원리/등록된 빈 목록 출력하기.md)</br>
-┃　　　┃　　　┗━　[빈](./스프링 Spring/기본원리/빈.md)</br>
-┃　　　┃　　　┗━　[선점 잠금과 비선점 잠금](./스프링 Spring/기본원리/선점 잠금과 비선점 잠금.md)</br>
-┃　　　┃　　　┗━　[싱글톤](./스프링 Spring/기본원리/싱글톤.md)</br>
-┃　　　┗━　[@Cacheable](./스프링 Spring/@Cacheable.md)</br>
-┃　　　┗━　[AOT](./스프링 Spring/AOT.md)</br>
-┃　　　┗━　[Spring 6.0과 Spring Boot 3.0](./스프링 Spring/Spring 6.0과 Spring Boot 3.0.md)</br>
-┗━　[**아키텍처 및 방법론**](./아키텍처 및 방법론)</br>
-┃　　　┗━　[**API 아키텍처**](./아키텍처 및 방법론/API 아키텍처)</br>
-┃　　　┃　　　┗━　[GraphQL](./아키텍처 및 방법론/API 아키텍처/GraphQL.md)</br>
-┃　　　┃　　　┗━　[REST](./아키텍처 및 방법론/API 아키텍처/REST.md)</br>
-┃　　　┃　　　┗━　[RPC](./아키텍처 및 방법론/API 아키텍처/RPC.md)</br>
-┃　　　┃　　　┗━　[SOAP](./아키텍처 및 방법론/API 아키텍처/SOAP.md)</br>
-┃　　　┗━　[**DDD**](./아키텍처 및 방법론/DDD)</br>
-┃　　　┃　　　┗━　[DDD](./아키텍처 및 방법론/DDD/DDD.md)</br>
-┃　　　┃　　　┗━　[DDD의 아키텍처](./아키텍처 및 방법론/DDD/DDD의 아키텍처.md)</br>
-┃　　　┃　　　┗━　[도메인영역](./아키텍처 및 방법론/DDD/도메인영역.md)</br>
-┃　　　┃　　　┗━　[이벤트 스토밍](./아키텍처 및 방법론/DDD/이벤트 스토밍.md)</br>
-┃　　　┃　　　┗━　[컨트랙트](./아키텍처 및 방법론/DDD/컨트랙트.md)</br>
-┃　　　┗━　[**MSA**](./아키텍처 및 방법론/MSA)</br>
-┃　　　┃　　　┗━　[MSA의 장단점](./아키텍처 및 방법론/MSA/MSA의 장단점.md)</br>
-┃　　　┃　　　┗━　[메시지 브로커](./아키텍처 및 방법론/MSA/메시지 브로커.md)</br>
-┃　　　┃　　　┗━　[사가 패턴](./아키텍처 및 방법론/MSA/사가 패턴.md)</br>
-┃　　　┃　　　┗━　[사가 편성](./아키텍처 및 방법론/MSA/사가 편성.md)</br>
-┃　　　┃　　　┗━　[시맨틱 버저닝](./아키텍처 및 방법론/MSA/시맨틱 버저닝.md)</br>
-┃　　　┃　　　┗━　[통신](./아키텍처 및 방법론/MSA/통신.md)</br>
-┃　　　┃　　　┗━　[트랜잭션 격리](./아키텍처 및 방법론/MSA/트랜잭션 격리.md)</br>
-┃　　　┃　　　┗━　[트랜잭션 로그 테일링 패턴](./아키텍처 및 방법론/MSA/트랜잭션 로그 테일링 패턴.md)</br>
-┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
-┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
-┗━　[**알고리즘 Algorithm**](./알고리즘 Algorithm)</br>
-┃　　　┗━　[세그먼트트리](./알고리즘 Algorithm/세그먼트트리.md)</br>
-┗━　[**언어 Language**](./언어 Language)</br>
-┃　　　┗━　[**JAVA**](./언어 Language/JAVA)</br>
-┃　　　┃　　　┗━　[**JVM**](./언어 Language/JAVA/JVM)</br>
-┃　　　┃　　　┃　　　┗━　[Heap영역 구조와 GC](./언어 Language/JAVA/JVM/Heap영역 구조와 GC.md)</br>
-┃　　　┃　　　┃　　　┗━　[JVM 구성요소](./언어 Language/JAVA/JVM/JVM 구성요소.md)</br>
-┃　　　┃　　　┃　　　┗━　[Java Bytecode](./언어 Language/JAVA/JVM/Java Bytecode.md)</br>
-┃　　　┃　　　┃　　　┗━　[Permanent to Metaspace](./언어 Language/JAVA/JVM/Permanent to Metaspace.md)</br>
-┃　　　┃　　　┃　　　┗━　[Runtime Data Area](./언어 Language/JAVA/JVM/Runtime Data Area.md)</br>
-┃　　　┃　　　┃　　　┗━　[TLAB과 PLAB](./언어 Language/JAVA/JVM/TLAB과 PLAB.md)</br>
-┃　　　┃　　　┃　　　┗━　[메모리누수](./언어 Language/JAVA/JVM/메모리누수.md)</br>
-┃　　　┃　　　┗━　[**Thread**](./언어 Language/JAVA/Thread)</br>
-┃　　　┃　　　┃　　　┗━　[@Volatile](./언어 Language/JAVA/Thread/@Volatile.md)</br>
-┃　　　┃　　　┃　　　┗━　[Thread 상태](./언어 Language/JAVA/Thread/Thread 상태.md)</br>
-┃　　　┃　　　┃　　　┗━　[wait()과　notifyAll()](./언어 Language/JAVA/Thread/wait()과　notifyAll().md)</br>
-┃　　　┃　　　┗━　[Inner static class](./언어 Language/JAVA/Inner static class.md)</br>
-┃　　　┃　　　┗━　[JAR과 WAR](./언어 Language/JAVA/JAR과 WAR.md)</br>
-┃　　　┃　　　┗━　[JAVA](./언어 Language/JAVA/JAVA.md)</br>
-┃　　　┃　　　┗━　[JDKProxy와 CGLibProxy](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
-┃　　　┃　　　┗━　[JLink & JDeps](./언어 Language/JAVA/JLink & JDeps.md)</br>
-┃　　　┃　　　┗━　[record](./언어 Language/JAVA/record.md)</br>
-┃　　　┃　　　┗━　[예외와 에러](./언어 Language/JAVA/예외와 에러.md)</br>
-┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/JAVA/제네릭과 variance.md)</br>
-┃　　　┗━　[**Kotlin**](./언어 Language/Kotlin)</br>
-┃　　　┃　　　┗━　[**변수**](./언어 Language/Kotlin/변수)</br>
-┃　　　┃　　　┃　　　┗━　[List와 MutableList](./언어 Language/Kotlin/변수/List와 MutableList.md)</br>
-┃　　　┃　　　┃　　　┗━　[Nullable](./언어 Language/Kotlin/변수/Nullable.md)</br>
-┃　　　┃　　　┃　　　┗━　[const](./언어 Language/Kotlin/변수/const.md)</br>
-┃　　　┃　　　┃　　　┗━　[val과 var](./언어 Language/Kotlin/변수/val과 var.md)</br>
-┃　　　┃　　　┗━　[**클래스**](./언어 Language/Kotlin/클래스)</br>
-┃　　　┃　　　┃　　　┗━　[@JvmField](./언어 Language/Kotlin/클래스/@JvmField.md)</br>
-┃　　　┃　　　┃　　　┗━　[@JvmStatic](./언어 Language/Kotlin/클래스/@JvmStatic.md)</br>
-┃　　　┃　　　┃　　　┗━　[Object](./언어 Language/Kotlin/클래스/Object.md)</br>
-┃　　　┃　　　┃　　　┗━　[Sealed Class, interface](./언어 Language/Kotlin/클래스/Sealed Class, interface.md)</br>
-┃　　　┃　　　┃　　　┗━　[생성자](./언어 Language/Kotlin/클래스/생성자.md)</br>
-┃　　　┃　　　┃　　　┗━　[코틀린에서의 Static](./언어 Language/Kotlin/클래스/코틀린에서의 Static.md)</br>
-┃　　　┃　　　┃　　　┗━　[클래스 상속](./언어 Language/Kotlin/클래스/클래스 상속.md)</br>
-┃　　　┃　　　┃　　　┗━　[필드와 접근자 메서드](./언어 Language/Kotlin/클래스/필드와 접근자 메서드.md)</br>
-┃　　　┃　　　┗━　[**함수**](./언어 Language/Kotlin/함수)</br>
-┃　　　┃　　　┃　　　┗━　[기본인자](./언어 Language/Kotlin/함수/기본인자.md)</br>
-┃　　　┃　　　┗━　[Collections](./언어 Language/Kotlin/Collections.md)</br>
-┃　　　┃　　　┗━　[InlineFuntion과 Reified](./언어 Language/Kotlin/InlineFuntion과 Reified.md)</br>
-┃　　　┃　　　┗━　[Label](./언어 Language/Kotlin/Label.md)</br>
-┃　　　┃　　　┗━　[Sequences](./언어 Language/Kotlin/Sequences.md)</br>
-┃　　　┃　　　┗━　[field 상속](./언어 Language/Kotlin/field 상속.md)</br>
-┃　　　┃　　　┗━　[람다 표현식](./언어 Language/Kotlin/람다 표현식.md)</br>
-┃　　　┃　　　┗━　[범위 지정 함수](./언어 Language/Kotlin/범위 지정 함수.md)</br>
-┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/Kotlin/제네릭과 variance.md)</br>
-┃　　　┗━　[자바<？>와 코틀린<*>](./언어 Language/자바<？>와 코틀린<*>.md)</br>
-┗━　[**운영체제 Operating System**](./운영체제 Operating System)</br>
-┃　　　┗━　[**linux**](./운영체제 Operating System/linux)</br>
-┃　　　┃　　　┗━　[**authority**](./운영체제 Operating System/linux/authority)</br>
-┃　　　┃　　　┃　　　┗━　[chattr](./운영체제 Operating System/linux/authority/chattr.md)</br>
-┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/authority/chmod.md)</br>
-┃　　　┃　　　┃　　　┗━　[chown](./운영체제 Operating System/linux/authority/chown.md)</br>
-┃　　　┃　　　┃　　　┗━　[사용자 관리](./운영체제 Operating System/linux/authority/사용자 관리.md)</br>
-┃　　　┃　　　┗━　[**disk & dir**](./운영체제 Operating System/linux/disk & dir)</br>
-┃　　　┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/disk & dir/LVM.md)</br>
-┃　　　┃　　　┃　　　┗━　[Linux 디렉토리 구조](./운영체제 Operating System/linux/disk & dir/Linux 디렉토리 구조.md)</br>
-┃　　　┃　　　┃　　　┗━　[RAID](./운영체제 Operating System/linux/disk & dir/RAID.md)</br>
-┃　　　┃　　　┃　　　┗━　[Symbolic Link](./운영체제 Operating System/linux/disk & dir/Symbolic Link.md)</br>
-┃　　　┃　　　┃　　　┗━　[file 관련 systemcall](./운영체제 Operating System/linux/disk & dir/file 관련 systemcall.md)</br>
-┃　　　┃　　　┃　　　┗━　[백업](./운영체제 Operating System/linux/disk & dir/백업.md)</br>
-┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./운영체제 Operating System/linux/disk & dir/파일 관리 명령어.md)</br>
-┃　　　┃　　　┃　　　┗━　[파일 시스템](./운영체제 Operating System/linux/disk & dir/파일 시스템.md)</br>
-┃　　　┃　　　┃　　　┗━　[파일 종류](./운영체제 Operating System/linux/disk & dir/파일 종류.md)</br>
-┃　　　┃　　　┗━　[**kernel**](./운영체제 Operating System/linux/kernel)</br>
-┃　　　┃　　　┃　　　┗━　[커널 모듈](./운영체제 Operating System/linux/kernel/커널 모듈.md)</br>
-┃　　　┃　　　┗━　[**memory**](./운영체제 Operating System/linux/memory)</br>
-┃　　　┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/memory/Swap메모리.md)</br>
-┃　　　┃　　　┗━　[**network**](./운영체제 Operating System/linux/network)</br>
-┃　　　┃　　　┃　　　┗━　[**주요명령어**](./운영체제 Operating System/linux/network/주요명령어)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[arp](./운영체제 Operating System/linux/network/주요명령어/arp.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ifconfig](./운영체제 Operating System/linux/network/주요명령어/ifconfig.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ping과 netstat](./운영체제 Operating System/linux/network/주요명령어/ping과 netstat.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[route로 라우팅 테이블 확인하기](./운영체제 Operating System/linux/network/주요명령어/route로 라우팅 테이블 확인하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[DNS 서버](./운영체제 Operating System/linux/network/DNS 서버.md)</br>
-┃　　　┃　　　┃　　　┗━　[Netfilter](./운영체제 Operating System/linux/network/Netfilter.md)</br>
-┃　　　┃　　　┃　　　┗━　[Virtual Networking Interface](./운영체제 Operating System/linux/network/Virtual Networking Interface.md)</br>
-┃　　　┃　　　┃　　　┗━　[iptables](./운영체제 Operating System/linux/network/iptables.md)</br>
-┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/network/namespace와 cgroup.md)</br>
-┃　　　┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network/network namespaces.md)</br>
-┃　　　┃　　　┃　　　┗━　[네트워크 침해](./운영체제 Operating System/linux/network/네트워크 침해.md)</br>
-┃　　　┃　　　┗━　[**process**](./운영체제 Operating System/linux/process)</br>
-┃　　　┃　　　┃　　　┗━　[Deamon process](./운영체제 Operating System/linux/process/Deamon process.md)</br>
-┃　　　┃　　　┃　　　┗━　[httpd](./운영체제 Operating System/linux/process/httpd.md)</br>
-┃　　　┃　　　┃　　　┗━　[signal](./운영체제 Operating System/linux/process/signal.md)</br>
-┃　　　┃　　　┃　　　┗━　[top](./운영체제 Operating System/linux/process/top.md)</br>
-┃　　　┃　　　┃　　　┗━　[프로세스 관리](./운영체제 Operating System/linux/process/프로세스 관리.md)</br>
-┃　　　┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/process/환경변수와 프로세스.md)</br>
-┃　　　┃　　　┗━　[**shell**](./운영체제 Operating System/linux/shell)</br>
-┃　　　┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/shell/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　┃　　　┗━　[shell](./운영체제 Operating System/linux/shell/shell.md)</br>
-┃　　　┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/shell/zshrc.md)</br>
-┃　　　┃　　　┗━　[IP masquerading](./운영체제 Operating System/linux/IP masquerading.md)</br>
-┃　　　┃　　　┗━　[Linux Package](./운영체제 Operating System/linux/Linux Package.md)</br>
-┃　　　┃　　　┗━　[Linux 배포판](./운영체제 Operating System/linux/Linux 배포판.md)</br>
-┃　　　┃　　　┗━　[Linux 부팅 과정](./운영체제 Operating System/linux/Linux 부팅 과정.md)</br>
-┃　　　┃　　　┗━　[Linux 특징 및 관련용어](./운영체제 Operating System/linux/Linux 특징 및 관련용어.md)</br>
-┃　　　┃　　　┗━　[Runlevel](./운영체제 Operating System/linux/Runlevel.md)</br>
-┃　　　┃　　　┗━　[X window](./운영체제 Operating System/linux/X window.md)</br>
-┃　　　┃　　　┗━　[iptables 방화벽 설정](./운영체제 Operating System/linux/iptables 방화벽 설정.md)</br>
-┃　　　┃　　　┗━　[mail](./운영체제 Operating System/linux/mail.md)</br>
-┃　　　┃　　　┗━　[명령어들](./운영체제 Operating System/linux/명령어들.md)</br>
-┃　　　┗━　[**memory**](./운영체제 Operating System/memory)</br>
-┃　　　┃　　　┗━　[Memory Mapping](./운영체제 Operating System/memory/Memory Mapping.md)</br>
-┃　　　┃　　　┗━　[페이지 교체 알고리즘](./운영체제 Operating System/memory/페이지 교체 알고리즘.md)</br>
-┃　　　┗━　[**process**](./운영체제 Operating System/process)</br>
-┃　　　┃　　　┗━　[TAS](./운영체제 Operating System/process/TAS.md)</br>
-┃　　　┃　　　┗━　[교착상태와 스케줄링](./운영체제 Operating System/process/교착상태와 스케줄링.md)</br>
-┃　　　┃　　　┗━　[생산자 소비자 문제](./운영체제 Operating System/process/생산자 소비자 문제.md)</br>
-┃　　　┃　　　┗━　[임계영역과 상호배제](./운영체제 Operating System/process/임계영역과 상호배제.md)</br>
-┃　　　┃　　　┗━　[프로세스의 개념](./운영체제 Operating System/process/프로세스의 개념.md)</br>
-┃　　　┃　　　┗━　[프로세스의 관리](./운영체제 Operating System/process/프로세스의 관리.md)</br>
-┃　　　┗━　[**window**](./운영체제 Operating System/window)</br>
-┃　　　┃　　　┗━　[Active Directory Domain Services](./운영체제 Operating System/window/Active Directory Domain Services.md)</br>
-┃　　　┗━　[**보안**](./운영체제 Operating System/보안)</br>
-┃　　　┃　　　┗━　[+엑세스 제어](./운영체제 Operating System/보안/+엑세스 제어.md)</br>
-┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
-┃　　　┗━　[운영체제 유형](./운영체제 Operating System/운영체제 유형.md)</br>
-┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
-┗━　[**인공지능 AI**](./인공지능 AI)</br>
-┃　　　┗━　[**실습**](./인공지능 AI/실습)</br>
-┃　　　┃　　　┗━　[CNN](./인공지능 AI/실습/CNN.md)</br>
-┃　　　┃　　　┗━　[MNIST 숫자 판별](./인공지능 AI/실습/MNIST 숫자 판별.md)</br>
-┃　　　┃　　　┗━　[RNN](./인공지능 AI/실습/RNN.md)</br>
-┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능 AI/실습/배, 자동차, 비행기 분류하기.md)</br>
-┃　　　┗━　[CNN](./인공지능 AI/CNN.md)</br>
-┃　　　┗━　[DropOut](./인공지능 AI/DropOut.md)</br>
-┃　　　┗━　[Keras](./인공지능 AI/Keras.md)</br>
-┃　　　┗━　[Optimizer](./인공지능 AI/Optimizer.md)</br>
-┃　　　┗━　[RNN](./인공지능 AI/RNN.md)</br>
-┃　　　┗━　[선형회귀](./인공지능 AI/선형회귀.md)</br>
-┃　　　┗━　[퍼셉트론](./인공지능 AI/퍼셉트론.md)</br>
-┃　　　┗━　[활성화함수](./인공지능 AI/활성화함수.md)</br>
+┃　　　┗━　[Selfhosted\342\200\205Runner](./Git/Selfhosted\342\200\205Runner.md)</br>
+┃　　　┗━　[\354\236\220\353\217\231\354\273\244\353\260\213](./Git/\354\236\220\353\217\231\354\273\244\353\260\213.md)</br>
+┗━　[**\352\260\234\353\260\234**](./\352\260\234\353\260\234)</br>
+┃　　　┗━　[**Gradle**](./\352\260\234\353\260\234/Gradle)</br>
+┃　　　┃　　　┗━　[DependencyHandler](./\352\260\234\353\260\234/Gradle/DependencyHandler.md)</br>
+┃　　　┃　　　┗━　[Git\342\200\205action\342\200\205gradle\342\200\205caching](./\352\260\234\353\260\234/Gradle/Git\342\200\205action\342\200\205gradle\342\200\205caching.md)</br>
+┃　　　┃　　　┗━　[Gradle\342\200\205LifeCycle](./\352\260\234\353\260\234/Gradle/Gradle\342\200\205LifeCycle.md)</br>
+┃　　　┃　　　┗━　[\353\251\200\355\213\260\353\252\250\353\223\210](./\352\260\234\353\260\234/Gradle/\353\251\200\355\213\260\353\252\250\353\223\210.md)</br>
+┃　　　┗━　[**TestCode**](./\352\260\234\353\260\234/TestCode)</br>
+┃　　　┃　　　┗━　[**Kotlin**](./\352\260\234\353\260\234/TestCode/Kotlin)</br>
+┃　　　┃　　　┃　　　┗━　[Kotest](./\352\260\234\353\260\234/TestCode/Kotlin/Kotest.md)</br>
+┃　　　┃　　　┃　　　┗━　[Kotest\342\200\205Assertions](./\352\260\234\353\260\234/TestCode/Kotlin/Kotest\342\200\205Assertions.md)</br>
+┃　　　┃　　　┃　　　┗━　[Kotest\342\200\205Specs](./\352\260\234\353\260\234/TestCode/Kotlin/Kotest\342\200\205Specs.md)</br>
+┃　　　┃　　　┃　　　┗━　[Mockk](./\352\260\234\353\260\234/TestCode/Kotlin/Mockk.md)</br>
+┃　　　┃　　　┗━　[Mock\352\263\274\342\200\205Spy](./\352\260\234\353\260\234/TestCode/Mock\352\263\274\342\200\205Spy.md)</br>
+┃　　　┗━　[**WAS**](./\352\260\234\353\260\234/WAS)</br>
+┃　　　┃　　　┗━　[tomcat\342\200\205\352\265\254\354\204\261\354\232\224\354\206\214](./\352\260\234\353\260\234/WAS/tomcat\342\200\205\352\265\254\354\204\261\354\232\224\354\206\214.md)</br>
+┃　　　┃　　　┗━　[\354\233\271\354\204\234\353\262\204\354\231\200\342\200\205WAS](./\352\260\234\353\260\234/WAS/\354\233\271\354\204\234\353\262\204\354\231\200\342\200\205WAS.md)</br>
+┃　　　┗━　[**apache**](./\352\260\234\353\260\234/apache)</br>
+┃　　　┃　　　┗━　[Spark](./\352\260\234\353\260\234/apache/Spark.md)</br>
+┃　　　┗━　[**go**](./\352\260\234\353\260\234/go)</br>
+┃　　　┃　　　┗━　[gomod\354\231\200\342\200\205gosum](./\352\260\234\353\260\234/go/gomod\354\231\200\342\200\205gosum.md)</br>
+┃　　　┗━　[**\353\271\204\353\217\231\352\270\260**](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260)</br>
+┃　　　┃　　　┗━　[**coroutine**](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine)</br>
+┃　　　┃　　　┃　　　┗━　[**thread**](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine/thread)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[\352\263\265\354\234\240\352\260\235\354\262\264\342\200\205\354\212\244\353\240\210\353\223\234\342\200\205\353\217\231\352\270\260\355\231\224](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine/thread/\352\263\265\354\234\240\352\260\235\354\262\264\342\200\205\354\212\244\353\240\210\353\223\234\342\200\205\353\217\231\352\270\260\355\231\224.md)</br>
+┃　　　┃　　　┃　　　┗━　[Channel](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine/Channel.md)</br>
+┃　　　┃　　　┃　　　┗━　[Coroutine\342\200\205CPS](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine/Coroutine\342\200\205CPS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Coroutine\342\200\205Delay](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine/Coroutine\342\200\205Delay.md)</br>
+┃　　　┃　　　┃　　　┗━　[Coroutine\342\200\205Dispatcher](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine/Coroutine\342\200\205Dispatcher.md)</br>
+┃　　　┃　　　┃　　　┗━　[Coroutine\342\200\205Scope,\342\200\205Context](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine/Coroutine\342\200\205Scope,\342\200\205Context.md)</br>
+┃　　　┃　　　┃　　　┗━　[Integration](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine/Integration.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\275\224\353\243\250\355\213\264](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/coroutine/\354\275\224\353\243\250\355\213\264.md)</br>
+┃　　　┃　　　┗━　[**reactor**](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/reactor)</br>
+┃　　　┃　　　┃　　　┗━　[Callback\352\263\274\342\200\205Futures](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/reactor/Callback\352\263\274\342\200\205Futures.md)</br>
+┃　　　┃　　　┃　　　┗━　[Reactor](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/reactor/Reactor.md)</br>
+┃　　　┃　　　┃　　　┗━　[Reactor\342\200\205Pattern\352\263\274\342\200\205event\342\200\205loop](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/reactor/Reactor\342\200\205Pattern\352\263\274\342\200\205event\342\200\205loop.md)</br>
+┃　　　┃　　　┗━　[Coroutine\342\200\205vs\342\200\205Reactor](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/Coroutine\342\200\205vs\342\200\205Reactor.md)</br>
+┃　　　┃　　　┗━　[Flow](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/Flow.md)</br>
+┃　　　┃　　　┗━　[cold\342\200\205stream\352\263\274\342\200\205hot\342\200\205stream](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/cold\342\200\205stream\352\263\274\342\200\205hot\342\200\205stream.md)</br>
+┃　　　┃　　　┗━　[netty\342\200\205\354\202\254\353\241\200\354\227\260\352\265\254](./\352\260\234\353\260\234/\353\271\204\353\217\231\352\270\260/netty\342\200\205\354\202\254\353\241\200\354\227\260\352\265\254.md)</br>
+┃　　　┗━　[**\354\225\224\355\230\270\355\231\224**](./\352\260\234\353\260\234/\354\225\224\355\230\270\355\231\224)</br>
+┃　　　┃　　　┗━　[AES&IV](./\352\260\234\353\260\234/\354\225\224\355\230\270\355\231\224/AES&IV.md)</br>
+┃　　　┃　　　┗━　[Certificate\342\200\205formats](./\352\260\234\353\260\234/\354\225\224\355\230\270\355\231\224/Certificate\342\200\205formats.md)</br>
+┃　　　┃　　　┗━　[Cipher](./\352\260\234\353\260\234/\354\225\224\355\230\270\355\231\224/Cipher.md)</br>
+┃　　　┃　　　┗━　[DB\342\200\205\354\225\224\355\230\270\355\231\224](./\352\260\234\353\260\234/\354\225\224\355\230\270\355\231\224/DB\342\200\205\354\225\224\355\230\270\355\231\224.md)</br>
+┃　　　┗━　[**\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254**](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254)</br>
+┃　　　┃　　　┗━　[**netty**](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254/netty)</br>
+┃　　　┃　　　┃　　　┗━　[HashedWheelTimer](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254/netty/HashedWheelTimer.md)</br>
+┃　　　┃　　　┃　　　┗━　[netty\342\200\205server\342\200\205\354\230\210\354\240\234](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254/netty/netty\342\200\205server\342\200\205\354\230\210\354\240\234.md)</br>
+┃　　　┃　　　┃　　　┗━　[netty\342\200\205\353\251\224\354\213\234\354\247\200\342\200\205\354\240\204\354\206\241\342\200\205\355\235\220\353\246\204](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254/netty/netty\342\200\205\353\251\224\354\213\234\354\247\200\342\200\205\354\240\204\354\206\241\342\200\205\355\235\220\353\246\204.md)</br>
+┃　　　┃　　　┃　　　┗━　[netty\354\235\230\342\200\205thread\342\200\205\353\252\250\353\215\270](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254/netty/netty\354\235\230\342\200\205thread\342\200\205\353\252\250\353\215\270.md)</br>
+┃　　　┃　　　┃　　　┗━　[webFlux\354\231\200\342\200\205netty](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254/netty/webFlux\354\231\200\342\200\205netty.md)</br>
+┃　　　┃　　　┗━　[**node.js**](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254/node.js)</br>
+┃　　　┃　　　　　　　┗━　[module.exports\354\231\200\342\200\205exports](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254/node.js/module.exports\354\231\200\342\200\205exports.md)</br>
+┃　　　┃　　　　　　　┗━　[puppeteer](./\352\260\234\353\260\234/\355\224\204\353\240\210\354\236\204\354\233\214\355\201\254/node.js/puppeteer.md)</br>
+┃　　　┗━　[CustomAnnotation](./\352\260\234\353\260\234/CustomAnnotation.md)</br>
+┃　　　┗━　[FineGrained\354\231\200\342\200\205CoarseGrained](./\352\260\234\353\260\234/FineGrained\354\231\200\342\200\205CoarseGrained.md)</br>
+┃　　　┗━　[Intellij\342\200\205Profiling\342\200\205tools](./\352\260\234\353\260\234/Intellij\342\200\205Profiling\342\200\205tools.md)</br>
+┃　　　┗━　[Keytool](./\352\260\234\353\260\234/Keytool.md)</br>
+┃　　　┗━　[Makefile](./\352\260\234\353\260\234/Makefile.md)</br>
+┃　　　┗━　[mermaid\342\200\205\353\254\270\353\262\225](./\352\260\234\353\260\234/mermaid\342\200\205\353\254\270\353\262\225.md)</br>
+┃　　　┗━　[\354\247\201\353\240\254\355\231\224\342\200\205serialVersionUID](./\352\260\234\353\260\234/\354\247\201\353\240\254\355\231\224\342\200\205serialVersionUID.md)</br>
+┗━　[**\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP**](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP)</br>
+┃　　　┗━　[**\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264**](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264)</br>
+┃　　　┃　　　┗━　[**1.\342\200\205\354\203\235\354\204\261\355\214\250\355\204\264**](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/1.\342\200\205\354\203\235\354\204\261\355\214\250\355\204\264)</br>
+┃　　　┃　　　┃　　　┗━　[\353\271\214\353\215\224\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/1.\342\200\205\354\203\235\354\204\261\355\214\250\355\204\264/\353\271\214\353\215\224\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\213\261\352\270\200\355\206\244\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/1.\342\200\205\354\203\235\354\204\261\355\214\250\355\204\264/\354\213\261\352\270\200\355\206\244\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\266\224\354\203\201\355\214\251\355\206\240\353\246\254\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/1.\342\200\205\354\203\235\354\204\261\355\214\250\355\204\264/\354\266\224\354\203\201\355\214\251\355\206\240\353\246\254\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\214\251\355\206\240\353\246\254\353\251\224\354\206\214\353\223\234\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/1.\342\200\205\354\203\235\354\204\261\355\214\250\355\204\264/\355\214\251\355\206\240\353\246\254\353\251\224\354\206\214\353\223\234\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\224\204\353\241\234\355\206\240\355\203\200\354\236\205\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/1.\342\200\205\354\203\235\354\204\261\355\214\250\355\204\264/\355\224\204\353\241\234\355\206\240\355\203\200\354\236\205\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┗━　[**2.\342\200\205\352\265\254\354\241\260\355\214\250\355\204\264**](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/2.\342\200\205\352\265\254\354\241\260\355\214\250\355\204\264)</br>
+┃　　　┃　　　┃　　　┗━　[\353\215\260\354\275\224\353\240\210\354\235\264\355\204\260\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/2.\342\200\205\352\265\254\354\241\260\355\214\250\355\204\264/\353\215\260\354\275\224\353\240\210\354\235\264\355\204\260\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\270\214\353\246\277\354\247\200\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/2.\342\200\205\352\265\254\354\241\260\355\214\250\355\204\264/\353\270\214\353\246\277\354\247\200\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\226\264\353\214\221\355\204\260\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/2.\342\200\205\352\265\254\354\241\260\355\214\250\355\204\264/\354\226\264\353\214\221\355\204\260\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\273\264\355\217\254\354\247\223\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/2.\342\200\205\352\265\254\354\241\260\355\214\250\355\204\264/\354\273\264\355\217\254\354\247\223\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\215\274\354\202\254\353\223\234\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/2.\342\200\205\352\265\254\354\241\260\355\214\250\355\204\264/\355\215\274\354\202\254\353\223\234\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\224\204\353\241\235\354\213\234\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/2.\342\200\205\352\265\254\354\241\260\355\214\250\355\204\264/\355\224\204\353\241\235\354\213\234\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\224\214\353\235\274\354\235\264\354\233\250\354\235\264\355\212\270\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/2.\342\200\205\352\265\254\354\241\260\355\214\250\355\204\264/\355\224\214\353\235\274\354\235\264\354\233\250\354\235\264\355\212\270\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┗━　[**3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264**](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264)</br>
+┃　　　┃　　　┃　　　┗━　[\353\251\224\353\251\230\355\206\240\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\353\251\224\353\251\230\355\206\240\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\260\251\353\254\270\354\236\220\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\353\260\251\353\254\270\354\236\220\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\203\201\355\203\234\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\354\203\201\355\203\234\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\230\265\354\240\200\353\262\204\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\354\230\265\354\240\200\353\262\204\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\235\264\355\204\260\353\240\210\354\235\264\355\204\260\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\354\235\264\355\204\260\353\240\210\354\235\264\355\204\260\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\235\270\355\204\260\355\224\204\353\246\254\355\204\260\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\354\235\270\355\204\260\355\224\204\353\246\254\355\204\260\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\240\204\353\236\265\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\354\240\204\353\236\265\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\244\221\354\236\254\354\236\220\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\354\244\221\354\236\254\354\236\220\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\261\205\354\236\204\354\227\260\354\207\204\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\354\261\205\354\236\204\354\227\260\354\207\204\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\273\244\353\247\250\353\223\234\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\354\273\244\353\247\250\353\223\234\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\205\234\355\224\214\353\246\277\353\251\224\354\206\214\353\223\234\342\200\205\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/3.\342\200\205\355\226\211\354\234\204\355\214\250\355\204\264/\355\205\234\355\224\214\353\246\277\353\251\224\354\206\214\353\223\234\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┗━　[\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┗━　[\354\234\204\354\236\204\342\200\205\355\214\250\355\204\264(Delegate\342\200\205Pattern)](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\353\224\224\354\236\220\354\235\270\355\214\250\355\204\264/\354\234\204\354\236\204\342\200\205\355\214\250\355\204\264(Delegate\342\200\205Pattern).md)</br>
+┃　　　┗━　[Exponential\342\200\205Backoff\342\200\205And\342\200\205Jitter](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/Exponential\342\200\205Backoff\342\200\205And\342\200\205Jitter.md)</br>
+┃　　　┗━　[SOLID](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/SOLID.md)</br>
+┃　　　┗━　[\354\235\221\354\247\221\353\217\204\354\231\200\342\200\205\352\262\260\355\225\251\353\217\204](./\352\260\235\354\262\264\354\247\200\355\226\245\342\200\205OOP/\354\235\221\354\247\221\353\217\204\354\231\200\342\200\205\352\262\260\355\225\251\353\217\204.md)</br>
+┗━　[**\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network**](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network)</br>
+┃　　　┗━　[**L1\342\200\205network\342\200\205access\342\200\205layer**](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L1\342\200\205network\342\200\205access\342\200\205layer)</br>
+┃　　　┃　　　┗━　[CRC](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L1\342\200\205network\342\200\205access\342\200\205layer/CRC.md)</br>
+┃　　　┃　　　┗━　[Ethernet\352\263\274\342\200\205TokenRing](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L1\342\200\205network\342\200\205access\342\200\205layer/Ethernet\352\263\274\342\200\205TokenRing.md)</br>
+┃　　　┃　　　┗━　[L2\342\200\205\354\212\244\354\234\204\354\271\230\354\231\200\342\200\205STP](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L1\342\200\205network\342\200\205access\342\200\205layer/L2\342\200\205\354\212\244\354\234\204\354\271\230\354\231\200\342\200\205STP.md)</br>
+┃　　　┃　　　┗━　[MTU](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L1\342\200\205network\342\200\205access\342\200\205layer/MTU.md)</br>
+┃　　　┃　　　┗━　[NIC](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L1\342\200\205network\342\200\205access\342\200\205layer/NIC.md)</br>
+┃　　　┃　　　┗━　[\353\215\260\354\235\264\355\204\260\353\247\201\355\201\254\342\200\205\354\240\234\354\226\264(DLC)](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L1\342\200\205network\342\200\205access\342\200\205layer/\353\215\260\354\235\264\355\204\260\353\247\201\355\201\254\342\200\205\354\240\234\354\226\264(DLC).md)</br>
+┃　　　┃　　　┗━　[\353\247\244\354\262\264\342\200\205\354\240\221\352\267\274\342\200\205\354\240\234\354\226\264(MAC)](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L1\342\200\205network\342\200\205access\342\200\205layer/\353\247\244\354\262\264\342\200\205\354\240\221\352\267\274\342\200\205\354\240\234\354\226\264(MAC).md)</br>
+┃　　　┃　　　┗━　[\354\225\204\353\202\240\353\241\234\352\267\270,\342\200\205\353\224\224\354\247\200\355\204\270\342\200\205\354\213\240\355\230\270\354\231\200\342\200\205\354\240\204\354\206\241](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L1\342\200\205network\342\200\205access\342\200\205layer/\354\225\204\353\202\240\353\241\234\352\267\270,\342\200\205\353\224\224\354\247\200\355\204\270\342\200\205\354\213\240\355\230\270\354\231\200\342\200\205\354\240\204\354\206\241.md)</br>
+┃　　　┗━　[**L2\342\200\205internet\342\200\205layer**](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer)</br>
+┃　　　┃　　　┗━　[**\353\235\274\354\232\260\355\204\260**](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/\353\235\274\354\232\260\355\204\260)</br>
+┃　　　┃　　　┃　　　┗━　[\353\235\274\354\232\260\355\204\260](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/\353\235\274\354\232\260\355\204\260/\353\235\274\354\232\260\355\204\260.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\235\274\354\232\260\355\214\205\342\200\205\354\225\214\352\263\240\353\246\254\354\246\230](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/\353\235\274\354\232\260\355\204\260/\353\235\274\354\232\260\355\214\205\342\200\205\354\225\214\352\263\240\353\246\254\354\246\230.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\251\200\355\213\260\354\272\220\354\212\244\355\212\270\342\200\205\353\235\274\354\232\260\355\214\205](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/\353\235\274\354\232\260\355\204\260/\353\251\200\355\213\260\354\272\220\354\212\244\355\212\270\342\200\205\353\235\274\354\232\260\355\214\205.md)</br>
+┃　　　┃　　　┗━　[CIDR](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/CIDR.md)</br>
+┃　　　┃　　　┗━　[ICMP](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/ICMP.md)</br>
+┃　　　┃　　　┗━　[IP](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/IP.md)</br>
+┃　　　┃　　　┗━　[IPAM](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/IPAM.md)</br>
+┃　　　┃　　　┗━　[IPSec](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/IPSec.md)</br>
+┃　　　┃　　　┗━　[IPVS](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/IPVS.md)</br>
+┃　　　┃　　　┗━　[NAT](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/NAT.md)</br>
+┃　　　┃　　　┗━　[secondary\342\200\205IP](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/secondary\342\200\205IP.md)</br>
+┃　　　┃　　　┗━　[\354\204\234\353\270\214\353\204\267](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L2\342\200\205internet\342\200\205layer/\354\204\234\353\270\214\353\204\267.md)</br>
+┃　　　┗━　[**L3\342\200\205transport\342\200\205layer**](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L3\342\200\205transport\342\200\205layer)</br>
+┃　　　┃　　　┗━　[4\352\263\204\354\270\265\342\200\205\354\236\245\353\271\204](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L3\342\200\205transport\342\200\205layer/4\352\263\204\354\270\265\342\200\205\354\236\245\353\271\204.md)</br>
+┃　　　┃　　　┗━　[SO_REUSEADDR](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L3\342\200\205transport\342\200\205layer/SO_REUSEADDR.md)</br>
+┃　　　┃　　　┗━　[SSH\342\200\205config](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L3\342\200\205transport\342\200\205layer/SSH\342\200\205config.md)</br>
+┃　　　┃　　　┗━　[TCP\354\231\200\342\200\205UDP](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L3\342\200\205transport\342\200\205layer/TCP\354\231\200\342\200\205UDP.md)</br>
+┃　　　┗━　[**L4\342\200\205appplication\342\200\205layer**](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer)</br>
+┃　　　┃　　　┗━　[**tls**](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/tls)</br>
+┃　　　┃　　　┃　　　┗━　[SNI](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/tls/SNI.md)</br>
+┃　　　┃　　　┃　　　┗━　[TLS](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/tls/TLS.md)</br>
+┃　　　┃　　　┃　　　┗━　[TLS\342\200\205\354\235\270\354\246\235\354\204\234\342\200\205\353\260\234\352\270\211\342\200\205\354\240\210\354\260\250\353\245\274\342\200\205\354\235\264\355\225\264\355\225\264\353\263\264\354\236\220](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/tls/TLS\342\200\205\354\235\270\354\246\235\354\204\234\342\200\205\353\260\234\352\270\211\342\200\205\354\240\210\354\260\250\353\245\274\342\200\205\354\235\264\355\225\264\355\225\264\353\263\264\354\236\220.md)</br>
+┃　　　┃　　　┗━　[ACME](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/ACME.md)</br>
+┃　　　┃　　　┗━　[CDN](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/CDN.md)</br>
+┃　　　┃　　　┗━　[DHCP](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/DHCP.md)</br>
+┃　　　┃　　　┗━　[DNS\342\200\205\353\240\210\354\275\224\353\223\234\354\234\240\355\230\225](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/DNS\342\200\205\353\240\210\354\275\224\353\223\234\354\234\240\355\230\225.md)</br>
+┃　　　┃　　　┗━　[FTP\342\200\205Active,\342\200\205Passive\342\200\205mode](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/FTP\342\200\205Active,\342\200\205Passive\342\200\205mode.md)</br>
+┃　　　┃　　　┗━　[HTTP](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/HTTP.md)</br>
+┃　　　┃　　　┗━　[HTTP\342\200\205Options](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/HTTP\342\200\205Options.md)</br>
+┃　　　┃　　　┗━　[java\353\241\234\342\200\205\352\260\204\353\213\250\355\225\234\342\200\205socket\342\200\205\355\224\204\353\241\234\352\267\270\353\236\250\353\247\214\353\223\244\352\270\260](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/L4\342\200\205appplication\342\200\205layer/java\353\241\234\342\200\205\352\260\204\353\213\250\355\225\234\342\200\205socket\342\200\205\355\224\204\353\241\234\352\267\270\353\236\250\353\247\214\353\223\244\352\270\260.md)</br>
+┃　　　┗━　[**error**](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/error)</br>
+┃　　　┃　　　┗━　[Context\342\200\205deadline\342\200\205exceeded](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/error/Context\342\200\205deadline\342\200\205exceeded.md)</br>
+┃　　　┗━　[OSI\342\200\2057Layer](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/OSI\342\200\2057Layer.md)</br>
+┃　　　┗━　[Sticky\342\200\205Session\352\263\274\342\200\205Session\342\200\205Clustering](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/Sticky\342\200\205Session\352\263\274\342\200\205Session\342\200\205Clustering.md)</br>
+┃　　　┗━　[Switch](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/Switch.md)</br>
+┃　　　┗━　[bandwidth](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/bandwidth.md)</br>
+┃　　　┗━　[\352\260\200\354\203\201\355\231\224\342\200\205\352\270\260\354\210\240](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/\352\260\200\354\203\201\355\231\224\342\200\205\352\270\260\354\210\240.md)</br>
+┃　　　┗━　[\353\204\244\355\212\270\354\233\214\355\201\254](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/\353\204\244\355\212\270\354\233\214\355\201\254.md)</br>
+┃　　　┗━　[\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205\353\263\264\354\225\210](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205\353\263\264\354\225\210.md)</br>
+┃　　　┗━　[\353\241\234\353\223\234\353\260\270\353\237\260\354\204\234](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/\353\241\234\353\223\234\353\260\270\353\237\260\354\204\234.md)</br>
+┃　　　┗━　[\353\270\214\353\235\274\354\232\260\354\240\200\354\227\220\342\200\205url\354\235\204\342\200\205\354\236\205\353\240\245\355\225\230\353\251\264\342\200\205\354\226\264\353\226\244\354\235\274\354\235\264\342\200\205\354\203\235\352\270\270\352\271\214\357\274\237](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/\353\270\214\353\235\274\354\232\260\354\240\200\354\227\220\342\200\205url\354\235\204\342\200\205\354\236\205\353\240\245\355\225\230\353\251\264\342\200\205\354\226\264\353\226\244\354\235\274\354\235\264\342\200\205\354\203\235\352\270\270\352\271\214\357\274\237.md)</br>
+┃　　　┗━　[\354\235\264\354\244\221\355\231\224](./\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205Network/\354\235\264\354\244\221\355\231\224.md)</br>
+┗━　[**\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps)</br>
+┃　　　┗━　[**AWS**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS)</br>
+┃　　　┃　　　┗━　[**Account**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Account)</br>
+┃　　　┃　　　┃　　　┗━　[Tasks\342\200\205that\342\200\205require\342\200\205root\342\200\205user\342\200\205credentials](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Account/Tasks\342\200\205that\342\200\205require\342\200\205root\342\200\205user\342\200\205credentials.md)</br>
+┃　　　┃　　　┗━　[**Analytics**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Analytics)</br>
+┃　　　┃　　　┃　　　┗━　[Athena](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Analytics/Athena.md)</br>
+┃　　　┃　　　┃　　　┗━　[EMR](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Analytics/EMR.md)</br>
+┃　　　┃　　　┃　　　┗━　[Glue](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Analytics/Glue.md)</br>
+┃　　　┃　　　┃　　　┗━　[Kinesis](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Analytics/Kinesis.md)</br>
+┃　　　┃　　　┃　　　┗━　[Lake\342\200\205Formation](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Analytics/Lake\342\200\205Formation.md)</br>
+┃　　　┃　　　┗━　[**Computing**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing)</br>
+┃　　　┃　　　┃　　　┗━　[**Auto\342\200\205Scaling**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Auto\342\200\205Scaling)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ASG\342\200\205Lifecycle\342\200\205Hook](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Auto\342\200\205Scaling/ASG\342\200\205Lifecycle\342\200\205Hook.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Auto\342\200\205Scaling](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Auto\342\200\205Scaling/Auto\342\200\205Scaling.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Auto\342\200\205Scaling\342\200\205termination\342\200\205policies](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Auto\342\200\205Scaling/Auto\342\200\205Scaling\342\200\205termination\342\200\205policies.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Scaling\342\200\205cooldowns](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Auto\342\200\205Scaling/Scaling\342\200\205cooldowns.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[State\342\200\205Change\342\200\205Event](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Auto\342\200\205Scaling/State\342\200\205Change\342\200\205Event.md)</br>
+┃　　　┃　　　┃　　　┗━　[**Container**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Container)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ECS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Container/ECS.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ECS\342\200\205Getting\342\200\205started\342\200\205on\342\200\205Fargate](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Container/ECS\342\200\205Getting\342\200\205started\342\200\205on\342\200\205Fargate.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ECS\342\200\205\354\232\224\354\206\214](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Container/ECS\342\200\205\354\232\224\354\206\214.md)</br>
+┃　　　┃　　　┃　　　┗━　[**EC2**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/EC2)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EC2](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/EC2/EC2.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EC2\342\200\205Fleet](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/EC2/EC2\342\200\205Fleet.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Elastic\342\200\205Fabric\342\200\205Adapter](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/EC2/Elastic\342\200\205Fabric\342\200\205Adapter.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Instance\342\200\205Store](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/EC2/Instance\342\200\205Store.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[RI\354\231\200\342\200\205Saving\342\200\205plan](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/EC2/RI\354\231\200\342\200\205Saving\342\200\205plan.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Spot\342\200\205Instance](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/EC2/Spot\342\200\205Instance.md)</br>
+┃　　　┃　　　┃　　　┗━　[Elastic\342\200\205Beanstalk](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Elastic\342\200\205Beanstalk.md)</br>
+┃　　　┃　　　┃　　　┗━　[Fargate](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Fargate.md)</br>
+┃　　　┃　　　┃　　　┗━　[Lambda](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Computing/Lambda.md)</br>
+┃　　　┃　　　┗━　[**Database**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Database)</br>
+┃　　　┃　　　┃　　　┗━　[Aurora](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Database/Aurora.md)</br>
+┃　　　┃　　　┃　　　┗━　[DynamoDB](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Database/DynamoDB.md)</br>
+┃　　　┃　　　┃　　　┗━　[EFS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Database/EFS.md)</br>
+┃　　　┃　　　┃　　　┗━　[RDS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Database/RDS.md)</br>
+┃　　　┃　　　┃　　　┗━　[RDS\342\200\205proxy](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Database/RDS\342\200\205proxy.md)</br>
+┃　　　┃　　　┃　　　┗━　[Redshift](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Database/Redshift.md)</br>
+┃　　　┃　　　┗━　[**Management\342\200\205and\342\200\205governance**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Management\342\200\205and\342\200\205governance)</br>
+┃　　　┃　　　┃　　　┗━　[CloudFormation](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Management\342\200\205and\342\200\205governance/CloudFormation.md)</br>
+┃　　　┃　　　┃　　　┗━　[CloudTrail](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Management\342\200\205and\342\200\205governance/CloudTrail.md)</br>
+┃　　　┃　　　┃　　　┗━　[CloudWatch](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Management\342\200\205and\342\200\205governance/CloudWatch.md)</br>
+┃　　　┃　　　┗━　[**Netwoking**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking)</br>
+┃　　　┃　　　┃　　　┗━　[**elb**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/elb)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Application\342\200\205LoadBalancer\342\200\205components](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/elb/Application\342\200\205LoadBalancer\342\200\205components.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Connection\342\200\205Draining](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/elb/Connection\342\200\205Draining.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ELB](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/elb/ELB.md)</br>
+┃　　　┃　　　┃　　　┗━　[**security**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/security)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[NACLs](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/security/NACLs.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Security\342\200\205Groups](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/security/Security\342\200\205Groups.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[WAF](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/security/WAF.md)</br>
+┃　　　┃　　　┃　　　┗━　[Bastion\342\200\205Host](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/Bastion\342\200\205Host.md)</br>
+┃　　　┃　　　┃　　　┗━　[CloudFront](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/CloudFront.md)</br>
+┃　　　┃　　　┃　　　┗━　[Direct\342\200\205Connect\342\200\205Gateway](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/Direct\342\200\205Connect\342\200\205Gateway.md)</br>
+┃　　　┃　　　┃　　　┗━　[EC2\342\200\205Instance\342\200\205Connect\342\200\205Endpoint](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/EC2\342\200\205Instance\342\200\205Connect\342\200\205Endpoint.md)</br>
+┃　　　┃　　　┃　　　┗━　[ENI](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/ENI.md)</br>
+┃　　　┃　　　┃　　　┗━　[Global\342\200\205Accelerator](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/Global\342\200\205Accelerator.md)</br>
+┃　　　┃　　　┃　　　┗━　[NAT\342\200\205gateway\342\200\205&\342\200\205NAT\342\200\205instance](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/NAT\342\200\205gateway\342\200\205&\342\200\205NAT\342\200\205instance.md)</br>
+┃　　　┃　　　┃　　　┗━　[Route53](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/Route53.md)</br>
+┃　　　┃　　　┃　　　┗━　[Transit\342\200\205Gateway](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/Transit\342\200\205Gateway.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPC](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/VPC.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPC\342\200\205Mapping\342\200\205Service](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/VPC\342\200\205Mapping\342\200\205Service.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPC\342\200\205endpoint](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/VPC\342\200\205endpoint.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPN](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/VPN.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPN\342\200\205Options](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Netwoking/VPN\342\200\205Options.md)</br>
+┃　　　┃　　　┗━　[**Security**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security)</br>
+┃　　　┃　　　┃　　　┗━　[AWS\342\200\205Managed\342\200\205Microsoft\342\200\205AD](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security/AWS\342\200\205Managed\342\200\205Microsoft\342\200\205AD.md)</br>
+┃　　　┃　　　┃　　　┗━　[Cognito](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security/Cognito.md)</br>
+┃　　　┃　　　┃　　　┗━　[Conformance\342\200\205Packs\342\200\205&\342\200\205Security\342\200\205Hub](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security/Conformance\342\200\205Packs\342\200\205&\342\200\205Security\342\200\205Hub.md)</br>
+┃　　　┃　　　┃　　　┗━　[IAM](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security/IAM.md)</br>
+┃　　　┃　　　┃　　　┗━　[KMS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security/KMS.md)</br>
+┃　　　┃　　　┃　　　┗━　[KMS\342\200\205Datakey](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security/KMS\342\200\205Datakey.md)</br>
+┃　　　┃　　　┃　　　┗━　[MalformedPolicyDocument](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security/MalformedPolicyDocument.md)</br>
+┃　　　┃　　　┃　　　┗━　[Microsoft\342\200\205Active\342\200\205Directory](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security/Microsoft\342\200\205Active\342\200\205Directory.md)</br>
+┃　　　┃　　　┃　　　┗━　[WAF\342\200\205&\342\200\205Firewall\342\200\205Manager\342\200\205&\342\200\205Shield\342\200\205Advanced](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Security/WAF\342\200\205&\342\200\205Firewall\342\200\205Manager\342\200\205&\342\200\205Shield\342\200\205Advanced.md)</br>
+┃　　　┃　　　┗━　[**Storage**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage)</br>
+┃　　　┃　　　┃　　　┗━　[**EBS**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/EBS)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EBS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/EBS/EBS.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EBS\342\200\205gp2\342\200\205vs\342\200\205gp3](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/EBS/EBS\342\200\205gp2\342\200\205vs\342\200\205gp3.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[EBS\342\200\205vs\342\200\205Instance\342\200\205Store](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/EBS/EBS\342\200\205vs\342\200\205Instance\342\200\205Store.md)</br>
+┃　　　┃　　　┃　　　┗━　[AppSync](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/AppSync.md)</br>
+┃　　　┃　　　┃　　　┗━　[DayaSync](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/DayaSync.md)</br>
+┃　　　┃　　　┃　　　┗━　[EFS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/EFS.md)</br>
+┃　　　┃　　　┃　　　┗━　[FSx](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/FSx.md)</br>
+┃　　　┃　　　┃　　　┗━　[S3](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/S3.md)</br>
+┃　　　┃　　　┃　　　┗━　[S3\342\200\205Glacier\342\200\205Vault\342\200\205Lock](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/S3\342\200\205Glacier\342\200\205Vault\342\200\205Lock.md)</br>
+┃　　　┃　　　┃　　　┗━　[Snow\342\200\205Famliy](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/Snow\342\200\205Famliy.md)</br>
+┃　　　┃　　　┃　　　┗━　[Storage\342\200\205Gateway](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Storage/Storage\342\200\205Gateway.md)</br>
+┃　　　┃　　　┗━　[API\342\200\205Gateway](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/API\342\200\205Gateway.md)</br>
+┃　　　┃　　　┗━　[AWS\342\200\205cloud\342\200\205computing](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/AWS\342\200\205cloud\342\200\205computing.md)</br>
+┃　　　┃　　　┗━　[Region\352\263\274\342\200\205Zone](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Region\352\263\274\342\200\205Zone.md)</br>
+┃　　　┃　　　┗━　[SAA\342\200\205\354\230\244\353\213\265\353\205\270\355\212\270\342\200\2051~3](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/SAA\342\200\205\354\230\244\353\213\265\353\205\270\355\212\270\342\200\2051~3.md)</br>
+┃　　　┃　　　┗━　[SAA\342\200\205\354\230\244\353\213\265\353\205\270\355\212\270\342\200\2054~6](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/SAA\342\200\205\354\230\244\353\213\265\353\205\270\355\212\270\342\200\2054~6.md)</br>
+┃　　　┃　　　┗━　[SAA\342\200\205\354\230\244\353\213\265\353\205\270\355\212\270\342\200\205examtopic](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/SAA\342\200\205\354\230\244\353\213\265\353\205\270\355\212\270\342\200\205examtopic.md)</br>
+┃　　　┃　　　┗━　[SAA\342\200\205\354\232\224\354\225\275](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/SAA\342\200\205\354\232\224\354\225\275.md)</br>
+┃　　　┃　　　┗━　[Well━Architected](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/AWS/Well━Architected.md)</br>
+┃　　　┗━　[**Container**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container)</br>
+┃　　　┃　　　┗━　[**CNI**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/CNI)</br>
+┃　　　┃　　　┃　　　┗━　[CNI](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/CNI/CNI.md)</br>
+┃　　　┃　　　┃　　　┗━　[Calico](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/CNI/Calico.md)</br>
+┃　　　┃　　　┃　　　┗━　[Install\342\200\205Calico](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/CNI/Install\342\200\205Calico.md)</br>
+┃　　　┃　　　┗━　[**Docker**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker)</br>
+┃　　　┃　　　┃　　　┗━　[DockerSwarm](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/DockerSwarm.md)</br>
+┃　　　┃　　　┃　　　┗━　[Overlay\342\200\205Network](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/Overlay\342\200\205Network.md)</br>
+┃　　　┃　　　┃　　　┗━　[Private\342\200\205registry\342\200\205\352\265\254\354\266\225](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/Private\342\200\205registry\342\200\205\352\265\254\354\266\225.md)</br>
+┃　　　┃　　　┃　　　┗━　[Prune](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/Prune.md)</br>
+┃　　　┃　　　┃　　　┗━　[README](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/README.md)</br>
+┃　　　┃　　　┃　　　┗━　[dockersock\342\200\205\352\266\214\355\225\234\354\227\220\353\237\254](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/dockersock\342\200\205\352\266\214\355\225\234\354\227\220\353\237\254.md)</br>
+┃　　　┃　　　┃　　　┗━　[exec\342\200\205user\342\200\205process\342\200\205caused\342\200\205exec\342\200\205format\342\200\205error](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/exec\342\200\205user\342\200\205process\342\200\205caused\342\200\205exec\342\200\205format\342\200\205error.md)</br>
+┃　　　┃　　　┃　　　┗━　[\352\260\200\354\203\201\355\231\224\354\231\200\342\200\205\354\273\250\355\205\214\354\235\264\353\204\210](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/\352\260\200\354\203\201\355\231\224\354\231\200\342\200\205\354\273\250\355\205\214\354\235\264\353\204\210.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\217\204\354\273\244\342\200\205\353\204\244\355\212\270\354\233\214\355\201\254](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/\353\217\204\354\273\244\342\200\205\353\204\244\355\212\270\354\233\214\355\201\254.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\217\204\354\273\244\342\200\205\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205\353\252\205\353\240\271\354\226\264](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/\353\217\204\354\273\244\342\200\205\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205\353\252\205\353\240\271\354\226\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\217\204\354\273\244\342\200\205\353\252\205\353\240\271\354\226\264](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/\353\217\204\354\273\244\342\200\205\353\252\205\353\240\271\354\226\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\217\204\354\273\244\342\200\205\354\212\244\355\206\240\353\246\254\354\247\200](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/\353\217\204\354\273\244\342\200\205\354\212\244\355\206\240\353\246\254\354\247\200.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\217\204\354\273\244\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Docker/\353\217\204\354\273\244\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230.md)</br>
+┃　　　┃　　　┗━　[ContainerRuntime](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/ContainerRuntime.md)</br>
+┃　　　┃　　　┗━　[Container\342\200\205Orchestration](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/Container\342\200\205Orchestration.md)</br>
+┃　　　┃　　　┗━　[cAdvisor](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Container/cAdvisor.md)</br>
+┃　　　┗━　[**DR**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/DR)</br>
+┃　　　┃　　　┗━　[DR\342\200\205strategies](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/DR/DR\342\200\205strategies.md)</br>
+┃　　　┃　　　┗━　[Fail\342\200\205over\354\231\200\342\200\205\354\204\234\353\262\204\342\200\205\354\235\264\354\244\221\355\231\224](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/DR/Fail\342\200\205over\354\231\200\342\200\205\354\204\234\353\262\204\342\200\205\354\235\264\354\244\221\355\231\224.md)</br>
+┃　　　┗━　[**IaC**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC)</br>
+┃　　　┃　　　┗━　[**Terraform**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Terraform)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Terraform/Terraform.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform\342\200\205import\354\231\200\342\200\205Terraforming](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Terraform/Terraform\342\200\205import\354\231\200\342\200\205Terraforming.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform\342\200\205taint](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Terraform/Terraform\342\200\205taint.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform\342\200\205with\342\200\205AWS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Terraform/Terraform\342\200\205with\342\200\205AWS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terraform\342\200\205\355\202\244\354\233\214\353\223\234](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Terraform/Terraform\342\200\205\355\202\244\354\233\214\353\223\234.md)</br>
+┃　　　┃　　　┃　　　┗━　[Terratest](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Terraform/Terratest.md)</br>
+┃　　　┃　　　┃　　　┗━　[aws\342\200\205\354\204\234\353\262\204\342\200\205\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205\352\265\254\354\266\225](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Terraform/aws\342\200\205\354\204\234\353\262\204\342\200\205\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205\352\265\254\354\266\225.md)</br>
+┃　　　┃　　　┗━　[Ansible](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Ansible.md)</br>
+┃　　　┃　　　┗━　[Cobbler](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Cobbler.md)</br>
+┃　　　┃　　　┗━　[Configuration\342\200\205Drift](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Configuration\342\200\205Drift.md)</br>
+┃　　　┃　　　┗━　[Phoenix\342\200\205Server](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Phoenix\342\200\205Server.md)</br>
+┃　　　┃　　　┗━　[Understanding\342\200\205Ansible,\342\200\205Terraform,\342\200\205Puppet,\342\200\205Chef,\342\200\205and\342\200\205Salt](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/IaC/Understanding\342\200\205Ansible,\342\200\205Terraform,\342\200\205Puppet,\342\200\205Chef,\342\200\205and\342\200\205Salt.md)</br>
+┃　　　┗━　[**Kubernetes**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes)</br>
+┃　　　┃　　　┗━　[**EKS**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS)</br>
+┃　　　┃　　　┃　　　┗━　[AWS\342\200\205Load\342\200\205Balancer\342\200\205Controller](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/AWS\342\200\205Load\342\200\205Balancer\342\200\205Controller.md)</br>
+┃　　　┃　　　┃　　　┗━　[Add\342\200\205IAM\342\200\205to\342\200\205RBAC](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/Add\342\200\205IAM\342\200\205to\342\200\205RBAC.md)</br>
+┃　　　┃　　　┃　　　┗━　[Amazon\342\200\205VPC\342\200\205CNI](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/Amazon\342\200\205VPC\342\200\205CNI.md)</br>
+┃　　　┃　　　┃　　　┗━　[EBS\342\200\205CSI\342\200\205driver](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/EBS\342\200\205CSI\342\200\205driver.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS\342\200\205ALB](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/EKS\342\200\205ALB.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS\342\200\205Control\342\200\205Plane](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/EKS\342\200\205Control\342\200\205Plane.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS\342\200\205Network\342\200\205BestPractice](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/EKS\342\200\205Network\342\200\205BestPractice.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS\342\200\205Spot\342\200\205Instances\342\200\205with\342\200\205Karpenter](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/EKS\342\200\205Spot\342\200\205Instances\342\200\205with\342\200\205Karpenter.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS\342\200\205kubecofig](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/EKS\342\200\205kubecofig.md)</br>
+┃　　　┃　　　┃　　　┗━　[EKS\342\200\205\354\235\270\354\246\235\352\263\274\354\240\225](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/EKS\342\200\205\354\235\270\354\246\235\352\263\274\354\240\225.md)</br>
+┃　　　┃　　　┃　　　┗━　[IP\342\200\205addresse\342\200\205prefix](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/IP\342\200\205addresse\342\200\205prefix.md)</br>
+┃　　　┃　　　┃　　　┗━　[NLB\342\200\205IP\342\200\205mode](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/NLB\342\200\205IP\342\200\205mode.md)</br>
+┃　　　┃　　　┃　　　┗━　[Node\342\200\205not\342\200\205Ready](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/EKS/Node\342\200\205not\342\200\205Ready.md)</br>
+┃　　　┃　　　┗━　[**Network**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network)</br>
+┃　　　┃　　　┃　　　┗━　[**DNS**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/DNS)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[CoreDNS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/DNS/CoreDNS.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[DNS\342\200\205in\342\200\205k8s](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/DNS/DNS\342\200\205in\342\200\205k8s.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[External\342\200\205DNS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/DNS/External\342\200\205DNS.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ServiceDNS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/DNS/ServiceDNS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Debugging\342\200\205DNS\342\200\205Resolution](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/Debugging\342\200\205DNS\342\200\205Resolution.md)</br>
+┃　　　┃　　　┃　　　┗━　[HTTPProxy](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/HTTPProxy.md)</br>
+┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/NetworkPolicy.md)</br>
+┃　　　┃　　　┃　　　┗━　[Network\342\200\205Troubleshooting](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/Network\342\200\205Troubleshooting.md)</br>
+┃　　　┃　　　┃　　　┗━　[Node\342\200\205and\342\200\205Pod\342\200\205Network\342\200\205Layout](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/Node\342\200\205and\342\200\205Pod\342\200\205Network\342\200\205Layout.md)</br>
+┃　　　┃　　　┃　　　┗━　[eBPF](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Network/eBPF.md)</br>
+┃　　　┃　　　┗━　[**Service\342\200\205Mesh**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh)</br>
+┃　　　┃　　　┃　　　┗━　[**istio**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Dry\342\200\205run](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/Dry\342\200\205run.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istioctl](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/Istioctl.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio\342\200\205And\342\200\205Envoy](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/Istio\342\200\205And\342\200\205Envoy.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio\342\200\205Arcitecture](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/Istio\342\200\205Arcitecture.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio\342\200\205Configuration\342\200\205Profiles](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/Istio\342\200\205Configuration\342\200\205Profiles.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio\342\200\205RBAC](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/Istio\342\200\205RBAC.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Istio\342\200\205authorization](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/Istio\342\200\205authorization.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[Resource\342\200\205Annotations\342\200\205&\342\200\205Labels](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/Resource\342\200\205Annotations\342\200\205&\342\200\205Labels.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[ServiceEntry](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/ServiceEntry.md)</br>
+┃　　　┃　　　┃　　　　　　　┗━　[gateway\342\200\205log\342\200\205debug\342\200\205\355\225\230\353\212\224\342\200\205\353\262\225](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Service\342\200\205Mesh/istio/gateway\342\200\205log\342\200\205debug\342\200\205\355\225\230\353\212\224\342\200\205\353\262\225.md)</br>
+┃　　　┃　　　┗━　[**tools**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools)</br>
+┃　　　┃　　　┃　　　┗━　[**ArgoCD**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/ArgoCD)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ApplicationSets](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/ArgoCD/ApplicationSets.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Apps\342\200\205of\342\200\205Apps](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/ArgoCD/Apps\342\200\205of\342\200\205Apps.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ArgoCD\342\200\205\354\204\244\354\271\230](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/ArgoCD/ArgoCD\342\200\205\354\204\244\354\271\230.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Config\342\200\205Management\342\200\205Plugins](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/ArgoCD/Config\342\200\205Management\342\200\205Plugins.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Health\342\200\205Check](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/ArgoCD/Health\342\200\205Check.md)</br>
+┃　　　┃　　　┃　　　┗━　[**Karpenter**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/Karpenter)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/Karpenter/Karpenter.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter\342\200\205best\342\200\205practices](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/Karpenter/Karpenter\342\200\205best\342\200\205practices.md)</br>
+┃　　　┃　　　┃　　　┗━　[**Kyverno**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/Kyverno)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Kyverno](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/Kyverno/Kyverno.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Usecases](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/Kyverno/Usecases.md)</br>
+┃　　　┃　　　┃　　　┗━　[**helm**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/helm)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Chart\342\200\205Development\342\200\205Tips](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/helm/Chart\342\200\205Development\342\200\205Tips.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/helm/Helm.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Values\342\200\205Files](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/helm/Values\342\200\205Files.md)</br>
+┃　　　┃　　　┃　　　┗━　[Install\342\200\205Cilium](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/Install\342\200\205Cilium.md)</br>
+┃　　　┃　　　┃　　　┗━　[Node\342\200\205Termination\342\200\205Handler](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/Node\342\200\205Termination\342\200\205Handler.md)</br>
+┃　　　┃　　　┃　　　┗━　[OPA\342\200\205Gatekeeper](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/OPA\342\200\205Gatekeeper.md)</br>
+┃　　　┃　　　┃　　　┗━　[node━shell](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/tools/node━shell.md)</br>
+┃　　　┃　　　┗━　[**\352\260\234\353\205\220**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220)</br>
+┃　　　┃　　　┃　　　┗━　[**Node\342\200\205Scheduling**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Node\342\200\205Scheduling)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Assigning\342\200\205Pods\342\200\205to\342\200\205Nodes](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Node\342\200\205Scheduling/Assigning\342\200\205Pods\342\200\205to\342\200\205Nodes.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Taints\342\200\205and\342\200\205Tolerations](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Node\342\200\205Scheduling/Taints\342\200\205and\342\200\205Tolerations.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[cordon,\342\200\205drain](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Node\342\200\205Scheduling/cordon,\342\200\205drain.md)</br>
+┃　　　┃　　　┃　　　┗━　[**Volume**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Volume)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[CSIDriver](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Volume/CSIDriver.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[attachdetach━controller](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Volume/attachdetach━controller.md)</br>
+┃　　　┃　　　┃　　　┗━　[**object**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Annotation.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[CRD](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/CRD.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployment\　Status](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Deployment\　Status.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployment\　Strategy](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Deployment\　Strategy.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Deployments.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Events](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Events.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Labels\342\200\205and\342\200\205Selectors](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Labels\342\200\205and\342\200\205Selectors.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[PV\342\200\205&\342\200\205PVC](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/PV\342\200\205&\342\200\205PVC.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pod](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Pod.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pod\342\200\205Readiness\342\200\205and\342\200\205Probes](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Pod\342\200\205Readiness\342\200\205and\342\200\205Probes.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Pod\342\200\205\354\203\235\354\204\261\352\263\274\354\240\225](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Pod\342\200\205\354\203\235\354\204\261\352\263\274\354\240\225.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[RollingUpdate](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/RollingUpdate.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Service\354\231\200\342\200\205port](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/Service\354\231\200\342\200\205port.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[StatefulSets](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/StatefulSets.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ingress](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/object/ingress.md)</br>
+┃　　　┃　　　┃　　　┗━　[CNI\342\200\205Specification](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/CNI\342\200\205Specification.md)</br>
+┃　　　┃　　　┃　　　┗━　[Disruption\342\200\205Budget](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Disruption\342\200\205Budget.md)</br>
+┃　　　┃　　　┃　　　┗━　[Endpoints](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Endpoints.md)</br>
+┃　　　┃　　　┃　　　┗━　[K8s\354\235\230\342\200\205\353\217\204\354\273\244\353\237\260\355\203\200\354\236\204\342\200\205\354\202\254\354\232\251\354\244\221\353\213\250](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/K8s\354\235\230\342\200\205\353\217\204\354\273\244\353\237\260\355\203\200\354\236\204\342\200\205\354\202\254\354\232\251\354\244\221\353\213\250.md)</br>
+┃　　　┃　　　┃　　　┗━　[Kubeproxy](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Kubeproxy.md)</br>
+┃　　　┃　　　┃　　　┗━　[NodePort\354\231\200\342\200\205ServicePort\354\231\200\342\200\205targetPort](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/NodePort\354\231\200\342\200\205ServicePort\354\231\200\342\200\205targetPort.md)</br>
+┃　　　┃　　　┃　　　┗━　[Workloads](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/Workloads.md)</br>
+┃　　　┃　　　┃　　　┗━　[etcd](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/etcd.md)</br>
+┃　　　┃　　　┃　　　┗━　[\352\260\200\354\203\201\342\200\205IP\354\231\200\342\200\205\354\204\234\353\271\204\354\212\244\342\200\205\355\224\204\353\241\235\354\213\234](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/\352\260\200\354\203\201\342\200\205IP\354\231\200\342\200\205\354\204\234\353\271\204\354\212\244\342\200\205\355\224\204\353\241\235\354\213\234.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\202\254\354\235\264\353\223\234\354\271\264\342\200\205\355\214\250\355\204\264](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\352\260\234\353\205\220/\354\202\254\354\235\264\353\223\234\354\271\264\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┗━　[**\354\213\244\354\212\265**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265)</br>
+┃　　　┃　　　┃　　　┗━　[**Auth**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/Auth)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Authenticating](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/Auth/Authenticating.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[OIDC\342\200\205Authentication\342\200\205with\342\200\205Dex](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/Auth/OIDC\342\200\205Authentication\342\200\205with\342\200\205Dex.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Security\342\200\205Context\342\200\205for\342\200\205a\342\200\205Pod\342\200\205or\342\200\205Container](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/Auth/Security\342\200\205Context\342\200\205for\342\200\205a\342\200\205Pod\342\200\205or\342\200\205Container.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Token\342\200\205Webhook\342\200\205with\342\200\205Guard](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/Auth/Token\342\200\205Webhook\342\200\205with\342\200\205Guard.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[k8s\342\200\205\355\201\264\353\237\254\354\212\244\355\204\260\342\200\205root\342\200\205CA\353\245\274\342\200\205\355\206\265\355\225\234\342\200\205\354\202\254\354\232\251\354\236\220\342\200\205\354\235\270\354\246\235](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/Auth/k8s\342\200\205\355\201\264\353\237\254\354\212\244\355\204\260\342\200\205root\342\200\205CA\353\245\274\342\200\205\355\206\265\355\225\234\342\200\205\354\202\254\354\232\251\354\236\220\342\200\205\354\235\270\354\246\235.md)</br>
+┃　　　┃　　　┃　　　┗━　[10\342\200\205most\342\200\205common\342\200\205mistakes\342\200\205using\342\200\205kubernetes](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/10\342\200\205most\342\200\205common\342\200\205mistakes\342\200\205using\342\200\205kubernetes.md)</br>
+┃　　　┃　　　┃　　　┗━　[Cert\342\200\205manager](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/Cert\342\200\205manager.md)</br>
+┃　　　┃　　　┃　　　┗━　[End\342\200\205user\342\200\205RBAC](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/End\342\200\205user\342\200\205RBAC.md)</br>
+┃　　　┃　　　┃　　　┗━　[K8s\353\245\274\342\200\205\354\234\204\355\225\234\342\200\205SpringBoot\342\200\205\352\260\234\353\260\234](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/K8s\353\245\274\342\200\205\354\234\204\355\225\234\342\200\205SpringBoot\342\200\205\352\260\234\353\260\234.md)</br>
+┃　　　┃　　　┃　　　┗━　[NetworkPolicy\342\200\205Cilium\342\200\205example](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/NetworkPolicy\342\200\205Cilium\342\200\205example.md)</br>
+┃　　　┃　　　┃　　　┗━　[Pulling\342\200\205images\342\200\205from\342\200\205ECR\342\200\205on\342\200\205Kubernetes](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/Pulling\342\200\205images\342\200\205from\342\200\205ECR\342\200\205on\342\200\205Kubernetes.md)</br>
+┃　　　┃　　　┃　　　┗━　[SpringBoot\342\200\205\354\204\234\353\271\204\354\212\244\353\245\274\342\200\205\354\234\204\355\225\234\342\200\205Kubernetes\342\200\205\354\204\244\354\240\225](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/SpringBoot\342\200\205\354\204\234\353\271\204\354\212\244\353\245\274\342\200\205\354\234\204\355\225\234\342\200\205Kubernetes\342\200\205\354\204\244\354\240\225.md)</br>
+┃　　　┃　　　┃　　　┗━　[kubectl\342\200\205context](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/kubectl\342\200\205context.md)</br>
+┃　　　┃　　　┃　　　┗━　[minukube\342\200\205\354\213\234\354\236\221\355\225\230\352\270\260](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/minukube\342\200\205\354\213\234\354\236\221\355\225\230\352\270\260.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\231\230\352\262\275\353\263\200\354\210\230\342\200\205\354\204\244\354\240\225](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/\354\213\244\354\212\265/\355\231\230\352\262\275\353\263\200\354\210\230\342\200\205\354\204\244\354\240\225.md)</br>
+┃　　　┃　　　┗━　[K8s\342\200\205Architecture](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/K8s\342\200\205Architecture.md)</br>
+┃　　　┃　　　┗━　[Kubernetes](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Kubernetes.md)</br>
+┃　　　┃　　　┗━　[Kubernetes\342\200\205Overview\342\200\205Diagrams](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/Kubernetes\342\200\205Overview\342\200\205Diagrams.md)</br>
+┃　　　┃　　　┗━　[**test.yml**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Kubernetes/test.yml)</br>
+┃　　　┗━　[**Monitoring**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring)</br>
+┃　　　┃　　　┗━　[**Dashboad**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/Dashboad)</br>
+┃　　　┃　　　┃　　　┗━　[kiali\342\200\205with\342\200\205prometheus](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/Dashboad/kiali\342\200\205with\342\200\205prometheus.md)</br>
+┃　　　┃　　　┗━　[**datadog**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/datadog)</br>
+┃　　　┃　　　┃　　　┗━　[datadog](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/datadog/datadog.md)</br>
+┃　　　┃　　　┃　　　┗━　[datadog\342\200\205APM\342\200\205\352\270\260\353\212\245\342\200\205\354\202\254\354\232\251\355\225\230\352\270\260](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/datadog/datadog\342\200\205APM\342\200\205\352\270\260\353\212\245\342\200\205\354\202\254\354\232\251\355\225\230\352\270\260.md)</br>
+┃　　　┃　　　┃　　　┗━　[datadog\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/datadog/datadog\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230.md)</br>
+┃　　　┃　　　┃　　　┗━　[helmChart\353\241\234\342\200\205Agent\342\200\205\354\204\244\354\271\230](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/datadog/helmChart\353\241\234\342\200\205Agent\342\200\205\354\204\244\354\271\230.md)</br>
+┃　　　┃　　　┗━　[**elk**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/elk)</br>
+┃　　　┃　　　┃　　　┗━　[ELK\342\200\205Stack](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/elk/ELK\342\200\205Stack.md)</br>
+┃　　　┃　　　┃　　　┗━　[ElasticSearch\342\200\205\352\262\200\354\203\211\342\200\205\353\252\205\353\240\271\354\226\264](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/elk/ElasticSearch\342\200\205\352\262\200\354\203\211\342\200\205\353\252\205\353\240\271\354\226\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[Elastic\342\200\205Search](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/elk/Elastic\342\200\205Search.md)</br>
+┃　　　┃　　　┃　　　┗━　[Logstash](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/elk/Logstash.md)</br>
+┃　　　┃　　　┗━　[**grafana**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/grafana)</br>
+┃　　　┃　　　┃　　　┗━　[Loki\342\200\205Canary](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/grafana/Loki\342\200\205Canary.md)</br>
+┃　　　┃　　　┗━　[**prometheus**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/prometheus)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/prometheus/prometheus.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus\342\200\205agent\342\200\205mode](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/prometheus/prometheus\342\200\205agent\342\200\205mode.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus\342\200\205glossary](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/prometheus/prometheus\342\200\205glossary.md)</br>
+┃　　　┃　　　┃　　　┗━　[prometheus\342\200\205storage](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/prometheus/prometheus\342\200\205storage.md)</br>
+┃　　　┃　　　┗━　[**thanos**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/thanos)</br>
+┃　　　┃　　　┃　　　┗━　[Rule](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/thanos/Rule.md)</br>
+┃　　　┃　　　┃　　　┗━　[Thanos](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/thanos/Thanos.md)</br>
+┃　　　┃　　　┗━　[Grok\342\200\205exporter](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/Grok\342\200\205exporter.md)</br>
+┃　　　┃　　　┗━　[telemetry](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Monitoring/telemetry.md)</br>
+┃　　　┗━　[**Proxy**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy)</br>
+┃　　　┃　　　┗━　[**envoy**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/envoy)</br>
+┃　　　┃　　　┃　　　┗━　[Envoy](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/envoy/Envoy.md)</br>
+┃　　　┃　　　┃　　　┗━　[LDS](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/envoy/LDS.md)</br>
+┃　　　┃　　　┃　　　┗━　[xDS\342\200\205configuration](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/envoy/xDS\342\200\205configuration.md)</br>
+┃　　　┃　　　┗━　[**nginx**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/nginx)</br>
+┃　　　┃　　　┃　　　┗━　[NGINX\342\200\205Ingress\342\200\205Basic\342\200\205Auth](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/nginx/NGINX\342\200\205Ingress\342\200\205Basic\342\200\205Auth.md)</br>
+┃　　　┃　　　┃　　　┗━　[location\342\200\205block](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/nginx/location\342\200\205block.md)</br>
+┃　　　┃　　　┃　　　┗━　[nginx\342\200\205certbot](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/nginx/nginx\342\200\205certbot.md)</br>
+┃　　　┃　　　┃　　　┗━　[nginx\342\200\205docker](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/nginx/nginx\342\200\205docker.md)</br>
+┃　　　┃　　　┃　　　┗━　[nginx\342\200\205\353\252\205\353\240\271\354\226\264](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/nginx/nginx\342\200\205\353\252\205\353\240\271\354\226\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[nginx\342\200\205\354\204\244\354\240\225](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/nginx/nginx\342\200\205\354\204\244\354\240\225.md)</br>
+┃　　　┃　　　┃　　　┗━　[sites━available](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/nginx/sites━available.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\246\254\353\262\204\354\212\244\342\200\205\355\224\204\353\241\235\354\213\234](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/nginx/\353\246\254\353\262\204\354\212\244\342\200\205\355\224\204\353\241\235\354\213\234.md)</br>
+┃　　　┃　　　┗━　[Contour](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/Contour.md)</br>
+┃　　　┃　　　┗━　[Contour\342\200\205CRD\342\200\205\354\204\244\354\271\230](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/Contour\342\200\205CRD\342\200\205\354\204\244\354\271\230.md)</br>
+┃　　　┃　　　┗━　[Reverse\342\200\205Proxy\342\200\205vs.\342\200\205Ingress\342\200\205Controller\342\200\205vs.\342\200\205API\342\200\205Gateway](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Proxy/Reverse\342\200\205Proxy\342\200\205vs.\342\200\205Ingress\342\200\205Controller\342\200\205vs.\342\200\205API\342\200\205Gateway.md)</br>
+┃　　　┗━　[**architecture**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/architecture)</br>
+┃　　　┃　　　┗━　[zero\342\200\205trust](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/architecture/zero\342\200\205trust.md)</br>
+┃　　　┗━　[**tools**](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/tools)</br>
+┃　　　┃　　　┗━　[Dex](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/tools/Dex.md)</br>
+┃　　　┃　　　┗━　[Dex\342\200\205K8s\342\200\205Authenticator](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/tools/Dex\342\200\205K8s\342\200\205Authenticator.md)</br>
+┃　　　┃　　　┗━　[GPG](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/tools/GPG.md)</br>
+┃　　　┃　　　┗━　[Keycloak](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/tools/Keycloak.md)</br>
+┃　　　┃　　　┗━　[Packer](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/tools/Packer.md)</br>
+┃　　　┃　　　┗━　[minio](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/tools/minio.md)</br>
+┃　　　┃　　　┗━　[openssl\353\241\234\342\200\205pemKey\342\200\205\353\247\214\353\223\244\352\263\240\342\200\205\354\240\221\354\206\215\355\225\230\352\270\260](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/tools/openssl\353\241\234\342\200\205pemKey\342\200\205\353\247\214\353\223\244\352\263\240\342\200\205\354\240\221\354\206\215\355\225\230\352\270\260.md)</br>
+┃　　　┗━　[CI\357\274\217CD\355\214\214\354\235\264\355\224\204\353\235\274\354\235\270](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/CI\357\274\217CD\355\214\214\354\235\264\355\224\204\353\235\274\354\235\270.md)</br>
+┃　　　┗━　[Cloud\342\200\205Agnostic\342\200\205Design](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/Cloud\342\200\205Agnostic\342\200\205Design.md)</br>
+┃　　　┗━　[\353\215\260\353\270\214\354\230\265\354\212\244](./\353\215\260\353\270\214\354\230\265\354\212\244\342\200\205DevOps/\353\215\260\353\270\214\354\230\265\354\212\244.md)</br>
+┗━　[**\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase)</br>
+┃　　　┗━　[**DB\354\204\244\352\263\204**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/DB\354\204\244\352\263\204)</br>
+┃　　　┃　　　┗━　[DBMS\354\231\200\342\200\202RDBMS](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/DB\354\204\244\352\263\204/DBMS\354\231\200\342\200\202RDBMS.md)</br>
+┃　　　┃　　　┗━　[\353\215\260\354\235\264\355\204\260\353\252\250\353\215\270\353\247\201](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/DB\354\204\244\352\263\204/\353\215\260\354\235\264\355\204\260\353\252\250\353\215\270\353\247\201.md)</br>
+┃　　　┃　　　┗━　[\353\254\264\352\262\260\354\204\261\342\200\202\354\240\234\354\225\275\354\241\260\352\261\264](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/DB\354\204\244\352\263\204/\353\254\264\352\262\260\354\204\261\342\200\202\354\240\234\354\225\275\354\241\260\352\261\264.md)</br>
+┃　　　┃　　　┗━　[\353\266\204\354\202\260\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/DB\354\204\244\352\263\204/\353\266\204\354\202\260\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244.md)</br>
+┃　　　┃　　　┗━　[\354\212\244\355\202\244\353\247\210](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/DB\354\204\244\352\263\204/\354\212\244\355\202\244\353\247\210.md)</br>
+┃　　　┃　　　┗━　[\354\240\225\352\267\234\355\231\224\354\231\200\342\200\202\353\260\230\354\240\225\352\267\234\355\231\224](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/DB\354\204\244\352\263\204/\354\240\225\352\267\234\355\231\224\354\231\200\342\200\202\353\260\230\354\240\225\352\267\234\355\231\224.md)</br>
+┃　　　┃　　　┗━　[\355\205\214\354\235\264\353\270\224\353\266\204\355\225\240](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/DB\354\204\244\352\263\204/\355\205\214\354\235\264\353\270\224\353\266\204\355\225\240.md)</br>
+┃　　　┃　　　┗━　[\355\212\270\353\236\234\354\236\255\354\205\230\342\200\202ACID\354\231\200\342\200\202\352\262\251\353\246\254\354\210\230\354\244\200](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/DB\354\204\244\352\263\204/\355\212\270\353\236\234\354\236\255\354\205\230\342\200\202ACID\354\231\200\342\200\202\352\262\251\353\246\254\354\210\230\354\244\200.md)</br>
+┃　　　┗━　[**MQ**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/MQ)</br>
+┃　　　┃　　　┗━　[Docker\353\241\234\342\200\205Kafka\342\200\205\354\213\244\355\226\211](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/MQ/Docker\353\241\234\342\200\205Kafka\342\200\205\354\213\244\355\226\211.md)</br>
+┃　　　┃　　　┗━　[RabbitMQ](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/MQ/RabbitMQ.md)</br>
+┃　　　┃　　　┗━　[Spring\342\200\205with\342\200\205Kafka](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/MQ/Spring\342\200\205with\342\200\205Kafka.md)</br>
+┃　　　┃　　　┗━　[\353\251\224\354\213\234\354\247\200\355\201\220](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/MQ/\353\251\224\354\213\234\354\247\200\355\201\220.md)</br>
+┃　　　┗━　[**NoSQL**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL)</br>
+┃　　　┃　　　┗━　[**MongoDB**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/MongoDB)</br>
+┃　　　┃　　　┃　　　┗━　[BinData](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/MongoDB/BinData.md)</br>
+┃　　　┃　　　┃　　　┗━　[Homebrew\353\241\234\342\200\205MongoDB\354\204\244\354\271\230\355\225\230\352\270\260](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/MongoDB/Homebrew\353\241\234\342\200\205MongoDB\354\204\244\354\271\230\355\225\230\352\270\260.md)</br>
+┃　　　┃　　　┃　　　┗━　[MongoDB](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/MongoDB/MongoDB.md)</br>
+┃　　　┃　　　┃　　　┗━　[MongoDB\342\200\205Document\353\241\234\342\200\205POJO\342\200\205\354\203\201\354\206\215\353\260\233\352\270\260](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/MongoDB/MongoDB\342\200\205Document\353\241\234\342\200\205POJO\342\200\205\354\203\201\354\206\215\353\260\233\352\270\260.md)</br>
+┃　　　┃　　　┃　　　┗━　[MongoDB\342\200\205\354\212\244\355\202\244\353\247\210\354\204\244\352\263\204\342\200\205\352\263\240\353\240\244\354\202\254\355\225\255](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/MongoDB/MongoDB\342\200\205\354\212\244\355\202\244\353\247\210\354\204\244\352\263\204\342\200\205\352\263\240\353\240\244\354\202\254\355\225\255.md)</br>
+┃　　　┃　　　┃　　　┗━　[MongoDB\342\200\205\354\234\240\354\240\200\352\264\200\353\246\254](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/MongoDB/MongoDB\342\200\205\354\234\240\354\240\200\352\264\200\353\246\254.md)</br>
+┃　　　┃　　　┗━　[**PostgreSQL**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/PostgreSQL)</br>
+┃　　　┃　　　┃　　　┗━　[PostgreSQL](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/PostgreSQL/PostgreSQL.md)</br>
+┃　　　┃　　　┃　　　┗━　[PostgreSQL\353\252\205\353\240\271\354\226\264](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/PostgreSQL/PostgreSQL\353\252\205\353\240\271\354\226\264.md)</br>
+┃　　　┃　　　┗━　[**redis**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/redis)</br>
+┃　　　┃　　　┃　　　┗━　[Redis](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/redis/Redis.md)</br>
+┃　　　┃　　　┃　　　┗━　[Spring\342\200\205Redis\342\200\205Phantomkey](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/redis/Spring\342\200\205Redis\342\200\205Phantomkey.md)</br>
+┃　　　┃　　　┗━　[Cassandra](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/Cassandra.md)</br>
+┃　　　┃　　　┗━　[Memcached\342\200\205VS\342\200\205Redis](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/Memcached\342\200\205VS\342\200\205Redis.md)</br>
+┃　　　┃　　　┗━　[NoSQL\342\200\205\353\215\260\354\235\264\355\204\260\354\234\240\355\230\225](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/NoSQL\342\200\205\353\215\260\354\235\264\355\204\260\354\234\240\355\230\225.md)</br>
+┃　　　┃　　　┗━　[NoSQL\354\227\220\353\212\224\342\200\205ACID\352\260\200\342\200\205\354\227\206\353\213\244\352\263\240\357\274\237](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/NoSQL/NoSQL\354\227\220\353\212\224\342\200\205ACID\352\260\200\342\200\205\354\227\206\353\213\244\352\263\240\357\274\237.md)</br>
+┃　　　┗━　[**SQL**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL)</br>
+┃　　　┃　　　┗━　[**\354\265\234\354\240\201\355\231\224**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\265\234\354\240\201\355\231\224)</br>
+┃　　　┃　　　┃　　　┗━　[DB\342\200\205\354\273\244\353\204\245\354\205\230\342\200\205\355\222\200](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\265\234\354\240\201\355\231\224/DB\342\200\205\354\273\244\353\204\245\354\205\230\342\200\205\355\222\200.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\230\265\355\213\260\353\247\210\354\235\264\354\240\200](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\265\234\354\240\201\355\231\224/\354\230\265\355\213\260\353\247\210\354\235\264\354\240\200.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\241\260\354\235\270\342\200\205\354\210\230\355\226\211\354\233\220\353\246\254](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\265\234\354\240\201\355\231\224/\354\241\260\354\235\270\342\200\205\354\210\230\355\226\211\354\233\220\353\246\254.md)</br>
+┃　　　┃　　　┗━　[**\354\277\274\353\246\254\354\242\205\353\245\230**](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\277\274\353\246\254\354\242\205\353\245\230)</br>
+┃　　　┃　　　┃　　　┗━　[DCL](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\277\274\353\246\254\354\242\205\353\245\230/DCL.md)</br>
+┃　　　┃　　　┃　　　┗━　[DDL](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\277\274\353\246\254\354\242\205\353\245\230/DDL.md)</br>
+┃　　　┃　　　┃　　　┗━　[DML](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\277\274\353\246\254\354\242\205\353\245\230/DML.md)</br>
+┃　　　┃　　　┃　　　┗━　[Procedural\357\274\217Nonprocedural\342\200\202DML](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\277\274\353\246\254\354\242\205\353\245\230/Procedural\357\274\217Nonprocedural\342\200\202DML.md)</br>
+┃　　　┃　　　┃　　　┗━　[TCL](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\277\274\353\246\254\354\242\205\353\245\230/TCL.md)</br>
+┃　　　┃　　　┗━　[Alias](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/Alias.md)</br>
+┃　　　┃　　　┗━　[FK\354\230\265\354\205\230](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/FK\354\230\265\354\205\230.md)</br>
+┃　　　┃　　　┗━　[GROUPING\342\200\205SETS\354\231\200\342\200\205GROUPING](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/GROUPING\342\200\205SETS\354\231\200\342\200\205GROUPING.md)</br>
+┃　　　┃　　　┗━　[GROUP\342\200\205BY\354\231\200\342\200\205HAVING\354\240\210](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/GROUP\342\200\205BY\354\231\200\342\200\205HAVING\354\240\210.md)</br>
+┃　　　┃　　　┗━　[INNER\342\200\205JOIN\352\263\274\342\200\205OUTER\342\200\205JOIN](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/INNER\342\200\205JOIN\352\263\274\342\200\205OUTER\342\200\205JOIN.md)</br>
+┃　　　┃　　　┗━　[ON\354\240\210](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/ON\354\240\210.md)</br>
+┃　　　┃　　　┗━　[ORDER\342\200\205BY\354\240\210](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/ORDER\342\200\205BY\354\240\210.md)</br>
+┃　　　┃　　　┗━　[ROLLUP\352\263\274\342\200\205CUBE](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/ROLLUP\352\263\274\342\200\205CUBE.md)</br>
+┃　　　┃　　　┗━　[SELECT\354\277\274\353\246\254\342\200\205\354\213\244\355\226\211\354\210\234\354\204\234](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/SELECT\354\277\274\353\246\254\342\200\205\354\213\244\355\226\211\354\210\234\354\204\234.md)</br>
+┃　　　┃　　　┗━　[\352\263\204\354\270\265\355\230\225\342\200\205\354\247\210\354\235\230](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\352\263\204\354\270\265\355\230\225\342\200\205\354\247\210\354\235\230.md)</br>
+┃　　　┃　　　┗━　[\354\204\234\353\270\214\354\277\274\353\246\254](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\204\234\353\270\214\354\277\274\353\246\254.md)</br>
+┃　　　┃　　　┗━　[\354\234\210\353\217\204\354\232\260\342\200\205\355\225\250\354\210\230](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\234\210\353\217\204\354\232\260\342\200\205\355\225\250\354\210\230.md)</br>
+┃　　　┃　　　┗━　[\354\240\234\354\225\275\354\241\260\352\261\264](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\240\234\354\225\275\354\241\260\352\261\264.md)</br>
+┃　　　┃　　　┗━　[\354\247\221\352\263\204\355\225\250\354\210\230](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\247\221\352\263\204\355\225\250\354\210\230.md)</br>
+┃　　　┃　　　┗━　[\354\247\221\355\225\251\354\227\260\354\202\260\354\236\220](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/SQL/\354\247\221\355\225\251\354\227\260\354\202\260\354\236\220.md)</br>
+┃　　　┗━　[Change\342\200\205Date\342\200\205Capture](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/Change\342\200\205Date\342\200\205Capture.md)</br>
+┃　　　┗━　[Column,\342\200\205Row\352\270\260\353\260\230\342\200\205DB](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/Column,\342\200\205Row\352\270\260\353\260\230\342\200\205DB.md)</br>
+┃　　　┗━　[Data\342\200\205Lake\354\231\200\342\200\205Warehouse](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/Data\342\200\205Lake\354\231\200\342\200\205Warehouse.md)</br>
+┃　　　┗━　[MySQL\342\200\205Replication](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/MySQL\342\200\205Replication.md)</br>
+┃　　　┗━　[OLAP](./\353\215\260\354\235\264\355\204\260\353\262\240\354\235\264\354\212\244\342\200\205DataBase/OLAP.md)</br>
+┗━　[**\354\212\244\355\224\204\353\247\201\342\200\205Spring**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring)</br>
+┃　　　┗━　[**AOP**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP)</br>
+┃　　　┃　　　┗━　[**\355\212\270\353\236\234\354\236\255\354\205\230**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP/\355\212\270\353\236\234\354\236\255\354\205\230)</br>
+┃　　　┃　　　┃　　　┗━　[TransactionAttributeSource](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP/\355\212\270\353\236\234\354\236\255\354\205\230/TransactionAttributeSource.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\212\270\353\236\234\354\236\255\354\205\230](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP/\355\212\270\353\236\234\354\236\255\354\205\230/\355\212\270\353\236\234\354\236\255\354\205\230.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\212\270\353\236\234\354\236\255\354\205\230\342\200\202\354\240\204\355\214\214](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP/\355\212\270\353\236\234\354\236\255\354\205\230/\355\212\270\353\236\234\354\236\255\354\205\230\342\200\202\354\240\204\355\214\214.md)</br>
+┃　　　┃　　　┗━　[AdviceAnnotation](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP/AdviceAnnotation.md)</br>
+┃　　　┃　　　┗━　[Pointcut](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP/Pointcut.md)</br>
+┃　　　┃　　　┗━　[ProxyFactoryBean](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP/ProxyFactoryBean.md)</br>
+┃　　　┃　　　┗━　[Spring\342\200\205AOP](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP/Spring\342\200\205AOP.md)</br>
+┃　　　┃　　　┗━　[Spring\354\227\220\354\204\234\342\200\205aspectj\342\200\205weaving\354\202\254\354\232\251\355\225\230\352\270\260](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOP/Spring\354\227\220\354\204\234\342\200\205aspectj\342\200\205weaving\354\202\254\354\232\251\355\225\230\352\270\260.md)</br>
+┃　　　┗━　[**Event**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Event)</br>
+┃　　　┃　　　┗━　[@TransactionalEventListener](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Event/@TransactionalEventListener.md)</br>
+┃　　　┃　　　┗━　[ApplicationEventPublisher](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Event/ApplicationEventPublisher.md)</br>
+┃　　　┗━　[**JPA**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA)</br>
+┃　　　┃　　　┗━　[**JPQL**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/JPQL)</br>
+┃　　　┃　　　┃　　　┗━　[FetchJoin](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/JPQL/FetchJoin.md)</br>
+┃　　　┃　　　┃　　　┗━　[\352\262\275\353\241\234\355\221\234\355\230\204\354\213\235](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/JPQL/\352\262\275\353\241\234\355\221\234\355\230\204\354\213\235.md)</br>
+┃　　　┃　　　┗━　[**QuerydslJpa**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa)</br>
+┃　　　┃　　　┃　　　┗━　[Paging](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa/Paging.md)</br>
+┃　　　┃　　　┃　　　┗━　[Projection](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa/Projection.md)</br>
+┃　　　┃　　　┃　　　┗━　[QClass](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa/QClass.md)</br>
+┃　　　┃　　　┃　　　┗━　[QuerydslJpa](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa/QuerydslJpa.md)</br>
+┃　　　┃　　　┃　　　┗━　[QuerydslPredicateExecutor](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa/QuerydslPredicateExecutor.md)</br>
+┃　　　┃　　　┃　　　┗━　[fetchResults\352\260\200\342\200\205deprecated\353\220\234\342\200\202\354\235\264\354\234\240](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa/fetchResults\352\260\200\342\200\205deprecated\353\220\234\342\200\202\354\235\264\354\234\240.md)</br>
+┃　　　┃　　　┃　　　┗━　[\352\270\260\353\263\270\353\254\270\353\262\225](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa/\352\270\260\353\263\270\353\254\270\353\262\225.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\217\231\354\240\201\354\277\274\353\246\254](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa/\353\217\231\354\240\201\354\277\274\353\246\254.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\262\214\355\201\254\354\227\260\354\202\260](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/QuerydslJpa/\353\262\214\355\201\254\354\227\260\354\202\260.md)</br>
+┃　　　┃　　　┗━　[**\354\272\220\354\213\261**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/\354\272\220\354\213\261)</br>
+┃　　　┃　　　┃　　　┗━　[1\354\260\250\354\272\220\354\213\234](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/\354\272\220\354\213\261/1\354\260\250\354\272\220\354\213\234.md)</br>
+┃　　　┃　　　┃　　　┗━　[2\354\260\250\354\272\220\354\213\234](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/\354\272\220\354\213\261/2\354\260\250\354\272\220\354\213\234.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\230\201\354\206\215\354\204\261\342\200\205\354\273\250\355\205\215\354\212\244\355\212\270](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/\354\272\220\354\213\261/\354\230\201\354\206\215\354\204\261\342\200\205\354\273\250\355\205\215\354\212\244\355\212\270.md)</br>
+┃　　　┃　　　┗━　[@GeneratedValue\342\200\205\354\275\224\353\223\234\353\263\264\352\270\260](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/@GeneratedValue\342\200\205\354\275\224\353\223\234\353\263\264\352\270\260.md)</br>
+┃　　　┃　　　┗━　[Cascade](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/Cascade.md)</br>
+┃　　　┃　　　┗━　[GenerateValue\342\200\205Column\354\227\220\342\200\205\352\260\222\354\235\204\342\200\205\353\204\243\353\212\224\353\213\244\353\251\264](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/GenerateValue\342\200\205Column\354\227\220\342\200\205\352\260\222\354\235\204\342\200\205\353\204\243\353\212\224\353\213\244\353\251\264.md)</br>
+┃　　　┃　　　┗━　[Hibernate\342\200\205dialect](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/Hibernate\342\200\205dialect.md)</br>
+┃　　　┃　　　┗━　[Hibernate\342\200\205\354\277\274\353\246\254\354\213\244\355\226\211\354\210\234\354\204\234](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/Hibernate\342\200\205\354\277\274\353\246\254\354\213\244\355\226\211\354\210\234\354\204\234.md)</br>
+┃　　　┃　　　┗━　[Id\353\241\234\342\200\205\354\227\260\352\264\200\352\264\200\352\263\204\342\200\205\352\260\235\354\262\264\342\200\205\354\240\200\354\236\245](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/Id\353\241\234\342\200\205\354\227\260\352\264\200\352\264\200\352\263\204\342\200\205\352\260\235\354\262\264\342\200\205\354\240\200\354\236\245.md)</br>
+┃　　　┃　　　┗━　[JDBC\342\200\205Object\342\200\205Mapping\342\200\205Fundamentalsentity](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/JDBC\342\200\205Object\342\200\205Mapping\342\200\205Fundamentalsentity.md)</br>
+┃　　　┃　　　┗━　[JPA](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/JPA.md)</br>
+┃　　　┃　　　┗━　[N+1\342\200\205\353\254\270\354\240\234](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/N+1\342\200\205\353\254\270\354\240\234.md)</br>
+┃　　　┃　　　┗━　[OrphanRemoval](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/OrphanRemoval.md)</br>
+┃　　　┃　　　┗━　[Persistable](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/Persistable.md)</br>
+┃　　　┃　　　┗━　[ReadOnlyQuery\342\200\205\354\265\234\354\240\201\355\231\224](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/ReadOnlyQuery\342\200\205\354\265\234\354\240\201\355\231\224.md)</br>
+┃　　　┃　　　┗━　[\353\262\214\355\201\254\354\227\260\354\202\260](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/\353\262\214\355\201\254\354\227\260\354\202\260.md)</br>
+┃　　　┃　　　┗━　[\355\212\270\353\236\234\354\236\255\354\205\230\342\200\205\354\240\204\355\214\214\342\200\205\354\204\244\354\240\225](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/JPA/\355\212\270\353\236\234\354\236\255\354\205\230\342\200\205\354\240\204\355\214\214\342\200\205\354\204\244\354\240\225.md)</br>
+┃　　　┗━　[**SpringSecurity**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/SpringSecurity)</br>
+┃　　　┃　　　┗━　[CORS](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/SpringSecurity/CORS.md)</br>
+┃　　　┃　　　┗━　[CSRF](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/SpringSecurity/CSRF.md)</br>
+┃　　　┃　　　┗━　[authn\352\263\274\342\200\205authz](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/SpringSecurity/authn\352\263\274\342\200\205authz.md)</br>
+┃　　　┗━　[**Validation**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Validation)</br>
+┃　　　┃　　　┗━　[@GroupSequence](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Validation/@GroupSequence.md)</br>
+┃　　　┃　　　┗━　[@Valid\354\231\200\342\200\205@Validated](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Validation/@Valid\354\231\200\342\200\205@Validated.md)</br>
+┃　　　┗━　[**WebFlux**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/WebFlux)</br>
+┃　　　┃　　　┗━　[**R2DBC**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/WebFlux/R2DBC)</br>
+┃　　　┃　　　┃　　　┗━　[R2DBC](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/WebFlux/R2DBC/R2DBC.md)</br>
+┃　　　┃　　　┃　　　┗━　[R2DBC\342\200\205\354\202\254\354\232\251](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/WebFlux/R2DBC/R2DBC\342\200\205\354\202\254\354\232\251.md)</br>
+┃　　　┃　　　┗━　[@Controller](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/WebFlux/@Controller.md)</br>
+┃　　　┃　　　┗━　[RouterFunctions](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/WebFlux/RouterFunctions.md)</br>
+┃　　　┃　　　┗━　[WebClient](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/WebFlux/WebClient.md)</br>
+┃　　　┃　　　┗━　[WebFilter](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/WebFlux/WebFilter.md)</br>
+┃　　　┃　　　┗━　[WebFlux](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/WebFlux/WebFlux.md)</br>
+┃　　　┗━　[**Web\342\200\205MVC**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Web\342\200\205MVC)</br>
+┃　　　┃　　　┗━　[Request\342\200\205\354\262\230\353\246\254\352\263\274\354\240\225](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Web\342\200\205MVC/Request\342\200\205\354\262\230\353\246\254\352\263\274\354\240\225.md)</br>
+┃　　　┃　　　┗━　[SpringServletContainerInitializer](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Web\342\200\205MVC/SpringServletContainerInitializer.md)</br>
+┃　　　┗━　[**\352\270\260\353\263\270\354\233\220\353\246\254**](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254)</br>
+┃　　　┃　　　┗━　[@Autowired\342\200\205\353\271\210\342\200\205\354\243\274\354\236\205\342\200\205\354\212\244\354\272\224\342\200\205\354\233\220\353\246\254](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/@Autowired\342\200\205\353\271\210\342\200\205\354\243\274\354\236\205\342\200\205\354\212\244\354\272\224\342\200\205\354\233\220\353\246\254.md)</br>
+┃　　　┃　　　┗━　[@ComponentScan](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/@ComponentScan.md)</br>
+┃　　　┃　　　┗━　[@Component\342\200\205VS\342\200\205@Service](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/@Component\342\200\205VS\342\200\205@Service.md)</br>
+┃　　　┃　　　┗━　[Ioc\354\231\200\342\200\205DI](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/Ioc\354\231\200\342\200\205DI.md)</br>
+┃　　　┃　　　┗━　[Programmatic\352\263\274\342\200\205Declarative](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/Programmatic\352\263\274\342\200\205Declarative.md)</br>
+┃　　　┃　　　┗━　[Reflection\352\263\274\342\200\205\354\247\201\353\240\254\355\231\224](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/Reflection\352\263\274\342\200\205\354\247\201\353\240\254\355\231\224.md)</br>
+┃　　　┃　　　┗━　[\353\223\261\353\241\235\353\220\234\342\200\205\353\271\210\342\200\205\353\252\251\353\241\235\342\200\205\354\266\234\353\240\245\355\225\230\352\270\260](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/\353\223\261\353\241\235\353\220\234\342\200\205\353\271\210\342\200\205\353\252\251\353\241\235\342\200\205\354\266\234\353\240\245\355\225\230\352\270\260.md)</br>
+┃　　　┃　　　┗━　[\353\271\210](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/\353\271\210.md)</br>
+┃　　　┃　　　┗━　[\354\204\240\354\240\220\342\200\205\354\236\240\352\270\210\352\263\274\342\200\205\353\271\204\354\204\240\354\240\220\342\200\205\354\236\240\352\270\210](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/\354\204\240\354\240\220\342\200\205\354\236\240\352\270\210\352\263\274\342\200\205\353\271\204\354\204\240\354\240\220\342\200\205\354\236\240\352\270\210.md)</br>
+┃　　　┃　　　┗━　[\354\213\261\352\270\200\355\206\244](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/\352\270\260\353\263\270\354\233\220\353\246\254/\354\213\261\352\270\200\355\206\244.md)</br>
+┃　　　┗━　[@Cacheable](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/@Cacheable.md)</br>
+┃　　　┗━　[AOT](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/AOT.md)</br>
+┃　　　┗━　[Spring\342\200\2056.0\352\263\274\342\200\205Spring\342\200\205Boot\342\200\2053.0](./\354\212\244\355\224\204\353\247\201\342\200\205Spring/Spring\342\200\2056.0\352\263\274\342\200\205Spring\342\200\205Boot\342\200\2053.0.md)</br>
+┗━　[**\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240**](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240)</br>
+┃　　　┗━　[**API\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230**](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/API\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230)</br>
+┃　　　┃　　　┗━　[GraphQL](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/API\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230/GraphQL.md)</br>
+┃　　　┃　　　┗━　[REST](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/API\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230/REST.md)</br>
+┃　　　┃　　　┗━　[RPC](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/API\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230/RPC.md)</br>
+┃　　　┃　　　┗━　[SOAP](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/API\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230/SOAP.md)</br>
+┃　　　┗━　[**DDD**](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/DDD)</br>
+┃　　　┃　　　┗━　[DDD](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/DDD/DDD.md)</br>
+┃　　　┃　　　┗━　[DDD\354\235\230\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/DDD/DDD\354\235\230\342\200\205\354\225\204\355\202\244\355\205\215\354\262\230.md)</br>
+┃　　　┃　　　┗━　[\353\217\204\353\251\224\354\235\270\354\230\201\354\227\255](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/DDD/\353\217\204\353\251\224\354\235\270\354\230\201\354\227\255.md)</br>
+┃　　　┃　　　┗━　[\354\235\264\353\262\244\355\212\270\342\200\205\354\212\244\355\206\240\353\260\215](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/DDD/\354\235\264\353\262\244\355\212\270\342\200\205\354\212\244\355\206\240\353\260\215.md)</br>
+┃　　　┃　　　┗━　[\354\273\250\355\212\270\353\236\231\355\212\270](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/DDD/\354\273\250\355\212\270\353\236\231\355\212\270.md)</br>
+┃　　　┗━　[**MSA**](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/MSA)</br>
+┃　　　┃　　　┗━　[MSA\354\235\230\342\200\205\354\236\245\353\213\250\354\240\220](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/MSA/MSA\354\235\230\342\200\205\354\236\245\353\213\250\354\240\220.md)</br>
+┃　　　┃　　　┗━　[\353\251\224\354\213\234\354\247\200\342\200\205\353\270\214\353\241\234\354\273\244](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/MSA/\353\251\224\354\213\234\354\247\200\342\200\205\353\270\214\353\241\234\354\273\244.md)</br>
+┃　　　┃　　　┗━　[\354\202\254\352\260\200\342\200\205\355\214\250\355\204\264](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/MSA/\354\202\254\352\260\200\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┃　　　┗━　[\354\202\254\352\260\200\342\200\205\355\216\270\354\204\261](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/MSA/\354\202\254\352\260\200\342\200\205\355\216\270\354\204\261.md)</br>
+┃　　　┃　　　┗━　[\354\213\234\353\247\250\355\213\261\342\200\205\353\262\204\354\240\200\353\213\235](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/MSA/\354\213\234\353\247\250\355\213\261\342\200\205\353\262\204\354\240\200\353\213\235.md)</br>
+┃　　　┃　　　┗━　[\355\206\265\354\213\240](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/MSA/\355\206\265\354\213\240.md)</br>
+┃　　　┃　　　┗━　[\355\212\270\353\236\234\354\236\255\354\205\230\342\200\205\352\262\251\353\246\254](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/MSA/\355\212\270\353\236\234\354\236\255\354\205\230\342\200\205\352\262\251\353\246\254.md)</br>
+┃　　　┃　　　┗━　[\355\212\270\353\236\234\354\236\255\354\205\230\342\200\205\353\241\234\352\267\270\342\200\205\355\205\214\354\235\274\353\247\201\342\200\205\355\214\250\355\204\264](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/MSA/\355\212\270\353\236\234\354\236\255\354\205\230\342\200\205\353\241\234\352\267\270\342\200\205\355\205\214\354\235\274\353\247\201\342\200\205\355\214\250\355\204\264.md)</br>
+┃　　　┗━　[CQRS](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/CQRS.md)</br>
+┃　　　┗━　[HexagonalArchitecture](./\354\225\204\355\202\244\355\205\215\354\262\230\342\200\205\353\260\217\342\200\205\353\260\251\353\262\225\353\241\240/HexagonalArchitecture.md)</br>
+┗━　[**\354\225\214\352\263\240\353\246\254\354\246\230\342\200\205Algorithm**](./\354\225\214\352\263\240\353\246\254\354\246\230\342\200\205Algorithm)</br>
+┃　　　┗━　[\354\204\270\352\267\270\353\250\274\355\212\270\355\212\270\353\246\254](./\354\225\214\352\263\240\353\246\254\354\246\230\342\200\205Algorithm/\354\204\270\352\267\270\353\250\274\355\212\270\355\212\270\353\246\254.md)</br>
+┗━　[**\354\226\270\354\226\264\342\200\205Language**](./\354\226\270\354\226\264\342\200\205Language)</br>
+┃　　　┗━　[**JAVA**](./\354\226\270\354\226\264\342\200\205Language/JAVA)</br>
+┃　　　┃　　　┗━　[**JVM**](./\354\226\270\354\226\264\342\200\205Language/JAVA/JVM)</br>
+┃　　　┃　　　┃　　　┗━　[Heap\354\230\201\354\227\255\342\200\205\352\265\254\354\241\260\354\231\200\342\200\205GC](./\354\226\270\354\226\264\342\200\205Language/JAVA/JVM/Heap\354\230\201\354\227\255\342\200\205\352\265\254\354\241\260\354\231\200\342\200\205GC.md)</br>
+┃　　　┃　　　┃　　　┗━　[JVM\342\200\205\352\265\254\354\204\261\354\232\224\354\206\214](./\354\226\270\354\226\264\342\200\205Language/JAVA/JVM/JVM\342\200\205\352\265\254\354\204\261\354\232\224\354\206\214.md)</br>
+┃　　　┃　　　┃　　　┗━　[Java\342\200\205Bytecode](./\354\226\270\354\226\264\342\200\205Language/JAVA/JVM/Java\342\200\205Bytecode.md)</br>
+┃　　　┃　　　┃　　　┗━　[Permanent\342\200\205to\342\200\205Metaspace](./\354\226\270\354\226\264\342\200\205Language/JAVA/JVM/Permanent\342\200\205to\342\200\205Metaspace.md)</br>
+┃　　　┃　　　┃　　　┗━　[Runtime\342\200\205Data\342\200\205Area](./\354\226\270\354\226\264\342\200\205Language/JAVA/JVM/Runtime\342\200\205Data\342\200\205Area.md)</br>
+┃　　　┃　　　┃　　　┗━　[TLAB\352\263\274\342\200\205PLAB](./\354\226\270\354\226\264\342\200\205Language/JAVA/JVM/TLAB\352\263\274\342\200\205PLAB.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\251\224\353\252\250\353\246\254\353\210\204\354\210\230](./\354\226\270\354\226\264\342\200\205Language/JAVA/JVM/\353\251\224\353\252\250\353\246\254\353\210\204\354\210\230.md)</br>
+┃　　　┃　　　┗━　[**Thread**](./\354\226\270\354\226\264\342\200\205Language/JAVA/Thread)</br>
+┃　　　┃　　　┃　　　┗━　[@Volatile](./\354\226\270\354\226\264\342\200\205Language/JAVA/Thread/@Volatile.md)</br>
+┃　　　┃　　　┃　　　┗━　[Thread\342\200\205\354\203\201\355\203\234](./\354\226\270\354\226\264\342\200\205Language/JAVA/Thread/Thread\342\200\205\354\203\201\355\203\234.md)</br>
+┃　　　┃　　　┃　　　┗━　[wait()\352\263\274\　notifyAll()](./\354\226\270\354\226\264\342\200\205Language/JAVA/Thread/wait()\352\263\274\　notifyAll().md)</br>
+┃　　　┃　　　┗━　[Inner\342\200\205static\342\200\205class](./\354\226\270\354\226\264\342\200\205Language/JAVA/Inner\342\200\205static\342\200\205class.md)</br>
+┃　　　┃　　　┗━　[JAR\352\263\274\342\200\205WAR](./\354\226\270\354\226\264\342\200\205Language/JAVA/JAR\352\263\274\342\200\205WAR.md)</br>
+┃　　　┃　　　┗━　[JAVA](./\354\226\270\354\226\264\342\200\205Language/JAVA/JAVA.md)</br>
+┃　　　┃　　　┗━　[JDKProxy\354\231\200\342\200\205CGLibProxy](./\354\226\270\354\226\264\342\200\205Language/JAVA/JDKProxy\354\231\200\342\200\205CGLibProxy.md)</br>
+┃　　　┃　　　┗━　[JLink\342\200\205&\342\200\205JDeps](./\354\226\270\354\226\264\342\200\205Language/JAVA/JLink\342\200\205&\342\200\205JDeps.md)</br>
+┃　　　┃　　　┗━　[record](./\354\226\270\354\226\264\342\200\205Language/JAVA/record.md)</br>
+┃　　　┃　　　┗━　[\354\230\210\354\231\270\354\231\200\342\200\205\354\227\220\353\237\254](./\354\226\270\354\226\264\342\200\205Language/JAVA/\354\230\210\354\231\270\354\231\200\342\200\205\354\227\220\353\237\254.md)</br>
+┃　　　┃　　　┗━　[\354\240\234\353\204\244\353\246\255\352\263\274\342\200\205variance](./\354\226\270\354\226\264\342\200\205Language/JAVA/\354\240\234\353\204\244\353\246\255\352\263\274\342\200\205variance.md)</br>
+┃　　　┗━　[**Kotlin**](./\354\226\270\354\226\264\342\200\205Language/Kotlin)</br>
+┃　　　┃　　　┗━　[**\353\263\200\354\210\230**](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\353\263\200\354\210\230)</br>
+┃　　　┃　　　┃　　　┗━　[List\354\231\200\342\200\205MutableList](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\353\263\200\354\210\230/List\354\231\200\342\200\205MutableList.md)</br>
+┃　　　┃　　　┃　　　┗━　[Nullable](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\353\263\200\354\210\230/Nullable.md)</br>
+┃　　　┃　　　┃　　　┗━　[const](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\353\263\200\354\210\230/const.md)</br>
+┃　　　┃　　　┃　　　┗━　[val\352\263\274\342\200\205var](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\353\263\200\354\210\230/val\352\263\274\342\200\205var.md)</br>
+┃　　　┃　　　┗━　[**\355\201\264\353\236\230\354\212\244**](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\201\264\353\236\230\354\212\244)</br>
+┃　　　┃　　　┃　　　┗━　[@JvmField](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\201\264\353\236\230\354\212\244/@JvmField.md)</br>
+┃　　　┃　　　┃　　　┗━　[@JvmStatic](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\201\264\353\236\230\354\212\244/@JvmStatic.md)</br>
+┃　　　┃　　　┃　　　┗━　[Object](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\201\264\353\236\230\354\212\244/Object.md)</br>
+┃　　　┃　　　┃　　　┗━　[Sealed\342\200\205Class,\342\200\205interface](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\201\264\353\236\230\354\212\244/Sealed\342\200\205Class,\342\200\205interface.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\203\235\354\204\261\354\236\220](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\201\264\353\236\230\354\212\244/\354\203\235\354\204\261\354\236\220.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\275\224\355\213\200\353\246\260\354\227\220\354\204\234\354\235\230\342\200\205Static](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\201\264\353\236\230\354\212\244/\354\275\224\355\213\200\353\246\260\354\227\220\354\204\234\354\235\230\342\200\205Static.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\201\264\353\236\230\354\212\244\342\200\205\354\203\201\354\206\215](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\201\264\353\236\230\354\212\244/\355\201\264\353\236\230\354\212\244\342\200\205\354\203\201\354\206\215.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\225\204\353\223\234\354\231\200\342\200\205\354\240\221\352\267\274\354\236\220\342\200\205\353\251\224\354\204\234\353\223\234](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\201\264\353\236\230\354\212\244/\355\225\204\353\223\234\354\231\200\342\200\205\354\240\221\352\267\274\354\236\220\342\200\205\353\251\224\354\204\234\353\223\234.md)</br>
+┃　　　┃　　　┗━　[**\355\225\250\354\210\230**](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\225\250\354\210\230)</br>
+┃　　　┃　　　┃　　　┗━　[\352\270\260\353\263\270\354\235\270\354\236\220](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\355\225\250\354\210\230/\352\270\260\353\263\270\354\235\270\354\236\220.md)</br>
+┃　　　┃　　　┗━　[Collections](./\354\226\270\354\226\264\342\200\205Language/Kotlin/Collections.md)</br>
+┃　　　┃　　　┗━　[InlineFuntion\352\263\274\342\200\205Reified](./\354\226\270\354\226\264\342\200\205Language/Kotlin/InlineFuntion\352\263\274\342\200\205Reified.md)</br>
+┃　　　┃　　　┗━　[Label](./\354\226\270\354\226\264\342\200\205Language/Kotlin/Label.md)</br>
+┃　　　┃　　　┗━　[Sequences](./\354\226\270\354\226\264\342\200\205Language/Kotlin/Sequences.md)</br>
+┃　　　┃　　　┗━　[field\342\200\205\354\203\201\354\206\215](./\354\226\270\354\226\264\342\200\205Language/Kotlin/field\342\200\205\354\203\201\354\206\215.md)</br>
+┃　　　┃　　　┗━　[\353\236\214\353\213\244\342\200\205\355\221\234\355\230\204\354\213\235](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\353\236\214\353\213\244\342\200\205\355\221\234\355\230\204\354\213\235.md)</br>
+┃　　　┃　　　┗━　[\353\262\224\354\234\204\342\200\205\354\247\200\354\240\225\342\200\205\355\225\250\354\210\230](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\353\262\224\354\234\204\342\200\205\354\247\200\354\240\225\342\200\205\355\225\250\354\210\230.md)</br>
+┃　　　┃　　　┗━　[\354\240\234\353\204\244\353\246\255\352\263\274\342\200\205variance](./\354\226\270\354\226\264\342\200\205Language/Kotlin/\354\240\234\353\204\244\353\246\255\352\263\274\342\200\205variance.md)</br>
+┃　　　┗━　[\354\236\220\353\260\224<\357\274\237>\354\231\200\342\200\205\354\275\224\355\213\200\353\246\260<*>](./\354\226\270\354\226\264\342\200\205Language/\354\236\220\353\260\224<\357\274\237>\354\231\200\342\200\205\354\275\224\355\213\200\353\246\260<*>.md)</br>
+┗━　[**\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System)</br>
+┃　　　┗━　[**linux**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux)</br>
+┃　　　┃　　　┗━　[**authority**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/authority)</br>
+┃　　　┃　　　┃　　　┗━　[chattr](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/authority/chattr.md)</br>
+┃　　　┃　　　┃　　　┗━　[chmod](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/authority/chmod.md)</br>
+┃　　　┃　　　┃　　　┗━　[chown](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/authority/chown.md)</br>
+┃　　　┃　　　┃　　　┗━　[\354\202\254\354\232\251\354\236\220\342\200\205\352\264\200\353\246\254](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/authority/\354\202\254\354\232\251\354\236\220\342\200\205\352\264\200\353\246\254.md)</br>
+┃　　　┃　　　┗━　[**disk\342\200\205&\342\200\205dir**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir)</br>
+┃　　　┃　　　┃　　　┗━　[LVM](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir/LVM.md)</br>
+┃　　　┃　　　┃　　　┗━　[Linux\342\200\205\353\224\224\353\240\211\355\206\240\353\246\254\342\200\205\352\265\254\354\241\260](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir/Linux\342\200\205\353\224\224\353\240\211\355\206\240\353\246\254\342\200\205\352\265\254\354\241\260.md)</br>
+┃　　　┃　　　┃　　　┗━　[RAID](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir/RAID.md)</br>
+┃　　　┃　　　┃　　　┗━　[Symbolic\342\200\205Link](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir/Symbolic\342\200\205Link.md)</br>
+┃　　　┃　　　┃　　　┗━　[file\342\200\205\352\264\200\353\240\250\342\200\205systemcall](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir/file\342\200\205\352\264\200\353\240\250\342\200\205systemcall.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\260\261\354\227\205](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir/\353\260\261\354\227\205.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\214\214\354\235\274\342\200\205\352\264\200\353\246\254\342\200\205\353\252\205\353\240\271\354\226\264](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir/\355\214\214\354\235\274\342\200\205\352\264\200\353\246\254\342\200\205\353\252\205\353\240\271\354\226\264.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\214\214\354\235\274\342\200\205\354\213\234\354\212\244\355\205\234](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir/\355\214\214\354\235\274\342\200\205\354\213\234\354\212\244\355\205\234.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\214\214\354\235\274\342\200\205\354\242\205\353\245\230](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/disk\342\200\205&\342\200\205dir/\355\214\214\354\235\274\342\200\205\354\242\205\353\245\230.md)</br>
+┃　　　┃　　　┗━　[**kernel**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/kernel)</br>
+┃　　　┃　　　┃　　　┗━　[\354\273\244\353\204\220\342\200\205\353\252\250\353\223\210](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/kernel/\354\273\244\353\204\220\342\200\205\353\252\250\353\223\210.md)</br>
+┃　　　┃　　　┗━　[**memory**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/memory)</br>
+┃　　　┃　　　┃　　　┗━　[Swap\353\251\224\353\252\250\353\246\254](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/memory/Swap\353\251\224\353\252\250\353\246\254.md)</br>
+┃　　　┃　　　┗━　[**network**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network)</br>
+┃　　　┃　　　┃　　　┗━　[**\354\243\274\354\232\224\353\252\205\353\240\271\354\226\264**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/\354\243\274\354\232\224\353\252\205\353\240\271\354\226\264)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[arp](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/\354\243\274\354\232\224\353\252\205\353\240\271\354\226\264/arp.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ifconfig](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/\354\243\274\354\232\224\353\252\205\353\240\271\354\226\264/ifconfig.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ping\352\263\274\342\200\205netstat](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/\354\243\274\354\232\224\353\252\205\353\240\271\354\226\264/ping\352\263\274\342\200\205netstat.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[route\353\241\234\342\200\205\353\235\274\354\232\260\355\214\205\342\200\205\355\205\214\354\235\264\353\270\224\342\200\205\355\231\225\354\235\270\355\225\230\352\270\260](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/\354\243\274\354\232\224\353\252\205\353\240\271\354\226\264/route\353\241\234\342\200\205\353\235\274\354\232\260\355\214\205\342\200\205\355\205\214\354\235\264\353\270\224\342\200\205\355\231\225\354\235\270\355\225\230\352\270\260.md)</br>
+┃　　　┃　　　┃　　　┗━　[DNS\342\200\205\354\204\234\353\262\204](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/DNS\342\200\205\354\204\234\353\262\204.md)</br>
+┃　　　┃　　　┃　　　┗━　[Netfilter](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/Netfilter.md)</br>
+┃　　　┃　　　┃　　　┗━　[Virtual\342\200\205Networking\342\200\205Interface](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/Virtual\342\200\205Networking\342\200\205Interface.md)</br>
+┃　　　┃　　　┃　　　┗━　[iptables](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/iptables.md)</br>
+┃　　　┃　　　┃　　　┗━　[namespace\354\231\200\342\200\205cgroup](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/namespace\354\231\200\342\200\205cgroup.md)</br>
+┃　　　┃　　　┃　　　┗━　[network\342\200\205namespaces](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/network\342\200\205namespaces.md)</br>
+┃　　　┃　　　┃　　　┗━　[\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205\354\271\250\355\225\264](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/network/\353\204\244\355\212\270\354\233\214\355\201\254\342\200\205\354\271\250\355\225\264.md)</br>
+┃　　　┃　　　┗━　[**process**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/process)</br>
+┃　　　┃　　　┃　　　┗━　[Deamon\342\200\205process](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/process/Deamon\342\200\205process.md)</br>
+┃　　　┃　　　┃　　　┗━　[httpd](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/process/httpd.md)</br>
+┃　　　┃　　　┃　　　┗━　[signal](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/process/signal.md)</br>
+┃　　　┃　　　┃　　　┗━　[top](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/process/top.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\224\204\353\241\234\354\204\270\354\212\244\342\200\205\352\264\200\353\246\254](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/process/\355\224\204\353\241\234\354\204\270\354\212\244\342\200\205\352\264\200\353\246\254.md)</br>
+┃　　　┃　　　┃　　　┗━　[\355\231\230\352\262\275\353\263\200\354\210\230\354\231\200\342\200\205\355\224\204\353\241\234\354\204\270\354\212\244](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/process/\355\231\230\352\262\275\353\263\200\354\210\230\354\231\200\342\200\205\355\224\204\353\241\234\354\204\270\354\212\244.md)</br>
+┃　　　┃　　　┗━　[**shell**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/shell)</br>
+┃　　　┃　　　┃　　　┗━　[bash_profile\352\263\274\342\200\205bashrc](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/shell/bash_profile\352\263\274\342\200\205bashrc.md)</br>
+┃　　　┃　　　┃　　　┗━　[shell](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/shell/shell.md)</br>
+┃　　　┃　　　┃　　　┗━　[zshrc](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/shell/zshrc.md)</br>
+┃　　　┃　　　┗━　[IP\342\200\205masquerading](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/IP\342\200\205masquerading.md)</br>
+┃　　　┃　　　┗━　[Linux\342\200\205Package](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/Linux\342\200\205Package.md)</br>
+┃　　　┃　　　┗━　[Linux\342\200\205\353\260\260\355\217\254\355\214\220](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/Linux\342\200\205\353\260\260\355\217\254\355\214\220.md)</br>
+┃　　　┃　　　┗━　[Linux\342\200\205\353\266\200\355\214\205\342\200\205\352\263\274\354\240\225](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/Linux\342\200\205\353\266\200\355\214\205\342\200\205\352\263\274\354\240\225.md)</br>
+┃　　　┃　　　┗━　[Linux\342\200\205\355\212\271\354\247\225\342\200\205\353\260\217\342\200\205\352\264\200\353\240\250\354\232\251\354\226\264](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/Linux\342\200\205\355\212\271\354\247\225\342\200\205\353\260\217\342\200\205\352\264\200\353\240\250\354\232\251\354\226\264.md)</br>
+┃　　　┃　　　┗━　[Runlevel](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/Runlevel.md)</br>
+┃　　　┃　　　┗━　[X\342\200\205window](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/X\342\200\205window.md)</br>
+┃　　　┃　　　┗━　[iptables\342\200\205\353\260\251\355\231\224\353\262\275\342\200\205\354\204\244\354\240\225](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/iptables\342\200\205\353\260\251\355\231\224\353\262\275\342\200\205\354\204\244\354\240\225.md)</br>
+┃　　　┃　　　┗━　[mail](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/mail.md)</br>
+┃　　　┃　　　┗━　[\353\252\205\353\240\271\354\226\264\353\223\244](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/linux/\353\252\205\353\240\271\354\226\264\353\223\244.md)</br>
+┃　　　┗━　[**memory**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/memory)</br>
+┃　　　┃　　　┗━　[Memory\342\200\205Mapping](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/memory/Memory\342\200\205Mapping.md)</br>
+┃　　　┃　　　┗━　[\355\216\230\354\235\264\354\247\200\342\200\205\352\265\220\354\262\264\342\200\205\354\225\214\352\263\240\353\246\254\354\246\230](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/memory/\355\216\230\354\235\264\354\247\200\342\200\205\352\265\220\354\262\264\342\200\205\354\225\214\352\263\240\353\246\254\354\246\230.md)</br>
+┃　　　┗━　[**process**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/process)</br>
+┃　　　┃　　　┗━　[TAS](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/process/TAS.md)</br>
+┃　　　┃　　　┗━　[\352\265\220\354\260\251\354\203\201\355\203\234\354\231\200\342\200\205\354\212\244\354\274\200\354\244\204\353\247\201](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/process/\352\265\220\354\260\251\354\203\201\355\203\234\354\231\200\342\200\205\354\212\244\354\274\200\354\244\204\353\247\201.md)</br>
+┃　　　┃　　　┗━　[\354\203\235\354\202\260\354\236\220\342\200\205\354\206\214\353\271\204\354\236\220\342\200\205\353\254\270\354\240\234](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/process/\354\203\235\354\202\260\354\236\220\342\200\205\354\206\214\353\271\204\354\236\220\342\200\205\353\254\270\354\240\234.md)</br>
+┃　　　┃　　　┗━　[\354\236\204\352\263\204\354\230\201\354\227\255\352\263\274\342\200\205\354\203\201\355\230\270\353\260\260\354\240\234](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/process/\354\236\204\352\263\204\354\230\201\354\227\255\352\263\274\342\200\205\354\203\201\355\230\270\353\260\260\354\240\234.md)</br>
+┃　　　┃　　　┗━　[\355\224\204\353\241\234\354\204\270\354\212\244\354\235\230\342\200\205\352\260\234\353\205\220](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/process/\355\224\204\353\241\234\354\204\270\354\212\244\354\235\230\342\200\205\352\260\234\353\205\220.md)</br>
+┃　　　┃　　　┗━　[\355\224\204\353\241\234\354\204\270\354\212\244\354\235\230\342\200\205\352\264\200\353\246\254](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/process/\355\224\204\353\241\234\354\204\270\354\212\244\354\235\230\342\200\205\352\264\200\353\246\254.md)</br>
+┃　　　┗━　[**window**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/window)</br>
+┃　　　┃　　　┗━　[Active\342\200\205Directory\342\200\205Domain\342\200\205Services](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/window/Active\342\200\205Directory\342\200\205Domain\342\200\205Services.md)</br>
+┃　　　┗━　[**\353\263\264\354\225\210**](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/\353\263\264\354\225\210)</br>
+┃　　　┃　　　┗━　[+\354\227\221\354\204\270\354\212\244\342\200\205\354\240\234\354\226\264](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/\353\263\264\354\225\210/+\354\227\221\354\204\270\354\212\244\342\200\205\354\240\234\354\226\264.md)</br>
+┃　　　┗━　[c\354\226\270\354\226\264\342\200\205\354\273\264\355\214\214\354\235\274\352\263\274\354\240\225](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/c\354\226\270\354\226\264\342\200\205\354\273\264\355\214\214\354\235\274\352\263\274\354\240\225.md)</br>
+┃　　　┗━　[\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205\354\234\240\355\230\225](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205\354\234\240\355\230\225.md)</br>
+┃　　　┗━　[\354\234\240\354\240\200,\342\200\205\354\273\244\353\204\220\353\240\210\353\262\250\342\200\205\354\212\244\353\240\210\353\223\234](./\354\232\264\354\230\201\354\262\264\354\240\234\342\200\205Operating\342\200\205System/\354\234\240\354\240\200,\342\200\205\354\273\244\353\204\220\353\240\210\353\262\250\342\200\205\354\212\244\353\240\210\353\223\234.md)</br>
+┗━　[**\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI**](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI)</br>
+┃　　　┗━　[**\354\213\244\354\212\265**](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/\354\213\244\354\212\265)</br>
+┃　　　┃　　　┗━　[CNN](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/\354\213\244\354\212\265/CNN.md)</br>
+┃　　　┃　　　┗━　[MNIST\342\200\205\354\210\253\354\236\220\342\200\205\355\214\220\353\263\204](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/\354\213\244\354\212\265/MNIST\342\200\205\354\210\253\354\236\220\342\200\205\355\214\220\353\263\204.md)</br>
+┃　　　┃　　　┗━　[RNN](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/\354\213\244\354\212\265/RNN.md)</br>
+┃　　　┃　　　┗━　[\353\260\260,\342\200\205\354\236\220\353\217\231\354\260\250,\342\200\205\353\271\204\355\226\211\352\270\260\342\200\205\353\266\204\353\245\230\355\225\230\352\270\260](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/\354\213\244\354\212\265/\353\260\260,\342\200\205\354\236\220\353\217\231\354\260\250,\342\200\205\353\271\204\355\226\211\352\270\260\342\200\205\353\266\204\353\245\230\355\225\230\352\270\260.md)</br>
+┃　　　┗━　[CNN](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/CNN.md)</br>
+┃　　　┗━　[DropOut](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/DropOut.md)</br>
+┃　　　┗━　[Keras](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/Keras.md)</br>
+┃　　　┗━　[Optimizer](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/Optimizer.md)</br>
+┃　　　┗━　[RNN](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/RNN.md)</br>
+┃　　　┗━　[\354\204\240\355\230\225\355\232\214\352\267\200](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/\354\204\240\355\230\225\355\232\214\352\267\200.md)</br>
+┃　　　┗━　[\355\215\274\354\205\211\355\212\270\353\241\240](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/\355\215\274\354\205\211\355\212\270\353\241\240.md)</br>
+┃　　　┗━　[\355\231\234\354\204\261\355\231\224\355\225\250\354\210\230](./\354\235\270\352\263\265\354\247\200\353\212\245\342\200\205AI/\355\231\234\354\204\261\355\231\224\355\225\250\354\210\230.md)</br>
 ┗━　[**+autocommit.sh**](./+autocommit.sh)</br>
 ┗━　[**+test.sh**](./+test.sh)</br>
 ┗━　[**+test.txt**](./+test.txt)</br>
