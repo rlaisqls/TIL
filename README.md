@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 633
+files            : 632
 derectories      : 137
-avg_file_length  : 3884
+avg_file_length  : 3890
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -670,7 +670,6 @@ avg_file_length  : 3884
 ┃　　　┃　　　┗━　[**변수**](./언어 Language/Kotlin/변수)</br>
 ┃　　　┃　　　┃　　　┗━　[List와 MutableList](./언어 Language/Kotlin/변수/List와 MutableList.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Nullable](./언어 Language/Kotlin/변수/Nullable.md)</br>
-┃　　　┃　　　┃　　　┗━　[const](./언어 Language/Kotlin/변수/const.md)</br>
 ┃　　　┃　　　┃　　　┗━　[val과 var](./언어 Language/Kotlin/변수/val과 var.md)</br>
 ┃　　　┃　　　┗━　[**클래스**](./언어 Language/Kotlin/클래스)</br>
 ┃　　　┃　　　┃　　　┗━　[@JvmField](./언어 Language/Kotlin/클래스/@JvmField.md)</br>
