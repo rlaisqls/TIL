@@ -9,3 +9,18 @@ A load balancer serves as the single point of contact for clients. The load bala
 The following diagram illustrates the basic components. Notice that each listener contains a default rule, and one listener contains another rule that routes requests to a different target group. One target is registered with two target groups.
 
 ![image](https://github.com/rlaisqls/TIL/assets/81006587/5c10632a-359b-4493-a8d3-7e2515e1b2d0)
+
+---
+
+### Why can't ALB have a fixed IP allocation
+
+When AWS creates ALB, EC2 is created in the corresponding subnet. The EC2 is managed by AWS, so we can't recognize it, but ALB's load balancing works internally in EC2.
+
+> The ENI bound to EC2, which cannot be seen, can be found in the ENI menu.
+
+Depending on the load on ALB, ALBEC2 automatically scales in and out. Fixed IP allocation is not possible for scaling load balancers for flexible traffic processing.
+
+---
+reference
+- https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html
+- https://repost.aws/ko/knowledge-center/alb-static-ip

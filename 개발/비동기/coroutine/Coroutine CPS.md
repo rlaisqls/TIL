@@ -106,7 +106,7 @@ fun updateTextView(user: String) = user
 
 Let's make the above code into Kotlin's byte code, then decompose it into Java code.
 
-![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/43e93bf8-b0e6-47c8-bcf7-259486484487)
+<img src="https://github.com/rlaisqls/rlaisqls/assets/81006587/43e93bf8-b0e6-47c8-bcf7-259486484487" height="400px"/>
 
 ```kotlin
 public final class Example_nomagic_01Kt {
