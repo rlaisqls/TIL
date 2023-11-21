@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 632
+files            : 634
 derectories      : 137
-avg_file_length  : 3890
+avg_file_length  : 3886
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -363,6 +363,7 @@ avg_file_length  : 3890
 ┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./데브옵스 DevOps/Kubernetes/tools/helm/Helm.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Values Files](./데브옵스 DevOps/Kubernetes/tools/helm/Values Files.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Install Cilium](./데브옵스 DevOps/Kubernetes/tools/Install Cilium.md)</br>
+┃　　　┃　　　┃　　　┗━　[MetalLB](./데브옵스 DevOps/Kubernetes/tools/MetalLB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node Termination Handler](./데브옵스 DevOps/Kubernetes/tools/Node Termination Handler.md)</br>
 ┃　　　┃　　　┃　　　┗━　[OPA Gatekeeper](./데브옵스 DevOps/Kubernetes/tools/OPA Gatekeeper.md)</br>
 ┃　　　┃　　　┃　　　┗━　[node━shell](./데브옵스 DevOps/Kubernetes/tools/node━shell.md)</br>
@@ -728,6 +729,7 @@ avg_file_length  : 3890
 ┃　　　┃　　　┗━　[**process**](./운영체제 Operating System/linux/process)</br>
 ┃　　　┃　　　┃　　　┗━　[Deamon process](./운영체제 Operating System/linux/process/Deamon process.md)</br>
 ┃　　　┃　　　┃　　　┗━　[httpd](./운영체제 Operating System/linux/process/httpd.md)</br>
+┃　　　┃　　　┃　　　┗━　[pipe](./운영체제 Operating System/linux/process/pipe.md)</br>
 ┃　　　┃　　　┃　　　┗━　[signal](./운영체제 Operating System/linux/process/signal.md)</br>
 ┃　　　┃　　　┃　　　┗━　[top](./운영체제 Operating System/linux/process/top.md)</br>
 ┃　　　┃　　　┃　　　┗━　[프로세스 관리](./운영체제 Operating System/linux/process/프로세스 관리.md)</br>
@@ -759,7 +761,7 @@ avg_file_length  : 3890
 ┃　　　┗━　[**window**](./운영체제 Operating System/window)</br>
 ┃　　　┃　　　┗━　[Active Directory Domain Services](./운영체제 Operating System/window/Active Directory Domain Services.md)</br>
 ┃　　　┗━　[**보안**](./운영체제 Operating System/보안)</br>
-┃　　　┃　　　┗━　[+엑세스 제어](./운영체제 Operating System/보안/+엑세스 제어.md)</br>
+┃　　　┃　　　┗━　[엑세스 제어](./운영체제 Operating System/보안/엑세스 제어.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[운영체제 유형](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>

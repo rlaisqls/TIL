@@ -36,7 +36,7 @@ In addition to socket filtering, other supported attach points in the kernel are
 
 Let’s return to tcpdump as an example. Below figure shows a simplified rendition of tcpdump’s interactions with eBPF.
 
-![image](https://github.com/rlaisqls/TIL/assets/81006587/92391699-09cc-49da-83e5-55a85465b6ff)
+<img src="https://github.com/rlaisqls/TIL/assets/81006587/92391699-09cc-49da-83e5-55a85465b6ff" height="300px" />
 
 Suppose we run `tcpdump -i any`.
 
@@ -65,20 +65,7 @@ The most common use of eBPF in Kubernetes is **Cilium, CNI and service implement
 
 Through eBPF, Cilium can intercept and route all packets directly in the kernel, which is faster and allows for application-level (layer 7) load balancing. We will cover kube-proxy in Chapter 4.
 
-
-
 ---
 reference
 - http://ebpf.io/
-
-
-
-
-
-
-
-
-
-
-
-
+- https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/
