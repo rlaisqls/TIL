@@ -41,9 +41,9 @@ L2 모드는 2계층 통신을 이용한다.
 
 1. Speaker Pod에 BGP가 동작하여 서비스 정보(External IP)를 전파한다.
    - BGP 커뮤니티, localpref 등 BGP 관련 설정을 할 수 있다.
-2. 외부에서 라우터를 통해 ECMP 라우팅으로 분산 접속한다.
+2. 외부에서 라우터를 통해 [ECMP 라우팅](https://ko.wikipedia.org/wiki/ECMP)으로 분산 접속한다.
 
-L2모드와 다르게 speaker pod가 장애나더라도 매우 짧은 시간안에 장애복구가 가능하다. 하지만, 단순히 MetalLB만 설정하는 것이 아니라 BGP 라우팅 설정과 라우팅 전파 관련 최적화 설정이 필요하다.
+L2 모드와 다르게 speaker pod가 장애나더라도 매우 짧은 시간안에 장애복구가 가능하다. 하지만, 단순히 MetalLB만 설정하는 것이 아니라 BGP 라우팅 설정과 라우팅 전파 관련 최적화 설정이 필요하다는 것이 단점이다.
 
 **FRR Mode**
 
@@ -64,3 +64,4 @@ BGP 계층의 백엔드로 FRR을 사용하는, BGP 모드에서 사용할 수 �
 - https://mlops-for-all.github.io/en/docs/appendix/metallb/
 - https://www.linkedin.com/pulse/metallb-loadbalancer-bgp-k8s-rock-music-dipankar-shaw/
 - https://stackoverflow.com/questions/62380153/hw-do-you-get-metallb-to-arp-around-its-ip
+- https://metallb.universe.tf/concepts/bgp/

@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 634
-derectories      : 137
-avg_file_length  : 3886
+files            : 640
+derectories      : 138
+avg_file_length  : 3894
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -128,6 +128,7 @@ avg_file_length  : 3886
 ┃　　　┃　　　┗━　[아날로그, 디지털 신호와 전송](./네트워크 Network/L1 network access layer/아날로그, 디지털 신호와 전송.md)</br>
 ┃　　　┗━　[**L2 internet layer**](./네트워크 Network/L2 internet layer)</br>
 ┃　　　┃　　　┗━　[**라우터**](./네트워크 Network/L2 internet layer/라우터)</br>
+┃　　　┃　　　┃　　　┗━　[ECMP](./네트워크 Network/L2 internet layer/라우터/ECMP.md)</br>
 ┃　　　┃　　　┃　　　┗━　[라우터](./네트워크 Network/L2 internet layer/라우터/라우터.md)</br>
 ┃　　　┃　　　┃　　　┗━　[라우팅 알고리즘](./네트워크 Network/L2 internet layer/라우터/라우팅 알고리즘.md)</br>
 ┃　　　┃　　　┃　　　┗━　[멀티캐스트 라우팅](./네트워크 Network/L2 internet layer/라우터/멀티캐스트 라우팅.md)</br>
@@ -471,6 +472,7 @@ avg_file_length  : 3886
 ┃　　　┃　　　┗━　[Dex K8s Authenticator](./데브옵스 DevOps/tools/Dex K8s Authenticator.md)</br>
 ┃　　　┃　　　┗━　[GPG](./데브옵스 DevOps/tools/GPG.md)</br>
 ┃　　　┃　　　┗━　[Keycloak](./데브옵스 DevOps/tools/Keycloak.md)</br>
+┃　　　┃　　　┗━　[Mortar](./데브옵스 DevOps/tools/Mortar.md)</br>
 ┃　　　┃　　　┗━　[Packer](./데브옵스 DevOps/tools/Packer.md)</br>
 ┃　　　┃　　　┗━　[minio](./데브옵스 DevOps/tools/minio.md)</br>
 ┃　　　┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./데브옵스 DevOps/tools/openssl로 pemKey 만들고 접속하기.md)</br>
@@ -694,6 +696,9 @@ avg_file_length  : 3886
 ┃　　　┗━　[자바<？>와 코틀린<*>](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ┗━　[**운영체제 Operating System**](./운영체제 Operating System)</br>
 ┃　　　┗━　[**linux**](./운영체제 Operating System/linux)</br>
+┃　　　┃　　　┗━　[**BPF**](./운영체제 Operating System/linux/BPF)</br>
+┃　　　┃　　　┃　　　┗━　[+BTF](./운영체제 Operating System/linux/BPF/+BTF.md)</br>
+┃　　　┃　　　┃　　　┗━　[BPF](./운영체제 Operating System/linux/BPF/BPF.md)</br>
 ┃　　　┃　　　┗━　[**authority**](./운영체제 Operating System/linux/authority)</br>
 ┃　　　┃　　　┃　　　┗━　[chattr](./운영체제 Operating System/linux/authority/chattr.md)</br>
 ┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/authority/chmod.md)</br>
@@ -705,11 +710,13 @@ avg_file_length  : 3886
 ┃　　　┃　　　┃　　　┗━　[RAID](./운영체제 Operating System/linux/disk & dir/RAID.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Symbolic Link](./운영체제 Operating System/linux/disk & dir/Symbolic Link.md)</br>
 ┃　　　┃　　　┃　　　┗━　[file 관련 systemcall](./운영체제 Operating System/linux/disk & dir/file 관련 systemcall.md)</br>
+┃　　　┃　　　┃　　　┗━　[od](./운영체제 Operating System/linux/disk & dir/od.md)</br>
 ┃　　　┃　　　┃　　　┗━　[백업](./운영체제 Operating System/linux/disk & dir/백업.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./운영체제 Operating System/linux/disk & dir/파일 관리 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./운영체제 Operating System/linux/disk & dir/파일 시스템.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 종류](./운영체제 Operating System/linux/disk & dir/파일 종류.md)</br>
 ┃　　　┃　　　┗━　[**kernel**](./운영체제 Operating System/linux/kernel)</br>
+┃　　　┃　　　┃　　　┗━　[유저모드와 커널모드](./운영체제 Operating System/linux/kernel/유저모드와 커널모드.md)</br>
 ┃　　　┃　　　┃　　　┗━　[커널 모듈](./운영체제 Operating System/linux/kernel/커널 모듈.md)</br>
 ┃　　　┃　　　┗━　[**memory**](./운영체제 Operating System/linux/memory)</br>
 ┃　　　┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/memory/Swap메모리.md)</br>
