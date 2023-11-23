@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 640
+files            : 643
 derectories      : 138
-avg_file_length  : 3894
+avg_file_length  : 3883
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -138,6 +138,7 @@ avg_file_length  : 3894
 ┃　　　┃　　　┗━　[IPAM](./네트워크 Network/L2 internet layer/IPAM.md)</br>
 ┃　　　┃　　　┗━　[IPSec](./네트워크 Network/L2 internet layer/IPSec.md)</br>
 ┃　　　┃　　　┗━　[IPVS](./네트워크 Network/L2 internet layer/IPVS.md)</br>
+┃　　　┃　　　┗━　[IP 데이터그램과 단편화](./네트워크 Network/L2 internet layer/IP 데이터그램과 단편화.md)</br>
 ┃　　　┃　　　┗━　[NAT](./네트워크 Network/L2 internet layer/NAT.md)</br>
 ┃　　　┃　　　┗━　[secondary IP](./네트워크 Network/L2 internet layer/secondary IP.md)</br>
 ┃　　　┃　　　┗━　[서브넷](./네트워크 Network/L2 internet layer/서브넷.md)</br>
@@ -698,7 +699,9 @@ avg_file_length  : 3894
 ┃　　　┗━　[**linux**](./운영체제 Operating System/linux)</br>
 ┃　　　┃　　　┗━　[**BPF**](./운영체제 Operating System/linux/BPF)</br>
 ┃　　　┃　　　┃　　　┗━　[+BTF](./운영체제 Operating System/linux/BPF/+BTF.md)</br>
+┃　　　┃　　　┃　　　┗━　[BCC](./운영체제 Operating System/linux/BPF/BCC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BPF](./운영체제 Operating System/linux/BPF/BPF.md)</br>
+┃　　　┃　　　┃　　　┗━　[BPF 프로그램 타입](./운영체제 Operating System/linux/BPF/BPF 프로그램 타입.md)</br>
 ┃　　　┃　　　┗━　[**authority**](./운영체제 Operating System/linux/authority)</br>
 ┃　　　┃　　　┃　　　┗━　[chattr](./운영체제 Operating System/linux/authority/chattr.md)</br>
 ┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/authority/chmod.md)</br>
@@ -787,8 +790,6 @@ avg_file_length  : 3894
 ┃　　　┗━　[퍼셉트론](./인공지능 AI/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능 AI/활성화함수.md)</br>
 ┗━　[**+autocommit.sh**](./+autocommit.sh)</br>
-┗━　[**+test.sh**](./+test.sh)</br>
-┗━　[**+test.txt**](./+test.txt)</br>
 ┗━　[README](./README.md)</br>
 .
 ┗━　[**debug.log**](./debug.log)</br>
