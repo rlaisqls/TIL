@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 642
+files            : 643
 derectories      : 138
-avg_file_length  : 3885
+avg_file_length  : 3902
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -701,6 +701,7 @@ avg_file_length  : 3885
 ┃　　　┃　　　┃　　　┗━　[BCC](./운영체제 Operating System/linux/BPF/BCC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BPF](./운영체제 Operating System/linux/BPF/BPF.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BPF 프로그램 타입](./운영체제 Operating System/linux/BPF/BPF 프로그램 타입.md)</br>
+┃　　　┃　　　┃　　　┗━　[BTF](./운영체제 Operating System/linux/BPF/BTF.md)</br>
 ┃　　　┃　　　┗━　[**authority**](./운영체제 Operating System/linux/authority)</br>
 ┃　　　┃　　　┃　　　┗━　[chattr](./운영체제 Operating System/linux/authority/chattr.md)</br>
 ┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/authority/chmod.md)</br>
@@ -790,7 +791,6 @@ avg_file_length  : 3885
 ┃　　　┗━　[활성화함수](./인공지능 AI/활성화함수.md)</br>
 ┗━　[**+autocommit.sh**](./+autocommit.sh)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXOp2TcT**](./XXOp2TcT)</br>
 .
 ┗━　[**debug.log**](./debug.log)</br>
 ┗━　[**pre━commit**](./pre━commit)</br>
