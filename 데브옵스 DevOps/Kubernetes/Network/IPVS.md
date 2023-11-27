@@ -53,3 +53,9 @@ TCP  1.1.1.1.80:http lc
 `-L` supports multiple options, such as `--stats`, to show additional connection statistics.
 
 
+---
+reference
+- https://medium.com/google-cloud/load-balancing-with-ipvs-1c0a48476c4d
+- https://en.wikipedia.org/wiki/IP_Virtual_Server
+- http://www.linuxvirtualserver.org/software/ipvs.html
+- https://kubernetes.io/blog/2018/07/09/ipvs-based-in-cluster-load-balancing-deep-dive/

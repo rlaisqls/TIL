@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 643
-derectories      : 138
-avg_file_length  : 3902
+files            : 644
+derectories      : 139
+avg_file_length  : 3913
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -137,7 +137,6 @@ avg_file_length  : 3902
 ┃　　　┃　　　┗━　[IP](./네트워크 Network/L2 internet layer/IP.md)</br>
 ┃　　　┃　　　┗━　[IPAM](./네트워크 Network/L2 internet layer/IPAM.md)</br>
 ┃　　　┃　　　┗━　[IPSec](./네트워크 Network/L2 internet layer/IPSec.md)</br>
-┃　　　┃　　　┗━　[IPVS](./네트워크 Network/L2 internet layer/IPVS.md)</br>
 ┃　　　┃　　　┗━　[IP 데이터그램과 단편화](./네트워크 Network/L2 internet layer/IP 데이터그램과 단편화.md)</br>
 ┃　　　┃　　　┗━　[NAT](./네트워크 Network/L2 internet layer/NAT.md)</br>
 ┃　　　┃　　　┗━　[secondary IP](./네트워크 Network/L2 internet layer/secondary IP.md)</br>
@@ -148,6 +147,10 @@ avg_file_length  : 3902
 ┃　　　┃　　　┗━　[SSH config](./네트워크 Network/L3 transport layer/SSH config.md)</br>
 ┃　　　┃　　　┗━　[TCP와 UDP](./네트워크 Network/L3 transport layer/TCP와 UDP.md)</br>
 ┃　　　┗━　[**L4 appplication layer**](./네트워크 Network/L4 appplication layer)</br>
+┃　　　┃　　　┗━　[**http**](./네트워크 Network/L4 appplication layer/http)</br>
+┃　　　┃　　　┃　　　┗━　[HTTP](./네트워크 Network/L4 appplication layer/http/HTTP.md)</br>
+┃　　　┃　　　┃　　　┗━　[HTTP Options](./네트워크 Network/L4 appplication layer/http/HTTP Options.md)</br>
+┃　　　┃　　　┃　　　┗━　[keep alive](./네트워크 Network/L4 appplication layer/http/keep alive.md)</br>
 ┃　　　┃　　　┗━　[**tls**](./네트워크 Network/L4 appplication layer/tls)</br>
 ┃　　　┃　　　┃　　　┗━　[SNI](./네트워크 Network/L4 appplication layer/tls/SNI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[TLS](./네트워크 Network/L4 appplication layer/tls/TLS.md)</br>
@@ -157,8 +160,6 @@ avg_file_length  : 3902
 ┃　　　┃　　　┗━　[DHCP](./네트워크 Network/L4 appplication layer/DHCP.md)</br>
 ┃　　　┃　　　┗━　[DNS 레코드유형](./네트워크 Network/L4 appplication layer/DNS 레코드유형.md)</br>
 ┃　　　┃　　　┗━　[FTP Active, Passive mode](./네트워크 Network/L4 appplication layer/FTP Active, Passive mode.md)</br>
-┃　　　┃　　　┗━　[HTTP](./네트워크 Network/L4 appplication layer/HTTP.md)</br>
-┃　　　┃　　　┗━　[HTTP Options](./네트워크 Network/L4 appplication layer/HTTP Options.md)</br>
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[**error**](./네트워크 Network/error)</br>
 ┃　　　┃　　　┗━　[Context deadline exceeded](./네트워크 Network/error/Context deadline exceeded.md)</br>
@@ -265,7 +266,6 @@ avg_file_length  : 3902
 ┃　　　┃　　　┗━　[Region과 Zone](./데브옵스 DevOps/AWS/Region과 Zone.md)</br>
 ┃　　　┃　　　┗━　[SAA 오답노트 1~3](./데브옵스 DevOps/AWS/SAA 오답노트 1~3.md)</br>
 ┃　　　┃　　　┗━　[SAA 오답노트 4~6](./데브옵스 DevOps/AWS/SAA 오답노트 4~6.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트 examtopic](./데브옵스 DevOps/AWS/SAA 오답노트 examtopic.md)</br>
 ┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
 ┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
 ┃　　　┗━　[**Container**](./데브옵스 DevOps/Container)</br>
@@ -331,6 +331,7 @@ avg_file_length  : 3902
 ┃　　　┃　　　┃　　　┃　　　┗━　[ServiceDNS](./데브옵스 DevOps/Kubernetes/Network/DNS/ServiceDNS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Debugging DNS Resolution](./데브옵스 DevOps/Kubernetes/Network/Debugging DNS Resolution.md)</br>
 ┃　　　┃　　　┃　　　┗━　[HTTPProxy](./데브옵스 DevOps/Kubernetes/Network/HTTPProxy.md)</br>
+┃　　　┃　　　┃　　　┗━　[IPVS](./데브옵스 DevOps/Kubernetes/Network/IPVS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./데브옵스 DevOps/Kubernetes/Network/NetworkPolicy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Network Troubleshooting](./데브옵스 DevOps/Kubernetes/Network/Network Troubleshooting.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node and Pod Network Layout](./데브옵스 DevOps/Kubernetes/Network/Node and Pod Network Layout.md)</br>
@@ -423,7 +424,6 @@ avg_file_length  : 3902
 ┃　　　┃　　　┗━　[K8s Architecture](./데브옵스 DevOps/Kubernetes/K8s Architecture.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./데브옵스 DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
-┃　　　┃　　　┗━　[**test.yml**](./데브옵스 DevOps/Kubernetes/test.yml)</br>
 ┃　　　┗━　[**Monitoring**](./데브옵스 DevOps/Monitoring)</br>
 ┃　　　┃　　　┗━　[**Dashboad**](./데브옵스 DevOps/Monitoring/Dashboad)</br>
 ┃　　　┃　　　┃　　　┗━　[kiali with prometheus](./데브옵스 DevOps/Monitoring/Dashboad/kiali with prometheus.md)</br>
@@ -469,6 +469,7 @@ avg_file_length  : 3902
 ┃　　　┗━　[**architecture**](./데브옵스 DevOps/architecture)</br>
 ┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
 ┃　　　┗━　[**tools**](./데브옵스 DevOps/tools)</br>
+┃　　　┃　　　┗━　[Clium](./데브옵스 DevOps/tools/Clium.md)</br>
 ┃　　　┃　　　┗━　[Dex](./데브옵스 DevOps/tools/Dex.md)</br>
 ┃　　　┃　　　┗━　[Dex K8s Authenticator](./데브옵스 DevOps/tools/Dex K8s Authenticator.md)</br>
 ┃　　　┃　　　┗━　[GPG](./데브옵스 DevOps/tools/GPG.md)</br>

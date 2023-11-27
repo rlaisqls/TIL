@@ -30,24 +30,14 @@
 
 # Data Lake와 Warehouse의 차이
 
-- 데이터 저장 방식
-    - Data Lake : 구조화되지 않은 Raw Data 형식으로 무기한 저장
-    - Data Warehouse : 사전 정의된 비즈니스 요구사항 기반으로 전략적 분석이 가능한 정재 및 처리된 구조화 데이터 저장 
-- 사용자
-  - Data Lake : 대량의 비정형 데이터를 통해 새로운 Insight를 얻기 위해 데이터를 연구하는 데이터 과학자 혹은 엔지니어가 사용
-  - Data Warehouse : 일반적으로 비즈니스 KPI에서 Insight를 얻으려는 관리자와 비즈니스 최종 사용자가 사용 
-- 분석
-  - Data Lake : Predictive analytics, machine learning, data visualization, BI, big data analytics.
-  - Data Warehouse : Data visualization, BI, data analytics.
-- 스키마
-  - Data Lake : 비정형 데이터를 저장하기 위해서 Schema 정의하지 않고 ETL 과정에서 Schema 정의하는 "Schema on Read"
-  - Data Warehouse : 비즈니스 요구사항 기반으로 정형화된 데이터를 저장하기위해 Schema 정의 및 저장할 때 Scheam를 정의하는 "Schema on Write"
-- 처리
-  - Data Lake : Raw Data를 바로 저장 및 필요시 ETL 과정에서 Schema 정의 ("Schema on Read")
-  - Data Warehouse : 저장하는 과정해서 ETL를 통한 Schema 정의 ("Schema on Write")
-- 비용
-  - Data Lake : Storage cost가 낮을 뿐만 아니라, 관리하는 cost가 낮음 
-  - Data Warehouse : Storage cost가 높을 뿐만 아니라, 관리하는 cost도 높음
+| 구분             | Data Lake                                         | Data Warehouse                                       |
+|------------------|---------------------------------------------------|-------------------------------------------------------|
+| 데이터 저장 방식  | 구조화되지 않은 Raw Data 형식으로 무기한 저장    | 사전 정의된 비즈니스 요구사항 기반으로 전략적 분석이 가능한 정재 및 처리된 구조화 데이터 저장 |
+| 사용자            | 대량의 비정형 데이터를 통해 새로운 Insight를 얻기 위해 데이터를 연구하는 데이터 과학자 혹은 엔지니어가 사용 | 일반적으로 비즈니스 KPI에서 Insight를 얻으려는 관리자와 비즈니스 최종 사용자가 사용 |
+| 분석              | Predictive analytics, machine learning, data visualization, BI, big data analytics. | Data visualization, BI, data analytics. |
+| 스키마            | 비정형 데이터를 저장하기 위해서 Schema 정의하지 않고 ETL 과정에서 Schema 정의하는 "Schema on Read" | 비즈니스 요구사항 기반으로 정형화된 데이터를 저장하기위해 Schema 정의 및 저장할 때 Schema를 정의하는 "Schema on Write" |
+| 처리              | Raw Data를 바로 저장 및 필요시 ETL 과정에서 Schema 정의 ("Schema on Read") | 저장하는 과정해서 ETL를 통한 Schema 정의 ("Schema on Write") |
+| 비용              | Storage cost가 낮을 뿐만 아니라, 관리하는 cost가 낮음 | Storage cost가 높을 뿐만 아니라, 관리하는 cost도 높음 |
 
 ---
 참고

@@ -19,10 +19,19 @@
 쿠버네티스에서는 각각의 기능들이 개별적인 구성 요소로서 독립적으로 분산되어 있다. 실제로 노드(Node), 레플리카셋(ReplicaSet), 디플로이먼트(Deployment), 네임스페이스(Namespace) 등 클러스터를 구성하는 주요 요소들이 모두 컨트롤러(Controller)로서 구성되어 있으며, 이들은 <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/">Kube Controller Manager</a> 안에 패키징 되어 있다
 
 ### 3. 클러스터 단위 중앙 제어
+
 쿠버네티스에서는 전체 물리 리소스를 클러스터 단위로 추상화하여 관리한다. 클러스터 내부에는 클러스터의 구성 요소들에 대해 제어 권한을 가진 컨트롤 플레인(Control Plane) 역할의 마스터 노드(Master Node)를 두게 되며, 관리자는 이 마스터 노드를 이용하여 클러스터 전체를 제어한다.
 
 ### 4. 동적 그룹화
+
 쿠버네티스의 구성 요소들에는 쿼리 가능한 레이블(Label)과 메타데이터용 어노테이션(Annotation)에 임의로 키-값 쌍을 삽입할 수 있다. 관리자는 selector를 이용해서 레이블 기준으로 구성 요소들을 유연하게 관리할 수 있고, 어노테이션에 기재된 내용을 참고하여 해당 요소의 특징적인 내역을 추적할 수 있다.
 
 ### 5. API 기반 상호작용
-쿠버네티스의 구성 요소들은 오직 Kubernetes API server(kube-apiserver)를 통해서만 상호 접근이 가능한 구조를 가진다. 마스터 노드에서 kubectl을 거쳐 실행되는 모든 명령은 이 API 서버를 거쳐 수행되며, 컨트롤 플레인(Control Plane)에 포함된 클러스터 제어 요소나 워커 노드(Worker Node)에 포함된 kubelet, 프록시 역시 API 서버를 항상 바라보게 되어 있다.
+
+쿠버네티스의 구성 요소들은 오직 Kubernetes API server(kube-apiserver)를 통해서만 상호 접근 가능한 구조를 가진다. 마스터 노드에서 kubectl을 거쳐 실행되는 모든 명령은 이 API 서버를 거쳐 수행되며, 컨트롤 플레인(Control Plane)에 포함된 클러스터 제어 요소나 워커 노드(Worker Node)에 포함된 kubelet, 프록시 역시 API 서버를 항상 바라보게 되어 있다.
+
+---
+참고
+- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/concepts/overview/
+- https://kubernetes.io/docs/concepts/overview/components/

@@ -140,15 +140,22 @@ The algorithm completes its work in five separate passes, which we'll describe b
 
 There are also a few important ideas and data structures the algorithm relies on, which are critical to understanding it and would be useful to keep in mind as you follow along.
 
-1. **String deduplication** as a very first step. BTF doesn't embed strings into type descriptors. Instead, all the strings are concatenated into a byte array of string data with \0 as a separator. Strings themselves are referenced from type descriptors using offsets into this array (typically through name_off fields). By performing string deduplication early, we can avoid comparing string contents later: after string deduplication it's enough to just compare corresponding string offsets to determine string equality, which both saves time and simplifies code.
+1. **String deduplication** as a very first step.
+   - BTF doesn't embed strings into type descriptors. Instead, all the strings are concatenated into a byte array of string data with `\0` as a separator.
+   - Strings themselves are referenced from type descriptors using offsets into this array (typically through `name_off` fields). By performing string deduplication early, we can avoid comparing string contents later: after string deduplication it's enough to just compare corresponding string offsets to determine string equality, which both saves time and simplifies code.
 
-2. Using a side array to store **type equivalence mapping** for duplicated and resolved BTF types, instead of modifying IDs in-place. As the algorithm performs deduplication and type info merging, it needs to transform the type graph to record type equivalence and resolve forward declarations to struct/union type descriptors. By utilizing a separate array to store this mapping (instead of updating referenced type IDs in-place inside each affected BTF type descriptor), we are performing graph transformations that would potentially need O(N) type ID rewrites (if done in-place) with just a single value update in this array. This is a crucial idea to allow simple and efficient BTF_KIND_FWD → BTF_KIND_{STRUCT|UNION} remapping. The small price to pay for this is the need to consult this array for every type ID resolution when trying to get BTF type descriptor by type ID.
+2. Using a side array to store **type equivalence mapping** for duplicated and resolved BTF types, instead of modifying IDs in-place.
+   - As the algorithm performs deduplication and type info merging, it needs to transform the type graph to record type equivalence and resolve forward declarations to struct/union type descriptors.
+   - By utilizing a separate array to store this mapping (instead of updating referenced type IDs in-place inside each affected BTF type descriptor), we are performing graph transformations that would potentially need O(N) type ID rewrites (if done in-place) with just a single value update in this array.
+   - This is a crucial idea to allow simple and efficient `BTF_KIND_FWD` → `BTF_KIND_{STRUCT|UNION}` remapping. The small price to pay for this is the need to consult this array for every type ID resolution when trying to get BTF type descriptor by type ID.
 
-3. **Canonical types**. The algorithm determines the canonical type descriptor ("one and only representative") for each unique type. This canonical type is the one that will go into the final deduplicated BTF type information. For struct/unions, it is also the type that the algorithm will merge additional type information into, as it discovers it from data in other CUs. To facilitate fast discovery of canonical types, we also maintain a canonical index, which maps the type descriptor's signature (i.e., kind, name, size, etc.) into a list of canonical types that match that signature. With sufficiently good choice of type signature function, we can limit the number of canonical types for each unique type signature to a very small number, allowing the discovery of canonical type for any duplicated type very quickly.
-
-
+3. **Canonical types**.
+   - The algorithm determines the canonical type descriptor ("one and only representative") for each unique type. This canonical type is the one that will go into the final deduplicated BTF type information.
+   - For struct/unions, it is also the type that the algorithm will merge additional type information into, as it discovers it from data in other CUs.
+   - To facilitate fast discovery of canonical types, we also maintain a canonical index, which maps the type descriptor's signature (i.e., kind, name, size, etc.) into a list of canonical types that match that signature.
+   - With sufficiently good choice of type signature function, we can limit the number of canonical types for each unique type signature to a very small number, allowing the discovery of canonical type for any duplicated type very quickly.
 
 ---
-reference
+**reference**
 - https://www.kernel.org/doc/html/next/bpf/btf.html
 - https://facebookmicrosites.github.io/bpf/blog/2018/11/14/btf-enhancement.html
