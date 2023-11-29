@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 644
+files            : 645
 derectories      : 139
-avg_file_length  : 3913
+avg_file_length  : 3909
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -649,6 +649,7 @@ avg_file_length  : 3913
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[**알고리즘 Algorithm**](./알고리즘 Algorithm)</br>
 ┃　　　┗━　[세그먼트트리](./알고리즘 Algorithm/세그먼트트리.md)</br>
+┃　　　┗━　[외판원순회](./알고리즘 Algorithm/외판원순회.md)</br>
 ┗━　[**언어 Language**](./언어 Language)</br>
 ┃　　　┗━　[**JAVA**](./언어 Language/JAVA)</br>
 ┃　　　┃　　　┗━　[**JVM**](./언어 Language/JAVA/JVM)</br>
