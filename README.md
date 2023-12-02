@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 645
-derectories      : 139
-avg_file_length  : 3909
+files            : 648
+derectories      : 140
+avg_file_length  : 3898
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -651,27 +651,31 @@ avg_file_length  : 3909
 ┃　　　┗━　[세그먼트트리](./알고리즘 Algorithm/세그먼트트리.md)</br>
 ┃　　　┗━　[외판원순회](./알고리즘 Algorithm/외판원순회.md)</br>
 ┗━　[**언어 Language**](./언어 Language)</br>
-┃　　　┗━　[**JAVA**](./언어 Language/JAVA)</br>
-┃　　　┃　　　┗━　[**JVM**](./언어 Language/JAVA/JVM)</br>
-┃　　　┃　　　┃　　　┗━　[Heap영역 구조와 GC](./언어 Language/JAVA/JVM/Heap영역 구조와 GC.md)</br>
-┃　　　┃　　　┃　　　┗━　[JVM 구성요소](./언어 Language/JAVA/JVM/JVM 구성요소.md)</br>
-┃　　　┃　　　┃　　　┗━　[Java Bytecode](./언어 Language/JAVA/JVM/Java Bytecode.md)</br>
-┃　　　┃　　　┃　　　┗━　[Permanent to Metaspace](./언어 Language/JAVA/JVM/Permanent to Metaspace.md)</br>
-┃　　　┃　　　┃　　　┗━　[Runtime Data Area](./언어 Language/JAVA/JVM/Runtime Data Area.md)</br>
-┃　　　┃　　　┃　　　┗━　[TLAB과 PLAB](./언어 Language/JAVA/JVM/TLAB과 PLAB.md)</br>
-┃　　　┃　　　┃　　　┗━　[메모리누수](./언어 Language/JAVA/JVM/메모리누수.md)</br>
-┃　　　┃　　　┗━　[**Thread**](./언어 Language/JAVA/Thread)</br>
-┃　　　┃　　　┃　　　┗━　[@Volatile](./언어 Language/JAVA/Thread/@Volatile.md)</br>
-┃　　　┃　　　┃　　　┗━　[Thread 상태](./언어 Language/JAVA/Thread/Thread 상태.md)</br>
-┃　　　┃　　　┃　　　┗━　[wait()과　notifyAll()](./언어 Language/JAVA/Thread/wait()과　notifyAll().md)</br>
-┃　　　┃　　　┗━　[Inner static class](./언어 Language/JAVA/Inner static class.md)</br>
-┃　　　┃　　　┗━　[JAR과 WAR](./언어 Language/JAVA/JAR과 WAR.md)</br>
-┃　　　┃　　　┗━　[JAVA](./언어 Language/JAVA/JAVA.md)</br>
-┃　　　┃　　　┗━　[JDKProxy와 CGLibProxy](./언어 Language/JAVA/JDKProxy와 CGLibProxy.md)</br>
-┃　　　┃　　　┗━　[JLink & JDeps](./언어 Language/JAVA/JLink & JDeps.md)</br>
-┃　　　┃　　　┗━　[record](./언어 Language/JAVA/record.md)</br>
-┃　　　┃　　　┗━　[예외와 에러](./언어 Language/JAVA/예외와 에러.md)</br>
-┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/JAVA/제네릭과 variance.md)</br>
+┃　　　┗━　[**Java**](./언어 Language/Java)</br>
+┃　　　┃　　　┗━　[**JVM**](./언어 Language/Java/JVM)</br>
+┃　　　┃　　　┃　　　┗━　[Heap영역 구조와 GC](./언어 Language/Java/JVM/Heap영역 구조와 GC.md)</br>
+┃　　　┃　　　┃　　　┗━　[JVM 구성요소](./언어 Language/Java/JVM/JVM 구성요소.md)</br>
+┃　　　┃　　　┃　　　┗━　[Java Bytecode](./언어 Language/Java/JVM/Java Bytecode.md)</br>
+┃　　　┃　　　┃　　　┗━　[Permanent to Metaspace](./언어 Language/Java/JVM/Permanent to Metaspace.md)</br>
+┃　　　┃　　　┃　　　┗━　[Runtime Data Area](./언어 Language/Java/JVM/Runtime Data Area.md)</br>
+┃　　　┃　　　┃　　　┗━　[TLAB과 PLAB](./언어 Language/Java/JVM/TLAB과 PLAB.md)</br>
+┃　　　┃　　　┃　　　┗━　[메모리누수](./언어 Language/Java/JVM/메모리누수.md)</br>
+┃　　　┃　　　┗━　[**Thread**](./언어 Language/Java/Thread)</br>
+┃　　　┃　　　┃　　　┗━　[@Volatile](./언어 Language/Java/Thread/@Volatile.md)</br>
+┃　　　┃　　　┃　　　┗━　[Thread 상태](./언어 Language/Java/Thread/Thread 상태.md)</br>
+┃　　　┃　　　┃　　　┗━　[wait()과　notifyAll()](./언어 Language/Java/Thread/wait()과　notifyAll().md)</br>
+┃　　　┃　　　┗━　[Inner static class](./언어 Language/Java/Inner static class.md)</br>
+┃　　　┃　　　┗━　[JAR과 WAR](./언어 Language/Java/JAR과 WAR.md)</br>
+┃　　　┃　　　┗━　[JAVA](./언어 Language/Java/JAVA.md)</br>
+┃　　　┃　　　┗━　[JDKProxy와 CGLibProxy](./언어 Language/Java/JDKProxy와 CGLibProxy.md)</br>
+┃　　　┃　　　┗━　[JLink & JDeps](./언어 Language/Java/JLink & JDeps.md)</br>
+┃　　　┃　　　┗━　[record](./언어 Language/Java/record.md)</br>
+┃　　　┃　　　┗━　[예외와 에러](./언어 Language/Java/예외와 에러.md)</br>
+┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/Java/제네릭과 variance.md)</br>
+┃　　　┗━　[**JavaScript**](./언어 Language/JavaScript)</br>
+┃　　　┃　　　┗━　[+Lexical Scope와 Closure](./언어 Language/JavaScript/+Lexical Scope와 Closure.md)</br>
+┃　　　┃　　　┗━　[프로토타입](./언어 Language/JavaScript/프로토타입.md)</br>
+┃　　　┃　　　┗━　[화살표 함수](./언어 Language/JavaScript/화살표 함수.md)</br>
 ┃　　　┗━　[**Kotlin**](./언어 Language/Kotlin)</br>
 ┃　　　┃　　　┗━　[**변수**](./언어 Language/Kotlin/변수)</br>
 ┃　　　┃　　　┃　　　┗━　[List와 MutableList](./언어 Language/Kotlin/변수/List와 MutableList.md)</br>
