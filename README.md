@@ -3,7 +3,7 @@
 ```
 files            : 648
 derectories      : 140
-avg_file_length  : 3898
+avg_file_length  : 3899
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -673,7 +673,7 @@ avg_file_length  : 3898
 ┃　　　┃　　　┗━　[예외와 에러](./언어 Language/Java/예외와 에러.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/Java/제네릭과 variance.md)</br>
 ┃　　　┗━　[**JavaScript**](./언어 Language/JavaScript)</br>
-┃　　　┃　　　┗━　[+Lexical Scope와 Closure](./언어 Language/JavaScript/+Lexical Scope와 Closure.md)</br>
+┃　　　┃　　　┗━　[Lexical Scope와 Closure](./언어 Language/JavaScript/Lexical Scope와 Closure.md)</br>
 ┃　　　┃　　　┗━　[프로토타입](./언어 Language/JavaScript/프로토타입.md)</br>
 ┃　　　┃　　　┗━　[화살표 함수](./언어 Language/JavaScript/화살표 함수.md)</br>
 ┃　　　┗━　[**Kotlin**](./언어 Language/Kotlin)</br>

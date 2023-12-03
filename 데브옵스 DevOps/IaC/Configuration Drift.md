@@ -7,6 +7,7 @@ A nice automated server provisioning process helps ensure machines are consisten
 There are two main methods to combat configuration drift. One is to use automated configuration tools such as Puppet or Chef, and run them frequently and repeatedly to keep machines in line. The other is to rebuild machine instances frequently, so that they don’t have much time to drift from the baseline.
 
 ## Why Configuration Drift Matters
+
 Configuration drift can lead to serious consequences, including:
 
 - **Security vulnerabilities**—misconfigurations or unauthorized changes to configuration can lead to issues like escalation of privilege, use of vulnerable open source components, vulnerable container images, images pulled from untrusted repositories, or containers running as root.
