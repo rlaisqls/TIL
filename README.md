@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 648
-derectories      : 140
-avg_file_length  : 3899
+files            : 649
+derectories      : 141
+avg_file_length  : 3950
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -340,7 +340,6 @@ avg_file_length  : 3899
 ┃　　　┃　　　┃　　　┗━　[**istio**](./데브옵스 DevOps/Kubernetes/Service Mesh/istio)</br>
 ┃　　　┃　　　┃　　　　　　　┗━　[Dry run](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Dry run.md)</br>
 ┃　　　┃　　　┃　　　　　　　┗━　[Istioctl](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istioctl.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio And Envoy](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio And Envoy.md)</br>
 ┃　　　┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio Arcitecture.md)</br>
 ┃　　　┃　　　┃　　　　　　　┗━　[Istio Configuration Profiles](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio Configuration Profiles.md)</br>
 ┃　　　┃　　　┃　　　　　　　┗━　[Istio RBAC](./데브옵스 DevOps/Kubernetes/Service Mesh/istio/Istio RBAC.md)</br>
@@ -700,6 +699,8 @@ avg_file_length  : 3899
 ┃　　　┃　　　┗━　[람다 표현식](./언어 Language/Kotlin/람다 표현식.md)</br>
 ┃　　　┃　　　┗━　[범위 지정 함수](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/Kotlin/제네릭과 variance.md)</br>
+┃　　　┗━　[**Rust**](./언어 Language/Rust)</br>
+┃　　　┃　　　┗━　[Rc 타입과 Weak 타입](./언어 Language/Rust/Rc 타입과 Weak 타입.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ┗━　[**운영체제 Operating System**](./운영체제 Operating System)</br>
 ┃　　　┗━　[**linux**](./운영체제 Operating System/linux)</br>
@@ -725,6 +726,7 @@ avg_file_length  : 3899
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./운영체제 Operating System/linux/disk & dir/파일 시스템.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 종류](./운영체제 Operating System/linux/disk & dir/파일 종류.md)</br>
 ┃　　　┃　　　┗━　[**kernel**](./운영체제 Operating System/linux/kernel)</br>
+┃　　　┃　　　┃　　　┗━　[Linux 커널 심층 분석](./운영체제 Operating System/linux/kernel/Linux 커널 심층 분석.md)</br>
 ┃　　　┃　　　┃　　　┗━　[유저모드와 커널모드](./운영체제 Operating System/linux/kernel/유저모드와 커널모드.md)</br>
 ┃　　　┃　　　┃　　　┗━　[커널 모듈](./운영체제 Operating System/linux/kernel/커널 모듈.md)</br>
 ┃　　　┃　　　┗━　[**memory**](./운영체제 Operating System/linux/memory)</br>
