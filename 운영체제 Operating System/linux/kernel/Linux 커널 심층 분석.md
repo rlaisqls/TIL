@@ -122,10 +122,11 @@
   - 자식 프로세스가 공유자원에 write을 하지 않는 경우 (대부분 생성 후 바로 `exec()`하는 경우), 큰 최적화 효과를 얻을 수 있다.
 
 - 프로세스가 생성되는 세부적인 과정은 다음과 같다. 
-  1. 리눅스의 glibc 속 `fork()`는 `clone()` 이라는 시스템콜을 다양한 플래그를 적용해 부모-자식 프로세스간 공유자원을 지정한 뒤 호출한다.
+
+1. 리눅스의 glibc 속 `fork()`는 `clone()` 이라는 시스템콜을 다양한 플래그를 적용해 부모-자식 프로세스간 공유자원을 지정한 뒤 호출한다.
      - linux - Which file in kernel specifies `fork()`, `vfork()`... to use `sys_clone()` system call - Unix & Linux Stack Exchange
 
-  2. `clone()`은 `do_fork()`함수를 호출하고 `do_fork()`는 `copy_process()`를 호출해 내부적으로 아래 과정을 수행한다.
+2. `clone()`은 `do_fork()`함수를 호출하고 `do_fork()`는 `copy_process()`를 호출해 내부적으로 아래 과정을 수행한다.
 
      1. `dup_task_struct()` 함수 호출 
          - 새로운 프로세스 스택 공간 할당, 새로운 thread_info, task_struct 구조체를 생성한다.
@@ -139,7 +140,7 @@
      5. `alloc_pid()` 함수 호출 
          - 자식 프로세스에게 새로운 PID값을 할당한다.
      6. `clone()`의 매개변수로 전달된 플래그에 따라 파일시스템 정보, signal handler, 주소공간, namespace 등을 share하거나 copy한다. (보통 스레드는 share를, 프로세스는 copy 한다.)
-  3. 생성한 자식 프로세스의 포인터를 반환한다.
+3. 생성한 자식 프로세스의 포인터를 반환한다.
 
 - `vfork()` 시스템콜은 부모 프로세스의 page table을 copy하지 않는다는 점을 제외하면 `fork()`와 동일. 그러나 copy-and-write을 사용하는 리눅스 특성상 `fork()` 대비 이득이 적어서 거의 사용하지 않는다.
 
@@ -148,7 +149,7 @@
 - 대표적인 modern-programming 기법인 스레드는 공유 메모리를 가진 여러 프로그램을 ‘동시에’(concurrent) 수행해 multi-processor 환경에서는 진정한 병렬처리를 구현할 수 있다.
 - 스레드는 개별 `task_struct`를 갖고 메모리를 부모 프로세스와 공유하고 있는 정상 프로세스다. (리눅스는 프로세스와 스레드를 구분하지 않는다.)
 - 따라서 스레드도 내부적으로는 프로세스 생성 때와 똑같이 `clone()` 시스템콜을 이용한다. 여러 플래그를 parameter로 넘겨서 스레드의 특성을 부여할 뿐이다. (i.e. `clone(CLONE_VM | CLONE_FS | CLONE_FILES | CLONE_SIGHAND, 0)`;)
-- `<linux/sched.h>`의 최상단에 스레드 생성 관련 clone flags가 정의돼있다.
+- `<linux/sched.h>`의 최상단에 스레드 생성 관련 clone flags가 정의되어있다.
 
 ### 커널 스레드
   - 커널도 일부 동작은 백그라운드에서 실행하는 것이 좋은데, 이때 커널 공간에서만 존재하는 특별한 스레드인 ‘커널 스레드’를 이용한다.
@@ -305,8 +306,8 @@ void __noreturn do_exit(long code)
 ### 스케줄러 클래스
   - 리눅스 스케줄러는 모듈화 돼있어 각 프로세스를 각기 다른 알고리즘으로 스케줄링 할 수 있다.
   - 이러한 형태를 ‘스케줄러 클래스’라고 말하며 각 클래스에는 우선순위가 있다.
-  - `<kernel/sched.c>`에는 기본 스케줄러가 구현돼있다.
-  - CFS는 리눅스의 일반 프로세스용 스케줄러 클래스이며 `<kernel/sched_fair.c>`에서 구현돼있다.
+  - `<kernel/sched.c>`에는 기본 스케줄러가 구현되어있다.
+  - CFS는 리눅스의 일반 프로세스용 스케줄러 클래스이며 `<kernel/sched_fair.c>`에서 구현되어있다.
 
 ### UNIX의 프로세스 스케줄링
   - CFS에 대해 배우기전에 먼저 전통적인 유닉스의 프로세스 스케줄링 방법에 대해서 배워보자.
@@ -323,7 +324,7 @@ void __noreturn do_exit(long code)
 
 2. 상대적인 nice값 차이로 문제가 발생한다.
    - Nice 0인 프로세스는 100ms, Nice 1인 프로세스는 95ms를 할당받는다고 가정하자.
-   - 두 프로세스의 timeslice 차이는 겨우 5%로 별로 차이가 없다.
+   - 두 프로세스의 timeslice 차이는 겨우 5%로, 큰 차이가 없다.
    - Nice 18인 프로세스는 10ms, Nice 19인 프로세스는 5ms를 할당받는다고 가정하자.
    - 두 프로세스의 timeslice 차이는 무려 50%로 굉장한 차이가 발생한다.
    - 즉, ‘nice 값을 1 증가하거나 낮추는 행위’는 기존 nice값에 따라 의미가 달라지게 된다!
@@ -374,7 +375,7 @@ void __noreturn do_exit(long code)
 
   - 모든 프로세스 스케줄러는 각 프로세스의 실행시간(the time that a process runs)을 기록해야 한다.
   - 시스템 클럭 1-tick이 지날 때마다 이 값은 1씩 감소하며, 0이 될 때 다른 프로세스에 의해 선점된다.
-  - 각 프로세스(task)의 스케줄러 관련 정보는 `task_struct` 내에 `sched_entity` 구조체 타입 se 멤버변수에 저장된다. `sched_entity` 구조체 내부는 아래와 같이 구성돼있다.
+  - 각 프로세스(task)의 스케줄러 관련 정보는 `task_struct` 내에 `sched_entity` 구조체 타입 se 멤버변수에 저장된다. `sched_entity` 구조체 내부는 아래와 같이 구성되어있다.
 
     ```c
     struct sched_entity {
@@ -393,6 +394,7 @@ void __noreturn do_exit(long code)
     // 가상실행시간, 프로세스가 실행한 시간을 정규화한 값이며 CFS는 실행 대기 프로세스 중 가상실행시간이 가장 낮은 프로세스를 다음 실행 프로세스로 선택한다.
 	u64				vruntime; 
     ...
+    }
     ```
 
 - 프로세스의 실행시간은 `vruntime` 멤버변수에 저장된다.
@@ -543,7 +545,7 @@ restart:
   - 일반적으로 프로세스는 CFS를 스케줄러 클래스로 사용하는 경우가 많다.
   - 즉, 현재 실행 중인 프로세스 개수와 CFS 스케줄러 클래스 사용 프로세스 개수가 동일할 가능성이 높다.
   - 이런 경우에는 CFS 스케줄러 클래스 내부에 정의된 `pick_next_task()` 함수를 실행하도록 한다.
-  - 이 함수는 `kernel/sched_fair.c`에 `pick_next_task_fair()`에 정의돼있다.
+  - 이 함수는 `kernel/sched_fair.c`에 `pick_next_task_fair()`에 정의되어있다.
   - CFS의 `pick_next_task()`는 `pick_next_entity()`를 호출하고 이어서 `__pick_next_entity()`를 호출한다. 
   - for 문은 가장 우선순위가 높은 스케줄러 클래스의 가장 우선순위가 높은 프로세스를 찾는다.
   - 가장 높은 우선순위부터 돌아가며 스케줄러 클래스 내 `pick_next_task()` 함수를 호출한다.
@@ -694,7 +696,7 @@ context_switch(struct rq *rq, struct task_struct *prev,
 ```
 
 - 커널은 `need_resched` 플래그를 이용해서 언제 스케줄링이 필요한지 판단한다.
-- 사용자 공간으로 돌아가거나, 인터럽트 처리를 마칠 때마다 커널은 `need_resched` 플래그를 확인한다. 설정돼있다면 `schedule()` 함수를 호출해 최대한 빨리 새 프로세스로 전환한다.
+- 사용자 공간으로 돌아가거나, 인터럽트 처리를 마칠 때마다 커널은 `need_resched` 플래그를 확인한다. 설정되어있다면 `schedule()` 함수를 호출해 최대한 빨리 새 프로세스로 전환한다.
 - `need_resched` 플래그는 각 프로세스의 task_struct 속 thread_info 속 flags 멤버변수에 포함되며 `TIF_NEED_RESCHED` 라는 이름으로 선언되어있다.
 
 ```c
@@ -704,7 +706,7 @@ static __always_inline bool need_resched(void) {
 }
 ```
 
-- need_resched 플래그는 각 프로세스의 task_struct 속 thread_info 속 flags 멤버변수에 포함되며 `TIF_NEED_RESCHED` 라는 이름으로 선언돼있다.
+- need_resched 플래그는 각 프로세스의 task_struct 속 thread_info 속 flags 멤버변수에 포함되며 `TIF_NEED_RESCHED` 라는 이름으로 선언되어있다.
 
 ### ​4.6 선점
 
@@ -738,7 +740,7 @@ static __always_inline bool need_resched(void) {
   - 리눅스는 시스템콜 핸들러 호출 흐름이 간단하기 때문이다.
   - 리눅스는 context switching 속도가 빠르기 때문이다.
 
-- 리눅스의 시스템콜은 아래 파일에 정의돼있다.
+- 리눅스의 시스템콜은 아래 파일에 정의되어있다.
 
   - `include/linux/syscalls.h`: 시스템콜 선언부
 
@@ -765,7 +767,7 @@ static __always_inline bool need_resched(void) {
 - 커널은 시스템콜을 ‘시스템콜 번호’라는 고유번호로 식별한다. 
   - 시스템콜 번호는 한 번 할당 시 변경할 수 없다.
   - 한 번 할당된 시스템콜 번호는 대응하는 시스템콜이 제거된 후라도 재사용하지 않는다.
-  - 모든 시스템콜 번호와 그 핸들러는 sys_call_table 이라는 상수 함수포인터 배열에 아키텍처별로 정의돼있다. (i.e. `x86은 arch/x86/kernel/syscall64.c`)
+  - 모든 시스템콜 번호와 그 핸들러는 sys_call_table 이라는 상수 함수포인터 배열에 아키텍처별로 정의되어있다. (i.e. `x86은 arch/x86/kernel/syscall64.c`)
 
 - 커널이 시스템콜을 처리할 때는 ‘프로세스 컨텍스트’라는 특수한 컨텍스트에 진입한다.
 
@@ -818,7 +820,6 @@ static __always_inline bool need_resched(void) {
     - 당장 실시간으로 빠르게 처리해야 하는 부분은 인터럽트 핸들러 내에서 처리를 하고,
     - 나중에 처리해도 되는 부분은 다른 프로세스로 따로 만들어 처리한다.
 
-
 ## 7.2 인터럽트 핸들러 등록
 
 ```c
@@ -832,7 +833,7 @@ int request_irq(unsigned int irq,
 ```
 
 - 인터럽트 핸들러는 `<linux/interrupt.h>`의 `request_irq()` 함수를 통해 등록할 수 있다. 
-    1. **irq** : IRQ 번호를 의미하며 보통 기본 페리페럴은 이 값이 하드코딩 돼있다. 다른 디바이스들은 탐색을 통해 동적으로 정해진다.
+    1. **irq** : IRQ 번호를 의미하며 보통 기본 페리페럴은 이 값이 하드코딩 되어있다. 다른 디바이스들은 탐색을 통해 동적으로 정해진다.
     2. **handler** : 인터럽트를 처리할 인터럽트 핸들러의 함수 포인터다.
     3. **flags** : 
        - `IRQF_DISABLED` : 인터럽트 핸들러를 실행하는 동안 모든 인터럽트를 비활성화한다.
@@ -873,6 +874,109 @@ local_irq_enable();
 - 또는 `void disable_irq(unsigned int irq)`, `void enable_irq(unsigned int irq)`로 특정 인터럽트를 마스킹하는 방법도 제공한다.
 
 - 하지만, 이것만으로 완전한 동기화를 보장하지는 못한다. 리눅스는 SMP 환경을 지원하므로 여기에 몇 가지 잠금 장치를 더 추가해주어야 한다. 
+
+## 7.5 인터럽트 후반부 처리 (Bottom-half)
+
+- 어떤 일을 후반부로 지연시킬지 명확한 기준은 없지만, 실행시간에 민감하거나, 절대 선점되서는 안 되는 작업이 아니라면 후반부 처리로 넘길 것을 권장한다.
+
+- 후반부 처리의 가장 큰 요점은 모든 인터럽트가 활성화 된 상태에서, 시스템이 덜 바쁜 미래의 어떤 시점에 인터럽트의 나머지 부분을 처리해 시스템의 throughput을 극대화할 수 있다는 점이다.
+
+- 아랫부분에서 BH(Bottom-half), Softirq, Tasklet, WorkQueue 4가지 후반부 처리 기법에 대해서 알아볼 것이다. 결론부터 말하자면, 현재 2020년대에서는 주로 Threaded IRQ 또는 WorkQueue 2가지만 사용하고 나머지는 거의 사용하지 않는다. 리눅스 커널의 인터럽트 후반부 처리의 역사가 어떻게 발전했는지에 대해 알아보는 느낌으로 가볍게 살펴보도록 하자.
+
+- **① BH**
+  - 가장 먼저 만들어진 후반부 처리 기법으로, 정적으로 정의된 32개의 후반부 처리기가 존재했다.
+  - 인터럽트 핸들러에서 32-bit 전역 변수의 bit를 조작해 나중에 실행할 후반부 처리기를 지정했다.
+  - 서로 다른 프로세서가 두 개의 BH를 동시에 실행할 수 없었고, 유연성이 떨어졌고, 병목현상이 발생했다.
+  - 성능이슈, 확장성 이슈, 이식성 이슈로 인해 더 이상 BH를 사용하기 어려워져 2.5버전 이후로 사라졌다.
+
+- **② Softirq**
+  - 모든 프로세서에서 동시에 사용할 수 있는 정적으로 정의된 후반부 처리기의 모음집이다.
+  - 실행시간에 매우 민감하고 중요한 후반부 처리(i.e. 네트워크, Block I/O)를 해야 할 때 사용한다.
+  - 같은 유형의 softirq가 다른 프로세서에서 동시에 실행될 수 있으므로 ​각별한 주의가 필요하다. 
+    - softirq 핸들러에서 만일 공유변수를 사용한다면, 적절한 락이 필요하다는 뜻이다.
+    - 하지만, 동시 실행을 막는다면, softirq를 사용하는 의미가 상당 부분 사라지기 때문에 tasklet을 사용하는 것이 낫다.
+    - 꼭 softirq를 써야만 하는 이유가 반드시 있는 것이 아니라면, 거의 모든 경우 tasklet을 사용하는 것을 권장한다.
+
+        ```c
+        // https://github.com/torvalds/linux/blob/bee0e7762ad2c6025b9f5245c040fcc36ef2bde8/include/linux/interrupt.h#L588
+        struct softirq_action
+        {
+            void	(*action)(struct softirq_action *);
+        };
+        ...
+        // https://github.com/torvalds/linux/blob/bee0e7762ad2c6025b9f5245c040fcc36ef2bde8/kernel/softirq.c#L59static struct softirq_action softirq_vec[NR_SOFTIRQS] __cacheline_aligned_in_smp;
+        DEFINE_PER_CPU(struct task_struct *, ksoftirqd);
+
+        const char * const softirq_to_name[NR_SOFTIRQS] = {
+            "HI", "TIMER", "NET_TX", "NET_RX", "BLOCK", "IRQ_POLL",
+            "TASKLET", "SCHED", "HRTIMER", "RCU"
+        };
+        ```
+
+  - Softirq는 `<linux/intrerrupt.h>`의 sortirq_action 구조체로 표현하며 관련 함수는 <kernel/softirq.c> 에 구현되어있다.
+  - Softirq는 `<linux/interrupt.h>`에 열거형으로 우선순위 순으로 커널에 정적으로 등록되어있다.
+  - Softirq의 핸들러는 `open_softirq()` 함수를 이용해서 런타임에 동적으로 등록할 수 있다. (`open_softirq(softirq 이름, my_softirq)`)
+  - 등록한 핸들러는 `my_softirq->action(my_softirq)`와 같이 실행할 수 있는데, `softirq_action` 구조체에 데이터를 추가하더라도 softirq 핸들러 원형을 바꿀 필요가 없기 때문에 확장성이 좋아진다는 장점이 있다.
+  - 등록된 softirq는 인터럽트 핸들러가 종료 전에 raise 해줘야 실행 가능하다. `raise_softirq`(softirq 이름) 함수를 사용해서 raise 할 수 있다.
+  - 커널은 다음 번 softirq를 처리할 때 raise 되어있는 softirq를 먼저 확인하고, 대응하는 softirq 핸들러를 실행한다
+
+  - Softirq를 도입할 때 한 가지 딜레마가 있었다.
+    - 만일 softirq의 발생 빈도가 높아질 경우 유저 공간 애플리케이션이 프로세서 시간을 얻지 못하는 starvation 문제가 발생할 가능성이 있다.
+    - 커널 개발자들은 softirq를 도입하기 위해서는 적절한 ‘타협’이 필요함을 깨달았다.
+    - 각 프로세서마다 nice 값 +19 (가장 낮은 우선순위)를 갖는 특수한 커널 스레드 `ksoftirqd`를 하나씩 만들어둔다.
+    - ksoftirqd 커널 스레드는 계속 루프를 돌면서 pending 중인 softirq가 발생할 때마다, 프로세서가 여유롭다면 바로바로 `do_softirq()` 함수를 호출해서 softirq를 처리한다. (그리고 사용자 애플리케이션을 방해하지도 않으며 꽤 괜찮은 성능도 보여줬다.)
+    - ksoftirqd 커널 스레드는 루프 한 바퀴를 돌 때마다 `schedule()` 함수를 호출해서 더 중요한 프로세스를 먼저 실행한다.
+    - ksoftirqd 커널 스레드가 실행할 softirq가 없다면 자신을 TASK_INTERRUPTIBLE 상태로 전환해 softirq가 발생할 때 깨어난다.
+​
+- **③ Tasklet**
+  - Softirq 기반으로 만들어진 동적 후반부 처리 방식이다. (Task와는 아무런 관련 없다) 
+  - 네트워크처럼 성능이 아주 중요한 경우에만 softirq를 사용하고 대부분의 후반부 처리는 tasklet을 사용하면 충분하다.
+  - 같은 유형의 tasklet은 서로 다른 프로세서에서 동시 실행 불가능하다.
+  - Softirq 보다 사용법이 간단하고 lock 사용 제한이 유연하다.
+
+    ```c
+    // https://github.com/torvalds/linux/blob/bee0e7762ad2c6025b9f5245c040fcc36ef2bde8/include/linux/wait.h#L40
+    struct tasklet_struct {
+        struct tasklet_struct *next; // 다음 tasklet
+        unsigned long state; // 현재 tasklet의 상태
+        atomic_t count; // 참조 횟수
+        bool use_callback; // 콜백 사용 여부
+        union {
+            void (*func)(unsigned long data); // 핸들러 함수
+            void (*callback)(struct tasklet_struct *t); // 핸들러 함수 콜백
+        };
+        unsigned long data; // 핸들러 함수의 인자
+    };
+    ```
+
+  - `<linux/interrupt.h>` 헤더파일의 `tasklet_struct` 구조체로 표현한다.
+    - state는 0, `TASKLET_STATE_SCHED`(실행 대기 중), `TASKLET_STATE_RUN`(실행 중) 세 가지 중 한 가지를 가진다.
+    - count는 현재 태스크릿의 참조 횟수를 뜻하며, 0이 아니면 태스크릿은 비활성화, 0이면 태스크릿은 활성화 상태다.
+  - Softirq와 마찬가지로, 활성화 되기 위해서는 raising 돼야 하는데, 이를 ‘태스크릿 스케줄링’ 이라고 표현한다.
+
+```c
+static void __tasklet_schedule_common(struct tasklet_struct *t,
+				      struct tasklet_head __percpu *headp,
+				      unsigned int softirq_nr)
+{
+	struct tasklet_head *head;
+	unsigned long flags;
+
+	local_irq_save(flags);
+	head = this_cpu_ptr(headp);
+	t->next = NULL;
+	*head->tail = t;
+	head->tail = &(t->next);
+	raise_softirq_irqoff(softirq_nr);
+	local_irq_restore(flags);
+}
+```
+
+- 태스크릿 스케줄링은 <kernel/softrq.c> 파일에 구현되어있고 `tasklet_schedule()` 함수에서 처리한다.
+  - 태스크릿의 상태가 `TASKLET_STATE_SCHED` 라면, `__tasklet_schedule()` 함수는 호출한다.
+  - 현재 IRQ(인터럽트) 상태를 저장하고, 태스크릿을 현재 프로세서의 `tasklet_vec` 또는 `tasklet_hi_vec` 배열의 가장 뒤에 추가한다.
+  - `raise_softirq_irqoff()` 함수로 softirq를 raise해서 `do_softirq()` 함수가 태스크릿을 처리하도록 만든다. (바로 이 부분에서 태스크릿이 softirq 기반으로 만들어졌음을 알 수 있다.)
+- 태스크릿이 스케줄링(활성화) 됐으니 이제 태스크릿이 핸들러 함수를 호출하고 처리되는 과정을 알아보자.
 
 
 
