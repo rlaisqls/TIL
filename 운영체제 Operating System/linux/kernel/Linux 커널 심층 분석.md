@@ -954,31 +954,290 @@ local_irq_enable();
     - count는 현재 태스크릿의 참조 횟수를 뜻하며, 0이 아니면 태스크릿은 비활성화, 0이면 태스크릿은 활성화 상태다.
   - Softirq와 마찬가지로, 활성화 되기 위해서는 raising 돼야 하는데, 이를 ‘태스크릿 스케줄링’ 이라고 표현한다.
 
-```c
-static void __tasklet_schedule_common(struct tasklet_struct *t,
-				      struct tasklet_head __percpu *headp,
-				      unsigned int softirq_nr)
-{
-	struct tasklet_head *head;
-	unsigned long flags;
+    ```c
+    static void __tasklet_schedule_common(struct tasklet_struct *t,
+                        struct tasklet_head __percpu *headp,
+                        unsigned int softirq_nr)
+    {
+        struct tasklet_head *head;
+        unsigned long flags;
 
-	local_irq_save(flags);
-	head = this_cpu_ptr(headp);
-	t->next = NULL;
-	*head->tail = t;
-	head->tail = &(t->next);
-	raise_softirq_irqoff(softirq_nr);
-	local_irq_restore(flags);
-}
-```
+        local_irq_save(flags);
+        head = this_cpu_ptr(headp);
+        t->next = NULL;
+        *head->tail = t;
+        head->tail = &(t->next);
+        raise_softirq_irqoff(softirq_nr);
+        local_irq_restore(flags);
+    }
+    ```
 
-- 태스크릿 스케줄링은 <kernel/softrq.c> 파일에 구현되어있고 `tasklet_schedule()` 함수에서 처리한다.
-  - 태스크릿의 상태가 `TASKLET_STATE_SCHED` 라면, `__tasklet_schedule()` 함수는 호출한다.
-  - 현재 IRQ(인터럽트) 상태를 저장하고, 태스크릿을 현재 프로세서의 `tasklet_vec` 또는 `tasklet_hi_vec` 배열의 가장 뒤에 추가한다.
-  - `raise_softirq_irqoff()` 함수로 softirq를 raise해서 `do_softirq()` 함수가 태스크릿을 처리하도록 만든다. (바로 이 부분에서 태스크릿이 softirq 기반으로 만들어졌음을 알 수 있다.)
-- 태스크릿이 스케줄링(활성화) 됐으니 이제 태스크릿이 핸들러 함수를 호출하고 처리되는 과정을 알아보자.
+  - 태스크릿 스케줄링은 <kernel/softrq.c> 파일에 구현되어있고 `tasklet_schedule()` 함수에서 처리한다.
+    - 태스크릿의 상태가 `TASKLET_STATE_SCHED` 라면, `__tasklet_schedule()` 함수는 호출한다.
+    - 현재 IRQ(인터럽트) 상태를 저장하고, 태스크릿을 현재 프로세서의 `tasklet_vec` 또는 `tasklet_hi_vec` 배열의 가장 뒤에 추가한다.
+    - `raise_softirq_irqoff()` 함수로 softirq를 raise해서 `do_softirq()` 함수가 태스크릿을 처리하도록 만든다. (바로 이 부분에서 태스크릿이 softirq 기반으로 만들어졌음을 알 수 있다.)
+  - 태스크릿이 스케줄링(활성화) 됐으니 이제 태스크릿이 핸들러 함수를 호출하고 처리되는 과정을 알아보자.
 
+    ```c
+    static __latent_entropy void tasklet_action(struct softirq_action *a)
+    {
+        tasklet_action_common(a, this_cpu_ptr(&tasklet_vec), TASKLET_SOFTIRQ);
+    }
+    ```
 
+    ```c
+    static void tasklet_action_common(struct softirq_action *a,
+                    struct tasklet_head *tl_head,
+                    unsigned int softirq_nr)
+    {
+        struct tasklet_struct *list;
+
+        local_irq_disable();
+        list = tl_head->head;
+        tl_head->head = NULL;
+        tl_head->tail = &tl_head->head;
+        local_irq_enable();
+
+        while (list) {
+            struct tasklet_struct *t = list;
+
+            list = list->next;
+
+            if (tasklet_trylock(t)) {
+                if (!atomic_read(&t->count)) {
+                    if (tasklet_clear_sched(t)) {
+                        if (t->use_callback) {
+                            trace_tasklet_entry(t, t->callback);
+                            t->callback(t);
+                            trace_tasklet_exit(t, t->callback);
+                        } else {
+                            trace_tasklet_entry(t, t->func);
+                            t->func(t->data);
+                            trace_tasklet_exit(t, t->func);
+                        }
+                    }
+                    tasklet_unlock(t);
+                    continue;
+                }
+                tasklet_unlock(t);
+            }
+
+            local_irq_disable();
+            t->next = NULL;
+            *tl_head->tail = t;
+            tl_head->tail = &t->next;
+            __raise_softirq_irqoff(softirq_nr);
+            local_irq_enable();
+        }
+    }
+    ```
+
+  - 태스크릿 핸들러 함수는 `<kernel/softirq.c>` 파일의 `tasklet_action()` 함수에서 처리한다.
+
+  - 인터럽트 비활성화 후, 현재 프로세서의 `tasklet_vec` 또는 `tasklet_hi_vec` 배열을 copy 해온 뒤 NULL로 초기화하고, 인터럽트를 활성화 한다.
+
+  - 다시 한 번 태스크릿의 상태가 `TASKLET_STATE_SCHED` 임을 확인한 뒤 핸들러를 호출해 실행한다.
+
+  - 배열에 더 이상 대기 중인 태스크릿이 없을 때까지 반복문을 돌면서 핸들러를 호출한다.
+
+- **④ WorkQueue**
+
+  - 워크큐는 softirq, 태스크릿과 달리, 후반부 처리를 커널 스레드 형태로 프로세스 컨텍스트 내에서 처리한다.
+  - 워크큐는 스케줄링이 가능하고, 인터럽트가 활성화 된 상태이고, 선점될 수 있고, sleep 상태로 전환될 수 있다.
+  - 워크큐는 엄연히 커널 스레드이므로 사용자 공간 프로세스 메모리 영역을 접근할 수 없다.
+  - 따라서 워크큐는 대용량 메모리 할당/ 세마포어 관련 작업/ 블록 I/O에 적합하다.
+  - 사용 편의성 측면에서 워크큐가 가장 좋다.
+  - 워크큐의 전체적인 구조는 아래와 같다. (`<kernel/workqueue.c>` 파일, `<linux/workqueue.h>` 파일 참고)
+
+    <img width="454" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/4bd0869d-ebd5-4dda-ac07-6688aab3732a">
+
+    - 리눅스 커널은 프로세서별로 ‘작업 스레드’라는 events/n 이란 이름의 특별한 커널 스레드를 하나씩 가지고 있다.
+    - 작업 스레드는 여러 작업 유형으로 나뉘며, 각 작업 유형마다 하나의 `workqueue_struct` 구조체로 표현한다.
+    - 사용자가 원한다면 특정 작업 유형에 작업 스레드를 추가할 수 있으며, 작업 스레드는 `cpu_workqueue_struct` 구조체로 표현한다.
+    - 후반부 처리 할 작업은 `work_struct` 구조체로 표현한다.
+  - 모든 작업 스레드는 `worker_thread()` 라는 함수를 실행한다.
+
+    ```c
+    // https://github.com/torvalds/linux/blob/9ace34a8e446c1a566f3b0a3e0c4c483987e39a6/kernel/workqueue.c#L2726
+    /**
+    * worker_thread - the worker thread function
+    * @__worker: self
+    *
+    * The worker thread function.  All workers belong to a worker_pool -
+    * either a per-cpu one or dynamic unbound one.  These workers process all
+    * work items regardless of their specific target workqueue.  The only
+    * exception is work items which belong to workqueues with a rescuer which
+    * will be explained in rescuer_thread().
+    *
+    * Return: 0
+    */
+    static int worker_thread(void *__worker)
+    {
+      struct worker *worker = __worker;
+      struct worker_pool *pool = worker->pool;
+
+      /* tell the scheduler that this is a workqueue worker */
+      set_pf_worker(true);
+    woke_up:
+      raw_spin_lock_irq(&pool->lock);
+
+      /* am I supposed to die? */
+      if (unlikely(worker->flags & WORKER_DIE)) {
+        raw_spin_unlock_irq(&pool->lock);
+        set_pf_worker(false);
+
+        set_task_comm(worker->task, "kworker/dying");
+        ida_free(&pool->worker_ida, worker->id);
+        worker_detach_from_pool(worker);
+        WARN_ON_ONCE(!list_empty(&worker->entry));
+        kfree(worker);
+        return 0;
+      }
+
+      worker_leave_idle(worker);
+    recheck:
+      /* no more worker necessary? */
+      if (!need_more_worker(pool))
+        goto sleep;
+
+      /* do we need to manage? */
+      if (unlikely(!may_start_working(pool)) && manage_workers(worker))
+        goto recheck;
+
+      /*
+      * ->scheduled list can only be filled while a worker is
+      * preparing to process a work or actually processing it.
+      * Make sure nobody diddled with it while I was sleeping.
+      */
+      WARN_ON_ONCE(!list_empty(&worker->scheduled));
+
+      /*
+      * Finish PREP stage.  We're guaranteed to have at least one idle
+      * worker or that someone else has already assumed the manager
+      * role.  This is where @worker starts participating in concurrency
+      * management if applicable and concurrency management is restored
+      * after being rebound.  See rebind_workers() for details.
+      */
+      worker_clr_flags(worker, WORKER_PREP | WORKER_REBOUND);
+
+      do {
+        // pool에서 worker를 찾아서, 실행할 work가 있는 동안 동작을 계속한다.
+        struct work_struct *work =
+          list_first_entry(&pool->worklist,
+              struct work_struct, entry);
+
+        if (assign_work(work, worker, NULL)) 
+          process_scheduled_works(worker);
+      } while (keep_working(pool));
+
+      worker_set_flags(worker, WORKER_PREP);
+    sleep:
+      /*
+      * pool->lock is held and there's no work to process and no need to
+      * manage, sleep.  Workers are woken up only while holding
+      * pool->lock or from local cpu, so setting the current state
+      * before releasing pool->lock is enough to prevent losing any
+      * event.
+      */
+      worker_enter_idle(worker);
+      __set_current_state(TASK_IDLE);
+      raw_spin_unlock_irq(&pool->lock);
+      schedule(); // 작업이 없는 worker는 스케줄러에 의해 다시 깨어나 작업을 기다리게 된다.
+      goto woke_up;
+    }
+    ```
+  - `worker_thread()`에서는 `raw_spin_lock_irq()`와 `raw_spin_unlock_irq()` 함수를 사용하여 동기화를 유지하고, 여러 worker가 동시에 작업 목록에 접근하지 못하도록 한다.
+
+- **워크큐 사용하기**
+  - 새로운 작업 유형 작업 스레드 생성: `struct workqueue_struct *create_workqueue(const char* name)` 함수를 이용한다.
+  - 정적 작업 생성: `DECLARE_WORK(name, void (*func)(void *), void *data);` 매크로를 사용한다.
+  - 동적 작업 생성: 포인터를 이용해서 `work_struct` 구조체를 동적 생성한 뒤 `INIT_WORK(struct work_struct *work, void (*func) (void *), void *data);` 매크로를 사용해서 초기화한다.
+  - 스케줄링: `schedule_work(&work);` 함수를 이용해서 작업 스레드를 깨우고 워크큐 핸들러를 실행한다. 
+  - 만일 당장 실행하고 싶지 않다면, `schedule_delayed_word(&work, delay);` 함수로 원하는 시간 이후에 활성화 할 수도 있다.
+
+# 9. 커널 동기화
+
+## 9.1 Critical section과 Race condition
+
+- 공유 메모리를 사용하는 애플리케이션을 개발할 때는 서로 다른 두 객체가 공유 자원에 동시에 접근하는 race condition을 반드시 막아야 한다.
+- Critical section에 동시에 접근하는 것을 막기 위해서는 커널에서 제공하는 다양한 수단(원자적 연산, 스핀락, 세마포어) 원자적인(atomically) 접근을 보장해 race condition을 해소하는 동기화(synchronization)가 필요하다.
+- 동기화의 기본적인 동작과정은 다음과 같다. 
+
+1. 스레드 A와 B가 critical section에 접근하기 위해 락을 요청한다.
+2. 스레드 A가 락을 휙득한다. 스레드 B는 무한루프(busy-waiting) 돌거나 sleep에 들어간다.
+3. 스레드 A가 critical section을 처리한다.
+4. 스레드 A가 락을 반환한다.
+5. 스레드 B가 락을 휙득한다. 스레드 B가 critical section을 처리한다.
+
+- 커널 동기화에는 두 가지를 반드시 염두해야 한다. 
+  - 커널 동시성 문제가 발생하는 것을 막는 것보다 막아야 한다는 사실을 깨닫는 것이 훨씬 더 어려우므로 코드의 시작 단계부터 락을 설계해야 한다.
+  - 락을 설정하는 대상은 ‘코드 블록’이 아니라 ‘데이터’다.
+
+## 9.2 데드락 (Deadlock)
+
+- 데드락은 실행 중인 2개 이상의 스레드와 2개 이상의 자원에 대해 발생하는 심각한 동기화 오류로, 각 스레드가 서로가 갖고 있는 자원을 기다리고 있지만, 모든 자원이 이미 점유된 상태라 옴싹달싹 못하는 상태를 말한다.
+- 데드락을 예방하기 위해서는 3가지 규칙을 준수하자. 
+  - 락이 중첩되는 경우 항상 같은 순서로 락을 얻고, 반대 순서로 락을 해제한다.
+  - 같은 락을 두 번 얻지 않는다.
+  - 락의 갯수나 복잡도 면에서 단순하게 설계한다.
+
+## 9.3 동기화 수단 1: 원자적 연산
+
+- 리눅스 커널은 지원하는 모든 아키텍처에 대해 원자적 정수 연산과 비트 연산을 제공한다.
+- 원자적 연산은 이름 그대로 연산을 하는 동안 다른 프로세서, 프로세스, 스레드가 접근하지 못함을 보장한다.
+- 원자적 연산은 int 대신 특별한 자료구조인 atomic_t를 사용한다. (`<linux/types.h>`에 정의) 
+ 1. 다른 자료형에 원자적 연산을 잘못 사용하는 것을 막을 수 있기 때문이다.
+ 2. 컴파일러가 개발자의 의도와 다르게 최적화하는 것을 막을 수 있기 때문이다.
+
+- 대표적인 몇 가지 원자적 정수 연산 함수는 다음과 같다. (`<asm/atomic.h>`에 정의) 
+  - `atomic_set(&var, num)`: atomic_t형 변수 var을 num으로 초기화한다.
+  - `atomic_add(num, &var)`: var을 num을 더한다.
+  - `atomic_inc(&var)`: var을 1 증가한다.
+- 대표적인 몇 가지 원자적 비트 연산 함수는 다음과 같다. (<asm/bitops.h>에 정의) 
+  - `test_and_set(int n, void *addr)`: 원자적으로 addr에서부터 n번째 bit를 set하고 이전 값을 반환한다.
+  - `test_and_clear(int n, void *addr)`: 원자적으로 addr에서부터 n번째 bit를 clear하고 이전 값을 반환한다.
+- 가능하면 복잡한 락 대신 간단한 원자적 연산을 사용하는 것이 성능 면에서 훨씬 좋다.
+
+## 9.4 동기화 수단 2: 스핀락(Spin-lock)
+
+- 간단한 원자적 연산만으로는 복잡한 상황에서는 충분한 보호를 제공할 수 없기 때문에 더 일반적인 동기화 방법인 ‘락’이 필요하다.
+
+- ‘스핀락’이라는 이름대로 이미 사용 중인 락을 얻으려고 할 때 루프를 돌면서 (busy-wait) 기다린다.
+
+- 결국 프로세서 자원을 소모하므로 스핀락은 오랫동안 잡으면 안 되고 단기간만 사용해야 한다.
+
+  ```c
+  DEFINE_SPINLOCK(lock);
+
+  // 1. process context 
+  spin_lock(&lock);
+  /***** critical section *****/
+  spin_unlock(&lock);
+
+  // 2. interrupt handler
+  unsigned long flags;
+  spin_lock_irqsave(&lock, flags);
+  /***** critical section *****/
+  spin_unlock_irqrestore(&lock, flags);
+  ```
+- 스핀락은 `<linux/spinlock.h>`과 `<asm/spinlock.h>`에 정의돼있다.
+- 스핀락은 위와 같은 함수들을 사용해서 lock과 unlock을 하며 인터럽트 핸들러에서도 사용할 수 있다.
+- 인터럽트 핸들러 버전은 데드락을 방지하기 위해 로컬 인터럽트를 비활성화하고 복원하는 과정을 포함한다.
+
+## 9.5 동기화 수단 3: 세마포어(Semaphore)
+
+- 이미 사용 중인 락을 얻으려고 시도할 때 busy-wait 하는 게 스핀락이라면, 세마포어는 sleep으로 진입한다.
+- 무의미한 루프로 낭비하는 시간이 사라지니 프로세서 활용도가 높아지지만, 스핀락보다 부가 작업이 많다. 
+
+Sleep 상태 전환, 대기큐 관리, wake-up 등 부가 작업을 처리하는 시간이 락 사용 시간보다 길 수 있기 때문에 오랫동안 락을 사용하는 경우에 적합하다.
+
+Sleep 상태 전환 되므로 인터럽트 컨텍스트에선 사용할 수 없다.
+
+세마포어를 사용할 때는 스핀락이 걸려있으면 안 된다.
+
+세마포어는 동시에 여러 스레드가 같은 락을 얻을 수 있도록 사용 카운트를 설정할 수 있다.
+
+0과 1로 이루어져 있다면 바이너리 세마포어 또는 뮤텍스(mutex), 그 외는 카운팅 세마포어라 부른다.
 
 ---
 참고
