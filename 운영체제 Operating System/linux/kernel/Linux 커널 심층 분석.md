@@ -1228,18 +1228,1001 @@ local_irq_enable();
 
 - 이미 사용 중인 락을 얻으려고 시도할 때 busy-wait 하는 게 스핀락이라면, 세마포어는 sleep으로 진입한다.
 - 무의미한 루프로 낭비하는 시간이 사라지니 프로세서 활용도가 높아지지만, 스핀락보다 부가 작업이 많다. 
+  - Sleep 상태 전환, 대기큐 관리, wake-up 등 부가 작업을 처리하는 시간이 락 사용 시간보다 길 수 있기 때문에 오랫동안 락을 사용하는 경우에 적합하다.
+  - Sleep 상태로 전환 되므로 인터럽트 컨텍스트에선 사용할 수 없다.
+  - 세마포어를 사용할 때는 스핀락이 걸려있으면 안 된다.
+- 세마포어는 동시에 여러 스레드가 같은 락을 얻을 수 있도록 사용 카운트를 설정할 수 있다.
+- 0과 1로 이루어져 있다면 바이너리 세마포어 또는 뮤텍스(mutex), 그 외는 카운팅 세마포어라 부른다.
 
-Sleep 상태 전환, 대기큐 관리, wake-up 등 부가 작업을 처리하는 시간이 락 사용 시간보다 길 수 있기 때문에 오랫동안 락을 사용하는 경우에 적합하다.
 
-Sleep 상태 전환 되므로 인터럽트 컨텍스트에선 사용할 수 없다.
+  ```c
+  struct semaphore sema;
+  sema_init(&sema, count);    // 동적으로 세마포어 생성
+  init_MUTEX(&sema);          // 동적으로 뮤텍스 생성
 
-세마포어를 사용할 때는 스핀락이 걸려있으면 안 된다.
+  // 세마포어(뮤텍스) 휙득 시도
+  if (down_interruptible(&sema)) {
+      ...
+  }
+  /***** Critical Section *****/
+  up(&sema);    // 세마포어(뮤텍스) 반환
+  ```
+- 주로 사용하는 세마포어 관련 함수는 위와 같다.
+- 특히 `down()` 함수 보다는 `down_interruptible()` 함수를 많이 사용하는 것에 주목하자.
+- 세마포어(뮤텍스)를 얻을 수 없을 때 sleep에 진입할 때 프로세스 상태는 `TASK_INTERRUPTIBLE` 또는 `TASK_UNINTERRUPTIBLE`로 들어갈탠데, 당연히 나중에 세마포어를 휙득할 수 있을 때 깨어나야 하므로 후자를 더 많이 사용한다.
 
-세마포어는 동시에 여러 스레드가 같은 락을 얻을 수 있도록 사용 카운트를 설정할 수 있다.
+## 9.6 동기화 수단 4: 뮤텍스(Mutex)
 
-0과 1로 이루어져 있다면 바이너리 세마포어 또는 뮤텍스(mutex), 그 외는 카운팅 세마포어라 부른다.
+- 2.6 커널부터 ‘뮤텍스’는 상호 배제성을 가진 특정 락으로 구현됐다.
+
+  ```c
+  DEFINE_MUTEX(mu);
+  mutex_init(&mu);
+  mutex_lock(&mu);
+  /* Critical section */
+  mutex_unlock(&mu);
+  ```
+- 이 뮤텍스는 바이너리 세마포어와 유사하게 동작하지만, 인터페이스가 더 간단하고, 성능도 더 좋다.
+- 뮤텍스를 사용할 수 없는 어쩔 수 없는 경우가 아니라면, 세마포어보다는 새로운 뮤텍스를 사용하는 것이 좋다.
+
+
+## 9.7 동기화 수단 비교
+
+|요구사항|권장사항|
+|-|-|
+|락 사용시간이 짧은 경우|스핀락 추천|
+|락 사용시간이 긴 경우|뮤텍스 추천|
+|인터럽트 컨텍스트에서 락을 사용하는 경우|반드시 스핀락 사용|
+|락을 얻은 상태에서 sleep 할 필요가 있는 경우|반드시 뮤텍스 사용|
+
+## 9.8 선점 비활성화 & 배리어
+- 리눅스 커널은 선점형 커널이므로 프로세스는 언제라도 선점될 수 있고 동시성 문제의 원인이 되기도 한다.
+- 또한, SMP 환경에서는 프로세서별 변수가 아닌 이상 다른 프로세서가 동시적으로 접근할 수 있다.
+- 따라서, 커널은 `preempt_disable()`, `preempt_enable()` 함수로 선점 카운터를 제어한다.
+- 더 깔끔하고 자주 사용하는 방법으로 `get_cpu()` 함수를 사용하기도 한다. 프로세서 번호를 반환하면서 커널 선점을 비활성화 한다. 대응하는 함수는 `put_cpu()` 함수를 사용하면 커널 선점이 활성화된다.
+- 동시성 문제는 굉장히 예민한 문제이므로 반드시 개발자의 의도대로 동작하게끔 컴파일러에게 알려야 한다. **성능을 위해 임의로 순서를 바꾸지 말고 코드 순서대로 메모리 I/O가 진행하게끔 컴파일러에게 알리는 명령을 ‘배리어(Barrier)’**라고 한다.
+- 커널은 `rmb()`(메모리 읽기 배리어), `wmb()`(메모리 쓰기 배리어), `barrier()`(읽기 쓰기 배리어)를 제공한다.
+- 배리어 명령, 특히 마지막 barrier() 명령은 다른 메모리 배리어에 비해 거의 코스트가 없고 상당히 가볍다.
+
+# 11. 타이머 & 시간 관리
+
+## 11.1 기본 개념
+
+- 커널은 `<asm/param.h>` 헤더파일에 시스템 타이머의 진동수를 HZ라는 값에 저장한다.
+- 일반적으로 HZ 값은 100 또는 1000으로 설정돼있고, 커널 2.5 버전부터 ​기본값이 1000으로 상향됐다. 
+  - 장점: 타이머 인터럽트의 해상도와 정확도가 향상돼 더 정확한 프로세스 선점이 가능해졌다.
+  - 단점: 타이머 인터럽트 처리에 더 많은 시간을 소모하고, 전력 소모가 늘어난다.
+  - 실험결과 시스템 타이머를 1,000Hz로 변경해도 성능을 크게 해치지 않는다는 결론이 났다.
+- `<linux/jiffies.h>`에 jiffies 라는 전역변수에는 시스템 시작 이후 발생한 틱 횟수가 저장된다. 
+- 타이머 인터럽트가 초당 HZ회 발생하므로 jiffies는 1초에 HZ만큼 증가한다.
+- 따라서 시스템 가동 시간은 **jiffies / HZ** 로 계산할 수 있다.
+- 32-bit 시스템에선 unsigned long 형인 jiffies는 HZ 100에선 497일, 1,000에선 50일이면 오버플로우가 발생한다.
+- 반면에, 64-bit 시스템에선 평생 발생하지 않는다. 
+  - 이 문제를 해결하기 위해 32-bit 시스템에서는 `extern u64 jiffies_64` 라는 변수를 만들고
+  - 주 커널 이미지 링커 스크립트에 jiffies = jiffies_64라고 써서 두 변수를 겹쳐버린다.
+  - 이러면 jiffies 변수는 32-bit 시스템에서도 오버플로우가 발생하지 않는다.
+- jiffies는 오버플로우일 때 다시 0으로 돌아간다.
+- 서로 다른 두 jiffies값을 올바르게 비교할 수 있도록 매크로 함수를 제공하고 있다. 
+  - `#define time_after(a, b) ((long)(b) - (long)(a) < 0)`
+  - `#define time_before(a, b) ((long)(a) - (long)(b) < 0)`
+  - 보통 a는 현재 jiffies값이, b는 비교하려는 값이 들어간다.
+
+## ​11.2 타이머 인터럽트
+
+- 타이머 인터럽트는 최소한 다음 과정을 처리한다. 
+
+1. xtime_lock 락을 얻어 xtime , jiffies 변수에 안전하게 접근한다.
+2. 아키텍처 종속적인 tick_periodic() 함수를 호출한다.
+3. jiffies 값을 1 증가, xtime에 현재 시간을 갱신한다.
+4. 설정 시간이 만료된 동적 타이머의 핸들러를 실행한다.
+
+```c
+// https://github.com/torvalds/linux/blob/f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e/kernel/time/tick-common.c#L82C1-L102C2
+/*
+ * Periodic tick
+ */
+static void tick_periodic(int cpu)
+{
+	if (tick_do_timer_cpu == cpu) {
+		raw_spin_lock(&jiffies_lock);
+		write_seqcount_begin(&jiffies_seq);
+
+		/* Keep track of the next tick event */
+		tick_next_period = ktime_add_ns(tick_next_period, TICK_NSEC);
+
+		do_timer(1);
+		write_seqcount_end(&jiffies_seq);
+		raw_spin_unlock(&jiffies_lock);
+		update_wall_time();
+	}
+
+	update_process_times(user_mode(get_irq_regs()));
+	profile_tick(CPU_PROFILING);
+}
+
+// https://github.com/torvalds/linux/blob/f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e/kernel/time/timekeeping.c#L2289
+void do_timer(unsigned long ticks)
+{
+	jiffies_64 += ticks;
+	calc_global_load();
+}
+
+// https://github.com/torvalds/linux/blob/f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e/kernel/time/timer.c#L2064
+/*
+ * Called from the timer interrupt handler to charge one tick to the current
+ * process.  user_tick is 1 if the tick is user time, 0 for system.
+ */
+void update_process_times(int user_tick)
+{
+	struct task_struct *p = current;
+
+	/* Note: this timer irq context must be accounted for as well. */
+	account_process_tick(p, user_tick);
+	run_local_timers();
+	rcu_sched_clock_irq(user_tick);
+#ifdef CONFIG_IRQ_WORK
+	if (in_irq())
+		irq_work_tick();
+#endif
+	scheduler_tick();
+	if (IS_ENABLED(CONFIG_POSIX_TIMERS))
+		run_posix_cpu_timers();
+}
+```
+
+- 1/HZ 초마다 한 번씩 타이머 인터럽트가 발생해 `tick_periodic()` 핸들러가 호출된다.
+- `do_timer()` 에서는 jiffies를 증가하고 시스템 내 여러 통계 변수를 갱신한다.
+- `update_process_time()` 에서는 
+  - `account_process_tick()` 함수에서 프로세서의 시간을 갱신한다.
+  - `run_local_timers()` 함수에서 제한시간이 만료된 타이머들의 핸들러를 실행한다.
+  - `schedule_tick()` 함수는 현재 프로세스의 타임슬라이스 값을 줄이고, 필요한 경우 need_sched 플래그를 설정해 스케줄링 여부를 결정한다.
+
+## ​11.3 타이머
+
+```c
+// <linux/timer.h>
+struct timer_list {
+	struct list_head entry;
+	unsigned long expires;
+	void (*function)(unsigned long);
+	unsigned long data;
+	struct tvec_base *base;
+};
+
+struct timer_list my_timer;
+// 1. 타이머를 생성하고 초기화한다.
+init_timer(&my_timer);
+my_timer.expires = jiffies + delay;
+my_timer.data = 0;
+my_timer.function = my_function;
+
+// 2. 타이머를 활성화한다.
+add_timer(&my_timer);
+// 3. 타이머의 만료 시간을 갱신한다.
+mod_timer(&my_timer, jiffies + new_delay);
+// 4. 타이머를 제거한다.
+del_timer(&my_timer);
+```
+
+- 커널 타이머는 초기화 작업 → 핸들러 설정 → 타이머 활성화로 사용하고 만료된 이후 자동으로 소멸된다.
+- 타이머는 비동기적으로 실행되므로 race condition이 발생할 잠재적인 위험이 있다. 따라서 `del_timer()` 함수 보다는 조금 더 안전한 버전인 `del_timer_sync()` 함수를 사용하자.
+
+## 11.4 작은 지연
+
+- 간혹 커널 코드에서는 아주 짧지만 정확한 지연 시간이 필요한 경우가 있다.
+- 커널의 `<linux/delay.h>`에는 jiffies 값을 사용하지 않고도 지연처리를 하는 `mdelay()`, `udelay()`, `ndelay()` 3가지 함수를 제공한다. 
+  - 물론, 지연 하는 동안 시스템이 동작을 정지하므로 꼭 필요한 경우가 아니면 절대 쓰면 안 된다.
+- 더 적당한 해결책은 `schedule_timeout()` 함수를 사용하는 것이다. 
+  - 최소한 인자로 넘긴 지정한 시간만큼 해당 작업이 휴면 상태로 전환됨을 보장한다.
+  - 당연하지만, 이 함수는 프로세스 컨텍스트에서만 사용할 수 있다.
+
+# 12. 메모리 관리
+
+## 12.1 페이지 (Page) & 구역 (Zone)
+
+- 프로세서가 메모리에 접근할 때 가장 작은 단위는 byte 또는 word지만, MMU와 커널은 메모리 관리를 페이지 단위로 처리한다.
+- 페이지 크기는 아키텍처 별로 다르며 보통 32-bit 시스템에선 4KB, 64-bit 시스템에선 8KB다.
+- 커널은 하나의 페이지를 여러 구역(zone)으로 나눠 관리한다. (`<linux/mmzone.h>`에 정의) 
+  - **ZONE_DMA**: DMA를 수행할 수 있는 메모리 구역
+  - **ZONE_DMA32**: 32-bit 장치들만 DMA를 수행할 수 있는 메모리 구역
+  - **ZONE_NORMAL**: 통상적인 페이지가 할당되는 메모리 구역
+  - **ZONE_HIGHMEM**: 커널 주소 공간에 포함되지 않는 ‘상위 메모리’ 구역
+- 메모리 구역의 실제 사용 방식과 배치는 아키텍처에 따라 다르며 없는 구역도 있다.
+
+## 12.2. 페이지 할당 & 반환
+
+- 커널은 메모리 할당을 위한 저수준 방법 1개 + 할당받은 메모리에 접근하는 몇 가지 인터페이스를 제공한다.
+- 모두 `<linux/gfp.h>` 파일에 정의돼있으며 기본 단위는 ‘페이지’다.
+
+  ```c
+  // 방법 1 - alloc_pages
+  struct page* alloc_pages(gfp_t gfp_mask, unsigned int order);
+  // 방법 2 - __get_free_pages
+  unsigned long __get_free_pages(gfp_t gfp_mask, unsigned int order);
+  // 방법 3 - get_zeroed_page
+  unsigned long get_zeroed_page(unsigned int gfp_mask, unsigned int order);
+  ```
+
+- 위 세 방법 중 하나를 선택해서 원하는 크기(2 * order 페이지)만큼 메모리를 할당받을 수 있다.
+- 차이점은 반환값이다. 첫 번째 함수는 page 구조체를 얻을 수 있고, 두 번째 함수는 할당받은 첫 번째 페이지의 논리적 주소를 반환하며 마지막 함수는 0으로 초기화된 페이지를 얻을 수 있다.
+- 특히, 커널 영역에서 메모리를 할당하는 것은 실패할 가능성이 있으며 반드시 오류를 검사하는 과정이 필요하다. 또한, 오류가 발생했다면 원위치 시켜야 하는 과정도 필요하다.
+- 할당받은 페이지는 반드시 반환해야 하며, 할당받은 페이지만 반환해야 한다.
+- 페이지 반환에는 `void __free_pages (struct page *page, unsigned int order);`를 사용한다.
+- C의 `malloc()`과 `free()` 함수의 관계와 주의점을 생각하면 된다.
+​
+## 12.3 메모리 할당 (`kmalloc()`, `vmalloc()`)
+
+- `kmalloc()`은 `gfp_mask` 플래그라는 추가 인자가 있다는 점을 제외하면 C의 `malloc()`과 비슷하게 동작한다.
+- 즉, 바이트 단위로 메모리를 할당할 때 사용하며 커널에서도 메모리를 할당할 때 대부분 이 함수를 사용한다.
+- `gfp_mask` 플래그는 동작 지정자, 구역 지정자로 나뉘며 둘을 조합한 형식 플래그도 제공된다. 
+- 커널에서 자주 사용되는 대표적인 플래그는 아래와 같다.
+  - **GFP_KERNEL**: 중단 가능한 프로세스 컨텍스트에서 사용하는 일반적인 메모리 할당 플래그다.
+  - **GFP_ATOMIC**: 중단 불가능한 softirq, 태스크릿, 인터럽트 컨텍스트에서 사용하는 메모리 할당 플래그다.
+  - **GFP_DMA**: ZONE_DMA 구역에서 할당 작업을 처리해야 할 경우 사용한다.
+- 메모리를 해제할 때는 `<linux/slab.h>`에 정의된 `kfree()` 함수를 사용한다.
+- `vmalloc()` 함수는 할당된 메모리가 물리적으로 연속됨을 보장하지 않는다는 것을 제외하면 `kmalloc()`과 동일하게 동작한다. 
+  - 물리적으로 연속되지 않은 메모리를 연속된 가상 주소 공간으로 만들기 위해 상당량의 페이지 테이블을 조정하는 부가 작업이 필요하므로 `kmalloc()`의 성능이 훨씬 좋다.
+  - 큰 영역의 메모리를 할당하는 경우에만 `vmalloc()`을 사용하자.
+  - 메모리를 해제할 때는 `vfree()`를 사용한다.
+
+## 12.4 슬랩 계층 (Slab layer)
+
+- 사용이 빈번한 자료구조는 사용할 때마다 메모리를 할당하고 초기화하고 사용한 뒤 메모리를 반환하는 것보다 풀(pool) 방식을 사용하는 것이 성능면에서 효율적이다.
+- 슬랩 계층은 자료구조를 위한 캐시 계층이며 사용 종료 시 메모리를 반환하지 않고 해제 리스트에 넣어두고 다음 번에 재활용한다.
+- 슬랩의 크기는 페이지 1개 크기와 같고, 1개 슬랩에는 캐시할 자료구조 객체가 여러개 들어간다.
+- 빈번하게 할당 및 해제되는 자료구조일수록 슬랩을 이용해서 관리하는 것이 합리적이다.
+
+## 12.5 스택 할당
+
+- 사용자 공간은 동적으로 확장되는 커다란 스택 공간을 사용할 수 있지만, 커널은 고정된 작은 크기의 스택을 사용한다.
+- 커널 스택은 컴파일 시점의 옵션에 따라 하나 또는 두 개의 페이지(4KB ~ 16KB)로 구성된다.
+- 인터럽트 핸들러는 커널 스택을 사용하지 않고 프로세서별로 존재하는 1-page 짜리 스택을 사용한다.
+- 특정 함수의 지역변수 크기는 1KB 이하로 유지하는 것이 좋다. 스택 오버플로우는 조용히 발생하며 확실하게 문제를 일으키며 가장 먼저 thread_info 구조체가 먹혀버린 뒤 모든 종류의 커널 데이터가 오염될 여지가 있다.
+- 따라서 대량의 메모리를 사용할 때는 앞서 살펴본 동적 할당을 사용해야 한다.
+
+## 12.6. 상위 메모리 연결
+
+- 12.1 항목에서 설명했듯, 상위 메모리에 있는 페이지는 커널 주소 공간에 포함되지 않을 수도 있다. (대부분의 64-bit 시스템은 포함된다.)
+- `alloc_pages()` 함수를 호출해서 얻은 페이지에 가상주소가 없을 수 있으므로, 페이지를 할당한 다음에 커널 주소 공간에 수동으로 연결하는 작업이 필요하다.
+- 이를 위해 `<linux/highmem.h>` 파일에 `kmap(struct page* page);` 함수를 사용한다. 
+  - 페이지가 하위 메모리에 속해 있다면, 그냥 페이지의 가상주소를 반환한다.
+  - 페이지가 상위 메모리에 속해 있다면, 메모리를 맵핑한 뒤 그 주소를 반환한다.
+- 프로세스 컨텍스트에서만 동작한다.
+
+## 12.7 CPU별 할당 - percpu 인터페이스
+- SMP를 지원하는 2.6 커널에는 특정 프로세서 고유 데이터인 CPU별 데이터를 생성하고 관리하는 percpu라는 새로운 인터페이스를 도입했다.
+- `<linux/percpu.h>` 헤더파일과 `<mm/slab.c>`, `<asm/percpu.c>` 파일에 정의돼있다.
+
+    ```c
+    // 컴파일 타임의 CPU별 데이터
+    DEFINE_PER_CPU(var, name);	// type형 변수 var 생성
+    get_cpu_var(var)++;			// 현재 프로세서의 var 증감
+    // 여기부터 선점이 비활성화 된다.
+    put_cpu_var(var);			// 다시 선점 활성화
+
+    // 런타임의 CPU별 데이터
+    void *alloc_percpu(size_t size, size_t align);
+    void free_percpu(const void *);
+    ```
+
+- CPU별 데이터를 사용하면 세 가지 장점이 있다. 
+  - 락(스핀락, 세마포어)을 사용할 필요가 줄어든다.
+  - 캐시 무효화(invalidation) 위험을 줄여준다.
+  - 선점 자동 비활성화-활성화로 인터럽트 컨텍스트 & 프로세스 컨텍스트에서 안전하게 사용할 수 있다.
+
+# 13. 파일 시스템
+
+- VFS(Virtual FileSystem)는 시스템콜이 파일시스템이나 물리적 매체 종류에 상관없이 공통적으로 동작할 수 있도록 해주는 인터페이스다.
+- 파일시스템 추상화 계층은 모든 파일시스템이 지원하는 기본 인터페이스와 자료구조를 선언한 것이다.
+- VFS는 슈퍼블록(superblock), 아이노드(inode), 덴트리(dentry), 파일(file) 4가지 객체로 구성돼있다. 
+  - **슈퍼블록**: 파일시스템을 기술하는 정보(+ file_system_type, vfsmount 구조체)를 저장한다.
+  - **아이노드**: 파일이나 디렉토리를 관리하는 데 필요한 모든 정보를 저장한다.
+  - **덴트리**: 디렉토리 경로명 속 각 항목의 유효성 정보 등을 저장한다.
+  - **파일**: 메모리 상에 로드 된 열려있는 파일에 대한 정보를 저장한다. 한 파일은 여러 프로세스에서 동시에 열고 사용할 수 있기 때문에, 같은 파일에 대해 여러 개의 파일 객체가 있을 수 있다.
+- 각 객체들에는 여러 함수들이 들어있는 동작(operation) 객체가 멤버변수로 들어있다. 
+  - super_operation 객체에는 `write_inode()`, `sync_fs()` 같이 특정 파일시스템에 대한 함수가 들어있다.
+  - inode_operation 객체에는 `create()`, `link()` 같이 특정 파일에 대한 함수가 들어있다.
+  - dentry_operation 객체에는 `d_compare()`, `d_delete()` 같이 디렉토리에 대한 함수가 들어있다.
+  - file_operation 객체에는 `read()`, `write()` 같이 열린 파일(프로세스)에 대한 함수가 들어있다. 표준 유닉스 시스템콜의 기초가 되는 익숙한 함수들이 들어있다.
+- 프로세스 관련 자료구조 
+  - 우리는 이미 커널이 프로세스를 `task_struct` 구조체로 관리하고 있음을 알고 있다.
+  - `task_struct`는 `files_struct` 구조체를 멤버변수로 가지고 있는데, 여기에 열려 있는 파일(프로세스)에 대한 세부 정보가 저장된다.
+  - `files_struct`는 `<linux/fdtable.h>`에 정의돼있다.
+
+# 14. Block I/O
+
+## 14.1. 버퍼 헤드
+
+- 블록 장치는 고정된 크기의 데이터에 임의 접근하는 플래시 메모리 같은 HW 장치를 의미한다.
+- 블록 장치가 물리적으로 접근하는 최소 단위는 섹터(sector, 약 512-byte)고, 논리적으로 접근하는 최소 단위는 블록(Block)이며 섹터 크기의 배수다.
+- 디스크 상의 ‘블록’이 메모리 상에 나타나려면 객체 역할을 하는 ‘버퍼’가 필요하다.
+- 커널은 버퍼가 어느 블록 장치의 어떤 블록에 해당하는지 등의 관련 제어 정보를 ‘버퍼 헤드’(buffer_head) 구조체를 사용해서 저장하고 표현하며 `<linux/buffer_head.h>`에 정의돼있다. 
+
+  ```c
+  // https://github.com/torvalds/linux/blob/f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e/include/linux/buffer_head.h#L59
+  /*
+  * Historically, a buffer_head was used to map a single block
+  * within a page, and of course as the unit of I/O through the
+  * filesystem and block layers.  Nowadays the basic I/O unit
+  * is the bio, and buffer_heads are used for extracting block
+  * mappings (via a get_block_t call), for tracking state within
+  * a page (via a page_mapping) and for wrapping bio submission
+  * for backward compatibility reasons (e.g. submit_bh).
+  */
+  struct buffer_head {
+    unsigned long b_state;		/* 해당 버퍼의 현재 상태를 의미하며 여러 플래그 중 하나의 값을 가진다. (see above) */
+    struct buffer_head *b_this_page;/* circular list of page's buffers */
+    union {
+      struct page *b_page;	/* the page this bh is mapped to */
+      struct folio *b_folio;	/* the folio this bh is mapped to */
+    };
+
+    sector_t b_blocknr;		/* start block number */
+    size_t b_size;			/* 블록의 길이(크기) */
+    char *b_data;			/* 버퍼가 가리키는 블록 */
+
+    struct block_device *b_bdev;
+    bh_end_io_t *b_end_io;		/* I/O completion */
+    void *b_private;		/* reserved for b_end_io */
+    struct list_head b_assoc_buffers; /* associated with another mapping */
+    struct address_space *b_assoc_map;	/* mapping this buffer is
+                associated with */
+    atomic_t b_count;		/* 버퍼의 사용 횟수를 의미한다. get_bh(), put_bh() 함수로 증감한다. */
+    spinlock_t b_uptodate_lock;	/* Used by the first bh in a page, to
+            * serialise IO completion of other
+            * buffers in the page */
+  };
+  ```
+
+- 커널 2.6 버전 이전의 버퍼 헤드는 훨씬 크고 모든 블록 I/O 동작까지 책임지는 더 중요한 역할을 맡았다. 하지만, 버퍼 헤드로 블록 I/O를 하는 것은 크고 어려운 작업이었고, 페이지 관점에서 I/O를 하는 것이 보다 간단하고 더 좋은 성능을 보여줬으며, 페이지보다 작은 버퍼를 기술하기 위해 커다란 버퍼 헤드 자료구조를 사용하는 것은 비효율적이었다.
+- 따라서 커널 2.6 버전 이후로 버퍼 헤드는 크게 간소화 됐으며, 상당수 커널 작업이 버퍼 대신 페이지와 주소 공간을 직접 다루는 방식으로 바뀌었다.
+- 지금의 버퍼 헤드는 디스크 블록과 메모리의 페이지를 연결시켜주는 서술자 역할을 한다.
+
+## 14.2 bio 구조체
+
+- 거대한 버퍼 헤드의 기능이 간소화되며 블록 I/O 동작은 `<linux/bio.h>`의 bio 구조체가 담당하게 됐다.
+
+```c
+// https://litux.nl/mirror/kerneldevelopment/0672327201/ch13lev1sec3.html
+struct bio {
+        sector_t             bi_sector;         /* associated sector on disk */
+        struct bio           *bi_next;          /* list of requests */
+        struct block_device  *bi_bdev;          /* associated block device */
+        unsigned long        bi_flags;          /* status and command flags */
+        unsigned long        bi_rw;             /* read or write? */
+        unsigned short       bi_vcnt;           /* number of bio_vecs off */
+        unsigned short       bi_idx;            /* current index in bi_io_vec */
+        unsigned short       bi_phys_segments;  /* number of segments after coalescing */
+        unsigned short       bi_hw_segments;    /* number of segments after remapping */
+        unsigned int         bi_size;           /* I/O count */
+        unsigned int         bi_hw_front_size;  /* size of the first mergeable segment */
+        unsigned int         bi_hw_back_size;   /* size of the last mergeable segment */
+        unsigned int         bi_max_vecs;       /* maximum bio_vecs possible */
+        struct bio_vec       *bi_io_vec;        /* bio_vec list */
+        bio_end_io_t         *bi_end_io;        /* I/O completion method */
+        atomic_t             bi_cnt;            /* usage counter */
+        void                 *bi_private;       /* owner-private method */
+        bio_destructor_t     *bi_destructor;    /* destructor method */
+};
+```
+
+- bio 구조체는 scatter-gather I/O 방식을 사용하므로 개별 버퍼가 메모리 상에 연속되지 않더라도 bio_io_vec 이라는 세그먼트 리스트로 연결해서 표현한다.
+  
+  <img width="414" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/1be0a936-894d-4a70-85a2-027972ec1001">
+  
+## 14.3 요청 큐 (Request Queue)
+
+- 블록 장치는 대기 중인 블록 I/O 요청을 요청 큐에 저장한다.
+- 요청 큐는 `<linux/blkdev.h>`의 request_queue 구조체를 사용해 표현한다.
+
+```c
+// https://github.com/torvalds/linux/blob/f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e/include/linux/blkdev.h#L378
+struct request_queue {
+	struct request		*last_merge;
+	struct elevator_queue	*elevator;
+
+	struct percpu_ref	q_usage_counter;
+
+	struct blk_queue_stats	*stats;
+	struct rq_qos		*rq_qos;
+	struct mutex		rq_qos_mutex;
+
+	const struct blk_mq_ops	*mq_ops;
+
+	/* sw queues */
+	struct blk_mq_ctx __percpu	*queue_ctx;
+
+	unsigned int		queue_depth;
+
+	/* hw dispatch queues */
+	struct xarray		hctx_table;
+	unsigned int		nr_hw_queues;
+
+	/*
+	 * The queue owner gets to use this for whatever they like.
+	 * ll_rw_blk doesn't touch it.
+	 */
+	void			*queuedata;
+
+	/*
+	 * various queue flags, see QUEUE_* below
+	 */
+	unsigned long		queue_flags;
+	/*
+	 * Number of contexts that have called blk_set_pm_only(). If this
+	 * counter is above zero then only RQF_PM requests are processed.
+	 */
+	atomic_t		pm_only;
+
+	/*
+	 * ida allocated id for this queue.  Used to index queues from
+	 * ioctx.
+	 */
+	int			id;
+
+	spinlock_t		queue_lock;
+
+	struct gendisk		*disk;
+
+	refcount_t		refs;
+
+	/*
+	 * mq queue kobject
+	 */
+	struct kobject *mq_kobj;
+
+#ifdef  CONFIG_BLK_DEV_INTEGRITY
+	struct blk_integrity integrity;
+#endif	/* CONFIG_BLK_DEV_INTEGRITY */
+
+#ifdef CONFIG_PM
+	struct device		*dev;
+	enum rpm_status		rpm_status;
+#endif
+
+	/*
+	 * queue settings
+	 */
+	unsigned long		nr_requests;	/* Max # of requests */
+
+	unsigned int		dma_pad_mask;
+
+#ifdef CONFIG_BLK_INLINE_ENCRYPTION
+	struct blk_crypto_profile *crypto_profile;
+	struct kobject *crypto_kobject;
+#endif
+
+	unsigned int		rq_timeout;
+
+	struct timer_list	timeout;
+	struct work_struct	timeout_work;
+
+	atomic_t		nr_active_requests_shared_tags;
+
+	struct blk_mq_tags	*sched_shared_tags;
+
+	struct list_head	icq_list;
+#ifdef CONFIG_BLK_CGROUP
+	DECLARE_BITMAP		(blkcg_pols, BLKCG_MAX_POLS);
+	struct blkcg_gq		*root_blkg;
+	struct list_head	blkg_list;
+	struct mutex		blkcg_mutex;
+#endif
+
+	struct queue_limits	limits;
+
+	unsigned int		required_elevator_features;
+
+	int			node;
+#ifdef CONFIG_BLK_DEV_IO_TRACE
+	struct blk_trace __rcu	*blk_trace;
+#endif
+	/*
+	 * for flush operations
+	 */
+	struct blk_flush_queue	*fq;
+	struct list_head	flush_list;
+
+	struct list_head	requeue_list;
+	spinlock_t		requeue_lock;
+	struct delayed_work	requeue_work;
+
+	struct mutex		sysfs_lock;
+	struct mutex		sysfs_dir_lock;
+
+	/*
+	 * for reusing dead hctx instance in case of updating
+	 * nr_hw_queues
+	 */
+	struct list_head	unused_hctx_list;
+	spinlock_t		unused_hctx_lock;
+
+	int			mq_freeze_depth;
+
+#ifdef CONFIG_BLK_DEV_THROTTLING
+	/* Throttle data */
+	struct throtl_data *td;
+#endif
+	struct rcu_head		rcu_head;
+	wait_queue_head_t	mq_freeze_wq;
+	/*
+	 * Protect concurrent access to q_usage_counter by
+	 * percpu_ref_kill() and percpu_ref_reinit().
+	 */
+	struct mutex		mq_freeze_lock;
+
+	int			quiesce_depth;
+
+	struct blk_mq_tag_set	*tag_set;
+	struct list_head	tag_set_list;
+
+	struct dentry		*debugfs_dir;
+	struct dentry		*sched_debugfs_dir;
+	struct dentry		*rqos_debugfs_dir;
+	/*
+	 * Serializes all debugfs metadata operations using the above dentries.
+	 */
+	struct mutex		debugfs_mutex;
+
+	bool			mq_sysfs_init_done;
+};
+```
+
+- request_queue와 request 그리고 bio와 bio_vec 사이의 복잡한 구조를 도식화한 그림이다. 
+
+  <img width="568" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/09cd5753-643d-4bc4-b902-1e659233e21e">
+
+  - 요청 큐 request_queue 구조체에는 여러 블록 I/O 요청인 request 구조체가 들어있고,
+  - 각 request는 (블록 I/O의 동작을 의미하는) 하나 이상의 bio 구조체를 멤버로 가지고 있고,
+  - 각 bio 구조체는 bio_vec 배열을 가리키며 이 배열에는 여러 세그먼트가 들어 있을 수 있다.
+
+## 14.4 입출력 스케줄러
+
+- 커널은 블록 I/O 요청을 받자마자 바로 요청 큐로 보내지 않고, ​입출력 스케줄러로 대기 중인 블록 I/O 요청들 중 병합할 수 있는 건 합치고 정렬해서 디스크 탐색시간을 최소화 해 시스템 성능을 크게 개선한다. 
+- 요쳥 A가 접근하려는 섹터와 요청 B가 접근하려는 섹터가 인접하다면, 합쳐서 하나의 I/O 요청으로 만드는 것이 효율적이다. 한 번의 명령으로 추가 탐색 없이 여러 개의 요청을 처리할 수 있다.
+- 병합할 수 있는 요청이 없을 때, 요청 큐 맨 끝에 넣는 것보다, 물리적으로 가까운 섹터에 접근하는 다른 요청 근처에 정렬해 추가한다면 효율적이다.
+- 입출력 스케줄러 알고리즘은 우리의 일상생활 속의 ‘엘리베이터 알고리즘’과 상당히 흡사해 실제로 커널 2.4 버전까지 ‘리누스 엘리베이터’라는 이름으로 불렸다.
+- 리눅스 커널 2.6 버전은 4가지 입출력 스케줄러 알고리즘​을 제공한다. 
+
+- **데드라인 (Deadline)**
+  - 대부분의 사용자는 쓰기보다 읽기 성능에 민감하다. 어떤 읽기 요청 하나가 미처리 상태에 머물면 정체 시스템 지연 시간이 어마어마하게 커질 것이다.
+  - 이름 그대로 각 요청에 ‘만료 시간’을 설정한다. 읽기 요청은 0.5초, 쓰기 요청은 5초다.
+  - 데드라인 방식은 요청 큐로 FIFO 큐를 사용하는데, 쓰기 FIFO 큐나 읽기 FIFO 큐의 맨 앞 요청이 만료되면 해당 요청을 가장 우선으로 처리한다.
+- **예측 (Anticipatory)**
+  - 데드라인 방식은 우수한 읽기 성능을 보장하지만 이는 전체 성능 저하의 대가를 감수한 것이다.
+  - 예측 방식은 데드라인을 기반으로 휴리스틱하게 동작한다.
+  - 읽기 요청이 발생하면 스케줄러는 요청을 처리한 뒤 바로 다른 요청을 처리하러 가지만, 예측 방식에선 수 ms 동안 아무 일도 하지 않는다.
+  - 이 시간 동안 사용자로부터 다른 읽기 요청이 계속해서 들어오고, 병합되고, 정렬된다.
+  - 대기 시간이 지난 뒤에 스케줄러는 다시 돌아가서 이전 요청 처리를 계속한다.
+  - 한 번에 많은 읽기 요청을 처리하기 위해 요청이 추가로 더 들어올 것을 예측하면서 수 ms를 아무것도 안 하고 가만히 있는 이 전략은 의외로 성능을 크게 증가시켰다.
+  - 특히, 스케줄러는 여러 입출력 양상 통계값과 휴리스틱을 이용해 애플리케이션과 파일시스템의 동작을 예측해 읽기 요청을 처리하기 때문에 필요한 탐색 시간을 허비하는 일을 크게 줄일 수 있었다.
+  - 이 스케줄러는 서버에 이상적인 스케줄러다.
+- **완전 공정 큐 (Completely Fair Queueing)**
+  - 현재 리눅스의 기본 입출력 스케줄러로, 여러 부하 조건에서 가장 좋은 성능을 보여준다.
+  - 입출력 요청을 각 프로세스 별로 할당한 큐에 저장하고, 병합하고, 정렬한다.
+  - 각 요청 큐들 사이에서는 round-robin 방식으로 순서대로 미리 설정된 개수(기본값 4개)의 요청을 꺼내 처리한다.
+- **무동작 (Noop)**
+  - 플래시 메모리와 같이 완벽하게 random-access가 가능한 블록 장치를 위한 스케줄러다.
+  - 병합만 하고 정렬이나 기타 탐색 시간 절약을 위한 어떤 동작도 수행하지 않는다.
+
+# 15. 프로세스 주소 공간
+
+- 커널은 사용자 공간 프로세스의 메모리도 관리해야 하며 이를 ‘프로세스 주소 공간’이라고 부른다.
+- 프로세스는 유효한 메모리 영역에만 접근해야 하며, 이를 어길시 segment fault를 만날 것이다.
+
+## 15.1 메모리 서술자 구조체 mm_struct
+
+```c
+struct mm_struct {
+	struct {
+		atomic_t mm_users;
+		/*
+		 * Fields which are often written to are placed in a separate
+		 * cache line.
+		 */
+		struct {
+			/**
+			 * @mm_count: The number of references to &struct
+			 * mm_struct (@mm_users count as 1).
+			 *
+			 * Use mmgrab()/mmdrop() to modify. When this drops to
+			 * 0, the &struct mm_struct is freed.
+			 */
+			atomic_t mm_count;
+		} ____cacheline_aligned_in_smp;
+
+		struct maple_tree mm_mt;
+    ...
+  }
+};
+```
+
+- `<linux/mm_types.h>`에는 `mm_struct` 라는 메모리 서술자 구조체가 정의돼있다. 
+  - `mm_users`: 이 주소 공간을 사용하는 프로세스의 개수를 의미한다.
+  - `mm_count`: 이 구조체의 주 참조 횟수다. 
+    - 9개 스레드가 주소 공간을 공유한다면? `mm_users == 9, mm_count == 1`
+    - `mm_users == 0` -> mm_count를 하나 감소시킨다.
+    - `mm_count == 0` -> 이 주소 공간을 참조하는 놈이 하나도 없으니 메모리를 해제한다.
+  - mmap, mm_rb: 동일한 메모리 영역을 전자는 연결리스트로, 후자는 레드-블랙 트리로 나타낸 것이다. 
+    - 왜 같은 대상을 중복 표현해서 메모리를 낭비하는 걸까?
+    - 메모리 낭비는 있겠지만, 얻을 수 있는 이점이 있기 때문이다.
+    - 전후 관계를 파악하거나 모든 항목을 탐색할 때는 연결리스트가 효율적이다.
+    - 특정 항목을 탐색할 때는 레드-블랙 트리가 효율적이다.
+    - 이런 방식으로 같은 데이터를 두 가지 다른 접근 방식으로 사용하는 것을 ‘스레드 트리’라고 부른다.
+
+- 이미 3장에서 `task_struct`를 배울 때 mm 멤버변수로 이 구조체를 봤었다.
+  - 복습하자면, `current->mm`은 현재 프로세스의 메모리 서술자를 뜻하며,
+  - `fork()` → `copy_mm()` 함수가 부모 프로세스의 메모리 서술자를 자식 프로세스로 복사하며,
+  - 복사할 때 12.4절에서 배운 ‘슬랩 캐시’를 이용해 `mm_cachep`에서 `mm_struct` 구조체를 할당한다.
+  - 만일 만드는게 스레드라면, 생성된 스레드의 메모리 서술자는 부모의 mm을 가리킬 것이다.
+  - 그리고 커널 스레드라면, 당연히 프로세스 주소 공간이 없으므로 mm == NULL이다. 
+    - (+ 추가내용: 커널 스레드가 종종 프로세스 주소 공간의 페이지 테이블 일부 데이터가 필요한 경우가 있다. 메모리 서술자의 mm == NULL일 때, active_mm 항목은 이전 프로세스의 메모리 서술자가 가리키던 곳으로 갱신된다. 따라서 커널 스레드는 이전 프로세스의 페이지 테이블을 필요할 때 사용할 수 있다.)
+
+## 15.2 가상 메모리 영역 구조체 vm_area_struct
+
+- 리눅스 커널에서 ‘가상 메모리 영역’은 VMA라고 줄여 부르며 `<linux/mm_type.h>`의 `vm_area_struct` 구조체로 메모리 영역을 표현한다.
+
+```c
+// https://github.com/torvalds/linux/blob/f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e/include/linux/mm_types.h#L616
+struct vm_area_struct {
+	/* The first cache line has the info for VMA tree walking. */
+
+	union {
+		struct {
+			/* VMA covers [vm_start; vm_end) addresses within mm */
+			unsigned long vm_start;
+			unsigned long vm_end;
+		};
+#ifdef CONFIG_PER_VMA_LOCK
+		struct rcu_head vm_rcu;	/* Used for deferred freeing. */
+#endif
+	};
+
+	struct mm_struct *vm_mm;	/* The address space we belong to. */
+	pgprot_t vm_page_prot;          /* Access permissions of this VMA. */
+
+	/*
+	 * Flags, see mm.h.
+	 * To modify use vm_flags_{init|reset|set|clear|mod} functions.
+	 */
+	union {
+		const vm_flags_t vm_flags;
+		vm_flags_t __private __vm_flags;
+	};
+
+	const struct vm_operations_struct *vm_ops;
+  ...
+} __randomize_layout;
+```
+
+- 주요 멤버 변수를 살펴보면 아래와 같다. 
+  - `vm_start`, `vm_end`: 가상 메모리 영역의 시작주소와 마지막 주소를 의미하므로 이 둘의 차이가 메모리 영역의 바이트 길이가 된다. 다른 메모리 영역끼리는 중첩될 수 없다.
+  - `vm_mm`: VMA 별로 고유한 mm_struct를 보유한다. 동일 파일을 별도의 프로세스들이 각자의 주소 공간에 할당할 경우 각자의 vm_area_struct를 통해 메모리 공간을 식별하게 된다.
+  - `vm_flags`: 메모리 영역 내 페이지에 대한 정보(읽기, 쓰기, 실행 권한 정보 등)를 제공한다.
+  - `vm_ops`: 메모리 영역을 조작하기 위해 커널이 호출할 수 있는 동작 구조체 vm_operations_struct를 가리킨다. (13절 VFS를 설명할 때 언급했던 ‘동작 객체’ 구조체와 비슷한 개념이다.)
+
+## 15.3. 실제 메모리 영역 살펴보기
+- 간단한 프로그램을 만들고, ‘/proc’ 파일시스템과 pmap 유틸리티를 통해 특정 프로세스의 주소 공간과 메모리 영역을 살펴보자.
+
+```bash
+[ec2-user@ip-x-x-x-x ~]$ echo -e "int main(int argc, char *argv[]) { while(1); }" > test.c
+[ec2-user@ip-x-x-x-x ~]$ gcc -o test test.c && ./test &
+[1] 1024914
+[ec2-user@ip-x-x-x-x ~]$ cat /proc/1024914/maps
+55ef85f2b000-55ef85f5a000 r--p 00000000 103:01 2253                      /usr/bin/bash
+55ef86c8c000-55ef86dad000 rw-p 00000000 00:00 0                          [heap]
+7ffb87000000-7ffb94530000 r--p 00000000 103:01 8524092                   /usr/lib/locale/locale-archive
+7ffb94600000-7ffb94ed4000 r--s 00000000 103:01 9692403                   /var/lib/sss/mc/passwd
+7ffb94fab000-7ffb95000000 r--p 00000000 103:01 443                       /usr/lib/locale/C.utf8/LC_CTYPE
+7ffb95000000-7ffb95028000 r--p 00000000 103:01 8524744                   /usr/lib64/libc.so.6
+7ffb95230000-7ffb95231000 r--p 00000000 103:01 1600                      /usr/lib/locale/C.utf8/LC_NUMERIC
+7ffb95231000-7ffb95232000 r--p 00000000 103:01 1603                      /usr/lib/locale/C.utf8/LC_TIME
+7ffb95232000-7ffb95233000 r--p 00000000 103:01 442                       /usr/lib/locale/C.utf8/LC_COLLATE
+7ffb95233000-7ffb95234000 r--p 00000000 103:01 446                       /usr/lib/locale/C.utf8/LC_MONETARY
+7ffb95234000-7ffb95235000 r--p 00000000 103:01 8524051                   /usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+7ffb95235000-7ffb95236000 r--p 00000000 103:01 1601                      /usr/lib/locale/C.utf8/LC_PAPER
+7ffb95236000-7ffb95237000 r--p 00000000 103:01 447                       /usr/lib/locale/C.utf8/LC_NAME
+7ffb95237000-7ffb9523e000 r--s 00000000 103:01 2799                      /usr/lib64/gconv/gconv-modules.cache
+7ffb9523e000-7ffb95240000 r--p 00000000 103:01 9455124                   /usr/lib64/libnss_sss.so.2
+7ffb9524e000-7ffb9525c000 r--p 00000000 103:01 8522848                   /usr/lib64/libtinfo.so.6.2
+7ffb95283000-7ffb95285000 r--p 00000000 103:01 8524740                   /usr/lib64/ld-linux-x86-64.so.2
+7ffed54c8000-7ffed54e9000 rw-p 00000000 00:00 0                          [stack]
+7ffed55e0000-7ffed55e4000 r--p 00000000 00:00 0                          [vvar]
+7ffed55e4000-7ffed55e6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+```
+- `/proc/<pid>/maps` 파일은 프로세스 주소 공간의 메모리 영역을 출력해준다.
+- pmap 유틸리티를 사용하면 위 정보를 조금 더 가독성 있게 표현해준다.
+- 지금까지 다룬 구조체의 구조를 깔끔하게 도식화한 그림이다.
+
+  <img width="546" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/7a83e81b-9239-4de7-8f78-34822689ba9f">
+
+- `task_struct`의 mm은 각 프로세스의 메모리 서술자인 `mm_struct`이다.
+- `mm_struct`의 mmap은 가상 메모리 영역 `vm_area_struct`을 표현하는 연결리스트다.
+- `vm_area_struct`는 프로세스의 실제 메모리 영역(.txt, .data 등)을 나타낸다.
+
+<img width="563" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/ff72c51b-ddd1-4e1d-914a-21f77b01930a">
+
+- 알다시피, 커널과 애플리케이션은 가상 주소를 사용하지만, 프로세서는 물리 주소를 사용한다.
+  - 따라서 프로세서와 애플리케이션이 서로 상호작용하기 위해서는 페이지 테이블을 통해 변환작업이 필요하다.
+- 리눅스 커널은 PGD(Global), PMD(Middle), PTE 세 단계의 페이지 테이블을 사용한다.
+- 페이지 테이블 구조는 아키텍처에 따라 상당히 다르며 `<asm/page.h>`에 정의돼있다.
+
+# 16. Page Cache & Page Writeback
+
+## 16.1 캐시 정의와 사용 방식
+
+- 리눅스는 캐시를 ‘페이지 캐시(Page cache)’라고 부르며 디스크 접근 횟수를 최소화 하기 위해 사용한다. 
+  - 프로세스가 `read()` 시스템콜 등으로 읽기 요청을 할 때, 커널은 가장 먼저 페이지 캐시를 확인한다.
+  - 만약 있다면, 메모리 또는 디스크 접근을 하지 않고 캐시에서 데이터를 바로 읽는다.
+  - 만약 없다면, 메모리 또는 디스크에 접근해 읽은 뒤 데이터를 캐시에 채워 넣는다.
+  
+- 리눅스는 write policy로 지연 기록(write-back)을 채택하고 있다. 
+  - 프로세스의 쓰기 동작은 캐시에 바로 적용된다. (메모리 or 디스크에 적용 X)
+  - 해당 캐시 라인에 dirty 표시를 한다.
+  - 적당한 때에 주기적으로 캐시의 dirty 표시된 내용이 메모리 or 디스크에 갱신되고 지워진다.
+  - 통합해서 한꺼번에 처리하므로 성능이 우수하지만 복잡도가 높다.
+  
+- 캐시의 갱신된 페이지 내용을 메모리 or 디스크로 반영하는 작업을 ‘플러시(Flush)’라고 한다. 
+  - 리눅스는 이 작업을 ‘플러시 스레드(Flush thread)’라는 커널 스레드가 담당한다.
+  - 페이지 캐시 가용 메모리가 특정 임계치 이하로 내려갈 때 dirty 캐시 라인을 플러시 한다.
+  - 페이지 케시 dirty 상태가 특정 한계 시간을 지나면 플러시 한다.
+  - 사용자가 `sync()`, `fsync()` 시스템콜을 호출하면 즉시 플러시 한다.
+  
+- 리눅스는 replacement policy로 ‘이중 리스트 전략’(Two-list) 라는 개량 LRU(Least Recently Used) 알고리즘을 사용한다. 
+  - 페이지 캐시가 가득찼을 때 어떤 데이터를 제거할 것인지 선택하는 과정이다.
+  - 언제 각 페이지에 접근했는지 타임스탬프를 기록해둔 뒤 가장 오래된 페이지를 교체하는 방법이다.
+  - 이중 리스트 전략은 ‘활성 리스트’와 ‘비활성 리스트’ 두 가지 리스트를 활용한다. 
+    - 최근에 접근한 캐시 라인은 활성 리스트에 들어가서 교체 대상에서 제외한다.
+    - 두 리스트는 큐처럼 앞부분에서 제거하고 끝부분에 추가한다.
+    - 두 리스트는 균형 상태를 유지한다. 활성 리스트가 커지면 앞쪽 항목들을 비활성 리스트로 넘긴다.
+
+## 16.2 리눅스 페이지 캐시 구조체 - address_space
+
+- 다양한 형태의 파일과 객체를 올바르게 캐시하는 것을 목표로 `<linux/fs.h>`에 `address_space` 객체가 만들어졌다.
+- 하나의 `address_space` 객체는 하나의 파일(inode)을 나타내고 1개 이상의 `vm_area_struct`가 포함된다. 단일 파일이 메모리상에서 여러 개의 가상 주소를 가질 수 있다는 걸 생각하면 된다.
+- 특히, 페이지 캐시는 원하는 페이지를 빨리 찾을 수 있어야 하기 때문에 `address_space`에는 `page_tree`라는 이름의 기수 트리(radix tree)가 들어 있다.
+
+# 17. Devices & Modules
+
+## 17.1 정의
+- 모듈: 커널 관련 하위 함수, 데이터, 바이너리 이미지를 포함해 동적으로 불러 올 수 있는 커널 객체를 의미한다.
+- 장치: 리눅스 커널은 장치를 **블록 장치, 캐릭터 장치, 네트워크 장치** 3가지로 분류한다. 모든 장치 드라이버가 물리장치를 표현하는 것은 아니며 커널 난수 생성기, 메모리 장치처럼 가상 장치도 표현한다.
+ 
+## 17.2 모듈 사용하기
+
+### 모듈 만들기
+
+- 모듈 개발은 새로운 프로그램을 짜는 것과 비슷하다.
+- 각 모듈은 소스파일 내에 자신의 시작위치(`module_init()`)와 종료위치(`module_exit()`)가 있다.
+- 가장 간단한 ‘hello, world’ 출력 모듈을 작성하면 아래와 같다.
+
+  ```c
+  #include <linux/init.h>
+  #include <linux/module.h>
+  #include <linux/kernel.h>
+
+  static int hello_init(void)
+  {
+    printk(KERN_ALERT, "hello\n");
+    return 0;
+  }
+
+  static void hello_exit(void)
+  {
+    printk(KERN_ALERT, "world\n");
+  }
+
+  module_init(hello_init);					// 모듈 진입점
+  module_exit(hello_exit);					// 모듈 종료점
+
+  MODULE_LICENSE("GPL");						// 저작권 정보
+  MODULE_AUTHOR("Embeddedjune");				    // 모듈 제작자 정보
+  MODULE_DESCRIPTION("Test Hello,world");		// 모듈에 대한 정보
+  ```
+
+### 모듈 설치 준비하기
+
+- 모듈 작성을 완료했다면, 모듈 소스를 패치의 형태나 커널 소스 트리에 병합한다.
+- 모듈은 `/drivers`의 적당한 장치 하위 디렉토리에 디렉토리를 만들고 넣는다.
+- `/drivers`의 Makefile과 방금 만든 하위 디렉토리 안의 Makefile을 수정한다.
+- make 명령어로 모듈을 컴파일한다.
+
+### 모듈 설치하기
+- `make modules_install` 명령을 이용해서 모듈을 설치한다.
+
+### 모듈 의존성 생성하기
+- `depmod` 명령어를 이용해서 의존성 정보를 반드시 생성한다.
+
+### 메모리에 모듈 로드하기
+- `insmod`로 모듈을 메모리에 추가하고 rmmod로 모듈을 제거한다.
+- `modprobe` 도구는 의존성 해소, 오류 검사 및 보고 등의 고급 기능들을 제공하므로 사용을 적극 권장한다.
+
+## 17.3 장치 모델
+
+- 리눅스 커널 2.6버전의 중요한 새 기능으로 ‘장치 모델(Device model)’이 추가됐다. 
+- 장치 모델이 추가된 이유는 ‘전원 관리(Power management) 기능 운용’을 위한 정확한 장치 트리(Device tree, 시스템의 장치 구조를 표현하는 트리)를 제공하기 위해서다.
+- 플래시 드라이브가 어느 컨트롤러에 연결됐는지, 어느 장치가 어느 버스에 연결됐는지 정보를 알려주고, 커널이 전원을 차단할 때 트리의 하위 노드 장치부터 전원을 차단할 수 있도록 도와준다.
+- 이러한 일련의 서비스를 정확하고 효율적으로 제공하기 위해 장치 트리 및 장치 모델이 필요하다.
+- 장치 모델은 `kobjects`, `ksets`, `ktypes` 세 가지 구조체로 표현한다. (모든 구조체는 `<linux/kobject.h>`에 정의되어있다.)
+
+```c
+// https://github.com/torvalds/linux/blob/f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e/include/linux/kobject.h#L64
+// 커널 자료구조의 기본적인 객체 속성 제공, sysfs 상의 디렉토리와 같음
+struct kobject {
+	const char		*name;
+	struct list_head	entry;
+	struct kobject		*parent;
+	struct kset		*kset;
+	const struct kobj_type	*ktype;
+	struct kernfs_node	*sd; /* sysfs directory entry */
+	struct kref		kref;
+
+	unsigned int state_initialized:1;
+	unsigned int state_in_sysfs:1;
+	unsigned int state_add_uevent_sent:1;
+	unsigned int state_remove_uevent_sent:1;
+	unsigned int uevent_suppress:1;
+
+#ifdef CONFIG_DEBUG_KOBJECT_RELEASE
+	struct delayed_work	release;
+#endif
+};
+
+...
+
+// https://github.com/torvalds/linux/blob/f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e/include/linux/kobject.h#L168C1-L173C22
+// 기능상 관련된 kobject의 집합(연결리스트)
+struct kset {
+	struct list_head list;
+	spinlock_t list_lock;
+	struct kobject kobj;
+	const struct kset_uevent_ops *uevent_ops;
+} __randomize_layout;
+
+...
+
+// https://github.com/torvalds/linux/blob/f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e/include/linux/kobject.h#L116C1-L123C3
+// 공동 동작을 공유하는 kobject의 집합(연결리스트)
+struct kobj_type {
+	void (*release)(struct kobject *kobj); // `kobjects`의 참조횟수가 0이 될 때 호출되서 C++의 소멸자 역할을 한다.
+	const struct sysfs_ops *sysfs_ops;
+	const struct attribute_group **default_groups;
+	const struct kobj_ns_type_operations *(*child_ns_type)(const struct kobject *kobj);
+	const void *(*namespace)(const struct kobject *kobj);
+	void (*get_ownership)(const struct kobject *kobj, kuid_t *uid, kgid_t *gid);
+};
+...
+```
+- `kobjects` 구조체는 부모 객체를 멤버 포인터 객체로 가지므로 계층 구조를 가지고 있다.
+- `kobjects`를 사용하기 위해서는 `kobject_create()` 함수를 사용한다.
+
+## 17.4. sysfs
+
+### sysfs 정의
+
+- sysfs은 kobject 계층 구조를 보여주는 가상 파일시스템​이다.
+- sysfs는 ​가상 파일을 통해 다양한 커널 하위 시스템의 장치 드라이버에 대한 정보를 제공한다.
+- 리눅스 2.6 커널 이상을 이용하는 모든 시스템은 sysfs를 포함하며 /sys 디렉토리에 마운트돼있다.
+- sysfs에는 block, bus, class, dev, devices, firmware, fs, kernel, module, power 등 최소 10개 디렉토리가 포함돼있다.
+- 이 디렉토리들 중 가장 중요한 두 디렉토리는 class와 devices 디렉토리다. 
+  - class는 시스템 장치의 상위 개념을 정리된 형태로 보여주고,
+  - devices는 시스템 장치의 하위 물리적 장치 연결 정보 관계를 보여준다.
+  - 나머지 디렉토리는 devices의 데이터를 단순히 재구성한 것에 불과하다.
+
+### sysfs에 kobject에 추가하고 제거하기
+
+```c
+struct kobject *kobject_create_and_add(const char *name, struct kobject *parent);
+void kobject_del(struct kobject *kobj);
+```
+- `kobject_create_and_add()`는 `kobject_create()` 함수와 `kobject_add()` 함수를 하나로 합친 함수다.
+- kobject 객체를 생성하고 sysfs에 추가한다.
+- kobject 객체를 제거할 때는 `kobject_del()` 함수를 사용한다.
+
+### sysfs에 파일 추가하기
+
+- kobject를 sysfs 계층구조에 추가해도 kobject가 가리키는 ‘파일’이 없다면 아무 의미가 없다.
+- kobjects 구조체 속 ktypes 구조체는 아무런 인자가 없어도 기본적인 파일 속성을 제공한다.
+  - `default_attrs` : 이 변수를 설정해서 파일의 이름, 소유자, 속성(쓰기, 읽기, 실행)을 부여한다.
+  - `sysfs_ops` : 파일의 기본적인 동작(읽기(show), 쓰기(store))을 정의한다.
+- 속성을 제거하기 위해서는 `sysfs_remove_file()` 함수를 이용한다.
+
+# 18. Debugging
+
+## 18.1. 시작하기
+
+- 커널 디버깅에는 세 가지 요소가 필요하다. 
+  - 버그가 처음 등장한 커널 버전을 파악할 수 있는가?
+  - 버그를 재현할 수 있는가?
+  - 커널 코드에 관한 지식을 갖추고 있는가?
+- 버그를 명확하게 정의하고 안정적으로 재현할 수 있다면 성공적인 디버깅에 절반 이상 달성한 것이다.
+​
+## 18.2. 출력을 이용한 디버깅
+
+### `printk()`와 웁스(oops)
+
+- 커널 출력 함수인 `printk()`는 C 라이브러리의 printf() 함수와 거의 동일하다. 
+  - 주요 차이점은 로그수준(Loglevel)을 지정할 수 있다는 점이다.
+  - 가장 낮은 수준인 `KERN_DEBUG` 부터 가장 높은 수준인 `KERN_EMERG` 까지 7단계로 설정할 수 있다.
+  
+- `printk()`의 장점은 커널의 어느 곳에서도 언제든지 호출할 수 있다는 점이다. 
+  - 인터럽트 컨텍스트, 프로세스 컨텍스트 모두 호출 가능하다.
+  - 락을 소유하든 소유하지 않든 호출 가능하다.
+  - 어느 프로세서에서도 사용할 수 있다.
+  
+- `printk()`의 단점은 커널 부팅 과정에서 콘솔이 초기화되기 전에는 사용할 수 없다는 점이다. 
+  - 이식성을 포기하고 `printk()` 함수 변종인 `early_printk()` 함수를 사용하는 해결책이 있다.
+  
+- `printk()`를 사용할 때 주의할 점은, 너무 빈번하게 호출되는 커널 함수에 사용하면 시스템이 뻗어버린다는 것이다. 
+  - 출력 폭주를 막기 위해 두 가지 방법을 사용할 수 있다.
+  - 첫 번째 방법: jiffies를 이용해서 수초마다 한 번씩만 출력한다.
+  - 두 번째 방법: `printk_ratelimit()` 함수를 이용해서 n초에 한 번씩만 출력한다.
+  
+- 커널 메시지는 크기가 `LOG_BUF_LEN`인 원형 큐(버퍼)에 저장된다. 
+  - 크기는 `CONFIG_LOG_BUF_SHIFT` 옵션을 통해 설정할 수 있으며 기본값은 16KB다.
+  - 원형 큐이므로 가득찼을 때 가장 오래된 메시지를 덮어쓴다.
+  - 표준 리눅스 시스템은 사용자 공간의 ‘klogd’ 데몬이 로그 버퍼에서 커널 메시지를 꺼내고 ‘syslogd’ 데몬을 거쳐서 시스템 로그 파일(기본: `/var/log/messages`)에 기록한다.
+  
+- 웁스(oops)는 커널이 사용자에게 무언가 나쁜 일이 일어났다는 것을 알려주는 방법이다. 
+  - 커널은 심각한 오류가 났을 때 사용자 프로세스처럼 책임감 없이 프로세스를 종료할 수 없다. 
+    - 커널은 웁스가 발생했을 때 최대한 실행을 계속 하려고 시도한다.
+    - 더 이상 커널 실행이 불가능하다고 판단할 경우 ‘패닉 상태’가 된다.
+  - 커널은 콘솔 오류 메시지 + 레지스터 내용물 + 콜스택 역추적 정보 등을 출력한다.
+
+### 버그 확인과 정보 추출
+
+- `BUG()`, `BUG_ON()`: 웁스를 발생한다. 
+  - 의도적으로 웁스를 발생시키는 시스템콜이다.
+  - 이 함수는 발생해서는 안 되는 상황에 대한 조건문을 확인할 때 사용한다.
+  - `if (...) BUG()` 랑 `BUG_ON(...)` 는 동일한 구문이다. 그래서 대부분 커널 개발자는 `BUG_ON()`을 사용하는 것을 더 좋아하며 조건문에 `unlikely()`를 함께 사용(`BUG_ON(unlikely());`)한다.
+- `panic()` : 패닉을 발생한다. 
+  - 좀 더 치명적인 오류의 경우에는 웁스가 아닌 패닉을 발생시킨다.
+  - 이 함수를 호출하면 오류 메시지를 출력하고 커널을 중지시킨다.
+- `dump_stack()` : 디버깅을 위한 스택 역추적 정보를 출력한다.
+
+# 19. Portability(이식성)
+
+- 이식성이란, 특정 시스템 아키텍처의 코드가 (가능하다면) 얼마나 쉽게 다른 아키텍처로 이동할 수 있는지를 의미한다.
+- 이 장에서는 핵심 커널 코드나 디바이스 드라이버를 개발할 때 이식성 있는 코드를 작성하는 방법에 대해서 알아본다.
+- 리눅스는 인터페이스와 핵심 코드는 아키텍처 독립적인 C로 작성됐고, 성능이 중요한 커널 기능은 각 아키텍처에 특화된 어셈블리로 작성해 최적화시켰다. 
+  - 좋은 예로 스케줄러가 있다. 스케줄러 기능의 대부분은 `<kernel/sched.c>` 파일에 아키텍처 독립적으로 구현돼있다.
+  - 하지만, 스케줄링의 세부 과정인 context switching과 memory management를 책임지는 `switch_to()`, `switch_mm()` 함수는 아키텍처별로 따로따로 구현돼있다.​
+  
+## 19.1 불확실한 자료형 크기
+
+- 1-WORD는 시스템이 한 번에 처리할 수 있는 데이터의 길이를 의미하며 보통 범용 레지스터의 크기와 같다. 
+- 리눅스 커널은 long 데이터의 크기가 1-WORD 크기와 같다.
+- 리눅스 커널은 아키텍처마다 `<asm/types.h>` 의 `BITS_PER_LONG` 에 long 데이터형 크기로 1-WORD 크기를 지정해 놓았다.
+- 옛날에는 같은 아키텍처도 32-bit 버전과 64-bit 버전이 따로 구현돼있었지만, 2.6버전 이후로 통합됐다.
+- 아키텍처에 따라 C 자료형의 크기가 불명확한 것에 따라 장단점이 있다. 
+  - 장점: long 크기가 1-WORD임이 보장된다, 아키텍처별로 명시적으로 자료형의 크기를 지정하지 않아도 된다 등
+  - 단점: 코드 상에서 자료형의 크기를 알 수가 없다.
+- 따라서 자료형의 크기를 함부로 추정하지 않는 것이 좋다.
+- 자료형이 실제 필요로 하는 공간과 형태가 바뀌어도 상관 없도록 코드를 작성해야 이식성 높은 코드를 작성할 수 있다.
+​
+## 19.2 더욱 구체적인 자료형
+
+- 때로는 개발자가 코드에서 자료형을 더욱 구체적으로 명시화 해줄 필요가 있다. 
+- 예를 들어, 레지스터나 패킷 같이 HW, NW 관련 코드를 작성해야 하는 경우
+- 음수를 저장해야 하는 경우: 명시적으로 signed 키워드를 써주는 것을 권장한다.
+- 커널은 `<asm/types.h>` 파일에 명시적으로 크기가 정해진 자료형(i.e. u8, u16, u32, u64 등)을 typedef로 정의해놨다. 
+- 이 자료형은 namespace 문제 때문에 커널 내부 코드에서만 사용해야 한다.
+- 만일, 사용자 공간에 노출해야 한다면, 언더스코어 2개를 덧붙여서 `__u8`, `__u16` 처럼 사용하면 된다. 의미는 같다.
+
+## 19.3. 기타 권장사항
+
+- **바이트 순서**: 절대로 바이트 순서를 예측하지 마라. 범용 코드는 빅엔디안, 리틀엔디안 모두에서 동작해야 한다.
+- **시간**: 절대로 jiffies 값을 양수값과 비교해서는 안 된다. Hz값으로 곱하거나 나눠야 한다.
+- **페이지 크기**: 페이지 크기는 아키텍처마다 다르다. 당연히 4KB라고 생각해선 안 된다.
+- **처리 순서**: 아키텍처마다 다양한 방식으로 프로세서 처리 순서를 따르므로 적절한 배리어를 사용해야 한다.
 
 ---
-참고
+**참고**
 - [Linux 커널 심층 분석 3판](https://product.kyobobook.co.kr/detail/S000000935348)
+- https://github.com/torvalds/linux
+- https://litux.nl/mirror/kerneldevelopment/0672327201/ch13lev1sec3.html
 - https://jaykos96.tistory.com/27
+- https://www.kernel.org/doc/html//v6.3/block/request.html
+- https://www.kernel.org/doc/Documentation/this_cpu_ops.txt
+- https://showx123.tistory.com/92
