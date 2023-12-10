@@ -163,10 +163,8 @@ Hashed Timing Wheel data structure is better as it holds lock only on that sec v
 |Sequential List|O(n)|O(1)|O(1)|
 |Tree Based|O(log(n))|O(1)|O(1)|
 |Simple Wheel|O(1)|O(1)|O(1)|
-|Hashed Wheel (sorted)|O(n) worst case
-O(1) avg|O(1)|O(1)|
-|Hashed Wheel (unsorted)|O(1)|O(1)|O(n) worst case
-O(1) avg|
+|Hashed Wheel (sorted)|O(n) worst case<br>O(1) avg|O(1)|O(1)|
+|Hashed Wheel (unsorted)|O(1)|O(1)|O(n) worst case<br>O(1) avg|
 |Hierarchical Wheels|O(m)|O(1)|O(1)|
 
 # HashedWheelTimer

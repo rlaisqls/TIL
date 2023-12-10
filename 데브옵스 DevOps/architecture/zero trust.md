@@ -63,3 +63,19 @@ This architecture requires a well-planned strategy and roadmap to implement and 
 
 It might seem like a limiting process from an outside perspective. But a zero trust model's successful implementation can help bring context and insight into a rapidly evolving attack surface to the security team and improve the users' experience.
 
+## Zero trust minimum requirements
+
+Zero trust requires a broad portfolio of security capabilities and experience: identity, data, devices and workloads, analytics and visibility, automation and orchestration, and network and endpoint.
+
+- **Identity**
+  - Define and govern zero trust security policies managing access across all users and privileged accounts with single sign-on (SSO), multifactor authentication and lifecycle management.
+- **Data**
+  - Protect critical data using zero trust security practices. Discover, classify and manage data access according to risk.
+- **Devices and workloads**
+  - Defend the organization with zero trust security practices—from applications secured by design to monitoring and managing endpoints.
+- **Analytics and visibility**
+  - Monitor and enforce zero trust security policies with intelligent analytics. View and monitor the behavior of all users, resources and data connecting within the business.
+- **Automation and orchestration**
+  - Rapidly solve and iterate on security issues that occur as part of a zero trust practice with orchestrated actions and common playbooks.
+- **Network and endpoint**
+  - Apply proven skills, expertise and modern solutions to protect a network, infrastructure and endpoints from today's cybersecurity threats.
