@@ -31,20 +31,18 @@ Netty에서는 멀티 스레드 이벤트 루프의 단점인 발생 순서와 �
 - 하나의 이벤트 루프 스레드에는 여러 채널이 등록될 수 있다.
 - Channel의 라이프 사이클 동안 모든 동작은 하나의 thread에서 처리되게 된다.
 
-멀티 스레드 이벤트 모델에서 이벤트의 실행 순서가 일치하지 않는 이유는 루프들이 이벤트 큐를 공유하기 때문이다. 따라서 Netty는 이벤트 큐를 이벤트 루프 스레드의 내부에 둠으로써 실행 순서의 불일치 원인을 제거하게 된다. 
-
-즉 이벤트 루프 스레드마다 개인의 이벤트 큐를 가짐으로써, 해당 이벤트를 처리하는 스레드가 지정되어 있기 때문에 공유된 하나의 이벤트 큐에 스레드들이 접근하지 않게 된다.
+멀티 스레드 이벤트 모델에서 이벤트의 실행 순서가 일치하지 않는 이유는 루프들이 이벤트 큐를 공유하기 때문이다. Netty는 이벤트 루프 스레드마다 개인의 이벤트 큐를 가짐으로써, 해당 이벤트를 처리하는 스레드가 지정하도록 하기 때문에 공유된 하나의 이벤트 큐에 스레드들이 접근하지 않게 된다.
 
 ## EventLoop 인터페이스
 
 연결의 수명기간 동안 발생하는 이벤트를 처리하는 작업을 실행하는 것은 네트워킹 프레임워크의 기본 기능이다. 이를 나타내는 프로그래밍 구조를 이벤트 루프(event loop)라고 하는데, 네티에서도 `io.netty.channel.EventLoop` 인터페이스에 이를 적용했다.
 
-네티의 EventLoop는 동시성과 네트워킹의 두 가지 기본 API를 공동으로 활용해 설계됐다.
+네티의 EventLoop는 동시성과 네트워킹의 두 가지 기본 API를 활용해 설계됐다.
 
 1. `io.netty.util.concurrent` 패키지는 JDK 패키지인 `java.util.concurrent`에 기반을 두는 스레드 실행자를 제공한다.
 2. `io.netty.channel` 패키지의 클래스는 Channel이벤트와 인터페이스를 수행하기 위해 이러한 API를 확장한다.
 
-이 모델에서 EventLoop는 변경도디지 않는 Thread 하나로 움직이며, 작업을 EventLoop구현으로 직접 제출해 즉시 또는 예약 실행할 수 있다. 구성과 사용 가능한 코어에 따라서는 리소스 활용을 최적화하기 위해 여러 EventLoop가 생성되고 여러 Channel에 서비스를 제공하기 위해 단일 EventLoop가 할당되는 경우도 있다.
+이 모델에서 EventLoop는 변경되지 않는 Thread 하나로 움직이며, 작업을 EventLoop구현으로 직접 제출해 즉시 또는 예약 실행할 수 있다. 구성과 사용 가능한 코어에 따라서는 리소스 활용을 최적화하기 위해 여러 EventLoop가 생성되고 여러 Channel에 서비스를 제공하기 위해 단일 EventLoop가 할당되는 경우도 있다.
 
 네티의 EventLoop는 변경되지 않는 Thread 하나로 움직이며, 작업(Runnable 또는 Callable)을 EventLoop 구현으로 직접 제출해 즉시 또는 예약 실행할 수 있따. 구성과 사용 가능한 코어에 따라서는 리소스 활용을 최적화하기 위해 여러 EventLoop가 생성되고, 여러 Channel에 서비스를 제공하기 위해 단일 EventLoop가 할당되는 경우도 있다.
 
@@ -61,7 +59,7 @@ public interface EventGroup extends EventExecutor, EventLoopGroup {
 
 ## EventLoop를 이용한 작업 스케줄링
 
-ScheduledExecutorService구현은 풀 관리 작업의 일부로 스레드가 추가로 생성되는 등의 한계점을 가지고 있으며, 이 때문에 많은 작업을 예약할 경우 병목 현상이 발생할 수 있다.
+`ScheduledExecutorService`구현은 풀 관리 작업의 일부로 스레드가 추가로 생성되는 등의 한계점을 가지고 있으며, 이 때문에 많은 작업을 예약할 경우 병목 현상이 발생할 수 있다.
 
 **EventLoop를 이용한 작업 예약**
 
@@ -120,3 +118,10 @@ Channel에 이벤트와 입출력을 지원하는 EventLoop는 EventLoopGroup에
 - 블로킹 전송
     - 각 Channel에 한 EventLoop가 할당된다. 그러나 이전과 마찬가지로, 각 Channel의 입출력 이벤트는 한 Thread에 의해 처리된다.
 
+---
+참고
+- [네티 인 액션 : Netty를 이용한 자바 기반의 고성능 서버 & 클라이언트 개발](https://m.yes24.com/Goods/Detail/25662949)
+- https://netty.io/wiki/thread-model.html
+- https://medium.com/@akhaku/netty-data-model-threading-and-gotchas-cab820e4815a
+- https://livebook.manning.com/book/netty-in-action/chapter-7/27
+- https://shortstories.gitbook.io/studybook/netty/c774_bca4_d2b8_baa8_b378

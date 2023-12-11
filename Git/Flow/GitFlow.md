@@ -11,7 +11,7 @@ Git Flow 는 2010년 Vincent Driessen 이 작성한 블로그 글을 통해 유�
 
 ## GitFlow의 브랜치
 
-Git Flow는 크게는 5개의 branch 를 사용한다. 그중 가장 중심이 되는 브랜치는 Main 브랜치인 `master`와 `develop`브랜치이고, 나머지인 `feature`, `release`, `hotfix` 브랜치는 중간 과정을 보조하는 역할을 한다.
+Git Flow는 크게 5개의 branch 를 사용한다. 그중 가장 중심이 되는 브랜치는 Main 브랜치인 `master`와 `develop`브랜치이고, 나머지인 `feature`, `release`, `hotfix` 브랜치는 중간 과정을 보조하는 역할을 한다.
 
 - ### feature
     각각의 기능 구현을 담당하는 브랜치이다. 주로 `feature/{구현기능명}`과 같은 명칭으로 생성되며, develop 브랜치로 머지된다. 머지된 후에는 해당 브랜치가 삭제된다. 

@@ -36,19 +36,19 @@ $ kill -l
 
 자주 사용되는 signal을 몇 개 알아보자.
 
-#### SIGHUP(1)
+- SIGHUP(1)
 
-SIGHUP을 프로세스에게 주면 해당 pid 프로세스가 다시 시작된다. 그래서 데몬 프로세스의 설정을 마치고 설정 내용을 재적용시킬 때 자주 사용된다.
+  - SIGHUP을 프로세스에게 주면 해당 pid 프로세스가 다시 시작된다. 그래서 데몬 프로세스의 설정을 마치고 설정 내용을 재적용시킬 때 자주 사용된다.
 
-#### SIGKILL(9) vs SIGTERM(15)
+- SIGKILL(9) vs SIGTERM(15)
 
-둘 다 프로세스를 종료하는 signal이지만 sigkill은 자식 프로세스까지 동시에 즉시 삭제해버리고, sigterm은 자식 프로세스는 건드리지 않는 채 graceful하게 삭제한다.  
+  - 둘 다 프로세스를 종료하는 signal이지만 sigkill은 자식 프로세스까지 동시에 즉시 삭제해버리고, sigterm은 자식 프로세스는 건드리지 않는 채 graceful하게 삭제한다.  
 
-#### SIGSTOP(19) vs SIGTSTP(20)
+- SIGSTOP(19) vs SIGTSTP(20)
 
-둘 다 프로세스를 대기(정지) 시키는 명령어이다.
+  - 둘 다 프로세스를 대기(정지) 시키는 명령어이다.
 
-`SIGTSTP`는 유저가 키보드로 `Ctrl+Z`를 입력했을 때 쓰이는 signal이고 handler 처리가 가능한 반면에, `SIGSTOP`는 잡아서 처리가 불가능하다.
+  - `SIGTSTP`는 유저가 키보드로 `Ctrl+Z`를 입력했을 때 쓰이는 signal이고 handler 처리가 가능한 반면에, `SIGSTOP`는 잡아서 처리할 수 없다.
 
 ## signal 종류
 

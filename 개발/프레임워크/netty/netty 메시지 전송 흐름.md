@@ -79,3 +79,8 @@ public class NioSocketChannel ... {
     }
 }
 ```
+
+---
+참고
+- https://github.com/netty/netty
+- [네티 인 액션 : Netty를 이용한 자바 기반의 고성능 서버 & 클라이언트 개발](https://m.yes24.com/Goods/Detail/25662949)

@@ -17,8 +17,7 @@
 ### Deamon process
 
 - HTTPD is an application that runs as a [daemon process](Deamon%E2%80%85process.md) in Linux.
-  
-- In a Linux system, a daemon is a background process that runs independently of user interaction and typically provides services or functions for the operating system or other applications.
+  - In a Linux system, a daemon is a background process that runs independently of user interaction and typically provides services or functions for the operating system or other applications.
 
 - When you install and configure Apache HTTP Server on a Linux system, it runs as a daemon process called "httpd" or "apache2" (depending on the distribution). This daemon process listens for incoming HTTP requests and serves web pages and resources to clients.
 

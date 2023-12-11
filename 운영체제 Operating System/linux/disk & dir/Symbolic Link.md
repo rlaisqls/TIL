@@ -2,9 +2,12 @@
 
 Linux/UNIX 시스템에는 두 가지 유형의 링크가 있다. 
 
-- Hard link : Hard link를 기존 파일의 추가 이름으로 생각할 수 있다. Hard link는 둘 이상의 파일 이름을 동일한 i-node와 연결한다.
+- **Hard link** : Hard link는 둘 이상의 파일 이름을 동일한 i-node와 연결한다.
 
-- Soft link : Soft link는 Windows(윈도우)의 바로 가기 같은 것으로, 파일 또는 디렉터리에 대한 간접 포인터이다. Hard link와 달리 심볼릭 링크는 다른 파일 시스템 또는 파티션의 파일이나 디렉터리를 가리킬 수 있다.
+- **Soft link** : Soft link는 Windows(윈도우)의 바로 가기 같은 것으로, 파일 또는 디렉터리에 대한 간접 포인터이다. Hard link와 달리 심볼릭 링크는 다른 파일 시스템 또는 파티션의 파일이나 디렉터리를 가리킬 수 있다.
+
+<img width="404" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/57de5a31-a97a-4c4b-bf5d-e9488b45b60f">
+
 
 ### ln
 

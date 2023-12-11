@@ -19,6 +19,7 @@
 ## MySQL Replication 동작 원리
 
 MySQL의 Replication은 기본적으로 비동기 복제 방식을 사용하고 있다.
+
 Master 노드에서 변경되는 데이터에 대한 이력을 로그(Binary Log)에 기록하면, Replication Master Thread가 (비동기적으로) 이를 읽어서 Slave 쪽으로 전송하는 방식이다.
 
 MySQL에서 Replication을 위해 반드시 필요한 요소는 다음과 같다.

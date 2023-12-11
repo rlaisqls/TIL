@@ -17,9 +17,9 @@ sayHelloInSpanish = function() {
 
 ## 모듈 추출하기(exporting)
 
-`gretting.js`의 코드가 다른 파일에서 사용해보자. 
+`gretting.js`의 코드를 다른 파일에서 사용해보자. 
 
-우선 외부에서 사용할 함수에 아래와 같이 export 설정을 해주어야한다.
+우선 외부에서 사용할 함수에 아래와 같이 export 설정을 해주어야 한다.
 
 ```js
 // greetings.js
@@ -48,7 +48,7 @@ module.exports = {
 
 ## 모듈 사용하기
 
-main.js 라는 새로운 파일에서 greeting.js 의 메소드를 사용 할 수 있도록 import 해보자.
+`main.js` 라는 새로운 파일에서 `greeting.js` 의 메소드를 사용 할 수 있도록 import 해보자.
 
 require 키워드를 사용해 `main.js`에서 `greetings.js`를 require 한다.
 

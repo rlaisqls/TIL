@@ -38,7 +38,7 @@ Browser는 여러 개의 BrowserContext를 가질 수 있고 `Browser.createInco
 
 ## 예시
 
-아래는 example 페이지에 접속하여 스크릿 샷을 찍는 예제이다.
+아래는 example 페이지에 접속하여 스크린 샷을 찍는 예제이다.
 
 ```js
 // https://developers.google.com/web/tools/puppeteer/get-started
@@ -53,7 +53,7 @@ Browser는 여러 개의 BrowserContext를 가질 수 있고 `Browser.createInco
 
 대부분의 메소드들은 `Promise` 를 반환한다.
 
-`puppeteer.launch()` 메서드를 통해 browser 를 생성할 수 있다. 이때, 옵션을 전달하여 브라우저를 제어할 수 있다.
+`puppeteer.launch()` 메서드를 통해 browser를 생성할 수 있다. 이때, 옵션을 전달하여 브라우저를 제어할 수 있다.
 
 - **headless:** 기본값은 true 이고, false로 설정하면, 브라우저가 실제로 실행된다.
 - **defaultViewport:** 기본값은 800x600 이고, 화면이 노출될 사이즈를 지정할 수 있다.
