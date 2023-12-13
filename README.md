@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 650
+files            : 659
 derectories      : 140
-avg_file_length  : 4032
+avg_file_length  : 4043
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -266,7 +266,7 @@ avg_file_length  : 4032
 ┃　　　┃　　　┗━　[SAA 오답노트 1~3](./데브옵스 DevOps/AWS/SAA 오답노트 1~3.md)</br>
 ┃　　　┃　　　┗━　[SAA 오답노트 4~6](./데브옵스 DevOps/AWS/SAA 오답노트 4~6.md)</br>
 ┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
-┃　　　┃　　　┗━　[Well━Architected](./데브옵스 DevOps/AWS/Well━Architected.md)</br>
+┃　　　┃　　　┗━　[Well Architected](./데브옵스 DevOps/AWS/Well Architected.md)</br>
 ┃　　　┗━　[**Container**](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[**CNI**](./데브옵스 DevOps/Container/CNI)</br>
 ┃　　　┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI/CNI.md)</br>
@@ -367,7 +367,7 @@ avg_file_length  : 4032
 ┃　　　┃　　　┃　　　┗━　[MetalLB](./데브옵스 DevOps/Kubernetes/tools/MetalLB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node Termination Handler](./데브옵스 DevOps/Kubernetes/tools/Node Termination Handler.md)</br>
 ┃　　　┃　　　┃　　　┗━　[OPA Gatekeeper](./데브옵스 DevOps/Kubernetes/tools/OPA Gatekeeper.md)</br>
-┃　　　┃　　　┃　　　┗━　[node━shell](./데브옵스 DevOps/Kubernetes/tools/node━shell.md)</br>
+┃　　　┃　　　┃　　　┗━　[node shell](./데브옵스 DevOps/Kubernetes/tools/node shell.md)</br>
 ┃　　　┃　　　┗━　[**개념**](./데브옵스 DevOps/Kubernetes/개념)</br>
 ┃　　　┃　　　┃　　　┗━　[**Node Scheduling**](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/Assigning Pods to Nodes.md)</br>
@@ -375,7 +375,7 @@ avg_file_length  : 4032
 ┃　　　┃　　　┃　　　┃　　　┗━　[cordon, drain](./데브옵스 DevOps/Kubernetes/개념/Node Scheduling/cordon, drain.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**Volume**](./데브옵스 DevOps/Kubernetes/개념/Volume)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[CSIDriver](./데브옵스 DevOps/Kubernetes/개념/Volume/CSIDriver.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[attachdetach━controller](./데브옵스 DevOps/Kubernetes/개념/Volume/attachdetach━controller.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[attachdetach controller](./데브옵스 DevOps/Kubernetes/개념/Volume/attachdetach controller.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**object**](./데브옵스 DevOps/Kubernetes/개념/object)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Kubernetes/개념/object/Annotation.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/개념/object/CRD.md)</br>
@@ -395,6 +395,7 @@ avg_file_length  : 4032
 ┃　　　┃　　　┃　　　┗━　[CNI Specification](./데브옵스 DevOps/Kubernetes/개념/CNI Specification.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Disruption Budget](./데브옵스 DevOps/Kubernetes/개념/Disruption Budget.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Endpoints](./데브옵스 DevOps/Kubernetes/개념/Endpoints.md)</br>
+┃　　　┃　　　┃　　　┗━　[HPA와 VPA](./데브옵스 DevOps/Kubernetes/개념/HPA와 VPA.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s의 도커런타임 사용중단](./데브옵스 DevOps/Kubernetes/개념/K8s의 도커런타임 사용중단.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Kubeproxy](./데브옵스 DevOps/Kubernetes/개념/Kubeproxy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NodePort와 ServicePort와 targetPort](./데브옵스 DevOps/Kubernetes/개념/NodePort와 ServicePort와 targetPort.md)</br>
@@ -612,7 +613,6 @@ avg_file_length  : 4032
 ┃　　　┗━　[**기본원리**](./스프링 Spring/기본원리)</br>
 ┃　　　┃　　　┗━　[@Autowired 빈 주입 스캔 원리](./스프링 Spring/기본원리/@Autowired 빈 주입 스캔 원리.md)</br>
 ┃　　　┃　　　┗━　[@ComponentScan](./스프링 Spring/기본원리/@ComponentScan.md)</br>
-┃　　　┃　　　┗━　[@Component VS @Service](./스프링 Spring/기본원리/@Component VS @Service.md)</br>
 ┃　　　┃　　　┗━　[Ioc와 DI](./스프링 Spring/기본원리/Ioc와 DI.md)</br>
 ┃　　　┃　　　┗━　[Programmatic과 Declarative](./스프링 Spring/기본원리/Programmatic과 Declarative.md)</br>
 ┃　　　┃　　　┗━　[Reflection과 직렬화](./스프링 Spring/기본원리/Reflection과 직렬화.md)</br>
@@ -700,7 +700,16 @@ avg_file_length  : 4032
 ┃　　　┃　　　┗━　[범위 지정 함수](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[**Rust**](./언어 Language/Rust)</br>
+┃　　　┃　　　┗━　[+멀티 스레드 웹 서버 만들기](./언어 Language/Rust/+멀티 스레드 웹 서버 만들기.md)</br>
 ┃　　　┃　　　┗━　[Rc 타입과 Weak 타입](./언어 Language/Rust/Rc 타입과 Weak 타입.md)</br>
+┃　　　┃　　　┗━　[String](./언어 Language/Rust/String.md)</br>
+┃　　　┃　　　┗━　[Trait](./언어 Language/Rust/Trait.md)</br>
+┃　　　┃　　　┗━　[동시성](./언어 Language/Rust/동시성.md)</br>
+┃　　　┃　　　┗━　[소유권과 Lifetime](./언어 Language/Rust/소유권과 Lifetime.md)</br>
+┃　　　┃　　　┗━　[스마트 포인터 활용](./언어 Language/Rust/스마트 포인터 활용.md)</br>
+┃　　　┃　　　┗━　[조건문과 반복문](./언어 Language/Rust/조건문과 반복문.md)</br>
+┃　　　┃　　　┗━　[타입과 변수](./언어 Language/Rust/타입과 변수.md)</br>
+┃　　　┃　　　┗━　[함수와 메서드](./언어 Language/Rust/함수와 메서드.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ┗━　[**운영체제 Operating System**](./운영체제 Operating System)</br>
 ┃　　　┗━　[**linux**](./운영체제 Operating System/linux)</br>

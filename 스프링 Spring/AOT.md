@@ -19,8 +19,7 @@ AOT 엔진은 식별된 빈과 Spring 프로그래밍 모델, Spring Native에 �
 
 ## 장점
 
-### 적은 메모리 사용량 (Reduced Memory Footprint
-)
+### 적은 메모리 사용량 (Reduced Memory Footprint)
 
 AOT 엔진의 주요 장점은 더 정확한 네이티브 구성을 사용하고 reflection이 덜 필요하며 런타임에 스프링 인프라가 덜 필요하기 때문에 네이티브 실행 파일에 더 작은 메모리를 사용한다는 것이다.
 
@@ -48,8 +47,6 @@ AOT 엔진은 스프링 annotation 등의 다양한 유형을 분석하여, 실�
 
 그렇기 때문에 JVM에서 AOT 모드는 선택 사항이다. 이는 필요에 따라 사용할 수 있는 최적화다. 하지만 네이티브(설계상 런타임에 훨씬 덜 동적임)에서는 필수이다. 또한 현재로서는 구축 시 조건이 평가되지만, 향후에는 대부분의 사용 사례에 적합하도록 유연성을 높일 것이라고 한다.
 
-Spring native와 AOT, 버전별 정보에 대해서 더 공부해야겠다는 생각이 들었다. 정보 문서의 일부를 찾아 번역한 수준의 글이기 때문에 제대로 설명되지 않았거나 잘못 옮겨적은 부분이 있을 수 있다.
-
-추후 내용을 추가하거나 수정할 예정이다.
-
-https://spring.io/blog/2021/12/09/new-aot-engine-brings-spring-native-to-the-next-level
+---
+참고
+- https://spring.io/blog/2021/12/09/new-aot-engine-brings-spring-native-to-the-next-level
