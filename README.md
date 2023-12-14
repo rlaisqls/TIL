@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 659
+files            : 662
 derectories      : 140
-avg_file_length  : 4043
+avg_file_length  : 4047
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -40,8 +40,6 @@ avg_file_length  : 4043
 ┃　　　┃　　　┗━　[웹서버와 WAS](./개발/WAS/웹서버와 WAS.md)</br>
 ┃　　　┗━　[**apache**](./개발/apache)</br>
 ┃　　　┃　　　┗━　[Spark](./개발/apache/Spark.md)</br>
-┃　　　┗━　[**go**](./개발/go)</br>
-┃　　　┃　　　┗━　[gomod와 gosum](./개발/go/gomod와 gosum.md)</br>
 ┃　　　┗━　[**비동기**](./개발/비동기)</br>
 ┃　　　┃　　　┗━　[**coroutine**](./개발/비동기/coroutine)</br>
 ┃　　　┃　　　┃　　　┗━　[**thread**](./개발/비동기/coroutine/thread)</br>
@@ -83,39 +81,6 @@ avg_file_length  : 4043
 ┃　　　┗━　[Makefile](./개발/Makefile.md)</br>
 ┃　　　┗━　[mermaid 문법](./개발/mermaid 문법.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID](./개발/직렬화 serialVersionUID.md)</br>
-┗━　[**객체지향 OOP**](./객체지향 OOP)</br>
-┃　　　┗━　[**디자인패턴**](./객체지향 OOP/디자인패턴)</br>
-┃　　　┃　　　┗━　[**1. 생성패턴**](./객체지향 OOP/디자인패턴/1. 생성패턴)</br>
-┃　　　┃　　　┃　　　┗━　[빌더 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/빌더 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[싱글톤 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/싱글톤 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[추상팩토리 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/추상팩토리 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[팩토리메소드 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/팩토리메소드 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[프로토타입 패턴](./객체지향 OOP/디자인패턴/1. 생성패턴/프로토타입 패턴.md)</br>
-┃　　　┃　　　┗━　[**2. 구조패턴**](./객체지향 OOP/디자인패턴/2. 구조패턴)</br>
-┃　　　┃　　　┃　　　┗━　[데코레이터 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/데코레이터 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[브릿지 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/브릿지 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[어댑터 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/어댑터 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[컴포짓 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/컴포짓 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[퍼사드 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/퍼사드 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[프록시 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/프록시 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[플라이웨이트 패턴](./객체지향 OOP/디자인패턴/2. 구조패턴/플라이웨이트 패턴.md)</br>
-┃　　　┃　　　┗━　[**3. 행위패턴**](./객체지향 OOP/디자인패턴/3. 행위패턴)</br>
-┃　　　┃　　　┃　　　┗━　[메멘토 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/메멘토 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[방문자 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/방문자 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[상태 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/상태 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[옵저버 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/옵저버 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[이터레이터 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/이터레이터 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[인터프리터 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/인터프리터 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[전략 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/전략 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[중재자 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/중재자 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[책임연쇄 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/책임연쇄 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[커맨드 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/커맨드 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[템플릿메소드 패턴](./객체지향 OOP/디자인패턴/3. 행위패턴/템플릿메소드 패턴.md)</br>
-┃　　　┃　　　┗━　[디자인패턴](./객체지향 OOP/디자인패턴/디자인패턴.md)</br>
-┃　　　┃　　　┗━　[위임 패턴(Delegate Pattern)](./객체지향 OOP/디자인패턴/위임 패턴(Delegate Pattern).md)</br>
-┃　　　┗━　[Exponential Backoff And Jitter](./객체지향 OOP/Exponential Backoff And Jitter.md)</br>
-┃　　　┗━　[SOLID](./객체지향 OOP/SOLID.md)</br>
-┃　　　┗━　[응집도와 결합도](./객체지향 OOP/응집도와 결합도.md)</br>
 ┗━　[**네트워크 Network**](./네트워크 Network)</br>
 ┃　　　┗━　[**L1 network access layer**](./네트워크 Network/L1 network access layer)</br>
 ┃　　　┃　　　┗━　[CRC](./네트워크 Network/L1 network access layer/CRC.md)</br>
@@ -145,6 +110,7 @@ avg_file_length  : 4043
 ┃　　　┃　　　┗━　[4계층 장비](./네트워크 Network/L3 transport layer/4계층 장비.md)</br>
 ┃　　　┃　　　┗━　[SO_REUSEADDR](./네트워크 Network/L3 transport layer/SO_REUSEADDR.md)</br>
 ┃　　　┃　　　┗━　[SSH config](./네트워크 Network/L3 transport layer/SSH config.md)</br>
+┃　　　┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/L3 transport layer/Sticky Session과 Session Clustering.md)</br>
 ┃　　　┃　　　┗━　[TCP와 UDP](./네트워크 Network/L3 transport layer/TCP와 UDP.md)</br>
 ┃　　　┃　　　┗━　[전송계층 프로토콜](./네트워크 Network/L3 transport layer/전송계층 프로토콜.md)</br>
 ┃　　　┗━　[**L4 appplication layer**](./네트워크 Network/L4 appplication layer)</br>
@@ -164,8 +130,8 @@ avg_file_length  : 4043
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./네트워크 Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
 ┃　　　┗━　[**error**](./네트워크 Network/error)</br>
 ┃　　　┃　　　┗━　[Context deadline exceeded](./네트워크 Network/error/Context deadline exceeded.md)</br>
+┃　　　┗━　[Exponential Backoff And Jitter](./네트워크 Network/Exponential Backoff And Jitter.md)</br>
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
-┃　　　┗━　[Sticky Session과 Session Clustering](./네트워크 Network/Sticky Session과 Session Clustering.md)</br>
 ┃　　　┗━　[Switch](./네트워크 Network/Switch.md)</br>
 ┃　　　┗━　[bandwidth](./네트워크 Network/bandwidth.md)</br>
 ┃　　　┗━　[가상화 기술](./네트워크 Network/가상화 기술.md)</br>
@@ -644,12 +610,47 @@ avg_file_length  : 4043
 ┃　　　┃　　　┗━　[통신](./아키텍처 및 방법론/MSA/통신.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 격리](./아키텍처 및 방법론/MSA/트랜잭션 격리.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 로그 테일링 패턴](./아키텍처 및 방법론/MSA/트랜잭션 로그 테일링 패턴.md)</br>
+┃　　　┗━　[**객체지향**](./아키텍처 및 방법론/객체지향)</br>
+┃　　　┃　　　┗━　[**디자인패턴**](./아키텍처 및 방법론/객체지향/디자인패턴)</br>
+┃　　　┃　　　┃　　　┗━　[**1. 생성패턴**](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[빌더 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/빌더 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[싱글톤 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/싱글톤 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[추상팩토리 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/추상팩토리 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[팩토리메소드 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/팩토리메소드 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[프로토타입 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/프로토타입 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[**2. 구조패턴**](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[데코레이터 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/데코레이터 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[브릿지 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/브릿지 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[어댑터 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/어댑터 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[컴포짓 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/컴포짓 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[퍼사드 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/퍼사드 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[프록시 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/프록시 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[플라이웨이트 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/플라이웨이트 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[**3. 행위패턴**](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[메멘토 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/메멘토 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[방문자 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/방문자 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[상태 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/상태 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[옵저버 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/옵저버 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[이터레이터 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/이터레이터 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[인터프리터 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/인터프리터 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[전략 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/전략 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[중재자 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/중재자 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[책임연쇄 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/책임연쇄 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[커맨드 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/커맨드 패턴.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[템플릿메소드 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/템플릿메소드 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[디자인패턴](./아키텍처 및 방법론/객체지향/디자인패턴/디자인패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[위임 패턴(Delegate Pattern)](./아키텍처 및 방법론/객체지향/디자인패턴/위임 패턴(Delegate Pattern).md)</br>
+┃　　　┃　　　┗━　[SOLID](./아키텍처 및 방법론/객체지향/SOLID.md)</br>
+┃　　　┃　　　┗━　[응집도와 결합도](./아키텍처 및 방법론/객체지향/응집도와 결합도.md)</br>
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[**알고리즘 Algorithm**](./알고리즘 Algorithm)</br>
 ┃　　　┗━　[세그먼트트리](./알고리즘 Algorithm/세그먼트트리.md)</br>
 ┃　　　┗━　[외판원순회](./알고리즘 Algorithm/외판원순회.md)</br>
 ┗━　[**언어 Language**](./언어 Language)</br>
+┃　　　┗━　[**Go**](./언어 Language/Go)</br>
+┃　　　┃　　　┗━　[gomod와 gosum](./언어 Language/Go/gomod와 gosum.md)</br>
+┃　　　┃　　　┗━　[고루틴 스케줄링](./언어 Language/Go/고루틴 스케줄링.md)</br>
 ┃　　　┗━　[**Java**](./언어 Language/Java)</br>
 ┃　　　┃　　　┗━　[**JVM**](./언어 Language/Java/JVM)</br>
 ┃　　　┃　　　┃　　　┗━　[Heap영역 구조와 GC](./언어 Language/Java/JVM/Heap영역 구조와 GC.md)</br>
@@ -700,11 +701,11 @@ avg_file_length  : 4043
 ┃　　　┃　　　┗━　[범위 지정 함수](./언어 Language/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[제네릭과 variance](./언어 Language/Kotlin/제네릭과 variance.md)</br>
 ┃　　　┗━　[**Rust**](./언어 Language/Rust)</br>
-┃　　　┃　　　┗━　[+멀티 스레드 웹 서버 만들기](./언어 Language/Rust/+멀티 스레드 웹 서버 만들기.md)</br>
 ┃　　　┃　　　┗━　[Rc 타입과 Weak 타입](./언어 Language/Rust/Rc 타입과 Weak 타입.md)</br>
 ┃　　　┃　　　┗━　[String](./언어 Language/Rust/String.md)</br>
 ┃　　　┃　　　┗━　[Trait](./언어 Language/Rust/Trait.md)</br>
 ┃　　　┃　　　┗━　[동시성](./언어 Language/Rust/동시성.md)</br>
+┃　　　┃　　　┗━　[멀티 스레드 웹 서버 만들기](./언어 Language/Rust/멀티 스레드 웹 서버 만들기.md)</br>
 ┃　　　┃　　　┗━　[소유권과 Lifetime](./언어 Language/Rust/소유권과 Lifetime.md)</br>
 ┃　　　┃　　　┗━　[스마트 포인터 활용](./언어 Language/Rust/스마트 포인터 활용.md)</br>
 ┃　　　┃　　　┗━　[조건문과 반복문](./언어 Language/Rust/조건문과 반복문.md)</br>
@@ -790,8 +791,10 @@ avg_file_length  : 4043
 ┃　　　┗━　[**보안**](./운영체제 Operating System/보안)</br>
 ┃　　　┃　　　┗━　[엑세스 제어](./운영체제 Operating System/보안/엑세스 제어.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
+┃　　　┗━　[디스크 시스템](./운영체제 Operating System/디스크 시스템.md)</br>
 ┃　　　┗━　[운영체제 유형](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
+┃　　　┗━　[파일 시스템](./운영체제 Operating System/파일 시스템.md)</br>
 ┗━　[**인공지능 AI**](./인공지능 AI)</br>
 ┃　　　┗━　[**실습**](./인공지능 AI/실습)</br>
 ┃　　　┃　　　┗━　[CNN](./인공지능 AI/실습/CNN.md)</br>
