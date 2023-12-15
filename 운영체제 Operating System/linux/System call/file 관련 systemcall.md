@@ -29,10 +29,15 @@ SYNOPSIS
   - `O_WRONLY`: 쓰기 전용
   - `O_RDWR`: 둘 다 가능
   - `O_EXCL`: 이미 존재하는 파일을 개방할 때 개방을 막음
-  - `O_CREAT`: 파일 생성
+  - `O_CREAT`: 파일이 존재하지 않을 경우 파일 생성
     ```bash
     filedes = open("temp.txt", O_CREAT | O_RDWR, 0644)
     ```
+  - `O_APPEND`: 파일의 맨 끝에 내용 추가만 가능
+  - `O_TRUNC`: 파일을 생성할 때 이미 있는 파일이고, 쓰기 옵션으로 열었으면 내용을 모두 지우고 파일의 길이를 0으로 변경
+  - `O_NONBLOCK/O_NDELAY`: 비블로킹(non-blocking) 입출력 옵션으로 파일을 읽거나 쓰고 난 후의 동작에 영향을 준다. 디스크의 파일 입출력보다는 FIFO 같은 특수 파일의 입출력에 의미가 있다. 디스크인 경우 읽거나 쓸 데이터가 없으면 `-1`을 리턴한다.
+  - `O_SYNC/O_DSYNC:` 파일에 쓰기 동작을 할 때 보통 버퍼에만 쓰고 나중에 디스크와 같은 저장 장치로 옮겨쓰는데, 이 옵션이 설정되어 있으면 저장 장치에 쓰기를 마쳐야 쓰기 동작을 완료한다. 
+    - `O_SYNC` 플래그는 파일의 수정 시각 속성도 수정할 때까지 기다린다. 이 옵션을 설정하면 프로그램의 실행 속도는 느려질 수 있지만 디스크에 확실하게 저장됨을 보장한다.
 
 ### close
 
@@ -98,6 +103,45 @@ SYNOPSIS
      lseek(int fildes, off_t offset, int whence);
 ```
 
+- lseek을 활용해 다양한 코드를 작성할 수 있다.
+  - 파일 크기 구하기
+    ```c
+    ...
+    int main(int argc, char **argv) {
+      int filedes;
+      off_t newpos;
+
+      filedes = open(argv[1], O_RDONLY);
+
+      // rw pointer을 EOF로 이동
+      newpos = lseek(filedes, (off_t)0, SEEK_END);
+      printf("file size : %lld\n", newpos);
+
+      close(filedes);
+    }
+    ```
+
+  - 파일의 내용을 읽고 소문자를 대문자로 치환하기 
+    ```c
+    ...
+    int main() {
+      char buffer[1];
+      int fd = open("temp1.txt", O_RDWR);
+      while (read(fd, buffer, sizeof(buffer)) > 0) {
+        char* b = &buffer[0];
+        if('a' <= *b && *b <= 'z') {
+          *b = *b - 'a' + 'A';			
+          lseek(fd, -1, SEEK_CUR); 
+          if (write(fd, b, 1) < 1) {
+            break;
+          }
+        }
+        printf("%c", *b);
+      }
+      close(fd);
+    }
+    ```
+
 ### umask
 
 ```c
@@ -105,12 +149,8 @@ SYNOPSIS
 mode_t umask(mode_t mask);
 ```
 
-```bash
-#include<unistd.h>
-#include<sys/types.h>
-#include<sys/stat.h>
-#include<fcntl.h>
-
+```c
+...
 int main() {
   mode_t oldmask = umask(023);
   int fd = open("test.txt", O_CREAT, 0777);

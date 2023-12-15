@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 662
-derectories      : 140
-avg_file_length  : 4047
+files            : 668
+derectories      : 141
+avg_file_length  : 4044
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -137,6 +137,7 @@ avg_file_length  : 4047
 ┃　　　┗━　[가상화 기술](./네트워크 Network/가상화 기술.md)</br>
 ┃　　　┗━　[네트워크](./네트워크 Network/네트워크.md)</br>
 ┃　　　┗━　[네트워크 보안](./네트워크 Network/네트워크 보안.md)</br>
+┃　　　┗━　[네트워크 침해](./네트워크 Network/네트워크 침해.md)</br>
 ┃　　　┗━　[로드밸런서](./네트워크 Network/로드밸런서.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./네트워크 Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┃　　　┗━　[이중화](./네트워크 Network/이중화.md)</br>
@@ -651,6 +652,7 @@ avg_file_length  : 4047
 ┃　　　┗━　[**Go**](./언어 Language/Go)</br>
 ┃　　　┃　　　┗━　[gomod와 gosum](./언어 Language/Go/gomod와 gosum.md)</br>
 ┃　　　┃　　　┗━　[고루틴 스케줄링](./언어 Language/Go/고루틴 스케줄링.md)</br>
+┃　　　┃　　　┗━　[메모리 관리](./언어 Language/Go/메모리 관리.md)</br>
 ┃　　　┗━　[**Java**](./언어 Language/Java)</br>
 ┃　　　┃　　　┗━　[**JVM**](./언어 Language/Java/JVM)</br>
 ┃　　　┃　　　┃　　　┗━　[Heap영역 구조와 GC](./언어 Language/Java/JVM/Heap영역 구조와 GC.md)</br>
@@ -714,66 +716,72 @@ avg_file_length  : 4047
 ┃　　　┗━　[자바<？>와 코틀린<*>](./언어 Language/자바<？>와 코틀린<*>.md)</br>
 ┗━　[**운영체제 Operating System**](./운영체제 Operating System)</br>
 ┃　　　┗━　[**linux**](./운영체제 Operating System/linux)</br>
+┃　　　┃　　　┗━　[**Authority**](./운영체제 Operating System/linux/Authority)</br>
+┃　　　┃　　　┃　　　┗━　[chattr](./운영체제 Operating System/linux/Authority/chattr.md)</br>
+┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/Authority/chmod.md)</br>
+┃　　　┃　　　┃　　　┗━　[chown](./운영체제 Operating System/linux/Authority/chown.md)</br>
+┃　　　┃　　　┃　　　┗━　[사용자 관리](./운영체제 Operating System/linux/Authority/사용자 관리.md)</br>
 ┃　　　┃　　　┗━　[**BPF**](./운영체제 Operating System/linux/BPF)</br>
 ┃　　　┃　　　┃　　　┗━　[BCC](./운영체제 Operating System/linux/BPF/BCC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BPF](./운영체제 Operating System/linux/BPF/BPF.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BPF 프로그램 타입](./운영체제 Operating System/linux/BPF/BPF 프로그램 타입.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BTF](./운영체제 Operating System/linux/BPF/BTF.md)</br>
-┃　　　┃　　　┗━　[**authority**](./운영체제 Operating System/linux/authority)</br>
-┃　　　┃　　　┃　　　┗━　[chattr](./운영체제 Operating System/linux/authority/chattr.md)</br>
-┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/authority/chmod.md)</br>
-┃　　　┃　　　┃　　　┗━　[chown](./운영체제 Operating System/linux/authority/chown.md)</br>
-┃　　　┃　　　┃　　　┗━　[사용자 관리](./운영체제 Operating System/linux/authority/사용자 관리.md)</br>
-┃　　　┃　　　┗━　[**disk & dir**](./운영체제 Operating System/linux/disk & dir)</br>
-┃　　　┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/disk & dir/LVM.md)</br>
-┃　　　┃　　　┃　　　┗━　[Linux 디렉토리 구조](./운영체제 Operating System/linux/disk & dir/Linux 디렉토리 구조.md)</br>
-┃　　　┃　　　┃　　　┗━　[RAID](./운영체제 Operating System/linux/disk & dir/RAID.md)</br>
-┃　　　┃　　　┃　　　┗━　[Symbolic Link](./운영체제 Operating System/linux/disk & dir/Symbolic Link.md)</br>
-┃　　　┃　　　┃　　　┗━　[file 관련 systemcall](./운영체제 Operating System/linux/disk & dir/file 관련 systemcall.md)</br>
-┃　　　┃　　　┃　　　┗━　[od](./운영체제 Operating System/linux/disk & dir/od.md)</br>
-┃　　　┃　　　┃　　　┗━　[백업](./운영체제 Operating System/linux/disk & dir/백업.md)</br>
-┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./운영체제 Operating System/linux/disk & dir/파일 관리 명령어.md)</br>
-┃　　　┃　　　┃　　　┗━　[파일 시스템](./운영체제 Operating System/linux/disk & dir/파일 시스템.md)</br>
-┃　　　┃　　　┃　　　┗━　[파일 종류](./운영체제 Operating System/linux/disk & dir/파일 종류.md)</br>
-┃　　　┃　　　┗━　[**kernel**](./운영체제 Operating System/linux/kernel)</br>
-┃　　　┃　　　┃　　　┗━　[Linux 커널 심층 분석](./운영체제 Operating System/linux/kernel/Linux 커널 심층 분석.md)</br>
-┃　　　┃　　　┃　　　┗━　[유저모드와 커널모드](./운영체제 Operating System/linux/kernel/유저모드와 커널모드.md)</br>
-┃　　　┃　　　┃　　　┗━　[커널 모듈](./운영체제 Operating System/linux/kernel/커널 모듈.md)</br>
-┃　　　┃　　　┗━　[**memory**](./운영체제 Operating System/linux/memory)</br>
-┃　　　┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/memory/Swap메모리.md)</br>
-┃　　　┃　　　┗━　[**network**](./운영체제 Operating System/linux/network)</br>
-┃　　　┃　　　┃　　　┗━　[**주요명령어**](./운영체제 Operating System/linux/network/주요명령어)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[arp](./운영체제 Operating System/linux/network/주요명령어/arp.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ifconfig](./운영체제 Operating System/linux/network/주요명령어/ifconfig.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ping과 netstat](./운영체제 Operating System/linux/network/주요명령어/ping과 netstat.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[route로 라우팅 테이블 확인하기](./운영체제 Operating System/linux/network/주요명령어/route로 라우팅 테이블 확인하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[DNS 서버](./운영체제 Operating System/linux/network/DNS 서버.md)</br>
-┃　　　┃　　　┃　　　┗━　[Netfilter](./운영체제 Operating System/linux/network/Netfilter.md)</br>
-┃　　　┃　　　┃　　　┗━　[Virtual Networking Interface](./운영체제 Operating System/linux/network/Virtual Networking Interface.md)</br>
-┃　　　┃　　　┃　　　┗━　[iptables](./운영체제 Operating System/linux/network/iptables.md)</br>
-┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/network/namespace와 cgroup.md)</br>
-┃　　　┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/network/network namespaces.md)</br>
-┃　　　┃　　　┃　　　┗━　[네트워크 침해](./운영체제 Operating System/linux/network/네트워크 침해.md)</br>
-┃　　　┃　　　┗━　[**process**](./운영체제 Operating System/linux/process)</br>
-┃　　　┃　　　┃　　　┗━　[Deamon process](./운영체제 Operating System/linux/process/Deamon process.md)</br>
-┃　　　┃　　　┃　　　┗━　[httpd](./운영체제 Operating System/linux/process/httpd.md)</br>
-┃　　　┃　　　┃　　　┗━　[pipe](./운영체제 Operating System/linux/process/pipe.md)</br>
-┃　　　┃　　　┃　　　┗━　[signal](./운영체제 Operating System/linux/process/signal.md)</br>
-┃　　　┃　　　┃　　　┗━　[top](./운영체제 Operating System/linux/process/top.md)</br>
-┃　　　┃　　　┃　　　┗━　[프로세스 관리](./운영체제 Operating System/linux/process/프로세스 관리.md)</br>
-┃　　　┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/process/환경변수와 프로세스.md)</br>
-┃　　　┃　　　┗━　[**shell**](./운영체제 Operating System/linux/shell)</br>
-┃　　　┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/shell/bash_profile과 bashrc.md)</br>
-┃　　　┃　　　┃　　　┗━　[shell](./운영체제 Operating System/linux/shell/shell.md)</br>
-┃　　　┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/shell/zshrc.md)</br>
-┃　　　┃　　　┗━　[IP masquerading](./운영체제 Operating System/linux/IP masquerading.md)</br>
+┃　　　┃　　　┗━　[**Disk & Dir**](./운영체제 Operating System/linux/Disk & Dir)</br>
+┃　　　┃　　　┃　　　┗━　[LVM](./운영체제 Operating System/linux/Disk & Dir/LVM.md)</br>
+┃　　　┃　　　┃　　　┗━　[Linux 디렉토리 구조](./운영체제 Operating System/linux/Disk & Dir/Linux 디렉토리 구조.md)</br>
+┃　　　┃　　　┃　　　┗━　[RAID](./운영체제 Operating System/linux/Disk & Dir/RAID.md)</br>
+┃　　　┃　　　┃　　　┗━　[Symbolic Link](./운영체제 Operating System/linux/Disk & Dir/Symbolic Link.md)</br>
+┃　　　┃　　　┃　　　┗━　[od](./운영체제 Operating System/linux/Disk & Dir/od.md)</br>
+┃　　　┃　　　┃　　　┗━　[백업](./운영체제 Operating System/linux/Disk & Dir/백업.md)</br>
+┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./운영체제 Operating System/linux/Disk & Dir/파일 관리 명령어.md)</br>
+┃　　　┃　　　┃　　　┗━　[파일 시스템](./운영체제 Operating System/linux/Disk & Dir/파일 시스템.md)</br>
+┃　　　┃　　　┃　　　┗━　[파일 종류](./운영체제 Operating System/linux/Disk & Dir/파일 종류.md)</br>
+┃　　　┃　　　┗━　[**Kernel**](./운영체제 Operating System/linux/Kernel)</br>
+┃　　　┃　　　┃　　　┗━　[Linux 커널 심층 분석](./운영체제 Operating System/linux/Kernel/Linux 커널 심층 분석.md)</br>
+┃　　　┃　　　┃　　　┗━　[유저모드와 커널모드](./운영체제 Operating System/linux/Kernel/유저모드와 커널모드.md)</br>
+┃　　　┃　　　┃　　　┗━　[커널 모듈](./운영체제 Operating System/linux/Kernel/커널 모듈.md)</br>
+┃　　　┃　　　┗━　[**Memory**](./운영체제 Operating System/linux/Memory)</br>
+┃　　　┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/Memory/Swap메모리.md)</br>
+┃　　　┃　　　┃　　　┗━　[VSS, RSS, PSS, USS](./운영체제 Operating System/linux/Memory/VSS, RSS, PSS, USS.md)</br>
+┃　　　┃　　　┗━　[**Network**](./운영체제 Operating System/linux/Network)</br>
+┃　　　┃　　　┃　　　┗━　[**주요명령어**](./운영체제 Operating System/linux/Network/주요명령어)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[arp](./운영체제 Operating System/linux/Network/주요명령어/arp.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ifconfig](./운영체제 Operating System/linux/Network/주요명령어/ifconfig.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ping과 netstat](./운영체제 Operating System/linux/Network/주요명령어/ping과 netstat.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[route로 라우팅 테이블 확인하기](./운영체제 Operating System/linux/Network/주요명령어/route로 라우팅 테이블 확인하기.md)</br>
+┃　　　┃　　　┃　　　┗━　[DNS 서버](./운영체제 Operating System/linux/Network/DNS 서버.md)</br>
+┃　　　┃　　　┃　　　┗━　[IP masquerading](./운영체제 Operating System/linux/Network/IP masquerading.md)</br>
+┃　　　┃　　　┃　　　┗━　[Netfilter](./운영체제 Operating System/linux/Network/Netfilter.md)</br>
+┃　　　┃　　　┃　　　┗━　[Virtual Networking Interface](./운영체제 Operating System/linux/Network/Virtual Networking Interface.md)</br>
+┃　　　┃　　　┃　　　┗━　[iptables](./운영체제 Operating System/linux/Network/iptables.md)</br>
+┃　　　┃　　　┃　　　┗━　[iptables 방화벽 설정](./운영체제 Operating System/linux/Network/iptables 방화벽 설정.md)</br>
+┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./운영체제 Operating System/linux/Network/namespace와 cgroup.md)</br>
+┃　　　┃　　　┃　　　┗━　[network namespaces](./운영체제 Operating System/linux/Network/network namespaces.md)</br>
+┃　　　┃　　　┗━　[**Process**](./운영체제 Operating System/linux/Process)</br>
+┃　　　┃　　　┃　　　┗━　[Deamon process](./운영체제 Operating System/linux/Process/Deamon process.md)</br>
+┃　　　┃　　　┃　　　┗━　[httpd](./운영체제 Operating System/linux/Process/httpd.md)</br>
+┃　　　┃　　　┃　　　┗━　[pipe](./운영체제 Operating System/linux/Process/pipe.md)</br>
+┃　　　┃　　　┃　　　┗━　[signal](./운영체제 Operating System/linux/Process/signal.md)</br>
+┃　　　┃　　　┃　　　┗━　[top](./운영체제 Operating System/linux/Process/top.md)</br>
+┃　　　┃　　　┃　　　┗━　[프로세스 관리](./운영체제 Operating System/linux/Process/프로세스 관리.md)</br>
+┃　　　┃　　　┃　　　┗━　[환경변수와 프로세스](./운영체제 Operating System/linux/Process/환경변수와 프로세스.md)</br>
+┃　　　┃　　　┗━　[**Shell**](./운영체제 Operating System/linux/Shell)</br>
+┃　　　┃　　　┃　　　┗━　[bash_profile과 bashrc](./운영체제 Operating System/linux/Shell/bash_profile과 bashrc.md)</br>
+┃　　　┃　　　┃　　　┗━　[shell](./운영체제 Operating System/linux/Shell/shell.md)</br>
+┃　　　┃　　　┃　　　┗━　[zshrc](./운영체제 Operating System/linux/Shell/zshrc.md)</br>
+┃　　　┃　　　┗━　[**System call**](./운영체제 Operating System/linux/System call)</br>
+┃　　　┃　　　┃　　　┗━　[file 관련 systemcall](./운영체제 Operating System/linux/System call/file 관련 systemcall.md)</br>
+┃　　　┃　　　┃　　　┗━　[fork와 exec](./운영체제 Operating System/linux/System call/fork와 exec.md)</br>
+┃　　　┃　　　┃　　　┗━　[mmap](./운영체제 Operating System/linux/System call/mmap.md)</br>
+┃　　　┃　　　┃　　　┗━　[wait과 waitpid](./운영체제 Operating System/linux/System call/wait과 waitpid.md)</br>
+┃　　　┃　　　┃　　　┗━　[리눅스 시스템 프로그래밍 프로젝트](./운영체제 Operating System/linux/System call/리눅스 시스템 프로그래밍 프로젝트.md)</br>
 ┃　　　┃　　　┗━　[Linux Package](./운영체제 Operating System/linux/Linux Package.md)</br>
 ┃　　　┃　　　┗━　[Linux 배포판](./운영체제 Operating System/linux/Linux 배포판.md)</br>
 ┃　　　┃　　　┗━　[Linux 부팅 과정](./운영체제 Operating System/linux/Linux 부팅 과정.md)</br>
 ┃　　　┃　　　┗━　[Linux 특징 및 관련용어](./운영체제 Operating System/linux/Linux 특징 및 관련용어.md)</br>
+┃　　　┃　　　┗━　[Redirection와 FD](./운영체제 Operating System/linux/Redirection와 FD.md)</br>
 ┃　　　┃　　　┗━　[Runlevel](./운영체제 Operating System/linux/Runlevel.md)</br>
 ┃　　　┃　　　┗━　[X window](./운영체제 Operating System/linux/X window.md)</br>
-┃　　　┃　　　┗━　[iptables 방화벽 설정](./운영체제 Operating System/linux/iptables 방화벽 설정.md)</br>
 ┃　　　┃　　　┗━　[mail](./운영체제 Operating System/linux/mail.md)</br>
 ┃　　　┃　　　┗━　[명령어들](./운영체제 Operating System/linux/명령어들.md)</br>
 ┃　　　┗━　[**memory**](./운영체제 Operating System/memory)</br>
@@ -797,9 +805,8 @@ avg_file_length  : 4047
 ┃　　　┗━　[파일 시스템](./운영체제 Operating System/파일 시스템.md)</br>
 ┗━　[**인공지능 AI**](./인공지능 AI)</br>
 ┃　　　┗━　[**실습**](./인공지능 AI/실습)</br>
-┃　　　┃　　　┗━　[CNN](./인공지능 AI/실습/CNN.md)</br>
+┃　　　┃　　　┗━　[CNN, RNN](./인공지능 AI/실습/CNN, RNN.md)</br>
 ┃　　　┃　　　┗━　[MNIST 숫자 판별](./인공지능 AI/실습/MNIST 숫자 판별.md)</br>
-┃　　　┃　　　┗━　[RNN](./인공지능 AI/실습/RNN.md)</br>
 ┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능 AI/실습/배, 자동차, 비행기 분류하기.md)</br>
 ┃　　　┗━　[CNN](./인공지능 AI/CNN.md)</br>
 ┃　　　┗━　[DropOut](./인공지능 AI/DropOut.md)</br>

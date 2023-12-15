@@ -52,7 +52,8 @@ $ kill -l
 
 ## signal 종류
 
-아래는 31번까지의 signal의 종류와 동작을 나타내는 표이다.
+- 아래는 31번까지의 signal의 종류와 동작을 나타내는 표이다.
+- 이후 번호는 `SIGRTMIN`, `SIGRTMAX`인데, 실시간 통신과 같은 특정 용도로 Custom하여 사용할 수 있다.
 
 |번호|signal 이름|발생 및 용도|defailt action|리눅스 버전|
 |-|-|-|-|-|
@@ -73,8 +74,8 @@ $ kill -l
 |15|SIGTERM(TERM)|일반적으로 kill signal이 전송되기 전에 전송된다. 잡히는 signal이기 때문에 종료되는 것을 트랙할 수 있다.|종료|ANSI|
 |16|SIGTKFLT|코프로세서 스택 실패|||
 |17|SIGCHLD(CHLD)|프로세스 종료시 그 부모 프로세스에게 보내지는 signal|무시|POSIX|
-|18|SIGCONT(CONT)|STOP signal 이후 계속 진행할 때 사용. ; 정지 되지 않은 경우 무시됨||POSIX|
-|19|SIGSTOP(STOP)|정지 signal; SIGSTP과 같으나 잡거나 무시할 수 없음|프로세스 정지POSIX|
+|18|SIGCONT(CONT)|STOP signal 이후 계속 진행할 때 사용. ; 정지 되지 않은 경우 무시됨|POSIX|
+|19|SIGSTOP(STOP)|정지 signal; SIGSTP과 같으나 잡거나 무시할 수 없음|프로세스 정지|POSIX|
 |20|SIGTSTP(TSTP)|키보드에 의해 발생하는 signal로 `Ctrl + Z`로 생성된다. ; 터미널 정지 문자|프로세스 정지|POSIX|
 |21|SIGTTIN|백그라운드에서의 제어터미널 읽기|프로세스 정지|POSIX|
 |22|SIGTTOU|백그라운드에서의 제어터미널 쓰기|프로세스 정지|POSIX|
@@ -91,4 +92,5 @@ $ kill -l
 ---
 참고
 - https://linuxhandbook.com/sigterm-vs-sigkill/
+- https://stackoverflow.com/questions/31882797/how-to-use-sigrtmax-and-sigrtmin
 - linux man
