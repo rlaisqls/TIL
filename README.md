@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 668
+files            : 680
 derectories      : 141
-avg_file_length  : 4044
+avg_file_length  : 3974
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -655,7 +655,7 @@ avg_file_length  : 4044
 ┃　　　┃　　　┗━　[메모리 관리](./언어 Language/Go/메모리 관리.md)</br>
 ┃　　　┗━　[**Java**](./언어 Language/Java)</br>
 ┃　　　┃　　　┗━　[**JVM**](./언어 Language/Java/JVM)</br>
-┃　　　┃　　　┃　　　┗━　[Heap영역 구조와 GC](./언어 Language/Java/JVM/Heap영역 구조와 GC.md)</br>
+┃　　　┃　　　┃　　　┗━　[Heap 영역 구조와 GC](./언어 Language/Java/JVM/Heap 영역 구조와 GC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[JVM 구성요소](./언어 Language/Java/JVM/JVM 구성요소.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Java Bytecode](./언어 Language/Java/JVM/Java Bytecode.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Permanent to Metaspace](./언어 Language/Java/JVM/Permanent to Metaspace.md)</br>
@@ -737,9 +737,21 @@ avg_file_length  : 4044
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./운영체제 Operating System/linux/Disk & Dir/파일 시스템.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 종류](./운영체제 Operating System/linux/Disk & Dir/파일 종류.md)</br>
 ┃　　　┃　　　┗━　[**Kernel**](./운영체제 Operating System/linux/Kernel)</br>
-┃　　　┃　　　┃　　　┗━　[Linux 커널 심층 분석](./운영체제 Operating System/linux/Kernel/Linux 커널 심층 분석.md)</br>
+┃　　　┃　　　┃　　　┗━　[Block I／O](./운영체제 Operating System/linux/Kernel/Block I／O.md)</br>
+┃　　　┃　　　┃　　　┗━　[동기화와 lock](./운영체제 Operating System/linux/Kernel/동기화와 lock.md)</br>
+┃　　　┃　　　┃　　　┗━　[디버깅](./운영체제 Operating System/linux/Kernel/디버깅.md)</br>
+┃　　　┃　　　┃　　　┗━　[메모리 관리와 캐시](./운영체제 Operating System/linux/Kernel/메모리 관리와 캐시.md)</br>
+┃　　　┃　　　┃　　　┗━　[모듈과 장치](./운영체제 Operating System/linux/Kernel/모듈과 장치.md)</br>
+┃　　　┃　　　┃　　　┗━　[시스템 콜과 인터럽트](./운영체제 Operating System/linux/Kernel/시스템 콜과 인터럽트.md)</br>
 ┃　　　┃　　　┃　　　┗━　[유저모드와 커널모드](./운영체제 Operating System/linux/Kernel/유저모드와 커널모드.md)</br>
+┃　　　┃　　　┃　　　┗━　[이식성](./운영체제 Operating System/linux/Kernel/이식성.md)</br>
+┃　　　┃　　　┃　　　┗━　[커널 개념](./운영체제 Operating System/linux/Kernel/커널 개념.md)</br>
 ┃　　　┃　　　┃　　　┗━　[커널 모듈](./운영체제 Operating System/linux/Kernel/커널 모듈.md)</br>
+┃　　　┃　　　┃　　　┗━　[타이머](./운영체제 Operating System/linux/Kernel/타이머.md)</br>
+┃　　　┃　　　┃　　　┗━　[파일시스템](./운영체제 Operating System/linux/Kernel/파일시스템.md)</br>
+┃　　　┃　　　┃　　　┗━　[프로세스 관리](./운영체제 Operating System/linux/Kernel/프로세스 관리.md)</br>
+┃　　　┃　　　┃　　　┗━　[프로세스 스케줄러](./운영체제 Operating System/linux/Kernel/프로세스 스케줄러.md)</br>
+┃　　　┃　　　┃　　　┗━　[프로세스 주소 공간](./운영체제 Operating System/linux/Kernel/프로세스 주소 공간.md)</br>
 ┃　　　┃　　　┗━　[**Memory**](./운영체제 Operating System/linux/Memory)</br>
 ┃　　　┃　　　┃　　　┗━　[Swap메모리](./운영체제 Operating System/linux/Memory/Swap메모리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VSS, RSS, PSS, USS](./운영체제 Operating System/linux/Memory/VSS, RSS, PSS, USS.md)</br>
