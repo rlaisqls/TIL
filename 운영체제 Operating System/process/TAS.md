@@ -1,12 +1,12 @@
 # TAS(Test and set)
 
-TAS은 메모리 위치를 write하고, 그것의 이전 값을 atomic으로 (thread safe)하게 반환하는 명령어이다.
+TAS은 메모리 위치를 write하고, 그것의 이전 값을 atomic으로 (thread safe)하게 반환하는 함수이다.
 
 한 프로세스가 TAS를 performing하고 있다면, 다른 프로세스는 그 프로세스의 작용이 끝나기 전에 TAS를 실행할 수 없다. 
 
 ## 동작
 
-동작 내용
+**동작 내용**
 - 주어진 불리언 값의 현재 값을 반환하고, 그 불리언 값을 true 로 덮어쓴다.
 반환 정보
 - true : 플래그가 원래 true 일 때.
@@ -30,7 +30,7 @@ testAndSet(flag); // false
 
 두개의 CPU가 있다. 그리고 두 CPU가 공유할 수 있는 공간인 [DPRAM](https://en.wikipedia.org/wiki/DPRAM)이 있다.
 
-CPU1이 TAS를 발행하면, DPRAM이 `internal note`라는걸 내부에 만들어놓고 메모리 주소를 저장해놓는다.
+CPU1이 TAS를 발행하면, DPRAM이 `internal note`라는 걸 내부에 만들어놓고 메모리 주소를 저장해놓는다.
 
 이때 나머지 CPU2가 같은 메모리에 TAS를 발행하면 DPRAM은 `internal note`를 체크해본다. 그곳에 뭔가 있다는걸 확인하면 `BUSY` interrrupt를 발행해서 CPU2가 기다린 후에 retry하도록 한다. 이것이 바로 interrupt mechanism를 사용해서 busy waiting과 spinlock을 구현하는 방법이다. 
 
@@ -56,7 +56,7 @@ function TestAndSet(boolean_ref lock) {
 
 ## SpinLock
 
-TAS 의 성질을 활용하여 SpinLock을 구현할 수 있다.
+TAS의 성질을 활용하여 SpinLock을 구현할 수 있다.
 
 ```c
 #include <iostream>
@@ -190,7 +190,7 @@ int main() {
 }
 ```
 
-TAS를 통해서 값을 그냥 증가시키지 않고, 한 쓰레드만 값을 증가시킬 수 있도록 순서를 직렬화 하면 문제를 해결할 수 있다.
+값을 그냥 증가시키지 않고, TAS를 통해서 한 쓰레드만 값을 증가시킬 수 있도록 순서를 직렬화하면 문제를 해결할 수 있다.
 
 ---
 

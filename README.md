@@ -3,7 +3,7 @@
 ```
 files            : 680
 derectories      : 141
-avg_file_length  : 3974
+avg_file_length  : 3975
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -741,7 +741,7 @@ avg_file_length  : 3974
 ┃　　　┃　　　┃　　　┗━　[동기화와 lock](./운영체제 Operating System/linux/Kernel/동기화와 lock.md)</br>
 ┃　　　┃　　　┃　　　┗━　[디버깅](./운영체제 Operating System/linux/Kernel/디버깅.md)</br>
 ┃　　　┃　　　┃　　　┗━　[메모리 관리와 캐시](./운영체제 Operating System/linux/Kernel/메모리 관리와 캐시.md)</br>
-┃　　　┃　　　┃　　　┗━　[모듈과 장치](./운영체제 Operating System/linux/Kernel/모듈과 장치.md)</br>
+┃　　　┃　　　┃　　　┗━　[모듈과 장치 관리](./운영체제 Operating System/linux/Kernel/모듈과 장치 관리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[시스템 콜과 인터럽트](./운영체제 Operating System/linux/Kernel/시스템 콜과 인터럽트.md)</br>
 ┃　　　┃　　　┃　　　┗━　[유저모드와 커널모드](./운영체제 Operating System/linux/Kernel/유저모드와 커널모드.md)</br>
 ┃　　　┃　　　┃　　　┗━　[이식성](./운영체제 Operating System/linux/Kernel/이식성.md)</br>
