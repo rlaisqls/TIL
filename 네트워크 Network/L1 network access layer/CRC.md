@@ -14,6 +14,7 @@
   - Divisor: 100000111 // CRC-8 = x8 + x2 + x + 1
 
 - 계산 과정
+  
     <img width="502" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/fef5d632-6de0-4aa3-9c7f-ec6e20652c6d">
 
 - 전송 데이터
@@ -27,6 +28,7 @@
   - Divisor: 100000111 // CRC-8 = x8 + x2 + x + 1
 
 - 검증 과정
+  
     <img width="500" alt="image" src="https://github.com/rlaisqls/rlaisqls/assets/81006587/f5ce1e1c-313e-42ab-b2c7-f72382683551">
 
 - 검증 결과

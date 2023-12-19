@@ -3,7 +3,7 @@
 ```
 files            : 680
 derectories      : 141
-avg_file_length  : 3975
+avg_file_length  : 3978
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -717,9 +717,8 @@ avg_file_length  : 3975
 ┗━　[**운영체제 Operating System**](./운영체제 Operating System)</br>
 ┃　　　┗━　[**linux**](./운영체제 Operating System/linux)</br>
 ┃　　　┃　　　┗━　[**Authority**](./운영체제 Operating System/linux/Authority)</br>
-┃　　　┃　　　┃　　　┗━　[chattr](./운영체제 Operating System/linux/Authority/chattr.md)</br>
+┃　　　┃　　　┃　　　┗━　[chattr과 chown](./운영체제 Operating System/linux/Authority/chattr과 chown.md)</br>
 ┃　　　┃　　　┃　　　┗━　[chmod](./운영체제 Operating System/linux/Authority/chmod.md)</br>
-┃　　　┃　　　┃　　　┗━　[chown](./운영체제 Operating System/linux/Authority/chown.md)</br>
 ┃　　　┃　　　┃　　　┗━　[사용자 관리](./운영체제 Operating System/linux/Authority/사용자 관리.md)</br>
 ┃　　　┃　　　┗━　[**BPF**](./운영체제 Operating System/linux/BPF)</br>
 ┃　　　┃　　　┃　　　┗━　[BCC](./운영체제 Operating System/linux/BPF/BCC.md)</br>
@@ -795,6 +794,7 @@ avg_file_length  : 3975
 ┃　　　┃　　　┗━　[Runlevel](./운영체제 Operating System/linux/Runlevel.md)</br>
 ┃　　　┃　　　┗━　[X window](./운영체제 Operating System/linux/X window.md)</br>
 ┃　　　┃　　　┗━　[mail](./운영체제 Operating System/linux/mail.md)</br>
+┃　　　┃　　　┗━　[man](./운영체제 Operating System/linux/man.md)</br>
 ┃　　　┃　　　┗━　[명령어들](./운영체제 Operating System/linux/명령어들.md)</br>
 ┃　　　┗━　[**memory**](./운영체제 Operating System/memory)</br>
 ┃　　　┃　　　┗━　[Memory Mapping](./운영체제 Operating System/memory/Memory Mapping.md)</br>

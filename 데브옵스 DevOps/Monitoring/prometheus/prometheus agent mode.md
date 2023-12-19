@@ -1,7 +1,5 @@
 # prometheus agent mode
 
-![image](https://github.com/rlaisqls/TIL/assets/81006587/3892a18f-6864-422e-9aff-b045f9b56929)
-
 - The core design of Prometheus is inpired by Google's [Borgmon monitoring system](https://sre.google/sre-book/practical-alerting/#the-rise-of-borgmon), you can deploy a Prometheus server alongside the applications you want to monitor, tell Prometheus how to reach them, and allow to scrape the current values of their metrics at regular intervals.
 
 - Such a collection method, which is often referred to as the "pull model", is the core principle that allow Prometheus to be lightweight and reliable.

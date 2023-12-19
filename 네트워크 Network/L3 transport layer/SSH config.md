@@ -32,5 +32,3 @@ Host ops
 ```bash
 $ ssh dev
 ```
-
-이걸 왜 이제 알았지??

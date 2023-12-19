@@ -80,12 +80,12 @@ $ kill -l
 |21|SIGTTIN|백그라운드에서의 제어터미널 읽기|프로세스 정지|POSIX|
 |22|SIGTTOU|백그라운드에서의 제어터미널 쓰기|프로세스 정지|POSIX|
 |23|SIGURG|소켓에서의 긴급한 상태||4.2 BSD|
-|24|SIGXCPU|CPU 시간 제한 초과 setrlimit(2)||4.2 BSD|
-|25|SIGXFSZ|파일 크기제한 초과 setrlimit(2)||4.2 BSD|
-|26|SIGVTALRM|가상 시간 경고 setitimer(2)||4.2 BSD|
-|27|SIGPROF|프로파일링 타이머 경고. setitimer(2) ||4.2 BSD|
+|24|SIGXCPU|CPU 시간 제한 초과 `setrlimit(2)`||4.2 BSD|
+|25|SIGXFSZ|파일 크기제한 초과 `setrlimit(2)`||4.2 BSD|
+|26|SIGVTALRM|가상 시간 경고 `setitimer(2)`||4.2 BSD|
+|27|SIGPROF|프로파일링 타이머 경고. `setitimer(2)` ||4.2 BSD|
 |28|SIGWINCH|윈도우 사이즈 변경4.3 BSD, Sun|
-|29|SIGIO|기술자에서 입출력이 가능함. fcntl(2)||4.2 BSD|
+|29|SIGIO|기술자에서 입출력이 가능함. `fcntl(2)`||4.2 BSD|
 |30|SIGPWR|전원 실패||System V|
 |31|UNUSED|사용 안함|||
 
