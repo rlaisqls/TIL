@@ -6,34 +6,34 @@ JPA의 영속성 컨텍스트는 변경 감지를 위해 스냅샷 인스턴스�
 
 ### 스칼라 타입으로 조회
 
-스칼라 타입은 영속성 컨텍스트가 관리하지 않기 떄문에, 엔티티가 아닌 스칼라 타입으로 조회하면 읽기 전용 쿼리에서 메모리를 절약할 수 있다.
+- 스칼라 타입은 영속성 컨텍스트가 관리하지 않기 떄문에, 엔티티가 아닌 스칼라 타입으로 조회하면 읽기 전용 쿼리에서 메모리를 절약할 수 있다.
 
-```sql
-SELECT u.id, u.name, u.age FROM user u
-```
+    ```sql
+    SELECT u.id, u.name, u.age FROM user u
+    ```
 
 ### 읽기 전용 쿼리 힌트 사용
 
-하이버네이트 전용 힌트인 org.hibernate.readOnly를 사용하면 엔티티를 읽기 전용으로 조회할 수 있다. 읽기 전용이므로 영속성 컨텍스트가 스냅샷을 저장하지 않는다.
+- 하이버네이트 전용 힌트인 `org.hibernate.readOnly`를 사용하면 엔티티를 읽기 전용으로 조회할 수 있다. 읽기 전용이므로 영속성 컨텍스트가 스냅샷을 저장하지 않는다.
 
-하지만 1차 캐시에는 저장되기 때문에 똑같은 식별자로 2번 조회했을 경우 반환되는 주소는 같다.
+- 하지만 1차 캐시에는 저장되기 때문에 똑같은 식별자로 2번 조회했을 경우 반환되는 주소가 같다.
 
-```java
-Member member = em.createQuery("SELECT m FROM Member m", Member.class)
-    .setHint("org.hibernate.readOnly", true)
-    .getSingleResult();
-```
+    ```java
+    Member member = em.createQuery("SELECT m FROM Member m", Member.class)
+        .setHint("org.hibernate.readOnly", true)
+        .getSingleResult();
+    ```
 
 ### 읽기 전용 트랜잭션 사용
 
-스프링 프레임워크를 사용하면 트랜잭션을 읽기 전용 모드로 설정할 수 있다. 트랜잭션을 읽기 전용으로 설정하면 스프링 프레임워크가 하이버네이트 세션의 플러시 모드가 MANUAL로 바뀌기 때문에, 강제로 플러시 호출을 하지 않으면 플러시가 일어나지 않는다.
+- 스프링 프레임워크를 사용하면 트랜잭션을 읽기 전용 모드로 설정할 수 있다. 트랜잭션을 읽기 전용으로 설정하면 스프링 프레임워크가 하이버네이트 세션의 플러시 모드가 MANUAL로 바뀌기 때문에, 강제로 플러시 호출을 하지 않으면 플러시가 일어나지 않는다.
 
-```java
-@Transactional(readOnly = true)
-```
+    ```java
+    @Transactional(readOnly = true)
+    ```
 
-flush를 할 필요가 없기 때문에 Dirty Checking을 할 필요가 없고, 엔티티의 스냅샷(딥카피)또한 만들지 않는다. 스냅샷 비교와 같은 무거운 로직들이 실행되지 않으므로 성능이 향상된다.
+- flush를 할 필요가 없기 때문에 Dirty Checking을 할 필요가 없고, 엔티티의 스냅샷(딥카피)또한 만들지 않는다. 스냅샷 비교와 같은 무거운 로직들이 실행되지 않으므로 성능이 향상된다.
 
 ### 트랜잭션 밖에서 읽기
 
-트랜잭션을 실행하지 않고 EntityManager를 직접 호출하여 플러시 없이 엔티티를 읽으면 스냅샷을 만들지 않고 엔티티를 빠르게 조회할 수 있다. 
+- 트랜잭션을 실행하지 않고 EntityManager를 직접 호출하여 플러시 없이 엔티티를 읽으면 스냅샷을 만들지 않고 엔티티를 빠르게 조회할 수 있다. 

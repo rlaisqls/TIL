@@ -6,7 +6,7 @@ CORS란Cross-Origin Resource Sharing, 교차 출처 리소스 공유의 약자�
 
 Spring Security에서도 기본적으로 CORS가 제한되어있다. 이때 특정 도메인, 또는 전체 도메인에서의 요청을 허용하려면 아래와 같이 설정해주면 된다.
 
-``java
+```java
 @Bean
 public class SecurityFilterChain filterChain(HttpSecurity: httpSecurity)  {
         
@@ -30,7 +30,7 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedHeaders("*")
-                .allowedOrigins("http://localhost:3000"); //원하는 도메인, 포트를 적어준다
+                .allowedOrigins("http://localhost:3000"); //원하는 Origin을 적어준다
     }
 
 }

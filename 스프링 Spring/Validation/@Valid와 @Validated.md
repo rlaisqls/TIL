@@ -9,7 +9,7 @@ Spring에서는 일종의 어댑터인 `LocalValidatorFactoryBean`이 제약 조
 implementation(" group: org.springframework.boot:spring-boot-starter-validation")
 ```
 
-예를 들어 @NotNull 어노테이션은 필드의 값이 null이 아님을 체크하고, @Min은 해당 값의 최솟값을 지정할 수 있도록 한다.
+예를 들어 `@NotNull` 어노테이션은 필드의 값이 null이 아님을 체크하고, @Min은 해당 값의 최솟값을 지정할 수 있도록 한다.
 
 ```java
 	@NotNull
@@ -29,7 +29,7 @@ implementation(" group: org.springframework.boot:spring-boot-starter-validation"
 
 그리고 검증에 오류가 있다면 `MethodArgumentNotValidException` 예외가 발생하게 되고, 디스패처 서블릿에 기본으로 등록된 예외 리졸버(Exception Resolver)인 `DefaultHandlerExceptionResolver`에 의해 400 BadRequest 에러가 발생한다.
 
-이러한 이유로 @Valid는 기본적으로 컨트롤러에서만 동작한다.
+이러한 이유로 `@Valid`는 기본적으로 컨트롤러에서만 동작한다.
 
 ```log
 org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Void> com.example.testing.validator.UserController.addUser(com.example.testing.validator.AddUserRequest) with 2 errors: [Field error in object 'addUserRequest' on field 'email': rejected value [asdfad]; codes [Email.addUserRequest.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addUserRequest.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@18c5ad90,.*]; default message [올바른 형식의 이메일 주소여야 합니다]] [Field error in object 'addUserRequest' on field 'age': rejected value [5]; codes [Min.addUserRequest.age,Min.age,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addUserRequest.age,age]; arguments []; default message [age],12]; default message [12 이상이어야 합니다]] 
@@ -57,6 +57,6 @@ javax.validation.ConstraintViolationException: getQuizList.category: 널이어�
 
 특정 ArgumnetResolver가 유효성을 검사하던 `@Valid`와 달리, `@Validated`는 **AOP 기반**으로 메소드 요청을 인터셉터하여 처리된다. @Validated를 클래스 레벨에 선언하면 해당 클래스에 유효성 검증을 위한 AOP의 어드바이스 또는 인터셉터(MethodValidationInterceptor)가 등록되고, 해당 클래스의 메소드들이 호출될 때 AOP의 포인트 컷으로써 요청을 가로채서 유효성 검증을 진행한다.
 
-이러한 이유로 @Validated를 사용하면 컨트롤러, 서비스, 레포지토리 등 계층에 무관하게 스프링 빈이라면 유효성 검증을 진행할 수 있다.
+이러한 이유로 `@Validated`를 사용하면 컨트롤러, 서비스, 레포지토리 등 계층에 무관하게 스프링 빈이라면 유효성 검증을 진행할 수 있다.
 
 Validated를 사용하면 group으로 [검증 순서를 지정](@GroupSequence.md)하는 것도 가능하다. 

@@ -52,4 +52,4 @@ GROUP BY CUBE(grade, sex)
 |2학년|여자|9|
 |3학년|남자|67|
 |3학년|여자|13|
-|(null)|232|
+|(null)|(null)|232|

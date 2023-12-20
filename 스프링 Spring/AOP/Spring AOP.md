@@ -13,75 +13,75 @@ AOP 없이 흩어진 관심사를 처리하면 다음과 같은 문제가 발생
 
 ### AOP의 주요 개념
 
-**Aspect :** Advice + PointCut로 AOP의 기본 모듈
+- **Aspect :** Advice + PointCut로 AOP의 기본 모듈
 
-**Advice :** Target에 제공할 부가 기능을 담고 있는 모듈
+- **Advice :** Target에 제공할 부가 기능을 담고 있는 모듈
 
-**Target :** Advice가 부가 기능을 제공할 대상 (Advice가 적용될 비즈니스 로직)
+- **Target :** Advice가 부가 기능을 제공할 대상 (Advice가 적용될 비즈니스 로직)
 
-**JointPoint :** Advice가 적용될 위치. 메서드 진입 지점, 생성자 호출 시점, 필드에서 값을 꺼내올 때 등 다양한 시점에 적용 가능
+- **JointPoint :** Advice가 적용될 위치. 메서드 진입 지점, 생성자 호출 시점, 필드에서 값을 꺼내올 때 등 다양한 시점에 적용 가능
 
-**PointCut :** Target을 지정하는 정규 표현식
+- **PointCut :** Target을 지정하는 정규 표현식
 
 ### Spring AOP
 
-Spring AOP는 기본적으로 프록시 방식으로 동작한다. 프록시 패턴이란 어떤 객체를 사용하고자 할 때, 객체를 직접적으로 참조 하는 것이 아니라, 해당 객체를 대행(대리, proxy)하는 객체를 통해 대상객체에 접근하는 방식을 말한다.
+- Spring AOP는 기본적으로 프록시 방식으로 동작한다. 프록시 패턴이란 어떤 객체를 사용하고자 할 때, 객체를 직접적으로 참조 하는 것이 아니라, 해당 객체를 대행(대리, proxy)하는 객체를 통해 대상객체에 접근하는 방식을 말한다.
 
-Spring AOP는 왜 프록시 방식을 사용하는가? Spring은 왜 Target 객체를 직접 참조하지 않고 프록시 객체를 사용할까?
+- Spring AOP는 왜 프록시 방식을 사용하는가? Spring은 왜 Target 객체를 직접 참조하지 않고 프록시 객체를 사용할까?
 
-프록시 객체 없이 Target 객체를 사용하고 있다고 생각해보자. Aspect 클래스에 정의된 부가 기능을 사용하기 위해서, 우리는 **원하는 위치에서 직접 Aspect 클래스를 호출**해야 한다. 이 경우 Target 클래스 안에 부가 기능을 호출하는 로직이 포함되기 때문에, AOP를 적용하지 않았을 때와 동일한 문제가 발생한다. 여러 곳에서 반복적으로 Aspect를 호출해야 하고, 그로 인해 유지보수성이 크게 떨어진다.
+  - 프록시 객체 없이 Target 객체를 사용하고 있다고 생각해보자. Aspect 클래스에 정의된 부가 기능을 사용하기 위해서, 우리는 **원하는 위치에서 직접 Aspect 클래스를 호출**해야 한다. 이 경우 Target 클래스 안에 부가 기능을 호출하는 로직이 포함되기 때문에, AOP를 적용하지 않았을 때와 동일한 문제가 발생한다. 여러 곳에서 반복적으로 Aspect를 호출해야 하고, 그로 인해 유지보수성이 크게 떨어진다.
+ 
+  - 그래서 Spring에서는 Target 클래스 혹은 그의 상위 인터페이스를 상속하는 프록시 클래스를 생성하고, 프록시 클래스에서 부가 기능에 관련된 처리를 한다. 이렇게 하면 Target에서 Aspect을 알 필요 없이 순수한 비즈니스 로직에 집중할 수 있다.
 
-그래서 Spring에서는 Target 클래스 혹은 그의 상위 인터페이스를 상속하는 프록시 클래스를 생성하고, 프록시 클래스에서 부가 기능에 관련된 처리를 한다. 이렇게 하면 Target에서 Aspect을 알 필요 없이 순수한 비즈니스 로직에 집중할 수 있다.
 
+- 예를 들어 다음 코드의 `logic()` 메서드가 Target이라면,
 
-예를 들어 다음 코드의 logic() 메서드가 Target이라면,
+    ```java
+    public interface TargetService{
+        void logic();
+    }
 
-```java
-public interface TargetService{
-    void logic();
-}
+    @Service 
+    public class TargetServiceImpl implements TargetService{
+        @Override 
+        public void logic() {
+            ...
+        }
+    }
+    ```
+- Proxy에서 Target 전/후에 부가 기능을 처리하고 Target을 호출한다.
 
-@Service 
-public class TargetServiceImpl implements TargetService{
-    @Override 
-    public void logic() {
+    ```java
+    @Service 
+    public class TargetServiceProxy implements TargetService{ 
+        // 지금은 구현체를 직접 생성했지만, 외부에서 의존성을 주입 받도록 할 수 있다.
+        TargetService targetService = new TargetServiceImpl();
         ...
+
+        @Override 
+        public void logic() {
+            // Target 호출 이전에 처리해야하는 부가 기능
+            // Target 호출
+            targetService.logic();
+            // Target 호출 이후에 처리해야하는 부가 기능
+        }
     }
-}
-```
-Proxy에서 Target 전/후에 부가 기능을 처리하고 Target을 호출한다.
+    ```
 
-```java
-@Service 
-public class TargetServiceProxy implements TargetService{ 
-    // 지금은 구현체를 직접 생성했지만, 외부에서 의존성을 주입 받도록 할 수 있다.
-    TargetService targetService = new TargetServiceImpl();
-    ...
+- 사용하는 입장에서는 Target 객체를 사용하는 것처럼 일반적으로 사용할 수 있다.
 
-    @Override 
-    public void logic() {
-        // Target 호출 이전에 처리해야하는 부가 기능
-        // Target 호출
-        targetService.logic();
-        // Target 호출 이후에 처리해야하는 부가 기능
+    ```java
+    @Service 
+    public class UseService {
+        // 지금은 구현체를 직접 생성했지만, 외부에서 의존성을 주입 받도록 할 수 있다.
+        TargetService targetService = new TargetServiceProxy();
+        ..
+            
+        public void useLogic() {
+            //Target 호출하는 것처럼 부가 기능이 추가된 Proxy를 호출한다.
+            targetService.logic();
+        }
     }
-}
-```
+    ```
 
-사용하는 입장에서는 Target 객체를 사용하는 것처럼 Proxy 객체를 사용할 수 있다.
-
-```java
-@Service 
-public class UseService {
-    // 지금은 구현체를 직접 생성했지만, 외부에서 의존성을 주입 받도록 할 수 있다.
-    TargetService targetService = new TargetServiceProxy();
-    ..
-		
-    public void useLogic() {
-        //Target 호출하는 것처럼 부가 기능이 추가된 Proxy를 호출한다.
-        targetService.logic();
-    }
-}
-```
-
-Spring AOP에서는 AOP를 적용할 클래스를 지정하면 내부적으로 프록시가 생성되어 작동한다.
+- Spring AOP에서는 AOP를 적용할 클래스를 지정하면 내부적으로 프록시가 생성되어 작동한다.

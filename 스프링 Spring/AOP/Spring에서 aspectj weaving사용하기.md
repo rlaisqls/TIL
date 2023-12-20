@@ -97,7 +97,7 @@ Aspect Weaver 라이브러리는 `@Aspect`, `@Pointcut`, `@Before`, `@Around` �
 
 AspectJ Weaver는 Aspect와 타깃의 바이트 코드를 위빙하고, 위빙된 바이트 코드를 컴파일러에게 제공하는 역할을 한다.
 
-![image](https://github.com/team-aliens/DMS-Backend/assets/81006587/ab4c925f-9cce-499c-9160-8dd51d70db56)
+<img height=200px src="https://github.com/team-aliens/DMS-Backend/assets/81006587/ab4c925f-9cce-499c-9160-8dd51d70db56">
 
 ### AspectJ Compiler
 

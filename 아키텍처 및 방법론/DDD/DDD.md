@@ -6,7 +6,7 @@ DDD는 **Domain Driven Design**, 즉 도메인 주도 설계이다.
 
 ## 도메인(Domain)
 
-도메인이란 **'소프트웨어로 해결하고자 하는 문제 영역'**을 의미한다.
+도메인이란 '**소프트웨어로 해결하고자 하는 문제 영역**'을 의미한다.
 
 한 도메인은 다시 하위 도메인으로 나눌 수 있고, 도메인들은 서로 연동하여 완전한 기능을 제공한다.
 
@@ -25,7 +25,7 @@ DDD는 **Domain Driven Design**, 즉 도메인 주도 설계이다.
 
 위 요소가 잘 드러나록 도메인 모델을 작성해야한다. 도메인 모델을 표현하는 방법에는 여러 가지가 있다. (상태 다이어그램, 클래스 다이어그램, UML 표기법 등)
 
-<img width="1307" alt="image" src="https://user-images.githubusercontent.com/81006587/205548506-2ea78315-bbcb-42ee-990f-4edde1768180.png">
+<img width="1107" alt="image" src="https://user-images.githubusercontent.com/81006587/205548506-2ea78315-bbcb-42ee-990f-4edde1768180.png">
 
 주문 도메인을 잘 이해할 수 있도록 도메인 모델을 작성한 모습이다.
 
@@ -35,7 +35,7 @@ DDD는 **Domain Driven Design**, 즉 도메인 주도 설계이다.
 
 ## **바운디드 컨텍스트**
 
-<img width="1165" alt="image" src="https://user-images.githubusercontent.com/81006587/205548607-00c5185e-48aa-40d3-84c3-a70b732b0f30.png">
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/81006587/205548607-00c5185e-48aa-40d3-84c3-a70b732b0f30.png">
 
 위에서 말했듯, 도메인은 사용자가 누구인가, 어떻게 사용하냐에 따라 같은요소라고 할지라도 계속 바뀔 수 있다. 논리적으로는 같은 존재처럼 보이지만 하위 도메인에 따라 다른 용어를 사용하는 경우도 있다.
 

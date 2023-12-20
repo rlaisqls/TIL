@@ -1,7 +1,5 @@
 # authn와 authz
 
-> Spring Security 패키지로 구분해놓았지만, Spring Security에 국한되는 내용이 아니라 그냥 인증방식에 대한 개념임을 알립니다. 추후 적절한 분류가 생기면 이동할 예정입니다.
-
 정보 보안에는 인증(Authentication, authn)와 인가(Authorization, authz)라는 개념이 있다. 간단히 말하자면 authn은 정체성 또는 그 유저가 **누구인지**와 관련있는 반면, authz는 권한 또는 **누군가가 할 수 있는 것**을 다룬다.
 
 둘은 연관되어있지만 서로 다른 개념이고, 유저를 식별하고 접근을 관리하는(IAM)에서 중요한 요소이다.
