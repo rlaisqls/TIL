@@ -160,3 +160,8 @@ Configure the value of `MINIMUM_IP_TARGET` to closely match the number of Pods y
 Avoid setting the value of `WARM_IP_TARGET` too low as it will cause additional calls to the EC2 API, and that might cause throttling of the requests. For large clusters use along with `MINIMUM_IP_TARGET` to avoid throttling of the requests.
 
 To configure these options, download `aws-k8s-cni.yaml` and set the environment variables. At the time of writing, the latest release is located here. Check the version of the configuration value matches the installed VPC CNI version.
+
+---
+reference
+- https://github.com/aws/amazon-vpc-cni-k8s/blob/master/docs/prefix-and-ip-target.md
+- https://team-xquare.notion.site/node-pod-b6ba5bf5b75145869e0797f3ee601458?pvs=4
