@@ -3,7 +3,7 @@
 ```
 files            : 678
 derectories      : 141
-avg_file_length  : 3981
+avg_file_length  : 3998
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -347,9 +347,9 @@ avg_file_length  : 3981
 ┃　　　┃　　　┃　　　┗━　[**object**](./데브옵스 DevOps/Kubernetes/개념/object)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Kubernetes/개념/object/Annotation.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/개념/object/CRD.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Deployment　Status](./데브옵스 DevOps/Kubernetes/개념/object/Deployment　Status.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Deployment　Strategy](./데브옵스 DevOps/Kubernetes/개념/object/Deployment　Strategy.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/개념/object/Deployments.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployment Status](./데브옵스 DevOps/Kubernetes/개념/object/Deployment Status.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployment Strategy](./데브옵스 DevOps/Kubernetes/개념/object/Deployment Strategy.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Events](./데브옵스 DevOps/Kubernetes/개념/object/Events.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Labels and Selectors](./데브옵스 DevOps/Kubernetes/개념/object/Labels and Selectors.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[PV & PVC](./데브옵스 DevOps/Kubernetes/개념/object/PV & PVC.md)</br>
@@ -428,7 +428,7 @@ avg_file_length  : 3981
 ┃　　　┃　　　┃　　　┗━　[nginx docker](./데브옵스 DevOps/Proxy/nginx/nginx docker.md)</br>
 ┃　　　┃　　　┃　　　┗━　[nginx 명령어](./데브옵스 DevOps/Proxy/nginx/nginx 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[nginx 설정](./데브옵스 DevOps/Proxy/nginx/nginx 설정.md)</br>
-┃　　　┃　　　┃　　　┗━　[sites━available](./데브옵스 DevOps/Proxy/nginx/sites━available.md)</br>
+┃　　　┃　　　┃　　　┗━　[sites available](./데브옵스 DevOps/Proxy/nginx/sites available.md)</br>
 ┃　　　┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/Proxy/nginx/리버스 프록시.md)</br>
 ┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
 ┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Proxy/Contour CRD 설치.md)</br>
@@ -535,7 +535,7 @@ avg_file_length  : 3981
 ┃　　　┃　　　┃　　　┗━　[Projection](./스프링 Spring/JPA/QuerydslJpa/Projection.md)</br>
 ┃　　　┃　　　┃　　　┗━　[QuerydslJpa와 QClass](./스프링 Spring/JPA/QuerydslJpa/QuerydslJpa와 QClass.md)</br>
 ┃　　　┃　　　┃　　　┗━　[QuerydslPredicateExecutor](./스프링 Spring/JPA/QuerydslJpa/QuerydslPredicateExecutor.md)</br>
-┃　　　┃　　　┃　　　┗━　[fetchResults가 deprecated된 이유](./스프링 Spring/JPA/QuerydslJpa/fetchResults가 deprecated된 이유.md)</br>
+┃　　　┃　　　┃　　　┗━　[fetchResults가 deprecated된 이유](./스프링 Spring/JPA/QuerydslJpa/fetchResults가 deprecated된 이유.md)</br>
 ┃　　　┃　　　┃　　　┗━　[기본문법](./스프링 Spring/JPA/QuerydslJpa/기본문법.md)</br>
 ┃　　　┃　　　┃　　　┗━　[동적쿼리](./스프링 Spring/JPA/QuerydslJpa/동적쿼리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[벌크연산](./스프링 Spring/JPA/QuerydslJpa/벌크연산.md)</br>
@@ -1164,9 +1164,9 @@ avg_file_length  : 3981
 ┃　　　┃　　　┃　　　┗━　[**object**](./데브옵스 DevOps/Kubernetes/개념/object)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./데브옵스 DevOps/Kubernetes/개념/object/Annotation.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[CRD](./데브옵스 DevOps/Kubernetes/개념/object/CRD.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Deployment　Status](./데브옵스 DevOps/Kubernetes/개념/object/Deployment　Status.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Deployment　Strategy](./데브옵스 DevOps/Kubernetes/개념/object/Deployment　Strategy.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./데브옵스 DevOps/Kubernetes/개념/object/Deployments.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployment Status](./데브옵스 DevOps/Kubernetes/개념/object/Deployment Status.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Deployment Strategy](./데브옵스 DevOps/Kubernetes/개념/object/Deployment Strategy.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Events](./데브옵스 DevOps/Kubernetes/개념/object/Events.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Labels and Selectors](./데브옵스 DevOps/Kubernetes/개념/object/Labels and Selectors.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[PV & PVC](./데브옵스 DevOps/Kubernetes/개념/object/PV & PVC.md)</br>
@@ -1245,7 +1245,7 @@ avg_file_length  : 3981
 ┃　　　┃　　　┃　　　┗━　[nginx docker](./데브옵스 DevOps/Proxy/nginx/nginx docker.md)</br>
 ┃　　　┃　　　┃　　　┗━　[nginx 명령어](./데브옵스 DevOps/Proxy/nginx/nginx 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[nginx 설정](./데브옵스 DevOps/Proxy/nginx/nginx 설정.md)</br>
-┃　　　┃　　　┃　　　┗━　[sites━available](./데브옵스 DevOps/Proxy/nginx/sites━available.md)</br>
+┃　　　┃　　　┃　　　┗━　[sites available](./데브옵스 DevOps/Proxy/nginx/sites available.md)</br>
 ┃　　　┃　　　┃　　　┗━　[리버스 프록시](./데브옵스 DevOps/Proxy/nginx/리버스 프록시.md)</br>
 ┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
 ┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Proxy/Contour CRD 설치.md)</br>
@@ -1352,7 +1352,7 @@ avg_file_length  : 3981
 ┃　　　┃　　　┃　　　┗━　[Projection](./스프링 Spring/JPA/QuerydslJpa/Projection.md)</br>
 ┃　　　┃　　　┃　　　┗━　[QuerydslJpa와 QClass](./스프링 Spring/JPA/QuerydslJpa/QuerydslJpa와 QClass.md)</br>
 ┃　　　┃　　　┃　　　┗━　[QuerydslPredicateExecutor](./스프링 Spring/JPA/QuerydslJpa/QuerydslPredicateExecutor.md)</br>
-┃　　　┃　　　┃　　　┗━　[fetchResults가 deprecated된 이유](./스프링 Spring/JPA/QuerydslJpa/fetchResults가 deprecated된 이유.md)</br>
+┃　　　┃　　　┃　　　┗━　[fetchResults가 deprecated된 이유](./스프링 Spring/JPA/QuerydslJpa/fetchResults가 deprecated된 이유.md)</br>
 ┃　　　┃　　　┃　　　┗━　[기본문법](./스프링 Spring/JPA/QuerydslJpa/기본문법.md)</br>
 ┃　　　┃　　　┃　　　┗━　[동적쿼리](./스프링 Spring/JPA/QuerydslJpa/동적쿼리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[벌크연산](./스프링 Spring/JPA/QuerydslJpa/벌크연산.md)</br>
@@ -1644,7 +1644,6 @@ avg_file_length  : 3981
 ┃　　　┗━　[퍼셉트론](./인공지능 AI/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능 AI/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXXT3Sb5**](./XXXT3Sb5)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
