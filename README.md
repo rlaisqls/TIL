@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 678
+files            : 679
 derectories      : 141
-avg_file_length  : 3998
+avg_file_length  : 3997
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -235,6 +235,8 @@ avg_file_length  : 3998
 ┃　　　┃　　　┗━　[SAA 오답노트 4~6](./데브옵스 DevOps/AWS/SAA 오답노트 4~6.md)</br>
 ┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
 ┃　　　┃　　　┗━　[Well Architected](./데브옵스 DevOps/AWS/Well Architected.md)</br>
+┃　　　┗━　[**Architecture**](./데브옵스 DevOps/Architecture)</br>
+┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/Architecture/zero trust.md)</br>
 ┃　　　┗━　[**Container**](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[**CNI**](./데브옵스 DevOps/Container/CNI)</br>
 ┃　　　┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI/CNI.md)</br>
@@ -433,8 +435,6 @@ avg_file_length  : 3998
 ┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
 ┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Proxy/Contour CRD 설치.md)</br>
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
-┃　　　┗━　[**architecture**](./데브옵스 DevOps/architecture)</br>
-┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
 ┃　　　┗━　[**tools**](./데브옵스 DevOps/tools)</br>
 ┃　　　┃　　　┗━　[Clium](./데브옵스 DevOps/tools/Clium.md)</br>
 ┃　　　┃　　　┗━　[Dex](./데브옵스 DevOps/tools/Dex.md)</br>
@@ -782,6 +782,7 @@ avg_file_length  : 3998
 ┃　　　┃　　　┃　　　┗━　[file 관련 systemcall](./운영체제 Operating System/linux/System call/file 관련 systemcall.md)</br>
 ┃　　　┃　　　┃　　　┗━　[fork와 exec](./운영체제 Operating System/linux/System call/fork와 exec.md)</br>
 ┃　　　┃　　　┃　　　┗━　[mmap](./운영체제 Operating System/linux/System call/mmap.md)</br>
+┃　　　┃　　　┃　　　┗━　[thread 관련 systemcall](./운영체제 Operating System/linux/System call/thread 관련 systemcall.md)</br>
 ┃　　　┃　　　┃　　　┗━　[wait과 waitpid](./운영체제 Operating System/linux/System call/wait과 waitpid.md)</br>
 ┃　　　┃　　　┃　　　┗━　[리눅스 시스템 프로그래밍 프로젝트](./운영체제 Operating System/linux/System call/리눅스 시스템 프로그래밍 프로젝트.md)</br>
 ┃　　　┃　　　┗━　[Linux Package](./운영체제 Operating System/linux/Linux Package.md)</br>
@@ -1052,6 +1053,8 @@ avg_file_length  : 3998
 ┃　　　┃　　　┗━　[SAA 오답노트 4~6](./데브옵스 DevOps/AWS/SAA 오답노트 4~6.md)</br>
 ┃　　　┃　　　┗━　[SAA 요약](./데브옵스 DevOps/AWS/SAA 요약.md)</br>
 ┃　　　┃　　　┗━　[Well Architected](./데브옵스 DevOps/AWS/Well Architected.md)</br>
+┃　　　┗━　[**Architecture**](./데브옵스 DevOps/Architecture)</br>
+┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/Architecture/zero trust.md)</br>
 ┃　　　┗━　[**Container**](./데브옵스 DevOps/Container)</br>
 ┃　　　┃　　　┗━　[**CNI**](./데브옵스 DevOps/Container/CNI)</br>
 ┃　　　┃　　　┃　　　┗━　[CNI](./데브옵스 DevOps/Container/CNI/CNI.md)</br>
@@ -1250,8 +1253,6 @@ avg_file_length  : 3998
 ┃　　　┃　　　┗━　[Contour](./데브옵스 DevOps/Proxy/Contour.md)</br>
 ┃　　　┃　　　┗━　[Contour CRD 설치](./데브옵스 DevOps/Proxy/Contour CRD 설치.md)</br>
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./데브옵스 DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
-┃　　　┗━　[**architecture**](./데브옵스 DevOps/architecture)</br>
-┃　　　┃　　　┗━　[zero trust](./데브옵스 DevOps/architecture/zero trust.md)</br>
 ┃　　　┗━　[**tools**](./데브옵스 DevOps/tools)</br>
 ┃　　　┃　　　┗━　[Clium](./데브옵스 DevOps/tools/Clium.md)</br>
 ┃　　　┃　　　┗━　[Dex](./데브옵스 DevOps/tools/Dex.md)</br>
@@ -1599,6 +1600,7 @@ avg_file_length  : 3998
 ┃　　　┃　　　┃　　　┗━　[file 관련 systemcall](./운영체제 Operating System/linux/System call/file 관련 systemcall.md)</br>
 ┃　　　┃　　　┃　　　┗━　[fork와 exec](./운영체제 Operating System/linux/System call/fork와 exec.md)</br>
 ┃　　　┃　　　┃　　　┗━　[mmap](./운영체제 Operating System/linux/System call/mmap.md)</br>
+┃　　　┃　　　┃　　　┗━　[thread 관련 systemcall](./운영체제 Operating System/linux/System call/thread 관련 systemcall.md)</br>
 ┃　　　┃　　　┃　　　┗━　[wait과 waitpid](./운영체제 Operating System/linux/System call/wait과 waitpid.md)</br>
 ┃　　　┃　　　┃　　　┗━　[리눅스 시스템 프로그래밍 프로젝트](./운영체제 Operating System/linux/System call/리눅스 시스템 프로그래밍 프로젝트.md)</br>
 ┃　　　┃　　　┗━　[Linux Package](./운영체제 Operating System/linux/Linux Package.md)</br>
@@ -1644,6 +1646,7 @@ avg_file_length  : 3998
 ┃　　　┗━　[퍼셉트론](./인공지능 AI/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능 AI/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[**XXHt8fgb**](./XXHt8fgb)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
