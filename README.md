@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 679
+files            : 680
 derectories      : 141
-avg_file_length  : 3997
+avg_file_length  : 3995
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -1646,7 +1646,6 @@ avg_file_length  : 3997
 ┃　　　┗━　[퍼셉트론](./인공지능 AI/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능 AI/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXHt8fgb**](./XXHt8fgb)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
