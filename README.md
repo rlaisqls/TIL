@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 683
+files            : 684
 derectories      : 141
-avg_file_length  : 3989
+avg_file_length  : 3986
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -815,6 +815,7 @@ avg_file_length  : 3989
 ┃　　　┃　　　┗━　[엑세스 제어](./운영체제 Operating System/보안/엑세스 제어.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[디스크 시스템](./운영체제 Operating System/디스크 시스템.md)</br>
+┃　　　┗━　[반도체 8대 공정](./운영체제 Operating System/반도체 8대 공정.md)</br>
 ┃　　　┗━　[운영체제 유형](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
 ┃　　　┗━　[파일 시스템](./운영체제 Operating System/파일 시스템.md)</br>
@@ -1637,6 +1638,7 @@ avg_file_length  : 3989
 ┃　　　┃　　　┗━　[엑세스 제어](./운영체제 Operating System/보안/엑세스 제어.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[디스크 시스템](./운영체제 Operating System/디스크 시스템.md)</br>
+┃　　　┗━　[반도체 8대 공정](./운영체제 Operating System/반도체 8대 공정.md)</br>
 ┃　　　┗━　[운영체제 유형](./운영체제 Operating System/운영체제 유형.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
 ┃　　　┗━　[파일 시스템](./운영체제 Operating System/파일 시스템.md)</br>
@@ -1654,7 +1656,6 @@ avg_file_length  : 3989
 ┃　　　┗━　[퍼셉트론](./인공지능 AI/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./인공지능 AI/활성화함수.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXsE8fDX**](./XXsE8fDX)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
