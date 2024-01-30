@@ -2,7 +2,7 @@
 
 ```
 files            : 685
-derectories      : 141
+derectories      : 141  
 avg_file_length  : 3982
 ```
 
