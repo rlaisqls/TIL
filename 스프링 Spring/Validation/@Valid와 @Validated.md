@@ -30,7 +30,7 @@ implementation(" group: org.springframework.boot:spring-boot-starter-validation"
 
 이러한 이유로 `@Valid`는 기본적으로 컨트롤러에서만 동작한다.
 
-```log
+```
 org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Void> com.example.testing.validator.UserController.addUser(com.example.testing.validator.AddUserRequest) with 2 errors: [Field error in object 'addUserRequest' on field 'email': rejected value [asdfad]; codes [Email.addUserRequest.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addUserRequest.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@18c5ad90,.*]; default message [올바른 형식의 이메일 주소여야 합니다]] [Field error in object 'addUserRequest' on field 'age': rejected value [5]; codes [Min.addUserRequest.age,Min.age,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addUserRequest.age,age]; arguments []; default message [age],12]; default message [12 이상이어야 합니다]] 
 	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.15.jar:5.3.15]
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.15.jar:5.3.15]
@@ -42,7 +42,7 @@ org.springframework.web.bind.MethodArgumentNotValidException: Validation failed 
 
 유효성 검증에 실패하면 에러가 발생하는데, 로그를 확인해보면 `MethodArgumentNotValidException` 예외가 아닌 `ConstraintViolationException` 예외가 발생하는 것을 확인할 수 있다. 이는 앞서 잠깐 설명한대로 동작 원리가 다르기 때문이다.
 
-```log
+```
 javax.validation.ConstraintViolationException: getQuizList.category: 널이어서는 안됩니다 
     at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:120) ~[spring-context-5.3.14.jar:5.3.14] 
     at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14] 

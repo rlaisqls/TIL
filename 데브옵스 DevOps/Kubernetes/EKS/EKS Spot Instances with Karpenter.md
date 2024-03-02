@@ -141,7 +141,7 @@ Karpenter controller logs can be sent to CloudWatch Logs using either Fluent Bit
 
 In the log stream, search for Provisioning failed log messages in the Karpenter controller logs for any provisioning failures. The example below shows provisioning failure due to reaching the account limit for Spot Instances.
 
-```log
+```
 2021-12-03T23:45:29.257Z        ERROR   controller.provisioning Provisioning failed, launching capacity, launching instances, with fleet error(s), UnfulfillableCapacity: Unable to fulfill capacity due to your request configuration. Please adjust your request and try again.; MaxSpotInstanceCountExceeded: Max spot instance count exceeded; launching instances, with fleet error(s), MaxSpotInstanceCountExceeded: Max spot instance count exceeded   {"commit": "6984094", "provisioner": "default"}
 ```
 

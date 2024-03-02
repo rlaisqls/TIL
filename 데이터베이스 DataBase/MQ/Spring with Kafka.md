@@ -110,7 +110,7 @@ class KafkaConsumer {
 
 클래스 형태 그대로 잘 받아지는 것을 확인할 수 있다.
 
-```log
+```
 2023-01-23T12:32:31.018+09:00  INFO 59221 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to _zuSLWdTRK2uv0vul3nAxw
 TestPayload(name=hello, age=18, data=TestData(address=earth, phone=12345678))
 ```
