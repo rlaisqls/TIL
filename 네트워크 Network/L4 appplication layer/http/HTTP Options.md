@@ -1,4 +1,3 @@
-# 📡 HTTP Method Options
 
 일반적인 브라우저를 사용하여 통신한 내용을 들여다보면, 본 요청 이전에 Request Method가 OPTIONS인 요청이 있는것을 볼 수 있다.
 

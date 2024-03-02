@@ -1,4 +1,3 @@
-# ⚓ Deplotments
 
 > Deplotment는 Pod와 ReplicaSets를 위한 선언적 업데이트를 제공한다.
 

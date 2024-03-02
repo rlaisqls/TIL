@@ -1,4 +1,3 @@
-# EBS CSI driver
 
 If you want to persist your own data to EBS in EKS environment, you can use EBS CSI driver addon provided by AWS.
 

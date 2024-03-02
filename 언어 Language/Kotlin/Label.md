@@ -1,4 +1,3 @@
-# Label
 
 Kotlin은 loop에 label을 지정해 break, continue 스코프를 정할 수 있다.
 

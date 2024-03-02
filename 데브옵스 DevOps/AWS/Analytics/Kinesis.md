@@ -1,4 +1,3 @@
-# Kinesis
 
 Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and reacy quickly to new information. With Amazon Kinesis, you can ingest real-time data such as video, audio, application logs, website clickstreams, and IoT telemetry data for machine learning, analytics, and other applications. Amazon Kinesis enables you to process and analyze daata as it arrives and respond instantly instread of having to wait until all your data is collected before the processing can begin.
 

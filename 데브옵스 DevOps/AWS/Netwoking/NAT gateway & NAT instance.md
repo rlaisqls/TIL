@@ -1,4 +1,3 @@
-# NAT gateway & NAT instance
 
 |속성|	NAT 게이트웨이|NAT 인스턴스|
 |-|-|-|

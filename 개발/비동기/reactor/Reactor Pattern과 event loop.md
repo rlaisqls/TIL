@@ -1,4 +1,3 @@
-# Reactor Pattern과 event loop
 
 Reactor 패턴은 동시에 들어오는 여러 종류의 이벤트를 처리하기 위한 동시성을 다루는 디자인 패턴 중 하나이다. Reactor 패턴은 관리하는 리소스에서 이벤트가 발생할 때까지 대기하다가 이벤트가 발생하면 해당 이벤트를 처리할 수 있는 핸들러(`handler`)에게 디스패치(`dispatch`)하는 방식으로 이벤트에 반응하며, '이벤트 핸들링(event handling)', event loop 패턴이라고도 부른다.
 

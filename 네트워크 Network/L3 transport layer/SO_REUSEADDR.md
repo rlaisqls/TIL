@@ -1,4 +1,3 @@
-# SO_REUSEADDR 옵션은 무슨 의미일까?
 
 > SO_REUSEADDR Specifies that the rules used in validating addresses supplied to bind() should allow reuse of local addresses, if this is supported by the protocol. This option takes an int value. This is a Boolean option
 

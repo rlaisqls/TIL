@@ -1,4 +1,3 @@
-# 📡 OSI 7 Layer
 OSI 모형은 국제표준화기구(ISO)에서 개발한 모델로, 컴퓨터 네트워크 프로토콜 디자인과 통신을 계층으로 나누어 설명한 것이다. 일반적으로 OSI 7 계층(OSI 7 Layer)이라고 한다. 분산된 이기종 시스템간의 네트워크 상호호환을 위한 표준 아키텍처를 정의하여, 통신을 하기 위한 업무를 계층별로 분할하고 분업할 수 있다는 점에서 의의를 가진다.
 
 <img src="https://images.velog.io/images/shleecloud/post/5a6d1fcc-2d48-4003-b892-7ffd64f943ee/osi.jpeg"></img>

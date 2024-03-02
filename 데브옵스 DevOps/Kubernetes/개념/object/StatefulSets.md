@@ -1,4 +1,3 @@
-# StatefulSets
 
 ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/4ad965a1-a37c-427b-a0af-36c650186c81)
 

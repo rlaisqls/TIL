@@ -1,4 +1,3 @@
-# ⚓ SpringBoot 서비스를 위한 Kubernetes 설정
 
 출처: https://velog.io/@airoasis/Spring-Boot-서비스를-위한-Kubernetes-설정
 

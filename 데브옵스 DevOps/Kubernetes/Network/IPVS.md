@@ -1,4 +1,3 @@
-# IPVS
 
 IP Virtual Server (IPVS) is a Linux connection (L4) load balancer. 
 

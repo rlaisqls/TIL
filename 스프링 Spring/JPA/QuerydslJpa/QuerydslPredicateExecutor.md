@@ -1,4 +1,3 @@
-# 🤔 QuerydslPredicateExecutor
 
 QuerydslPredicateExecutor는 스프링 데이터에서 제공하는 Querydsl 기능이다. <a href="https://docs.spring.io/spring-data/commons/docs/current/reference/html/#core.extensions.querydsl">(공식 문서)</a>
 

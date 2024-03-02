@@ -1,4 +1,3 @@
-# Snowcone
 
 Snowcone is the smallest AWS Snow family data transfer device. It can delivery 8TB Storage. Send data offline via device delivery or to AWS via AWS DataSync over the Internet
 

@@ -1,4 +1,3 @@
-# KMS Datakey
 
 ## 1. Intro
 

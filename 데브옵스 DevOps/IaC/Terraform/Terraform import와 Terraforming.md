@@ -1,4 +1,3 @@
-# Terraform import
 
 이미 사용하고 있는 인프라를 Terraform으로 가져오려면 import 명령어를 사용해야한다.
 

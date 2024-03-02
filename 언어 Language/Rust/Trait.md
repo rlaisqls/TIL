@@ -1,4 +1,3 @@
-# Trait
 
 - 여러 타입(type)의 공통된 행위/특성을 표시한 것을 Trait이라고 한다. Rust에서의 Trait는 (약간의 차이는 있지만) 다른 프로그래밍 언어에서의 인터페이스(interface)와 비슷한 개념이다.
 - Trait는 trait 라는 키워드를 사용하여 선언하며, trait 블럭 안에 공통 메서드의 원형(method signature)을 갖는다

@@ -1,4 +1,3 @@
-# node-shell
 
 kubernetes node에 쉽게 접속할 수 있도록 하는 kubectl 플러그인이다. 워커노드, 인그레스노드에 접근이 가능하고 root 권한으로 실행이 가능하다. 
 

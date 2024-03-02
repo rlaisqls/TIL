@@ -1,4 +1,3 @@
-# 🍏 Nginx certbot
 
 nginx에서 https를 적용하기 위해 certbot과 Let's encrypt를 사용해보자.
 

@@ -1,4 +1,3 @@
-# etcd
 
 etcd는 key:value 형태의 데이터를 저장하는 스토리지이다. Kubernetes는 기반 스토리지(backing storage)로 etcd를 사용하고 있고, 모든 데이터를 etcd에 보관한다. 클러스터에 어떤 노드가 몇 개나 있고 어떤 파드가 어떤 노드에서 동작하고 있는지 등의 정보가 etcd에 저장되는 것이다.
 

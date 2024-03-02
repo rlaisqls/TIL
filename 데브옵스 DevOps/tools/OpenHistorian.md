@@ -1,4 +1,3 @@
-# OpenHistorian
 
 ![image](https://github.com/rlaisqls/TIL/assets/81006587/99a9ce84-a556-40c6-9e90-c8f29f216a26)
 

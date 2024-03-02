@@ -1,4 +1,3 @@
-# cold stream과 hot stream
 
 flow에서 사용되는 개념인 cold stream과 hot stream에 대해 알아보고, 서로 비교해보자.
 

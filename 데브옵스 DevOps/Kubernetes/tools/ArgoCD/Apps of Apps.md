@@ -1,6 +1,4 @@
 
-# Apps of Apps
-
 ArgoCD application을 모아서 관리하는 패턴을 `App of Apps` 패턴이라고 한다. app of app 패턴으로 구성된 application을 sync하면 여러 argoCD application을 생성하고, 생성된 application은 바라보는 git에 저장된 쿠버네티스 리소스를 배포한다.
 
 상위 앱이 하위 앱을 여러개 정의하는 구조라고 보면 된다. 

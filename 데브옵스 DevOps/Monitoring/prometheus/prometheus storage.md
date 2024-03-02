@@ -1,4 +1,3 @@
-# prometheus storage
 
 Prometheus includes a local on-disk time series database, but also optionally integrates with remote storage systems.
 

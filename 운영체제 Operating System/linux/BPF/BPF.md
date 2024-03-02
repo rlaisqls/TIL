@@ -1,4 +1,3 @@
-# BPF(Berkeley Packet Filter)
 
 > For connected systems evolving these days, the amount of data transfer is huge, and the support infrastructure for the network analysis needed a way to filter out things pretty fast.
 

@@ -1,4 +1,3 @@
-# 🐬 ROLLUP과 CUBE
 
 ## ROLLUP
 

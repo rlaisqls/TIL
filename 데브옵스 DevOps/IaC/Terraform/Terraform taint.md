@@ -1,4 +1,3 @@
-# Terraform taint
 
 terraform taint는 특정 리소스를 "tainted" 상태로 표시하여, 다음 terraform apply 때 해당 리소스를 강제로 다시 만들게 한다. 특정 리소스를 교체해서 테스트하거나 디버깅해보고 싶을때 taint를 이용할 수 있다.
 

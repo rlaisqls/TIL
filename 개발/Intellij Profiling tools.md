@@ -1,4 +1,3 @@
-# Intellij Profiling tools
 
 IntelliJ IDEA Ultimate를 사용하고 있다면 **Profiling tools**을 사용하여 애플리케이션에 대한 부가적인 분석 정보를 얻을 수 있다. 세부 기능으로는 애플리케이션의 실행 방식과 메모리, CPU 리소스가 할당되는 방식에 대한 분석을 제공하는 Async Profiler, 애플리케이션이 실행되는 동안 JVM에서 발생한 이벤트에 대한 정보를 수집하는 모니터링 도구인 Java Flight Recorder 등이 있다.
 

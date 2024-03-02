@@ -1,4 +1,3 @@
-# Inline-Funtions과 Reified
 
 `inline` 키워드는 자바에서는 제공하지 않는 코틀린만의 키워드이다.
 

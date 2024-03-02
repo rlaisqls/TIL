@@ -1,4 +1,3 @@
-# DynamoDB
 
 Amazon DynamoDB is a key-balue and document database that delivers single-digit milisecond performance at any scal. It's a fully managed, multiregion, millisecond performance at any scale. It's a fully managed, multiregion, muultimaster, durable non-SQL database, It comes with build-in security, backup and restore, and in-memory caching for internet-scale applications.
 

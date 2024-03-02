@@ -1,4 +1,3 @@
-# java로 간단한 socket 프로그램만들기
 
 `java.net`의 Socket class와 Thread를 이용해 간단한 socket 통신 프로그램을 만들어보자.
 

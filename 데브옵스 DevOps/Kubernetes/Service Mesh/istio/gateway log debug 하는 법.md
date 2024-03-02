@@ -1,4 +1,3 @@
-# gateway log debug 하는 법
 
 Debugging Istio Envoy filters can be challenging but there are several techniques and tools that can help you troubleshoot issues. Here's a step-by-step guide to debug Istio Envoy filters:
 

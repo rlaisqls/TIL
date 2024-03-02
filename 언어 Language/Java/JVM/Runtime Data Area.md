@@ -1,4 +1,3 @@
-# ☕ Runtime Data Area
 
 런타임 데이터 영역(Runtime Data Area)은 JVM이 자바 프로그램 실행을 위한 데이터와 명령어를 저장하기 위해 OS로부터 할당받는 메모리 공간이다.
 

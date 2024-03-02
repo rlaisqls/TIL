@@ -1,4 +1,3 @@
-# MalformedPolicyDocument
 
 ```bash
 aws_iam_policy.codebuild: Modifying... [id=arn:aws:iam::<AWS Account ID>:policy/bot-dev-CodeBuild-policy]

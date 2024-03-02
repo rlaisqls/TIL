@@ -1,4 +1,3 @@
-# Disruption Budget
 
 Let's explore to limit the number of concurrent disruptions that your application experiences, allowing for higher availability while permitting the cluster administrator to manage the clusters nodes.
 

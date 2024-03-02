@@ -1,4 +1,3 @@
-# EKS Spot Instances with Karpenter
 
 Karpenter is a **dynamic, high performance cluster auto scaling solution** for the Kubernetes platform. Customers choose an auto scaling solution for a number of reasons, including improving the high availability and reliability of their workloads at the same reduced costs. With the introduction of [Amazon EC2 Spot Instances](https://aws.amazon.com/ec2/spot/), customers can reduce costs up to 90% compared to On-Demand prices. Combining a high performing cluster auto scaler like Karpenter with EC2 Spot Instances, EKS clusters can acquire compute capacity within minutes while keeping costs low.
 

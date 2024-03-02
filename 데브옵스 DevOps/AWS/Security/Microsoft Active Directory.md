@@ -1,4 +1,3 @@
-# Microsoft Active Directory
 
 - In 2017, AWS introduced AWS Directory Service for Microsoft Active Directory, also known as AWS Microsoft AS, which is managed Microsotf Active Directory (AD) that is performance optimized for small and midsize businesses.
 

@@ -1,4 +1,3 @@
-# TAS(Test and set)
 
 TAS은 메모리 위치를 write하고, 그것의 이전 값을 atomic으로 (thread safe)하게 반환하는 함수이다.
 

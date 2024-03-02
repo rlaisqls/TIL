@@ -1,4 +1,3 @@
-# Docker Image Layer
 
 Lets take a contrived example Dockerfile:
 

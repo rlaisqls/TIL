@@ -1,4 +1,3 @@
-# 🍃 AOP Annotation Annotation
 
 <a href="./AOP.md">AOP</a>란 Aspect Oriented Programming의 약자로 관점 지향 프로그래밍이라고 한다. AOP를 사용하면 기존 코드를 수정하지 않고 기존 코드에 동작을 추가할 수 있다.
 

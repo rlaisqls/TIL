@@ -1,4 +1,3 @@
-# detached entity passed to perist
 
 Hexagonal architecture를 사용해서 구현하다 문제가 생겼다.
 

@@ -1,4 +1,3 @@
-# Dex
 
 Dex is an identity service that uses OpenID Connect to drive authentication for other apps.
 

@@ -1,4 +1,3 @@
-# Resource Annotations
 
 The various resource annotations that Istio supports to control its behavior.
 

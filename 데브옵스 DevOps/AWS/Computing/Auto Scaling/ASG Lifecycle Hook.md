@@ -1,4 +1,3 @@
-# ASG Lifecycle Hook
 
 ASG를 통해 생성되는 인스턴스들은 아래와 같은 Lifecycle을 가지고 있다.
 

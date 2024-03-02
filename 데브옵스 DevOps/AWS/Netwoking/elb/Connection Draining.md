@@ -1,4 +1,3 @@
-# Connection Draining(Deregistration Delay)
 
 Connection Draining is a feature provided by Elastic Load Balancer that allows in-flight requests to complete before terminating an unhealthy instance.
 

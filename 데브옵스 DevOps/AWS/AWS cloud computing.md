@@ -1,4 +1,3 @@
-# AWS
 
 In 2006, Amazon Web Services(AWS) began offering IT infrastructure services(cloud computing). Ont of the key benefits of cloud computing is the opportunity to replace upfront capital infrastructure expenses with low variable costs that scale with your business. With the cloud, businesses no longer need to plan for and procuure servers and other IT infrastructure weeks or month in advance. Instead, they can instantly spin up hundreads or thousands of servers in minutes and deliver result faster.
 

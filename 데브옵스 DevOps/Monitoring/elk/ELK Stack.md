@@ -1,4 +1,3 @@
-# ELK
 
 ELK는 Elasticsearch, Logstash 및 Kibana, 이 오픈 소스 프로젝트 세 개를 뜻하는 약자이다.
 

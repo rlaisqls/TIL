@@ -1,4 +1,3 @@
-# Kubernetes Overview Diagrams
 
 ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/bddf24aa-95f2-43bb-a909-a4ce14aecfca)
 

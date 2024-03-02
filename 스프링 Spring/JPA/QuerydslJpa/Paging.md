@@ -1,4 +1,3 @@
-# 🤔 Paging
 
 Querydsl에서 페이징하는 방법을 알아보자.
 

@@ -1,4 +1,3 @@
-# 🍃 Spring 6.0과 Spring Boot 3.0.md
 
 ## Spring 6.0에서 달라지는 점
 

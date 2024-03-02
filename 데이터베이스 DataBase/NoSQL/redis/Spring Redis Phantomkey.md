@@ -1,4 +1,3 @@
-# 🎏 Spring Redis PhantomKey
 
 **spring**에서 @RedisHash로 refreshToken 등을 저장하면, 일반 키와 `phantom`키가 함께 저장되는 것을 볼 수 있다.
 

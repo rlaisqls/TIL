@@ -1,4 +1,3 @@
-# 💾 Change Date Capture
 
 Traditionally, businesses used batch-based approaches to move data once or several times a day, However, vaych movement introduces latency and reduces the operational value to the organization.
 

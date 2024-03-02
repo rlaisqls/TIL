@@ -1,4 +1,3 @@
-# Cipher
 
 > https://www.baeldung.com/java-cipher-class
 

@@ -1,4 +1,3 @@
-# External DNS
 
 ExternalDNS는 kubernetes dns(kube-dns)와 상반되는 개념으로 내부 도메인서버가 아닌 Public한 도메인서버(AWS Route53, GCP DNS 등)를 사용하여 쿠버네티스의 리소스를 쿼리할 수 있게 해주는 오픈소스 솔루션이다.
 

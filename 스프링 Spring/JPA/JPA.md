@@ -1,4 +1,3 @@
-# 📖 JPA(Java persistence API)
 
 JPA는 자바의 ORM(Object-Relational Mapping) 기술의 표준으로, 객체와 테이블을 매핑해 패러다임의 불일치를 개발자 대신 해결하는 기술이다. 객체는 객체대로 생성하고, 데이터베이스는 데이터베이스에 맞게 설계할 수 있도록 해준다.
 

@@ -1,4 +1,3 @@
-# ☕ JDK Proxy와 CGLib Proxy
 
 Proxy를 구현한 것 중 가장 많이 쓰이는 종류로는 **JDK Proxy와 CGLib Proxy**가 있다.
 

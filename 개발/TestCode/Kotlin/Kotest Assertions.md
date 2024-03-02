@@ -1,4 +1,3 @@
-# ✅ Kotest Assertions
 
 https://kotest.io/docs/assertions/assertions.html
 

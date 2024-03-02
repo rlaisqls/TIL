@@ -1,4 +1,3 @@
-# Fargate
 
 - Fargate is a servreless compute engine for containers.
 

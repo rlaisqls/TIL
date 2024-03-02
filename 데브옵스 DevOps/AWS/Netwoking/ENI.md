@@ -1,4 +1,3 @@
-# Elastic Network Interfaces (ENI)
 
 An elastic network interface is a networking component that represents a **virtual network card**.
 

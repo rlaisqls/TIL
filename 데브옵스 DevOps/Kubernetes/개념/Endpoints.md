@@ -1,4 +1,3 @@
-# ⚓ Endpoints
 
 쿠버네티스의 Services는 뒷단에 있는 Pod의 label 정보를 바탕으로한 selector로 그 대상이 되는 Pod를 매칭한다. 만약 해당 Label을 단 새로운 Pod이 생겼다면, Service는 자동으로 그 Pod과 연결되어 트래픽을 보낸다.
 

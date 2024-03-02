@@ -1,4 +1,3 @@
-# EKS kubeconfig
  
 EKS 기본 환경 Setting 방법을 알아보자.
 

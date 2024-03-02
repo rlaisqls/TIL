@@ -1,4 +1,3 @@
-# Kyverno Usecases
 
 Kyverno is a Kubernetes native policy engine that helps in enforcing custom policies on Kubernetes objects. It is a highly scalable and declarative tool that allows Kubernetes administrators to enforce security, compliance, and operational policies across their clusters.
 

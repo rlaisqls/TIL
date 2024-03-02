@@ -1,4 +1,3 @@
-# 🐬 FK 옵션
 
 ## Delete(/Modify) Action
 

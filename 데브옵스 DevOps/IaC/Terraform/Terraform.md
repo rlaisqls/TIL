@@ -1,4 +1,3 @@
-# Terraform?
 
 Terraform is an open source “Infrastructure as Code” tool, created by HashiCorp.
 A declarative coding tool, Terraform enables developers to use a high-level configuration language called HCL (HashiCorp Configuration Language) to describe the desired “end-state” cloud or on-premises infrastructure for running an application. It then generates a plan for reaching that end-state and executes the plan to provision the infrastructure.

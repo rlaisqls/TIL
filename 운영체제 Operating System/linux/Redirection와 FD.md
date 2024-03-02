@@ -1,4 +1,3 @@
-# Redirection
 
 - `>`는 overwrite를 뜻한다.
 - `>>`는 append를 뜻한다.

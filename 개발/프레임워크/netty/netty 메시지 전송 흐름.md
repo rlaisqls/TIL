@@ -1,4 +1,3 @@
-# netty 메시지 전송 흐름
 
 <img src="https://user-images.githubusercontent.com/81006587/218373375-e1660f25-adf4-4c4a-9aa3-93cfec8eef46.png" height=300px>
 

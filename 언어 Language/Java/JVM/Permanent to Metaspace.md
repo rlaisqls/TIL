@@ -1,4 +1,3 @@
-# ☕ Permanent to Metaspace
 
 JAVA8에서부터, Permanent가 사라지고 Metaspace가 생김으로써 그 역할을 일부 대체하게 되었다.
 

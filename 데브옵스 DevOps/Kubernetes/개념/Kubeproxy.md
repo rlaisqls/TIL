@@ -1,4 +1,3 @@
-# Kube-proxy
 
 Networking is a crucial part of Kubernetes. Behind the Kubernetes network, there is a component that work under the hood. It trandlates your Services into some usable networkign rules. This componenet is called Kube-Proxy. `kube-proxy` is another per-node daemon in Kubernetes, like Kubelet.
 

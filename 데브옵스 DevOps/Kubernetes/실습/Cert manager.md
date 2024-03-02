@@ -1,4 +1,3 @@
-# Cert manager
 
 kubernetes 에서 ingress 상에서 https를 서비스하는데 지원을 해주는 모듈이다.
 

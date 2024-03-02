@@ -1,4 +1,3 @@
-# EKS 인증과정
 
 <img src="https://github.com/rlaisqls/TIL/assets/81006587/94ff313b-6e46-4aa4-81cc-15f4cb2c8e20" height=300px>
 

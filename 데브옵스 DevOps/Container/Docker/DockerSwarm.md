@@ -1,4 +1,3 @@
-# 🐳 Docker Swarm
 
 Docker Swarm은 도커에서 자체적으로 제작한 <a href="https://github.com/rlaisqls/TIL/blob/main/%EB%8D%B0%EB%B8%8C%EC%98%B5%EC%8A%A4%20DevOps/Container%20Orchestration.md">컨테이너 오케스트레이션</a> 도구이다. 
 

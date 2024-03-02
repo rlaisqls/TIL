@@ -1,4 +1,3 @@
-# Memcached VS Redis
 
 ## 공통점
 1. in-memory cache이다.

@@ -1,4 +1,3 @@
-# Sealed Class/interface
 
 ### Sealed Classe 와 Enum Classe 의 공통점
 

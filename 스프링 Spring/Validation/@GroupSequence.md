@@ -1,4 +1,3 @@
-# 🍃 @GroupSequence
 
 보통 WebRequest를 받을때, null이거나 비어있는 등의 유효하지 않은 값을 미리 걸러내기 위해 Sprign validation을 사용한다. 설정해둔 `@NotNull`, `@Size`, `@Pattern` 등 조건에 부합하지 못하면 MethodArgumentNotValidException이 발생하고, 이 에러를 적절히 처리하여 반환하는 방식이 많이 사용된다.
 

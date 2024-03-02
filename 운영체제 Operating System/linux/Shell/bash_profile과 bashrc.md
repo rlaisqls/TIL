@@ -1,4 +1,3 @@
-# 🐧 bash_profile과 bashrc
 
 리눅스에서 alias를 수정하거나 PATH를 변경할때, 주로 이 네가지의 파일들을 사용한다.
 

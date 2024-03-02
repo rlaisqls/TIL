@@ -1,4 +1,3 @@
-# PV & PVC
 
 ![image](https://github.com/rlaisqls/TIL/assets/81006587/2e466438-16d2-4a3d-8fa7-ca68e9e7029f)
 

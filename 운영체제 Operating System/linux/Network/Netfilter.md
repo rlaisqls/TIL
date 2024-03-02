@@ -1,4 +1,3 @@
-# Netfilter
 
 Netfilter, included in Linux since 2.3, is a critival component of packet handlin. Netfilter is a framework of kernel hooks, which allow userspace programs to handle packets on behalf of the kernel. In short, a program registers to a specific Nwtfilter hook, and the kernel calls that program on applicable packes. That program could tell the kernel to do something with the packet (like drop it), or it could send back a modified packet to the kernel. With this, developers can build normal programs that run in userspach and handle packets. Netfilter was created jointly with `iptables`, to separate kernel and userspace code.
 

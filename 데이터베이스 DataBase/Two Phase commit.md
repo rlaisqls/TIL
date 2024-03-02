@@ -1,4 +1,3 @@
-# Two Phase commit
 
 <img width="558" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/59cfc111-d6a4-40bb-ac68-4ebde4d33da4">
 

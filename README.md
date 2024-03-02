@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 688
+files            : 687
 derectories      : 144
-avg_file_length  : 6315
+avg_file_length  : 6309
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -834,9 +834,7 @@ avg_file_length  : 6315
 ┃　　　┃　　　┗━　[응집도와 결합도](./아키텍처 및 방법론/객체지향/응집도와 결합도.md)</br>
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
-┗━　[2024━03━02](./2024━03━02.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**Untitled.canvas**](./Untitled.canvas)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)

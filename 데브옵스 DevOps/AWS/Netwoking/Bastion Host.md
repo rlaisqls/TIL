@@ -1,4 +1,3 @@
-# Bastion Host
 
 AWS 리소스 구성 후 관리자는 VPC 외부에서 Private Subnet에 직접 접근할 수 없다.
 

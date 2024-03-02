@@ -1,4 +1,3 @@
-# ⚓ K8s를 위한 SpringBoot 개발
 
 참고: https://velog.io/@airoasis/Kubernetes-를-위한-Spring-Boot-개발-feat.-무중단-배포운영
 

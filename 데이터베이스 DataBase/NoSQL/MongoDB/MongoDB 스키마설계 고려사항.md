@@ -1,4 +1,3 @@
-# 🌿 MongoDB 스키마설계 고려사항
 
 > The best approach to design is to represent the data **the way your application sees it**<br>"당신의 어플리케이션이 바라보는 관점에서 설계하는 것이 가장 좋은 접근(설계) 방법이다."<br>- Kristina Chodorow, (2019) MongoDB: the Definitive Guide: O'Reily
 

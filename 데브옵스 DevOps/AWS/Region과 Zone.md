@@ -1,4 +1,3 @@
-# Region과 Zone
 
 AWS resouce는 전세계의 여러 위치에서 호스팅되고 있다. 그리고 내부적으로도 여러 영역으로 나뉘어있다. 그 중 Availability Zone, Local Zone, Wavelength Zones에 대해 알아보자.
 

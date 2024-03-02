@@ -1,4 +1,3 @@
-# Deployment Strategy
 
 Deployment's `.spec.strategy` specifies the strategy used to replace old Pods by new ones. `.spec.strategy.type` can be "Recreate" or "RollingUpdate". "RollingUpdate" is the default value.
 

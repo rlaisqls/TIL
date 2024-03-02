@@ -1,4 +1,3 @@
-# Coroutine Dispatcher
 
 Coroutines always execute in some context represented by a value of the [CoroutineContext](Coroutine%E2%80%85Scope%2C%E2%80%85Context.md) type, defined in the Kotlin standard library.
 

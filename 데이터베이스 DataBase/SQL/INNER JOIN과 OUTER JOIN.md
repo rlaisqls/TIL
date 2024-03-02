@@ -1,4 +1,3 @@
-# 🐬 INNER JOIN과 OUTER JOIN
 
 JOIN은 두 테이블의 데이터를 합치는 것을 의미한다. INNER JOIN과 OUTER JOIN은 그 방식에 차이가 있다. 중복 컬럼을 가지고 있지 않은 A와 B 테이블을 JOIN한다고 가정할때, <br> 일반적으로 INNER JOIN은 A와 B의 교집합, 즉 벤다이어그램으로 그렸을 떄 교차되는 부분이 결과로 추출되고, <br> OUTER JOIN은 A와 B의 합집합, 즉 벤타이어그램으로 그렸을 때 두 부분의 전체가 결과로 추출된다. (단, Left Outer Join과 Right Outer Join은 완전히 합집합은 아니다. 밑에서 예제로 더 알아보자)
 

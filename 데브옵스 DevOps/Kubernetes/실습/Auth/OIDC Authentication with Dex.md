@@ -1,4 +1,3 @@
-# OIDC Authentication with Dex
 
 OIDC (Open ID Connect) 인증 방법은 OAuth2 위에서 동작하는 인증으로, Github이나 Google과 같이 서드 파티에서 부여받은 OAuth 권한을 통해 쿠버네티스의 인증을 수행한다. 기존에 사용하던 OAuth 인증 방법을 쿠버네티스에 그대로 가져온다고 생각하면 이해하기 쉽다. OIDC 인증 방법은 OAuth + JWT 토큰을 사용한다는 점에서 Webhook Token 인증 방법과 차이점을 갖는다.
 

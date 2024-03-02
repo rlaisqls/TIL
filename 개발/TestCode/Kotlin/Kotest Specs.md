@@ -1,4 +1,3 @@
-# ✅ Kotest Specs
 
 https://kotest.io/docs/framework/testing-styles.html
 

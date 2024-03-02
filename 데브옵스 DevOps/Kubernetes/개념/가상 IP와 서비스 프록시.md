@@ -1,4 +1,3 @@
-# 가상 IP와 서비스 프록시
 
 쿠버네티스 클러스터의 모든 노드는 `kube-proxy`를 실행한다. `kube-proxy`는 ExternalName 이외의 유형의 서비스에 대한 **"가상 IP"**의 역할을 한다.
 

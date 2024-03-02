@@ -1,4 +1,3 @@
-# Events
 
 Kubernetes Events는 하나의 Kubernetes 리소스 타입으로서 Kubernetes 리소스들의 state 변화, 에러 또는 시스템에 특정 메세지를 전파해야할 때 자동으로 만들어진다. 이러한 Kubernetes Events 리소스는 Kubernetes 개발 및 운영하며 디버깅시에 매우 유용하게 사용된다.
 

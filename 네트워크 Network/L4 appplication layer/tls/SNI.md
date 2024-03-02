@@ -1,4 +1,3 @@
-# TLS Server name indication (SNI)
 
 - SNI is somewhat like mailing a package to an apartment building instead of to a house. When mailing something to someone's house, the street address alone is enough to get the package to the right person. 
   - But when a package goes to an apartment building, it needs the apartment number in addition to the street address; otherwise, the package might not go to the right person or might not be delivered at all.

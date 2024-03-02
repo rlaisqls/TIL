@@ -1,4 +1,3 @@
-# HTTPD
 
 - HTTPD(HyperText Transfer Protocol Daemon) is a software program or service that runs on a web server and handles the processing of HTTP requests and responses.
 

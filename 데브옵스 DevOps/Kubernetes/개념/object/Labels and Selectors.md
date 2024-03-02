@@ -1,4 +1,3 @@
-# Labels
 
 - Labels are key/value pairs that are attached to objects such as Pods. 
 

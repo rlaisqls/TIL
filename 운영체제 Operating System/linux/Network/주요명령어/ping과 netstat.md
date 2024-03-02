@@ -1,4 +1,3 @@
-# ping과 netstat
 
 ## ping
 

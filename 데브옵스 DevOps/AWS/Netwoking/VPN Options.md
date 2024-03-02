@@ -1,4 +1,3 @@
-# VPN Options
 
 ### AWS Site-to-Site VPN	
 

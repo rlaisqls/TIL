@@ -1,4 +1,3 @@
-# mermaid
 mermaid로 그릴 수 있는 다이어그램은 아래와 같은 것들이 있다.
 
 - 플로우 차트 (Flowchart)

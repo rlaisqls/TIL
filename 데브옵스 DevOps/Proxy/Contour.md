@@ -1,4 +1,3 @@
-# Contour
 
 **Contour** is an Envoy based ingress controller.
 

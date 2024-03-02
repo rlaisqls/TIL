@@ -1,4 +1,3 @@
-# authn와 authz
 
 정보 보안에는 인증(Authentication, authn)와 인가(Authorization, authz)라는 개념이 있다. 간단히 말하자면 authn은 정체성 또는 그 유저가 **누구인지**와 관련있는 반면, authz는 권한 또는 **누군가가 할 수 있는 것**을 다룬다.
 

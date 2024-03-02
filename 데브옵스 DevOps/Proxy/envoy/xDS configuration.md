@@ -1,4 +1,3 @@
-# xDS configuration API
 
 - Envoy is architected such that different types of configuration management approaches are possible. The approach taken in a deployment will be dependent on the needs of the implementor.
 - Simple deployments are possible with a fully static configuration. More complicated deployments can incrementally add more complex dynamic configuration, the downside being that the implementor must provide one or more external gRPC/REST based configuration provider APIs.

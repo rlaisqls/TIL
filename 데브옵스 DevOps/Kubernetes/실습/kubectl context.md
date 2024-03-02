@@ -1,4 +1,3 @@
-# kubectl context
 
 쿠버네티스 클러스터를 관리하는 cli 도구인 kubectl에는 환경을 바꿔가며 클러스터를 관리할 수 있도록 "context"라는 개념이 존재한다. context 는 kubectl 을 깔면 생성되는 파일인 `~/.kube/config` 파일에서 설정할 수 있다.
 

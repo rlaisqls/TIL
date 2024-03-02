@@ -1,4 +1,3 @@
-# ⚓ ArgoCD 설치
 
 출처: https://dev.to/airoasis/argo-cd-seolci-mic-seoljeong-45bd
 

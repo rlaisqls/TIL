@@ -1,4 +1,3 @@
-# CloudFormation
 
 CloudFormation is an automated tool for provisioning entire cloud-based  environments. It is similar to Terraform where you cofify the instructions for what you want to have inside your application setup (X many web servers of Y type with a Z type DB on the backend, etc). It makes it a lot easier to just describe what you want in markup and have AWS do the actual provisioning work involved.
 

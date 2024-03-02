@@ -1,4 +1,3 @@
-# Nullable
 
 Kotlin에서는 코틀린은 원시 타입(primitive type)과 래퍼 타입(wrapper type)을 따로 구분하지 않고, Null일 수 있는 타입과, Null이 불가능한 타입으로 나누어 사용한다.
 

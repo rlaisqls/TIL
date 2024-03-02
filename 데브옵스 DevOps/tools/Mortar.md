@@ -1,4 +1,3 @@
-# Mortar
 
 > https://github.com/noahbliss/mortar
 

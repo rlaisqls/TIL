@@ -1,4 +1,3 @@
-# 🍃 Request 처리과정
 
 Spring Web MVC 에서 HTTP Request를 처리하는 핵심 클래스는 DispatcherServlet이란 클래스이다. 아 DispatcherServlet은 MVC 아키텍처로 구성된 프레젠테이션 계층을 만들 수 있도록 설계되어 있다.
 

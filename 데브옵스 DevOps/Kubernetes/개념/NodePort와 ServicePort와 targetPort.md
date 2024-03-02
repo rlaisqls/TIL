@@ -1,4 +1,3 @@
-# ⚓ NodePort와 ServicePort와 targetPort
 
 K8s의 포트는 노드와 서비스, 컨테이너별로 나뉘어있다. 이 개념에 대해 확실히 알아보자.
 

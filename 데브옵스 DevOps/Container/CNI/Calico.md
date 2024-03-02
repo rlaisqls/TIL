@@ -1,4 +1,3 @@
-# Calico
 
 Calico is a networking and security solution that enables Kubernetes workloads and non-kubernetes/legacy worloads to communicate seamlessly and securely.
 

@@ -1,4 +1,3 @@
-# Karpenter best practices
 
 ### Use Karpenter for workloads with changing capacity needs
 

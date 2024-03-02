@@ -1,4 +1,3 @@
-# mmap
 
 ```c
 #include <unistd.h>

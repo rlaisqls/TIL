@@ -1,4 +1,3 @@
-# @Autowired 빈 주입 스캔 원리
 
 ```java
     // AutowiredAnnotationBeanPostProcessor#buildAutowiringMetadata

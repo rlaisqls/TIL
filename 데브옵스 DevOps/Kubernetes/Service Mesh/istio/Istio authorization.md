@@ -1,4 +1,3 @@
-# Istio authorization
 
 Istio는 `ClusterRbacConfig`를 통해 ServiceRole에 권한 Rule을 정의한 후 ServiceRoleBinding을 통해 특정 대상에 해당 ServiceRole에 지정하여 접근 제어를 수행한다. mesh, namespace, workload 범위에서의 access control을 적용할 수 있다.
 

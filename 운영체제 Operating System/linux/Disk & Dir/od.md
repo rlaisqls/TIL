@@ -1,4 +1,3 @@
-# od
 
 `od` is a command that dumps binary files to eight digits.
 

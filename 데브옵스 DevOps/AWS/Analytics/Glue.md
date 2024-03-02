@@ -1,4 +1,3 @@
-# Glue
 
 Amazon Glue is a serverless data integration service that makes it easy to discover, prepare, and combine data for analytics, machine learning, and application development.
 

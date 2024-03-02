@@ -1,4 +1,3 @@
-# Datadog이 동작하는 방법
 
 ## 1. Datedog Agent가 하는 일 (Application에서 서버로)
 

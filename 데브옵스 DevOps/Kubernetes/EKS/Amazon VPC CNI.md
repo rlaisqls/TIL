@@ -1,4 +1,3 @@
-# Amazon VPC CNI
 
 - The AWS-provided VPC CNI is the default networking add-on that runs on Kubernetes worker nodes for EKS clusters. VPC CNI add-on is installed by default when you provision EKS clusters.
 

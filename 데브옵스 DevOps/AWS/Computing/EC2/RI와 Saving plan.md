@@ -1,4 +1,3 @@
-# RI와 Saving plan
 
 <img width="839" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/d6216964-7b4a-4eab-8c34-f21af466f893">
 

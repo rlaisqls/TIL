@@ -1,4 +1,3 @@
-# wait()과 notifyAll()
 
 `wait()`과 `notifyAll()`을 사용하면 스레드의 순서를 제어할 수 있다.
 

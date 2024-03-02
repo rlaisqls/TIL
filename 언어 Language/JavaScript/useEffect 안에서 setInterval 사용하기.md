@@ -1,4 +1,3 @@
-# useEffect 안에서 setInterval 사용하기
 
 - setInterval은 일정 시간마다 작업을 수행하는 메서드다. 
 - 주기적으로 카운트를 증가시키기 위해 이런 코드를 작성할 수 있다.

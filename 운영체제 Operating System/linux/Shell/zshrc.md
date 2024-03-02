@@ -1,4 +1,3 @@
-# 🐧 zshrc
 
 zsh는 bash와 같은 shell의 한 종류이다. 하지만 zshrc는 bash와 다르게 login이든 non-login이든 상관없이 항상 실행된다. 그래서 zshrc를 bashrc와 bash_profile처럼 구별해서 쓸 필요는 없다. 물론 zsh 에도 login에서만 동작하는 zprofile이 있긴 하다고 한다. 
 

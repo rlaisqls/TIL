@@ -1,4 +1,3 @@
-# KMS
 
 KMS는 Key Management Service의 약자로, 데이터를 암호화 할떄 사용되는 암호화 Key를 안전하게 관리하는데 목적을 둔 AWS의 서비스이다.
 

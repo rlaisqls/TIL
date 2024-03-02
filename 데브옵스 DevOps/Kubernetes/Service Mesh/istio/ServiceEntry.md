@@ -1,4 +1,3 @@
-# ServiceEntry
 
 Since not all services live in the sevice mesh, we need a way for **services inside the mesh to communicate with those outdise the mesh**. Those could be existing HTTP services or, more likely, infrastructure services like databases or caches. We can still implement sophisticated routing for services that reside outside Istio, but first we have to introduce the concept of a `ServiceEntry`.
 

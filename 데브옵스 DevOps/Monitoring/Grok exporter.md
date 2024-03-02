@@ -1,4 +1,3 @@
-# Grok exporter
 
 [Grok](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) is a tool to parce crappy unstructured log data into something structured and queryable. Grok is heavily used in Logstash to provide log data as input for ElesticSearch.
 

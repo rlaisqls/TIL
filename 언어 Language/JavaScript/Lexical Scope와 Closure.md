@@ -1,4 +1,3 @@
-# Lexical Scope와 Closure
 
 ### Lexical scope
 

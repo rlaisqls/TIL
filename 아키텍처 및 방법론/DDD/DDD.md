@@ -1,4 +1,3 @@
-# 🌻 DDD란? 
 
 DDD는 **Domain Driven Design**, 즉 도메인 주도 설계이다. 
 

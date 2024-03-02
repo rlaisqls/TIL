@@ -1,4 +1,3 @@
-# 🌻 SOAP (Simple Object Access Protocol)
 
 SOAP는 **XML 형식의 고도로 표준화된 웹 통신 프로토콜**이다. XML-RPC 출시 1년 후에 SOAP가 출시되었기 때문에 SOAP는 XML-RPC로부터 상당 부분을 물려받았다. 이후 REST가 출시되었을 때, SOAP와 REST는 같이 사용되었지만, 곧 REST만 사용하는 추세가 시작되었다.
 

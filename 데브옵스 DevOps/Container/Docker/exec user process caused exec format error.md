@@ -1,4 +1,3 @@
-# exec user process caused “exec format error”
 
 docker image build시 이런 에러가 날 때가 있다.
 

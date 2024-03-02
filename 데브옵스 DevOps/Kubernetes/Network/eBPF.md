@@ -1,4 +1,3 @@
-# eBPF
 
 eBPF is a programming system that allows special sandboxed programs to run in the kernel **without passing back and forth between kernel and user space**, like we saw with Netfilter and iptables.
 

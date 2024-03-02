@@ -1,4 +1,3 @@
-# Chart Development Tips
 
 ## Template Functions
 

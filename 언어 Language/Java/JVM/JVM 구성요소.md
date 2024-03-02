@@ -1,4 +1,3 @@
-# ☕ JVM 구성요소
 
 <img src="https://user-images.githubusercontent.com/81006587/208055622-f52c1340-dfc4-4dfa-9d9b-fd347c27a215.png" height=400px>
 

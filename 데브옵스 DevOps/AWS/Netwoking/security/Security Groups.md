@@ -1,4 +1,3 @@
-# Security Groups
 
 Security Groups are used to control access (SSH, HTTP, RDP, ect.) with EC2.
 They act as a virtual firewall for your instances to control inbound and outbound traffic When you launch an instance in a VPC, you can assign up to five security groups to the instance an security groups act at the instance level, not the subnet level.

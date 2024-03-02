@@ -1,4 +1,3 @@
-# ⚓ minikube 설치하기
 
 ### 1. kubectl을 설치한다.
 

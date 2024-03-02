@@ -1,4 +1,3 @@
-# minio
 
 ![image](https://github.com/rlaisqls/TIL/assets/81006587/e22783af-abce-40a5-9b35-2d40adc17425)
 

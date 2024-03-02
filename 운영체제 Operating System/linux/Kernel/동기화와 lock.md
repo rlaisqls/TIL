@@ -1,4 +1,3 @@
-# 동기화와 lock
 
 ## 1. Critical section과 Race condition
 

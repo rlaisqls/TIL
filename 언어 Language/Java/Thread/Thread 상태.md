@@ -1,4 +1,3 @@
-# Thread의 상태
 
 JVM은 쓰레드를 New, Runnable, Running, Wating, Terminate의 다섯가지 상태로 관리한다. 쓰레드의 상태는 `getState()` 메서드 호출로 반환받을 수 있다.
 

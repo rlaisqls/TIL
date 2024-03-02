@@ -1,4 +1,3 @@
-# 📖 Save or Update
 
 `CrudRepository`의 기본 구현인 `SimpleJpaRepositoryy`의 save 메서드는 이렇게 구현되어있다.
 

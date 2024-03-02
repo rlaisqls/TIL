@@ -1,4 +1,3 @@
-# 🤔 Querydsl
 
 <img src="https://t1.daumcdn.net/cfile/tistory/99248E505CB2FFB018">
 

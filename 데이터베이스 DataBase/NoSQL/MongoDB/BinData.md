@@ -1,4 +1,3 @@
-# BinData
 
 BinData is binary data object that use in mongoDB. BinData consists of `subType` and `base64str`.
 

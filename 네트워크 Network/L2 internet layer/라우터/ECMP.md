@@ -1,4 +1,3 @@
-# ECMP(equal-cost multi-path routing)
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/802d1aqECMP_%28cropped%29.gif" height=400px/>
 

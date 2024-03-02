@@ -1,4 +1,3 @@
-# Network Troubleshooting
 
 Troubleshooting network0related issues with Linux is a complex topic and could easily fill its own book. we will introduce some key troubleshooting tools and the basics of their use.
 

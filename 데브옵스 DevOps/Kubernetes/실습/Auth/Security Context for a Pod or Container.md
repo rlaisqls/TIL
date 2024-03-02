@@ -1,4 +1,3 @@
-# Security Context for a Pod or Container
 
 A security context defines privilege and access control settings for a Pod or Container. Security context settings include, but are not limited to:
 

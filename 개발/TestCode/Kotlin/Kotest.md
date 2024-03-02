@@ -1,4 +1,3 @@
-# ✅ Kotest
 
 코틀린에서는 아래와 형태와 같은 DSL(Domain Specific Language) 스타일의 중괄호를 활용한 코드 스타일을 제공한다. 코틀린 내부에서 제공하는 Standard library 대부분도 DSL을 이용해 작성된 것을 볼 수 있다.
 - [Type safe builders](https://play.kotlinlang.org/byExample/09_Kotlin_JS/06_HtmlBuilder?_gl=1*scn3we*_ga*MTExMjE5OTk1NC4xNjExNjY4NzEx*_ga_J6T75801PF*MTYyNDM2NTA0Mi4xMDguMC4xNjI0MzY1MDQyLjA.&amp;_ga=2.54260653.40338281.1624343617-1112199954.1611668711)

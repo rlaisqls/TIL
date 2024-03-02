@@ -1,4 +1,3 @@
-# OLAP
 
 OLAP(Online Analytical Processing)는 데이터 웨어하우스, 데이터 마트 또는 기타 중앙화된 통합 데이터 저장소의 대용량 데이터를 고속으로 다차원 분석하는 소프트웨어이다.
 

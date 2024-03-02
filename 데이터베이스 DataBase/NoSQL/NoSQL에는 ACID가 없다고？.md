@@ -1,4 +1,3 @@
-# 🪀 NoSQL에는 ACID가 없다고?
 
 관계형 데이터베이스는 <a href="https://github.com/rlaisqls/TIL/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%E2%80%85DataBase/DB%EC%84%A4%EA%B3%84/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%E2%80%82ACID%EC%99%80%E2%80%82%EA%B2%A9%EB%A6%AC%EC%88%98%EC%A4%80.md">트랜잭션 ACID 원칙</a>을 철저히 지켜서 데이터의 무결성을 지키려 한다. 
 

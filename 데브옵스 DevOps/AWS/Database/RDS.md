@@ -1,4 +1,3 @@
-# Relational Database Service (RDS)
 
 RDS is managed service that makes it easy to set up, operate and scale a relational database in AWS. It provides cost-efficient and resizable capacity while automating or outsourcing time-consuming adming administration tasks such as hardware provisioning, database setup, patching and backups.
 

@@ -1,4 +1,3 @@
-# 🐚 Spring with Kafka.md
 
 Kafka를 설치하여 실행한 뒤([예시](https://github.com/rlaisqls/TIL/blob/984bd2b023d378b4d5879592fbd6115508613072/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%E2%80%85DataBase/MQ/Docker%EB%A1%9C%E2%80%85Kafka%E2%80%85%EC%8B%A4%ED%96%89.md)) Spring과 연동하여 애플리케이션을 만들어보자.
 

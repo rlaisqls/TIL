@@ -1,4 +1,3 @@
-# 🍃 @TransactionalEventListener
 
 Event를 사용할 때 기본적으로 사용하는 `@EventListener`는 **event를 publishing 하는 코드 시점에 바로 publishing*한다. 하지만 우리가 퍼블리싱하는 event는 대부분 메인 작업이 아닌 서브의 작업이 많고 비동기로 진행해도 되는 경우도 많다. 다른 도메인 로직인 경우도 있다. 이럴 경우 조금 애매해지기도 한다.
 

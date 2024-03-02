@@ -1,4 +1,3 @@
-# ☕ Heap영역 구조 및 GC.md
 
 <a href="https://github.com/rlaisqls/TIL/blob/main/%EC%96%B8%EC%96%B4%E2%80%85Language/JAVA/JVM/Runtime%E2%80%85Data%E2%80%85Area.md">여기</a>에선, JVM이 사용하는 런타임 데이터 영역이 어떻게 나뉘어지는지에 대해 알아봤다. 런타임 데이터 영역은 크게 Method영역, Heap영역, Stack영역 등등으로 나뉘어있는데, 런타임중 가장 많은 메모리가 새로 할당되는 영역이 Heap영역이기 때문에, GC 또한 Heap영역을 위주로 실행된다.
 

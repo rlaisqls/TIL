@@ -1,4 +1,3 @@
-# ACME(Automated Certificate Management Environment)
 
 ACME is a protocol that makes it possible to automate the issuance and renewal of certificates, all withour human interaction.
 

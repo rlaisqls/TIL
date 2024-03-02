@@ -1,4 +1,3 @@
-# CloudWatch
 
 Amazon CloudWatch is a monitoring and observablility service. It provides you with data and actionable insights to monitor your applications, respond to system-wide performmance changes, optimize resource utilization, and get a unified view of operational health.
 

@@ -1,4 +1,3 @@
-# Hibernate 쿼리 실행 순서
 
 1. OrphanRemovalAction
 2. AbstractEntityInsertAction

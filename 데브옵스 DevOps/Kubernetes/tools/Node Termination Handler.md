@@ -1,4 +1,3 @@
-# Node Termination Handler
 
 Node Termination Handler는 EC2 인스턴스가 [EC2 maintenance events](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-instances-status-check_sched.html), [EC2 Spot interruptions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html), [ASG Scale-In](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html#as-lifecycle-scale-in), ASG AZ 재조정, and EC2 Instance Termination 등의 이유로 사용할 수 없는 상태가 되었을 때 대응하기 위한 tool이다. 그에 대한 핸들링을 제때 해줌으로써 Pod를 더 빠르게 회복시키고 availability를 높일 수 있다.
 

@@ -1,4 +1,3 @@
-# Virtual Networking Interface
 
 리눅스는 컨테이너 기술의 기반이 되는 virtual networking 관련 기능들을 제공한다. virtual networking에 자주 사용되는 대표적인 네트워크 인터페이스를 알아보자.
 

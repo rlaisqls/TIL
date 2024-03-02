@@ -1,4 +1,3 @@
-# CNI Specification
 
 The CNI specification itself is quite simple. According to the specification, there are four operations that a CNI plugin must support:
 

@@ -1,4 +1,3 @@
-# attach/detach-controller
 
 ## Objective
 

@@ -1,4 +1,3 @@
-# String
 
 ### String과 str
 

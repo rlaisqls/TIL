@@ -1,4 +1,3 @@
-# Exponential Backoff And Jitter
 
 ### Introducing OCC
 Optimistic concurrency control(OCC) is a time-honored way for multiple writers to safely modify a single object without losing writes. OCC has three nice properties: it will always make progress as long as the underlying store is available, it’s easy to understand, and it’s easy to implement.

@@ -1,4 +1,3 @@
-# mail
 
 linux에서 mail 서비스를 운영할 수 있다.
 

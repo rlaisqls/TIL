@@ -1,4 +1,3 @@
-# Symbolic Link
 
 Linux/UNIX 시스템에는 두 가지 유형의 링크가 있다. 
 

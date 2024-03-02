@@ -1,4 +1,3 @@
-# TLAB과 PLAB
 
 ## 1. TLAB(Thread Local Allocation Buffers)
 

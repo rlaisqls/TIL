@@ -1,4 +1,3 @@
-# Integration
 
 ```kotlin
 interface Service {

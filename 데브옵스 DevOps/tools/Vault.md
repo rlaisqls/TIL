@@ -1,4 +1,3 @@
-# Vault
 
 - HashiCorp Vault is an identity-based secrets and encryption management system.
 

@@ -1,4 +1,3 @@
-# 🦮 datadog APM 기능 사용하기
 
 서버에 datadog agent를 설치하면 CPU 점유율, Memory, Disk사용량 등의 중요한 성능 정보를 모니터링할 수 있다. 하지만 애플리케이션의 전반적인 LifeCycle에 대한 리포트 (ex: GC, JVM, I/O 등)를 바탕으로 에러나 병목현상에 더 빠르게 대응할 수 있도록 하고싶다면 **Datadog APM**을 연결해야한다.
 

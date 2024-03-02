@@ -1,4 +1,3 @@
-# Install Calico 
 
 1. Install the Calico operator and cudtom resource definitions
 

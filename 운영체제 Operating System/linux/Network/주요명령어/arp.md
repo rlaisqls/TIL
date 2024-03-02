@@ -1,4 +1,3 @@
-# arp
 
 ```bash
 /sbin/arp

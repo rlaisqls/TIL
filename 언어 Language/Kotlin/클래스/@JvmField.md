@@ -1,4 +1,3 @@
-# @JvmField
 
 `@JvmField`는 get/set을 생성하지 말라는 의미이다.
 

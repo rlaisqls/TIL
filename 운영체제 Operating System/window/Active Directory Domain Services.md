@@ -1,4 +1,3 @@
-# Active Directory Domain Services
 
 - A directory is a **hierarchical structure** that stores information about objects on the network. 
 

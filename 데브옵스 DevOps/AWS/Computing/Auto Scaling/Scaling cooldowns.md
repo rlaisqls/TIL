@@ -1,4 +1,3 @@
-# Scaling cooldowns for Amazon EC2 Auto Scaling
 
 - After your Auto Scaling group launches or terminates instances, it waits for a cooldown period to end before any further scaling activities initiated by simple scaling policies can start.
   

@@ -1,4 +1,3 @@
-# fork와 exec
 
 ## fork
 

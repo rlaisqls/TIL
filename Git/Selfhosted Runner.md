@@ -1,4 +1,3 @@
-# Self-hosted Runner
 
 Self-hosted Runner란 Github Actions에서 사용자가 지정하는 로컬 컴퓨팅 자원으로 빌드를 수행하도록 설정하는 기능이다. 주로 배포작업이 많아 배포가 지체되거나 서버 비용이 부담되는 경우 사용한다.
 

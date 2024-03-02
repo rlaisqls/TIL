@@ -1,4 +1,3 @@
-# Dex K8s Authenticator
 
 [Dex K8s Authenticator](https://github.com/mintel/dex-k8s-authenticator/tree/master) is a helper web-app which talks to one or more Dex Identity services to generate kubectl commands for creating and modifying a kubeconfig.
 

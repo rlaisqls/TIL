@@ -1,4 +1,3 @@
-# 🍃 AOT
 
 Spring AOT 엔진은 **빌드 시 스프링 애플리케이션을 분석하고 최적화**하는 도구이다. 또한 AOT 엔진은 GraalVM Native Configuration이 필요로 하는 `reflection configuration`을 생성해준다. 이것은 Spring native 실행 파일로 컴파일 하는데 사용되고 이후에 애플리케이션의 시작 시간과 메모리 사용량을 줄일 수 있게 한다.
 

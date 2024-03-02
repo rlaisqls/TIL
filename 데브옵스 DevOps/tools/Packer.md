@@ -1,4 +1,3 @@
-# Packer
 
 Packer (https://www.packer.io/) 는 HashiCorp에서 개발한 가상 머신 이미지를 만들어주는 오픈소스이다. 
 

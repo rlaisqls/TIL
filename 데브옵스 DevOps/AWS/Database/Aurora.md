@@ -1,4 +1,3 @@
-# Aurora
 
 Aurora is the AWS flagship DB known to combine the perfoemance and availability of traditional enterprise databases with the siplicity and cost-effectiveness of open source databases. It is a MySQL/PostgreSQL-compatible RDBMS that provides the security, availability, and reliability of commercial databases at 1/10th the cost of competitors.
 

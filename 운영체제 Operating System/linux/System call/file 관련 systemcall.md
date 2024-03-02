@@ -1,4 +1,3 @@
-# file 관련 systemcall
 
 ### open
 

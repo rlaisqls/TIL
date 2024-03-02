@@ -1,4 +1,3 @@
-# Deployment Status
 
 A Deployment enters various states during its lifecycle. It can be progressing while rolling out a new ReplicaSet, it can be complate, or it can fail to progress.
 

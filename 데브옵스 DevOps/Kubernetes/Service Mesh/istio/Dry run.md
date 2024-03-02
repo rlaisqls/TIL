@@ -1,4 +1,3 @@
-# Dry Run
 
 A dry run (or practice run) is a software testing process used to make sure that a system works correctly and will not result in severe failure.
 

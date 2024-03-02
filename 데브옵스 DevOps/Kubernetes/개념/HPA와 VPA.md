@@ -1,4 +1,3 @@
-# HPA와 VPA
 
 ## HPA(Horizontal Pod Autoscaler)
 

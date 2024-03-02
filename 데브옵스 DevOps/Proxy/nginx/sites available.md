@@ -1,4 +1,3 @@
-# site-availables
 
 ```bash
 ubuntu@:~/ cd /etc/nginx

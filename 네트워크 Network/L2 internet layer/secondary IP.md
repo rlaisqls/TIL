@@ -1,4 +1,3 @@
-# secondary IP
 
 ![image](https://github.com/rlaisqls/TIL/assets/81006587/d6e7d951-3092-4281-8661-65bcd7206e92)
 

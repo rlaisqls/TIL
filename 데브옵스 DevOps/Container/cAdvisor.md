@@ -1,4 +1,3 @@
-# cAdvisor
 
 Kubernetes(k8s)에서 cAdvisor는 "Container Advisor"의 줄임말로, 컨테이너 메트릭을 수집하고 모니터링하기 위한 도구이다. cAdvisor는 Google에서 개발한 오픈 소스 프로젝트로, 컨테이너화된 환경에서 작동하는 애플리케이션 및 서비스의 성능을 실시간으로 추적하고 이해하는 데 도움을 준다.
 
