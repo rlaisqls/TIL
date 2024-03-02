@@ -1,6 +1,7 @@
 # Self-hosted Runner
 
-Self-hosted Runner란 Github Actions에서 사용자가 지정하는 로컬 컴퓨팅 자원으로 빌드를 수행하도록 설정하는 기능이다. 주로 배포작업이 많아 배포가 지체되거나 서버 비용이 부담되는 경우 유용하게 쓰인다. 
+Self-hosted Runner란 Github Actions에서 사용자가 지정하는 로컬 컴퓨팅 자원으로 빌드를 수행하도록 설정하는 기능이다. 주로 배포작업이 많아 배포가 지체되거나 서버 비용이 부담되는 경우 사용한다.
+
 
 ## 설정 방법
 
@@ -28,11 +29,11 @@ $ ./run.sh
 
 Github가 로컬머신에 접속하는 방식이 아닌 로컬머신에서 github 저장소로 접속하는 방식이기 때문에 github 저장소 주소와 액세스 토큰으로 설정해야 한다.
 
-토큰은 개인 계정 Settings - Developer settings - Personal access tokens - Generate new token 에서 `admin:enterprise - manage_runners:enterprise`로 발급받을 수도 있습니다.
+토큰은 개인 계정 Settings - Developer settings - Personal access tokens - Generate new token 에서 `admin:enterprise - manage_runners:enterprise`로 발급받을 수도 있다.
 
 ## 사용 방법
 
-정상적으로 github에 등록이 되면 github의 Runners에서도 목록을 확인할 수 있습니다.
+정상적으로 github에 등록이 되면 github의 Runners에서도 목록을 확인할 수 있다.
 
 등록한 Self-hosted Runner를 활성화시키기 위해서는 해당 로컬 기기의 actions-runner 폴더에서 run.sh 프로그램을 실행시킨다.
 
