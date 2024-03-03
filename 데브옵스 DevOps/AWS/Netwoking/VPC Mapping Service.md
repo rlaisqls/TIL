@@ -69,7 +69,7 @@ listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
 11:38:38.934584 IP 10.0.0.185 > 10.0.0.148: ICMP echo reply, id 2746, seq 1, length 64
 ```
 
-`ZIGI-VM1`에서 확인한 통신 흐름으로 보면, `ZIGI-VM2`에서도 ARP Request를 수신 받은 이후에 ARP Reply를 보내고, `ZIGI-VM1`에서 ICMP Request를 수신한 다음 ICMP Replay를 보내야 합니다.
+`ZIGI-VM1`에서 확인한 통신 흐름으로 보면, `ZIGI-VM2`에서도 ARP Request를 수신 받은 이후에 ARP Reply를 보내고, `ZIGI-VM1`에서 ICMP Request를 수신한 다음 ICMP Replay를 보내야 한다.
  
 하지만, `ZIGI-VM2(185)`에서 확인해 보면, ICMP에 대한 Request가 먼저 수신된다. 이후에 `ZIGI-VM1(148)`의  IP 주소인 `10.0.0.148`에 대한 ARP Request를 보내고 ARP Reply를 받고 마지막으로 `ZIGI-VM1`에서 보낸 ICMP에 대한 Reply를 보낸다.
  

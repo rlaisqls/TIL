@@ -122,7 +122,7 @@ verifySequence {
 
 Mockk에서는 `@MockBean`이나 `@SpyBean`의 기능을 직접 제공하지 않는다.
 
-`@MockBean`이나 `@SpyBean`의 기능을 코틀린 DSL을 활용해 사용하고 싶다면 `Ninja-Squad/springmockk` 의존성을 추가해야 합니다.
+`@MockBean`이나 `@SpyBean`의 기능을 코틀린 DSL을 활용해 사용하고 싶다면 `Ninja-Squad/springmockk` 의존성을 추가해야 한다.
 
 ```kotlin
 testImplementation("com.ninja-squad:springmockk:3.0.1")
