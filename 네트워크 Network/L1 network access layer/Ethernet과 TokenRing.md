@@ -5,7 +5,7 @@
 <p>과거에 쓰이던 Token ring을 대체하여, 현재는 LAN, MAN 및 WAN에서 가장 많이 쓰이는 방식이다.</p>
 <br>
 
-<img src="https://m1.daumcdn.net/cfile245/image/2268BA4C57130B423072AC" height=240px width=390px>
+<img src="https://github.com/rlaisqls/TIL/assets/81006587/cfc4d1dd-7dee-4abb-9c3c-7cfd1c7922f8" height=240px width=390px>
 
 <br>
 
@@ -15,4 +15,4 @@
 
 <br>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Token_ring.png/800px-Token_ring.png" height=250px width=550px>
+<img src="https://github.com/rlaisqls/TIL/assets/81006587/0df84a2c-0f75-4a57-9bac-ef874ef0f630" height=250px width=550px>
