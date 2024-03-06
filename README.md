@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 687
+files            : 690
 derectories      : 144
-avg_file_length  : 6309
+avg_file_length  : 6325
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -146,6 +146,7 @@ avg_file_length  : 6309
 ┃　　　┃　　　┗━　[String](./언어 Language/Rust/String.md)</br>
 ┃　　　┃　　　┗━　[Trait](./언어 Language/Rust/Trait.md)</br>
 ┃　　　┃　　　┗━　[동시성](./언어 Language/Rust/동시성.md)</br>
+┃　　　┃　　　┗━　[구조체 impl](./언어 Language/Rust/구조체 impl.md)</br>
 ┃　　　┃　　　┗━　[소유권과 Lifetime](./언어 Language/Rust/소유권과 Lifetime.md)</br>
 ┃　　　┃　　　┗━　[타입과 변수](./언어 Language/Rust/타입과 변수.md)</br>
 ┃　　　┃　　　┗━　[함수와 메서드](./언어 Language/Rust/함수와 메서드.md)</br>
@@ -234,6 +235,8 @@ avg_file_length  : 6309
 ┃　　　┃　　　┗━　[CNN, RNN](./인공지능 AI/실습/CNN, RNN.md)</br>
 ┃　　　┃　　　┗━　[MNIST 숫자 판별](./인공지능 AI/실습/MNIST 숫자 판별.md)</br>
 ┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./인공지능 AI/실습/배, 자동차, 비행기 분류하기.md)</br>
+┃　　　┗━　[**자연어 처리**](./인공지능 AI/자연어 처리)</br>
+┃　　　┃　　　┗━　[BERT](./인공지능 AI/자연어 처리/BERT.md)</br>
 ┃　　　┗━　[CNN](./인공지능 AI/CNN.md)</br>
 ┃　　　┗━　[DropOut](./인공지능 AI/DropOut.md)</br>
 ┃　　　┗━　[Keras](./인공지능 AI/Keras.md)</br>
@@ -495,8 +498,6 @@ avg_file_length  : 6309
 ┃　　　┃　　　┗━　[Kubernetes](./데브옵스 DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./데브옵스 DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
 ┃　　　┗━　[**Monitoring**](./데브옵스 DevOps/Monitoring)</br>
-┃　　　┃　　　┗━　[**Dashboad**](./데브옵스 DevOps/Monitoring/Dashboad)</br>
-┃　　　┃　　　┃　　　┗━　[kiali with prometheus](./데브옵스 DevOps/Monitoring/Dashboad/kiali with prometheus.md)</br>
 ┃　　　┃　　　┗━　[**datadog**](./데브옵스 DevOps/Monitoring/datadog)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog](./데브옵스 DevOps/Monitoring/datadog/datadog.md)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog APM 기능 사용하기](./데브옵스 DevOps/Monitoring/datadog/datadog APM 기능 사용하기.md)</br>
@@ -510,6 +511,7 @@ avg_file_length  : 6309
 ┃　　　┃　　　┗━　[**grafana**](./데브옵스 DevOps/Monitoring/grafana)</br>
 ┃　　　┃　　　┃　　　┗━　[Loki Canary](./데브옵스 DevOps/Monitoring/grafana/Loki Canary.md)</br>
 ┃　　　┃　　　┗━　[**prometheus**](./데브옵스 DevOps/Monitoring/prometheus)</br>
+┃　　　┃　　　┃　　　┗━　[kiali with prometheus](./데브옵스 DevOps/Monitoring/prometheus/kiali with prometheus.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus](./데브옵스 DevOps/Monitoring/prometheus/prometheus.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus agent mode](./데브옵스 DevOps/Monitoring/prometheus/prometheus agent mode.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus glossary](./데브옵스 DevOps/Monitoring/prometheus/prometheus glossary.md)</br>
@@ -517,6 +519,7 @@ avg_file_length  : 6309
 ┃　　　┃　　　┗━　[**thanos**](./데브옵스 DevOps/Monitoring/thanos)</br>
 ┃　　　┃　　　┃　　　┗━　[Rule](./데브옵스 DevOps/Monitoring/thanos/Rule.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Thanos](./데브옵스 DevOps/Monitoring/thanos/Thanos.md)</br>
+┃　　　┃　　　┗━　[DeepFlow](./데브옵스 DevOps/Monitoring/DeepFlow.md)</br>
 ┃　　　┃　　　┗━　[Grok exporter](./데브옵스 DevOps/Monitoring/Grok exporter.md)</br>
 ┃　　　┃　　　┗━　[telemetry](./데브옵스 DevOps/Monitoring/telemetry.md)</br>
 ┃　　　┗━　[**Proxy**](./데브옵스 DevOps/Proxy)</br>
