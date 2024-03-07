@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 690
-derectories      : 144
-avg_file_length  : 6325
+files            : 692
+derectories      : 145
+avg_file_length  : 6321
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -25,6 +25,8 @@ avg_file_length  : 6325
 ┗━　[**개발**](./개발)</br>
 ┃　　　┗━　[**Apache**](./개발/Apache)</br>
 ┃　　　┃　　　┗━　[Spark](./개발/Apache/Spark.md)</br>
+┃　　　┗━　[**Embedded**](./개발/Embedded)</br>
+┃　　　┃　　　┗━　[임베디드 시스템](./개발/Embedded/임베디드 시스템.md)</br>
 ┃　　　┗━　[**Gradle**](./개발/Gradle)</br>
 ┃　　　┃　　　┗━　[DependencyHandler](./개발/Gradle/DependencyHandler.md)</br>
 ┃　　　┃　　　┗━　[Git action gradle caching](./개발/Gradle/Git action gradle caching.md)</br>
@@ -520,6 +522,7 @@ avg_file_length  : 6325
 ┃　　　┃　　　┃　　　┗━　[Rule](./데브옵스 DevOps/Monitoring/thanos/Rule.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Thanos](./데브옵스 DevOps/Monitoring/thanos/Thanos.md)</br>
 ┃　　　┃　　　┗━　[DeepFlow](./데브옵스 DevOps/Monitoring/DeepFlow.md)</br>
+┃　　　┃　　　┗━　[DeepFlow 논문 요약](./데브옵스 DevOps/Monitoring/DeepFlow 논문 요약.md)</br>
 ┃　　　┃　　　┗━　[Grok exporter](./데브옵스 DevOps/Monitoring/Grok exporter.md)</br>
 ┃　　　┃　　　┗━　[telemetry](./데브옵스 DevOps/Monitoring/telemetry.md)</br>
 ┃　　　┗━　[**Proxy**](./데브옵스 DevOps/Proxy)</br>
