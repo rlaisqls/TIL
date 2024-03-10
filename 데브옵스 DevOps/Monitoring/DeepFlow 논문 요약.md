@@ -39,11 +39,11 @@ DeepFlow is an **observability** product, designed to provide in-depth observabi
     
         <img width="487" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/093a9b43-0596-4859-a91d-d60ff4f9923f">
 
-     - Firstly, DeepFlow associates information captured dur- ing the enter and exit of the same system call by using process IDs and thread IDs. The association is predicated on the fact that the kernel can simultaneously handle only one selected system call for a given (𝑃𝑟𝑜𝑐𝑒𝑠𝑠_𝐼𝐷, 𝑇h𝑟𝑒𝑎𝑑_𝐼𝐷)
+     - Firstly, DeepFlow associates information captured during the enter and exit of the same system call by using process IDs and thread IDs. The association is predicated on the fact that the kernel can simultaneously handle only one selected system call for a given (𝑃𝑟𝑜𝑐𝑒𝑠𝑠_𝐼𝐷, 𝑇h𝑟𝑒𝑎𝑑_𝐼𝐷)
   
      - The combined data is referred to as message data, and its type is classified as ingress or egress based on the type of system call captured. To decrease the amount of data transferred, we only process the first system call for a message, not the subsequent ones that are used for further data transfers.
 
-        > For languages such as Golang, DeepFlow moni- tors the creation of coroutines to save the parent-child coroutine relationship in a pseudo-thread structure and performs similar oper- ations. DeepFlow temporarily saves the enter parameters in a hash map, retrieves them at exit time, and combines them with the exit parameters. 
+        > For languages such as Golang, DeepFlow monitors the creation of coroutines to save the parent-child coroutine relationship in a pseudo-thread structure and performs similar operations. DeepFlow temporarily saves the enter parameters in a hash map, retrieves them at exit time, and combines them with the exit parameters. 
 
         > Although deep packet inspection is unavoidable, DeepFlow as an open source project, typically only extracts information from the packet headers and does not examine the sensitive user data primarily located in the payload.
 
@@ -55,7 +55,7 @@ DeepFlow is an **observability** product, designed to provide in-depth observabi
 
   2. assembling traces from spans using implicit causal relationships.
 
-     - DeepFlow takes the spans that users query as starting points and merges the associated spans. Meanwhile, cross-layer correlation is supported by intra- and inter-component association as well as third-party span integration
+     - DeepFlow takes the spans that users query as starting points and merges the associated spans. Meanwhile, cross-layer correlation is supported by intrand inter-component association as well as third-party span integration
 
      - DeepFlow associates spans within the same thread using thread IDs. 
        - For coroutines in Golang, DeepFlow can also conduct association by tracking the invocation relationships between coroutines during
@@ -66,7 +66,7 @@ DeepFlow is an **observability** product, designed to provide in-depth observabi
 
      - DeepFlow manages multiple requests or responses. In a single thread, computing should not pause for scheduling, unlike network communication. Therefore, we assign the same systrace_id to two consecutive messages of different types and from different sockets.
 
-     - Since network transmissions (Layer 2/3/4 forwarding) do not change the TCP sequence, DeepFlow leverages this for the inter-component associ- ation. During the instrumentation phase (Section 3.2), we calculate and record the TCP sequence for each message in the kernel. It is then used to differentiate and maintain the inter-component association of spans within the same flow.
+     - Since network transmissions (Layer 2/3/4 forwarding) do not change the TCP sequence, DeepFlow leverages this for the inter-component association. During the instrumentation phase (Section 3.2), we calculate and record the TCP sequence for each message in the kernel. It is then used to differentiate and maintain the inter-component association of spans within the same flow.
 
 ## Trace assembling
 
@@ -91,7 +91,7 @@ DeepFlow is an **observability** product, designed to provide in-depth observabi
 
 ## Tag-Based Correlation
 - To achieve cross-component correlation in zero code, DeepFlow injects uniform tags into the spans.
-- DeepFlow injects uniform tags into the spans. We enable the in- jection of Kubernetes resource tags (e.g., node, service, pod, etc.), self-defined labels (e.g., version, commit-ID, etc.), and cloud resource tags (e.g., region, availability zone, VPC, etc.).
+- DeepFlow injects uniform tags into the spans. We enable the injection of Kubernetes resource tags (e.g., node, service, pod, etc.), self-defined labels (e.g., version, commit-ID, etc.), and cloud resource tags (e.g., region, availability zone, VPC, etc.).
 
 - To minimize the tagging overhead, we introduce a technique called smart-encoding.
 

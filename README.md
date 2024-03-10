@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 692
+files            : 695
 derectories      : 145
-avg_file_length  : 6321
+avg_file_length  : 6306
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -87,6 +87,7 @@ avg_file_length  : 6321
 ┃　　　┗━　[직렬화 serialVersionUID](./개발/직렬화 serialVersionUID.md)</br>
 ┗━　[**언어 Language**](./언어 Language)</br>
 ┃　　　┗━　[**Go**](./언어 Language/Go)</br>
+┃　　　┃　　　┗━　[Command line argument, flag](./언어 Language/Go/Command line argument, flag.md)</br>
 ┃　　　┃　　　┗━　[defer와 panic](./언어 Language/Go/defer와 panic.md)</br>
 ┃　　　┃　　　┗━　[gomod와 gosum](./언어 Language/Go/gomod와 gosum.md)</br>
 ┃　　　┃　　　┗━　[메모리 관리](./언어 Language/Go/메모리 관리.md)</br>
@@ -611,6 +612,7 @@ avg_file_length  : 6321
 ┃　　　┗━　[OSI 7Layer](./네트워크 Network/OSI 7Layer.md)</br>
 ┃　　　┗━　[Switch](./네트워크 Network/Switch.md)</br>
 ┃　　　┗━　[bandwidth](./네트워크 Network/bandwidth.md)</br>
+┃　　　┗━　[vTAP](./네트워크 Network/vTAP.md)</br>
 ┃　　　┗━　[이중화](./네트워크 Network/이중화.md)</br>
 ┃　　　┗━　[네트워크](./네트워크 Network/네트워크.md)</br>
 ┃　　　┗━　[로드밸런서](./네트워크 Network/로드밸런서.md)</br>
@@ -715,6 +717,7 @@ avg_file_length  : 6321
 ┃　　　┃　　　┗━　[Active Directory Domain Services](./운영체제 Operating System/window/Active Directory Domain Services.md)</br>
 ┃　　　┗━　[**보안**](./운영체제 Operating System/보안)</br>
 ┃　　　┃　　　┗━　[엑세스 제어](./운영체제 Operating System/보안/엑세스 제어.md)</br>
+┃　　　┗━　[CPU 아키텍처](./운영체제 Operating System/CPU 아키텍처.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./운영체제 Operating System/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./운영체제 Operating System/유저, 커널레벨 스레드.md)</br>
 ┃　　　┗━　[반도체 8대 공정](./운영체제 Operating System/반도체 8대 공정.md)</br>
