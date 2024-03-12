@@ -65,27 +65,19 @@ minikube start
 minikube start --vm-driver=docker --base-image="kicbase/stable:v0.0.32" --image-mirror-country='cn' --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers' --kubernetes-version=v1.23.8 --force-systemd=true       
 ```
 
-혹시 이상한 이유로 실행이 실패한다면 이 명령어를 써볼 수 있다. 본인은 위 명령어로 성공했다. (mac)
-
-```bash
-minikube start --extra-config=kubeadm.ignore-preflight-errors=NumCPU --force --cpus=1
-```
-
-만약 성능 제약을 무시하고 실행하길 원한다면 위와 같은 명령어를 사용할 수 있다.
-
-> 여담이지만 싱글코어인 AWS EC2 t2.micro에서 minikube를 사용하는 것은 그렇게 좋은 선택이 아닌 것 같다......<br>배포에 K8s가 꼭 필요한 상황이 아니라면 그냥 로컬에서 돌려보자.
-
 ### 3. 클러스터와 상호작용해본다.
 
-kubectl로 클러스터에 액세스 해본다. 또는, minikube로 명령어를 실행해본다. :
+kubectl로 클러스터에 접근해본다. :
+
 ```bash
-kubectl get po -A
 minikube kubectl -- get po -A
 ```
 
-아래 명령어로 minikube가 기본으로 사용되도록 설정할 수 있다.
+아래 명령어 중 하나를 사용하면 kubectl 실행시 minikube가 기본으로 사용되도록 설정할 수 있다.
 ```bash
 alias kubectl="minikube kubectl --"
+or
+ln -s $(which minikube) /usr/local/bin/kubectl
 ```
 
 처음에는 스토리지 프로비저너와 같은 일부 서비스가 아직 실행 상태가 아닐 수도 있다. 대시보드로 클러스터의 상태를 확인해본다 :
