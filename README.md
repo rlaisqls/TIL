@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 699
+files            : 704
 derectories      : 150
-avg_file_length  : 6099
+avg_file_length  : 6073
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -202,6 +202,7 @@ avg_file_length  : 6099
 ┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./DevOps/Kubernetes/tools/helm/Helm.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Values Files](./DevOps/Kubernetes/tools/helm/Values Files.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Install Cilium](./DevOps/Kubernetes/tools/Install Cilium.md)</br>
+┃　　　┃　　　┃　　　┗━　[K8s Metric API](./DevOps/Kubernetes/tools/K8s Metric API.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MetalLB](./DevOps/Kubernetes/tools/MetalLB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node Termination Handler](./DevOps/Kubernetes/tools/Node Termination Handler.md)</br>
 ┃　　　┃　　　┃　　　┗━　[OPA Gatekeeper](./DevOps/Kubernetes/tools/OPA Gatekeeper.md)</br>
@@ -383,6 +384,9 @@ avg_file_length  : 6099
 ┃　　　┗━　[로드밸런서](./Network/로드밸런서.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┗━　[**OS**](./OS)</br>
+┃　　　┗━　[**Embedded**](./OS/Embedded)</br>
+┃　　　┃　　　┗━　[Cramfs](./OS/Embedded/Cramfs.md)</br>
+┃　　　┃　　　┗━　[임베디드 시스템](./OS/Embedded/임베디드 시스템.md)</br>
 ┃　　　┗━　[**VM**](./OS/VM)</br>
 ┃　　　┃　　　┗━　[VMware Fusion NAT config](./OS/VM/VMware Fusion NAT config.md)</br>
 ┃　　　┃　　　┗━　[VMware Fusion Ubuntu 디스크 용량 늘리기](./OS/VM/VMware Fusion Ubuntu 디스크 용량 늘리기.md)</br>
@@ -508,8 +512,6 @@ avg_file_length  : 6099
 ┃　　　┗━　[**Algorithm**](./개발/Algorithm)</br>
 ┃　　　┃　　　┗━　[외판원순회](./개발/Algorithm/외판원순회.md)</br>
 ┃　　　┃　　　┗━　[세그먼트트리](./개발/Algorithm/세그먼트트리.md)</br>
-┃　　　┗━　[**Embedded**](./개발/Embedded)</br>
-┃　　　┃　　　┗━　[임베디드 시스템](./개발/Embedded/임베디드 시스템.md)</br>
 ┃　　　┗━　[**Tools**](./개발/Tools)</br>
 ┃　　　┃　　　┗━　[**Git**](./개발/Tools/Git)</br>
 ┃　　　┃　　　┃　　　┗━　[**Flow**](./개발/Tools/Git/Flow)</br>
@@ -584,6 +586,7 @@ avg_file_length  : 6099
 ┃　　　┃　　　┃　　　┗━　[useEffect 안에서 setInterval 사용하기](./코드/언어/JavaScript/useEffect 안에서 setInterval 사용하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[프로토타입](./코드/언어/JavaScript/프로토타입.md)</br>
 ┃　　　┃　　　┃　　　┗━　[화살표 함수](./코드/언어/JavaScript/화살표 함수.md)</br>
+┃　　　┃　　　┃　　　┗━　[절대경로 설정](./코드/언어/JavaScript/절대경로 설정.md)</br>
 ┃　　　┃　　　┗━　[**Kotlin**](./코드/언어/Kotlin)</br>
 ┃　　　┃　　　┃　　　┗━　[**변수**](./코드/언어/Kotlin/변수)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[List와 MutableList](./코드/언어/Kotlin/변수/List와 MutableList.md)</br>
