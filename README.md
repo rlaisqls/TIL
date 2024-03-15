@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 704
-derectories      : 150
-avg_file_length  : 6073
+files            : 706
+derectories      : 152
+avg_file_length  : 6065
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -273,6 +273,8 @@ avg_file_length  : 6073
 ┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./DevOps/Monitoring/elk/ElasticSearch 검색 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Elastic Search](./DevOps/Monitoring/elk/Elastic Search.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Logstash](./DevOps/Monitoring/elk/Logstash.md)</br>
+┃　　　┃　　　┗━　[**grafana**](./DevOps/Monitoring/grafana)</br>
+┃　　　┃　　　┃　　　┗━　[Granafa agent](./DevOps/Monitoring/grafana/Granafa agent.md)</br>
 ┃　　　┃　　　┗━　[**loki**](./DevOps/Monitoring/loki)</br>
 ┃　　　┃　　　┃　　　┗━　[Loki Canary](./DevOps/Monitoring/loki/Loki Canary.md)</br>
 ┃　　　┃　　　┗━　[**prometheus**](./DevOps/Monitoring/prometheus)</br>
@@ -524,6 +526,8 @@ avg_file_length  : 6073
 ┃　　　┃　　　┃　　　┗━　[GitLab](./개발/Tools/Git/GitLab.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Selfhosted Runner](./개발/Tools/Git/Selfhosted Runner.md)</br>
 ┃　　　┃　　　┃　　　┗━　[자동커밋](./개발/Tools/Git/자동커밋.md)</br>
+┃　　　┃　　　┗━　[**vi**](./개발/Tools/vi)</br>
+┃　　　┃　　　┃　　　┗━　[vi 단축키](./개발/Tools/vi/vi 단축키.md)</br>
 ┃　　　┃　　　┗━　[GTM](./개발/Tools/GTM.md)</br>
 ┃　　　┃　　　┗━　[Intellij Profiling tools](./개발/Tools/Intellij Profiling tools.md)</br>
 ┃　　　┃　　　┗━　[Makefile](./개발/Tools/Makefile.md)</br>
