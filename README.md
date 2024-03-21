@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 711
-derectories      : 152
-avg_file_length  : 6074
+files            : 712
+derectories      : 154
+avg_file_length  : 6037
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -619,19 +619,22 @@ avg_file_length  : 6074
 ┃　　　┃　　　┃　　　┗━　[람다 표현식](./코드/언어/Kotlin/람다 표현식.md)</br>
 ┃　　　┃　　　┃　　　┗━　[범위 지정 함수](./코드/언어/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┃　　　┗━　[**Rust**](./코드/언어/Rust)</br>
-┃　　　┃　　　┃　　　┗━　[Rc 타입과 Weak 타입](./코드/언어/Rust/Rc 타입과 Weak 타입.md)</br>
+┃　　　┃　　　┃　　　┗━　[**메모리　참조**](./코드/언어/Rust/메모리　참조)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Rc 타입과 Weak 타입](./코드/언어/Rust/메모리　참조/Rc 타입과 Weak 타입.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Unwrap](./코드/언어/Rust/메모리　참조/Unwrap.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[소유권과 Lifetime](./코드/언어/Rust/메모리　참조/소유권과 Lifetime.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[스마트 포인터 활용](./코드/언어/Rust/메모리　참조/스마트 포인터 활용.md)</br>
+┃　　　┃　　　┃　　　┗━　[**예외처리**](./코드/언어/Rust/예외처리)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Anyhow](./코드/언어/Rust/예외처리/Anyhow.md)</br>
 ┃　　　┃　　　┃　　　┗━　[String](./코드/언어/Rust/String.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Trait](./코드/언어/Rust/Trait.md)</br>
-┃　　　┃　　　┃　　　┗━　[Unwrap](./코드/언어/Rust/Unwrap.md)</br>
 ┃　　　┃　　　┃　　　┗━　[extern](./코드/언어/Rust/extern.md)</br>
 ┃　　　┃　　　┃　　　┗━　[repr](./코드/언어/Rust/repr.md)</br>
 ┃　　　┃　　　┃　　　┗━　[동시성](./코드/언어/Rust/동시성.md)</br>
 ┃　　　┃　　　┃　　　┗━　[구조체 impl](./코드/언어/Rust/구조체 impl.md)</br>
-┃　　　┃　　　┃　　　┗━　[소유권과 Lifetime](./코드/언어/Rust/소유권과 Lifetime.md)</br>
 ┃　　　┃　　　┃　　　┗━　[타입과 변수](./코드/언어/Rust/타입과 변수.md)</br>
 ┃　　　┃　　　┃　　　┗━　[함수와 메서드](./코드/언어/Rust/함수와 메서드.md)</br>
 ┃　　　┃　　　┃　　　┗━　[조건문과 반복문](./코드/언어/Rust/조건문과 반복문.md)</br>
-┃　　　┃　　　┃　　　┗━　[스마트 포인터 활용](./코드/언어/Rust/스마트 포인터 활용.md)</br>
 ┃　　　┃　　　┃　　　┗━　[멀티 스레드 웹 서버 만들기](./코드/언어/Rust/멀티 스레드 웹 서버 만들기.md)</br>
 ┃　　　┃　　　┗━　[CustomAnnotation](./코드/언어/CustomAnnotation.md)</br>
 ┃　　　┃　　　┗━　[자바<？>와 코틀린<*>](./코드/언어/자바<？>와 코틀린<*>.md)</br>

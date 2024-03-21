@@ -27,3 +27,7 @@
 
 - If compiled as a dylib, the resulting .so could then be linked to from a C library, and the function could be used as if it was from any other library.
 
+---
+reference
+- https://doc.rust-lang.org/std/keyword.extern.html
+- https://www.reddit.com/r/rust/comments/17f78mb/what_is_extern_system/
