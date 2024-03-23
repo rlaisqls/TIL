@@ -23,19 +23,19 @@ fn main() {
 
 - new 함수를 이용하여 스트링을 생성할 수 있다.
 
-```rust
-let mut s = String::new();
-```
+    ```rust
+    let mut s = String::new();
+    ```
 
 - `to_string` 메소드 또는 `String::from()`을 사용하여 스트링 리터럴로부터 String을 생성할 수 있다.
 
-```rust
-let data = "initial contents";
-let s = data.to_string();
-let s = "initial contents".to_string();
+    ```rust
+    let data = "initial contents";
+    let s = data.to_string();
+    let s = "initial contents".to_string();
 
-let s = String::from("initial contents");
-```
+    let s = String::from("initial contents");
+    ```
 
 - `+` 연산자나 `format!` 매크로를 사용하여 편리하게 String 값들을 서로 접합(concatenation)할 수 있다.
 
@@ -44,43 +44,43 @@ let s = String::from("initial contents");
 - 아래와 같이 변수를 포맷팅하여 출력하는 여러가지 방법이 있다.
 - `format()` 매크로를 사용하여 포맷팅 결과를 String으로 반환받을 수 도 있다.
 
-```rust
-fn main() {
-    let mut a: [i8; 10] = [42; 10];
-    a[5] = 0;
-    // a라는 배열을 출력하는 여러가지 방법
+    ```rust
+    fn main() {
+        let mut a: [i8; 10] = [42; 10];
+        a[5] = 0;
+        // a라는 배열을 출력하는 여러가지 방법
 
-    println!("a: {a}"); // 일반 출력
-    // println!("a: {}", a);과 동일
-    /*
-    배열은 일반 출력이 불가능하다.
-    `[i8; 10]` cannot be formatted with the default formatter
-    */
+        println!("a: {a}"); // 일반 출력
+        // println!("a: {}", a);과 동일
+        /*
+        배열은 일반 출력이 불가능하다.
+        `[i8; 10]` cannot be formatted with the default formatter
+        */
 
-    println!("a: {a:?}"); // 디버깅 출력
-    // println!("a: {:?}", a);과 동일
-    /*
-    a: [42, 42, 42, 42, 42, 0, 42, 42, 42, 42]
-    */
+        println!("a: {a:?}"); // 디버깅 출력
+        // println!("a: {:?}", a);과 동일
+        /*
+        a: [42, 42, 42, 42, 42, 0, 42, 42, 42, 42]
+        */
 
-    println!("a: {a:#?}"); // 예쁜 디버깅 출력
-    // println!("a: {:#?}", a);과 동일
-    /*
-    a: [
-        42,
-        42,
-        42,
-        42,
-        42,
-        0,
-        42,
-        42,
-        42,
-        42,
-    ]
-    */
-}
-```
+        println!("a: {a:#?}"); // 예쁜 디버깅 출력
+        // println!("a: {:#?}", a);과 동일
+        /*
+        a: [
+            42,
+            42,
+            42,
+            42,
+            42,
+            0,
+            42,
+            42,
+            42,
+            42,
+        ]
+        */
+    }
+    ```
 
 ### escape
 
@@ -97,3 +97,4 @@ fn main() {
 참고
 - https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/std/index.html
 - https://rinthel.github.io/rust-lang-book-ko/ch08-02-strings.html
+- https://www.facebook.com/groups/rustlang/posts/1910506868995613/

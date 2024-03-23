@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 712
+files            : 713
 derectories      : 154
-avg_file_length  : 6037
+avg_file_length  : 6036
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -475,6 +475,7 @@ avg_file_length  : 6037
 ┃　　　┃　　　┗━　[X window](./OS/linux/X window.md)</br>
 ┃　　　┃　　　┗━　[mail](./OS/linux/mail.md)</br>
 ┃　　　┃　　　┗━　[man](./OS/linux/man.md)</br>
+┃　　　┃　　　┗━　[ufw](./OS/linux/ufw.md)</br>
 ┃　　　┃　　　┗━　[명령어들](./OS/linux/명령어들.md)</br>
 ┃　　　┃　　　┗━　[쉘 단축키](./OS/linux/쉘 단축키.md)</br>
 ┃　　　┗━　[**memory**](./OS/memory)</br>
@@ -544,6 +545,88 @@ avg_file_length  : 6037
 ┃　　　┃　　　┗━　[Keytool](./개발/암호화/Keytool.md)</br>
 ┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
 ┃　　　┗━　[authn과 authz](./개발/authn과 authz.md)</br>
+┗━　[**언어**](./언어)</br>
+┃　　　┗━　[**Go**](./언어/Go)</br>
+┃　　　┃　　　┗━　[Command line argument, flag](./언어/Go/Command line argument, flag.md)</br>
+┃　　　┃　　　┗━　[defer와 panic](./언어/Go/defer와 panic.md)</br>
+┃　　　┃　　　┗━　[gomod와 gosum](./언어/Go/gomod와 gosum.md)</br>
+┃　　　┃　　　┗━　[pprof](./언어/Go/pprof.md)</br>
+┃　　　┃　　　┗━　[메모리 관리](./언어/Go/메모리 관리.md)</br>
+┃　　　┃　　　┗━　[고루틴 스케줄링](./언어/Go/고루틴 스케줄링.md)</br>
+┃　　　┗━　[**Java**](./언어/Java)</br>
+┃　　　┃　　　┗━　[**JVM**](./언어/Java/JVM)</br>
+┃　　　┃　　　┃　　　┗━　[Heap 영역 구조와 GC](./언어/Java/JVM/Heap 영역 구조와 GC.md)</br>
+┃　　　┃　　　┃　　　┗━　[JVM 구성요소](./언어/Java/JVM/JVM 구성요소.md)</br>
+┃　　　┃　　　┃　　　┗━　[Java Bytecode](./언어/Java/JVM/Java Bytecode.md)</br>
+┃　　　┃　　　┃　　　┗━　[Permanent to Metaspace](./언어/Java/JVM/Permanent to Metaspace.md)</br>
+┃　　　┃　　　┃　　　┗━　[Runtime Data Area](./언어/Java/JVM/Runtime Data Area.md)</br>
+┃　　　┃　　　┃　　　┗━　[TLAB과 PLAB](./언어/Java/JVM/TLAB과 PLAB.md)</br>
+┃　　　┃　　　┃　　　┗━　[메모리누수](./언어/Java/JVM/메모리누수.md)</br>
+┃　　　┃　　　┗━　[**Thread**](./언어/Java/Thread)</br>
+┃　　　┃　　　┃　　　┗━　[@Volatile](./언어/Java/Thread/@Volatile.md)</br>
+┃　　　┃　　　┃　　　┗━　[Thread 상태](./언어/Java/Thread/Thread 상태.md)</br>
+┃　　　┃　　　┃　　　┗━　[wait()과 notifyAll()](./언어/Java/Thread/wait()과 notifyAll().md)</br>
+┃　　　┃　　　┗━　[Inner static class](./언어/Java/Inner static class.md)</br>
+┃　　　┃　　　┗━　[JAR과 WAR](./언어/Java/JAR과 WAR.md)</br>
+┃　　　┃　　　┗━　[JAVA](./언어/Java/JAVA.md)</br>
+┃　　　┃　　　┗━　[JDKProxy와 CGLibProxy](./언어/Java/JDKProxy와 CGLibProxy.md)</br>
+┃　　　┃　　　┗━　[JLink & JDeps](./언어/Java/JLink & JDeps.md)</br>
+┃　　　┃　　　┗━　[record](./언어/Java/record.md)</br>
+┃　　　┃　　　┗━　[제네릭과 variance](./언어/Java/제네릭과 variance.md)</br>
+┃　　　┃　　　┗━　[예외와 에러](./언어/Java/예외와 에러.md)</br>
+┃　　　┗━　[**JavaScript**](./언어/JavaScript)</br>
+┃　　　┃　　　┗━　[Iterator](./언어/JavaScript/Iterator.md)</br>
+┃　　　┃　　　┗━　[Lexical Scope와 Closure](./언어/JavaScript/Lexical Scope와 Closure.md)</br>
+┃　　　┃　　　┗━　[Promise](./언어/JavaScript/Promise.md)</br>
+┃　　　┃　　　┗━　[useEffect 안에서 setInterval 사용하기](./언어/JavaScript/useEffect 안에서 setInterval 사용하기.md)</br>
+┃　　　┃　　　┗━　[프로토타입](./언어/JavaScript/프로토타입.md)</br>
+┃　　　┃　　　┗━　[화살표 함수](./언어/JavaScript/화살표 함수.md)</br>
+┃　　　┃　　　┗━　[절대경로 설정](./언어/JavaScript/절대경로 설정.md)</br>
+┃　　　┗━　[**Kotlin**](./언어/Kotlin)</br>
+┃　　　┃　　　┗━　[**변수**](./언어/Kotlin/변수)</br>
+┃　　　┃　　　┃　　　┗━　[List와 MutableList](./언어/Kotlin/변수/List와 MutableList.md)</br>
+┃　　　┃　　　┃　　　┗━　[Nullable](./언어/Kotlin/변수/Nullable.md)</br>
+┃　　　┃　　　┃　　　┗━　[val과 var](./언어/Kotlin/변수/val과 var.md)</br>
+┃　　　┃　　　┗━　[**함수**](./언어/Kotlin/함수)</br>
+┃　　　┃　　　┃　　　┗━　[기본인자](./언어/Kotlin/함수/기본인자.md)</br>
+┃　　　┃　　　┗━　[**클래스**](./언어/Kotlin/클래스)</br>
+┃　　　┃　　　┃　　　┗━　[@JvmField](./언어/Kotlin/클래스/@JvmField.md)</br>
+┃　　　┃　　　┃　　　┗━　[@JvmStatic](./언어/Kotlin/클래스/@JvmStatic.md)</br>
+┃　　　┃　　　┃　　　┗━　[Object](./언어/Kotlin/클래스/Object.md)</br>
+┃　　　┃　　　┃　　　┗━　[Sealed Class, interface](./언어/Kotlin/클래스/Sealed Class, interface.md)</br>
+┃　　　┃　　　┃　　　┗━　[생성자](./언어/Kotlin/클래스/생성자.md)</br>
+┃　　　┃　　　┃　　　┗━　[클래스 상속](./언어/Kotlin/클래스/클래스 상속.md)</br>
+┃　　　┃　　　┃　　　┗━　[코틀린에서의 Static](./언어/Kotlin/클래스/코틀린에서의 Static.md)</br>
+┃　　　┃　　　┃　　　┗━　[필드와 접근자 메서드](./언어/Kotlin/클래스/필드와 접근자 메서드.md)</br>
+┃　　　┃　　　┗━　[Collections](./언어/Kotlin/Collections.md)</br>
+┃　　　┃　　　┗━　[InlineFuntion과 Reified](./언어/Kotlin/InlineFuntion과 Reified.md)</br>
+┃　　　┃　　　┗━　[Label](./언어/Kotlin/Label.md)</br>
+┃　　　┃　　　┗━　[Sequences](./언어/Kotlin/Sequences.md)</br>
+┃　　　┃　　　┗━　[field 상속](./언어/Kotlin/field 상속.md)</br>
+┃　　　┃　　　┗━　[제네릭과 variance](./언어/Kotlin/제네릭과 variance.md)</br>
+┃　　　┃　　　┗━　[람다 표현식](./언어/Kotlin/람다 표현식.md)</br>
+┃　　　┃　　　┗━　[범위 지정 함수](./언어/Kotlin/범위 지정 함수.md)</br>
+┃　　　┗━　[**Rust**](./언어/Rust)</br>
+┃　　　┃　　　┗━　[**메모리　참조**](./언어/Rust/메모리　참조)</br>
+┃　　　┃　　　┃　　　┗━　[Rc 타입과 Weak 타입](./언어/Rust/메모리　참조/Rc 타입과 Weak 타입.md)</br>
+┃　　　┃　　　┃　　　┗━　[Unwrap](./언어/Rust/메모리　참조/Unwrap.md)</br>
+┃　　　┃　　　┃　　　┗━　[소유권과 Lifetime](./언어/Rust/메모리　참조/소유권과 Lifetime.md)</br>
+┃　　　┃　　　┃　　　┗━　[스마트 포인터 활용](./언어/Rust/메모리　참조/스마트 포인터 활용.md)</br>
+┃　　　┃　　　┗━　[**예외처리**](./언어/Rust/예외처리)</br>
+┃　　　┃　　　┃　　　┗━　[Anyhow](./언어/Rust/예외처리/Anyhow.md)</br>
+┃　　　┃　　　┗━　[String](./언어/Rust/String.md)</br>
+┃　　　┃　　　┗━　[Trait](./언어/Rust/Trait.md)</br>
+┃　　　┃　　　┗━　[extern](./언어/Rust/extern.md)</br>
+┃　　　┃　　　┗━　[repr](./언어/Rust/repr.md)</br>
+┃　　　┃　　　┗━　[동시성](./언어/Rust/동시성.md)</br>
+┃　　　┃　　　┗━　[구조체 impl](./언어/Rust/구조체 impl.md)</br>
+┃　　　┃　　　┗━　[타입과 변수](./언어/Rust/타입과 변수.md)</br>
+┃　　　┃　　　┗━　[함수와 메서드](./언어/Rust/함수와 메서드.md)</br>
+┃　　　┃　　　┗━　[조건문과 반복문](./언어/Rust/조건문과 반복문.md)</br>
+┃　　　┃　　　┗━　[멀티 스레드 웹 서버 만들기](./언어/Rust/멀티 스레드 웹 서버 만들기.md)</br>
+┃　　　┗━　[CustomAnnotation](./언어/CustomAnnotation.md)</br>
+┃　　　┗━　[자바<？>와 코틀린<*>](./언어/자바<？>와 코틀린<*>.md)</br>
+┃　　　┗━　[직렬화 serialVersionUID](./언어/직렬화 serialVersionUID.md)</br>
 ┗━　[**코드**](./코드)</br>
 ┃　　　┗━　[**TestCode**](./코드/TestCode)</br>
 ┃　　　┃　　　┗━　[**Kotlin**](./코드/TestCode/Kotlin)</br>
@@ -558,87 +641,6 @@ avg_file_length  : 6037
 ┃　　　┃　　　　　　　┗━　[Git action gradle caching](./코드/빌드/Gradle/Git action gradle caching.md)</br>
 ┃　　　┃　　　　　　　┗━　[Gradle LifeCycle](./코드/빌드/Gradle/Gradle LifeCycle.md)</br>
 ┃　　　┃　　　　　　　┗━　[멀티모듈](./코드/빌드/Gradle/멀티모듈.md)</br>
-┃　　　┗━　[**언어**](./코드/언어)</br>
-┃　　　┃　　　┗━　[**Go**](./코드/언어/Go)</br>
-┃　　　┃　　　┃　　　┗━　[Command line argument, flag](./코드/언어/Go/Command line argument, flag.md)</br>
-┃　　　┃　　　┃　　　┗━　[defer와 panic](./코드/언어/Go/defer와 panic.md)</br>
-┃　　　┃　　　┃　　　┗━　[gomod와 gosum](./코드/언어/Go/gomod와 gosum.md)</br>
-┃　　　┃　　　┃　　　┗━　[메모리 관리](./코드/언어/Go/메모리 관리.md)</br>
-┃　　　┃　　　┃　　　┗━　[고루틴 스케줄링](./코드/언어/Go/고루틴 스케줄링.md)</br>
-┃　　　┃　　　┗━　[**Java**](./코드/언어/Java)</br>
-┃　　　┃　　　┃　　　┗━　[**JVM**](./코드/언어/Java/JVM)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Heap 영역 구조와 GC](./코드/언어/Java/JVM/Heap 영역 구조와 GC.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[JVM 구성요소](./코드/언어/Java/JVM/JVM 구성요소.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Java Bytecode](./코드/언어/Java/JVM/Java Bytecode.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Permanent to Metaspace](./코드/언어/Java/JVM/Permanent to Metaspace.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Runtime Data Area](./코드/언어/Java/JVM/Runtime Data Area.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[TLAB과 PLAB](./코드/언어/Java/JVM/TLAB과 PLAB.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[메모리누수](./코드/언어/Java/JVM/메모리누수.md)</br>
-┃　　　┃　　　┃　　　┗━　[**Thread**](./코드/언어/Java/Thread)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[@Volatile](./코드/언어/Java/Thread/@Volatile.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Thread 상태](./코드/언어/Java/Thread/Thread 상태.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[wait()과 notifyAll()](./코드/언어/Java/Thread/wait()과 notifyAll().md)</br>
-┃　　　┃　　　┃　　　┗━　[Inner static class](./코드/언어/Java/Inner static class.md)</br>
-┃　　　┃　　　┃　　　┗━　[JAR과 WAR](./코드/언어/Java/JAR과 WAR.md)</br>
-┃　　　┃　　　┃　　　┗━　[JAVA](./코드/언어/Java/JAVA.md)</br>
-┃　　　┃　　　┃　　　┗━　[JDKProxy와 CGLibProxy](./코드/언어/Java/JDKProxy와 CGLibProxy.md)</br>
-┃　　　┃　　　┃　　　┗━　[JLink & JDeps](./코드/언어/Java/JLink & JDeps.md)</br>
-┃　　　┃　　　┃　　　┗━　[record](./코드/언어/Java/record.md)</br>
-┃　　　┃　　　┃　　　┗━　[제네릭과 variance](./코드/언어/Java/제네릭과 variance.md)</br>
-┃　　　┃　　　┃　　　┗━　[예외와 에러](./코드/언어/Java/예외와 에러.md)</br>
-┃　　　┃　　　┗━　[**JavaScript**](./코드/언어/JavaScript)</br>
-┃　　　┃　　　┃　　　┗━　[Iterator](./코드/언어/JavaScript/Iterator.md)</br>
-┃　　　┃　　　┃　　　┗━　[Lexical Scope와 Closure](./코드/언어/JavaScript/Lexical Scope와 Closure.md)</br>
-┃　　　┃　　　┃　　　┗━　[Promise](./코드/언어/JavaScript/Promise.md)</br>
-┃　　　┃　　　┃　　　┗━　[useEffect 안에서 setInterval 사용하기](./코드/언어/JavaScript/useEffect 안에서 setInterval 사용하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[프로토타입](./코드/언어/JavaScript/프로토타입.md)</br>
-┃　　　┃　　　┃　　　┗━　[화살표 함수](./코드/언어/JavaScript/화살표 함수.md)</br>
-┃　　　┃　　　┃　　　┗━　[절대경로 설정](./코드/언어/JavaScript/절대경로 설정.md)</br>
-┃　　　┃　　　┗━　[**Kotlin**](./코드/언어/Kotlin)</br>
-┃　　　┃　　　┃　　　┗━　[**변수**](./코드/언어/Kotlin/변수)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[List와 MutableList](./코드/언어/Kotlin/변수/List와 MutableList.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Nullable](./코드/언어/Kotlin/변수/Nullable.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[val과 var](./코드/언어/Kotlin/변수/val과 var.md)</br>
-┃　　　┃　　　┃　　　┗━　[**함수**](./코드/언어/Kotlin/함수)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[기본인자](./코드/언어/Kotlin/함수/기본인자.md)</br>
-┃　　　┃　　　┃　　　┗━　[**클래스**](./코드/언어/Kotlin/클래스)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[@JvmField](./코드/언어/Kotlin/클래스/@JvmField.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[@JvmStatic](./코드/언어/Kotlin/클래스/@JvmStatic.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Object](./코드/언어/Kotlin/클래스/Object.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Sealed Class, interface](./코드/언어/Kotlin/클래스/Sealed Class, interface.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[생성자](./코드/언어/Kotlin/클래스/생성자.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[클래스 상속](./코드/언어/Kotlin/클래스/클래스 상속.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[코틀린에서의 Static](./코드/언어/Kotlin/클래스/코틀린에서의 Static.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[필드와 접근자 메서드](./코드/언어/Kotlin/클래스/필드와 접근자 메서드.md)</br>
-┃　　　┃　　　┃　　　┗━　[Collections](./코드/언어/Kotlin/Collections.md)</br>
-┃　　　┃　　　┃　　　┗━　[InlineFuntion과 Reified](./코드/언어/Kotlin/InlineFuntion과 Reified.md)</br>
-┃　　　┃　　　┃　　　┗━　[Label](./코드/언어/Kotlin/Label.md)</br>
-┃　　　┃　　　┃　　　┗━　[Sequences](./코드/언어/Kotlin/Sequences.md)</br>
-┃　　　┃　　　┃　　　┗━　[field 상속](./코드/언어/Kotlin/field 상속.md)</br>
-┃　　　┃　　　┃　　　┗━　[제네릭과 variance](./코드/언어/Kotlin/제네릭과 variance.md)</br>
-┃　　　┃　　　┃　　　┗━　[람다 표현식](./코드/언어/Kotlin/람다 표현식.md)</br>
-┃　　　┃　　　┃　　　┗━　[범위 지정 함수](./코드/언어/Kotlin/범위 지정 함수.md)</br>
-┃　　　┃　　　┗━　[**Rust**](./코드/언어/Rust)</br>
-┃　　　┃　　　┃　　　┗━　[**메모리　참조**](./코드/언어/Rust/메모리　참조)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Rc 타입과 Weak 타입](./코드/언어/Rust/메모리　참조/Rc 타입과 Weak 타입.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Unwrap](./코드/언어/Rust/메모리　참조/Unwrap.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[소유권과 Lifetime](./코드/언어/Rust/메모리　참조/소유권과 Lifetime.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[스마트 포인터 활용](./코드/언어/Rust/메모리　참조/스마트 포인터 활용.md)</br>
-┃　　　┃　　　┃　　　┗━　[**예외처리**](./코드/언어/Rust/예외처리)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Anyhow](./코드/언어/Rust/예외처리/Anyhow.md)</br>
-┃　　　┃　　　┃　　　┗━　[String](./코드/언어/Rust/String.md)</br>
-┃　　　┃　　　┃　　　┗━　[Trait](./코드/언어/Rust/Trait.md)</br>
-┃　　　┃　　　┃　　　┗━　[extern](./코드/언어/Rust/extern.md)</br>
-┃　　　┃　　　┃　　　┗━　[repr](./코드/언어/Rust/repr.md)</br>
-┃　　　┃　　　┃　　　┗━　[동시성](./코드/언어/Rust/동시성.md)</br>
-┃　　　┃　　　┃　　　┗━　[구조체 impl](./코드/언어/Rust/구조체 impl.md)</br>
-┃　　　┃　　　┃　　　┗━　[타입과 변수](./코드/언어/Rust/타입과 변수.md)</br>
-┃　　　┃　　　┃　　　┗━　[함수와 메서드](./코드/언어/Rust/함수와 메서드.md)</br>
-┃　　　┃　　　┃　　　┗━　[조건문과 반복문](./코드/언어/Rust/조건문과 반복문.md)</br>
-┃　　　┃　　　┃　　　┗━　[멀티 스레드 웹 서버 만들기](./코드/언어/Rust/멀티 스레드 웹 서버 만들기.md)</br>
-┃　　　┃　　　┗━　[CustomAnnotation](./코드/언어/CustomAnnotation.md)</br>
-┃　　　┃　　　┗━　[자바<？>와 코틀린<*>](./코드/언어/자바<？>와 코틀린<*>.md)</br>
-┃　　　┃　　　┗━　[직렬화 serialVersionUID](./코드/언어/직렬화 serialVersionUID.md)</br>
 ┃　　　┗━　[**비동기**](./코드/비동기)</br>
 ┃　　　　　　　┗━　[**coroutine**](./코드/비동기/coroutine)</br>
 ┃　　　　　　　┃　　　┗━　[**thread**](./코드/비동기/coroutine/thread)</br>
