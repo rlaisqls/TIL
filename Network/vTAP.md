@@ -25,7 +25,7 @@ It's also possible to use an intrusion detection system (IDS) that listens to a 
 
 - This diagram shows a sample implementation of a VTAP.
 
-<img width="588" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/ec65abd1-1f12-4850-bb60-0fab0ce241e8">
+  <img width="588" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/ec65abd1-1f12-4850-bb60-0fab0ce241e8">
 
 ### TAPs in the cloud
 

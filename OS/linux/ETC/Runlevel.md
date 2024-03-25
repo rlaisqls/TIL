@@ -5,7 +5,7 @@
 
 ### Runlevel 확인
 
-런레벨은 아래 경로에 runlevel로 검색하면 시스템에 등록된 Runlevel을 직접 확인할 수 있다.
+아래 경로에 runlevel로 검색하면 시스템에 등록된 Runlevel을 직접 확인할 수 있다.
 
 - 경로 : `/lib/systemd/system`
 - 파일명 : `runlevel*.target`

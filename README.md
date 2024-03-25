@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 713
-derectories      : 154
-avg_file_length  : 6036
+files            : 719
+derectories      : 155
+avg_file_length  : 6052
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -13,8 +13,6 @@ avg_file_length  : 6036
 .
 ┗━　[**DevOps**](./DevOps)</br>
 ┃　　　┗━　[**AWS**](./DevOps/AWS)</br>
-┃　　　┃　　　┗━　[**Account**](./DevOps/AWS/Account)</br>
-┃　　　┃　　　┃　　　┗━　[Tasks that require root user credentials](./DevOps/AWS/Account/Tasks that require root user credentials.md)</br>
 ┃　　　┃　　　┗━　[**Analytics**](./DevOps/AWS/Analytics)</br>
 ┃　　　┃　　　┃　　　┗━　[Athena](./DevOps/AWS/Analytics/Athena.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EMR](./DevOps/AWS/Analytics/EMR.md)</br>
@@ -101,8 +99,7 @@ avg_file_length  : 6036
 ┃　　　┃　　　┗━　[AWS cloud computing](./DevOps/AWS/AWS cloud computing.md)</br>
 ┃　　　┃　　　┗━　[Region과 Zone](./DevOps/AWS/Region과 Zone.md)</br>
 ┃　　　┃　　　┗━　[SAA 요약](./DevOps/AWS/SAA 요약.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트 1~3](./DevOps/AWS/SAA 오답노트 1~3.md)</br>
-┃　　　┃　　　┗━　[SAA 오답노트 4~6](./DevOps/AWS/SAA 오답노트 4~6.md)</br>
+┃　　　┃　　　┗━　[SAA 오답노트](./DevOps/AWS/SAA 오답노트.md)</br>
 ┃　　　┃　　　┗━　[Well Architected](./DevOps/AWS/Well Architected.md)</br>
 ┃　　　┗━　[**Container**](./DevOps/Container)</br>
 ┃　　　┃　　　┗━　[**CNI**](./DevOps/Container/CNI)</br>
@@ -345,6 +342,7 @@ avg_file_length  : 6036
 ┃　　　┃　　　┗━　[IPSec](./Network/L2 internet layer/IPSec.md)</br>
 ┃　　　┃　　　┗━　[IP 데이터그램과 단편화](./Network/L2 internet layer/IP 데이터그램과 단편화.md)</br>
 ┃　　　┃　　　┗━　[NAT](./Network/L2 internet layer/NAT.md)</br>
+┃　　　┃　　　┗━　[PacketTracer 네트워크 구성](./Network/L2 internet layer/PacketTracer 네트워크 구성.md)</br>
 ┃　　　┃　　　┗━　[secondary IP](./Network/L2 internet layer/secondary IP.md)</br>
 ┃　　　┃　　　┗━　[서브넷](./Network/L2 internet layer/서브넷.md)</br>
 ┃　　　┗━　[**L3 transport layer**](./Network/L3 transport layer)</br>
@@ -400,9 +398,12 @@ avg_file_length  : 6036
 ┃　　　┃　　　┗━　[**BPF**](./OS/linux/BPF)</br>
 ┃　　　┃　　　┃　　　┗━　[BCC](./OS/linux/BPF/BCC.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BPF](./OS/linux/BPF/BPF.md)</br>
+┃　　　┃　　　┃　　　┗━　[BPF ring buffer](./OS/linux/BPF/BPF ring buffer.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BPF 프로그램 타입](./OS/linux/BPF/BPF 프로그램 타입.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BTF](./OS/linux/BPF/BTF.md)</br>
 ┃　　　┃　　　┃　　　┗━　[XDP](./OS/linux/BPF/XDP.md)</br>
+┃　　　┃　　　┃　　　┗━　[libbpf](./OS/linux/BPF/libbpf.md)</br>
+┃　　　┃　　　┃　　　┗━　[libbpf 함수 설명](./OS/linux/BPF/libbpf 함수 설명.md)</br>
 ┃　　　┃　　　┗━　[**Disk & Dir**](./OS/linux/Disk & Dir)</br>
 ┃　　　┃　　　┃　　　┗━　[LVM](./OS/linux/Disk & Dir/LVM.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Linux 디렉토리 구조](./OS/linux/Disk & Dir/Linux 디렉토리 구조.md)</br>
@@ -413,6 +414,18 @@ avg_file_length  : 6036
 ┃　　　┃　　　┃　　　┗━　[파일 종류](./OS/linux/Disk & Dir/파일 종류.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./OS/linux/Disk & Dir/파일 시스템.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./OS/linux/Disk & Dir/파일 관리 명령어.md)</br>
+┃　　　┃　　　┗━　[**ELF**](./OS/linux/ELF)</br>
+┃　　　┃　　　┃　　　┗━　[ELF](./OS/linux/ELF/ELF.md)</br>
+┃　　　┃　　　┃　　　┗━　[SEC()](./OS/linux/ELF/SEC().md)</br>
+┃　　　┃　　　┗━　[**ETC**](./OS/linux/ETC)</br>
+┃　　　┃　　　┃　　　┗━　[PMU](./OS/linux/ETC/PMU.md)</br>
+┃　　　┃　　　┃　　　┗━　[Perf](./OS/linux/ETC/Perf.md)</br>
+┃　　　┃　　　┃　　　┗━　[Redirection와 FD](./OS/linux/ETC/Redirection와 FD.md)</br>
+┃　　　┃　　　┃　　　┗━　[Runlevel](./OS/linux/ETC/Runlevel.md)</br>
+┃　　　┃　　　┃　　　┗━　[X window](./OS/linux/ETC/X window.md)</br>
+┃　　　┃　　　┃　　　┗━　[mail](./OS/linux/ETC/mail.md)</br>
+┃　　　┃　　　┃　　　┗━　[man](./OS/linux/ETC/man.md)</br>
+┃　　　┃　　　┃　　　┗━　[명령어들](./OS/linux/ETC/명령어들.md)</br>
 ┃　　　┃　　　┗━　[**Kernel**](./OS/linux/Kernel)</br>
 ┃　　　┃　　　┃　　　┗━　[Block I／O](./OS/linux/Kernel/Block I／O.md)</br>
 ┃　　　┃　　　┃　　　┗━　[디버깅](./OS/linux/Kernel/디버깅.md)</br>
@@ -446,6 +459,7 @@ avg_file_length  : 6036
 ┃　　　┃　　　┃　　　┗━　[iptables 방화벽 설정](./OS/linux/Network/iptables 방화벽 설정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./OS/linux/Network/namespace와 cgroup.md)</br>
 ┃　　　┃　　　┃　　　┗━　[network namespaces](./OS/linux/Network/network namespaces.md)</br>
+┃　　　┃　　　┃　　　┗━　[ufw](./OS/linux/Network/ufw.md)</br>
 ┃　　　┃　　　┗━　[**Process**](./OS/linux/Process)</br>
 ┃　　　┃　　　┃　　　┗━　[Deamon process](./OS/linux/Process/Deamon process.md)</br>
 ┃　　　┃　　　┃　　　┗━　[httpd](./OS/linux/Process/httpd.md)</br>
@@ -465,18 +479,11 @@ avg_file_length  : 6036
 ┃　　　┃　　　┃　　　┗━　[thread 관련 systemcall](./OS/linux/System call/thread 관련 systemcall.md)</br>
 ┃　　　┃　　　┃　　　┗━　[wait과 waitpid](./OS/linux/System call/wait과 waitpid.md)</br>
 ┃　　　┃　　　┃　　　┗━　[리눅스 시스템 프로그래밍 프로젝트](./OS/linux/System call/리눅스 시스템 프로그래밍 프로젝트.md)</br>
-┃　　　┃　　　┗━　[ELF](./OS/linux/ELF.md)</br>
 ┃　　　┃　　　┗━　[Linux Package](./OS/linux/Linux Package.md)</br>
 ┃　　　┃　　　┗━　[Linux 배포판](./OS/linux/Linux 배포판.md)</br>
 ┃　　　┃　　　┗━　[Linux 부팅 과정](./OS/linux/Linux 부팅 과정.md)</br>
 ┃　　　┃　　　┗━　[Linux 특징 및 관련용어](./OS/linux/Linux 특징 및 관련용어.md)</br>
-┃　　　┃　　　┗━　[Redirection와 FD](./OS/linux/Redirection와 FD.md)</br>
-┃　　　┃　　　┗━　[Runlevel](./OS/linux/Runlevel.md)</br>
-┃　　　┃　　　┗━　[X window](./OS/linux/X window.md)</br>
-┃　　　┃　　　┗━　[mail](./OS/linux/mail.md)</br>
-┃　　　┃　　　┗━　[man](./OS/linux/man.md)</br>
-┃　　　┃　　　┗━　[ufw](./OS/linux/ufw.md)</br>
-┃　　　┃　　　┗━　[명령어들](./OS/linux/명령어들.md)</br>
+┃　　　┃　　　┗━　[krobe와 kretprobe](./OS/linux/krobe와 kretprobe.md)</br>
 ┃　　　┃　　　┗━　[쉘 단축키](./OS/linux/쉘 단축키.md)</br>
 ┃　　　┗━　[**memory**](./OS/memory)</br>
 ┃　　　┃　　　┗━　[Memory Mapping](./OS/memory/Memory Mapping.md)</br>

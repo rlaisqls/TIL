@@ -36,11 +36,11 @@ func main() {
 
 위의 Command Line Args 기능에서 한발 나아가 Go는 흔히 사용되는 Command Line 옵션(예:`-h`, `-input` 등)을 파싱하는 기능을 제공한다. Command Line Flag라 불리우는 이 기능은 "flag" 표준패키지에서 제공한다.
 
-flag는 문자열, 정수, 그리고 Boolean 3가지 데이타타입을 지원하는데, 각각 `flag.String()`, `flag.Int()`, `flag.Bool()` 같은 메서드를 사용하여 Command 옵션을 지정할 수 있다.
+flag는 문자열, 정수, 그리고 Boolean 3가지 데이터타입을 지원하는데, 각각 `flag.String()`, `flag.Int()`, `flag.Bool()` 같은 메서드를 사용하여 Command 옵션을 지정할 수 있다.
 
 Command 옵션을 지정하는 플래그 메서드는 플래그명, 디폴트값, 그리고 간단한 플래그 도움말 등을 받아들이는데, 예를 들어, `flag.String`(플래그명, 디폴트값, 플래그 설명) 과 같은 형태이다. 모든 옵션이 정의된 후, `flag.Parse()` 호출하는데, 이는 실제 Command Line 옵션들을 파싱해서 읽어들여 (포인터)변수에 저장하는 역활을 한다.
 
-포인터 변수에 저장된 데이타는 Dereference하여 사용하면 된다. 아래 예제는 `-file`, `-maxtrial`, `-root` 라는 3가지 옵션 플래그를 읽고 그대로 출력하는 코드이다.
+포인터 변수에 저장된 데이터는 Dereference하여 사용하면 된다. 아래 예제는 `-file`, `-maxtrial`, `-root` 라는 3가지 옵션 플래그를 읽고 그대로 출력하는 코드이다.
 
 ```go
 /* test.go */

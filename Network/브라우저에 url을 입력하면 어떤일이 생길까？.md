@@ -59,7 +59,7 @@
   - 요청된 리소스를 가리키는 경로
   - 통신할 HTTP 버전
 
-<img src="https://user-images.githubusercontent.com/81006587/198164298-9d8b2266-575f-4905-aa40-22496b8a6074.png">
+    <img src="https://user-images.githubusercontent.com/81006587/198164298-9d8b2266-575f-4905-aa40-22496b8a6074.png">
 
 - HTTPS를 사용하는 경우 주고 받는 데이터의 암호화를 위한 **TLS (Transport Layer Security)** 핸드셰이크라는 추가 과정을 수행한다.
 
@@ -71,29 +71,29 @@
 
 - 서버 응답에는 요청한 웹 페이지와 함께 상태 코드(status code), 압축 유형(Content-Encoding), 페이지 캐싱 방법(Cache-Control), 설정할 쿠키, 개인 정보 등이 포함 된다.
 
-- 서버의 HTTP 응답 예시이다:
+- 서버의 HTTP 응답 예시:
 
-```bash
-Server: nginx/1.18.0 (Ubuntu)
-Date: Mon, 26 Jun 2023 05:47:16 GMT
-Content-Type: application/json;charset=UTF-8
-Content-Length: 64
-Connection: keep-alive
-Vary: Origin
-Vary: Access-Control-Request-Method
-Vary: Access-Control-Request-Headers
-X-Content-Type-Options: nosniff
-X-XSS-Protection: 1; mode=block
-Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-Pragma: no-cache
-Expires: 0
-X-Frame-Options: DENY
+  ```bash
+  Server: nginx/1.18.0 (Ubuntu)
+  Date: Mon, 26 Jun 2023 05:47:16 GMT
+  Content-Type: application/json;charset=UTF-8
+  Content-Length: 64
+  Connection: keep-alive
+  Vary: Origin
+  Vary: Access-Control-Request-Method
+  Vary: Access-Control-Request-Headers
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+  X-Frame-Options: DENY
 
-{"message":"Hello"}
-```
+  {"message":"Hello"}
+  ```
 
 ### 8. 브라우저가 HTML 컨텐츠를 보여준다.
 
 - 브라우저는 응답받은 HTML을 화면에 단계별로 표시한다. 첫째, HTML 골격을 렌더링한다. 그런 다음 HTML 태그를 확인하고 이미지, CSS 스타일시트, 자바스크립트 파일 등과 같은 웹 페이지의 추가 요소에 대한 GET 요청을 보낸다. 정적 파일(Static File)은 브라우저에서 캐싱되므로 다음에 페이지를 방문할 때 다시 가져올 필요가 없다. 
 
-- 드디어, google.com 페이지가 브라우저에 나타난다.
+- 드디어 google.com 페이지가 브라우저에 나타난다.

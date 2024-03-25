@@ -60,7 +60,6 @@ When data streaming applications are integrated with the Schema Registry, you ca
 - Amazon Glue provides all of the capabilities needed for data integration so that you can start analyzing your data and putting it to use in minutes instead of months.
   
 ---
-
 reference
 - https://docs.aws.amazon.com/ko_kr/glue/latest/dg/what-is-glue.html
 - https://docs.aws.amazon.com/ko_kr/glue/latest/dg/how-it-works.html

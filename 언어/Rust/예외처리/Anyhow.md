@@ -5,31 +5,31 @@
 
 - `map_err`을 사용할 때는, 문자열로 에러를 변환하거나 새로운 에러 타입을 만들어 통일한다.
   
-```rust
-fn stringify(x: u32) -> String { format!("error code: {}", x) }
+    ```rust
+    fn stringify(x: u32) -> String { format!("error code: {}", x) }
 
-let x: Result<u32, u32> = Err(404);
-x.map_err(stringify); // error code: 404
-```
+    let x: Result<u32, u32> = Err(404);
+    x.map_err(stringify); // error code: 404
+    ```
 
-`Box<dyn std::error::Error>`는 “`std::error::Error` 트레잇(Trait)을 구현한 타입이면 아무거나 된다”라는 의미이다. 트레잇이기 때문에 dyn 키워드가 붙었고, 에러 타입의 크기를 정확히 모르기 때문에 Box로 감싸준다.
+- `Box<dyn std::error::Error>`는 “`std::error::Error` 트레잇(Trait)을 구현한 타입이면 아무거나 된다”라는 의미이다. 트레잇이기 때문에 dyn 키워드가 붙었고, 에러 타입의 크기를 정확히 모르기 때문에 Box로 감싸준다.
 
-```rust
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // ...
-}
-```
+    ```rust
+    #[tokio::main]
+    async fn main() -> Result<(), Box<dyn std::error::Error>> {
+        // ...
+    }
+    ```
 
-마찬가지로, Anyhow도 `Box<dyn std::error::Error>`와 동일하게 사용하면 된다.
+- 마찬가지로, Anyhow도 `Box<dyn std::error::Error>`와 동일하게 사용하면 된다.
 
-```rust
-fn get_cluster_info() -> anyhow::Result<ClusterMap> {
-    let config = std::fs::read_to_string("cluster.json")?;
-    let map: ClusterMap = serde_json::from_str(&config)?;
-    Ok(map)
-}
-```
+    ```rust
+    fn get_cluster_info() -> anyhow::Result<ClusterMap> {
+        let config = std::fs::read_to_string("cluster.json")?;
+        let map: ClusterMap = serde_json::from_str(&config)?;
+        Ok(map)
+    }
+    ```
 
 - `anyhow::Error`는 `Box<dyn std::error::Error>`와 매우 비슷하지만, 몇 가지 차이점이 있다.
 
