@@ -1,4 +1,4 @@
-- BPF 프로그램은 수집한 데이터를 후처리하고 로깅하기 위해 User space로 전송해야하는데, 대부분의 경우 이를 위해 BPF Perf buffer(Perfbuf)를 사용한다. Perfbuf는 CPU마다 하나씩 생성되는 순환 버퍼로, Kernel space와 Use space간 데이터를 효율적으로 교환할 수 있도록 한다.
+- BPF 프로그램은 수집한 데이터를 후처리하고 로깅하기 위해 정보를 User space로 전송하는데, 대부분의 경우 이를 위해 BPF Perf buffer(Perfbuf)를 사용한다. Perfbuf는 CPU마다 하나씩 생성되는 순환 버퍼로, Kernel space와 Use space간 데이터를 효율적으로 교환할 수 있도록 한다.
 
 - 하지만 Perfbuf에는 두가지의 문제점이 있었다.
   1. 각 CPU에 대해 별도의 버퍼를 사용하기 때문에 데이터 스파이크에 대응하기 위해서 각각의 버퍼크기를 크게 할당해주어야 한다. 이 때문에 필요한 것 보다 더 많은 메모리 공간이 낭비될 수 있다.
@@ -262,7 +262,7 @@
   
 - 해당 함수들의 추가 플래그 인자로 `BPF_RB_NO_WAKEUP`을 지정하면 커널에서 데이터 가용성 알림을 보내지 않도록 한다. 반면에 `BPF_RB_FORCE_WAKEUP`은 알림을 강제로 보낸다. 이렇게 하면 필요한 경우 정확한 수동 제어가 가능해진다. ([Benchmark 참고](https://github.com/torvalds/linux/blob/master/tools/testing/selftests/bpf/progs/ringbuf_bench.c#L22-L31))
 
-- 플래그가 지정되지 않은 경우 BPF ringbuf 코드는 기본적으로 user space consumer의 처리 지연 여부에 따라 적응적인 알림을 수행한다. 플래그가 없는 것이 대부분의 경우에는 안전한 기본값이지만 필요한 경우에는 사용자 정의 기준(예: 버퍼에 인큐된 데이터 양)에 따라 데이터 알림을 수동으로 제어하는 것이 성능을 크게 향상시킬 수 있다.
+- 플래그가 지정되지 않은 경우 BPF ringbuf 코드는 기본적으로 user space consumer의 처리 지연 여부에 따라 적응적인 알림을 수행한다. 플래그가 없는 것이 대부분의 경우에는 안전한 기본값이지만 필요한 경우에는 사용자 정의 기준(예: 버퍼에 인입된 데이터 양)에 따라 데이터 알림을 수동으로 제어하는 것이 성능을 크게 향상시킬 수 있다.
 
 ---
 참고

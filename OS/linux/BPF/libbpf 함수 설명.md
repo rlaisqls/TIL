@@ -97,8 +97,11 @@ int bpf_probe_read_user(void *dst, int size, const void *src)
 ### `bpf_tail_call()`
 
 - "테일 콜(tail call)"을 trigger하거나 다른 eBPF 프로그램으로 점프하기 위해 사용한다. 호출된 프로그램에서도 동일한 스택 프레임이 사용된다. (하지만 호출자의 스택 및 레지스터에 있는 값은 호출된 프로그램에서 접근할 수 없다). 
+
 - 이를 활용해 프로그램 체이닝이 가능해지며, 이는 사용 가능한 eBPF 명령어의 최대 수를 늘리거나 조건부 블록에서 지정된 프로그램을 실행하기 위해 사용될 수 있다. 
+
 - 보안상의 이유로 연속적인 Tail call 수에는 상한선이 있다. Tail call의 최대 갯수는 커널 내에서 **MAX_TAIL_CALL_CNT** 매크로로 정의된다. (user space에서 접근할 수 없음) 기본값은 33이다.
+
 - helder를 호출하면 프로그램은 `prog_array_map`에서 **BPF_MAP_TYPE_PROG_ARRAY** 유형의 특별한 맵에 있는 index에 참조된 프로그램으로 점프를 시도하고 ctx를 전달합니다.
 - 성공시 0을, 실패시 음수를 반환한다.
   - 호출이 성공하면 커널은 즉시 새 프로그램의 첫 번째 명령어를 실행한다. 이는 함수 호출이 아니기에 이전 프로그램으로 돌아가지 않는다. 
@@ -109,7 +112,24 @@ int bpf_probe_read_user(void *dst, int size, const void *src)
 long bpf_tail_call(void *ctx, struct bpf_map *prog_array_map, u32 index)
 ```
 
+### `bpf_perf_event_output()`
+
+```c
+long bpf_perf_event_output(void *ctx, struct bpf_map *map, u64 flags, void *data, u64 size)
+```
+
+- `BPF_MAP_TYPE_PERF_EVENT_ARRAY` 유형의 맵에 raw data blob을 BPF 성능 이벤트로서 write한다. 이 성능 이벤트는 다음과 같은 특성을 가져야 한다:
+  - sample_type: `PERF_SAMPLE_RAW`
+  - type: `PERF_TYPE_SOFTWARE`
+  - config: `PERF_COUNT_SW_BPF_OUTPUT`
+
+- flag는 값을 넣을 맵 내의 인덱스를 나타내는 데 사용되며 `BPF_F_INDEX_MASK`와 마스크된다.   현재 CPU 코어의 인덱스를 사용해야 함을 나타내는 `BPF_F_CURRENT_CPU`로 설정하기도 한다.
+
+- 이 함수로 작성한 값을 읽으려는 프로그램은 `perf_event_open()`을 호출하고 파일 디스크립터를 맵에 저장해야 한다. 이 작업은 eBPF 프로그램이 데이터를 전송하기 전에 수행되어야 한다. 
+
+- Linux 커널 소스 트리의 [samples/bpf/trace_output_user.c](https://github.com/torvalds/linux/blob/928a87efa42302a23bb9554be081a28058495f22/samples/bpf/trace_output_user.c#L4) 파일에서 예시를 확인할 수 있다.
+
 ---
 참고
 - https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md#10-bpf_probe_read_user
-- https://github.com/libbpf/libbpf/blob/2778cbce609aa1e2747a69349f7f46a2f94f0522/include/uapi/linux/bpf.h#L4143
+- https://github.com/libbpf/libbpf/blob/main/include/uapi/linux/bpf.h
