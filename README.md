@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 720
+files            : 721
 derectories      : 156
-avg_file_length  : 6051
+avg_file_length  : 6054
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -623,6 +623,7 @@ avg_file_length  : 6051
 ┃　　　┃　　　┃　　　┗━　[스마트 포인터 활용](./언어/Rust/메모리　참조/스마트 포인터 활용.md)</br>
 ┃　　　┃　　　┗━　[**예외처리**](./언어/Rust/예외처리)</br>
 ┃　　　┃　　　┃　　　┗━　[Anyhow](./언어/Rust/예외처리/Anyhow.md)</br>
+┃　　　┃　　　┗━　[FFI](./언어/Rust/FFI.md)</br>
 ┃　　　┃　　　┗━　[String](./언어/Rust/String.md)</br>
 ┃　　　┃　　　┗━　[Trait](./언어/Rust/Trait.md)</br>
 ┃　　　┃　　　┗━　[extern](./언어/Rust/extern.md)</br>
