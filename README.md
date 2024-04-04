@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 721
+files            : 722
 derectories      : 156
-avg_file_length  : 6054
+avg_file_length  : 6055
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -286,6 +286,7 @@ avg_file_length  : 6054
 ┃　　　┃　　　┗━　[DeepFlow](./DevOps/Monitoring/DeepFlow.md)</br>
 ┃　　　┃　　　┗━　[DeepFlow 논문 요약](./DevOps/Monitoring/DeepFlow 논문 요약.md)</br>
 ┃　　　┃　　　┗━　[Grok exporter](./DevOps/Monitoring/Grok exporter.md)</br>
+┃　　　┃　　　┗━　[Pyroscope eBPF](./DevOps/Monitoring/Pyroscope eBPF.md)</br>
 ┃　　　┃　　　┗━　[telemetry](./DevOps/Monitoring/telemetry.md)</br>
 ┃　　　┗━　[**Proxy**](./DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[**envoy**](./DevOps/Proxy/envoy)</br>
