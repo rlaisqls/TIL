@@ -24,7 +24,7 @@ ReactDOM.render(<Counter />, rootElement);
 - 이렇게 되는 이유는 `useEffect`가 첫 render에 count를 capture하기 때문이다. 
   - `setInterval` 메소드도 브라우저에서 제공하는 Web API 중 하나이기 때문에 호출되면 바로 실행되지 않고 등록한 delay 시간을 기다렸다가 Callback Queue에 쌓인다. 그리고 Call Stack이 비면 그때 실행된다. 그리고 실행된 `setInterval`은 한 번 호출된 후에 바로 종료된다. 이제부터 `setInterval`이 주기적으로 실행하라고 남겨놓은 `setCount` 함수가 주기적으로 실행된다. 
   - Closure에서 외부 함수가 종료되면 내부 함수가 그 함수의 값을 기억하는 특성이 있어 문제가 발생한다.
-  - `setInterval`은 종료되었지만, `setInterval`의 내부 함수인 setCount가 실행될 때마다 그 초기값이었던 0을 기억하고 계속 +1을 하는 것이다. 다시 실행될 때에도 마찬가지다. setCount가 기억하는 count는 계속 0이기때문에, 값이 계속 1이 된다.
+  - `setInterval`은 종료되었지만, `setInterval`의 내부 함수인 `setCount`가 실행될 때마다 그 초기값이었던 0을 기억하고 계속 1을 더하는 것이다. 다시 실행될 때에도 마찬가지다. `setCount`가 기억하는 count는 계속 0이기때문에, 값이 계속 1이 된다.
 
 ### 해결 방법
 

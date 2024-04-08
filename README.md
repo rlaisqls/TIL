@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 722
-derectories      : 156
-avg_file_length  : 6055
+files            : 723
+derectories      : 157
+avg_file_length  : 6051
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -615,8 +615,13 @@ avg_file_length  : 6055
 ┃　　　┃　　　┗━　[람다 표현식](./언어/Kotlin/람다 표현식.md)</br>
 ┃　　　┃　　　┗━　[범위 지정 함수](./언어/Kotlin/범위 지정 함수.md)</br>
 ┃　　　┗━　[**Rust**](./언어/Rust)</br>
+┃　　　┃　　　┗━　[**ffi**](./언어/Rust/ffi)</br>
+┃　　　┃　　　┃　　　┗━　[FFI](./언어/Rust/ffi/FFI.md)</br>
+┃　　　┃　　　┃　　　┗━　[extern](./언어/Rust/ffi/extern.md)</br>
+┃　　　┃　　　┃　　　┗━　[repr](./언어/Rust/ffi/repr.md)</br>
 ┃　　　┃　　　┗━　[**스레드**](./언어/Rust/스레드)</br>
 ┃　　　┃　　　┃　　　┗━　[Condvar](./언어/Rust/스레드/Condvar.md)</br>
+┃　　　┃　　　┃　　　┗━　[멀티 스레드 웹 서버 만들기](./언어/Rust/스레드/멀티 스레드 웹 서버 만들기.md)</br>
 ┃　　　┃　　　┗━　[**메모리　참조**](./언어/Rust/메모리　참조)</br>
 ┃　　　┃　　　┃　　　┗━　[Rc 타입과 Weak 타입](./언어/Rust/메모리　참조/Rc 타입과 Weak 타입.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Unwrap](./언어/Rust/메모리　참조/Unwrap.md)</br>
@@ -624,17 +629,14 @@ avg_file_length  : 6055
 ┃　　　┃　　　┃　　　┗━　[스마트 포인터 활용](./언어/Rust/메모리　참조/스마트 포인터 활용.md)</br>
 ┃　　　┃　　　┗━　[**예외처리**](./언어/Rust/예외처리)</br>
 ┃　　　┃　　　┃　　　┗━　[Anyhow](./언어/Rust/예외처리/Anyhow.md)</br>
-┃　　　┃　　　┗━　[FFI](./언어/Rust/FFI.md)</br>
 ┃　　　┃　　　┗━　[String](./언어/Rust/String.md)</br>
 ┃　　　┃　　　┗━　[Trait](./언어/Rust/Trait.md)</br>
-┃　　　┃　　　┗━　[extern](./언어/Rust/extern.md)</br>
-┃　　　┃　　　┗━　[repr](./언어/Rust/repr.md)</br>
 ┃　　　┃　　　┗━　[동시성](./언어/Rust/동시성.md)</br>
+┃　　　┃　　　┗━　[클로저](./언어/Rust/클로저.md)</br>
 ┃　　　┃　　　┗━　[구조체 impl](./언어/Rust/구조체 impl.md)</br>
 ┃　　　┃　　　┗━　[타입과 변수](./언어/Rust/타입과 변수.md)</br>
 ┃　　　┃　　　┗━　[함수와 메서드](./언어/Rust/함수와 메서드.md)</br>
 ┃　　　┃　　　┗━　[조건문과 반복문](./언어/Rust/조건문과 반복문.md)</br>
-┃　　　┃　　　┗━　[멀티 스레드 웹 서버 만들기](./언어/Rust/멀티 스레드 웹 서버 만들기.md)</br>
 ┃　　　┗━　[CustomAnnotation](./언어/CustomAnnotation.md)</br>
 ┃　　　┗━　[자바<？>와 코틀린<*>](./언어/자바<？>와 코틀린<*>.md)</br>
 ┃　　　┗━　[직렬화 serialVersionUID](./언어/직렬화 serialVersionUID.md)</br>
