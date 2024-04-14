@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 725
+files            : 726
 derectories      : 157
-avg_file_length  : 6047
+avg_file_length  : 6044
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -478,6 +478,7 @@ avg_file_length  : 6047
 ┃　　　┃　　　┃　　　┗━　[file 관련 systemcall](./OS/linux/System call/file 관련 systemcall.md)</br>
 ┃　　　┃　　　┃　　　┗━　[fork와 exec](./OS/linux/System call/fork와 exec.md)</br>
 ┃　　　┃　　　┃　　　┗━　[mmap](./OS/linux/System call/mmap.md)</br>
+┃　　　┃　　　┃　　　┗━　[rlimit](./OS/linux/System call/rlimit.md)</br>
 ┃　　　┃　　　┃　　　┗━　[thread 관련 systemcall](./OS/linux/System call/thread 관련 systemcall.md)</br>
 ┃　　　┃　　　┃　　　┗━　[wait과 waitpid](./OS/linux/System call/wait과 waitpid.md)</br>
 ┃　　　┃　　　┃　　　┗━　[리눅스 시스템 프로그래밍 프로젝트](./OS/linux/System call/리눅스 시스템 프로그래밍 프로젝트.md)</br>
