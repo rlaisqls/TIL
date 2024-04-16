@@ -1,9 +1,9 @@
 # TIL
 
 ```
-files            : 726
+files            : 727
 derectories      : 157
-avg_file_length  : 6044
+avg_file_length  : 6046
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -425,6 +425,7 @@ avg_file_length  : 6044
 ┃　　　┃　　　┃　　　┗━　[Redirection와 FD](./OS/linux/ETC/Redirection와 FD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Runlevel](./OS/linux/ETC/Runlevel.md)</br>
 ┃　　　┃　　　┃　　　┗━　[X window](./OS/linux/ETC/X window.md)</br>
+┃　　　┃　　　┃　　　┗━　[linux 표준 에러 코드](./OS/linux/ETC/linux 표준 에러 코드.md)</br>
 ┃　　　┃　　　┃　　　┗━　[mail](./OS/linux/ETC/mail.md)</br>
 ┃　　　┃　　　┃　　　┗━　[man](./OS/linux/ETC/man.md)</br>
 ┃　　　┃　　　┃　　　┗━　[명령어들](./OS/linux/ETC/명령어들.md)</br>
@@ -628,7 +629,7 @@ avg_file_length  : 6044
 ┃　　　┃　　　┗━　[**메모리　참조**](./언어/Rust/메모리　참조)</br>
 ┃　　　┃　　　┃　　　┗━　[Rc 타입과 Weak 타입](./언어/Rust/메모리　참조/Rc 타입과 Weak 타입.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Unwrap](./언어/Rust/메모리　참조/Unwrap.md)</br>
-┃　　　┃　　　┃　　　┗━　[temporary　value　is　freed　에러](./언어/Rust/메모리　참조/temporary　value　is　freed　에러.md)</br>
+┃　　　┃　　　┃　　　┗━　[temporary value is freed](./언어/Rust/메모리　참조/temporary value is freed.md)</br>
 ┃　　　┃　　　┃　　　┗━　[소유권과 Lifetime](./언어/Rust/메모리　참조/소유권과 Lifetime.md)</br>
 ┃　　　┃　　　┃　　　┗━　[스마트 포인터 활용](./언어/Rust/메모리　참조/스마트 포인터 활용.md)</br>
 ┃　　　┃　　　┗━　[**예외처리**](./언어/Rust/예외처리)</br>
