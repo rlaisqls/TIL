@@ -476,13 +476,13 @@ As well as using maps, perf events can be used to gather information from BPF in
 - Run `PERF_EVENT_IOC_ENABLE` `ioctl()` for perf event fd
 - `mmap()` read/write shared memory for the perf event fd. See `perf_event_mmap()`. This will store struct `perf_event_mmap_page *` containing the data.
 - Add the perf event fd to the set of fds used in `poll()` so we can poll on events from the set of fds for each CPU to catch events.
-- Now we are ready to run `poll()`, and handle events enqueued (see perf_event_read())
+- Now we are ready to run `poll()`, and handle events enqueued (see `perf_event_read()`)
 
 ### Kernel
 - The program needs to define `BPF_MAP_TYPE_PERF_EVENT_ARRAY` to share with userspace.
 - Program should run `bpf_perf_event_output(ctx, &map, index, &data, sizeof(data))`. The index is the key of the `BPF_MAP_TYPE_PERF_EVENT_ARRAY` map, so if we're keying per-cpu it should be a CPU id.
 
-As we saw previously, bpf_perf_event_output() is supported for tc, XDP, lightweight tunnel, and kprobe, tracepoint and perf events program types. The context passed in is the relevant context for each of those program types.
+As we saw previously, `bpf_perf_event_output()` is supported for tc, XDP, lightweight tunnel, and kprobe, tracepoint and perf events program types. The context passed in is the relevant context for each of those program types.
 
 ## 3. bpf_trace_printk
 
@@ -509,10 +509,10 @@ char errmsg[] = "egress: got unexpected error (%s) %x\n";
     bpf_trace_printk(errmsg, sizeof(errmsg), store_fail, ret);
 ```
 
-One approach to consider is to have a config option BPF map shared between your program and user-space and if the config debug option is set, emit `bpf_trace_printk()`s.
+One approach to consider is to have a config option BPF map shared between your program and user-space and if the config debug option is set, emit `bpf_trace_printk()`'s.
 
 ---
-reference
+**reference**
 - https://man7.org/linux/man-pages/man7/bpf-helpers.7.html
 - http://blogs.oracle.com/linux/notes-on-bpf-2
 - https://nakryiko.com/posts/bpf-tips-printk/

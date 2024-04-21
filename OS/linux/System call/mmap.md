@@ -17,7 +17,7 @@ int munmap(void *start, size_t length);
 ---
 
 - 명시적인 `mmap`을 사용해 운영체제에 가상 메모리를 요청하면 운영체제는 RAM의 페이지를 즉시 할당해주지 않고, 가상 주소 범위만 제공한다.
-  - 그리고 실제로 메모리에 접을할 때 MMU가 페이지 결함을 일으키면 그때 새로운 페이지를 할당해준다.
+  - 그리고 실제로 메모리에 접근할 때 MMU가 페이지 결함을 일으키면 그때 새로운 페이지를 할당해준다.
 
 - 운영체제에서는 메모리를 **오버커밋** 상태로 관리한다.
   - 즉, 할당 가능한 RAM 용량을 물리적 최대 용량보다 크게 잡는다. 
@@ -27,4 +27,4 @@ int munmap(void *start, size_t length);
 ---
 참고 
 - [Go 성능 최적화 가이드](https://www.yes24.com/Product/Goods/122308121?pid=123487&cosemkid=go16946818029110592&gad_source=1&gclid=CjwKCAiApuCrBhAuEiwA8VJ6Jvu_E0svIWMux506LsLfl9VgN1bn_VY-dkqqHDe_2_XmZme9qAv4ahoC_6cQAvD_BwE)
-- https://github.com/prometheus/prometheus/blob/39d79c3cfb86c47d6bc06a9e9317af582f1833bb/tsdb/fileutil/mmap.go
+- https://man7.org/linux/man-pages/man2/mmap.2.html

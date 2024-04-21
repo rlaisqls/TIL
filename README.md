@@ -1,9 +1,8 @@
 # TIL
 
 ```
-files            : 729
+files            : 731
 derectories      : 157
-avg_file_length  : 6071
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -477,8 +476,10 @@ avg_file_length  : 6071
 ┃　　　┃　　　┃　　　┗━　[shell](./OS/linux/Shell/shell.md)</br>
 ┃　　　┃　　　┃　　　┗━　[zshrc](./OS/linux/Shell/zshrc.md)</br>
 ┃　　　┃　　　┗━　[**System call**](./OS/linux/System call)</br>
+┃　　　┃　　　┃　　　┗━　[epoll](./OS/linux/System call/epoll.md)</br>
 ┃　　　┃　　　┃　　　┗━　[file 관련 systemcall](./OS/linux/System call/file 관련 systemcall.md)</br>
 ┃　　　┃　　　┃　　　┗━　[fork와 exec](./OS/linux/System call/fork와 exec.md)</br>
+┃　　　┃　　　┃　　　┗━　[ioctl](./OS/linux/System call/ioctl.md)</br>
 ┃　　　┃　　　┃　　　┗━　[mmap](./OS/linux/System call/mmap.md)</br>
 ┃　　　┃　　　┃　　　┗━　[perf event](./OS/linux/System call/perf event.md)</br>
 ┃　　　┃　　　┃　　　┗━　[rlimit](./OS/linux/System call/rlimit.md)</br>
