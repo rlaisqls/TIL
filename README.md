@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 736
+files            : 737
 derectories      : 158
 ```
 
@@ -493,6 +493,7 @@ derectories      : 158
 ┃　　　┃　　　┗━　[Linux 배포판](./OS/linux/Linux 배포판.md)</br>
 ┃　　　┃　　　┗━　[Linux 부팅 과정](./OS/linux/Linux 부팅 과정.md)</br>
 ┃　　　┃　　　┗━　[Linux 특징 및 관련용어](./OS/linux/Linux 특징 및 관련용어.md)</br>
+┃　　　┃　　　┗━　[Stack trace와 kallsyms](./OS/linux/Stack trace와 kallsyms.md)</br>
 ┃　　　┃　　　┗━　[krobe와 kretprobe](./OS/linux/krobe와 kretprobe.md)</br>
 ┃　　　┃　　　┗━　[쉘 단축키](./OS/linux/쉘 단축키.md)</br>
 ┃　　　┗━　[**memory**](./OS/memory)</br>

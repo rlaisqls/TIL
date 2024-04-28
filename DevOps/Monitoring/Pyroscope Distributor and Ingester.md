@@ -2,7 +2,7 @@
 
 ## Distributor
 
-- Distributor는 **Agent로부터 프로파일링 데이터를 받아 처리하는 Stateless 컨포넌트**이다.
+- Distributor는 **Agent로부터 프로파일링 데이터를 받아 처리하는 Stateless 컴포넌트**이다.
 
 - Distributor는 데이터를 일괄 처리하여 여러 Ingesters에 병렬로 보내고, 시리즈를 Ingesters 사이에 나누며, 각 시리즈를 구성된 복제 요소에 따라 복제한다. 기본적으로 구성된 복제 요소는 세 개이다.
 
