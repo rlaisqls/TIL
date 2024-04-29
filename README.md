@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 737
+files            : 738
 derectories      : 158
 ```
 
@@ -581,6 +581,7 @@ derectories      : 158
 ┃　　　┃　　　┃　　　┗━　[Permanent to Metaspace](./언어/Java/JVM/Permanent to Metaspace.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Runtime Data Area](./언어/Java/JVM/Runtime Data Area.md)</br>
 ┃　　　┃　　　┃　　　┗━　[TLAB과 PLAB](./언어/Java/JVM/TLAB과 PLAB.md)</br>
+┃　　　┃　　　┃　　　┗━　[jcmd](./언어/Java/JVM/jcmd.md)</br>
 ┃　　　┃　　　┃　　　┗━　[메모리누수](./언어/Java/JVM/메모리누수.md)</br>
 ┃　　　┃　　　┗━　[**Thread**](./언어/Java/Thread)</br>
 ┃　　　┃　　　┃　　　┗━　[@Volatile](./언어/Java/Thread/@Volatile.md)</br>
