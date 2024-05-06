@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 740
-derectories      : 158
+files            : 741
+derectories      : 157
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -288,6 +288,7 @@ derectories      : 158
 ┃　　　┃　　　┗━　[Grok exporter](./DevOps/Monitoring/Grok exporter.md)</br>
 ┃　　　┃　　　┗━　[Pyroscope Distributor and Ingester](./DevOps/Monitoring/Pyroscope Distributor and Ingester.md)</br>
 ┃　　　┃　　　┗━　[Pyroscope eBPF](./DevOps/Monitoring/Pyroscope eBPF.md)</br>
+┃　　　┃　　　┗━　[Pyroscope eBPF 관련 개념](./DevOps/Monitoring/Pyroscope eBPF 관련 개념.md)</br>
 ┃　　　┃　　　┗━　[telemetry](./DevOps/Monitoring/telemetry.md)</br>
 ┃　　　┗━　[**Proxy**](./DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[**envoy**](./DevOps/Proxy/envoy)</br>
@@ -519,7 +520,6 @@ derectories      : 158
 ┃　　　┗━　[파일 시스템](./OS/파일 시스템.md)</br>
 ┃　　　┗━　[디스크 시스템](./OS/디스크 시스템.md)</br>
 ┃　　　┗━　[운영체제 유형](./OS/운영체제 유형.md)</br>
-┗━　[**he**](./he)</br>
 ┗━　[**개발**](./개발)</br>
 ┃　　　┗━　[**AI**](./개발/AI)</br>
 ┃　　　┃　　　┗━　[**실습**](./개발/AI/실습)</br>
