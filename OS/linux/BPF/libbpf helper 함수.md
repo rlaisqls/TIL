@@ -85,7 +85,7 @@ int bpf_map_update_elem(int fd, const void *key, const void *value, __u64 flags)
 long bpf_probe_read_kernel(void *dst, u32 size, const void *unsafe_ptr)
 ```
 
-### `bpf_probe_read_kernel()`
+### `bpf_probe_read_user()`
 
 - 유저 공간의 `unsafe_ptr`주소에서 `size` 바이트를 안전하게 읽어서 데이터를 `dst`에 저장한다.
 - 성공시 0을, 실패시 음수를 반환한다.
@@ -102,7 +102,7 @@ int bpf_probe_read_user(void *dst, int size, const void *src)
 
 - 보안상의 이유로 연속적인 Tail call 수에는 상한선이 있다. Tail call의 최대 갯수는 커널 내에서 **MAX_TAIL_CALL_CNT** 매크로로 정의된다. (user space에서 접근할 수 없음) 기본값은 33이다.
 
-- helder를 호출하면 프로그램은 `prog_array_map`에서 **BPF_MAP_TYPE_PROG_ARRAY** 유형의 특별한 맵에 있는 index에 참조된 프로그램으로 점프를 시도하고 ctx를 전달합니다.
+- helder를 호출하면 프로그램은 `prog_array_map`에서 **BPF_MAP_TYPE_PROG_ARRAY** 유형의 특별한 맵에 있는 index에 참조된 프로그램으로 점프를 시도하고 ctx를 전달한다.
 - 성공시 0을, 실패시 음수를 반환한다.
   - 호출이 성공하면 커널은 즉시 새 프로그램의 첫 번째 명령어를 실행한다. 이는 함수 호출이 아니기에 이전 프로그램으로 돌아가지 않는다. 
   - 점프 대상 프로그램이 존재하지 않거나 (즉, `index`가 `prog_array_map`에 있는 항목 수를 초과할 때) 또는 이 체인의 프로그램에 대한 최대 Tail call 수에 도달하여 호출이 실패하는 경우 호출자의 이후 명령어를 계속 실행한다.

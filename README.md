@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 743
+files            : 746
 derectories      : 156
 ```
 
@@ -321,6 +321,7 @@ derectories      : 156
 ┃　　　┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./DevOps/tools/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./DevOps/Cloud Agnostic Design.md)</br>
+┃　　　┗━　[Platform Engineering](./DevOps/Platform Engineering.md)</br>
 ┃　　　┗━　[데브옵스](./DevOps/데브옵스.md)</br>
 ┗━　[**Network**](./Network)</br>
 ┃　　　┗━　[**L1 network access layer**](./Network/L1 network access layer)</br>
@@ -538,6 +539,8 @@ derectories      : 156
 ┃　　　┃　　　┗━　[활성화함수](./개발/AI/활성화함수.md)</br>
 ┃　　　┗━　[**Algorithm**](./개발/Algorithm)</br>
 ┃　　　┃　　　┗━　[외판원순회](./개발/Algorithm/외판원순회.md)</br>
+┃　　　┃　　　┗━　[최소외접원](./개발/Algorithm/최소외접원.md)</br>
+┃　　　┃　　　┗━　[담금질 기법](./개발/Algorithm/담금질 기법.md)</br>
 ┃　　　┃　　　┗━　[세그먼트트리](./개발/Algorithm/세그먼트트리.md)</br>
 ┃　　　┗━　[**Tools**](./개발/Tools)</br>
 ┃　　　┃　　　┗━　[**Git**](./개발/Tools/Git)</br>
