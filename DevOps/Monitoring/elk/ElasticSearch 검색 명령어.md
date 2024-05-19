@@ -40,29 +40,30 @@
 <details>
    <summary>api</summary>
    <div markdown="1">
-      ```bash
+
+         ```bash
          # index와 doc 만들기
          # customer 는 인덱스명, 1은 doc의 id
          POST /customer/_doc/1
          {
-         "name":"choi",
-         "age":25
+            "name":"choi",
+            "age":25
          }
 
          # _update로 수정하기
          POST /customer/_doc/1/_update
          {
-         "doc": {
-            "name":"change"
-         }
+            doc": {
+               "name":"change"
+            }
          }
 
          # script 사용
          POST /customer/_doc/1/_update
          {
-         "script" : {
-            "inline": "if(ctx._source.age==25) {ctx._source.age++}"
-         }
+            "script" : {
+               "inline": "if(ctx._source.age==25) {ctx._source.age++}"
+            }
          }
 
          # 조회하기
@@ -70,7 +71,7 @@
 
          # 삭제하기
          DELETE /customer
-      ```
+         ```
    </div>
 </details>
 
@@ -84,7 +85,8 @@
 <details>
    <summary>api</summary>
    <div markdown="1">
-      ```bash
+
+         ```bash
          ## 키바나의 Devtools에서 진행 ##
 
          # 벌크 저장
@@ -107,7 +109,7 @@
          # 조회
          GET /customer/_doc/1
          GET /customer/_doc/2
-      ```
+         ```
    </div>
 </details>
 
@@ -140,7 +142,8 @@ GET /bank/_search?q=*&sort=account_number:asc&pretty
 <details>
    <summary>명령어</summary>
    <div markdown="1">
-      ```bash
+
+         ```bash
          # 전체 인덱스의 title필드에서 time검색
          /_search?q=title:time
 
@@ -159,7 +162,8 @@ GET /bank/_search?q=*&sort=account_number:asc&pretty
          # 정렬
          /_search?q=title:time&sort=pages
          /_search?q=title:time&sort=pages:desc
-      ```
+         ```
+
    </div>
 </details>
 
@@ -170,7 +174,8 @@ Elasticsearch에서 쿼리를 실행하는데 사용할 수 있는 JSON 스타�
 <details>
    <summary>명령어</summary>
    <div markdown="1">
-      ```bash
+
+         ```bash
          # match_all 쿼리는 지정된 색인의 모든 문서를 검색
          POST /bank/_search
          {
@@ -249,85 +254,6 @@ Elasticsearch에서 쿼리를 실행하는데 사용할 수 있는 JSON 스타�
                }
             }
          }
-
-         # match_all 쿼리는 지정된 색인의 모든 문서를 검색
-         POST /bank/_search
-         {
-            "query": {"match_all": {}}    
-         }
-
-         # 1개만 조회
-         # size dafult = 10
-         POST /bank/_search
-         {
-            "query": {"match_all": {}},
-            "size":1
-         }
-
-         # from 매개변수에서 시작하여 size만큼의 문서를 반환
-         # 즉, 10 ~ 19 까지
-         # from default = 0
-         POST /bank/_search
-         {
-            "query": {"match_all": {}},
-            "from": 10,
-            "size": 10
-         }
-
-         # balance 필드 기준 내림차순 정렬하고 상위 10개
-         POST /bank/_search
-         {
-            "query": {"match_all": {}},
-            "sort": {"balance":{"order":"desc"}
-         }
-
-         # 특정 필드만 출력
-         POST /bank/_search
-         {
-            "query": {"match_all": {}},
-            "_source": ["account_number","balance"]
-         }
-
-         # address가 mail lain인 것을 반환
-         # 일치순으로 나옴 -> mail lane, mail, lane 이런 식
-         POST /bank/_search
-         {
-            "query": {"match": {"address": "mail lane"}}
-         }
-
-         # address가 mail lain과 완벽 일치 반환
-         POST /bank/_search
-         {
-            "query": {"match_phrase": {"address": "mail lane"}}
-         }
-
-         # address가 maill과 lane을 포함하는 모든 계정 반환
-         POST /bank/_search
-         {
-            "query": {
-               "bool": {
-                     "must": [
-                        {"match": {"address": "mill"}},
-                        {"match": {"address": "lane"}}
-                     ]
-               }
-            }
-         }
-
-         # mill은 포함하지만 lane은 포함하지 않는 모든 계정 반환
-         POST /bank/_search
-         {
-            "query": {
-               "bool": {
-                     "must": [
-                        {"match": {"address": "mill"}},               
-                     ],
-                     "must_not": [
-                        {"match": {"address": "lane"}}
-                     ]
-               }
-            }
-         }
-      ```
+         ```
    </div>
 </details>
