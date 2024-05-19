@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 747
+files            : 746
 derectories      : 156
 ```
 
@@ -272,6 +272,8 @@ derectories      : 156
 ┃　　　┃　　　┃　　　┗━　[Logstash](./DevOps/Monitoring/elk/Logstash.md)</br>
 ┃　　　┃　　　┗━　[**grafana**](./DevOps/Monitoring/grafana)</br>
 ┃　　　┃　　　┃　　　┗━　[Granafa agent](./DevOps/Monitoring/grafana/Granafa agent.md)</br>
+┃　　　┃　　　┃　　　┗━　[Pyroscope Distributor and Ingester](./DevOps/Monitoring/grafana/Pyroscope Distributor and Ingester.md)</br>
+┃　　　┃　　　┃　　　┗━　[Pyroscope eBPF](./DevOps/Monitoring/grafana/Pyroscope eBPF.md)</br>
 ┃　　　┃　　　┗━　[**loki**](./DevOps/Monitoring/loki)</br>
 ┃　　　┃　　　┃　　　┗━　[Loki Canary](./DevOps/Monitoring/loki/Loki Canary.md)</br>
 ┃　　　┃　　　┗━　[**prometheus**](./DevOps/Monitoring/prometheus)</br>
@@ -286,9 +288,6 @@ derectories      : 156
 ┃　　　┃　　　┗━　[DeepFlow](./DevOps/Monitoring/DeepFlow.md)</br>
 ┃　　　┃　　　┗━　[DeepFlow 논문 요약](./DevOps/Monitoring/DeepFlow 논문 요약.md)</br>
 ┃　　　┃　　　┗━　[Grok exporter](./DevOps/Monitoring/Grok exporter.md)</br>
-┃　　　┃　　　┗━　[Pyroscope Distributor and Ingester](./DevOps/Monitoring/Pyroscope Distributor and Ingester.md)</br>
-┃　　　┃　　　┗━　[Pyroscope eBPF](./DevOps/Monitoring/Pyroscope eBPF.md)</br>
-┃　　　┃　　　┗━　[Pyroscope eBPF 관련 개념](./DevOps/Monitoring/Pyroscope eBPF 관련 개념.md)</br>
 ┃　　　┃　　　┗━　[telemetry](./DevOps/Monitoring/telemetry.md)</br>
 ┃　　　┗━　[**Proxy**](./DevOps/Proxy)</br>
 ┃　　　┃　　　┗━　[**envoy**](./DevOps/Proxy/envoy)</br>
