@@ -158,7 +158,7 @@ webClient.mutate()
 
 WebClient 는 Reactive Stream 기반이므로 리턴값을 Mono 또는 Flux 로 전달받게 된다. Spring WebFlux를 이미 사용하고 있다면 문제가 없지만 Spring MVC를 사용하는 상황에서 WebClient를 활용하고자 한다면 Mono나 Flux를 객체로 변환하거나 Java Stream 으로 변환해야 할 필요가 있다.
 
-이럴 경우를 대비해서 `Mono.block()`이나 `Flux.blockFirst()`와 같은 blocking 함수가 존재하지만 `block()`을 이용해서 객체로 변환하면 Reactive Pipeline 을 사용하는 장점이 없어지고 모든 호출이 main 쓰레드에서 호출되기 때문에 Spring 측에서는 `block()`은 테스트 용도 외에는 가급적 사용하지 말라고 권고하고 있습니다.
+이럴 경우를 대비해서 `Mono.block()`이나 `Flux.blockFirst()`와 같은 blocking 함수가 존재하지만 `block()`을 이용해서 객체로 변환하면 Reactive Pipeline 을 사용하는 장점이 없어지고 모든 호출이 main 쓰레드에서 호출되기 때문에 Spring 측에서는 `block()`은 테스트 용도 외에는 가급적 사용하지 말라고 권고하고 있다.
 
 대신 완벽한 Reactive 호출은 아니지만 Lazy Subscribe 를 통한 Stream 또는 Iterable 로 변환 시킬 수 있는 `Flux.toStream()`, `Flux.toIterable()` 함수를 제공하고 있다.
 

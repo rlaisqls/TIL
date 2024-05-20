@@ -112,7 +112,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 ### go tool
 
-이렇게 분석할 수도 있지만 좀 더 편하게 보기 위하여 go에서 지원하는 go tool을 사용할 수도 있습니다. go tool을 shell에 치시면 다음과 같은 도구들 목록이 나온다.
+이렇게 분석할 수도 있지만 좀 더 편하게 보기 위하여 go에서 지원하는 go tool을 사용할 수도 있다. go tool을 shell에 치시면 다음과 같은 도구들 목록이 나온다.
 
 ```bash
 $ go tool

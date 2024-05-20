@@ -40,7 +40,7 @@ val car = spyk(Car()) // or spyk<Car>() to call default constructor
 ```kotlin
 val car = mockk<PermissionRepository>(relaxed = true)
 
-// relaxed를 설정하는 경우 permissionRepository.delete에 대해 Mocking을 하지 않은 상태에서 delete 메소드가 호출되더라도 예외가 발생하지 않습니다.
+// relaxed를 설정하는 경우 permissionRepository.delete에 대해 Mocking을 하지 않은 상태에서 delete 메소드가 호출되더라도 예외가 발생하지 않다.
 // every { permissionRepository.delete(id) } just Runs
 ```
 

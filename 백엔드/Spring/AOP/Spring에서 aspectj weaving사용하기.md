@@ -45,7 +45,7 @@ Spring에서 AspectJ로 전환하기 위해선 4가지 조건이 필요하다.
 - AspectJ Compiler(AJC)
 
 ### AspectJ 형식의 Aspect
-우선 첫 번째는 AspectJ 형식으로 구현된 Aspect가 필요합니다.
+우선 첫 번째는 AspectJ 형식으로 구현된 Aspect가 필요하다.
 
 - `.aj` 파일로 구현된 Aspect
 - Java 파일로 구현된 Aspect(@AspectJ 애노테이션 기반)
@@ -64,9 +64,9 @@ public aspect OriginalAspect{
 }
 ```
 
-이 `*.aj` 파일의 코드 스타일은 Java와 비슷하면서도 다르고, AspectJ의 모든 기능을 사용할 수 있습니다. 커스텀마이징이 가능한 만큼 고려할 사항도 많고, 초기 학습에 대한 진입 장벽이 높고 어렵다.
+이 `*.aj` 파일의 코드 스타일은 Java와 비슷하면서도 다르고, AspectJ의 모든 기능을 사용할 수 있다. 커스텀마이징이 가능한 만큼 고려할 사항도 많고, 초기 학습에 대한 진입 장벽이 높고 어렵다.
 
-하지만 Java 형식으로도 AspectJ 형식의 Aspect를 구현할 수 있습니다.
+하지만 Java 형식으로도 AspectJ 형식의 Aspect를 구현할 수 있다.
 
 흔히 Spring AOP에서 흔히 사용하고 있는 `@AspectJ` 애노테이션 스타일의 Aspect는 AspectJ5 라이브러리의 일부 애노테이션을 사용하는 방식으로 전형적인 AspectJ의 형식이다.
 

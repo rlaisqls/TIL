@@ -42,7 +42,7 @@ dto에 선언되어있는 어노테이션에서 각각 groups = "인터페이스
 ```java
 @Size(min = 4, max = 30, message = "아이디는 4글자에서 30글자 사이로 입력해주세요.", groups = ValidationGroups.SizeCheckGroup.class)
 @NotBlank(message = "아이디를 입력해주세요.", groups = ValidationGroups.NotNullGroup.class)
-@Pattern(regexp = "^([a-z가-힣0-9]){4,30}$", message = "대문자, 특수문자는 입력할 수 없습니다.", groups = ValidationGroups.PatternCheckGroup.class)
+@Pattern(regexp = "^([a-z가-힣0-9]){4,30}$", message = "대문자, 특수문자는 입력할 수 없다.", groups = ValidationGroups.PatternCheckGroup.class)
     private String userId;
 ```
 

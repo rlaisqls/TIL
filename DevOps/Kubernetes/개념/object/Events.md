@@ -28,7 +28,7 @@ Kubernetes를 사용하다보면 Events가 계속 쌓이게 되는데 이걸 계
 
 간략하게 위에서 출력된 필드만 살펴보자.
 
-- **type**: Normal, Warning 2가지의 값 중 하나를 가지며 추후 추가될 수 있습니다. 말 그대로 일반적인 작업에 의해 생겨난 Event인지, 아니면 어느 오류 및 실패로 인해 생겨난 Event인지 표현한다.
+- **type**: Normal, Warning 2가지의 값 중 하나를 가지며 추후 추가될 수 있다. 말 그대로 일반적인 작업에 의해 생겨난 Event인지, 아니면 어느 오류 및 실패로 인해 생겨난 Event인지 표현한다.
 - **reason**: 왜 해당 Event가 발생했는지를 나타낸다. 딱히 정해진 형식은 없고, 128자 이하의 사람이 이해할 수 있는 짧은 명칭이다. kubelet에서 사용하는 Reason의 종류는 [여기](https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/events/event.go)서 볼 수 있다.
 - **eventTime**: Age로 출력된 부분의 값을 나타낸다. Event 발생한 시각을 의미하며 MicroTime 타입의 데이터로 이루어져있다.
 - **reportingController**: From으로 출력된 부분의 값을 나타낸다. 말 그대로 해당 Event를 발생시킨 Controller의 이름을 의미한다.

@@ -21,7 +21,7 @@ object CarFactory {
 }
 ```
 
-object로 설정하면, 아래 코드처럼 CarFactory.makeCar 처럼 메소드에 접근하여 Car객체를 생성할 수 있다. 또한, CarFactory.cars 처럼 직접 변수에 접근할 수 있습니다. 마치 static처럼 사용하는 것 같지만, 인스턴스는 한개 만들어져있는 상태이다. 당연히 여러번 호출해도 CarFactory 객체는 한번만 생성된다.
+object로 설정하면, 아래 코드처럼 CarFactory.makeCar 처럼 메소드에 접근하여 Car객체를 생성할 수 있다. 또한, CarFactory.cars 처럼 직접 변수에 접근할 수 있다. 마치 static처럼 사용하는 것 같지만, 인스턴스는 한개 만들어져있는 상태이다. 당연히 여러번 호출해도 CarFactory 객체는 한번만 생성된다.
 
 ```kotlin
 val car = CarFactory.makeCar(150)

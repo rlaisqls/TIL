@@ -11,7 +11,7 @@
   1. **thread**: 성공적으로 함수가 호출되면 이 포인터에 thread ID가 저장된다. 이 인자로 넘어온 값을 통해서 `pthread_join`과 같은 함수를 사용할 수 있다.
   2. **attr**: 스레드의 특성을 정의한다. 만약 스레드의 속성을 지정하려고 한다면 `pthread_attr_init`등의 함수로 초기화해야한다.
   3. **start_routine**: 어떤 로직을 할지 함수 포인터를 매개변수로 받는다. 
-  4. **arg**: start_routine에 전달될 인자를 말합니다. start_routine에서 이 인자를 변환하여 사용한다.
+  4. **arg**: start_routine에 전달될 인자를 말한다. start_routine에서 이 인자를 변환하여 사용한다.
 
 ```c
 NAME

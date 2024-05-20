@@ -25,7 +25,7 @@ fun <T : Comparable<T>> greaterThan(lhs: T, rhs: T): Boolean {
 }
 ```
 
-함수에 제네릭을 적용한 예시이다. `Comparable` 을 구현한 형식 인자만 `> `연산자를 사용할 수 있기 때문에 꺽쇠 안의 T의 선언에 `Comparable<T>` 를 구현했다는 것을 표시해주었습니다.
+함수에 제네릭을 적용한 예시이다. `Comparable` 을 구현한 형식 인자만 `> `연산자를 사용할 수 있기 때문에 꺽쇠 안의 T의 선언에 `Comparable<T>` 를 구현했다는 것을 표시해주었다.
 
 흔하게 사용되는 Kotlin의 컬렉션들인 `List`, `MutableList`, `Set`, `MutableSet`, `Map`등도 초기화될 때 제네릭으로 타입을 넣는다. 혹은 타입 추론이 될 수도 있다. (ex: listOf(1,2)가 자동으로 List<Int>로 추론됨)
 

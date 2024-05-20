@@ -391,7 +391,7 @@ static void shrink_table(void)
     ```
 
     - `compress_symbols` 함수에서 핵심 압축 로직을 수행한다. 첫 번째 인자는 압축할 `char[2]`이고, 두 번째 인자는 매핑된 1byte 정수이다. 
-    - `symbol_entry` 테이블을 순회하면서 각 `symbol_entry.sym`에 압축 대상의 문자열이 존재하는지 확인합니다. 만약 그렇다면, 해당 문자열을 idx로 치환한다.
+    - `symbol_entry` 테이블을 순회하면서 각 `symbol_entry.sym`에 압축 대상의 문자열이 존재하는지 확인한다. 만약 그렇다면, 해당 문자열을 idx로 치환한다.
     - 압축한 `symbol_entry.sym`을 반영하기 위해 이전의 내용을 지우고(`forget_symbol`), 압축이 완료된 후에는 다시 `learn_symbols`를 호출하여 `token_profit`을 최신으로 업데이트한다.
 
         ```c

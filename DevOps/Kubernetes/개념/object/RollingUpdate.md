@@ -6,7 +6,7 @@ Rolling Update는 k8s의 업데이트 방법 중 하나로, 새로운 버전의 
 기본적으로 Rolling Update는 다음과 같은 단계로 이뤄진다.
 
 1. 새로운 버전의 애플리케이션을 배포한다. 이때 기존 버전은 유지된 상태로 새로운 버전의 Pod가 함께 생성된다.
-2. 새로운 버전의 Pod가 정상적으로 동작하고, 준비 상태가 되면, 이전 버전의 Pod을 하나씩 종료합니다. 이때 제거되는 Pod은 사용자 요청을 처리하는 중인 경우, 일정 시간 동안 대기한 후에 제거된다. (Graceful Shutdown)
+2. 새로운 버전의 Pod가 정상적으로 동작하고, 준비 상태가 되면, 이전 버전의 Pod을 하나씩 종료한다. 이때 제거되는 Pod은 사용자 요청을 처리하는 중인 경우, 일정 시간 동안 대기한 후에 제거된다. (Graceful Shutdown)
 3. 이전 버전의 Pod이 모두 종료되면, 새로운 버전의 Pod만 남게 되고, 이제는 새로운 버전의 애플리케이션이 모든 트래픽을 처리하게 된다.
 
 > Rolling Update는 Deployment 등의 리소스 업데이트 시 Pod를 어떻게 교체할지에 대한 방법을 선택하는 것이며, Rolling Update 설정만으로는 무중단 배포를 설정했다고 말할 수 없다.<br/> Rolling Update를 수행하면서, 요청에 대한 에러 발생을 최소화하기 위한 설정은 Container Probe와 Graceful Shutdown에 대한 설정이 추가적으로 필요하다.
@@ -27,7 +27,7 @@ rollingUpdate:
 
 - `maxSurge=1(또는 n)`, `maxUnavailable=0`으로 설정
 - maxUnavailable 값이 0이기 때문에 새로운 버전의 Pod가 생성되야만 종료가 발생한다.
-- replica + maxSurge 만큼의 Pod가 동시에 유지될 수 있습니다.
+- replica + maxSurge 만큼의 Pod가 동시에 유지될 수 있다.
 - 위 예시에서는 새로운 Pod가 1개가 생성되고 난 후 1개의 기존 Pod가 종료된다.
   - replica가 10개라면, 업데이트시 11개의 Pod가 동시에 유지될 수 있다.
 
