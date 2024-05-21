@@ -273,7 +273,6 @@ derectories      : 156
 ┃　　　┃　　　┗━　[**grafana**](./DevOps/Monitoring/grafana)</br>
 ┃　　　┃　　　┃　　　┗━　[Granafa agent](./DevOps/Monitoring/grafana/Granafa agent.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Pyroscope Distributor and Ingester](./DevOps/Monitoring/grafana/Pyroscope Distributor and Ingester.md)</br>
-┃　　　┃　　　┃　　　┗━　[Pyroscope eBPF](./DevOps/Monitoring/grafana/Pyroscope eBPF.md)</br>
 ┃　　　┃　　　┗━　[**loki**](./DevOps/Monitoring/loki)</br>
 ┃　　　┃　　　┃　　　┗━　[Loki Canary](./DevOps/Monitoring/loki/Loki Canary.md)</br>
 ┃　　　┃　　　┗━　[**prometheus**](./DevOps/Monitoring/prometheus)</br>
@@ -497,7 +496,7 @@ derectories      : 156
 ┃　　　┃　　　┗━　[Linux 부팅 과정](./OS/linux/Linux 부팅 과정.md)</br>
 ┃　　　┃　　　┗━　[Linux 특징 및 관련용어](./OS/linux/Linux 특징 및 관련용어.md)</br>
 ┃　　　┃　　　┗━　[Stack trace와 kallsyms](./OS/linux/Stack trace와 kallsyms.md)</br>
-┃　　　┃　　　┗━　[krobe와 kretprobe](./OS/linux/krobe와 kretprobe.md)</br>
+┃　　　┃　　　┗━　[kprobe와 kretprobe](./OS/linux/kprobe와 kretprobe.md)</br>
 ┃　　　┃　　　┗━　[쉘 단축키](./OS/linux/쉘 단축키.md)</br>
 ┃　　　┗━　[**memory**](./OS/memory)</br>
 ┃　　　┃　　　┗━　[Memory Mapping](./OS/memory/Memory Mapping.md)</br>
@@ -571,6 +570,96 @@ derectories      : 156
 ┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
 ┃　　　┗━　[Web Vitals](./개발/Web Vitals.md)</br>
 ┃　　　┗━　[authn과 authz](./개발/authn과 authz.md)</br>
+┗━　[**서버**](./서버)</br>
+┃　　　┗━　[**Spring**](./서버/Spring)</br>
+┃　　　┃　　　┗━　[**AOP**](./서버/Spring/AOP)</br>
+┃　　　┃　　　┃　　　┗━　[**트랜잭션**](./서버/Spring/AOP/트랜잭션)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[TransactionAttributeSource](./서버/Spring/AOP/트랜잭션/TransactionAttributeSource.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[트랜잭션](./서버/Spring/AOP/트랜잭션/트랜잭션.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[트랜잭션 전파](./서버/Spring/AOP/트랜잭션/트랜잭션 전파.md)</br>
+┃　　　┃　　　┃　　　┗━　[AdviceAnnotation](./서버/Spring/AOP/AdviceAnnotation.md)</br>
+┃　　　┃　　　┃　　　┗━　[Pointcut](./서버/Spring/AOP/Pointcut.md)</br>
+┃　　　┃　　　┃　　　┗━　[ProxyFactoryBean](./서버/Spring/AOP/ProxyFactoryBean.md)</br>
+┃　　　┃　　　┃　　　┗━　[Spring AOP](./서버/Spring/AOP/Spring AOP.md)</br>
+┃　　　┃　　　┃　　　┗━　[Spring에서 aspectj weaving사용하기](./서버/Spring/AOP/Spring에서 aspectj weaving사용하기.md)</br>
+┃　　　┃　　　┗━　[**Event**](./서버/Spring/Event)</br>
+┃　　　┃　　　┃　　　┗━　[@TransactionalEventListener](./서버/Spring/Event/@TransactionalEventListener.md)</br>
+┃　　　┃　　　┃　　　┗━　[ApplicationEventPublisher](./서버/Spring/Event/ApplicationEventPublisher.md)</br>
+┃　　　┃　　　┗━　[**JPA**](./서버/Spring/JPA)</br>
+┃　　　┃　　　┃　　　┗━　[**JPQL**](./서버/Spring/JPA/JPQL)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[FetchJoin](./서버/Spring/JPA/JPQL/FetchJoin.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[경로표현식](./서버/Spring/JPA/JPQL/경로표현식.md)</br>
+┃　　　┃　　　┃　　　┗━　[**QuerydslJpa**](./서버/Spring/JPA/QuerydslJpa)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Paging](./서버/Spring/JPA/QuerydslJpa/Paging.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Projection](./서버/Spring/JPA/QuerydslJpa/Projection.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[QuerydslJpa와 QClass](./서버/Spring/JPA/QuerydslJpa/QuerydslJpa와 QClass.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[QuerydslPredicateExecutor](./서버/Spring/JPA/QuerydslJpa/QuerydslPredicateExecutor.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[fetchResults가 deprecated된 이유](./서버/Spring/JPA/QuerydslJpa/fetchResults가 deprecated된 이유.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[기본문법](./서버/Spring/JPA/QuerydslJpa/기본문법.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[동적쿼리](./서버/Spring/JPA/QuerydslJpa/동적쿼리.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[벌크연산](./서버/Spring/JPA/QuerydslJpa/벌크연산.md)</br>
+┃　　　┃　　　┃　　　┗━　[**캐싱**](./서버/Spring/JPA/캐싱)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[1차캐시](./서버/Spring/JPA/캐싱/1차캐시.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[2차캐시](./서버/Spring/JPA/캐싱/2차캐시.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[영속성 컨텍스트](./서버/Spring/JPA/캐싱/영속성 컨텍스트.md)</br>
+┃　　　┃　　　┃　　　┗━　[@GeneratedValue 코드보기](./서버/Spring/JPA/@GeneratedValue 코드보기.md)</br>
+┃　　　┃　　　┃　　　┗━　[Cascade](./서버/Spring/JPA/Cascade.md)</br>
+┃　　　┃　　　┃　　　┗━　[GenerateValue Column에 값을 넣는다면](./서버/Spring/JPA/GenerateValue Column에 값을 넣는다면.md)</br>
+┃　　　┃　　　┃　　　┗━　[Hibernate dialect](./서버/Spring/JPA/Hibernate dialect.md)</br>
+┃　　　┃　　　┃　　　┗━　[Hibernate 쿼리실행순서](./서버/Spring/JPA/Hibernate 쿼리실행순서.md)</br>
+┃　　　┃　　　┃　　　┗━　[Id로 연관관계 객체 저장](./서버/Spring/JPA/Id로 연관관계 객체 저장.md)</br>
+┃　　　┃　　　┃　　　┗━　[JDBC Object Mapping Fundamentalsentity](./서버/Spring/JPA/JDBC Object Mapping Fundamentalsentity.md)</br>
+┃　　　┃　　　┃　　　┗━　[JPA](./서버/Spring/JPA/JPA.md)</br>
+┃　　　┃　　　┃　　　┗━　[N+1 문제](./서버/Spring/JPA/N+1 문제.md)</br>
+┃　　　┃　　　┃　　　┗━　[OrphanRemoval](./서버/Spring/JPA/OrphanRemoval.md)</br>
+┃　　　┃　　　┃　　　┗━　[Persistable](./서버/Spring/JPA/Persistable.md)</br>
+┃　　　┃　　　┃　　　┗━　[ReadOnlyQuery 최적화](./서버/Spring/JPA/ReadOnlyQuery 최적화.md)</br>
+┃　　　┃　　　┃　　　┗━　[벌크연산](./서버/Spring/JPA/벌크연산.md)</br>
+┃　　　┃　　　┃　　　┗━　[트랜잭션 전파 설정](./서버/Spring/JPA/트랜잭션 전파 설정.md)</br>
+┃　　　┃　　　┗━　[**SpringSecurity**](./서버/Spring/SpringSecurity)</br>
+┃　　　┃　　　┃　　　┗━　[CORS](./서버/Spring/SpringSecurity/CORS.md)</br>
+┃　　　┃　　　┃　　　┗━　[CSRF](./서버/Spring/SpringSecurity/CSRF.md)</br>
+┃　　　┃　　　┗━　[**Validation**](./서버/Spring/Validation)</br>
+┃　　　┃　　　┃　　　┗━　[@GroupSequence](./서버/Spring/Validation/@GroupSequence.md)</br>
+┃　　　┃　　　┃　　　┗━　[@Valid와 @Validated](./서버/Spring/Validation/@Valid와 @Validated.md)</br>
+┃　　　┃　　　┗━　[**WebFlux**](./서버/Spring/WebFlux)</br>
+┃　　　┃　　　┃　　　┗━　[**R2DBC**](./서버/Spring/WebFlux/R2DBC)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[R2DBC](./서버/Spring/WebFlux/R2DBC/R2DBC.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[R2DBC 사용](./서버/Spring/WebFlux/R2DBC/R2DBC 사용.md)</br>
+┃　　　┃　　　┃　　　┗━　[@Controller](./서버/Spring/WebFlux/@Controller.md)</br>
+┃　　　┃　　　┃　　　┗━　[RouterFunctions](./서버/Spring/WebFlux/RouterFunctions.md)</br>
+┃　　　┃　　　┃　　　┗━　[WebClient](./서버/Spring/WebFlux/WebClient.md)</br>
+┃　　　┃　　　┃　　　┗━　[WebFilter](./서버/Spring/WebFlux/WebFilter.md)</br>
+┃　　　┃　　　┃　　　┗━　[WebFlux](./서버/Spring/WebFlux/WebFlux.md)</br>
+┃　　　┃　　　┗━　[**Web MVC**](./서버/Spring/Web MVC)</br>
+┃　　　┃　　　┃　　　┗━　[Request 처리과정](./서버/Spring/Web MVC/Request 처리과정.md)</br>
+┃　　　┃　　　┃　　　┗━　[SpringServletContainerInitializer](./서버/Spring/Web MVC/SpringServletContainerInitializer.md)</br>
+┃　　　┃　　　┗━　[**기본원리**](./서버/Spring/기본원리)</br>
+┃　　　┃　　　┃　　　┗━　[@Autowired 빈 주입 스캔 원리](./서버/Spring/기본원리/@Autowired 빈 주입 스캔 원리.md)</br>
+┃　　　┃　　　┃　　　┗━　[@ComponentScan](./서버/Spring/기본원리/@ComponentScan.md)</br>
+┃　　　┃　　　┃　　　┗━　[Ioc와 DI](./서버/Spring/기본원리/Ioc와 DI.md)</br>
+┃　　　┃　　　┃　　　┗━　[Programmatic과 Declarative](./서버/Spring/기본원리/Programmatic과 Declarative.md)</br>
+┃　　　┃　　　┃　　　┗━　[Reflection과 직렬화](./서버/Spring/기본원리/Reflection과 직렬화.md)</br>
+┃　　　┃　　　┃　　　┗━　[빈](./서버/Spring/기본원리/빈.md)</br>
+┃　　　┃　　　┃　　　┗━　[싱글톤](./서버/Spring/기본원리/싱글톤.md)</br>
+┃　　　┃　　　┃　　　┗━　[등록된 빈 목록 출력하기](./서버/Spring/기본원리/등록된 빈 목록 출력하기.md)</br>
+┃　　　┃　　　┃　　　┗━　[선점 잠금과 비선점 잠금](./서버/Spring/기본원리/선점 잠금과 비선점 잠금.md)</br>
+┃　　　┃　　　┗━　[@Cacheable](./서버/Spring/@Cacheable.md)</br>
+┃　　　┃　　　┗━　[AOT](./서버/Spring/AOT.md)</br>
+┃　　　┃　　　┗━　[Spring 6.0과 Spring Boot 3.0](./서버/Spring/Spring 6.0과 Spring Boot 3.0.md)</br>
+┃　　　┗━　[**WAS**](./서버/WAS)</br>
+┃　　　┃　　　┗━　[tomcat 구성요소](./서버/WAS/tomcat 구성요소.md)</br>
+┃　　　┃　　　┗━　[웹서버와 WAS](./서버/WAS/웹서버와 WAS.md)</br>
+┃　　　┗━　[**netty**](./서버/netty)</br>
+┃　　　┃　　　┗━　[HashedWheelTimer](./서버/netty/HashedWheelTimer.md)</br>
+┃　　　┃　　　┗━　[netty server 예제](./서버/netty/netty server 예제.md)</br>
+┃　　　┃　　　┗━　[netty의 thread 모델](./서버/netty/netty의 thread 모델.md)</br>
+┃　　　┃　　　┗━　[netty 메시지 전송 흐름](./서버/netty/netty 메시지 전송 흐름.md)</br>
+┃　　　┃　　　┗━　[webFlux와 netty](./서버/netty/webFlux와 netty.md)</br>
+┃　　　┗━　[**node.js**](./서버/node.js)</br>
+┃　　　　　　　┗━　[module.exports와 exports](./서버/node.js/module.exports와 exports.md)</br>
+┃　　　　　　　┗━　[puppeteer](./서버/node.js/puppeteer.md)</br>
+┃　　　　　　　┗━　[v8과 libuv](./서버/node.js/v8과 libuv.md)</br>
 ┗━　[**언어**](./언어)</br>
 ┃　　　┗━　[**Go**](./언어/Go)</br>
 ┃　　　┃　　　┗━　[Command line argument, flag](./언어/Go/Command line argument, flag.md)</br>
@@ -694,96 +783,6 @@ derectories      : 156
 ┃　　　　　　　┗━　[Flow](./코드/비동기/Flow.md)</br>
 ┃　　　　　　　┗━　[cold stream과 hot stream](./코드/비동기/cold stream과 hot stream.md)</br>
 ┃　　　　　　　┗━　[netty 사례연구](./코드/비동기/netty 사례연구.md)</br>
-┗━　[**백엔드**](./백엔드)</br>
-┃　　　┗━　[**Spring**](./백엔드/Spring)</br>
-┃　　　┃　　　┗━　[**AOP**](./백엔드/Spring/AOP)</br>
-┃　　　┃　　　┃　　　┗━　[**트랜잭션**](./백엔드/Spring/AOP/트랜잭션)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[TransactionAttributeSource](./백엔드/Spring/AOP/트랜잭션/TransactionAttributeSource.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[트랜잭션](./백엔드/Spring/AOP/트랜잭션/트랜잭션.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[트랜잭션 전파](./백엔드/Spring/AOP/트랜잭션/트랜잭션 전파.md)</br>
-┃　　　┃　　　┃　　　┗━　[AdviceAnnotation](./백엔드/Spring/AOP/AdviceAnnotation.md)</br>
-┃　　　┃　　　┃　　　┗━　[Pointcut](./백엔드/Spring/AOP/Pointcut.md)</br>
-┃　　　┃　　　┃　　　┗━　[ProxyFactoryBean](./백엔드/Spring/AOP/ProxyFactoryBean.md)</br>
-┃　　　┃　　　┃　　　┗━　[Spring AOP](./백엔드/Spring/AOP/Spring AOP.md)</br>
-┃　　　┃　　　┃　　　┗━　[Spring에서 aspectj weaving사용하기](./백엔드/Spring/AOP/Spring에서 aspectj weaving사용하기.md)</br>
-┃　　　┃　　　┗━　[**Event**](./백엔드/Spring/Event)</br>
-┃　　　┃　　　┃　　　┗━　[@TransactionalEventListener](./백엔드/Spring/Event/@TransactionalEventListener.md)</br>
-┃　　　┃　　　┃　　　┗━　[ApplicationEventPublisher](./백엔드/Spring/Event/ApplicationEventPublisher.md)</br>
-┃　　　┃　　　┗━　[**JPA**](./백엔드/Spring/JPA)</br>
-┃　　　┃　　　┃　　　┗━　[**JPQL**](./백엔드/Spring/JPA/JPQL)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[FetchJoin](./백엔드/Spring/JPA/JPQL/FetchJoin.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[경로표현식](./백엔드/Spring/JPA/JPQL/경로표현식.md)</br>
-┃　　　┃　　　┃　　　┗━　[**QuerydslJpa**](./백엔드/Spring/JPA/QuerydslJpa)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Paging](./백엔드/Spring/JPA/QuerydslJpa/Paging.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Projection](./백엔드/Spring/JPA/QuerydslJpa/Projection.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[QuerydslJpa와 QClass](./백엔드/Spring/JPA/QuerydslJpa/QuerydslJpa와 QClass.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[QuerydslPredicateExecutor](./백엔드/Spring/JPA/QuerydslJpa/QuerydslPredicateExecutor.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[fetchResults가 deprecated된 이유](./백엔드/Spring/JPA/QuerydslJpa/fetchResults가 deprecated된 이유.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[기본문법](./백엔드/Spring/JPA/QuerydslJpa/기본문법.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[동적쿼리](./백엔드/Spring/JPA/QuerydslJpa/동적쿼리.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[벌크연산](./백엔드/Spring/JPA/QuerydslJpa/벌크연산.md)</br>
-┃　　　┃　　　┃　　　┗━　[**캐싱**](./백엔드/Spring/JPA/캐싱)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[1차캐시](./백엔드/Spring/JPA/캐싱/1차캐시.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[2차캐시](./백엔드/Spring/JPA/캐싱/2차캐시.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[영속성 컨텍스트](./백엔드/Spring/JPA/캐싱/영속성 컨텍스트.md)</br>
-┃　　　┃　　　┃　　　┗━　[@GeneratedValue 코드보기](./백엔드/Spring/JPA/@GeneratedValue 코드보기.md)</br>
-┃　　　┃　　　┃　　　┗━　[Cascade](./백엔드/Spring/JPA/Cascade.md)</br>
-┃　　　┃　　　┃　　　┗━　[GenerateValue Column에 값을 넣는다면](./백엔드/Spring/JPA/GenerateValue Column에 값을 넣는다면.md)</br>
-┃　　　┃　　　┃　　　┗━　[Hibernate dialect](./백엔드/Spring/JPA/Hibernate dialect.md)</br>
-┃　　　┃　　　┃　　　┗━　[Hibernate 쿼리실행순서](./백엔드/Spring/JPA/Hibernate 쿼리실행순서.md)</br>
-┃　　　┃　　　┃　　　┗━　[Id로 연관관계 객체 저장](./백엔드/Spring/JPA/Id로 연관관계 객체 저장.md)</br>
-┃　　　┃　　　┃　　　┗━　[JDBC Object Mapping Fundamentalsentity](./백엔드/Spring/JPA/JDBC Object Mapping Fundamentalsentity.md)</br>
-┃　　　┃　　　┃　　　┗━　[JPA](./백엔드/Spring/JPA/JPA.md)</br>
-┃　　　┃　　　┃　　　┗━　[N+1 문제](./백엔드/Spring/JPA/N+1 문제.md)</br>
-┃　　　┃　　　┃　　　┗━　[OrphanRemoval](./백엔드/Spring/JPA/OrphanRemoval.md)</br>
-┃　　　┃　　　┃　　　┗━　[Persistable](./백엔드/Spring/JPA/Persistable.md)</br>
-┃　　　┃　　　┃　　　┗━　[ReadOnlyQuery 최적화](./백엔드/Spring/JPA/ReadOnlyQuery 최적화.md)</br>
-┃　　　┃　　　┃　　　┗━　[벌크연산](./백엔드/Spring/JPA/벌크연산.md)</br>
-┃　　　┃　　　┃　　　┗━　[트랜잭션 전파 설정](./백엔드/Spring/JPA/트랜잭션 전파 설정.md)</br>
-┃　　　┃　　　┗━　[**SpringSecurity**](./백엔드/Spring/SpringSecurity)</br>
-┃　　　┃　　　┃　　　┗━　[CORS](./백엔드/Spring/SpringSecurity/CORS.md)</br>
-┃　　　┃　　　┃　　　┗━　[CSRF](./백엔드/Spring/SpringSecurity/CSRF.md)</br>
-┃　　　┃　　　┗━　[**Validation**](./백엔드/Spring/Validation)</br>
-┃　　　┃　　　┃　　　┗━　[@GroupSequence](./백엔드/Spring/Validation/@GroupSequence.md)</br>
-┃　　　┃　　　┃　　　┗━　[@Valid와 @Validated](./백엔드/Spring/Validation/@Valid와 @Validated.md)</br>
-┃　　　┃　　　┗━　[**WebFlux**](./백엔드/Spring/WebFlux)</br>
-┃　　　┃　　　┃　　　┗━　[**R2DBC**](./백엔드/Spring/WebFlux/R2DBC)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[R2DBC](./백엔드/Spring/WebFlux/R2DBC/R2DBC.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[R2DBC 사용](./백엔드/Spring/WebFlux/R2DBC/R2DBC 사용.md)</br>
-┃　　　┃　　　┃　　　┗━　[@Controller](./백엔드/Spring/WebFlux/@Controller.md)</br>
-┃　　　┃　　　┃　　　┗━　[RouterFunctions](./백엔드/Spring/WebFlux/RouterFunctions.md)</br>
-┃　　　┃　　　┃　　　┗━　[WebClient](./백엔드/Spring/WebFlux/WebClient.md)</br>
-┃　　　┃　　　┃　　　┗━　[WebFilter](./백엔드/Spring/WebFlux/WebFilter.md)</br>
-┃　　　┃　　　┃　　　┗━　[WebFlux](./백엔드/Spring/WebFlux/WebFlux.md)</br>
-┃　　　┃　　　┗━　[**Web MVC**](./백엔드/Spring/Web MVC)</br>
-┃　　　┃　　　┃　　　┗━　[Request 처리과정](./백엔드/Spring/Web MVC/Request 처리과정.md)</br>
-┃　　　┃　　　┃　　　┗━　[SpringServletContainerInitializer](./백엔드/Spring/Web MVC/SpringServletContainerInitializer.md)</br>
-┃　　　┃　　　┗━　[**기본원리**](./백엔드/Spring/기본원리)</br>
-┃　　　┃　　　┃　　　┗━　[@Autowired 빈 주입 스캔 원리](./백엔드/Spring/기본원리/@Autowired 빈 주입 스캔 원리.md)</br>
-┃　　　┃　　　┃　　　┗━　[@ComponentScan](./백엔드/Spring/기본원리/@ComponentScan.md)</br>
-┃　　　┃　　　┃　　　┗━　[Ioc와 DI](./백엔드/Spring/기본원리/Ioc와 DI.md)</br>
-┃　　　┃　　　┃　　　┗━　[Programmatic과 Declarative](./백엔드/Spring/기본원리/Programmatic과 Declarative.md)</br>
-┃　　　┃　　　┃　　　┗━　[Reflection과 직렬화](./백엔드/Spring/기본원리/Reflection과 직렬화.md)</br>
-┃　　　┃　　　┃　　　┗━　[빈](./백엔드/Spring/기본원리/빈.md)</br>
-┃　　　┃　　　┃　　　┗━　[싱글톤](./백엔드/Spring/기본원리/싱글톤.md)</br>
-┃　　　┃　　　┃　　　┗━　[등록된 빈 목록 출력하기](./백엔드/Spring/기본원리/등록된 빈 목록 출력하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[선점 잠금과 비선점 잠금](./백엔드/Spring/기본원리/선점 잠금과 비선점 잠금.md)</br>
-┃　　　┃　　　┗━　[@Cacheable](./백엔드/Spring/@Cacheable.md)</br>
-┃　　　┃　　　┗━　[AOT](./백엔드/Spring/AOT.md)</br>
-┃　　　┃　　　┗━　[Spring 6.0과 Spring Boot 3.0](./백엔드/Spring/Spring 6.0과 Spring Boot 3.0.md)</br>
-┃　　　┗━　[**WAS**](./백엔드/WAS)</br>
-┃　　　┃　　　┗━　[tomcat 구성요소](./백엔드/WAS/tomcat 구성요소.md)</br>
-┃　　　┃　　　┗━　[웹서버와 WAS](./백엔드/WAS/웹서버와 WAS.md)</br>
-┃　　　┗━　[**netty**](./백엔드/netty)</br>
-┃　　　┃　　　┗━　[HashedWheelTimer](./백엔드/netty/HashedWheelTimer.md)</br>
-┃　　　┃　　　┗━　[netty server 예제](./백엔드/netty/netty server 예제.md)</br>
-┃　　　┃　　　┗━　[netty의 thread 모델](./백엔드/netty/netty의 thread 모델.md)</br>
-┃　　　┃　　　┗━　[netty 메시지 전송 흐름](./백엔드/netty/netty 메시지 전송 흐름.md)</br>
-┃　　　┃　　　┗━　[webFlux와 netty](./백엔드/netty/webFlux와 netty.md)</br>
-┃　　　┗━　[**node.js**](./백엔드/node.js)</br>
-┃　　　　　　　┗━　[module.exports와 exports](./백엔드/node.js/module.exports와 exports.md)</br>
-┃　　　　　　　┗━　[puppeteer](./백엔드/node.js/puppeteer.md)</br>
-┃　　　　　　　┗━　[v8과 libuv](./백엔드/node.js/v8과 libuv.md)</br>
 ┗━　[**데이터베이스**](./데이터베이스)</br>
 ┃　　　┗━　[**DB설계**](./데이터베이스/DB설계)</br>
 ┃　　　┃　　　┗━　[DBMS와 RDBMS](./데이터베이스/DB설계/DBMS와 RDBMS.md)</br>
@@ -871,37 +870,37 @@ derectories      : 156
 ┃　　　┃　　　┗━　[트랜잭션 격리](./아키텍처 및 방법론/MSA/트랜잭션 격리.md)</br>
 ┃　　　┃　　　┗━　[트랜잭션 로그 테일링 패턴](./아키텍처 및 방법론/MSA/트랜잭션 로그 테일링 패턴.md)</br>
 ┃　　　┗━　[**객체지향**](./아키텍처 및 방법론/객체지향)</br>
-┃　　　┃　　　┗━　[**디자인패턴**](./아키텍처 및 방법론/객체지향/디자인패턴)</br>
-┃　　　┃　　　┃　　　┗━　[**1. 생성패턴**](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[빌더 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/빌더 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[싱글톤 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/싱글톤 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[추상팩토리 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/추상팩토리 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[프로토타입 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/프로토타입 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[팩토리메소드 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/1. 생성패턴/팩토리메소드 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[**2. 구조패턴**](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[브릿지 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/브릿지 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[어댑터 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/어댑터 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[컴포짓 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/컴포짓 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[퍼사드 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/퍼사드 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[프록시 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/프록시 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[데코레이터 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/데코레이터 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[플라이웨이트 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/2. 구조패턴/플라이웨이트 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[**3. 행위패턴**](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[상태 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/상태 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[전략 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/전략 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[메멘토 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/메멘토 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[방문자 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/방문자 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[옵저버 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/옵저버 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[중재자 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/중재자 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[커맨드 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/커맨드 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[책임연쇄 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/책임연쇄 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[이터레이터 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/이터레이터 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[인터프리터 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/인터프리터 패턴.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[템플릿메소드 패턴](./아키텍처 및 방법론/객체지향/디자인패턴/3. 행위패턴/템플릿메소드 패턴.md)</br>
-┃　　　┃　　　┃　　　┗━　[위임 패턴(Delegate Pattern)](./아키텍처 및 방법론/객체지향/디자인패턴/위임 패턴(Delegate Pattern).md)</br>
-┃　　　┃　　　┃　　　┗━　[디자인패턴](./아키텍처 및 방법론/객체지향/디자인패턴/디자인패턴.md)</br>
 ┃　　　┃　　　┗━　[SOLID](./아키텍처 및 방법론/객체지향/SOLID.md)</br>
 ┃　　　┃　　　┗━　[응집도와 결합도](./아키텍처 및 방법론/객체지향/응집도와 결합도.md)</br>
+┃　　　┗━　[**디자인패턴**](./아키텍처 및 방법론/디자인패턴)</br>
+┃　　　┃　　　┗━　[**1. 생성패턴**](./아키텍처 및 방법론/디자인패턴/1. 생성패턴)</br>
+┃　　　┃　　　┃　　　┗━　[빌더 패턴](./아키텍처 및 방법론/디자인패턴/1. 생성패턴/빌더 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[싱글톤 패턴](./아키텍처 및 방법론/디자인패턴/1. 생성패턴/싱글톤 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[추상팩토리 패턴](./아키텍처 및 방법론/디자인패턴/1. 생성패턴/추상팩토리 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[프로토타입 패턴](./아키텍처 및 방법론/디자인패턴/1. 생성패턴/프로토타입 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[팩토리메소드 패턴](./아키텍처 및 방법론/디자인패턴/1. 생성패턴/팩토리메소드 패턴.md)</br>
+┃　　　┃　　　┗━　[**2. 구조패턴**](./아키텍처 및 방법론/디자인패턴/2. 구조패턴)</br>
+┃　　　┃　　　┃　　　┗━　[브릿지 패턴](./아키텍처 및 방법론/디자인패턴/2. 구조패턴/브릿지 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[어댑터 패턴](./아키텍처 및 방법론/디자인패턴/2. 구조패턴/어댑터 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[컴포짓 패턴](./아키텍처 및 방법론/디자인패턴/2. 구조패턴/컴포짓 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[퍼사드 패턴](./아키텍처 및 방법론/디자인패턴/2. 구조패턴/퍼사드 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[프록시 패턴](./아키텍처 및 방법론/디자인패턴/2. 구조패턴/프록시 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[데코레이터 패턴](./아키텍처 및 방법론/디자인패턴/2. 구조패턴/데코레이터 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[플라이웨이트 패턴](./아키텍처 및 방법론/디자인패턴/2. 구조패턴/플라이웨이트 패턴.md)</br>
+┃　　　┃　　　┗━　[**3. 행위패턴**](./아키텍처 및 방법론/디자인패턴/3. 행위패턴)</br>
+┃　　　┃　　　┃　　　┗━　[상태 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/상태 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[전략 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/전략 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[메멘토 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/메멘토 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[방문자 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/방문자 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[옵저버 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/옵저버 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[중재자 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/중재자 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[커맨드 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/커맨드 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[책임연쇄 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/책임연쇄 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[이터레이터 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/이터레이터 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[인터프리터 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/인터프리터 패턴.md)</br>
+┃　　　┃　　　┃　　　┗━　[템플릿메소드 패턴](./아키텍처 및 방법론/디자인패턴/3. 행위패턴/템플릿메소드 패턴.md)</br>
+┃　　　┃　　　┗━　[위임 패턴(Delegate Pattern)](./아키텍처 및 방법론/디자인패턴/위임 패턴(Delegate Pattern).md)</br>
+┃　　　┃　　　┗━　[디자인패턴](./아키텍처 및 방법론/디자인패턴/디자인패턴.md)</br>
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
