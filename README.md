@@ -347,6 +347,7 @@ derectories      : 156
 ┃　　　┃　　　┗━　[PacketTracer 네트워크 구성](./Network/L2 internet layer/PacketTracer 네트워크 구성.md)</br>
 ┃　　　┃　　　┗━　[secondary IP](./Network/L2 internet layer/secondary IP.md)</br>
 ┃　　　┃　　　┗━　[서브넷](./Network/L2 internet layer/서브넷.md)</br>
+┃　　　┃　　　┗━　[정보기기운용기능사 실기](./Network/L2 internet layer/정보기기운용기능사 실기.md)</br>
 ┃　　　┗━　[**L3 transport layer**](./Network/L3 transport layer)</br>
 ┃　　　┃　　　┗━　[4계층 장비](./Network/L3 transport layer/4계층 장비.md)</br>
 ┃　　　┃　　　┗━　[SO_REUSEADDR](./Network/L3 transport layer/SO_REUSEADDR.md)</br>
