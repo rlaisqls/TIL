@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 746
-derectories      : 156
+files            : 747
+derectories      : 157
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -568,6 +568,8 @@ derectories      : 156
 ┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
 ┃　　　┃　　　┗━　[DB 암호화](./개발/암호화/DB 암호화.md)</br>
 ┃　　　┃　　　┗━　[Keytool](./개발/암호화/Keytool.md)</br>
+┃　　　┗━　[**테스팅**](./개발/테스팅)</br>
+┃　　　┃　　　┗━　[테스팅 용어](./개발/테스팅/테스팅 용어.md)</br>
 ┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
 ┃　　　┗━　[Web Vitals](./개발/Web Vitals.md)</br>
 ┃　　　┗━　[authn과 authz](./개발/authn과 authz.md)</br>
