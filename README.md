@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 748
+files            : 749
 derectories      : 157
 ```
 
@@ -538,6 +538,7 @@ derectories      : 157
 ┃　　　┃　　　┗━　[퍼셉트론](./개발/AI/퍼셉트론.md)</br>
 ┃　　　┃　　　┗━　[활성화함수](./개발/AI/활성화함수.md)</br>
 ┃　　　┗━　[**Algorithm**](./개발/Algorithm)</br>
+┃　　　┃　　　┗━　[왜판원순회](./개발/Algorithm/왜판원순회.md)</br>
 ┃　　　┃　　　┗━　[외판원순회](./개발/Algorithm/외판원순회.md)</br>
 ┃　　　┃　　　┗━　[최소외접원](./개발/Algorithm/최소외접원.md)</br>
 ┃　　　┃　　　┗━　[담금질 기법](./개발/Algorithm/담금질 기법.md)</br>
