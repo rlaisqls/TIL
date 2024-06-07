@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 753
+files            : 754
 derectories      : 157
 ```
 
@@ -437,6 +437,7 @@ derectories      : 157
 ┃　　　┃　　　┃　　　┗━　[명령어들](./OS/linux/ETC/명령어들.md)</br>
 ┃　　　┃　　　┗━　[**Kernel**](./OS/linux/Kernel)</br>
 ┃　　　┃　　　┃　　　┗━　[Block I／O](./OS/linux/Kernel/Block I／O.md)</br>
+┃　　　┃　　　┃　　　┗━　[CPU Load Average](./OS/linux/Kernel/CPU Load Average.md)</br>
 ┃　　　┃　　　┃　　　┗━　[vmlinux](./OS/linux/Kernel/vmlinux.md)</br>
 ┃　　　┃　　　┃　　　┗━　[디버깅](./OS/linux/Kernel/디버깅.md)</br>
 ┃　　　┃　　　┃　　　┗━　[이식성](./OS/linux/Kernel/이식성.md)</br>
