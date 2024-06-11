@@ -537,3 +537,174 @@ pass f0/0
 ||teacher_net (VLAN 20)|Fa0/11-0/20|
 
 ## 설정
+
+### S1 설정
+
+```bash
+spanning-tree portfast default
+
+vl 10
+na Server_net
+vl 20
+na Manage_net
+
+int ra f0/1-10
+sw mo a
+sw a vl 10
+
+int f0/11
+sw mo a
+sw a vl 20
+
+int f0/24
+sw m t
+
+int vl 20
+ip add 120.32.0.1 255.252.0.0
+no sh
+ip de 120.35.255.254
+```
+
+### S2 설정
+
+```bash
+vl 10
+na Student_net
+vl 20
+na Teacher_net
+
+int ra f0/1-10
+sw m a
+sw vl a 10
+
+int ra f0/11-20
+sw m a
+sw vl a 20
+
+int f0/24
+sw m t
+
+int vl 10
+ip add 120.64.0.1 255.252.0.0
+no sh
+ip de 120.67.255.254
+```
+
+### R1 설정
+
+```bash
+enable pass pass!!
+
+ip host s1 120.32.0.1
+ip host s2 120.64.0.1
+ip host server 120.0.0.1
+
+int f0/0
+no sh
+
+int f0/0.10
+en d 10
+ip add 120.3.255.254 255.252.0.0
+no sh
+
+int f0/0.20
+en d 20
+ip add 120.35.255.254 255.252.0.0
+no sh
+ip help 120.0.0.1
+no sh
+
+int f1/0
+no sh
+
+int f1/0.10
+en d 10
+ip add 120.67.255.254 255.252.0.0
+no sh
+
+int f2/0.20
+en d 20
+ip add 120.195.255.254 255.252.0.0
+no sh
+ip help 120.0.0.1
+no sh
+```
+
+---
+
+# 기출유형 7회
+
+
+<img src="https://github.com/rlaisqls/TIL/assets/81006587/84433685-4823-46e4-bc92-229fb234821e" style="height: 300px"/>
+
+
+|네트워크(구간)|호스트(장치명)|IP 주소|
+|-|-|-|
+|100.100.0.4/30<br/>(R1-ISP 구간)|R1 [Se0/0/0]|100.100.0.6|
+||ISP[Se0/0/0]|해당 구간에서 사용하지 않은 나머지 주소|
+|100.16.0.0/16<br/>Sales (vlan 20)|R1 [Fa0/0.20]|해당 서브넷에서 호스트에 할당 가능한 마지막 IP 주소|
+||Sales PC|DHCP 할당 |
+|100.30.0.0/14<br/>Manage (vlan 60)|R1 [Fa0/0.10]|해당 서브넷에서 호스트에 할당 가능한 마지막 IP 주소|
+||Manage PC|DHCP 할당|
+||S1|120.64.0.1|
+|192.168.1.0/24|IDC_server|192.168.1.10 (이미 구성되어 있음)|
+
+|VLAN 이름 (ID)|Port|
+|-|-|
+|Sales (VLAN 20)|Fa0/1|
+|Manage (VLAN 60)|Fa0/2|
+
+## 설정
+
+### S1 설정
+
+```bash
+vl 20
+na Sales
+vl 60
+na Manage
+
+int f0/1
+sw mo a
+sw a vl 20
+
+int f0/2
+sw mo a
+sw a vl 60
+
+int f0/24
+sw mo tr
+sw tr all vl 20,60
+
+int vl 60
+ip add dhcp
+no sh
+```
+
+### R1 설정
+
+```bash
+int f0/0
+no sh
+login local
+enable pass router##
+
+int f0/0.20
+en d 20
+ip add 100.16.255.254 255.255.0.0
+ip help 192.168.1.10
+no sh
+
+int f0/0.60
+en d 60
+ip add 100.30.255.254 255.255.0.0
+ip help 192.168.1.10
+no sh
+
+int s0/0/0
+ip add 100.100.0.6 255.255.255.252
+cl ra 64000
+no sh
+
+ip route 192.168.1.0 255.255.255.0 100.100.0.5
+```
