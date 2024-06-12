@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 756
+files            : 758
 derectories      : 157
 ```
 
@@ -542,6 +542,7 @@ derectories      : 157
 ┃　　　┃　　　┗━　[활성화함수](./개발/AI/활성화함수.md)</br>
 ┃　　　┗━　[**Algorithm**](./개발/Algorithm)</br>
 ┃　　　┃　　　┗━　[N Queen](./개발/Algorithm/N Queen.md)</br>
+┃　　　┃　　　┗━　[Range GCD](./개발/Algorithm/Range GCD.md)</br>
 ┃　　　┃　　　┗━　[왜판원순회](./개발/Algorithm/왜판원순회.md)</br>
 ┃　　　┃　　　┗━　[외판원순회](./개발/Algorithm/외판원순회.md)</br>
 ┃　　　┃　　　┗━　[최소외접원](./개발/Algorithm/최소외접원.md)</br>
@@ -550,6 +551,7 @@ derectories      : 157
 ┃　　　┃　　　┗━　[직사각형 스위핑](./개발/Algorithm/직사각형 스위핑.md)</br>
 ┃　　　┃　　　┗━　[코드포스 문제모음](./개발/Algorithm/코드포스 문제모음.md)</br>
 ┃　　　┃　　　┗━　[가장 가까운 두 점](./개발/Algorithm/가장 가까운 두 점.md)</br>
+┃　　　┃　　　┗━　[오일러 경로 테크닉](./개발/Algorithm/오일러 경로 테크닉.md)</br>
 ┃　　　┗━　[**Tools**](./개발/Tools)</br>
 ┃　　　┃　　　┗━　[**Git**](./개발/Tools/Git)</br>
 ┃　　　┃　　　┃　　　┗━　[**Flow**](./개발/Tools/Git/Flow)</br>

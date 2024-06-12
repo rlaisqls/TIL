@@ -139,9 +139,6 @@ v 2
 ne 204.200.7.0
 ne 100.30.0.0
 no au
-
-do show cdp ne de
-ip route 0.0.0.0 0.0.0.0 100.100.100.30
 ```
 
 ---
@@ -707,4 +704,63 @@ cl ra 64000
 no sh
 
 ip route 192.168.1.0 255.255.255.0 100.100.0.5
+```
+
+---
+
+### Privilage 모드 암호 설정
+
+```bash
+enable pass [admin##]
+```
+
+### 콘솔 접속 이름, 암호 설정
+
+이름만
+```bash
+li con 0 
+pass [pass!!]
+login
+```
+
+비밀번호
+```bash
+li con 0 # 콘솔 라인모드 지정
+user [master] pass [pass!!] # 운영자 모드 설정
+login local # 콘솔 로컬 인증
+```
+
+### 텔넷 비밀번호
+
+```bash
+li vty 0 4
+pass [pass!!]
+login
+```
+
+### 콘솔 접속시 메세지
+
+```bash
+ban motd @[^$~R1~$^]@
+```
+
+### Port Security
+
+스위치에서 int 설정
+```bash
+sw port
+sw port max 1 # 최대 1대
+sw port vio sh # 1대 이상이면 연결 끊어짐
+```
+
+### 장비이름 바꾸기
+
+```bash
+host  R1        
+```
+
+### 비밀번호 암호화
+
+```bash
+ser pass
 ```
