@@ -1,7 +1,7 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/802d1aqECMP_%28cropped%29.gif" height=400px/>
 
-ECMP는 하나의 목적지로 패킷 라우팅을 수행하면서 여러 개의 경로를 선택하는 라우팅 기법이다. 이름처럼 같은 Cost를 가진 여러 경로에 트래픽을 분산시킨다. 같은 Cost로 판정되려면 static, OSPF, BGP 에서 다음의 속성이 같아야 한다.
+ECMP는 하나의 목적지로 패킷 라우팅을 수행하면서 여러 개의 경로를 선택하는 라우팅 기법이다. Equal-Cost Multi-Path routing이라는 이름처럼 같은 Cost를 가진 여러 경로에 트래픽을 분산시킨다. 같은 Cost로 판정되려면 static, OSPF, BGP 에서 다음의 속성이 같아야 한다.
 
 - Destination Subnet
 - Distance

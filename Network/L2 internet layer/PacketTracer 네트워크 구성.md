@@ -1,6 +1,6 @@
 
 
-# 기출유형 1회
+## 기출유형 1회
 
 <img style="height: 300px" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/0ce55d7c-8a8b-4099-bf5d-e54079978a95"/>
 
@@ -22,15 +22,15 @@
 |comm (VLAN 20)|Fa0/2|
 |office (VLAN 30)|Fa0/3|
 
-## 설정
+### 설정
 
-### 스위치 설정
+#### 스위치 설정
 
 ```bash
 en
 conf t
 
-# vlan 생성
+## vlan 생성
 vlan 10
 name skill
 vlan 20
@@ -38,10 +38,10 @@ name comm
 vlan 30
 name office
 
-# 결과 확인
+## 결과 확인
 do show vlan
 
-# 인터페이스 정의
+## 인터페이스 정의
 int fa0/1
 sw m a # access
 sw a vlan 10
@@ -58,17 +58,17 @@ int fa0/24
 sw m t # truncate
 ```
 
-### 라우터 설정
+#### 라우터 설정
 
 ```bash
 en
 conf t
 
-# Console 접속 암호 설정
+## Console 접속 암호 설정
 line con 0
 pass 'admin##'
 
-# Telnet 접속 암호 설정
+## Telnet 접속 암호 설정
 line vty 0 4
 pass 'admin##'
 exit
@@ -76,7 +76,7 @@ exit
 int fa0/0
 no sh
 
-# 인터페이스 IP 설정
+## 인터페이스 IP 설정
 int fa0/0.10
 en d 10
 ip add 204.200.10.1 255.255.255.0
@@ -95,16 +95,16 @@ clock rate 56000
 no sh
 ```
 
-### ISP 설정
+#### ISP 설정
 
 ```bash
 en
 conf t
 
-# Privilege Mode 접속 암호 설정
+## Privilege Mode 접속 암호 설정
 enable pass 'admin##'
 
-# 인터페이스 IP 설정
+## 인터페이스 IP 설정
 in se0/0/0
 ip add 204.200.7.2 255.255.255.0
 cl ra 64000
@@ -115,9 +115,9 @@ ip add 100.30.0.1 255.255.255.0
 no sh
 ```
 
-## RIP 설정
+#### RIP 설정
 
-### 라우터 
+**라우터 **
 
 ```bash
 router rip
@@ -127,11 +127,11 @@ ne 204.200.10.0
 ne 204.200.20.0
 ne 204.200.30.0
 
-# 확인
+## 확인
 do show ip bri
 ```
 
-### ISP
+**ISP**
 
 ```bash
 router rip
@@ -143,7 +143,7 @@ no au
 
 ---
 
-# 기출유형 2회
+## 기출유형 2회
 
 <img src="https://github.com/rlaisqls/TIL/assets/81006587/30eb3c3e-99ba-4e4d-a785-079a294b1d8a" style="height: 300px"/>
 
@@ -162,9 +162,9 @@ no au
 |sales (VLAN10)|Fa0/1|
 |manage (VLAN 20)|Fa0/2|
 
-## 설정
+### 설정
 
-### 스위치 설정
+#### 스위치 설정
 
 ```bash
 vl 10
@@ -191,7 +191,7 @@ no sh
 ip de 182.30.255.254
 ```
 
-### 라우터 설정
+#### 라우터 설정
 
 ```bash
 int f0/0
@@ -219,7 +219,7 @@ ip route 0.0.0.0 0.0.0.0 100.100.100.50 # cdp 결과
 
 ---
 
-# 기출유형 3회
+## 기출유형 3회
 
 <img src="https://github.com/rlaisqls/TIL/assets/81006587/73ae4efd-bf84-4cf3-aa19-6d47f7973905" style="height: 300px"/>
 
@@ -238,9 +238,9 @@ ip route 0.0.0.0 0.0.0.0 100.100.100.50 # cdp 결과
 |sales (VLAN10)|Fa0/1|
 |manage (VLAN 20)|Fa0/2|
 
-## 설정
+### 설정
 
-### 스위치 설정
+#### 스위치 설정
 
 ```bash
 vl 10
@@ -265,7 +265,7 @@ ip add 100.0.0.2 255.192.0.0
 ip de 100.63.255.254
 ```
 
-### 라우터 설정
+#### 라우터 설정
 
 ```bash
 int fa0/0.10
@@ -288,7 +288,7 @@ ip route 192.168.1.0 255.255.255.0 172.30.0.10 # 서버 네트워크 구간 -> I
 
 > 라우터 사이 네트워크가 `172.30.0.8/30`이므로 할당 가능한 주소는 `172.30.0.9`와 `172.30.0.10` 두 개이다. 문제에서 `172.30.0.9`를 R1 시리얼 주소로 설정하였기 때문에 ISP 시리얼 주소는 `172.30.0.10`가 된다.
 
-# 기출유형 4회
+## 기출유형 4회
 
 <img src="https://github.com/rlaisqls/TIL/assets/81006587/4c69a51a-a89e-4ee8-9bd4-8c3a4627d2c1" style="height: 300px"/>
 
@@ -313,9 +313,9 @@ ip route 192.168.1.0 255.255.255.0 172.30.0.10 # 서버 네트워크 구간 -> I
 |S2|marketing (VLAN 70)|Fa0/1|
 ||business (VLAN 80)|Fa0/2|
 
-## 설정
+### 설정
 
-### S1 설정
+#### S1 설정
 
 ```bash
 vl 50
@@ -338,7 +338,7 @@ ip add 150.203.163.3 255.255.255.0
 ip de 150.203.163.1
 ```
 
-### S2 설정
+#### S2 설정
 
 ```bash
 vl 70
@@ -364,7 +364,7 @@ inf f0/24
 no sh
 ```
 
-### 라우터 설정
+#### 라우터 설정
 
 ```bash
 int f0/0
@@ -393,7 +393,7 @@ no sh
 
 ---
 
-# 기출유형 5회
+## 기출유형 5회
 
 <img src="https://github.com/rlaisqls/TIL/assets/81006587/619d6fa0-9e03-4a8d-accd-e074f1cd19c8" style="height: 300px"/>
 
@@ -416,9 +416,9 @@ no sh
 |admin (VLAN 10)|Fa0/1|
 |sales (VLAN 20)|Fa0/2|
 
-## 설정
+### 설정
 
-### S0 설정
+#### S0 설정
 
 ```bash
 int vl 1
@@ -427,7 +427,7 @@ no sh
 ip de 192.168.0.254
 ```
 
-### S1 설정
+#### S1 설정
 
 ```bash
 vl 10
@@ -443,7 +443,7 @@ int f0/24
 sw mo t
 ```
 
-### S2 설정
+#### S2 설정
 
 ```bash
 vl 20
@@ -457,7 +457,7 @@ int f0/24
 sw mo t
 ```
 
-### R1 설정
+#### R1 설정
 
 ```bash
 int f0/0
@@ -476,7 +476,7 @@ no au
 pass f0/0
 ```
 
-### R2 설정
+#### R2 설정
 
 ```bash
 int f0/0
@@ -507,7 +507,7 @@ pass f0/0
 
 ---
 
-# 기출유형 6회
+## 기출유형 6회
 
 <img src="https://github.com/rlaisqls/TIL/assets/81006587/e6087ae8-5491-4412-85f4-db7b4cee3385" style="height: 300px"/>
 
@@ -533,9 +533,9 @@ pass f0/0
 |S2|student_net (VLAN 10)|Fa0/1-0/10|
 ||teacher_net (VLAN 20)|Fa0/11-0/20|
 
-## 설정
+### 설정
 
-### S1 설정
+#### S1 설정
 
 ```bash
 spanning-tree portfast default
@@ -562,7 +562,7 @@ no sh
 ip de 120.35.255.254
 ```
 
-### S2 설정
+#### S2 설정
 
 ```bash
 vl 10
@@ -587,7 +587,7 @@ no sh
 ip de 120.67.255.254
 ```
 
-### R1 설정
+#### R1 설정
 
 ```bash
 enable pass pass!!
@@ -629,7 +629,7 @@ no sh
 
 ---
 
-# 기출유형 7회
+## 기출유형 7회
 
 
 <img src="https://github.com/rlaisqls/TIL/assets/81006587/84433685-4823-46e4-bc92-229fb234821e" style="height: 300px"/>
@@ -651,9 +651,9 @@ no sh
 |Sales (VLAN 20)|Fa0/1|
 |Manage (VLAN 60)|Fa0/2|
 
-## 설정
+### 설정
 
-### S1 설정
+#### S1 설정
 
 ```bash
 vl 20
@@ -678,7 +678,7 @@ ip add dhcp
 no sh
 ```
 
-### R1 설정
+#### R1 설정
 
 ```bash
 int f0/0
@@ -708,13 +708,13 @@ ip route 192.168.1.0 255.255.255.0 100.100.0.5
 
 ---
 
-### Privilage 모드 암호 설정
+#### Privilage 모드 암호 설정
 
 ```bash
 enable pass [admin##]
 ```
 
-### 콘솔 접속 이름, 암호 설정
+#### 콘솔 접속 이름, 암호 설정
 
 이름만
 ```bash
@@ -730,7 +730,7 @@ user [master] pass [pass!!] # 운영자 모드 설정
 login local # 콘솔 로컬 인증
 ```
 
-### 텔넷 비밀번호
+#### 텔넷 비밀번호
 
 ```bash
 li vty 0 4
@@ -738,13 +738,13 @@ pass [pass!!]
 login
 ```
 
-### 콘솔 접속시 메세지
+#### 콘솔 접속시 메세지
 
 ```bash
 ban motd @[^$~R1~$^]@
 ```
 
-### Port Security
+#### Port Security
 
 스위치에서 int 설정
 ```bash
@@ -753,13 +753,13 @@ sw port max 1 # 최대 1대
 sw port vio sh # 1대 이상이면 연결 끊어짐
 ```
 
-### 장비이름 바꾸기
+#### 장비이름 바꾸기
 
 ```bash
 host  R1        
 ```
 
-### 비밀번호 암호화
+#### 비밀번호 암호화
 
 ```bash
 ser pass
