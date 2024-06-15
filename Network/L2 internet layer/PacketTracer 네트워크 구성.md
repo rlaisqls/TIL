@@ -117,7 +117,7 @@ no sh
 
 #### RIP 설정
 
-**라우터 **
+**라우터**
 
 ```bash
 router rip
@@ -406,7 +406,7 @@ no sh
 ||PC1|192.168.0.2|
 |10.0.0.4/30<br/>(라우터들의 시리얼 구간)|R1 [Se0/0/0]|10.0.0.6|
 ||R2 [Se0/0/0]|해당 서브넷에서 사용하지 않은 나머지 주소|
-|172.30.0.0/24|R2 [Fa0/0.10]|해당 호스트에 할당 가능한 마지막 IP 주소|
+|172.30.0.0/24<br/>(VLAN 10: admin)|R2 [Fa0/0.10]|해당 호스트에 할당 가능한 마지막 IP 주소|
 ||PC2|172.30.0.1|
 |172.31.0.0/24<br/>(VLAN 20: sales)|R2 [Fa0/0.20]|해당 호스트에 할당 가능한 마지막 IP 주소|
 ||PC3|172.31.0.1|
@@ -502,7 +502,7 @@ ne 172.30.0.0
 ne 172.31.0.0
 ne 10.0.0.4
 no au
-pass f0/0
+pass f0/0 # 라우팅 업데이트 정보가 전송되지 않도록
 ```
 
 ---
@@ -572,11 +572,11 @@ na Teacher_net
 
 int ra f0/1-10
 sw m a
-sw vl a 10
+sw a vl 10
 
 int ra f0/11-20
 sw m a
-sw vl a 20
+sw a vl 20
 
 int f0/24
 sw m t
@@ -619,7 +619,7 @@ en d 10
 ip add 120.67.255.254 255.252.0.0
 no sh
 
-int f2/0.20
+int f1/0.20
 en d 20
 ip add 120.195.255.254 255.252.0.0
 no sh
@@ -708,6 +708,52 @@ ip route 192.168.1.0 255.255.255.0 100.100.0.5
 
 ---
 
+## 기출유형 8회
+
+### 설정
+
+#### S1 설정
+
+```bash
+# vlan, 인터페이스 설정
+```
+
+#### S2 설정
+
+```bash
+# vlan, 인터페이스 설정
+```
+
+#### R1 설정
+
+```bash
+enable pass admin##
+li vty 0 4
+pass admin##
+login
+
+# inter vlan 설정
+
+ip dhcp ex # 게이트웨이, 브로드캐스트 IP 제외
+
+ip dhcp pool Manage_net
+ne 120.32.0.0 255.252.0.0
+de 120.35.255.254
+dns 120.0.0.1
+
+ip dhcp pool Student_net
+ne 120.64.0.0 255.252.0.0
+de 120.64.255.254
+dns 120.0.0.1
+
+ip dhcp pool Teacher_net
+ne 120.192.0.0 255.252.0.0
+de 120.195.255.254
+dns 120.0.0.1
+```
+
+---
+
 #### Privilage 모드 암호 설정
 
 ```bash
@@ -716,17 +762,9 @@ enable pass [admin##]
 
 #### 콘솔 접속 이름, 암호 설정
 
-이름만
-```bash
-li con 0 
-pass [pass!!]
-login
-```
-
-비밀번호
 ```bash
 li con 0 # 콘솔 라인모드 지정
-user [master] pass [pass!!] # 운영자 모드 설정
+user [master] pass [pass!!]
 login local # 콘솔 로컬 인증
 ```
 
@@ -757,6 +795,12 @@ sw port vio sh # 1대 이상이면 연결 끊어짐
 
 ```bash
 host  R1        
+```
+
+#### ping 테스트
+
+```bash
+ip host R1        
 ```
 
 #### 비밀번호 암호화
