@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 758
+files            : 759
 derectories      : 157
 ```
 
@@ -541,6 +541,7 @@ derectories      : 157
 ┃　　　┃　　　┗━　[퍼셉트론](./개발/AI/퍼셉트론.md)</br>
 ┃　　　┃　　　┗━　[활성화함수](./개발/AI/활성화함수.md)</br>
 ┃　　　┗━　[**Algorithm**](./개발/Algorithm)</br>
+┃　　　┃　　　┗━　[2020 중등부 정올 2차](./개발/Algorithm/2020 중등부 정올 2차.md)</br>
 ┃　　　┃　　　┗━　[N Queen](./개발/Algorithm/N Queen.md)</br>
 ┃　　　┃　　　┗━　[Range GCD](./개발/Algorithm/Range GCD.md)</br>
 ┃　　　┃　　　┗━　[왜판원순회](./개발/Algorithm/왜판원순회.md)</br>
