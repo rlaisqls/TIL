@@ -817,10 +817,10 @@ sw port vio sh # 1대 이상이면 연결 끊어짐
 #### 장비이름 바꾸기
 
 ```bash
-host  R1        
+host R1        
 ```
 
-#### ping 테스트
+#### ping 테스트에서 host 이름 지정
 
 ```bash
 ip host R1        
