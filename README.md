@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 760
+files            : 762
 derectories      : 157
 ```
 
@@ -389,7 +389,9 @@ derectories      : 157
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┗━　[**OS**](./OS)</br>
 ┃　　　┗━　[**Embedded**](./OS/Embedded)</br>
+┃　　　┃　　　┗━　[Audio Codec](./OS/Embedded/Audio Codec.md)</br>
 ┃　　　┃　　　┗━　[Cramfs](./OS/Embedded/Cramfs.md)</br>
+┃　　　┃　　　┗━　[I2C](./OS/Embedded/I2C.md)</br>
 ┃　　　┃　　　┗━　[임베디드 시스템](./OS/Embedded/임베디드 시스템.md)</br>
 ┃　　　┗━　[**VM**](./OS/VM)</br>
 ┃　　　┃　　　┗━　[VMware Fusion NAT config](./OS/VM/VMware Fusion NAT config.md)</br>
