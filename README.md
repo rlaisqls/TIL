@@ -2,7 +2,7 @@
 
 ```
 files            : 762
-derectories      : 157
+derectories      : 158
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -484,6 +484,7 @@ derectories      : 157
 ┃　　　┃　　　┃　　　┗━　[프로세스 관리](./OS/linux/Process/프로세스 관리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[환경변수와 프로세스](./OS/linux/Process/환경변수와 프로세스.md)</br>
 ┃　　　┃　　　┗━　[**Shell**](./OS/linux/Shell)</br>
+┃　　　┃　　　┃　　　┗━　[**hello**](./OS/linux/Shell/hello)</br>
 ┃　　　┃　　　┃　　　┗━　[bash_profile과 bashrc](./OS/linux/Shell/bash_profile과 bashrc.md)</br>
 ┃　　　┃　　　┃　　　┗━　[shell](./OS/linux/Shell/shell.md)</br>
 ┃　　　┃　　　┃　　　┗━　[zshrc](./OS/linux/Shell/zshrc.md)</br>
