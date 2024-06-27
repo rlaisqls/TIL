@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 762
-derectories      : 158
+files            : 765
+derectories      : 157
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -260,6 +260,7 @@ derectories      : 158
 ┃　　　┃　　　┗━　[K8s Architecture](./DevOps/Kubernetes/K8s Architecture.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
+┃　　　┃　　　┗━　[MetalLB](./DevOps/Kubernetes/MetalLB.md)</br>
 ┃　　　┗━　[**Monitoring**](./DevOps/Monitoring)</br>
 ┃　　　┃　　　┗━　[**datadog**](./DevOps/Monitoring/datadog)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog](./DevOps/Monitoring/datadog/datadog.md)</br>
@@ -392,6 +393,7 @@ derectories      : 158
 ┃　　　┃　　　┗━　[Audio Codec](./OS/Embedded/Audio Codec.md)</br>
 ┃　　　┃　　　┗━　[Cramfs](./OS/Embedded/Cramfs.md)</br>
 ┃　　　┃　　　┗━　[I2C](./OS/Embedded/I2C.md)</br>
+┃　　　┃　　　┗━　[시리얼 통신](./OS/Embedded/시리얼 통신.md)</br>
 ┃　　　┃　　　┗━　[임베디드 시스템](./OS/Embedded/임베디드 시스템.md)</br>
 ┃　　　┗━　[**VM**](./OS/VM)</br>
 ┃　　　┃　　　┗━　[VMware Fusion NAT config](./OS/VM/VMware Fusion NAT config.md)</br>
@@ -484,7 +486,6 @@ derectories      : 158
 ┃　　　┃　　　┃　　　┗━　[프로세스 관리](./OS/linux/Process/프로세스 관리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[환경변수와 프로세스](./OS/linux/Process/환경변수와 프로세스.md)</br>
 ┃　　　┃　　　┗━　[**Shell**](./OS/linux/Shell)</br>
-┃　　　┃　　　┃　　　┗━　[**hello**](./OS/linux/Shell/hello)</br>
 ┃　　　┃　　　┃　　　┗━　[bash_profile과 bashrc](./OS/linux/Shell/bash_profile과 bashrc.md)</br>
 ┃　　　┃　　　┃　　　┗━　[shell](./OS/linux/Shell/shell.md)</br>
 ┃　　　┃　　　┃　　　┗━　[zshrc](./OS/linux/Shell/zshrc.md)</br>
@@ -543,20 +544,6 @@ derectories      : 158
 ┃　　　┃　　　┗━　[선형회귀](./개발/AI/선형회귀.md)</br>
 ┃　　　┃　　　┗━　[퍼셉트론](./개발/AI/퍼셉트론.md)</br>
 ┃　　　┃　　　┗━　[활성화함수](./개발/AI/활성화함수.md)</br>
-┃　　　┗━　[**Algorithm**](./개발/Algorithm)</br>
-┃　　　┃　　　┗━　[2020 중등부 정올 2차](./개발/Algorithm/2020 중등부 정올 2차.md)</br>
-┃　　　┃　　　┗━　[N Queen](./개발/Algorithm/N Queen.md)</br>
-┃　　　┃　　　┗━　[Range GCD](./개발/Algorithm/Range GCD.md)</br>
-┃　　　┃　　　┗━　[왜판원순회](./개발/Algorithm/왜판원순회.md)</br>
-┃　　　┃　　　┗━　[외판원순회](./개발/Algorithm/외판원순회.md)</br>
-┃　　　┃　　　┗━　[최소외접원](./개발/Algorithm/최소외접원.md)</br>
-┃　　　┃　　　┗━　[담금질 기법](./개발/Algorithm/담금질 기법.md)</br>
-┃　　　┃　　　┗━　[세그먼트트리](./개발/Algorithm/세그먼트트리.md)</br>
-┃　　　┃　　　┗━　[직사각형 스위핑](./개발/Algorithm/직사각형 스위핑.md)</br>
-┃　　　┃　　　┗━　[코드포스 문제모음](./개발/Algorithm/코드포스 문제모음.md)</br>
-┃　　　┃　　　┗━　[가장 가까운 두 점](./개발/Algorithm/가장 가까운 두 점.md)</br>
-┃　　　┃　　　┗━　[오일러 경로 테크닉](./개발/Algorithm/오일러 경로 테크닉.md)</br>
-┃　　　┃　　　┗━　[볼록 껍질과 회전하는 캘리퍼스](./개발/Algorithm/볼록 껍질과 회전하는 캘리퍼스.md)</br>
 ┃　　　┗━　[**Tools**](./개발/Tools)</br>
 ┃　　　┃　　　┗━　[**Git**](./개발/Tools/Git)</br>
 ┃　　　┃　　　┃　　　┗━　[**Flow**](./개발/Tools/Git/Flow)</br>
@@ -802,6 +789,20 @@ derectories      : 158
 ┃　　　　　　　┗━　[Flow](./코드/비동기/Flow.md)</br>
 ┃　　　　　　　┗━　[cold stream과 hot stream](./코드/비동기/cold stream과 hot stream.md)</br>
 ┃　　　　　　　┗━　[netty 사례연구](./코드/비동기/netty 사례연구.md)</br>
+┗━　[**알고리즘**](./알고리즘)</br>
+┃　　　┗━　[2020 중등부 정올 2차](./알고리즘/2020 중등부 정올 2차.md)</br>
+┃　　　┗━　[N Queen](./알고리즘/N Queen.md)</br>
+┃　　　┗━　[Range GCD](./알고리즘/Range GCD.md)</br>
+┃　　　┗━　[왜판원순회](./알고리즘/왜판원순회.md)</br>
+┃　　　┗━　[외판원순회](./알고리즘/외판원순회.md)</br>
+┃　　　┗━　[최소외접원](./알고리즘/최소외접원.md)</br>
+┃　　　┗━　[담금질 기법](./알고리즘/담금질 기법.md)</br>
+┃　　　┗━　[세그먼트트리](./알고리즘/세그먼트트리.md)</br>
+┃　　　┗━　[직사각형 스위핑](./알고리즘/직사각형 스위핑.md)</br>
+┃　　　┗━　[코드포스 문제모음](./알고리즘/코드포스 문제모음.md)</br>
+┃　　　┗━　[가장 가까운 두 점](./알고리즘/가장 가까운 두 점.md)</br>
+┃　　　┗━　[오일러 경로 테크닉](./알고리즘/오일러 경로 테크닉.md)</br>
+┃　　　┗━　[볼록 껍질과 회전하는 캘리퍼스](./알고리즘/볼록 껍질과 회전하는 캘리퍼스.md)</br>
 ┗━　[**데이터베이스**](./데이터베이스)</br>
 ┃　　　┗━　[**DB설계**](./데이터베이스/DB설계)</br>
 ┃　　　┃　　　┗━　[DBMS와 RDBMS](./데이터베이스/DB설계/DBMS와 RDBMS.md)</br>

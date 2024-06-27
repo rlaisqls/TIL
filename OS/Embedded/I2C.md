@@ -11,7 +11,7 @@
     
     <img src="https://github.com/rlaisqls/TIL/assets/81006587/9de0d096-6af3-410c-b05a-c3e61c963bd0" style="height: 400px"/>
 
-- I2C 사용 시에 주의 해야 할 점은 '풀업 저항'이다. 이 저항을 다는 이유는 I2C 통신을 위해 SDA선과 SCL 선이 모두 기본으로 High 상태가 되어야 하기 때문이다. 풀업 저항은 이를 High 상태로 만들어 준다.
+- I2C 사용 시에 주의 해야 할 점은 '풀업 저항'이다. 이 저항을 다는 이유는 I2C 통신을 위해 SDA선과 SCL 선이 기본적으로 모두 High 상태가 되어야 하기 때문이다. 풀업 저항은 이를 High 상태로 만들어 준다.
 
 - 전송속도
   - Standard Mode : 100kbps
