@@ -18,7 +18,7 @@
 
 > https://metallb.universe.tf/concepts/layer2/
 
-<img src="https://github.com/rlaisqls/TIL/assets/81006587/bd580874-cfeb-43e7-b91d-1f1e5ce6d3b1" style="height: 200px">
+<img src="https://github.com/rlaisqls/TIL/assets/81006587/bd580874-cfeb-43e7-b91d-1f1e5ce6d3b1" style="height: 400px">
 
 #### 한계점
 
@@ -32,7 +32,7 @@
 
 > https://metallb.universe.tf/concepts/bgp/
 
-<img src="https://github.com/rlaisqls/TIL/assets/81006587/1fcd20ee-19ea-42f5-8355-a983e8f92e01" style="height: 200px">
+<img src="https://github.com/rlaisqls/TIL/assets/81006587/1fcd20ee-19ea-42f5-8355-a983e8f92e01" style="height: 400px">
 
 #### 한계점
 

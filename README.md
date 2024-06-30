@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 766
+files            : 767
 derectories      : 157
 ```
 
@@ -396,6 +396,7 @@ derectories      : 157
 ┃　　　┃　　　┗━　[I2C](./OS/Embedded/I2C.md)</br>
 ┃　　　┃　　　┗━　[시리얼 통신](./OS/Embedded/시리얼 통신.md)</br>
 ┃　　　┃　　　┗━　[임베디드 시스템](./OS/Embedded/임베디드 시스템.md)</br>
+┃　　　┃　　　┗━　[임베디드 리눅스 프로그래밍 수업 정리](./OS/Embedded/임베디드 리눅스 프로그래밍 수업 정리.md)</br>
 ┃　　　┗━　[**VM**](./OS/VM)</br>
 ┃　　　┃　　　┗━　[VMware Fusion NAT config](./OS/VM/VMware Fusion NAT config.md)</br>
 ┃　　　┃　　　┗━　[VMware Fusion Ubuntu 디스크 용량 늘리기](./OS/VM/VMware Fusion Ubuntu 디스크 용량 늘리기.md)</br>
