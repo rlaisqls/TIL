@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 765
+files            : 766
 derectories      : 157
 ```
 
@@ -199,6 +199,7 @@ derectories      : 157
 ┃　　　┃　　　┃　　　┃　　　┗━　[Chart Development Tips](./DevOps/Kubernetes/tools/helm/Chart Development Tips.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Helm](./DevOps/Kubernetes/tools/helm/Helm.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Values Files](./DevOps/Kubernetes/tools/helm/Values Files.md)</br>
+┃　　　┃　　　┃　　　┗━　[GoCD](./DevOps/Kubernetes/tools/GoCD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Install Cilium](./DevOps/Kubernetes/tools/Install Cilium.md)</br>
 ┃　　　┃　　　┃　　　┗━　[K8s Metric API](./DevOps/Kubernetes/tools/K8s Metric API.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MetalLB](./DevOps/Kubernetes/tools/MetalLB.md)</br>
@@ -576,6 +577,7 @@ derectories      : 157
 ┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
 ┃　　　┗━　[Web Vitals](./개발/Web Vitals.md)</br>
 ┃　　　┗━　[authn과 authz](./개발/authn과 authz.md)</br>
+┃　　　┗━　[소프트웨어 공학](./개발/소프트웨어 공학.md)</br>
 ┗━　[**서버**](./서버)</br>
 ┃　　　┗━　[**Spring**](./서버/Spring)</br>
 ┃　　　┃　　　┗━　[**AOP**](./서버/Spring/AOP)</br>
