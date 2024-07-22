@@ -199,7 +199,7 @@ STP는 스위치가 연결된 구조를 학습하고, 통신할 수 있는 최�
 ---
 
 **참고**
-
+- [IT 엔지니어를 위한 네트워크 입문](https://m.yes24.com/Goods/Detail/93997435)
 - https://pgono.tistory.com/57
 - [https://net-study.club/entry/스패닝-트리-프로토콜STP-Spanning-Tree-Protocol](https://net-study.club/entry/%EC%8A%A4%ED%8C%A8%EB%8B%9D-%ED%8A%B8%EB%A6%AC-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9CSTP-Spanning-Tree-Protocol)
 - [**https://en.wikipedia.org/wiki/Spanning_Tree_Protocol**](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol)
