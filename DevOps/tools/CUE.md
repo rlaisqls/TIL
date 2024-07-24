@@ -166,5 +166,6 @@ deployment: host: {
 ---
 참고
 - https://cuelang.org/
-- https://github.com/cue-labs/cue-by-example/tree/main
+- https://github.com/cue-lang/cue
+- https://github.com/cue-labs/cue-by-example
 - https://blog.outsider.ne.kr/1600
