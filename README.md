@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 770
-derectories      : 157
+files            : 772
+derectories      : 158
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -795,6 +795,9 @@ derectories      : 157
 ┃　　　　　　　┗━　[cold stream과 hot stream](./코드/비동기/cold stream과 hot stream.md)</br>
 ┃　　　　　　　┗━　[netty 사례연구](./코드/비동기/netty 사례연구.md)</br>
 ┗━　[**알고리즘**](./알고리즘)</br>
+┃　　　┗━　[**자료구조**](./알고리즘/자료구조)</br>
+┃　　　┃　　　┗━　[Trie](./알고리즘/자료구조/Trie.md)</br>
+┃　　　┃　　　┗━　[세그먼트트리](./알고리즘/자료구조/세그먼트트리.md)</br>
 ┃　　　┗━　[2020 중등부 정올 2차](./알고리즘/2020 중등부 정올 2차.md)</br>
 ┃　　　┗━　[N Queen](./알고리즘/N Queen.md)</br>
 ┃　　　┗━　[Range GCD](./알고리즘/Range GCD.md)</br>
@@ -802,7 +805,6 @@ derectories      : 157
 ┃　　　┗━　[외판원순회](./알고리즘/외판원순회.md)</br>
 ┃　　　┗━　[최소외접원](./알고리즘/최소외접원.md)</br>
 ┃　　　┗━　[담금질 기법](./알고리즘/담금질 기법.md)</br>
-┃　　　┗━　[세그먼트트리](./알고리즘/세그먼트트리.md)</br>
 ┃　　　┗━　[직사각형 스위핑](./알고리즘/직사각형 스위핑.md)</br>
 ┃　　　┗━　[코드포스 문제모음](./알고리즘/코드포스 문제모음.md)</br>
 ┃　　　┗━　[가장 가까운 두 점](./알고리즘/가장 가까운 두 점.md)</br>
@@ -825,6 +827,7 @@ derectories      : 157
 ┃　　　┃　　　┗━　[메시지큐](./데이터베이스/MQ/메시지큐.md)</br>
 ┃　　　┗━　[**NoSQL**](./데이터베이스/NoSQL)</br>
 ┃　　　┃　　　┗━　[**MongoDB**](./데이터베이스/NoSQL/MongoDB)</br>
+┃　　　┃　　　┃　　　┗━　[Atlas Search](./데이터베이스/NoSQL/MongoDB/Atlas Search.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BinData](./데이터베이스/NoSQL/MongoDB/BinData.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MongoDB](./데이터베이스/NoSQL/MongoDB/MongoDB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MongoDB Document로 POJO 상속받기](./데이터베이스/NoSQL/MongoDB/MongoDB Document로 POJO 상속받기.md)</br>
