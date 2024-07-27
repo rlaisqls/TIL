@@ -35,6 +35,41 @@ Atlas Search는 여러 종류의 텍스트 분석기 옵션, `$search`와 `$sear
 
 자세한 내용은 [문서](https://www.mongodb.com/docs/atlas/atlas-search/scoring/#std-label-scoring-ref)에서 볼 수 있다.
 
+## 아키텍처
+
+일반적인 mongoDB 쿼리는 `mongod` 프로세스로 처리되는데 비해, Atlas Search는 `mongod`와 함께 `mongot`라는 프로세스에서 쿼리를 처리한다. `mongot`는 [Apache Lucene](https://lucene.apache.org/)을 사용하며 Atlas 클러스터의 각 노드에서 mongod와 함께 실행된다. `mongot` 프로세스는 다음과 같은 작업을 수행한다:
+
+- 컬렉션에 대한 인덱스 정의의 규칙에 따라 Atlas Search 인덱스를 생성한다.
+- Atlas Search 인덱스를 정의한 컬렉션의 문서 현재 상태와 인덱스 변경사항을 모니터링하기 위해 변경 스트림을 감시한다.
+- Atlas Search 쿼리를 처리하고 일치하는 문서를 반환한다.
+
+<img src="https://github.com/user-attachments/assets/470af67a-17f0-48f1-a012-b77f56469777" style="height: 400px"/>
+
+### Stored Source
+
+`mongot` 서치에서 반환되는 도큐먼트들은 오브젝트이기 때문에, `mongot` 서치를 돌린 후에는 이후에 매치나 솔팅으로 `mongod`에 쿼리하는 과정이 필요하다.
+
+이로 인한 성능 저하를 개선하기 위해 StoredSource 기능을 사용할 수 있다. Atlas Search 인덱스에서 StoredSource 필드를 정의하면, `mongot` 프로세스는 지정된 필드를 저장한다. 그리고 쿼리에서 returnStoredSource 옵션을 지정한하면 데이터베이스에서 전체 문서를 조회하지 않고 `mongot`에서 직접 저장했던 (캐싱했던) 필드를 반환한다.
+
+<img src="https://github.com/user-attachments/assets/b040ef79-0e97-435c-9e8a-75a0e210c22b" style="height: 400px"/>
+
+### 검색 노드 아키텍처
+
+워크로드 격리를 위해 `mongot` 프로세스만 실행하는 별도의 검색 노드를 배포할 수 있다. Atlas는 각 클러스터 또는 클러스터의 각 샤드에 검색 노드를 배포한다. 예를 들어, 3개의 샤드가 있는 클러스터에 2개의 검색 노드를 배포하면 Atlas는 샤드당 2개씩 총 6개의 검색 노드를 배포한다.
+
+별도의 검색 노드를 배포하면 다음과 같은 이점이 있다:
+
+- MongoDB 클러스터와 독립적으로 스토리지를 확장할 수 있다.
+- MongoDB와 독립적으로 쿼리 부하를 확장할 수 있다.
+
+별도의 검색 노드를 배포하면 mongot 프로세스는 독립적으로 구성할 수 있는 별도의 검색 노드에서 실행된다.
+
+<img src="https://github.com/user-attachments/assets/9f39a0ba-a115-4834-b65d-68eb66a0aa7c" style="height: 400px"/>
+
+Atlas 클러스터에서 mongod 프로세스를 실행하는 데이터베이스 노드와 별도로 `mongot` 프로세스를 실행하도록 검색 노드를 구성할 수 있다. 또한 검색 노드의 수와 각 검색 노드에 할당되는 리소스의 양을 구성할 수 있다.
+
+## 인덱스 설정 방법
+
 ---
 참고
 - https://www.mongodb.com/docs/atlas/atlas-search/atlas-search-overview
