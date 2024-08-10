@@ -62,6 +62,10 @@ func main() {
 }
 ```
 
+s2에만 append 해서 capacity를 넘으면 메모리가 분리될 수도 있다.
+
+<img src="https://github.com/user-attachments/assets/3ef734de-82e5-4594-b906-241190828a01" style="height: 200px">
+
 
 ---
 참고
