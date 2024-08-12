@@ -1,5 +1,5 @@
 
-IPSec IP계층(네트워크 계층)을 안전하게 보호하기 위한 기법이다. 대부분의 네트워크 응용프로그램은 IP 계층을 사용하기 때문에 IP계층에서 동작하는 보안, 즉, 페킷에 대한 보안을 제공하는 IP Security(IPSec)가 필요하다.
+IPSec IP계층(네트워크 계층)을 안전하게 보호하기 위한 기법이다. 대부분의 네트워크 응용프로그램은 IP 계층을 사용하기 때문에 IP계층에서 동작하는 보안, 즉, 패킷에 대한 보안을 제공하는 IP Security(IPSec)가 필요하다.
 
 ## 모드
 
@@ -52,7 +52,7 @@ IPSec은 또 두가지 보안 프로토콜을 제공한다.
 - **Payload Length** : 인증헤더의 길이. 
 - **Security Parameter Index** : 32bit 보안 매개변수 색인(SPI) 필드, Security Association에 대한 식별자
 - **Sequence Number** : 32bit 순서번호 (replay attack을 방지)
-- **Authentication Data** : 헤더를 포함하여 전체 페킷에 대한 데이터를 인증 데이터로 만든다. 이때 IP 헤더의 변경될 수 있는 데이터는 제외된다.
+- **Authentication Data** : 헤더를 포함하여 전체 패킷에 대한 데이터를 인증 데이터로 만든다. 이때 IP 헤더의 변경될 수 있는 데이터는 제외된다.
 
 ### ESP(Encapsulating Security Payload)
 
