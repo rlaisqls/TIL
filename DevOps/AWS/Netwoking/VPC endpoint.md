@@ -19,7 +19,6 @@ Instances in an Amazon VPC do not require public IP addresses to communicate wit
 
 ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/a46fa3fe-0747-44bb-b304-67179f3449af)
 
-
 ---
 reference
 - https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html
