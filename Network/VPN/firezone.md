@@ -1,6 +1,8 @@
 
 Firezone is an open source platform to securely manage remote access for any-sized organization. Unlike most VPNs, Firezone takes a granular, least-privileged approach to access management with group-based policies that control access to individual applications, entire subnets, and everything in between.
 
+<img style="height: 200px" src="https://github.com/user-attachments/assets/9abef884-ba8b-4c08-89ee-c0e3943b3639"/>
+
 Unlike traditional VPNs, however, Firezone has the following key differences:
 
 - Open source: All source code is available for anyone to audit on GitHub.
@@ -22,11 +24,9 @@ To create a Site, click the Sites tab in the left-hand navigation and then click
 
 Gateways are what Clients connect to in order to access Resources in a Site. They're the data plane workhorse of the Firezone architecture and are responsible for securely routing traffic between Clients and Resources.
 
-
 Gateways implement the industry-standard STUN and TURN protocols to perform secure NAT holepunching. This allows Firezone to establish direct connections between your Users and Resources while keeping your Resources invisible to the public internet.
 
 Ideally, Gateways should be deployed as close to the Resources they're serving -- in some cases, even on the same host. This ensures the lowest possible latency and highest possible throughput for Client connections, and allows you to more easily deploy additional Gateways for other Resources that need to handle more Client connections.
-
 
 ### Resources
 
