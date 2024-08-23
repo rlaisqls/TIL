@@ -17,11 +17,11 @@ Private Network(사설망)는 IPv4 중 특정 대역을 공인 인터넷이 아�
 
 이렇게 사설망과 공인망이 사용하는 IP에 따라 분리되면서 공인망과 사설망의 경계에서 별도의 조치가 필요해졌다. 사설망에서 공인 인터넷으로 나가고자 할 때 자신의 출발지 IP(Source IP)를 사설 IP 그대로 쓸 수 없기 때문이다. 그렇기에 사설 IP를 공인 IP로 변환해야한다.
 
-IP를 변환하는 것은 사설망과 공인망의 통신에서만 필요한 것이 아니다. 자사의 사설망(내부망)과 전용 회선(Leased Line)을 통해 대외사의 사설망(내부망)을 연결할 경우, 이 경우의 통신에서도 IP를 변환해야 한다. 자신의 실제 IP를 노출시키지 않아야 하거나 반대편 기업의 실제 IP로 목적지 IP를 변환하여야 할 필요가 있을 때 사용한다. 이에 IP를 변환하기 위한 방법을 고안한 것이 바로 Network Address Translation(NAT)이다. 
+IP를 변환하는 것은 사설망과 공인망의 통신에서만 필요한 것이 아니다. 자사의 사설망(내부망)과 전용 회선(Leased Line)을 통해 대외사의 사설망(내부망)을 연결할 경우, 이 경우의 통신에서도 IP를 변환해야 한다. 자신의 실제 IP를 노출시키지 않아야 하거나 반대편 기업의 실제 IP로 목적지 IP를 변환하여야 할 필요가 있을 때 사용한다. 이에 IP를 변환하기 위한 방법을 고안한 것이 바로 Network Address Translation(NAT)이다.
 
 ## NAT이란?
 
-> 네트워크 주소 변환(영어: network address translation, 줄여서 NAT)은 컴퓨터 네트워킹에서 쓰이는 용어로써, IP 패킷의 TCP/UDP 포트 숫자와 소스 및 목적지의 IP 주소 등을 재기록하면서 라우터를 통해 네트워크 트래픽을 주고받는 기술을 말한다. 
+> 네트워크 주소 변환(영어: network address translation, 줄여서 NAT)은 컴퓨터 네트워킹에서 쓰이는 용어로써, IP 패킷의 TCP/UDP 포트 숫자와 소스 및 목적지의 IP 주소 등을 재기록하면서 라우터를 통해 네트워크 트래픽을 주고받는 기술을 말한다.
 
 Network Address Translation(이하 NAT)는 IP 주소 혹은 IP 패킷의 TCP/UDP Port 숫자를 변환 및 재기록하여 네트워크 트래픽을 주고받는 기술을 의미한다. 지금까지 설명한 내용을 적용해보자면 사설망에서 공인망으로, 공인망에서 사설망으로 통신하고자 할 때 공인망/사설망에서 사용하는 IP로 변환하는 것을 의미한다고 볼 수 있다.
 
@@ -31,11 +31,11 @@ Network Address Translation(이하 NAT)는 IP 주소 혹은 IP 패킷의 TCP/UDP
 
 사용자 1(`10.10.10.10/24`)이 공유기를 통해 공인망에 존재하는 웹 서버(`125.209.22.142:80`)에 접속하려고 한다. 사용자 1은 사설 IP를 보유하고 있기 때문에 공인망으로 나아가기 위해서는 자신의 사설 IP를 공인 IP로 반드시 변환(NAT)해야 한다. 그리고 NAT Device(이하 NAT 장비, 공유기 등)가 이를 수행해준다.
 
-1. 사용자가 웹 서버에 접속하기 위해 NAT 장비(Gateway)에 패킷을 보내는데 IP/Port 정보이다.
-   
-2. 이를 받아든 NAT 장비가 자신에게 허용된 규칙을 확인하고 공인망의 웹서버에게 보내기 위해 사용자의 사설 IP를 자신의 공인 IP로 변환하여 웹서버에게 전달한다. 정확히 말하면 공인망에 맞닿아 있는 자신의 인터페이스 IP로 변환하는 것이다.
-   
-3.  웹서버가 사용자가 보낸 요청을 처리하고 응답을 사용자에게 보낸다. 목적지에서 출발지로 패킷을 다시 보내는 것이다.
+1. 사용자가 웹 서버에 접속하기 위해 NAT 장비(Gateway)에 패킷을 보낸다.
+
+2. 이를 받아든 NAT 장비가 자신에게 허용된 규칙을 확인하고 공인망의 웹서버에게 보내기 위해 사용자의 사설 IP를 자신의 공인 IP로 변환하여 웹서버에게 전달한다. 정확히는 공인망에 맞닿아 있는 자신의 인터페이스 IP로 변환하는 것이다.
+
+3. 웹서버가 사용자가 보낸 요청을 처리하고 응답을 사용자에게 보낸다. 목적지에서 출발지로 패킷을 다시 보내는 것이다.
 
 4. 응답 패킷을 받은 NAT 장비가 과거 사용자가 보낸 요청에 대한 응답임을 기억(Stateful)한다. 그리고 목적지 IP를 공인 IP에서 사용자의 실제 사설 IP로 변환하여 전달한다.
 
@@ -79,7 +79,9 @@ NAT는 어느 관점에서 보느냐에 따라 부르는 용어가 달라진다.
 
 ---
 참고
-- https://www.stevenjlee.net/2020/07/11/%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-nat-network-address-translation-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A3%BC%EC%86%8C-%EB%B3%80%ED%99%98/
-- https://en.wikipedia.org/wiki/Network_address_translation
-- https://learn.microsoft.com/ko-kr/azure/rtos/netx-duo/netx-duo-nat/chapter1
-- https://archive.md/20130103041130/http://publib.boulder.ibm.com/infocenter/iseries/v5r3/index.jsp?topic=/rzajw/rzajwstatic.htm
+
+- <https://www.stevenjlee.net/2020/07/11/%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-nat-network-address-translation-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A3%BC%EC%86%8C-%EB%B3%80%ED%99%98/>
+- <https://en.wikipedia.org/wiki/Network_address_translation>
+- <https://learn.microsoft.com/ko-kr/azure/rtos/netx-duo/netx-duo-nat/chapter1>
+- <https://archive.md/20130103041130/http://publib.boulder.ibm.com/infocenter/iseries/v5r3/index.jsp?topic=/rzajw/rzajwstatic.htm>
+
