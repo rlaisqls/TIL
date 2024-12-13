@@ -3,7 +3,7 @@ Amazon Elastic Container Service (Amazon ECS) is a fully managed container orche
 
 ![image](https://github.com/rlaisqls/rlaisqls/assets/81006587/205771e3-3e76-43d9-98b7-b9f3ae710c20)
 
-##  ECS 요소
+## ECS 요소
 
 ### 컨테이너(container) 및 이미지(image)
 
@@ -59,6 +59,8 @@ Fargate 시작 유형의 경우, ECS에서 클러스터 리소스를 관리한�
 
 ---
 reference
-- https://docs.aws.amazon.com/ko_kr/AmazonECS/latest/developerguide/Welcome.html
-- https://aws.amazon.com/ko/ecs/
-- https://aws.amazon.com/ko/ecs/faqs/
+
+- <https://docs.aws.amazon.com/ko_kr/AmazonECS/latest/developerguide/Welcome.html>
+- <https://aws.amazon.com/ko/ecs/>
+- <https://aws.amazon.com/ko/ecs/faqs/>
+
