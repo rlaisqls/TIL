@@ -3,13 +3,13 @@
 PgBouncer를 비롯한 Database Proxy에는 커넥션 풀을 사용하는 모드가 크게 두 가지 있다.
 
 - Session 모드
-- 클라이언트가 PgBouncer에 맺는 커넥션과 PgBouncer에서 DB에 맺는 커넥션을 1:1 대응하여 실행하는 모드
-- 세션 풀을 PgBouncer에서 관리하여, 기존보다 더 안정적인 풀링을 할 수 있다는 장점이 있다.
+  - 클라이언트가 PgBouncer에 맺는 커넥션과 PgBouncer에서 DB에 맺는 커넥션을 1:1 대응하여 실행하는 모드
+  - 세션 풀을 PgBouncer에서 관리하여, 기존보다 더 안정적인 풀링을 할 수 있다는 장점이 있다.
 
 - Transaction 모드
-- 클라이언트에서 실행하는 트랜잭션별로 PgBouncer 풀의 커넥션을 배정받아 실행하는 모드
-- 생성된 커넥션이 낭비될 가능성을 줄이기 때문에, 총 커넥션 갯수를 더 적게 유지할 수 있다.
-- 각 애플리케이션에서 가지고 있는 커넥션 수의 합이 실제 DB 커넥션 수보다 적을 수 있다.
+  - 클라이언트에서 실행하는 트랜잭션별로 pgbouncer 풀의 커넥션을 배정받아 실행하는 모드
+  - 생성된 커넥션이 낭비될 가능성을 줄이기 때문에, 총 커넥션 갯수를 더 적게 유지할 수 있다.
+  - 각 애플리케이션에서 가지고 있는 커넥션 수의 합이 실제 db 커넥션 수보다 적을 수 있다.
 
 Session 모드와 Transaction 모드의 특징을 비교하기 위해 아래와 같은 상황을 가정하고 테스트하면 설명된 내용처럼 실행된다.
 
@@ -42,8 +42,10 @@ Session 모드와 Transaction 모드의 특징을 비교하기 위해 아래와 
 
 #### PgBouncer `server_round_robin` 옵션
 
-- pg-pool의 idle 커넥션 관리는 LIFO이다. (뒤에서 넣고 뒤에서 빼기 <https://github.com/brianc/node-postgres/blob/92cb640fd316972e323ced6256b2acd89b1b58e0/packages/pg-pool/index.js#L377> )
-- pgbouncer는 기본 LIFO (앞에서 넣고 앞에서 빼기), 설정시 round robin (FIFO) 방식을 사용할 수 있다. <https://github.com/pgbouncer/pgbouncer/blob/1dbde965e6782f6800eb4d1bb6b4d4002bfd1323/src/objects.c#L345>
+- pg-pool의 idle 커넥션 관리는 LIFO이다. (뒤에서 넣고 뒤에서 빼기)
+  - <https://github.com/brianc/node-postgres/blob/92cb640fd316972e323ced6256b2acd89b1b58e0/packages/pg-pool/index.js#L377>
+- pgbouncer는 기본 LIFO (앞에서 넣고 앞에서 빼기), 설정시 round robin (FIFO) 방식을 사용할 수 있다.
+  - <https://github.com/pgbouncer/pgbouncer/blob/1dbde965e6782f6800eb4d1bb6b4d4002bfd1323/src/objects.c#L345>
 
 ### pgbouncer 디버깅
 
