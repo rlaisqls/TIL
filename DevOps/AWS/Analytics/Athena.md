@@ -9,6 +9,46 @@
 
 ![image](https://github.com/rlaisqls/TIL/assets/81006587/b46e7e45-8038-44d0-85d1-dfc2f95c9a17)
 
+### SerDe
+
+- Athena는 다양한 데이터 형식의 데이터를 구문 분석하는 여러 SerDe(Serializer/Deserializer) 라이브러리를 지원한다.
+- Athena에서 테이블을 생성할 때 데이터의 형식에 해당하는 SerDe를 지정할 수 있다.
+- 기본값으론 [Lazy Simple SerDe](https://docs.aws.amazon.com/athena/latest/ug/lazy-simple-serde.html)를 사용한다. CSV, TSV 등 규칙적인 구분자로 데이터를 구분하는 형식에 대해 파싱할 수 있다.
+  - Lazy Simple serde 구분자 지정 예시
+
+    ```sql
+    ROW FORMAT DELIMITED
+    FIELDS TERMINATED BY '\t'
+    ESCAPED BY '\\'
+    LINES TERMINATED BY '\n'
+    ```
+
+- Parquet serde 예시
+
+    ```sql
+    ...
+    ROW FORMAT SERDE  
+    'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe' 
+    WITH SERDEPROPERTIES (  
+    'parquet.ignore.statistics'='true')  
+    STORED AS PARQUET 
+    ...
+
+    ```
+
+- AWS에서 지원하는 더 다양한 serde 목록 및 사용법은 [공식문서](https://docs.aws.amazon.com/athena/latest/ug/supported-serdes.html)에서 확인할 수 있다.
+
+### 테이블 생성
+
+테이블 생성 후 파티션 메타데이터를 등록하기 위해 REPAIR 명령어를 사용한다.
+
+```sql
+MSCK REPAIR TABLE {table_name};
+```
+
 ---
 reference
-- https://aws.amazon.com/athena/faqs/?nc=sn&loc=6
+
+- <https://aws.amazon.com/athena/faqs/?nc=sn&loc=6>
+- <https://docs.aws.amazon.com/athena/latest/ug/serde-reference.html>
+
