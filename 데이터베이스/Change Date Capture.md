@@ -99,4 +99,7 @@ Challenges of this approach
 
 ---
 reference
-- https://www.striim.com/blog/change-data-capture-cdc-what-it-is-and-how-it-works/
+
+- <https://www.striim.com/blog/change-data-capture-cdc-what-it-is-and-how-it-works/>
+- <https://sihyung92.oopy.io/architecture/cdc>
+
