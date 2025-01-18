@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 775
-derectories      : 158
+files            : 825
+derectories      : 166
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -10,6 +10,31 @@ derectories      : 158
 3. 이 repository에 기록된 지식을 이해하고 응용할 수 있도록 합니다.
 
 .
+┗━　[**AI**](./AI)</br>
+┃　　　┗━　[**Vector Search**](./AI/Vector Search)</br>
+┃　　　┃　　　┗━　[Distance Metrics](./AI/Vector Search/Distance Metrics.md)</br>
+┃　　　┃　　　┗━　[Index━realated chians](./AI/Vector Search/Index━realated chians.md)</br>
+┃　　　┃　　　┗━　[Vector Search](./AI/Vector Search/Vector Search.md)</br>
+┃　　　┗━　[**embedding**](./AI/embedding)</br>
+┃　　　┃　　　┗━　[embedding and chunking](./AI/embedding/embedding and chunking.md)</br>
+┃　　　┃　　　┗━　[임베딩](./AI/embedding/임베딩.md)</br>
+┃　　　┗━　[**실습**](./AI/실습)</br>
+┃　　　┃　　　┗━　[CNN, RNN](./AI/실습/CNN, RNN.md)</br>
+┃　　　┃　　　┗━　[MNIST 숫자 판별](./AI/실습/MNIST 숫자 판별.md)</br>
+┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./AI/실습/배, 자동차, 비행기 분류하기.md)</br>
+┃　　　┗━　[**자연어 처리**](./AI/자연어 처리)</br>
+┃　　　┃　　　┗━　[BERT](./AI/자연어 처리/BERT.md)</br>
+┃　　　┗━　[CNN](./AI/CNN.md)</br>
+┃　　　┗━　[Document Question Answering](./AI/Document Question Answering.md)</br>
+┃　　　┗━　[DropOut](./AI/DropOut.md)</br>
+┃　　　┗━　[Keras](./AI/Keras.md)</br>
+┃　　　┗━　[Optimizer](./AI/Optimizer.md)</br>
+┃　　　┗━　[Prompt Engineering](./AI/Prompt Engineering.md)</br>
+┃　　　┗━　[RAG](./AI/RAG.md)</br>
+┃　　　┗━　[RNN](./AI/RNN.md)</br>
+┃　　　┗━　[선형회귀](./AI/선형회귀.md)</br>
+┃　　　┗━　[퍼셉트론](./AI/퍼셉트론.md)</br>
+┃　　　┗━　[활성화함수](./AI/활성화함수.md)</br>
 ┗━　[**DevOps**](./DevOps)</br>
 ┃　　　┗━　[**AWS**](./DevOps/AWS)</br>
 ┃　　　┃　　　┗━　[**Analytics**](./DevOps/AWS/Analytics)</br>
@@ -33,7 +58,6 @@ derectories      : 158
 ┃　　　┃　　　┃　　　┃　　　┗━　[RI와 Saving plan](./DevOps/AWS/Computing/EC2/RI와 Saving plan.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Spot Instance](./DevOps/AWS/Computing/EC2/Spot Instance.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ECS](./DevOps/AWS/Computing/ECS.md)</br>
-┃　　　┃　　　┃　　　┗━　[ECS Getting started on Fargate](./DevOps/AWS/Computing/ECS Getting started on Fargate.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Fargate](./DevOps/AWS/Computing/Fargate.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Lambda](./DevOps/AWS/Computing/Lambda.md)</br>
@@ -48,6 +72,7 @@ derectories      : 158
 ┃　　　┃　　　┃　　　┗━　[CloudFormation](./DevOps/AWS/Management and governance/CloudFormation.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudTrail](./DevOps/AWS/Management and governance/CloudTrail.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudWatch](./DevOps/AWS/Management and governance/CloudWatch.md)</br>
+┃　　　┃　　　┃　　　┗━　[LogGroup](./DevOps/AWS/Management and governance/LogGroup.md)</br>
 ┃　　　┃　　　┗━　[**Netwoking**](./DevOps/AWS/Netwoking)</br>
 ┃　　　┃　　　┃　　　┗━　[**elb**](./DevOps/AWS/Netwoking/elb)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Application LoadBalancer components](./DevOps/AWS/Netwoking/elb/Application LoadBalancer components.md)</br>
@@ -266,6 +291,7 @@ derectories      : 158
 ┃　　　┃　　　┗━　[**datadog**](./DevOps/Monitoring/datadog)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog](./DevOps/Monitoring/datadog/datadog.md)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog APM 기능 사용하기](./DevOps/Monitoring/datadog/datadog APM 기능 사용하기.md)</br>
+┃　　　┃　　　┃　　　┗━　[datadog anomaly detection algorithms](./DevOps/Monitoring/datadog/datadog anomaly detection algorithms.md)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog 아키텍처](./DevOps/Monitoring/datadog/datadog 아키텍처.md)</br>
 ┃　　　┃　　　┃　　　┗━　[helmChart로 Agent 설치](./DevOps/Monitoring/datadog/helmChart로 Agent 설치.md)</br>
 ┃　　　┃　　　┗━　[**elk**](./DevOps/Monitoring/elk)</br>
@@ -299,6 +325,7 @@ derectories      : 158
 ┃　　　┃　　　┃　　　┗━　[xDS configuration](./DevOps/Proxy/envoy/xDS configuration.md)</br>
 ┃　　　┃　　　┗━　[**nginx**](./DevOps/Proxy/nginx)</br>
 ┃　　　┃　　　┃　　　┗━　[NGINX Ingress Basic Auth](./DevOps/Proxy/nginx/NGINX Ingress Basic Auth.md)</br>
+┃　　　┃　　　┃　　　┗━　[SSL passthrough](./DevOps/Proxy/nginx/SSL passthrough.md)</br>
 ┃　　　┃　　　┃　　　┗━　[location block](./DevOps/Proxy/nginx/location block.md)</br>
 ┃　　　┃　　　┃　　　┗━　[nginx certbot](./DevOps/Proxy/nginx/nginx certbot.md)</br>
 ┃　　　┃　　　┃　　　┗━　[nginx docker](./DevOps/Proxy/nginx/nginx docker.md)</br>
@@ -320,8 +347,10 @@ derectories      : 158
 ┃　　　┃　　　┗━　[OpenHistorian](./DevOps/tools/OpenHistorian.md)</br>
 ┃　　　┃　　　┗━　[Packer](./DevOps/tools/Packer.md)</br>
 ┃　　　┃　　　┗━　[Vault](./DevOps/tools/Vault.md)</br>
+┃　　　┃　　　┗━　[jenkins](./DevOps/tools/jenkins.md)</br>
 ┃　　　┃　　　┗━　[minio](./DevOps/tools/minio.md)</br>
 ┃　　　┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./DevOps/tools/openssl로 pemKey 만들고 접속하기.md)</br>
+┃　　　┃　　　┗━　[tar](./DevOps/tools/tar.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./DevOps/Cloud Agnostic Design.md)</br>
 ┃　　　┗━　[Platform Engineering](./DevOps/Platform Engineering.md)</br>
@@ -350,6 +379,7 @@ derectories      : 158
 ┃　　　┃　　　┗━　[IP 데이터그램과 단편화](./Network/L2 internet layer/IP 데이터그램과 단편화.md)</br>
 ┃　　　┃　　　┗━　[NAT](./Network/L2 internet layer/NAT.md)</br>
 ┃　　　┃　　　┗━　[PacketTracer 네트워크 구성](./Network/L2 internet layer/PacketTracer 네트워크 구성.md)</br>
+┃　　　┃　　　┗━　[UPnP](./Network/L2 internet layer/UPnP.md)</br>
 ┃　　　┃　　　┗━　[secondary IP](./Network/L2 internet layer/secondary IP.md)</br>
 ┃　　　┃　　　┗━　[서브넷](./Network/L2 internet layer/서브넷.md)</br>
 ┃　　　┃　　　┗━　[정보기기운용기능사 실기](./Network/L2 internet layer/정보기기운용기능사 실기.md)</br>
@@ -376,6 +406,10 @@ derectories      : 158
 ┃　　　┃　　　┗━　[FTP Active, Passive mode](./Network/L4 appplication layer/FTP Active, Passive mode.md)</br>
 ┃　　　┃　　　┗━　[SMTP의 보안 시스템](./Network/L4 appplication layer/SMTP의 보안 시스템.md)</br>
 ┃　　　┃　　　┗━　[java로 간단한 socket 프로그램만들기](./Network/L4 appplication layer/java로 간단한 socket 프로그램만들기.md)</br>
+┃　　　┗━　[**VPN**](./Network/VPN)</br>
+┃　　　┃　　　┗━　[VPN](./Network/VPN/VPN.md)</br>
+┃　　　┃　　　┗━　[Wireguard와 Firezone](./Network/VPN/Wireguard와 Firezone.md)</br>
+┃　　　┃　　　┗━　[firezone](./Network/VPN/firezone.md)</br>
 ┃　　　┗━　[**error**](./Network/error)</br>
 ┃　　　┃　　　┗━　[Context deadline exceeded](./Network/error/Context deadline exceeded.md)</br>
 ┃　　　┗━　[**개념**](./Network/개념)</br>
@@ -387,6 +421,7 @@ derectories      : 158
 ┃　　　┗━　[Exponential Backoff And Jitter](./Network/Exponential Backoff And Jitter.md)</br>
 ┃　　　┗━　[OSI 7Layer](./Network/OSI 7Layer.md)</br>
 ┃　　　┗━　[Switch](./Network/Switch.md)</br>
+┃　　　┗━　[WebRTC](./Network/WebRTC.md)</br>
 ┃　　　┗━　[bandwidth](./Network/bandwidth.md)</br>
 ┃　　　┗━　[vTAP](./Network/vTAP.md)</br>
 ┃　　　┗━　[로드밸런서](./Network/로드밸런서.md)</br>
@@ -427,6 +462,7 @@ derectories      : 158
 ┃　　　┃　　　┃　　　┗━　[Symbolic Link](./OS/linux/Disk & Dir/Symbolic Link.md)</br>
 ┃　　　┃　　　┃　　　┗━　[od](./OS/linux/Disk & Dir/od.md)</br>
 ┃　　　┃　　　┃　　　┗━　[백업](./OS/linux/Disk & Dir/백업.md)</br>
+┃　　　┃　　　┃　　　┗━　[디스크　파티션](./OS/linux/Disk & Dir/디스크　파티션.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 종류](./OS/linux/Disk & Dir/파일 종류.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./OS/linux/Disk & Dir/파일 시스템.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./OS/linux/Disk & Dir/파일 관리 명령어.md)</br>
@@ -434,6 +470,7 @@ derectories      : 158
 ┃　　　┃　　　┃　　　┗━　[ELF](./OS/linux/ELF/ELF.md)</br>
 ┃　　　┃　　　┃　　　┗━　[SEC()](./OS/linux/ELF/SEC().md)</br>
 ┃　　　┃　　　┗━　[**ETC**](./OS/linux/ETC)</br>
+┃　　　┃　　　┃　　　┗━　[NTP](./OS/linux/ETC/NTP.md)</br>
 ┃　　　┃　　　┃　　　┗━　[PMU](./OS/linux/ETC/PMU.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Perf](./OS/linux/ETC/Perf.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Redirection와 FD](./OS/linux/ETC/Redirection와 FD.md)</br>
@@ -442,10 +479,12 @@ derectories      : 158
 ┃　　　┃　　　┃　　　┗━　[linux 표준 에러 코드](./OS/linux/ETC/linux 표준 에러 코드.md)</br>
 ┃　　　┃　　　┃　　　┗━　[mail](./OS/linux/ETC/mail.md)</br>
 ┃　　　┃　　　┃　　　┗━　[man](./OS/linux/ETC/man.md)</br>
+┃　　　┃　　　┃　　　┗━　[set](./OS/linux/ETC/set.md)</br>
 ┃　　　┃　　　┃　　　┗━　[명령어들](./OS/linux/ETC/명령어들.md)</br>
 ┃　　　┃　　　┗━　[**Kernel**](./OS/linux/Kernel)</br>
 ┃　　　┃　　　┃　　　┗━　[Block I／O](./OS/linux/Kernel/Block I／O.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CPU Load Average](./OS/linux/Kernel/CPU Load Average.md)</br>
+┃　　　┃　　　┃　　　┗━　[entropy](./OS/linux/Kernel/entropy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[vmlinux](./OS/linux/Kernel/vmlinux.md)</br>
 ┃　　　┃　　　┃　　　┗━　[디버깅](./OS/linux/Kernel/디버깅.md)</br>
 ┃　　　┃　　　┃　　　┗━　[이식성](./OS/linux/Kernel/이식성.md)</br>
@@ -466,15 +505,20 @@ derectories      : 158
 ┃　　　┃　　　┃　　　┗━　[Swap메모리](./OS/linux/Memory/Swap메모리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[VSS, RSS, PSS, USS](./OS/linux/Memory/VSS, RSS, PSS, USS.md)</br>
 ┃　　　┃　　　┗━　[**Network**](./OS/linux/Network)</br>
+┃　　　┃　　　┃　　　┗━　[**DNS**](./OS/linux/Network/DNS)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[DNS 서버](./OS/linux/Network/DNS/DNS 서버.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[bind로 DNS 서버 정의하기](./OS/linux/Network/DNS/bind로 DNS 서버 정의하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**주요명령어**](./OS/linux/Network/주요명령어)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[arp](./OS/linux/Network/주요명령어/arp.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ifconfig](./OS/linux/Network/주요명령어/ifconfig.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ping과 netstat](./OS/linux/Network/주요명령어/ping과 netstat.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[route로 라우팅 테이블 확인하기](./OS/linux/Network/주요명령어/route로 라우팅 테이블 확인하기.md)</br>
-┃　　　┃　　　┃　　　┗━　[DNS 서버](./OS/linux/Network/DNS 서버.md)</br>
+┃　　　┃　　　┃　　　┗━　[DERP](./OS/linux/Network/DERP.md)</br>
+┃　　　┃　　　┃　　　┗━　[Domain━based Split Tunnels](./OS/linux/Network/Domain━based Split Tunnels.md)</br>
 ┃　　　┃　　　┃　　　┗━　[IP masquerading](./OS/linux/Network/IP masquerading.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Netfilter](./OS/linux/Network/Netfilter.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Virtual Networking Interface](./OS/linux/Network/Virtual Networking Interface.md)</br>
+┃　　　┃　　　┃　　　┗━　[ip_forward와 rp_filter](./OS/linux/Network/ip_forward와 rp_filter.md)</br>
 ┃　　　┃　　　┃　　　┗━　[iptables](./OS/linux/Network/iptables.md)</br>
 ┃　　　┃　　　┃　　　┗━　[iptables 방화벽 설정](./OS/linux/Network/iptables 방화벽 설정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[namespace와 cgroup](./OS/linux/Network/namespace와 cgroup.md)</br>
@@ -532,42 +576,48 @@ derectories      : 158
 ┃　　　┗━　[파일 시스템](./OS/파일 시스템.md)</br>
 ┃　　　┗━　[디스크 시스템](./OS/디스크 시스템.md)</br>
 ┃　　　┗━　[운영체제 유형](./OS/운영체제 유형.md)</br>
+┗━　[**node_modules**](./node_modules)</br>
+┃　　　┗━　[**husky**](./node_modules/husky)</br>
+┃　　　　　　　┗━　[**LICENSE**](./node_modules/husky/LICENSE)</br>
+┃　　　　　　　┗━　[README](./node_modules/husky/README.md)</br>
+┃　　　　　　　┗━　[**bin.js**](./node_modules/husky/bin.js)</br>
+┃　　　　　　　┗━　[**husky**](./node_modules/husky/husky)</br>
+┃　　　　　　　┗━　[**index.d.ts**](./node_modules/husky/index.d.ts)</br>
+┃　　　　　　　┗━　[**index.js**](./node_modules/husky/index.js)</br>
+┃　　　　　　　┗━　[**package.json**](./node_modules/husky/package.json)</br>
 ┗━　[**개발**](./개발)</br>
-┃　　　┗━　[**AI**](./개발/AI)</br>
-┃　　　┃　　　┗━　[**실습**](./개발/AI/실습)</br>
-┃　　　┃　　　┃　　　┗━　[CNN, RNN](./개발/AI/실습/CNN, RNN.md)</br>
-┃　　　┃　　　┃　　　┗━　[MNIST 숫자 판별](./개발/AI/실습/MNIST 숫자 판별.md)</br>
-┃　　　┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./개발/AI/실습/배, 자동차, 비행기 분류하기.md)</br>
-┃　　　┃　　　┗━　[**자연어 처리**](./개발/AI/자연어 처리)</br>
-┃　　　┃　　　┃　　　┗━　[BERT](./개발/AI/자연어 처리/BERT.md)</br>
-┃　　　┃　　　┗━　[CNN](./개발/AI/CNN.md)</br>
-┃　　　┃　　　┗━　[DropOut](./개발/AI/DropOut.md)</br>
-┃　　　┃　　　┗━　[Keras](./개발/AI/Keras.md)</br>
-┃　　　┃　　　┗━　[Optimizer](./개발/AI/Optimizer.md)</br>
-┃　　　┃　　　┗━　[RNN](./개발/AI/RNN.md)</br>
-┃　　　┃　　　┗━　[선형회귀](./개발/AI/선형회귀.md)</br>
-┃　　　┃　　　┗━　[퍼셉트론](./개발/AI/퍼셉트론.md)</br>
-┃　　　┃　　　┗━　[활성화함수](./개발/AI/활성화함수.md)</br>
+┃　　　┗━　[**App**](./개발/App)</br>
+┃　　　┃　　　┗━　[**React Native**](./개발/App/React Native)</br>
+┃　　　┃　　　　　　　┗━　[New Architecture](./개발/App/React Native/New Architecture.md)</br>
+┃　　　┃　　　　　　　┗━　[React Native](./개발/App/React Native/React Native.md)</br>
+┃　　　┗━　[**SEO**](./개발/SEO)</br>
+┃　　　┃　　　┗━　[Web Vitals](./개발/SEO/Web Vitals.md)</br>
+┃　　　┃　　　┗━　[sitemap](./개발/SEO/sitemap.md)</br>
 ┃　　　┗━　[**Tools**](./개발/Tools)</br>
 ┃　　　┃　　　┗━　[**Git**](./개발/Tools/Git)</br>
 ┃　　　┃　　　┃　　　┗━　[**Flow**](./개발/Tools/Git/Flow)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[GitFlow](./개발/Tools/Git/Flow/GitFlow.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[GithubFlow](./개발/Tools/Git/Flow/GithubFlow.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[TBD](./개발/Tools/Git/Flow/TBD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**hooks**](./개발/Tools/Git/hooks)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[GitHub hooks](./개발/Tools/Git/hooks/GitHub hooks.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[githook을 위한 perl command](./개발/Tools/Git/hooks/githook을 위한 perl command.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[파일트리 자동생성](./개발/Tools/Git/hooks/파일트리 자동생성.md)</br>
 ┃　　　┃　　　┃　　　┗━　[GitLab](./개발/Tools/Git/GitLab.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Selfhosted Runner](./개발/Tools/Git/Selfhosted Runner.md)</br>
+┃　　　┃　　　┃　　　┗━　[git reflog](./개발/Tools/Git/git reflog.md)</br>
 ┃　　　┃　　　┃　　　┗━　[자동커밋](./개발/Tools/Git/자동커밋.md)</br>
 ┃　　　┃　　　┗━　[**vi**](./개발/Tools/vi)</br>
+┃　　　┃　　　┃　　　┗━　[vim](./개발/Tools/vi/vim.md)</br>
 ┃　　　┃　　　┃　　　┗━　[vim 단축키](./개발/Tools/vi/vim 단축키.md)</br>
 ┃　　　┃　　　┃　　　┗━　[vi 단축키](./개발/Tools/vi/vi 단축키.md)</br>
 ┃　　　┃　　　┗━　[Airflow](./개발/Tools/Airflow.md)</br>
+┃　　　┃　　　┗━　[Firefox 상단 탭 없애는 법](./개발/Tools/Firefox 상단 탭 없애는 법.md)</br>
 ┃　　　┃　　　┗━　[GTM](./개발/Tools/GTM.md)</br>
 ┃　　　┃　　　┗━　[Intellij Profiling tools](./개발/Tools/Intellij Profiling tools.md)</br>
 ┃　　　┃　　　┗━　[Makefile](./개발/Tools/Makefile.md)</br>
 ┃　　　┃　　　┗━　[Spark](./개발/Tools/Spark.md)</br>
+┃　　　┃　　　┗━　[Tridactyl](./개발/Tools/Tridactyl.md)</br>
 ┃　　　┃　　　┗━　[mermaid 문법](./개발/Tools/mermaid 문법.md)</br>
 ┃　　　┗━　[**암호화**](./개발/암호화)</br>
 ┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
@@ -577,10 +627,17 @@ derectories      : 158
 ┃　　　┃　　　┗━　[Keytool](./개발/암호화/Keytool.md)</br>
 ┃　　　┗━　[**테스팅**](./개발/테스팅)</br>
 ┃　　　┃　　　┗━　[테스팅 용어](./개발/테스팅/테스팅 용어.md)</br>
+┃　　　┗━　[EME](./개발/EME.md)</br>
 ┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
-┃　　　┗━　[Web Vitals](./개발/Web Vitals.md)</br>
+┃　　　┗━　[Nightly build](./개발/Nightly build.md)</br>
 ┃　　　┗━　[authn과 authz](./개발/authn과 authz.md)</br>
+┃　　　┗━　[ffmpeg](./개발/ffmpeg.md)</br>
+┃　　　┗━　[monorepo](./개발/monorepo.md)</br>
+┃　　　┗━　[turborepo](./개발/turborepo.md)</br>
+┃　　　┗━　[툴세팅](./개발/툴세팅.md)</br>
+┃　　　┗━　[압축 알고리즘](./개발/압축 알고리즘.md)</br>
 ┃　　　┗━　[소프트웨어 공학](./개발/소프트웨어 공학.md)</br>
+┃　　　┗━　[자막 파일 포맷](./개발/자막 파일 포맷.md)</br>
 ┗━　[**서버**](./서버)</br>
 ┃　　　┗━　[**Spring**](./서버/Spring)</br>
 ┃　　　┃　　　┗━　[**AOP**](./서버/Spring/AOP)</br>
@@ -673,10 +730,15 @@ derectories      : 158
 ┃　　　　　　　┗━　[v8과 libuv](./서버/node.js/v8과 libuv.md)</br>
 ┗━　[**언어**](./언어)</br>
 ┃　　　┗━　[**Go**](./언어/Go)</br>
+┃　　　┃　　　┗━　[BSON](./언어/Go/BSON.md)</br>
 ┃　　　┃　　　┗━　[Command line argument, flag](./언어/Go/Command line argument, flag.md)</br>
+┃　　　┃　　　┗━　[GC](./언어/Go/GC.md)</br>
+┃　　　┃　　　┗━　[Go에서 하기 쉬운 실수](./언어/Go/Go에서 하기 쉬운 실수.md)</br>
 ┃　　　┃　　　┗━　[defer와 panic](./언어/Go/defer와 panic.md)</br>
 ┃　　　┃　　　┗━　[gomod와 gosum](./언어/Go/gomod와 gosum.md)</br>
 ┃　　　┃　　　┗━　[pprof](./언어/Go/pprof.md)</br>
+┃　　　┃　　　┗━　[slice](./언어/Go/slice.md)</br>
+┃　　　┃　　　┗━　[toolchain](./언어/Go/toolchain.md)</br>
 ┃　　　┃　　　┗━　[메모리 관리](./언어/Go/메모리 관리.md)</br>
 ┃　　　┃　　　┗━　[고루틴 스케줄링](./언어/Go/고루틴 스케줄링.md)</br>
 ┃　　　┗━　[**Java**](./언어/Java)</br>
@@ -878,7 +940,11 @@ derectories      : 158
 ┃　　　┗━　[Data Lake와 Warehouse](./데이터베이스/Data Lake와 Warehouse.md)</br>
 ┃　　　┗━　[MySQL Replication](./데이터베이스/MySQL Replication.md)</br>
 ┃　　　┗━　[OLAP](./데이터베이스/OLAP.md)</br>
+┃　　　┗━　[Postgresql Transaction Wraparound](./데이터베이스/Postgresql Transaction Wraparound.md)</br>
 ┃　　　┗━　[Two Phase commit](./데이터베이스/Two Phase commit.md)</br>
+┃　　　┗━　[duckdb](./데이터베이스/duckdb.md)</br>
+┃　　　┗━　[index](./데이터베이스/index.md)</br>
+┃　　　┗━　[pgbouncer](./데이터베이스/pgbouncer.md)</br>
 ┗━　[**아키텍처 및 방법론**](./아키텍처 및 방법론)</br>
 ┃　　　┗━　[**API 아키텍처**](./아키텍처 및 방법론/API 아키텍처)</br>
 ┃　　　┃　　　┗━　[GraphQL](./아키텍처 및 방법론/API 아키텍처/GraphQL.md)</br>
@@ -935,6 +1001,8 @@ derectories      : 158
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[**package━lock.json**](./package━lock.json)</br>
+┗━　[**package.json**](./package.json)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
