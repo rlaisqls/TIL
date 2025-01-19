@@ -48,6 +48,8 @@ Chain of dirt: 모델이 문제를 해결할 떄 단계별로 생각 과정을 �
 
     <img height="400px" src="https://github.com/user-attachments/assets/2d10fb28-2aa8-467e-a706-d729c2f1f66e">
 
+- Decomposition: 복잡한 질문을 여러개의 하위 질문으로 나누어 답변
+
 #### Self-Criticism
 
 - 모델은 여러 선택지가 주어졌을 때 가장 정답일 것 같은 답을 선택하는 능력은 뛰어남.
@@ -121,9 +123,7 @@ Chain of dirt: 모델이 문제를 해결할 떄 단계별로 생각 과정을 �
 #### Auto Prompt Engineering
 
 - 프롬프트를 자동으로 개선
-
 - [DSPy](https://github.com/stanfordnlp/dspy): Prompt 설계를 Programming 하듯이 설계하고, RAG, Fine tunning, Agent Loop에서도 사용 가능
-  -
 
 ---
 참고
