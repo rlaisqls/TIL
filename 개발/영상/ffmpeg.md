@@ -215,3 +215,4 @@ ffmpeg을 사용하여 영상을 변환할 때 오디오 딜레이가 생기는 
 
 - <https://www.ffmpeg.org/>
 - <https://trac.ffmpeg.org/wiki/Encode>
+- <https://wikidocs.net/237717>
