@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 827
+files            : 829
 derectories      : 167
 ```
 
@@ -181,6 +181,7 @@ derectories      : 167
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./DevOps/Kubernetes/EKS/EKS kubecofig.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS 인증과정](./DevOps/Kubernetes/EKS/EKS 인증과정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[IP addresse prefix](./DevOps/Kubernetes/EKS/IP addresse prefix.md)</br>
+┃　　　┃　　　┃　　　┗━　[IRSA와 Pod Identity](./DevOps/Kubernetes/EKS/IRSA와 Pod Identity.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NLB IP mode](./DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node not Ready](./DevOps/Kubernetes/EKS/Node not Ready.md)</br>
 ┃　　　┃　　　┗━　[**Network**](./DevOps/Kubernetes/Network)</br>
@@ -461,6 +462,7 @@ derectories      : 167
 ┃　　　┃　　　┃　　　┗━　[RAID](./OS/linux/Disk & Dir/RAID.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Symbolic Link](./OS/linux/Disk & Dir/Symbolic Link.md)</br>
 ┃　　　┃　　　┃　　　┗━　[od](./OS/linux/Disk & Dir/od.md)</br>
+┃　　　┃　　　┃　　　┗━　[tmp dir](./OS/linux/Disk & Dir/tmp dir.md)</br>
 ┃　　　┃　　　┃　　　┗━　[백업](./OS/linux/Disk & Dir/백업.md)</br>
 ┃　　　┃　　　┃　　　┗━　[디스크　파티션](./OS/linux/Disk & Dir/디스크　파티션.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 종류](./OS/linux/Disk & Dir/파일 종류.md)</br>
