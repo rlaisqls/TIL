@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 829
+files            : 828
 derectories      : 167
 ```
 
@@ -181,7 +181,6 @@ derectories      : 167
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./DevOps/Kubernetes/EKS/EKS kubecofig.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS 인증과정](./DevOps/Kubernetes/EKS/EKS 인증과정.md)</br>
 ┃　　　┃　　　┃　　　┗━　[IP addresse prefix](./DevOps/Kubernetes/EKS/IP addresse prefix.md)</br>
-┃　　　┃　　　┃　　　┗━　[IRSA와 Pod Identity](./DevOps/Kubernetes/EKS/IRSA와 Pod Identity.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NLB IP mode](./DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node not Ready](./DevOps/Kubernetes/EKS/Node not Ready.md)</br>
 ┃　　　┃　　　┗━　[**Network**](./DevOps/Kubernetes/Network)</br>
