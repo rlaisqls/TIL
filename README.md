@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 828
+files            : 829
 derectories      : 167
 ```
 
@@ -572,6 +572,7 @@ derectories      : 167
 ┃　　　┃　　　┗━　[엑세스 제어](./OS/보안/엑세스 제어.md)</br>
 ┃　　　┗━　[CPU 아키텍처](./OS/CPU 아키텍처.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./OS/c언어 컴파일과정.md)</br>
+┃　　　┗━　[exit code](./OS/exit code.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./OS/유저, 커널레벨 스레드.md)</br>
 ┃　　　┗━　[반도체 8대 공정](./OS/반도체 8대 공정.md)</br>
 ┃　　　┗━　[파일 시스템](./OS/파일 시스템.md)</br>
