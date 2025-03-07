@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 825
+files            : 834
 derectories      : 167
 ```
 
@@ -84,6 +84,7 @@ derectories      : 167
 ┃　　　┃　　　┃　　　┃　　　┗━　[WAF](./DevOps/AWS/Netwoking/security/WAF.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Bastion Host](./DevOps/AWS/Netwoking/Bastion Host.md)</br>
 ┃　　　┃　　　┃　　　┗━　[CloudFront](./DevOps/AWS/Netwoking/CloudFront.md)</br>
+┃　　　┃　　　┃　　　┗━　[CloudFront Cache](./DevOps/AWS/Netwoking/CloudFront Cache.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Direct Connect Gateway](./DevOps/AWS/Netwoking/Direct Connect Gateway.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EC2 Instance Connect Endpoint](./DevOps/AWS/Netwoking/EC2 Instance Connect Endpoint.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ENI](./DevOps/AWS/Netwoking/ENI.md)</br>
@@ -381,6 +382,7 @@ derectories      : 167
 ┃　　　┃　　　┗━　[IP 데이터그램과 단편화](./Network/L2 internet layer/IP 데이터그램과 단편화.md)</br>
 ┃　　　┃　　　┗━　[NAT](./Network/L2 internet layer/NAT.md)</br>
 ┃　　　┃　　　┗━　[PacketTracer 네트워크 구성](./Network/L2 internet layer/PacketTracer 네트워크 구성.md)</br>
+┃　　　┃　　　┗━　[UPnP](./Network/L2 internet layer/UPnP.md)</br>
 ┃　　　┃　　　┗━　[secondary IP](./Network/L2 internet layer/secondary IP.md)</br>
 ┃　　　┃　　　┗━　[서브넷](./Network/L2 internet layer/서브넷.md)</br>
 ┃　　　┃　　　┗━　[정보기기운용기능사 실기](./Network/L2 internet layer/정보기기운용기능사 실기.md)</br>
@@ -463,6 +465,7 @@ derectories      : 167
 ┃　　　┃　　　┃　　　┗━　[Symbolic Link](./OS/linux/Disk & Dir/Symbolic Link.md)</br>
 ┃　　　┃　　　┃　　　┗━　[od](./OS/linux/Disk & Dir/od.md)</br>
 ┃　　　┃　　　┃　　　┗━　[백업](./OS/linux/Disk & Dir/백업.md)</br>
+┃　　　┃　　　┃　　　┗━　[디스크　파티션](./OS/linux/Disk & Dir/디스크　파티션.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 종류](./OS/linux/Disk & Dir/파일 종류.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./OS/linux/Disk & Dir/파일 시스템.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./OS/linux/Disk & Dir/파일 관리 명령어.md)</br>
@@ -599,6 +602,7 @@ derectories      : 167
 ┃　　　┃　　　┃　　　┗━　[**Flow**](./개발/Tools/Git/Flow)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[GitFlow](./개발/Tools/Git/Flow/GitFlow.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[GithubFlow](./개발/Tools/Git/Flow/GithubFlow.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[TBD](./개발/Tools/Git/Flow/TBD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**hooks**](./개발/Tools/Git/hooks)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[GitHub hooks](./개발/Tools/Git/hooks/GitHub hooks.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[githook을 위한 perl command](./개발/Tools/Git/hooks/githook을 위한 perl command.md)</br>
@@ -606,6 +610,7 @@ derectories      : 167
 ┃　　　┃　　　┃　　　┗━　[GitLab](./개발/Tools/Git/GitLab.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Selfhosted Runner](./개발/Tools/Git/Selfhosted Runner.md)</br>
 ┃　　　┃　　　┃　　　┗━　[git reflog](./개발/Tools/Git/git reflog.md)</br>
+┃　　　┃　　　┃　　　┗━　[rebase](./개발/Tools/Git/rebase.md)</br>
 ┃　　　┃　　　┃　　　┗━　[rebase 쉽게 하는법](./개발/Tools/Git/rebase 쉽게 하는법.md)</br>
 ┃　　　┃　　　┃　　　┗━　[rerere](./개발/Tools/Git/rerere.md)</br>
 ┃　　　┃　　　┃　　　┗━　[자동커밋](./개발/Tools/Git/자동커밋.md)</br>
@@ -614,7 +619,7 @@ derectories      : 167
 ┃　　　┃　　　┃　　　┗━　[vim 단축키](./개발/Tools/vi/vim 단축키.md)</br>
 ┃　　　┃　　　┃　　　┗━　[vi 단축키](./개발/Tools/vi/vi 단축키.md)</br>
 ┃　　　┃　　　┗━　[Airflow](./개발/Tools/Airflow.md)</br>
-┃　　　┃　　　┗━　[Firefox 상단 탭 없애는 법](./개발/Tools/Firefox 상단 탭 없애는 법.md)</br>
+┃　　　┃　　　┗━　[Firefox 설정](./개발/Tools/Firefox 설정.md)</br>
 ┃　　　┃　　　┗━　[GTM](./개발/Tools/GTM.md)</br>
 ┃　　　┃　　　┗━　[Intellij Profiling tools](./개발/Tools/Intellij Profiling tools.md)</br>
 ┃　　　┃　　　┗━　[Makefile](./개발/Tools/Makefile.md)</br>
@@ -638,7 +643,9 @@ derectories      : 167
 ┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
 ┃　　　┗━　[Nightly build](./개발/Nightly build.md)</br>
 ┃　　　┗━　[authn과 authz](./개발/authn과 authz.md)</br>
+┃　　　┗━　[monorepo](./개발/monorepo.md)</br>
 ┃　　　┗━　[turborepo](./개발/turborepo.md)</br>
+┃　　　┗━　[툴세팅](./개발/툴세팅.md)</br>
 ┃　　　┗━　[압축 알고리즘](./개발/압축 알고리즘.md)</br>
 ┃　　　┗━　[소프트웨어 공학](./개발/소프트웨어 공학.md)</br>
 ┗━　[**서버**](./서버)</br>
@@ -945,6 +952,8 @@ derectories      : 167
 ┃　　　┗━　[OLAP](./데이터베이스/OLAP.md)</br>
 ┃　　　┗━　[Postgresql Transaction Wraparound](./데이터베이스/Postgresql Transaction Wraparound.md)</br>
 ┃　　　┗━　[Two Phase commit](./데이터베이스/Two Phase commit.md)</br>
+┃　　　┗━　[duckdb](./데이터베이스/duckdb.md)</br>
+┃　　　┗━　[index](./데이터베이스/index.md)</br>
 ┃　　　┗━　[pgbouncer](./데이터베이스/pgbouncer.md)</br>
 ┗━　[**아키텍처 및 방법론**](./아키텍처 및 방법론)</br>
 ┃　　　┗━　[**API 아키텍처**](./아키텍처 및 방법론/API 아키텍처)</br>
@@ -1002,7 +1011,7 @@ derectories      : 167
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XX7J6cyX**](./XX7J6cyX)</br>
+┗━　[**XX133kMa**](./XX133kMa)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 

@@ -1,3 +1,5 @@
+## 상단 탭 목록 없애기
+
 1. 아래 명령어 실행
 
 ```
@@ -32,8 +34,13 @@ ls ~/Library/Application\ Support/Firefox/Profiles/
 
 5. firefox 재시작
 
----
 참고
 
 - <https://superuser.com/questions/1424478/can-i-hide-native-tabs-at-the-top-of-firefox>
 - <https://www.reddit.com/r/kde/comments/10ckq05/comment/j4g8s3k/>
+
+## Custum Search Url 설정
+
+1. about:config에서 browser.urlbar.update2.engineAliasRefresh를 True로 변경
+
+2. about:preferences#search > Search Shortcuts에서 원하는 항목 추가
