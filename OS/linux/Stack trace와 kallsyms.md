@@ -51,7 +51,7 @@
 
 - kallsyms에서 주로 사용되는 구조체는 4개가 있다.
   - `sym_entry`: 하나의 심볼에 대응하는 자료 구조이다. 심볼의 주소(`addr`), 이름(`sym[]`)을 저장한다.
-  - `addr_range`: 어떤 영역에 대응하는 자료 구조 입니다. 영역의 시작과 끝에 대응하는 심볼과 주소를 저정한다.
+  - `addr_range`: 어떤 영역에 대응하는 자료 구조이다. 영역의 시작과 끝에 대응하는 심볼과 주소를 저정한다.
   - `token_profit`: 2개의 문자로 이루어진 문자열의 빈도 수를 기록하는 테이블이다. 2개의 문자가 가질 수 있는 조합 수는 `0x10000`(=256x256) 이므로 테이블의 길이는 `0x10000` 이다.
   - `best_table`: 압축에 사용되는 매핑 테이블이다. 각각의 char이 매핑되는 문자열을 저장한다.
 
@@ -135,7 +135,7 @@
     3. symbol entry 정렬
     4. symbol entry 압축
     5. symbol entry 출력
-   
+
 ### 1. symbol 파싱
 
 - `read_map` 함수에서는 symbol을 파싱하고 테이블에 추가한다.
@@ -171,8 +171,8 @@
 
 - 해당 함수는 3가지의 일을 수행한다.
 
-   1. 입력에서 심볼의 주소(addr), 타입(type), 심볼의 이름(name)을 받아온다. 
-   2. 받아온 정보들을 이용해 `symbol_entry`를 생성 및 초기화한다. 
+   1. 입력에서 심볼의 주소(addr), 타입(type), 심볼의 이름(name)을 받아온다.
+   2. 받아온 정보들을 이용해 `symbol_entry`를 생성 및 초기화한다.
    3. 읽어온 심볼이 `addr_range`에 시작과 끝에 해당하는 심볼이라면, 이 심볼의 주소를 `addr_range`에 저장한다.
 
     ```c
@@ -281,7 +281,6 @@ static void shrink_table(void)
     // https://github.com/torvalds/linux/blob/2c8159388952f530bd260e097293ccc0209240be/scripts/kallsyms.c#L739
     ```
 
-
 ### 4. symbol entry 압축
 
 - symbol entry 압축은 `optimize_table` 함수에서 이뤄진다.
@@ -296,8 +295,8 @@ static void shrink_table(void)
     // https://github.com/torvalds/linux/blob/2c8159388952f530bd260e097293ccc0209240be/scripts/kallsyms.c#L695
     ```
 
-- `build_initial_tok_table()`: 
-  - 구성한 `symbol_entry` 테이블을 순회하면서 `learn_symbol` 함수를 호출한다. 
+- `build_initial_tok_table()`:
+  - 구성한 `symbol_entry` 테이블을 순회하면서 `learn_symbol` 함수를 호출한다.
   - `learn_symbol` 함수는 `symbol_entry`의 `sym`(type+name)과 `len`을 인자로 받는다.
   - `learn_symbol`은 받은 문자열 `symobl_entry.sym`을 순회하면서, `char[2]`의 분포를 `token_profit` 테이블에 반영한다.
 
@@ -390,7 +389,7 @@ static void shrink_table(void)
     // https://github.com/torvalds/linux/blob/2c8159388952f530bd260e097293ccc0209240be/scripts/kallsyms.c#L653
     ```
 
-    - `compress_symbols` 함수에서 핵심 압축 로직을 수행한다. 첫 번째 인자는 압축할 `char[2]`이고, 두 번째 인자는 매핑된 1byte 정수이다. 
+    - `compress_symbols` 함수에서 핵심 압축 로직을 수행한다. 첫 번째 인자는 압축할 `char[2]`이고, 두 번째 인자는 매핑된 1byte 정수이다.
     - `symbol_entry` 테이블을 순회하면서 각 `symbol_entry.sym`에 압축 대상의 문자열이 존재하는지 확인한다. 만약 그렇다면, 해당 문자열을 idx로 치환한다.
     - 압축한 `symbol_entry.sym`을 반영하기 위해 이전의 내용을 지우고(`forget_symbol`), 압축이 완료된 후에는 다시 `learn_symbols`를 호출하여 `token_profit`을 최신으로 업데이트한다.
 
@@ -467,7 +466,7 @@ static void shrink_table(void)
     // https://github.com/torvalds/linux/blob/2c8159388952f530bd260e097293ccc0209240be/scripts/kallsyms.c#L386
     ```
 
-- 그런 다음 `symbol_entry`를 순회하면서 각각의 address를 출력한다. `symbol_entry`의 갯수도 `kallsyms_num_syms`라는 이름으로 출력한다. 출력의 형식은 옵션에 따라 다르다. 
+- 그런 다음 `symbol_entry`를 순회하면서 각각의 address를 출력한다. `symbol_entry`의 갯수도 `kallsyms_num_syms`라는 이름으로 출력한다. 출력의 형식은 옵션에 따라 다르다.
 
     ```c
         ...
@@ -482,7 +481,7 @@ static void shrink_table(void)
         ...
     ```
 
-- 그런 다음 `symbol_entry`의 sym을 출력한다. `symbol_entry.sym`은 가변 길이이므로 검색의 용이성을 위해 `marker`라는 검색 인덱스를 만든다. `marker`는 256개의 `symbol_entry.sym`마다 오프셋을 저장한다. 
+- 그런 다음 `symbol_entry`의 sym을 출력한다. `symbol_entry.sym`은 가변 길이이므로 검색의 용이성을 위해 `marker`라는 검색 인덱스를 만든다. `marker`는 256개의 `symbol_entry.sym`마다 오프셋을 저장한다.
 
     ```c
         ...
@@ -560,17 +559,16 @@ static void shrink_table(void)
 
 ## vmlinux 생성 관련 스크립트 (`/scripts/link-vmlinux.sh`)
 
-- vmlinux를 생성하는 Makefile command에서는 `/scripts/link-vmlinux.sh`라는 스크립트가 실행되는데, `CONFIG_KALLSYMS` 옵션이 활성화 되어 있다면 kallsyms 관련 일을 수행한다. 
+- vmlinux를 생성하는 Makefile command에서는 `/scripts/link-vmlinux.sh`라는 스크립트가 실행되는데, `CONFIG_KALLSYMS` 옵션이 활성화 되어 있다면 kallsyms 관련 일을 수행한다.
 
     ```makefile
     vmlinux: scripts/link-vmlinux.sh autoksyms_recursive $(vmlinux-deps) FORCE
             +$(call if_changed_dep,link-vmlinux)
     ```
 
-- `link-vmlinux.sh`에서 사용되는 핵심 함수는 `vmlinux_link`와 `kallsyms`이다. 
-  - `vmlinux_link`: 첫 번째 인자로 받는 오브젝트 파일과 `vmlinux.o`를 링크하고, 두 번째 인자에서 받은 이름으로 출력 파일을 저장한다. 
+- `link-vmlinux.sh`에서 사용되는 핵심 함수는 `vmlinux_link`와 `kallsyms`이다.
+  - `vmlinux_link`: 첫 번째 인자로 받는 오브젝트 파일과 `vmlinux.o`를 링크하고, 두 번째 인자에서 받은 이름으로 출력 파일을 저장한다.
   - `kallsyms`:  첫 번째 인자로 받은 오프젝트 파일의 심볼 정보를 추출하고 어셈블리 파일으로 저장한다. 이때 저장하는 파일의 이름은 함수의 2번째 인자와 같다.
-
 
     ```bash
         # link-vmlinux.sh
@@ -614,7 +612,7 @@ static void shrink_table(void)
 
   3. `tmp_kallsyms1.o`와 `.tmp_kallsyms2.o`의 크기가 다르다면 변환 단계를 추가로 실행한다.
 
-  4. 최종적으로 `vmlinux.o`와 생성한 최종 오브젝트를 링크하여 `vmlinux` 파일을 생성한다. 
+  4. 최종적으로 `vmlinux.o`와 생성한 최종 오브젝트를 링크하여 `vmlinux` 파일을 생성한다.
 
 ## 심볼 정보 API `kernel/kallsyms.c`
 
@@ -709,7 +707,7 @@ static int __sprint_symbol(char *buffer, unsigned long address,
     // https://github.com/torvalds/linux/blob/2c8159388952f530bd260e097293ccc0209240be/kernel/kallsyms.c#L397
     ```
 
-- `get_symbol_pos()` 함수는 조사하려는 주소가 심볼들의 주소를 저장했던 `kallsyms_address`라는 테이블에서 몇 번쨰 인덱스에 해당하는지 탐색한다. 
+- `get_symbol_pos()` 함수는 조사하려는 주소가 심볼들의 주소를 저장했던 `kallsyms_address`라는 테이블에서 몇 번쨰 인덱스에 해당하는지 탐색한다.
 
 - 주소에 대응하는 인덱스를 구하는 `get_symbol_pos` 함수는 이진 탐색으로 구현되었다. 앞서 심볼들의 주소를 저장할 때 정렬을 했기 때문에 이진 탐색이 가능하다.
 
@@ -810,8 +808,6 @@ static int __sprint_symbol(char *buffer, unsigned long address,
     // https://github.com/torvalds/linux/blob/2c8159388952f530bd260e097293ccc0209240be/kernel/kallsyms.c#L116
     ```
 
-
-
 - 다음으로, `kallsyms_expand_symbol()` 함수에서는 구한 pos에 위치한 압축된 문자열을 압축 해제한다. 만약 조사하는 주소가 모듈, bpf, ftrace에 속한다면 별도의 처리를 수행한다.
 - 압축 해제를 위해선 `kallsyms_token_table`을 사용한다.
 
@@ -880,6 +876,8 @@ static int __sprint_symbol(char *buffer, unsigned long address,
 
 ---
 참고
-- https://github.com/torvalds/linux/blob/2c8159388952f530bd260e097293ccc0209240be/scripts/link-vmlinux.sh#L148
-- https://stackoverflow.com/questions/20196636/does-kallsyms-have-all-the-symbol-of-kernel-functions
-- https://www.bhral.com/post/stacktrace%EC%99%80kallsyms%EC%9D%98%EA%B5%AC%ED%98%84%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0
+
+- <https://github.com/torvalds/linux/blob/2c8159388952f530bd260e097293ccc0209240be/scripts/link-vmlinux.sh#L148>
+- <https://stackoverflow.com/questions/20196636/does-kallsyms-have-all-the-symbol-of-kernel-functions>
+- <https://www.bhral.com/post/stacktrace%EC%99%80kallsyms%EC%9D%98%EA%B5%AC%ED%98%84%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0>
+

@@ -25,18 +25,18 @@ RSM은 위 그림과 같이 command가 들어있는 log 단위로 데이터를 �
 Raft를 구현한 etcd의 동작애 대해 알아보자. 우선 이해를 위해 필요한 주요 용어들은 아래와 같다.
 
 - Quorum
-    - Quorum(쿼럼)이란 우리말로는 정족수라는 뜻을 가지며, 의사결정에 필요한 최소한의 서버 수를 의미한다. 예를 들어, RSM을 구성하는 서버의 숫자가 3대인 경우 쿼럼 값은 2(3/2+1)가 된다.
-    - etcd는 하나의 write 요청을 받았을 때, 쿼럼 숫자만큼의 서버에 데이터 복제가 일어나면 작업이 완료된 것으로 간주하고 다음 작업을 받아들일 수 있는 상태가 된다.
+  - Quorum(쿼럼)이란 우리말로는 정족수라는 뜻을 가지며, 의사결정에 필요한 최소한의 서버 수를 의미한다. 예를 들어, RSM을 구성하는 서버의 숫자가 3대인 경우 쿼럼 값은 2(3/2+1)가 된다.
+  - etcd는 하나의 write 요청을 받았을 때, 쿼럼 숫자만큼의 서버에 데이터 복제가 일어나면 작업이 완료된 것으로 간주하고 다음 작업을 받아들일 수 있는 상태가 된다.
 
 - State
-    - Etcd를 구성하는 서버는 State를 가지며 이는 Leader, Follower, Candidate 중 하나가 된다. 각 서버는 상태에 따라 다른 동작을 수행한다.
+  - Etcd를 구성하는 서버는 State를 가지며 이는 Leader, Follower, Candidate 중 하나가 된다. 각 서버는 상태에 따라 다른 동작을 수행한다.
 
 - Heartbeat
-    - Etcd의 Leader 서버는 다른 모든 서버에게 heartbeat를 주기적으로 전송하여, Leader가 존재함을 알린다.
-    - 만약 Leader가 아닌 서버들이 일정 시간(election timeout) 동안 heartbeat를 받지 못하게 되면 Leader가 없어졌다고 간주하고 다음 행동을 시작한다.
+  - Etcd의 Leader 서버는 다른 모든 서버에게 heartbeat를 주기적으로 전송하여, Leader가 존재함을 알린다.
+  - 만약 Leader가 아닌 서버들이 일정 시간(election timeout) 동안 heartbeat를 받지 못하게 되면 Leader가 없어졌다고 간주하고 다음 행동을 시작한다.
 
 - term
-    - heartbeat가 몇초동안 오지 않았는지를 새는 숫자이다.
+  - heartbeat가 몇초동안 오지 않았는지를 새는 숫자이다.
 
 ## 리더 선출(Leader election)
 
@@ -64,7 +64,7 @@ Leader가 아닌 서버는 Append RPC call을 받았을 때 자신의 term보다
 
 <img src="https://user-images.githubusercontent.com/81006587/216811781-2d9de0fe-667d-45aa-b943-fd868fba0f82.png" height=300px>
 
-첫 번째 follower(이하 F1) 자신의 entry(메모리)에 leader로부터 받은 log를 기록했고 두 번째 follower(이하 F2)는 아직 기록하지 못했다고 가정하자. 
+첫 번째 follower(이하 F1) 자신의 entry(메모리)에 leader로부터 받은 log를 기록했고 두 번째 follower(이하 F2)는 아직 기록하지 못했다고 가정하자.
 
 F1은 log를 잘 받았다는 응답을 leader에게 보내주게 되고, leader는 F1의 nextIndex를 업데이트한다. F2가 아직 응답을 주지 않았거나 주지 못하더라도, leader 자신을 포함해서 쿼럼 숫자만큼의 log replication이 일어났기 때문에 commit을 수행한다.
 
@@ -78,7 +78,7 @@ Follower들은 leader로부터 election timeout동안 heartbeat를 받지 못한
 
 F2는 위에서 잠시 다운되어서 최신 로그 데이터를 가지고 있지 않기 때문에, 리더가 되는 것에 실패하고, 이후 F1이 타임아웃되었을때 다시 검증 과정을 거친 뒤 새로운 leader가 된다. F1이 새로운 leader가 된 상태에서 write 요청을 받게 되더라도 쿼럼 숫자만큼의 etcd 서버가 running 중이므로 etcd 클러스터는 정상 동작한다.
 
-> 이때, 새로운 leader를 뽑지 못하고 계속해서 election을 하게 된다면 사용자의 요청을 처리하지 못해 etcd 클러스터의 가용성이 떨어질 수 있다. Raft 알고리즘은 이런 상황을 대비해 randomize election timeout과 preVote라는 방법을 사용할 수 있다. Etcd에서는 preVote가 구현되어 있다. (https://github.com/etcd-io/etcd/pull/6624/files).
+> 이때, 새로운 leader를 뽑지 못하고 계속해서 election을 하게 된다면 사용자의 요청을 처리하지 못해 etcd 클러스터의 가용성이 떨어질 수 있다. Raft 알고리즘은 이런 상황을 대비해 randomize election timeout과 preVote라는 방법을 사용할 수 있다. Etcd에서는 preVote가 구현되어 있다. (<https://github.com/etcd-io/etcd/pull/6624/files>).
 
 F1이 새로운 leader가 된 상태에서 구 leader가 복구되면, F1에게 heartbeat를 보내거나 F1으로부터 heartbeat를 받을 텐데, lastIndex 값이 더 작고 term도 낮으므로 자기 자신을 follower로 변경하고 term 숫자를 높은 쪽에 맞추게 된다.
 
@@ -94,7 +94,7 @@ Etcd에는 snapshot이라는 개념이 있는데, etcd 서버가 현재까지 �
 
 하지만 이떄 스냅샷의 크기가 너무 크다면 리더의 네트워크에 부하가 생겨 heart beat를 제때 전달하지 못할 수 있다. 그럼 기존에 있던 Flower들이 election timeout이 되어 재선거를 진행하고, 그동안 클러스터는 요청을 처리할 수 없는 상태가 된다.
 
-이러한 문제를 해결하기 위해 etcd애는 leaner라는 별도의 상태가 또 존재한다. Learner는 etcd 클러스터의 멤버이지만 쿼럼 카운트에서는 제외하는 특별한 상태로 etcd 3.4.0부터 구현되었다. (https://etcd.io/docs/v3.3.12/learning/learner/)
+이러한 문제를 해결하기 위해 etcd애는 leaner라는 별도의 상태가 또 존재한다. Learner는 etcd 클러스터의 멤버이지만 쿼럼 카운트에서는 제외하는 특별한 상태로 etcd 3.4.0부터 구현되었다. (<https://etcd.io/docs/v3.3.12/learning/learner/>)
 
 Learner는 etcd의 promote API를 사용하여 일반적인 follower로 변경할 수 있다. Learner가 아직 log를 모두 따라잡지 못한 경우에는 거절된다.
 
@@ -140,8 +140,8 @@ Etcd는 db에 데이터를 저장할 때 revision 값과 함께 저장한다. �
 
 불필요한 revision의 과도한 리소스 사용을 피하고자 etcd는 `compaction`(압축) 기능을 제공한다. Compaction으로 삭제한 revision 데이터는 다시 조회가 불가능해진다.
 
-> Compactor records latest revisions every 5-minute, until it reaches the first compaction period 
-https://etcd.io/docs/v3.4/op-guide/maintenance/
+> Compactor records latest revisions every 5-minute, until it reaches the first compaction period
+<https://etcd.io/docs/v3.4/op-guide/maintenance/>
 
 공식 문서를 보면, 매 5분동안의 최신 revision만 남기고 삭제하는 것이 기본 설정이라는 것을 알 수 있다.
 
@@ -150,6 +150,7 @@ https://etcd.io/docs/v3.4/op-guide/maintenance/
 Etcd는 운영자가 별도로 조치하지 않아도 일정 revision 또는 주기를 가지고 자동으로 revision을 정리하는 auto compaction을 지원한다. Auto compaction은 2가지 모드(revision, periodic)가 있으며 어떤 모드를 선택했느냐에 따라 auto-compaction-retention 옵션이 가지는 의미가 달라진다.
 
 ### Revision 모드
+
 <img src="https://user-images.githubusercontent.com/81006587/216817159-e90f414b-ab4c-4deb-961f-eda41744a0b3.png" height=300px>
 
 Auto-compaction-mode revision으로 지정하면 위에서 말했던 것처럼 5분마다 최신 revision – auto-compaction-retention까지만 db에 남기고 compaction한다. Auto-compaction-retention의 값이 1,000이고 5분마다 500 revision의 데이터가 생성된다고 가정하면 5분마다 500 revision이 계속하여 compaction된다.
@@ -173,7 +174,7 @@ Etcd가 허용하는 db의 max size는 etcd_quota_backend_bytes라는 옵션으�
 
 <img src="https://user-images.githubusercontent.com/81006587/216819552-36a15e47-5ea0-4acc-9ffc-6aa1bae547e3.png" height=300px>
 
-Etcd는 예기치 못한 사고로 인해 etcd 데이터베이스가 유실되는 경우를 대비하기 위한 backup API를 제공한다. 여기서의 snapshot은 로그 리텐션(Log retention)에서 다루었던 snapshot과는 다른 것이다. Database backup snapshot은 etcd 프로세스가 commit한 log가 저장된 데이터베이스 파일의 백업이다. 바꿔 말하면, etcd의 backup은 etcd 데이터 파일경로(data dir)에 존재하는 db 파일을 백업하는 것입니다. compaction이 일어나거나 defragmentation된 적 없는 db에 대해서 백업하면, 불필요하게 많은 용량을 백업에 사용하게 될 수도 있다.
+Etcd는 예기치 못한 사고로 인해 etcd 데이터베이스가 유실되는 경우를 대비하기 위한 backup API를 제공한다. 여기서의 snapshot은 로그 리텐션(Log retention)에서 다루었던 snapshot과는 다른 것이다. Database backup snapshot은 etcd 프로세스가 commit한 log가 저장된 데이터베이스 파일의 백업이다. 바꿔 말하면, etcd의 backup은 etcd 데이터 파일경로(data dir)에 존재하는 db 파일을 백업하는 것이다. compaction이 일어나거나 defragmentation된 적 없는 db에 대해서 백업하면, 불필요하게 많은 용량을 백업에 사용하게 될 수도 있다.
 
 단순하게 etcd 데이터 파일 경로(data dir)에 존재하는 db 파일을 복제(copy)한 것과 etcd의 API를 이용한 백업 파일 간에는 차이가 있다. 위 그림과 같이 etcdctl snapshot save 명령으로 만들어진 db 파일은 무결성 해시(hash)를 포함하고 있어서 추후 etcdctl snapshot restore 명령으로 복구할 때 파일이 변조됐는지 체크가 가능하다. 만약 피치 못할 사정으로 단순 복사로 만들어진 백업 파일로부터 복구를 진행해야 한다면, –skip-hash-check 옵션을 추가하여 복구를 진행해야 한다.
 
@@ -187,7 +188,8 @@ etcd의 메타데이터에는 etcd 클러스터를 식별하기 위한 uuid와 e
 
 참고
 
-- https://etcd.io/docs/
-- https://tech.kakao.com/2021/12/20/kubernetes-etcd/
-- https://github.com/ongardie/dissertation
-- https://raft.github.io/raft.pdf
+- <https://etcd.io/docs/>
+- <https://tech.kakao.com/2021/12/20/kubernetes-etcd/>
+- <https://github.com/ongardie/dissertation>
+- <https://raft.github.io/raft.pdf>
+

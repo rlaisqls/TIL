@@ -2,7 +2,7 @@
 
 ```
 files            : 834
-derectories      : 167
+derectories      : 189
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -738,6 +738,10 @@ derectories      : 167
 ┃　　　　　　　┗━　[module.exports와 exports](./서버/node.js/module.exports와 exports.md)</br>
 ┃　　　　　　　┗━　[puppeteer](./서버/node.js/puppeteer.md)</br>
 ┃　　　　　　　┗━　[v8과 libuv](./서버/node.js/v8과 libuv.md)</br>
+┗━　[**수학**](./수학)</br>
+┃　　　┗━　[**통계학**](./수학/통계학)</br>
+┃　　　　　　　┗━　[t━value](./수학/통계학/t━value.md)</br>
+┃　　　　　　　┗━　[윌콕슨 순위합 검정](./수학/통계학/윌콕슨 순위합 검정.md)</br>
 ┗━　[**언어**](./언어)</br>
 ┃　　　┗━　[**Go**](./언어/Go)</br>
 ┃　　　┃　　　┗━　[BSON](./언어/Go/BSON.md)</br>
@@ -866,6 +870,26 @@ derectories      : 167
 ┃　　　　　　　┗━　[Flow](./코드/비동기/Flow.md)</br>
 ┃　　　　　　　┗━　[cold stream과 hot stream](./코드/비동기/cold stream과 hot stream.md)</br>
 ┃　　　　　　　┗━　[netty 사례연구](./코드/비동기/netty 사례연구.md)</br>
+┗━　[**데이터**](./데이터)</br>
+┃　　　┗━　[**DB설계**](./데이터/DB설계)</br>
+┃　　　┗━　[**MQ**](./데이터/MQ)</br>
+┃　　　┗━　[**NoSQL**](./데이터/NoSQL)</br>
+┃　　　┃　　　┗━　[**MongoDB**](./데이터/NoSQL/MongoDB)</br>
+┃　　　┃　　　┗━　[**PostgreSQL**](./데이터/NoSQL/PostgreSQL)</br>
+┃　　　┃　　　┗━　[**redis**](./데이터/NoSQL/redis)</br>
+┃　　　┗━　[**SQL　쿼리**](./데이터/SQL　쿼리)</br>
+┃　　　┃　　　┗━　[**최적화**](./데이터/SQL　쿼리/최적화)</br>
+┃　　　┃　　　┗━　[**쿼리종류**](./데이터/SQL　쿼리/쿼리종류)</br>
+┃　　　┗━　[**데이터베이스**](./데이터/데이터베이스)</br>
+┃　　　　　　　┗━　[**DB설계**](./데이터/데이터베이스/DB설계)</br>
+┃　　　　　　　┗━　[**MQ**](./데이터/데이터베이스/MQ)</br>
+┃　　　　　　　┗━　[**NoSQL**](./데이터/데이터베이스/NoSQL)</br>
+┃　　　　　　　┃　　　┗━　[**MongoDB**](./데이터/데이터베이스/NoSQL/MongoDB)</br>
+┃　　　　　　　┃　　　┗━　[**PostgreSQL**](./데이터/데이터베이스/NoSQL/PostgreSQL)</br>
+┃　　　　　　　┃　　　┗━　[**redis**](./데이터/데이터베이스/NoSQL/redis)</br>
+┃　　　　　　　┗━　[**SQL　쿼리**](./데이터/데이터베이스/SQL　쿼리)</br>
+┃　　　　　　　　　　　┗━　[**최적화**](./데이터/데이터베이스/SQL　쿼리/최적화)</br>
+┃　　　　　　　　　　　┗━　[**쿼리종류**](./데이터/데이터베이스/SQL　쿼리/쿼리종류)</br>
 ┗━　[**알고리즘**](./알고리즘)</br>
 ┃　　　┗━　[**자료구조**](./알고리즘/자료구조)</br>
 ┃　　　┃　　　┗━　[LSM Tree](./알고리즘/자료구조/LSM Tree.md)</br>
@@ -952,8 +976,6 @@ derectories      : 167
 ┃　　　┗━　[OLAP](./데이터베이스/OLAP.md)</br>
 ┃　　　┗━　[Postgresql Transaction Wraparound](./데이터베이스/Postgresql Transaction Wraparound.md)</br>
 ┃　　　┗━　[Two Phase commit](./데이터베이스/Two Phase commit.md)</br>
-┃　　　┗━　[duckdb](./데이터베이스/duckdb.md)</br>
-┃　　　┗━　[index](./데이터베이스/index.md)</br>
 ┃　　　┗━　[pgbouncer](./데이터베이스/pgbouncer.md)</br>
 ┗━　[**아키텍처 및 방법론**](./아키텍처 및 방법론)</br>
 ┃　　　┗━　[**API 아키텍처**](./아키텍처 및 방법론/API 아키텍처)</br>
@@ -1011,7 +1033,7 @@ derectories      : 167
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XX133kMa**](./XX133kMa)</br>
+┗━　[**XXMJDCBR**](./XXMJDCBR)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 
