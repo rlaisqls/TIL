@@ -2,7 +2,7 @@
 
 - Linux 신호는 컨테이너 내부의 프로세스 수명 주기를 제어하는 주요 방법이다. 앱의 수명 주기를 앱이 포함된 컨테이너와 긴밀하게 연결하려면 앱이 Linux 신호를 올바르게 처리하도록 해야한다.
 
-- 프로세스 식별자(PID)는 Linux커널이 각 프로세스에 제공하는 고유한 식별자이다. PID는 namespace입니다. 즉, 컨테이너에는 호스트 시스템의 PID가 매핑되는 고유한 PID 세트가 있다.
+- 프로세스 식별자(PID)는 Linux커널이 각 프로세스에 제공하는 고유한 식별자이다. PID는 namespace다. 즉, 컨테이너에는 호스트 시스템의 PID가 매핑되는 고유한 PID 세트가 있다.
 
 - Linux 커널을 시작할 때 실행된 첫 번째 프로세스에는 PID 1이 있다. 정상적인 운영체제의 경우 이 프로세스는 init 시스템(ex. systemd 또는 SysV)이다. 마찬가지로 컨테이너에서 실행된 첫 번째 프로세스는 PID 1을 얻는다.
 
@@ -18,7 +18,7 @@
 
 ### 2.2 기본 init 시스템이 분리된 프로세스를 처리하는 방법
 
-- systemd와 같은 기본 init 시스템은 분리된 좀비 프로세스를 제거하는 데에도 사용된다. 분리된 프로세스(상위 요소가 사라진 프로세스)는 PID 1이 있는 프로세스에 다시 첨부된다. PID 1은 프로세스가 사라질 때 다시 거둬야 한다. 
+- systemd와 같은 기본 init 시스템은 분리된 좀비 프로세스를 제거하는 데에도 사용된다. 분리된 프로세스(상위 요소가 사라진 프로세스)는 PID 1이 있는 프로세스에 다시 첨부된다. PID 1은 프로세스가 사라질 때 다시 거둬야 한다.
 
 - 정상적인 init 시스템은 그렇게 작동하지만 컨테이너에서는 PID 1을 갖고 있는 프로세스가 이러한 책임을 갖게 된다. 이 프로세스에서 이런 제거를 제대로 하지 못하면 메모리나 다른 리소스가 부족해질 수 있다.
 
@@ -26,9 +26,9 @@
 
 ### 3.1 PID 1으로 실행하고 신호 핸들러로 등록
 
-  - 첫 번째 문제만 해결된다.
-  - 앱이 제어된 방식(흔한 경우)으로 하위 프로세스를 생성하면 두 번째 문제를 방지할 수 있다.
-  - 이 솔루션을 구현하는 가장 쉬운 방법은 Dockerfile에서 `CMD` 또는 `ENTRYPOINT`를 사용하여 프로세스를 실행하는 것이다.
+- 첫 번째 문제만 해결된다.
+- 앱이 제어된 방식(흔한 경우)으로 하위 프로세스를 생성하면 두 번째 문제를 방지할 수 있다.
+- 이 솔루션을 구현하는 가장 쉬운 방법은 Dockerfile에서 `CMD` 또는 `ENTRYPOINT`를 사용하여 프로세스를 실행하는 것이다.
 
         ```dockerfile
         FROM debian:9
@@ -41,7 +41,7 @@
         CMD [ "nginx", "-g", "daemon off;" ]
         ```
 
-  - 이 방법을 사용하는 경우 도커 파일에 포함된 셸 스크립트는 PID 1을 가지므로 기본 exec 명령어를 사용하여 셸 스크립트에서 프로세스를 실행해야한다. 
+- 이 방법을 사용하는 경우 도커 파일에 포함된 셸 스크립트는 PID 1을 가지므로 기본 exec 명령어를 사용하여 셸 스크립트에서 프로세스를 실행해야한다.
 
 ### 3.2 Kubernetes에서 프로세스 네임스페이스 공유 사용 설정
 
@@ -77,6 +77,8 @@
 
 ---
 참고
-- https://cloud.google.com/architecture/best-practices-for-building-containers?hl=ko#signal-handling
-- https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html
-- https://www.baeldung.com/linux/docker-container-process-host-pid
+
+- <https://cloud.google.com/architecture/best-practices-for-building-containers?hl=ko#signal-handling>
+- <https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html>
+- <https://www.baeldung.com/linux/docker-container-process-host-pid>
+
