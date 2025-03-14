@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 834
+files            : 836
 derectories      : 189
 ```
 
@@ -24,6 +24,7 @@ derectories      : 189
 ┃　　　┃　　　┗━　[배, 자동차, 비행기 분류하기](./AI/실습/배, 자동차, 비행기 분류하기.md)</br>
 ┃　　　┗━　[**자연어 처리**](./AI/자연어 처리)</br>
 ┃　　　┃　　　┗━　[BERT](./AI/자연어 처리/BERT.md)</br>
+┃　　　┃　　　┗━　[LSA와 LDA](./AI/자연어 처리/LSA와 LDA.md)</br>
 ┃　　　┗━　[CNN](./AI/CNN.md)</br>
 ┃　　　┗━　[Document Question Answering](./AI/Document Question Answering.md)</br>
 ┃　　　┗━　[DropOut](./AI/DropOut.md)</br>
@@ -643,6 +644,7 @@ derectories      : 189
 ┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
 ┃　　　┗━　[Nightly build](./개발/Nightly build.md)</br>
 ┃　　　┗━　[authn과 authz](./개발/authn과 authz.md)</br>
+┃　　　┗━　[boxplot](./개발/boxplot.md)</br>
 ┃　　　┗━　[monorepo](./개발/monorepo.md)</br>
 ┃　　　┗━　[turborepo](./개발/turborepo.md)</br>
 ┃　　　┗━　[툴세팅](./개발/툴세팅.md)</br>
@@ -1033,6 +1035,7 @@ derectories      : 189
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[**XXyDs0lV**](./XXyDs0lV)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 
