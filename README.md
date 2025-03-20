@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 836
+files            : 839
 derectories      : 189
 ```
 
@@ -249,6 +249,7 @@ derectories      : 189
 ┃　　　┃　　　┃　　　┃　　　┗━　[Deployments](./DevOps/Kubernetes/개념/object/Deployments.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Deployment Status](./DevOps/Kubernetes/개념/object/Deployment Status.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Deployment Strategy](./DevOps/Kubernetes/개념/object/Deployment Strategy.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Endpoint](./DevOps/Kubernetes/개념/object/Endpoint.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Events](./DevOps/Kubernetes/개념/object/Events.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Labels and Selectors](./DevOps/Kubernetes/개념/object/Labels and Selectors.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[PV & PVC](./DevOps/Kubernetes/개념/object/PV & PVC.md)</br>
@@ -627,6 +628,7 @@ derectories      : 189
 ┃　　　┃　　　┗━　[Spark](./개발/Tools/Spark.md)</br>
 ┃　　　┃　　　┗━　[Tridactyl](./개발/Tools/Tridactyl.md)</br>
 ┃　　　┃　　　┗━　[mermaid 문법](./개발/Tools/mermaid 문법.md)</br>
+┃　　　┃　　　┗━　[mise](./개발/Tools/mise.md)</br>
 ┃　　　┗━　[**영상**](./개발/영상)</br>
 ┃　　　┃　　　┗━　[ffmpeg](./개발/영상/ffmpeg.md)</br>
 ┃　　　┃　　　┗━　[비트레이트](./개발/영상/비트레이트.md)</br>
@@ -642,6 +644,7 @@ derectories      : 189
 ┃　　　┃　　　┗━　[테스팅 용어](./개발/테스팅/테스팅 용어.md)</br>
 ┃　　　┗━　[EME](./개발/EME.md)</br>
 ┃　　　┗━　[FineGrained와 CoarseGrained](./개발/FineGrained와 CoarseGrained.md)</br>
+┃　　　┗━　[Native messaging](./개발/Native messaging.md)</br>
 ┃　　　┗━　[Nightly build](./개발/Nightly build.md)</br>
 ┃　　　┗━　[authn과 authz](./개발/authn과 authz.md)</br>
 ┃　　　┗━　[boxplot](./개발/boxplot.md)</br>
@@ -1035,7 +1038,7 @@ derectories      : 189
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXyDs0lV**](./XXyDs0lV)</br>
+┗━　[**XXJJsGMS**](./XXJJsGMS)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 
