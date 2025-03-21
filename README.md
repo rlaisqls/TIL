@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 839
+files            : 840
 derectories      : 189
 ```
 
@@ -575,6 +575,7 @@ derectories      : 189
 ┃　　　┗━　[**보안**](./OS/보안)</br>
 ┃　　　┃　　　┗━　[엑세스 제어](./OS/보안/엑세스 제어.md)</br>
 ┃　　　┗━　[CPU 아키텍처](./OS/CPU 아키텍처.md)</br>
+┃　　　┗━　[QEMU](./OS/QEMU.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./OS/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[exit code](./OS/exit code.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./OS/유저, 커널레벨 스레드.md)</br>
@@ -1038,7 +1039,6 @@ derectories      : 189
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXJJsGMS**](./XXJJsGMS)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 
