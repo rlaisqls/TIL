@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 840
+files            : 841
 derectories      : 189
 ```
 
@@ -33,6 +33,7 @@ derectories      : 189
 ┃　　　┗━　[Prompt Engineering](./AI/Prompt Engineering.md)</br>
 ┃　　　┗━　[RAG](./AI/RAG.md)</br>
 ┃　　　┗━　[RNN](./AI/RNN.md)</br>
+┃　　　┗━　[Whisper](./AI/Whisper.md)</br>
 ┃　　　┗━　[선형회귀](./AI/선형회귀.md)</br>
 ┃　　　┗━　[퍼셉트론](./AI/퍼셉트론.md)</br>
 ┃　　　┗━　[활성화함수](./AI/활성화함수.md)</br>
@@ -1039,6 +1040,7 @@ derectories      : 189
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[**XXATEgAD**](./XXATEgAD)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 
