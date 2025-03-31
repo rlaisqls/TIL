@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 844
-derectories      : 189
+files            : 845
+derectories      : 190
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -441,6 +441,9 @@ derectories      : 189
 ┃　　　┃　　　┗━　[시리얼 통신](./OS/Embedded/시리얼 통신.md)</br>
 ┃　　　┃　　　┗━　[임베디드 시스템](./OS/Embedded/임베디드 시스템.md)</br>
 ┃　　　┃　　　┗━　[임베디드 리눅스 프로그래밍 수업 정리](./OS/Embedded/임베디드 리눅스 프로그래밍 수업 정리.md)</br>
+┃　　　┗━　[**GPU**](./OS/GPU)</br>
+┃　　　┃　　　┗━　[CUDA](./OS/GPU/CUDA.md)</br>
+┃　　　┃　　　┗━　[nvenc, nvdec](./OS/GPU/nvenc, nvdec.md)</br>
 ┃　　　┗━　[**VM**](./OS/VM)</br>
 ┃　　　┃　　　┗━　[VMware Fusion NAT config](./OS/VM/VMware Fusion NAT config.md)</br>
 ┃　　　┃　　　┗━　[VMware Fusion Ubuntu 디스크 용량 늘리기](./OS/VM/VMware Fusion Ubuntu 디스크 용량 늘리기.md)</br>
@@ -577,7 +580,6 @@ derectories      : 189
 ┃　　　┗━　[**보안**](./OS/보안)</br>
 ┃　　　┃　　　┗━　[엑세스 제어](./OS/보안/엑세스 제어.md)</br>
 ┃　　　┗━　[CPU 아키텍처](./OS/CPU 아키텍처.md)</br>
-┃　　　┗━　[CUDA](./OS/CUDA.md)</br>
 ┃　　　┗━　[MKL](./OS/MKL.md)</br>
 ┃　　　┗━　[QEMU](./OS/QEMU.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./OS/c언어 컴파일과정.md)</br>
@@ -1043,7 +1045,7 @@ derectories      : 189
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXSYgClg**](./XXSYgClg)</br>
+┗━　[**XXMiuxgK**](./XXMiuxgK)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 
