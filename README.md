@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 845
+files            : 846
 derectories      : 190
 ```
 
@@ -26,6 +26,7 @@ derectories      : 190
 ┃　　　┃　　　┗━　[BERT](./AI/자연어 처리/BERT.md)</br>
 ┃　　　┃　　　┗━　[LSA와 LDA](./AI/자연어 처리/LSA와 LDA.md)</br>
 ┃　　　┗━　[CNN](./AI/CNN.md)</br>
+┃　　　┗━　[Curcuit Tracing](./AI/Curcuit Tracing.md)</br>
 ┃　　　┗━　[Document Question Answering](./AI/Document Question Answering.md)</br>
 ┃　　　┗━　[DropOut](./AI/DropOut.md)</br>
 ┃　　　┗━　[Keras](./AI/Keras.md)</br>
@@ -1045,7 +1046,7 @@ derectories      : 190
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXMiuxgK**](./XXMiuxgK)</br>
+┗━　[**XXlHuSp8**](./XXlHuSp8)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 
