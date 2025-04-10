@@ -1,6 +1,8 @@
 > <https://transformer-circuits.pub/2025/attribution-graphs/methods.html#global-weights>
 > 위 글의 이해를 위한 번역, 정리글입니다.
 
+# Circuit Tracing: Revealing Computational Graphs in Language Models
+
 - 딥러닝 모델은 수많은 계산 단위(인공 뉴런)의 작용으로 출력을 생성한다.
 - 딥러닝 모델을 인간이 이해 가능한 언어로 설명하는 것은 바이너리 프로그램을 리버스 엔지니어링하는 것과 유사한 역추적이 필요하며, 이 분야에 대한 연구를 Mechanistic interpretability(MI)라고 부른다.
 
@@ -83,13 +85,36 @@
 5. 한계점 논의.
    - 여기에는 어텐션 패턴의 역할, 재구성 오류의 영향, 억제 회로(suppression motifs)의 식별,
    - 글로벌 회로를 이해하는 데 따르는 어려움 등이 포함됨.
-   - 이러한 한계를 극복하고 나면, 모델의 추가적인 작동 메커니즘들이 드러날 가능성이 있으며, 이는 향후 연구에서 매우 유망한 방향입니다.
+   - 이러한 한계를 극복하고 나면, 모델의 추가적인 작동 메커니즘들이 드러날 가능성이 있으며, 이는 향후 연구에서 매우 유망한 방향이다.
 
 6. 속성 그래프를 생성하는 방법의 설계 공간에 대한 폭넓은 논의 (§ 8 논의)를 하고,
-   - 우리 접근법의 구성 요소들이 다른 기법들과 어떻게 조합될 수 있는지를 설명합니다.
-   - 그리고 관련 연구에 대한 개요로 논문을 마무리합니다 (§ 9 관련 연구).
+   - 우리 접근법의 구성 요소들이 다른 기법들과 어떻게 조합될 수 있는지를 설명한다.
+   - 그리고 관련 연구에 대한 개요로 논문을 마무리한다 (§ 9 관련 연구).
+
+---
+
+## Building an Interpretable Replacement Model
+
+#### Cross-Layer Transcoder
+
+하나의 Feature는 한 레이어에서 읽고, 모든 레이어에 쓴다.
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/ce5b794d-9877-40ea-a2ed-859187d28315" />
+
+- cross-layer transcoder(CLT)는 뉴런("features")로 구성되어있고, 기본 모델과 동일한 L개의 레이어로 구성된다.
+- 이 모델의 목표는 기존 모델의 MLP 출력을 sparsely active feature로 재구성하는 것이다.
+- 특징(feature)**들은 자신이 속한 레이어에서 모델의 residual stream으로부터 입력을 받지만, cross layer라는 이름처럼, 그 출력은 이후 모든 레이어에 걸쳐 전달될 수 있다.
+- CLT 외에도 다양한 아키텍처들이 회로 분석에 사용될 수 있지만, 아래 이유로  CLT가 잘 작동한다는 것을 확인했다.
+  - ℓ번째 레이어의 각 특징은 그 레이어의 residual stream으로부터 입력을 받아, 선형 인코더(linear encoder)를 거친 후 비선형 함수(nonlinearity)를 적용해 활성화된다.
+  - ℓ번째 레이어의 특징은 ℓ, ℓ+1, ..., L번째 레이어의 MLP 출력을 복원하는 데 기여하며, 각 출력 레이어에 대해 별도의 선형 디코더 가중치를 사용한다.
+  - 모든 레이어의 모든 특징들은 함께(jointly) 학습된다. 그 결과, ℓ′번째 레이어의 MLP 출력은 그 이전의 모든 레이어들의 특징들에 의해 함께 복원된다.
+
+**다양한 크기의 CLT(크로스-레이어 트랜스코더)**를 **소형 18-레이어 트랜스포머 모델(“18L”)**과 Claude 3.5 Haiku 모델에 대해 학습시켰다.
+ 18L 모델은 0번째 레이어에 MLP가 없기 때문에, 우리의 CLT는 총 17개의 레이어로 구성된다.
+
+- [상세한 구현에 대한 설명](<https://transformer-circuits.pub/2025/attribution-graphs/methods.html#appendix-ml-details-ml>)
 
 ---
 참고
 
-- <<https://distill.pub/2020/circuits/curve-circuit>
+- <https://distill.pub/2020/circuits/curve-circuit>
