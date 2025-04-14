@@ -21,12 +21,12 @@ Native messaging을 사용하면 브라우저 확장 플러그인에 아래 같�
 
 ## 주요 구성 요소
 
-### 1. **네이티브 애플리케이션 (Native Messaging Host)**
+### 1. 네이티브 애플리케이션 (Native Messaging Host)
 
 - 브라우저 외부에서 실행되는 프로그램으로, JSON 형식의 데이터를 표준 입력(`stdin`)과 표준 출력(`stdout`)을 통해 주고받는다.
 - Python, Node.js, C++, Java 등의 언어로 구현할 수 있다.
 
-### 2. **Native Messaging 매니페스트 파일**
+### 2. Native Messaging 매니페스트 파일
 
 - 네이티브 애플리케이션을 브라우저 확장에서 사용할 수 있도록 등록하는 JSON 파일이다.
 - 예제:
@@ -47,7 +47,7 @@ Native messaging을 사용하면 브라우저 확장 플러그인에 아래 같�
   - Windows: `HKEY_LOCAL_MACHINE\SOFTWARE\Google\Chrome\NativeMessagingHosts\`
   - macOS/Linux: `/Library/Google/Chrome/NativeMessagingHosts/` 또는 `~/.config/google-chrome/NativeMessagingHosts/`
 
-### 3. **확장 프로그램에서의 API 호출**
+### 3. 확장 프로그램에서의 API 호출
 
 - `chrome.runtime.sendNativeMessage()` 또는 `chrome.runtime.connectNative()`를 사용하여 네이티브 애플리케이션과 메시지를 주고받는다.
 
