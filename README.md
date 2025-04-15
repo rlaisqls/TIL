@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 846
-derectories      : 190
+files            : 775
+derectories      : 178
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -40,89 +40,6 @@ derectories      : 190
 ┃　　　┗━　[활성화함수](./AI/활성화함수.md)</br>
 ┗━　[**DevOps**](./DevOps)</br>
 ┃　　　┗━　[**AWS**](./DevOps/AWS)</br>
-┃　　　┃　　　┗━　[**Analytics**](./DevOps/AWS/Analytics)</br>
-┃　　　┃　　　┃　　　┗━　[Athena](./DevOps/AWS/Analytics/Athena.md)</br>
-┃　　　┃　　　┃　　　┗━　[EMR](./DevOps/AWS/Analytics/EMR.md)</br>
-┃　　　┃　　　┃　　　┗━　[Glue](./DevOps/AWS/Analytics/Glue.md)</br>
-┃　　　┃　　　┃　　　┗━　[Kinesis](./DevOps/AWS/Analytics/Kinesis.md)</br>
-┃　　　┃　　　┃　　　┗━　[Lake Formation](./DevOps/AWS/Analytics/Lake Formation.md)</br>
-┃　　　┃　　　┗━　[**Computing**](./DevOps/AWS/Computing)</br>
-┃　　　┃　　　┃　　　┗━　[**Auto Scaling**](./DevOps/AWS/Computing/Auto Scaling)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./DevOps/AWS/Computing/Auto Scaling/ASG Lifecycle Hook.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling](./DevOps/AWS/Computing/Auto Scaling/Auto Scaling.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Auto Scaling termination policies](./DevOps/AWS/Computing/Auto Scaling/Auto Scaling termination policies.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Scaling cooldowns](./DevOps/AWS/Computing/Auto Scaling/Scaling cooldowns.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[State Change Event](./DevOps/AWS/Computing/Auto Scaling/State Change Event.md)</br>
-┃　　　┃　　　┃　　　┗━　[**EC2**](./DevOps/AWS/Computing/EC2)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EC2](./DevOps/AWS/Computing/EC2/EC2.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EC2 Fleet](./DevOps/AWS/Computing/EC2/EC2 Fleet.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Elastic Fabric Adapter](./DevOps/AWS/Computing/EC2/Elastic Fabric Adapter.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Instance Store](./DevOps/AWS/Computing/EC2/Instance Store.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[RI와 Saving plan](./DevOps/AWS/Computing/EC2/RI와 Saving plan.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Spot Instance](./DevOps/AWS/Computing/EC2/Spot Instance.md)</br>
-┃　　　┃　　　┃　　　┗━　[ECS](./DevOps/AWS/Computing/ECS.md)</br>
-┃　　　┃　　　┃　　　┗━　[Elastic Beanstalk](./DevOps/AWS/Computing/Elastic Beanstalk.md)</br>
-┃　　　┃　　　┃　　　┗━　[Fargate](./DevOps/AWS/Computing/Fargate.md)</br>
-┃　　　┃　　　┃　　　┗━　[Lambda](./DevOps/AWS/Computing/Lambda.md)</br>
-┃　　　┃　　　┗━　[**Database**](./DevOps/AWS/Database)</br>
-┃　　　┃　　　┃　　　┗━　[Aurora](./DevOps/AWS/Database/Aurora.md)</br>
-┃　　　┃　　　┃　　　┗━　[DynamoDB](./DevOps/AWS/Database/DynamoDB.md)</br>
-┃　　　┃　　　┃　　　┗━　[EFS](./DevOps/AWS/Database/EFS.md)</br>
-┃　　　┃　　　┃　　　┗━　[RDS](./DevOps/AWS/Database/RDS.md)</br>
-┃　　　┃　　　┃　　　┗━　[RDS proxy](./DevOps/AWS/Database/RDS proxy.md)</br>
-┃　　　┃　　　┃　　　┗━　[Redshift](./DevOps/AWS/Database/Redshift.md)</br>
-┃　　　┃　　　┗━　[**Management and governance**](./DevOps/AWS/Management and governance)</br>
-┃　　　┃　　　┃　　　┗━　[CloudFormation](./DevOps/AWS/Management and governance/CloudFormation.md)</br>
-┃　　　┃　　　┃　　　┗━　[CloudTrail](./DevOps/AWS/Management and governance/CloudTrail.md)</br>
-┃　　　┃　　　┃　　　┗━　[CloudWatch](./DevOps/AWS/Management and governance/CloudWatch.md)</br>
-┃　　　┃　　　┃　　　┗━　[LogGroup](./DevOps/AWS/Management and governance/LogGroup.md)</br>
-┃　　　┃　　　┗━　[**Netwoking**](./DevOps/AWS/Netwoking)</br>
-┃　　　┃　　　┃　　　┗━　[**elb**](./DevOps/AWS/Netwoking/elb)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Application LoadBalancer components](./DevOps/AWS/Netwoking/elb/Application LoadBalancer components.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Connection Draining](./DevOps/AWS/Netwoking/elb/Connection Draining.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ELB](./DevOps/AWS/Netwoking/elb/ELB.md)</br>
-┃　　　┃　　　┃　　　┗━　[**security**](./DevOps/AWS/Netwoking/security)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[NACLs](./DevOps/AWS/Netwoking/security/NACLs.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Security Groups](./DevOps/AWS/Netwoking/security/Security Groups.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[WAF](./DevOps/AWS/Netwoking/security/WAF.md)</br>
-┃　　　┃　　　┃　　　┗━　[Bastion Host](./DevOps/AWS/Netwoking/Bastion Host.md)</br>
-┃　　　┃　　　┃　　　┗━　[CloudFront](./DevOps/AWS/Netwoking/CloudFront.md)</br>
-┃　　　┃　　　┃　　　┗━　[CloudFront Cache](./DevOps/AWS/Netwoking/CloudFront Cache.md)</br>
-┃　　　┃　　　┃　　　┗━　[Direct Connect Gateway](./DevOps/AWS/Netwoking/Direct Connect Gateway.md)</br>
-┃　　　┃　　　┃　　　┗━　[EC2 Instance Connect Endpoint](./DevOps/AWS/Netwoking/EC2 Instance Connect Endpoint.md)</br>
-┃　　　┃　　　┃　　　┗━　[ENI](./DevOps/AWS/Netwoking/ENI.md)</br>
-┃　　　┃　　　┃　　　┗━　[Global Accelerator](./DevOps/AWS/Netwoking/Global Accelerator.md)</br>
-┃　　　┃　　　┃　　　┗━　[NAT gateway & NAT instance](./DevOps/AWS/Netwoking/NAT gateway & NAT instance.md)</br>
-┃　　　┃　　　┃　　　┗━　[Route53](./DevOps/AWS/Netwoking/Route53.md)</br>
-┃　　　┃　　　┃　　　┗━　[Transit Gateway](./DevOps/AWS/Netwoking/Transit Gateway.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPC](./DevOps/AWS/Netwoking/VPC.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPC Mapping Service](./DevOps/AWS/Netwoking/VPC Mapping Service.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPC endpoint](./DevOps/AWS/Netwoking/VPC endpoint.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPN](./DevOps/AWS/Netwoking/VPN.md)</br>
-┃　　　┃　　　┃　　　┗━　[VPN Options](./DevOps/AWS/Netwoking/VPN Options.md)</br>
-┃　　　┃　　　┗━　[**Security**](./DevOps/AWS/Security)</br>
-┃　　　┃　　　┃　　　┗━　[AWS Managed Microsoft AD](./DevOps/AWS/Security/AWS Managed Microsoft AD.md)</br>
-┃　　　┃　　　┃　　　┗━　[Cognito](./DevOps/AWS/Security/Cognito.md)</br>
-┃　　　┃　　　┃　　　┗━　[Conformance Packs & Security Hub](./DevOps/AWS/Security/Conformance Packs & Security Hub.md)</br>
-┃　　　┃　　　┃　　　┗━　[IAM](./DevOps/AWS/Security/IAM.md)</br>
-┃　　　┃　　　┃　　　┗━　[KMS](./DevOps/AWS/Security/KMS.md)</br>
-┃　　　┃　　　┃　　　┗━　[KMS Datakey](./DevOps/AWS/Security/KMS Datakey.md)</br>
-┃　　　┃　　　┃　　　┗━　[MalformedPolicyDocument](./DevOps/AWS/Security/MalformedPolicyDocument.md)</br>
-┃　　　┃　　　┃　　　┗━　[Microsoft Active Directory](./DevOps/AWS/Security/Microsoft Active Directory.md)</br>
-┃　　　┃　　　┃　　　┗━　[WAF & Firewall Manager & Shield Advanced](./DevOps/AWS/Security/WAF & Firewall Manager & Shield Advanced.md)</br>
-┃　　　┃　　　┗━　[**Storage**](./DevOps/AWS/Storage)</br>
-┃　　　┃　　　┃　　　┗━　[**EBS**](./DevOps/AWS/Storage/EBS)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EBS](./DevOps/AWS/Storage/EBS/EBS.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EBS gp2 vs gp3](./DevOps/AWS/Storage/EBS/EBS gp2 vs gp3.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[EBS vs Instance Store](./DevOps/AWS/Storage/EBS/EBS vs Instance Store.md)</br>
-┃　　　┃　　　┃　　　┗━　[AppSync](./DevOps/AWS/Storage/AppSync.md)</br>
-┃　　　┃　　　┃　　　┗━　[DayaSync](./DevOps/AWS/Storage/DayaSync.md)</br>
-┃　　　┃　　　┃　　　┗━　[EFS](./DevOps/AWS/Storage/EFS.md)</br>
-┃　　　┃　　　┃　　　┗━　[FSx](./DevOps/AWS/Storage/FSx.md)</br>
-┃　　　┃　　　┃　　　┗━　[S3](./DevOps/AWS/Storage/S3.md)</br>
-┃　　　┃　　　┃　　　┗━　[S3 Glacier Vault Lock](./DevOps/AWS/Storage/S3 Glacier Vault Lock.md)</br>
-┃　　　┃　　　┃　　　┗━　[Snow Famliy](./DevOps/AWS/Storage/Snow Famliy.md)</br>
-┃　　　┃　　　┃　　　┗━　[Storage Gateway](./DevOps/AWS/Storage/Storage Gateway.md)</br>
 ┃　　　┃　　　┗━　[API Gateway](./DevOps/AWS/API Gateway.md)</br>
 ┃　　　┃　　　┗━　[AWS Organization](./DevOps/AWS/AWS Organization.md)</br>
 ┃　　　┃　　　┗━　[AWS cloud computing](./DevOps/AWS/AWS cloud computing.md)</br>
@@ -1046,7 +963,6 @@ derectories      : 190
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXQN5CtZ**](./XXQN5CtZ)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 
