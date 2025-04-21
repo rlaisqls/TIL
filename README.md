@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 775
-derectories      : 178
+files            : 787
+derectories      : 182
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -40,9 +40,26 @@ derectories      : 178
 ┃　　　┗━　[활성화함수](./AI/활성화함수.md)</br>
 ┗━　[**DevOps**](./DevOps)</br>
 ┃　　　┗━　[**AWS**](./DevOps/AWS)</br>
+┃　　　┃　　　┗━　[**Analytics**](./DevOps/AWS/Analytics)</br>
+┃　　　┃　　　┃　　　┗━　[Athena](./DevOps/AWS/Analytics/Athena.md)</br>
+┃　　　┃　　　┃　　　┗━　[LogGroup](./DevOps/AWS/Analytics/LogGroup.md)</br>
+┃　　　┃　　　┗━　[**Computing**](./DevOps/AWS/Computing)</br>
+┃　　　┃　　　┃　　　┗━　[ASG Lifecycle Hook](./DevOps/AWS/Computing/ASG Lifecycle Hook.md)</br>
+┃　　　┃　　　┃　　　┗━　[ECS](./DevOps/AWS/Computing/ECS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Instance Store](./DevOps/AWS/Computing/Instance Store.md)</br>
+┃　　　┃　　　┃　　　┗━　[RI와 Saving plan](./DevOps/AWS/Computing/RI와 Saving plan.md)</br>
+┃　　　┃　　　┗━　[**Networking**](./DevOps/AWS/Networking)</br>
+┃　　　┃　　　┃　　　┗━　[NAT gateway & NAT instance](./DevOps/AWS/Networking/NAT gateway & NAT instance.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPC](./DevOps/AWS/Networking/VPC.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPC Mapping Service](./DevOps/AWS/Networking/VPC Mapping Service.md)</br>
+┃　　　┃　　　┃　　　┗━　[VPN Options](./DevOps/AWS/Networking/VPN Options.md)</br>
+┃　　　┃　　　┗━　[**Security**](./DevOps/AWS/Security)</br>
+┃　　　┃　　　┃　　　┗━　[Baston Host](./DevOps/AWS/Security/Baston Host.md)</br>
+┃　　　┃　　　┃　　　┗━　[KMS](./DevOps/AWS/Security/KMS.md)</br>
 ┃　　　┃　　　┗━　[API Gateway](./DevOps/AWS/API Gateway.md)</br>
 ┃　　　┃　　　┗━　[AWS Organization](./DevOps/AWS/AWS Organization.md)</br>
 ┃　　　┃　　　┗━　[AWS cloud computing](./DevOps/AWS/AWS cloud computing.md)</br>
+┃　　　┃　　　┗━　[Fault Injection Semulator](./DevOps/AWS/Fault Injection Semulator.md)</br>
 ┃　　　┃　　　┗━　[Region과 Zone](./DevOps/AWS/Region과 Zone.md)</br>
 ┃　　　┃　　　┗━　[SAA 요약](./DevOps/AWS/SAA 요약.md)</br>
 ┃　　　┃　　　┗━　[SAA 오답노트](./DevOps/AWS/SAA 오답노트.md)</br>
@@ -51,7 +68,6 @@ derectories      : 178
 ┃　　　┃　　　┗━　[**CNI**](./DevOps/Container/CNI)</br>
 ┃　　　┃　　　┃　　　┗━　[CNI](./DevOps/Container/CNI/CNI.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Calico](./DevOps/Container/CNI/Calico.md)</br>
-┃　　　┃　　　┃　　　┗━　[Install Calico](./DevOps/Container/CNI/Install Calico.md)</br>
 ┃　　　┃　　　┗━　[**Docker**](./DevOps/Container/Docker)</br>
 ┃　　　┃　　　┃　　　┗━　[DockerSwarm](./DevOps/Container/Docker/DockerSwarm.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Docker Image Layer](./DevOps/Container/Docker/Docker Image Layer.md)</br>
