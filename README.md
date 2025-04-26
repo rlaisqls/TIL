@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 787
+files            : 788
 derectories      : 182
 ```
 
@@ -571,6 +571,7 @@ derectories      : 182
 ┃　　　┃　　　┗━　[mermaid 문법](./개발/Tools/mermaid 문법.md)</br>
 ┃　　　┃　　　┗━　[mise](./개발/Tools/mise.md)</br>
 ┃　　　┗━　[**영상**](./개발/영상)</br>
+┃　　　┃　　　┗━　[Resolution](./개발/영상/Resolution.md)</br>
 ┃　　　┃　　　┗━　[ffmpeg](./개발/영상/ffmpeg.md)</br>
 ┃　　　┃　　　┗━　[비트레이트](./개발/영상/비트레이트.md)</br>
 ┃　　　┃　　　┗━　[자막 파일 포맷](./개발/영상/자막 파일 포맷.md)</br>
