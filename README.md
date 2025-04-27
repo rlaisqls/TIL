@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 788
-derectories      : 182
+files            : 789
+derectories      : 183
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -368,6 +368,10 @@ derectories      : 182
 ┃　　　┗━　[로드밸런서](./Network/로드밸런서.md)</br>
 ┃　　　┗━　[브라우저에 url을 입력하면 어떤일이 생길까？](./Network/브라우저에 url을 입력하면 어떤일이 생길까？.md)</br>
 ┗━　[**OS**](./OS)</br>
+┃　　　┗━　[**CPU**](./OS/CPU)</br>
+┃　　　┃　　　┗━　[CPU 아키텍처](./OS/CPU/CPU 아키텍처.md)</br>
+┃　　　┃　　　┗━　[NUMA](./OS/CPU/NUMA.md)</br>
+┃　　　┃　　　┗━　[QEMU](./OS/CPU/QEMU.md)</br>
 ┃　　　┗━　[**Embedded**](./OS/Embedded)</br>
 ┃　　　┃　　　┗━　[Audio Codec](./OS/Embedded/Audio Codec.md)</br>
 ┃　　　┃　　　┗━　[Cramfs](./OS/Embedded/Cramfs.md)</br>
@@ -513,9 +517,7 @@ derectories      : 182
 ┃　　　┃　　　┗━　[Active Directory Domain Services](./OS/window/Active Directory Domain Services.md)</br>
 ┃　　　┗━　[**보안**](./OS/보안)</br>
 ┃　　　┃　　　┗━　[엑세스 제어](./OS/보안/엑세스 제어.md)</br>
-┃　　　┗━　[CPU 아키텍처](./OS/CPU 아키텍처.md)</br>
 ┃　　　┗━　[MKL](./OS/MKL.md)</br>
-┃　　　┗━　[QEMU](./OS/QEMU.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./OS/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[exit code](./OS/exit code.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./OS/유저, 커널레벨 스레드.md)</br>
