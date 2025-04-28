@@ -1,4 +1,4 @@
-once a program is attached and running, how do we gather information from it? There are three ways to do do this; using BPF maps, perf events and bpf_trace_printk.
+프로그램이 attach 되어 실행되고 나면 어떻게 정보를 수집할 수 있을까요? 세 가지 방법이 있습니다. BPF 맵, perf 이벤트, bpf_trace_printk를 사용하는 것입니다.
 
 ## 1. BPF maps
 
@@ -291,7 +291,6 @@ Unless you are writing tc or lightweight tunnel BPF programs - which, since they
 
 Programs which use `"tc"/"ip route"` for loading can utilize a data structure like this (from `tc_l2_redirect_kern.c`):
 
-
 ```c
 #define PIN_GLOBAL_NS           2
 
@@ -335,7 +334,7 @@ struct bpf_elf_map SEC("maps") tun_iface = {
 };
 ```
 
-The bpf_elf_map data structure mirrors that defined in https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/tree/include/bpf_elf.h?h=v4.14.1.
+The bpf_elf_map data structure mirrors that defined in <https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/tree/include/bpf_elf.h?h=v4.14.1>.
 
 ### Map pinning
 
@@ -373,6 +372,7 @@ BPF_MAP_TYPE(BPF_MAP_TYPE_PERCPU_ARRAY, percpu_array_map_ops)
 BPF_MAP_TYPE(BPF_MAP_TYPE_ARRAY, array_map_ops)
 BPF_MAP_TYPE(BPF_MAP_TYPE_PERCPU_ARRAY, percpu_array_map_ops)
 ```
+
 etc. The functions in the various ops variables define how the map allocates, frees, looks up data and much more. For example, as you might imagine the key for the lookup function for a `BPF_MAP_TYPE_ARRAY` is simply an index into the array. We see in `kernel/bpf/arraymap.c`:
 
 ```c
@@ -443,7 +443,7 @@ Use of a per-cpu data structure is to be preferred in codepaths which are freque
 
 - `BPF_MAP_TYPE_CGROUP_ARRAY`: Array map used to store cgroup fds in user-space for later use in BPF programs which call `bpf_skb_under_cgroup()` to check if skb is associated with the cgroup in the cgroup array at the specified index.
 
-- `BPF_MAP_TYPE_ARRAY_OF_MAPS`: Allows map-in-map definition where the values are the fds for the inner maps. Only two levels of map are supported, i.e. a map containing maps, not a map containing maps containing maps. `BPF_MAP_TYPE_PROG_ARRAY` does not support map-in-map functionality as it would make tail call verification harder. See https://www.mail-archive.com/netdev@vger.kernel.org/msg159387.html. for more.
+- `BPF_MAP_TYPE_ARRAY_OF_MAPS`: Allows map-in-map definition where the values are the fds for the inner maps. Only two levels of map are supported, i.e. a map containing maps, not a map containing maps containing maps. `BPF_MAP_TYPE_PROG_ARRAY` does not support map-in-map functionality as it would make tail call verification harder. See <https://www.mail-archive.com/netdev@vger.kernel.org/msg159387.html>. for more.
 
 ### Hash Maps
 
@@ -452,8 +452,8 @@ Hash maps are implemented in `kernel/bpf/hashmap.c`. Hash keys do not appear to 
 - `BPF_MAP_TYPE_HASH`: simple hash map. Continually adding new elements can fail with E2BIG - if this is likely to be an issue, an LRU (least recently used) hash is recommended as it will recycle old entries out of buckets.
 - `BPF_MAP_TYPE_PERCPU_HASH`: same as above, but kernel programs implicitly write to the CPU-specific hash. Retrieval works as described above.
 - `BPF_MAP_TYPE_LRU_HASH`: Each hash maintains an LRU (least recently used) list for each bucket to inform delete when the hash bucket fills up.
-- `BPF_MAP_TYPE_HASH_OF_MAPS`: Similar to ARRAY_OF_MAPS for for hash. See https://www.mail-archive.com/netdev@vger.kernel.org/msg159383.html for more.
- 
+- `BPF_MAP_TYPE_HASH_OF_MAPS`: Similar to ARRAY_OF_MAPS for for hash. See <https://www.mail-archive.com/netdev@vger.kernel.org/msg159383.html> for more.
+
 ### Other
 
 - `BPF_MAP_TYPE_STACK_TRACE`: defined in `kernel/bpf/stackmap.c`. Kernel programs can store stacks via the `bpf_get_stackid()` helper. The idea is we store stacks based on an identifier which appears to correspond to a 32-bit hash of the instruction pointer addresses that comprise the stack for the current context. The common use case is to get stack id in kernel, and use it as key to update another map. So for example we could profile specific stack traces by counting their occurence, or associate a specific stack trace with the current pid as key. See samples/bpf/offwaketime_kern.c for an example of the latter. In user-space we can look up the symbols associated with the stackmap to unwind the stack (see [`samples/bpf/offwaketime_user.c`](https://github.com/torvalds/linux/blob/8cd26fd90c1ad7acdcfb9f69ca99d13aa7b24561/samples/bpf/offwaketime_user.c#L4)).
@@ -469,6 +469,7 @@ As well as using maps, perf events can be used to gather information from BPF in
 - How can I use it? To see an example of how to set this up on the user-space side, see samples/bpf/trace_output_user.c and samples/bpf/trace_output_kern.c.
 
 ### User-space
+
 - First we may need to up the rlimit (resource limit) of how much memory we can lock in RAM (`RLIMIT_MEMLOCK`) - we need to lock memory for maps. See [setrlimit(2)/getrlimit(2)](https://linux.die.net/man/2/setrlimit)
 - Create a map of type `BPF_MAP_TYPE_PERF_EVENT_ARRAY`. It can be keyed by CPU, and in that case the associated value for each key will be the fd associated with the perf event opened for that CPU.
 - For each CPU, `run perf_event_open()` with a perf event with attributes of type `PERF_TYPE_SOFTWARE`, config `PERF_COUNT_SW_BPF_OUTPUT`, sample_type `PERF_SAMPLE_RAW`
@@ -479,6 +480,7 @@ As well as using maps, perf events can be used to gather information from BPF in
 - Now we are ready to run `poll()`, and handle events enqueued (see `perf_event_read()`)
 
 ### Kernel
+
 - The program needs to define `BPF_MAP_TYPE_PERF_EVENT_ARRAY` to share with userspace.
 - Program should run `bpf_perf_event_output(ctx, &map, index, &data, sizeof(data))`. The index is the key of the `BPF_MAP_TYPE_PERF_EVENT_ARRAY` map, so if we're keying per-cpu it should be a CPU id.
 
@@ -487,9 +489,11 @@ As we saw previously, `bpf_perf_event_output()` is supported for tc, XDP, lightw
 ## 3. bpf_trace_printk
 
 ### When should I use it?
+
 This option is more for debugging and should not be used in production BPF code. All BPF program types support `bpf_trace_printk()` and it is useful for debugging.
 
 ### How can I use it?
+
 Simply add a `bpf_trace_printk()` to your program. Messages can be retrieved via
 
 ```c
@@ -513,6 +517,8 @@ One approach to consider is to have a config option BPF map shared between your 
 
 ---
 **reference**
-- https://man7.org/linux/man-pages/man7/bpf-helpers.7.html
-- http://blogs.oracle.com/linux/notes-on-bpf-2
-- https://nakryiko.com/posts/bpf-tips-printk/
+
+- <https://man7.org/linux/man-pages/man7/bpf-helpers.7.html>
+- <http://blogs.oracle.com/linux/notes-on-bpf-2>
+- <https://nakryiko.com/posts/bpf-tips-printk/>
+
