@@ -187,7 +187,7 @@ func convertToVecDense(embedding []float32) *mat.VecDense {
 }
 ```
 
-실행 결과
+## 실행 결과
 
 ```
 similarity_new("Berlin", "Berlin is the capital and largest city of Germany, both by area and by population."): 0.603828

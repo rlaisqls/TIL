@@ -2,7 +2,7 @@
 
 ```
 files            : 789
-derectories      : 183
+derectories      : 184
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -11,6 +11,10 @@ derectories      : 183
 
 .
 ┗━　[**AI**](./AI)</br>
+┃　　　┗━　[**LLM**](./AI/LLM)</br>
+┃　　　┃　　　┗━　[Curcuit Tracing](./AI/LLM/Curcuit Tracing.md)</br>
+┃　　　┃　　　┗━　[Document Question Answering](./AI/LLM/Document Question Answering.md)</br>
+┃　　　┃　　　┗━　[Prompt Engineering](./AI/LLM/Prompt Engineering.md)</br>
 ┃　　　┗━　[**Vector Search**](./AI/Vector Search)</br>
 ┃　　　┃　　　┗━　[Distance Metrics](./AI/Vector Search/Distance Metrics.md)</br>
 ┃　　　┃　　　┗━　[Index━realated chians](./AI/Vector Search/Index━realated chians.md)</br>
@@ -26,12 +30,9 @@ derectories      : 183
 ┃　　　┃　　　┗━　[BERT](./AI/자연어 처리/BERT.md)</br>
 ┃　　　┃　　　┗━　[LSA와 LDA](./AI/자연어 처리/LSA와 LDA.md)</br>
 ┃　　　┗━　[CNN](./AI/CNN.md)</br>
-┃　　　┗━　[Curcuit Tracing](./AI/Curcuit Tracing.md)</br>
-┃　　　┗━　[Document Question Answering](./AI/Document Question Answering.md)</br>
 ┃　　　┗━　[DropOut](./AI/DropOut.md)</br>
 ┃　　　┗━　[Keras](./AI/Keras.md)</br>
 ┃　　　┗━　[Optimizer](./AI/Optimizer.md)</br>
-┃　　　┗━　[Prompt Engineering](./AI/Prompt Engineering.md)</br>
 ┃　　　┗━　[RAG](./AI/RAG.md)</br>
 ┃　　　┗━　[RNN](./AI/RNN.md)</br>
 ┃　　　┗━　[Whisper](./AI/Whisper.md)</br>
@@ -124,7 +125,6 @@ derectories      : 183
 ┃　　　┃　　　┗━　[**Network**](./DevOps/Kubernetes/Network)</br>
 ┃　　　┃　　　┃　　　┗━　[**DNS**](./DevOps/Kubernetes/Network/DNS)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[CoreDNS](./DevOps/Kubernetes/Network/DNS/CoreDNS.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[DNS in k8s](./DevOps/Kubernetes/Network/DNS/DNS in k8s.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[External DNS](./DevOps/Kubernetes/Network/DNS/External DNS.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ServiceDNS](./DevOps/Kubernetes/Network/DNS/ServiceDNS.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Debugging DNS Resolution](./DevOps/Kubernetes/Network/Debugging DNS Resolution.md)</br>
@@ -136,15 +136,16 @@ derectories      : 183
 ┃　　　┃　　　┃　　　┗━　[eBPF](./DevOps/Kubernetes/Network/eBPF.md)</br>
 ┃　　　┃　　　┗━　[**Service Mesh**](./DevOps/Kubernetes/Service Mesh)</br>
 ┃　　　┃　　　┃　　　┗━　[**istio**](./DevOps/Kubernetes/Service Mesh/istio)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Dry run](./DevOps/Kubernetes/Service Mesh/istio/Dry run.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istioctl](./DevOps/Kubernetes/Service Mesh/istio/Istioctl.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio Arcitecture](./DevOps/Kubernetes/Service Mesh/istio/Istio Arcitecture.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio Configuration Profiles](./DevOps/Kubernetes/Service Mesh/istio/Istio Configuration Profiles.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio RBAC](./DevOps/Kubernetes/Service Mesh/istio/Istio RBAC.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Istio authorization](./DevOps/Kubernetes/Service Mesh/istio/Istio authorization.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[Resource Annotations & Labels](./DevOps/Kubernetes/Service Mesh/istio/Resource Annotations & Labels.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[ServiceEntry](./DevOps/Kubernetes/Service Mesh/istio/ServiceEntry.md)</br>
-┃　　　┃　　　┃　　　　　　　┗━　[gateway log debug 하는 법](./DevOps/Kubernetes/Service Mesh/istio/gateway log debug 하는 법.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Dry run](./DevOps/Kubernetes/Service Mesh/istio/Dry run.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Istioctl](./DevOps/Kubernetes/Service Mesh/istio/Istioctl.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Istio Arcitecture](./DevOps/Kubernetes/Service Mesh/istio/Istio Arcitecture.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Istio Configuration Profiles](./DevOps/Kubernetes/Service Mesh/istio/Istio Configuration Profiles.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Istio RBAC](./DevOps/Kubernetes/Service Mesh/istio/Istio RBAC.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Istio authorization](./DevOps/Kubernetes/Service Mesh/istio/Istio authorization.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Resource Annotations & Labels](./DevOps/Kubernetes/Service Mesh/istio/Resource Annotations & Labels.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[ServiceEntry](./DevOps/Kubernetes/Service Mesh/istio/ServiceEntry.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[gateway log debug 하는 법](./DevOps/Kubernetes/Service Mesh/istio/gateway log debug 하는 법.md)</br>
+┃　　　┃　　　┃　　　┗━　[service mesh](./DevOps/Kubernetes/Service Mesh/service mesh.md)</br>
 ┃　　　┃　　　┗━　[**tools**](./DevOps/Kubernetes/tools)</br>
 ┃　　　┃　　　┃　　　┗━　[**Argo**](./DevOps/Kubernetes/tools/Argo)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ApplicationSets](./DevOps/Kubernetes/tools/Argo/ApplicationSets.md)</br>
@@ -982,6 +983,7 @@ derectories      : 183
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[**XX4I1Clp**](./XX4I1Clp)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 

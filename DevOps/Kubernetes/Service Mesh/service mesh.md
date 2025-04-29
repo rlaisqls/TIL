@@ -1,0 +1,2 @@
+- <https://buoyant.io/blog/ebpf-sidecars-and-the-future-of-the-service-mesh>
+- <https://matduggan.com/k8s-service-meshes>
