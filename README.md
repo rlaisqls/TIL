@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 789
-derectories      : 184
+files            : 792
+derectories      : 186
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -236,6 +236,9 @@ derectories      : 184
 ┃　　　┃　　　┃　　　┗━　[datadog anomaly detection algorithms](./DevOps/Monitoring/datadog/datadog anomaly detection algorithms.md)</br>
 ┃　　　┃　　　┃　　　┗━　[datadog 아키텍처](./DevOps/Monitoring/datadog/datadog 아키텍처.md)</br>
 ┃　　　┃　　　┃　　　┗━　[helmChart로 Agent 설치](./DevOps/Monitoring/datadog/helmChart로 Agent 설치.md)</br>
+┃　　　┃　　　┗━　[**deepflow**](./DevOps/Monitoring/deepflow)</br>
+┃　　　┃　　　┃　　　┗━　[DeepFlow](./DevOps/Monitoring/deepflow/DeepFlow.md)</br>
+┃　　　┃　　　┃　　　┗━　[DeepFlow 논문 요약](./DevOps/Monitoring/deepflow/DeepFlow 논문 요약.md)</br>
 ┃　　　┃　　　┗━　[**elk**](./DevOps/Monitoring/elk)</br>
 ┃　　　┃　　　┃　　　┗━　[ELK Stack](./DevOps/Monitoring/elk/ELK Stack.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ElasticSearch 검색 명령어](./DevOps/Monitoring/elk/ElasticSearch 검색 명령어.md)</br>
@@ -255,8 +258,9 @@ derectories      : 184
 ┃　　　┃　　　┗━　[**thanos**](./DevOps/Monitoring/thanos)</br>
 ┃　　　┃　　　┃　　　┗━　[Rule](./DevOps/Monitoring/thanos/Rule.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Thanos](./DevOps/Monitoring/thanos/Thanos.md)</br>
-┃　　　┃　　　┗━　[DeepFlow](./DevOps/Monitoring/DeepFlow.md)</br>
-┃　　　┃　　　┗━　[DeepFlow 논문 요약](./DevOps/Monitoring/DeepFlow 논문 요약.md)</br>
+┃　　　┃　　　┗━　[**victoria metrics**](./DevOps/Monitoring/victoria metrics)</br>
+┃　　　┃　　　┃　　　┗━　[VictoriaLogs](./DevOps/Monitoring/victoria metrics/VictoriaLogs.md)</br>
+┃　　　┃　　　┗━　[Gorilla Compression](./DevOps/Monitoring/Gorilla Compression.md)</br>
 ┃　　　┃　　　┗━　[Grok exporter](./DevOps/Monitoring/Grok exporter.md)</br>
 ┃　　　┃　　　┗━　[SLO, SLI, SLA](./DevOps/Monitoring/SLO, SLI, SLA.md)</br>
 ┃　　　┃　　　┗━　[telemetry](./DevOps/Monitoring/telemetry.md)</br>
@@ -576,6 +580,7 @@ derectories      : 184
 ┃　　　┗━　[**영상**](./개발/영상)</br>
 ┃　　　┃　　　┗━　[Resolution](./개발/영상/Resolution.md)</br>
 ┃　　　┃　　　┗━　[ffmpeg](./개발/영상/ffmpeg.md)</br>
+┃　　　┃　　　┗━　[hls, dash와 cmaf](./개발/영상/hls, dash와 cmaf.md)</br>
 ┃　　　┃　　　┗━　[비트레이트](./개발/영상/비트레이트.md)</br>
 ┃　　　┃　　　┗━　[자막 파일 포맷](./개발/영상/자막 파일 포맷.md)</br>
 ┃　　　┃　　　┗━　[컨테이너와 코덱](./개발/영상/컨테이너와 코덱.md)</br>
@@ -983,7 +988,6 @@ derectories      : 184
 ┃　　　┗━　[CQRS](./아키텍처 및 방법론/CQRS.md)</br>
 ┃　　　┗━　[HexagonalArchitecture](./아키텍처 및 방법론/HexagonalArchitecture.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XX4I1Clp**](./XX4I1Clp)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 

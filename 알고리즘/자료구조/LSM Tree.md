@@ -2,12 +2,11 @@ LSM 트리는 로그파일 기반으로 작성되는 방식의 파일 구조이�
 
 <img src="https://github.com/user-attachments/assets/78524848-9757-49ca-a543-7f7f4a53b5a3" style="height: 300px"/>
 
-
 ## 작동 방식
 
 ### 쓰기 작업
 
-LSM 트리는 데이터를 disk에 바로 쓰지 않고, 정렬된 메모리 테이블(memTable)과 로그파일에 먼저 쓴다. 
+LSM 트리는 데이터를 disk에 바로 쓰지 않고, 정렬된 메모리 테이블(memTable)과 로그파일에 먼저 쓴다.
 
 메모리 테이블은 주로 레드-블랙 트리를 사용하여 키-값 쌍을 기반으로 정렬된 구조를 유지한다.
 
@@ -29,8 +28,8 @@ SSTable의 크기가 임계치를 넘어서면, 해당 테이블을 두고 새 S
 
     <img src="https://github.com/user-attachments/assets/a52243cc-41eb-40c4-a8d2-0fa094cfaab9" style="height: 300px"/>
 
-    - 큰 단위로 압축이 이루어지기 때문에 쓰기 증폭(Write Amplification)을 최소화하는데 도움이 되지만, 큰 SS-Table을 병합할 떄 많은 시간과 자원이 필요하다.
-    - 또한, 쓰기 작업이 자주 일어나지 않는 경우 병합 대상이 없어 압축이 이루어지지 않고 SS-Table의 수만 증가하게 되어 읽기 성능이 저하될 수 있다.
+  - 큰 단위로 압축이 이루어지기 때문에 쓰기 증폭(Write Amplification)을 최소화하는데 도움이 되지만, 큰 SS-Table을 병합할 때 많은 시간과 자원이 필요하다.
+  - 또한, 쓰기 작업이 자주 일어나지 않는 경우 병합 대상이 없어 압축이 이루어지지 않고 SS-Table의 수만 증가하게 되어 읽기 성능이 저하될 수 있다.
 
 - 레벨 기반 압축(Level-Based Compaction): 이 방식은 SS-Table을 레벨에 따라 분류하고, 레벨별로 병합을 수행한다. 레벨 별 크기가 2제곱수로 증가하면 크기 계층 압축과 동일해진다.
 
@@ -60,10 +59,12 @@ LSM Tree를 사용하는 다양한 DB들이 있다.
 
 ---
 참고
-- https://www.scylladb.com/glossary/log-structured-merge-tree
-- https://www.slideshare.net/tomitakazutaka/cassandra-compaction
-- https://cassandra.apache.org/doc/stable/cassandra/operating/compaction/index.html
-- https://www.cs.umb.edu/~poneil/lsmtree.pdf
-- https://github.com/facebook/rocksdb/wiki/Compaction
-- https://hbase.apache.org/book.html#compaction
-- https://medium.com/rate-labs/%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0-from-wisckey-to-bourbon-a-learned-index-for-log-structured-merge-trees-c63abd3d061e
+
+- <https://www.scylladb.com/glossary/log-structured-merge-tree>
+- <https://www.slideshare.net/tomitakazutaka/cassandra-compaction>
+- <https://cassandra.apache.org/doc/stable/cassandra/operating/compaction/index.html>
+- <https://www.cs.umb.edu/~poneil/lsmtree.pdf>
+- <https://github.com/facebook/rocksdb/wiki/Compaction>
+- <https://hbase.apache.org/book.html#compaction>
+- <https://medium.com/rate-labs/%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0-from-wisckey-to-bourbon-a-learned-index-for-log-structured-merge-trees-c63abd3d061e>
+
