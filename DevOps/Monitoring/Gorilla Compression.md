@@ -1,6 +1,6 @@
 [Gorilla Compression](https://dl.acm.org/doi/10.14778/2824032.2824078)은 Facebook이 2015년 발표한 시계열 데이터 전용 압축 알고리즘이다. IoT, 모니터링 시스템, 로그 수집 등에서 대규모 시계열 데이터를 효율적으로 저장하고 전송하기 위해 고안되었으며, 시계열 데이터베이스(TSDB: Time Series Database)에서 널리 활용된다.
 
-아래 프로그램에도 Gorilla Compression과 비슷한 압축 로직이 사용되고 있다.
+아래 프로그램에도 Gorilla Compression에서 착안되었거나 유사한 압축 로직이 사용되고 있다.
 
 - Prometheus: time series chunk compression에서 유사한 기법 채택
 - InfluxDB: TSM(Time Structured Merge tree) 엔진에 유사한 delta/XOR 기법 적용
@@ -15,12 +15,12 @@ Gorilla Compression은 시계열 데이터를 압축하기 위해 시간(timesta
 
 1. 첫 번째 타임스탬프는 그대로 저장한다.
 2. 이후 타임스탬프는 **이전 타임스탬프와의 차이(delta)**를 저장한다.
-3. 두 번째부터는 **이전 delta와의 차이(delta of delta)**를 저장한다.
+3. 두 번째부터는 이전 delta와의 차이(delta of delta)를 저장한다.
 4. delta of delta 값은 가변 길이 비트 인코딩(variable-length encoding)을 사용해 적은 비트 수로 표현한다. (대부분의 delta-of-delta는 0에 가깝고, 0은 1비트에 저장할 수 있으므로 효율적이다.)
 
 ## Value 압축 (XOR 기반)
 
-시계열 값은 대체로 **천천히 변화**하거나 **비슷한 값이 반복**되므로, 이런 특성을 활용한 XOR 기반 압축을 수행한다.
+시계열 값은 대체로 천천히 변화하거나 비슷한 값이 반복되므로, 이런 특성을 활용한 XOR 기반 압축을 수행한다.
 
 - 첫 번째 값은 그대로 저장한다.
 - 이후 값은 이전 값과 XOR 연산을 수행한 결과를 저장한다.
