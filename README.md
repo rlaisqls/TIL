@@ -2,7 +2,7 @@
 
 ```
 files            : 793
-derectories      : 186
+derectories      : 185
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -250,14 +250,13 @@ derectories      : 186
 ┃　　　┃　　　┗━　[**loki**](./DevOps/Monitoring/loki)</br>
 ┃　　　┃　　　┃　　　┗━　[Loki Canary](./DevOps/Monitoring/loki/Loki Canary.md)</br>
 ┃　　　┃　　　┗━　[**prometheus**](./DevOps/Monitoring/prometheus)</br>
+┃　　　┃　　　┃　　　┗━　[Mimir out━of━order sample ingestion](./DevOps/Monitoring/prometheus/Mimir out━of━order sample ingestion.md)</br>
+┃　　　┃　　　┃　　　┗━　[Mimir와 Cortex](./DevOps/Monitoring/prometheus/Mimir와 Cortex.md)</br>
 ┃　　　┃　　　┃　　　┗━　[kiali with prometheus](./DevOps/Monitoring/prometheus/kiali with prometheus.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus](./DevOps/Monitoring/prometheus/prometheus.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus agent mode](./DevOps/Monitoring/prometheus/prometheus agent mode.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus glossary](./DevOps/Monitoring/prometheus/prometheus glossary.md)</br>
 ┃　　　┃　　　┃　　　┗━　[prometheus storage](./DevOps/Monitoring/prometheus/prometheus storage.md)</br>
-┃　　　┃　　　┗━　[**thanos**](./DevOps/Monitoring/thanos)</br>
-┃　　　┃　　　┃　　　┗━　[Rule](./DevOps/Monitoring/thanos/Rule.md)</br>
-┃　　　┃　　　┃　　　┗━　[Thanos](./DevOps/Monitoring/thanos/Thanos.md)</br>
 ┃　　　┃　　　┗━　[**victoria metrics**](./DevOps/Monitoring/victoria metrics)</br>
 ┃　　　┃　　　┃　　　┗━　[VictoriaLogs](./DevOps/Monitoring/victoria metrics/VictoriaLogs.md)</br>
 ┃　　　┃　　　┗━　[Bloom filter](./DevOps/Monitoring/Bloom filter.md)</br>
