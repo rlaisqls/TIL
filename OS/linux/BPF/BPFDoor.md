@@ -290,7 +290,7 @@ snprintf(inputcmd, sizeof(inputcmd), "/sbin/iptables -I INPUT -p tcp -s %s -j AC
 system(inputcmd);
 ```
 
-- 세션 종료 시 위에서 추가한 룰을 제거하여 흔적을 지운다.
+세션 종료 시 위에서 추가한 룰을 제거하여 흔적을 지운다.
 
 ```
 if (rcmd != NULL) system(rcmd); // -D PREROUTING
@@ -312,3 +312,4 @@ if (dcmd != NULL) system(dcmd); // -D INPUT
 - <https://www.ahnlab.com/ko/contents/content-center/35827>
 - <https://www.elastic.co/security-labs/a-peek-behind-the-bpfdoor>
 - <https://www.trendmicro.com/en_us/research/25/d/bpfdoor-hidden-controller.html>
+- <https://asec.ahnlab.com/ko/83742/>
