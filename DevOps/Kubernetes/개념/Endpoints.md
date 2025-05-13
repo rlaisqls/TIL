@@ -34,3 +34,9 @@ myapp-deployment-6d99f57cb4-x5gsm  1/1    Running  0         1h   10.244.2.204:8
 ```
 
 Pod의 IP 주소들이 엔드포인트의 주소들과 매칭된다는 것을 확인할 수 있다. 보이지 않는 곳에서 endpoints가 매칭된다는 사실을 확인했다.
+
+---
+참고
+  
+- <https://kubernetes.io/docs/reference/kubernetes-api/service-resources/endpoints-v1/>
+

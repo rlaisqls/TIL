@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 794
-derectories      : 185
+files            : 796
+derectories      : 186
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -145,6 +145,8 @@ derectories      : 185
 ┃　　　┃　　　┃　　　┃　　　┗━　[Resource Annotations & Labels](./DevOps/Kubernetes/Service Mesh/istio/Resource Annotations & Labels.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ServiceEntry](./DevOps/Kubernetes/Service Mesh/istio/ServiceEntry.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[gateway log debug 하는 법](./DevOps/Kubernetes/Service Mesh/istio/gateway log debug 하는 법.md)</br>
+┃　　　┃　　　┃　　　┗━　[**linkerd**](./DevOps/Kubernetes/Service Mesh/linkerd)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[linkerd](./DevOps/Kubernetes/Service Mesh/linkerd/linkerd.md)</br>
 ┃　　　┃　　　┃　　　┗━　[service mesh](./DevOps/Kubernetes/Service Mesh/service mesh.md)</br>
 ┃　　　┃　　　┗━　[**tools**](./DevOps/Kubernetes/tools)</br>
 ┃　　　┃　　　┃　　　┗━　[**Argo**](./DevOps/Kubernetes/tools/Argo)</br>
@@ -410,13 +412,14 @@ derectories      : 185
 ┃　　　┃　　　┃　　　┗━　[메모리 로딩](./OS/linux/BPF/메모리 로딩.md)</br>
 ┃　　　┃　　　┃　　　┗━　[서브프로그램](./OS/linux/BPF/서브프로그램.md)</br>
 ┃　　　┃　　　┗━　[**Disk & Dir**](./OS/linux/Disk & Dir)</br>
+┃　　　┃　　　┃　　　┗━　[Journaling File System](./OS/linux/Disk & Dir/Journaling File System.md)</br>
 ┃　　　┃　　　┃　　　┗━　[LVM](./OS/linux/Disk & Dir/LVM.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Linux 디렉토리 구조](./OS/linux/Disk & Dir/Linux 디렉토리 구조.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RAID](./OS/linux/Disk & Dir/RAID.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Symbolic Link](./OS/linux/Disk & Dir/Symbolic Link.md)</br>
 ┃　　　┃　　　┃　　　┗━　[od](./OS/linux/Disk & Dir/od.md)</br>
+┃　　　┃　　　┃　　　┗━　[rclone](./OS/linux/Disk & Dir/rclone.md)</br>
 ┃　　　┃　　　┃　　　┗━　[백업](./OS/linux/Disk & Dir/백업.md)</br>
-┃　　　┃　　　┃　　　┗━　[디스크　파티션](./OS/linux/Disk & Dir/디스크　파티션.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 종류](./OS/linux/Disk & Dir/파일 종류.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./OS/linux/Disk & Dir/파일 시스템.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./OS/linux/Disk & Dir/파일 관리 명령어.md)</br>
