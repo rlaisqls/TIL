@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 796
+files            : 797
 derectories      : 186
 ```
 
@@ -527,6 +527,7 @@ derectories      : 186
 ┃　　　┗━　[**보안**](./OS/보안)</br>
 ┃　　　┃　　　┗━　[엑세스 제어](./OS/보안/엑세스 제어.md)</br>
 ┃　　　┗━　[MKL](./OS/MKL.md)</br>
+┃　　　┗━　[XDG Base Directory](./OS/XDG Base Directory.md)</br>
 ┃　　　┗━　[c언어 컴파일과정](./OS/c언어 컴파일과정.md)</br>
 ┃　　　┗━　[exit code](./OS/exit code.md)</br>
 ┃　　　┗━　[유저, 커널레벨 스레드](./OS/유저, 커널레벨 스레드.md)</br>
