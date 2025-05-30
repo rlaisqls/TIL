@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 798
+files            : 802
 derectories      : 186
 ```
 
@@ -155,6 +155,7 @@ derectories      : 186
 ┃　　　┃　　　┃　　　┃　　　┗━　[Apps of Apps](./DevOps/Kubernetes/tools/Argo/Apps of Apps.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./DevOps/Kubernetes/tools/Argo/ArgoCD 설치.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Argo Events](./DevOps/Kubernetes/tools/Argo/Argo Events.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Argo Workflow Priority](./DevOps/Kubernetes/tools/Argo/Argo Workflow Priority.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Config Management Plugins](./DevOps/Kubernetes/tools/Argo/Config Management Plugins.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Health Check](./DevOps/Kubernetes/tools/Argo/Health Check.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**Karpenter**](./DevOps/Kubernetes/tools/Karpenter)</br>
@@ -231,6 +232,7 @@ derectories      : 186
 ┃　　　┃　　　┗━　[K8s Architecture](./DevOps/Kubernetes/K8s Architecture.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes](./DevOps/Kubernetes/Kubernetes.md)</br>
 ┃　　　┃　　　┗━　[Kubernetes Overview Diagrams](./DevOps/Kubernetes/Kubernetes Overview Diagrams.md)</br>
+┃　　　┃　　　┗━　[Kublet 지표](./DevOps/Kubernetes/Kublet 지표.md)</br>
 ┃　　　┃　　　┗━　[MetalLB](./DevOps/Kubernetes/MetalLB.md)</br>
 ┃　　　┗━　[**Monitoring**](./DevOps/Monitoring)</br>
 ┃　　　┃　　　┗━　[**datadog**](./DevOps/Monitoring/datadog)</br>
@@ -249,6 +251,7 @@ derectories      : 186
 ┃　　　┃　　　┃　　　┗━　[Logstash](./DevOps/Monitoring/elk/Logstash.md)</br>
 ┃　　　┃　　　┗━　[**grafana**](./DevOps/Monitoring/grafana)</br>
 ┃　　　┃　　　┃　　　┗━　[Granafa agent](./DevOps/Monitoring/grafana/Granafa agent.md)</br>
+┃　　　┃　　　┃　　　┗━　[Mixin](./DevOps/Monitoring/grafana/Mixin.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Pyroscope Distributor and Ingester](./DevOps/Monitoring/grafana/Pyroscope Distributor and Ingester.md)</br>
 ┃　　　┃　　　┗━　[**loki**](./DevOps/Monitoring/loki)</br>
 ┃　　　┃　　　┃　　　┗━　[Loki Canary](./DevOps/Monitoring/loki/Loki Canary.md)</br>
@@ -465,6 +468,7 @@ derectories      : 186
 ┃　　　┃　　　┗━　[**Network**](./OS/linux/Network)</br>
 ┃　　　┃　　　┃　　　┗━　[**DNS**](./OS/linux/Network/DNS)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[DNS 서버](./OS/linux/Network/DNS/DNS 서버.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[SRV, NAPTR](./OS/linux/Network/DNS/SRV, NAPTR.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[bind로 DNS 서버 정의하기](./OS/linux/Network/DNS/bind로 DNS 서버 정의하기.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**주요명령어**](./OS/linux/Network/주요명령어)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[arp](./OS/linux/Network/주요명령어/arp.md)</br>
