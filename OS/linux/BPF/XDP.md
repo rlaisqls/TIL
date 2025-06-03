@@ -7,7 +7,7 @@
 - Packet flow paths in the Linux kernel. XDP bypasses the networking stack and memory allocation for packet metadata.
 - The idea behind XDP is to **add an early hook in the RX path of the kernel**, and **let a user supplied eBPF program decide the fate of the packet**.
 - The hook is placed in the network interface controller (NIC) driver just after the interrupt processing, and before any memory allocation needed by the network stack itself, because memory allocation can be an expensive operation.
-- Due to this design, **XDP can drop 26 million packets per second per cor**e with commodity hardware.
+- Due to this design, **XDP can drop 26 million packets per second per core** with commodity hardware.
 
 - The eBPF program must pass a preverifier test before being loaded, to avoid executing malicious code in kernel space. The preverifier checks that the program contains no out-of-bounds accesses, loops or global variables.
 
@@ -31,6 +31,8 @@
 
 ---
 reference
-- https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/
-- https://www.netronome.com/blog/bpf-ebpf-xdp-and-bpfilter-what-are-these-things-and-what-do-they-mean-enterprise/
-- https://ebpf.io/
+
+- <https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/>
+- <https://www.netronome.com/blog/bpf-ebpf-xdp-and-bpfilter-what-are-these-things-and-what-do-they-mean-enterprise/>
+- <https://ebpf.io/>
+
