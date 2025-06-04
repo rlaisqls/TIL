@@ -47,12 +47,12 @@
 - 자주 실행되는 함수를 트레이싱할 경우 오버헤드가 크다.
 - 인라인 함수를 트레이싱 하려면 매우 번거롭다.
 - 사용자 공간 함수를 트레이싱 하는 경우에는 커널 공간을 들렀다가 가야 하므로 비효율적이다.
-- 지원되는 구문이 제한적이다. (위에서 말한 반복문 처럼)
+- 지원되는 구문이 제한적이다. (위에서 말한 반복문처럼)
 - 고정된 스택을 갖는다 (512바이트)
 
 ### eBPF: extended BPF
 
-- eBPF는 확장 BPF라는 뜻이다. 기존의 BPF에서 사용하던 머신에서 더 나아가서 레지스터의 크기를 늘려주고 스택과 맵을 도입하는 등의 변화가 있었다. 
+- eBPF는 확장 BPF라는 뜻이다. 기존의 BPF에서 사용하던 머신에서 더 나아가서 레지스터의 크기를 늘려주고 스택과 맵을 도입하는 등의 변화가 있었다.
 - 그래서 기존의 BPF를 cBPF (classic BPF)라고 부르고 새로운 BPF를 eBPF로 부르게 되었다.
 - 현재의 리눅스 커널은 둘을 모두 지원하고, eBPF를 처리하는 가상머신에서 기존의 cBPF도 같이 처리하는 형태로 작동한다.
 - cBPF와 eBPF 스펙의 상세 차이는 다음과 같다.
@@ -70,7 +70,7 @@
 
 - **Cilium**
   - Cilium은 eBPF 기반 네트워킹, 보안 및 observability를 제공하는 오픈 소스 프로젝트이다. 컨테이너 워크로드의 새로운 확장성, 보안 및 가시성 요구사항을 해결하기 위해 설계되었다. Service Mesh, Hubble, CNI 3가지 타입이 있다.
-    
+
     <img height="222" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/1bffe60c-f398-4237-a61f-229c17853562">
 
     <img height="222" src="https://github.com/rlaisqls/TIL/assets/81006587/94da48b6-46c3-4955-885e-2d85d9392d3a">
@@ -80,12 +80,14 @@
   - Calico의 eBPF 데이터 플레인은 eBPF 프로그램의 성능, 속도 및 효율성을 활용하여 환경에 대한 네트워킹, 로드 밸런싱 및 커널 내 보안을 강화한다.
 
     <img height="222" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/46dcc883-63dc-4680-8477-281547a2ad60">
-   
+
 ---
 참고
-- https://www.tcpdump.org/papers/bpf-usenix93.pdf
-- https://netflixtechblog.com/how-netflix-uses-ebpf-flow-logs-at-scale-for-network-insight-e3ea997dca96
-- https://www.brendangregg.com/bpf-performance-tools-book.html
-- https://www.amazon.com/gp/reader/0136554822?asin=B081ZDXNL3&revisionId=c47b7fdb&format=1&depth=1
-- https://en.wikipedia.org/wiki/Berkeley_Packet_Filter
-- https://www.youtube.com/watch?v=lrSExTfS-iQ
+
+- <https://www.tcpdump.org/papers/bpf-usenix93.pdf>
+- <https://netflixtechblog.com/how-netflix-uses-ebpf-flow-logs-at-scale-for-network-insight-e3ea997dca96>
+- <https://www.brendangregg.com/bpf-performance-tools-book.html>
+- <https://www.amazon.com/gp/reader/0136554822?asin=B081ZDXNL3&revisionId=c47b7fdb&format=1&depth=1>
+- <https://en.wikipedia.org/wiki/Berkeley_Packet_Filter>
+- <https://www.youtube.com/watch?v=lrSExTfS-iQ>
+
