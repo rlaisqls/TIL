@@ -41,6 +41,15 @@ ls ~/Library/Application\ Support/Firefox/Profiles/
 
 ## Custum Search Url 설정
 
-1. about:config에서 browser.urlbar.update2.engineAliasRefresh를 True로 변경
+1. `about:config`에서 `browser.urlbar.update2.engineAliasRefresh`를 True로 변경
 
-2. about:preferences#search > Search Shortcuts에서 원하는 항목 추가
+2. `about:preferences#search` > Search Shortcuts에서 원하는 항목 추가
+
+## 웹사이트 단축키 무시하기
+
+1. `about:config`에서 `permissions.default.shortcuts`검색
+2. 값을 2로 변경 (기본값: 1)
+
+- 0: 허용
+- 1: 묻기 (기본값)
+- 2: 차단
