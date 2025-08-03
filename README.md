@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 802
-derectories      : 186
+files            : 805
+derectories      : 187
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -62,6 +62,7 @@ derectories      : 186
 ┃　　　┃　　　┗━　[mermaid 문법](./개발/Tools/mermaid 문법.md)</br>
 ┃　　　┃　　　┗━　[mise](./개발/Tools/mise.md)</br>
 ┃　　　┃　　　┗━　[Spark](./개발/Tools/Spark.md)</br>
+┃　　　┃　　　┗━　[Tampermonkey](./개발/Tools/Tampermonkey.md)</br>
 ┃　　　┃　　　┗━　[Tridactyl](./개발/Tools/Tridactyl.md)</br>
 ┃　　　┗━　[소프트웨어 공학](./개발/소프트웨어 공학.md)</br>
 ┃　　　┗━　[압축 알고리즘](./개발/압축 알고리즘.md)</br>
@@ -256,6 +257,7 @@ derectories      : 186
 ┃　　　　　　　┗━　[웹서버와 WAS](./서버/WAS/웹서버와 WAS.md)</br>
 ┗━　[**수학**](./수학)</br>
 ┃　　　┗━　[**통계학**](./수학/통계학)</br>
+┃　　　　　　　┗━　[곱셈공식](./수학/통계학/곱셈공식.md)</br>
 ┃　　　　　　　┗━　[윌콕슨 순위합 검정](./수학/통계학/윌콕슨 순위합 검정.md)</br>
 ┃　　　　　　　┗━　[t━value](./수학/통계학/t━value.md)</br>
 ┗━　[**아키텍처 및 방법론**](./아키텍처 및 방법론)</br>
@@ -997,10 +999,10 @@ derectories      : 186
 ┃　　　┗━　[exit code](./OS/exit code.md)</br>
 ┃　　　┗━　[MKL](./OS/MKL.md)</br>
 ┃　　　┗━　[XDG Base Directory](./OS/XDG Base Directory.md)</br>
+┗━　[CLAUDE](./CLAUDE.md)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXxoDdph**](./XXxoDdph)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
