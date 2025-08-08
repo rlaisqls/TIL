@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 806
+files            : 808
 derectories      : 187
 ```
 
@@ -55,6 +55,7 @@ derectories      : 187
 ┃　　　┃　　　┃　　　┗━　[vim](./개발/Tools/vi/vim.md)</br>
 ┃　　　┃　　　┃　　　┗━　[vim 단축키](./개발/Tools/vi/vim 단축키.md)</br>
 ┃　　　┃　　　┗━　[Airflow](./개발/Tools/Airflow.md)</br>
+┃　　　┃　　　┗━　[expr](./개발/Tools/expr.md)</br>
 ┃　　　┃　　　┗━　[Firefox 설정](./개발/Tools/Firefox 설정.md)</br>
 ┃　　　┃　　　┗━　[GTM](./개발/Tools/GTM.md)</br>
 ┃　　　┃　　　┗━　[harlequin](./개발/Tools/harlequin.md)</br>
@@ -885,6 +886,7 @@ derectories      : 187
 ┃　　　┃　　　┃　　　┗━　[od](./OS/linux/Disk & Dir/od.md)</br>
 ┃　　　┃　　　┃　　　┗━　[RAID](./OS/linux/Disk & Dir/RAID.md)</br>
 ┃　　　┃　　　┃　　　┗━　[rclone](./OS/linux/Disk & Dir/rclone.md)</br>
+┃　　　┃　　　┃　　　┗━　[SMB](./OS/linux/Disk & Dir/SMB.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Symbolic Link](./OS/linux/Disk & Dir/Symbolic Link.md)</br>
 ┃　　　┃　　　┗━　[**ELF**](./OS/linux/ELF)</br>
 ┃　　　┃　　　┃　　　┗━　[ELF](./OS/linux/ELF/ELF.md)</br>
@@ -1004,7 +1006,6 @@ derectories      : 187
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXzpLhkg**](./XXzpLhkg)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
