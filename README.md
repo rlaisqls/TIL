@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 810
+files            : 813
 derectories      : 187
 ```
 
@@ -58,6 +58,7 @@ derectories      : 187
 ┃　　　┃　　　┗━　[expr](./개발/Tools/expr.md)</br>
 ┃　　　┃　　　┗━　[Firefox 설정](./개발/Tools/Firefox 설정.md)</br>
 ┃　　　┃　　　┗━　[GTM](./개발/Tools/GTM.md)</br>
+┃　　　┃　　　┗━　[hammerspoon](./개발/Tools/hammerspoon.md)</br>
 ┃　　　┃　　　┗━　[harlequin](./개발/Tools/harlequin.md)</br>
 ┃　　　┃　　　┗━　[Intellij Profiling tools](./개발/Tools/Intellij Profiling tools.md)</br>
 ┃　　　┃　　　┗━　[Makefile](./개발/Tools/Makefile.md)</br>
@@ -489,6 +490,7 @@ derectories      : 187
 ┃　　　┗━　[활성화함수](./AI/활성화함수.md)</br>
 ┃　　　┗━　[CNN](./AI/CNN.md)</br>
 ┃　　　┗━　[DropOut](./AI/DropOut.md)</br>
+┃　　　┗━　[EIF4G2](./AI/EIF4G2.md)</br>
 ┃　　　┗━　[Keras](./AI/Keras.md)</br>
 ┃　　　┗━　[Optimizer](./AI/Optimizer.md)</br>
 ┃　　　┗━　[RAG](./AI/RAG.md)</br>
@@ -567,6 +569,7 @@ derectories      : 187
 ┃　　　┃　　　┃　　　┗━　[**Node Scheduling**](./DevOps/Kubernetes/개념/Node Scheduling)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Assigning Pods to Nodes](./DevOps/Kubernetes/개념/Node Scheduling/Assigning Pods to Nodes.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[cordon, drain](./DevOps/Kubernetes/개념/Node Scheduling/cordon, drain.md)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Scheduling](./DevOps/Kubernetes/개념/Node Scheduling/Scheduling.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Taints and Tolerations](./DevOps/Kubernetes/개념/Node Scheduling/Taints and Tolerations.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**object**](./DevOps/Kubernetes/개념/object)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Annotation](./DevOps/Kubernetes/개념/object/Annotation.md)</br>
@@ -1008,6 +1011,7 @@ derectories      : 187
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 ┗━　[README](./README.md)</br>
+┗━　[**XXscIyGM**](./XXscIyGM)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
