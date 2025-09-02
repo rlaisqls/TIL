@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 813
+files            : 812
 derectories      : 187
 ```
 
@@ -629,7 +629,6 @@ derectories      : 187
 ┃　　　┃　　　┃　　　┗━　[EKS Control Plane](./DevOps/Kubernetes/EKS/EKS Control Plane.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS kubecofig](./DevOps/Kubernetes/EKS/EKS kubecofig.md)</br>
 ┃　　　┃　　　┃　　　┗━　[EKS Network BestPractice](./DevOps/Kubernetes/EKS/EKS Network BestPractice.md)</br>
-┃　　　┃　　　┃　　　┗━　[EKS Spot Instances with Karpenter](./DevOps/Kubernetes/EKS/EKS Spot Instances with Karpenter.md)</br>
 ┃　　　┃　　　┃　　　┗━　[IP addresse prefix](./DevOps/Kubernetes/EKS/IP addresse prefix.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NLB IP mode](./DevOps/Kubernetes/EKS/NLB IP mode.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node not Ready](./DevOps/Kubernetes/EKS/Node not Ready.md)</br>
@@ -1011,7 +1010,7 @@ derectories      : 187
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXscIyGM**](./XXscIyGM)</br>
+┗━　[**XXnTq16r**](./XXnTq16r)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)

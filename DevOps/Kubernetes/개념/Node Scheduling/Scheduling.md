@@ -343,77 +343,23 @@ Preemption 제한사항
     containers: [...]
   ```
 
-**문제 상황 분석:**
-
 1. web-pod를 Node2에 스케줄링하려 함
-2. Node2의 모든 Pod를 제거해도 소용없음
-3. 왜? Node1의 pod-a가 "같은 zone(zone-a)에 app:web Pod 금지" 규칙을 가짐
-4. web-pod는 app:web 라벨을 가지므로, zone-a 어디에도 배치 불가
-5. 해결하려면 Node1의 pod-a를 제거해야 함 (= Cross Node Preemption)
+2. Node1의 pod-a가 "같은 zone(zone-a)에 app:web Pod 금지" 규칙을 가지고,
+   web-pod는 app:web 라벨을 가지므로, zone-a 어디에도 배치 불가
+3. 해결하려면 Node1의 pod-a를 제거해야 함 (= Cross Node Preemption)
 
-**현재 동작:**
-
-- 스케줄러: "Node2에서 아무리 Pod를 제거해도 web-pod 스케줄링 불가"
-- 결과: web-pod는 계속 Pending
-
-**이상적인 동작 (미지원):**
-
-- Node1의 pod-a를 제거하면 web-pod 스케줄링 가능
 - 하지만 이는 다른 노드의 Pod를 건드리는 것
-
-b) 비로컬 리소스 경쟁 케이스:
-
-```yaml
-# Node1에서 실행 중 - PersistentVolume 사용
-apiVersion: v1
-kind: Pod
-metadata:
-  name: database-pod
-spec:
-  priorityClassName: low-priority
-  volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: unique-pvc  # 단독 사용만 가능한 Volume
-  containers: [...]
-
-# Node2에 스케줄링하려는 Pod
-apiVersion: v1
-kind: Pod
-metadata:
-  name: app-pod
-spec:
-  priorityClassName: high-priority
-  volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: unique-pvc  # 같은 Volume 필요
-  containers: [...]
-```
-
-**문제:**
-
-- app-pod가 unique-pvc를 사용하려면 database-pod를 제거해야 함
-- 하지만 database-pod는 다른 노드(Node1)에 있음
-- Cross Node Preemption이 필요
-
-**미지원 이유:**
-
-1. **성능 문제**:
-   - 각 노드마다 "이 Pod를 제거하면 다른 노드의 Pod가 스케줄링 가능한가?" 검사
-   - N개 노드, M개 Pod라면 O(N×M) 이상의 복잡도
-2. **구현 복잡성**:
-
-   - 스케줄러가 모든 predicate 함수의 내부 동작을 알아야 함
-   - affinity, volume, 네트워크 정책 등 모든 제약사항 고려 필요
-
-3. **예측 불가능성**:
-   - 한 노드의 Pod 스케줄링이 전혀 다른 노드의 Pod에 영향
-   - 운영자 입장에서 디버깅과 예측이 매우 어려움
+- web-pod의 priority가 높지만 preemption 하지 못하고 pending으로 남음
 
 ---
 
-Configuring Scheduler Profiles
+1. 낮은 우선순위 Pod에 대한 Inter-Pod Affinity. 깨지는지, 아닌지
+
+2. ignoredDuringExecution이어도 내쫒는가
+
+---
+
+## Configuring Scheduler Profiles
 
 - 스케줄러의 동작을 커스터마이징하기 위한 프로파일 설정
 - 스케줄링 단계:
@@ -460,6 +406,7 @@ profiles:
 ```
 
 ---
+
 참고
 
 - <https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/>
