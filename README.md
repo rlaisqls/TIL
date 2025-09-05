@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 812
+files            : 809
 derectories      : 187
 ```
 
@@ -38,7 +38,6 @@ derectories      : 187
 ┃　　　┃　　　┃　　　┗━　[**Flow**](./개발/Tools/Git/Flow)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[GitFlow](./개발/Tools/Git/Flow/GitFlow.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[GithubFlow](./개발/Tools/Git/Flow/GithubFlow.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[TBD](./개발/Tools/Git/Flow/TBD.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**hooks**](./개발/Tools/Git/hooks)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[파일트리 자동생성](./개발/Tools/Git/hooks/파일트리 자동생성.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[githook을 위한 perl command](./개발/Tools/Git/hooks/githook을 위한 perl command.md)</br>
@@ -46,7 +45,6 @@ derectories      : 187
 ┃　　　┃　　　┃　　　┗━　[자동커밋](./개발/Tools/Git/자동커밋.md)</br>
 ┃　　　┃　　　┃　　　┗━　[GitLab](./개발/Tools/Git/GitLab.md)</br>
 ┃　　　┃　　　┃　　　┗━　[git reflog](./개발/Tools/Git/git reflog.md)</br>
-┃　　　┃　　　┃　　　┗━　[rebase](./개발/Tools/Git/rebase.md)</br>
 ┃　　　┃　　　┃　　　┗━　[rebase 쉽게 하는법](./개발/Tools/Git/rebase 쉽게 하는법.md)</br>
 ┃　　　┃　　　┃　　　┗━　[rerere](./개발/Tools/Git/rerere.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Selfhosted Runner](./개발/Tools/Git/Selfhosted Runner.md)</br>
@@ -65,7 +63,6 @@ derectories      : 187
 ┃　　　┃　　　┗━　[mermaid 문법](./개발/Tools/mermaid 문법.md)</br>
 ┃　　　┃　　　┗━　[mise](./개발/Tools/mise.md)</br>
 ┃　　　┃　　　┗━　[Spark](./개발/Tools/Spark.md)</br>
-┃　　　┃　　　┗━　[Tampermonkey](./개발/Tools/Tampermonkey.md)</br>
 ┃　　　┃　　　┗━　[Tridactyl](./개발/Tools/Tridactyl.md)</br>
 ┃　　　┗━　[소프트웨어 공학](./개발/소프트웨어 공학.md)</br>
 ┃　　　┗━　[압축 알고리즘](./개발/압축 알고리즘.md)</br>
@@ -490,8 +487,9 @@ derectories      : 187
 ┃　　　┗━　[활성화함수](./AI/활성화함수.md)</br>
 ┃　　　┗━　[CNN](./AI/CNN.md)</br>
 ┃　　　┗━　[DropOut](./AI/DropOut.md)</br>
-┃　　　┗━　[EIF4G2](./AI/EIF4G2.md)</br>
+┃　　　┗━　[HNSW](./AI/HNSW.md)</br>
 ┃　　　┗━　[Keras](./AI/Keras.md)</br>
+┃　　　┗━　[Langchain　Chain　Options](./AI/Langchain　Chain　Options.md)</br>
 ┃　　　┗━　[Optimizer](./AI/Optimizer.md)</br>
 ┃　　　┗━　[RAG](./AI/RAG.md)</br>
 ┃　　　┗━　[RNN](./AI/RNN.md)</br>
@@ -884,7 +882,6 @@ derectories      : 187
 ┃　　　┃　　　┃　　　┗━　[파일 관리 명령어](./OS/linux/Disk & Dir/파일 관리 명령어.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 시스템](./OS/linux/Disk & Dir/파일 시스템.md)</br>
 ┃　　　┃　　　┃　　　┗━　[파일 종류](./OS/linux/Disk & Dir/파일 종류.md)</br>
-┃　　　┃　　　┃　　　┗━　[Journaling File System](./OS/linux/Disk & Dir/Journaling File System.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Linux 디렉토리 구조](./OS/linux/Disk & Dir/Linux 디렉토리 구조.md)</br>
 ┃　　　┃　　　┃　　　┗━　[LVM](./OS/linux/Disk & Dir/LVM.md)</br>
 ┃　　　┃　　　┃　　　┗━　[od](./OS/linux/Disk & Dir/od.md)</br>
@@ -1010,7 +1007,7 @@ derectories      : 187
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXnTq16r**](./XXnTq16r)</br>
+┗━　[**XXCA2tR4**](./XXCA2tR4)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
