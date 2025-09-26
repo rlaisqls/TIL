@@ -39,13 +39,14 @@ func performOperation(ctx context.Context) error {
 }
 ```
 
-## Solutions:
+## Solutions
 
 Before being able to solve the problem, you need to determine what is actually failing.
 
 - **Investigate Network connectivity**
   - Can required systems communicate in general? Are there any firewalls in place that can be preventing communication? If in the cloud, are the instances in the same VPC/Network? Do the instances belong to the correct/expected Security Groups?
 - **Resource Contention**
-  - Are we asking too much of the underlying provisioned infrastructure? What is our CPU/Memory usage? 
+  - Are we asking too much of the underlying provisioned infrastructure? What is our CPU/Memory usage?
 - **Slow I/O**
   - Are we using an external storage backend? Are we seeing I/O wait? Are we in the cloud? Do we have enough IOPS provisioned for our storage?
+
