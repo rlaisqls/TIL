@@ -1,24 +1,17 @@
 
-> https://www.baeldung.com/java-cipher-class
+암호화는 메시지를 인코딩하여 인가된 사용자만 이해하거나 접근할 수 있도록 하는 프로세스임.
 
-Simply put, encryption is the process of **encoding a message** such that only authorized users can understand or access it.
+평문(plaintext)이라고 하는 메시지를 암호화 알고리즘(cipher)을 사용하여 암호화하면, 인가된 사용자만 복호화를 통해 읽을 수 있는 암호문(ciphertext)이 생성됨.
 
-The message, referred to as plaintext, is encrypted using an encryption algorithm – a cipher – generating ciphertext that can only be read by authorized users via decryption.
+## Cipher
 
-In this article, we describe in detail the core Cipher class, which provides cryptographic encryption and decryption functionality in Java.
-
-## Cipher Class
-
-**Java Cryptography Extension(JCE)** is the part of the Java Cryptography Architecture(JCA) that provides an application with cryptographic ciphers for data encryption and decryption as well as hashing of private data.
-
-The `javax.crypto.Cipher` class forms the core of the JCE framework, providing the functionality for encryption and decryption.
+- JCE(Java Cryptography Extension)는 JCA(Java Cryptography Architecture)의 일부로, 애플리케이션에 데이터 암호화/복호화 및 개인 데이터 해싱을 위한 암호화 cipher 제공
+- `javax.crypto.Cipher` 클래스는 JCE 프레임워크의 핵심으로, 암호화 및 복호화 기능 제공
 
 ```java
 public class Cipher {
-
     private static final Debug debug =
                         Debug.getInstance("jca", "Cipher");
-
     private static final Debug pdebug =
                         Debug.getInstance("provider", "Provider");
     private static final boolean skipDebug =
@@ -37,16 +30,12 @@ public class Cipher {
 }
 ```
 
-## Cipher Instatntiation
-
-To instantiate a Cipher object, we call the static getInstance method, passing the name of the requested transformation. Optionally, the name of a provider may be specified.
-
-Let's write an example class illustrating the instantiation of a Cipher:
+- `getInstance` 메서드를 호출하고 요청된 변환(transformation) 이름 전달
+- 선택적으로 공급자(provider) 이름 지정 가능
 
 ```java
 public class Encryptor {
-
-    public byte[] encryptMessage(byte[] message, byte[] keyBytes) 
+    public byte[] encryptMessage(byte[] message, byte[] keyBytes)
       throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException {
         Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
         //...
@@ -54,53 +43,38 @@ public class Encryptor {
 }
 ```
 
-The transformation AES/ECB/PKCS5Padding tells the getInstance method to instantiate the Cipher object as an AES cipher with ECB mode of operation and PKCS5 padding scheme.
+스레드 안전성
 
-We can also instantiate the Cipher object by specifying only the algorithm in the transformation:
+- Cipher 클래스는 내부 동기화 없이 상태를 가진 클래스
+- `init()` 또는 `update()` 같은 메서드는 특정 Cipher 인스턴스의 내부 상태 변경
+- 따라서 Cipher 클래스는 스레드 안전하지 않음
+- 암호화/복호화 요구사항마다 하나의 Cipher 인스턴스 생성 필요
 
-```java
-Cipher cipher = Cipher.getInstance("AES");
-```
+Keys
 
-In this case, Java will use provider-specific default values for the mode and padding scheme.
-
-Note that getInstance will throw a NoSuchAlgorithmException if the transformation is null, empty, or in an invalid format, or if the provider doesn't support it. Also it will throw a NoSuchPaddingException if the transformation contains an unsupported padding scheme.
-
-
-## Thread-Safety
-
-The Cipher class is a stateful one without any form of internal synchronization. As a matter of fact, methods like `init()` or `update()` will change the internal state of a particular Cipher instance.
-
-Therefore, the Cipher class is not thread-safe. So we should create one Cipher instance per encryption/decryption need.
-
-> reference: https://www.baeldung.com/java-cipher-class
-
-## Keys
-
-The Key interface represents keys for cryptographic operations. Keys are opaque containers that hold an encoded key, the key's encoding format, and its cryptographic algorithm.
-
-Keys are generally obtained through key generators, certificates, or key specifications using a key factory.
-
-Let's create a symmetric Key from the supplied key bytes:
+- Key 인터페이스는 암호화 작업을 위한 키를 나타냄
+- 키는 인코딩된 키, 키의 인코딩 형식, 암호화 알고리즘을 보유하는 불투명 컨테이너
+- 일반적으로 키 생성기, 인증서 또는 키 팩토리를 사용한 키 사양을 통해 얻음
+- 제공된 키 바이트에서 대칭 키 생성:
 
 ```java
 SecretKey secretKey = new SecretKeySpec(keyBytes, "AES");
 ```
 
-## Cipher Initialization
+초기화
 
-We call the `init()` method to **initialize the Cipher object with a Key** or **Certificate and an `opmode` indicating the operation mode of the cipher.**
+- `init()` 메서드를 호출하여 Key 또는 Certificate와 cipher의 동작 모드를 나타내는 `opmode`로 Cipher 객체 초기화
+- 선택적으로 난수 소스 전달 가능
+- 기본적으로 최고 우선순위 설치 공급자의 SecureRandom 구현 사용, 그렇지 않으면 시스템 제공 소스 사용
+- 선택적으로 알고리즘별 매개변수 집합 지정 가능
+- 예: `IvParameterSpec`을 전달하여 초기화 벡터 지정 가능
 
-Optionally, we can pass in a source of randomness. By default, a SecureRandom implementation of the highest-priority installed provider is used. Otherwise, it'll use a `system-provided` source. We can specify a set of algorithm-specific parameters optionally. For example, we can pass an `IvParameterSpec` to specify an initialization vector.
+Cipher 동작 모드
 
-Here are the available cipher operation modes:
-
-- **ENCRYPT_MODE:** initialize cipher object to encryption mode
-- **DECRYPT_MODE:** initialize cipher object to decryption mode
-- **WRAP_MODE:** initialize cipher object to key-wrapping mode
-- **UNWRAP_MODE:** initialize cipher object to key-unwrapping mode
-
-Let's initialize the Cipher object:
+- `ENCRYPT_MODE`: cipher 객체를 암호화 모드로 초기화
+- `DECRYPT_MODE`: cipher 객체를 복호화 모드로 초기화
+- `WRAP_MODE`: cipher 객체를 키 래핑 모드로 초기화
+- `UNWRAP_MODE`: cipher 객체를 키 언래핑 모드로 초기화
 
 ```java
 Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
@@ -109,37 +83,30 @@ cipher.init(Cipher.ENCRYPT_MODE, secretKey);
 // ...
 ```
 
-Now, the init method throws an InvalidKeyException if the supplied key is inappropriate for initializing the cipher, like when a key length/encoding is invalid.
+- `init` 메서드는 제공된 키가 cipher 초기화에 부적절하면 `InvalidKeyException` 발생 (키 길이/인코딩 잘못됨)
+- cipher에 키에서 결정할 수 없는 특정 알고리즘 매개변수가 필요하거나, 키 크기가 최대 허용 키 크기를 초과하는 경우에도 발생 (JCE 관할권 정책 파일에서 결정)
+- Certificate 사용 예
 
-It's also thrown when <u>the cipher requires certain algorithm parameters that cannot be determined from the key</u>, or <u>if the key has a key size that exceeds the maximum allowable key size</u> (determined from the configured JCE jurisdiction policy files).
+    ```java
+    public byte[] encryptMessage(byte[] message, Certificate certificate)
+                    throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException {
+                        Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+                        cipher.init(Cipher.ENCRYPT_MODE, certificate);
+                        // ...
+                    }
+    ```
 
-Let's look at an example using a Certificate:
+암호화 및 복호화
 
-```java
-public byte[] encryptMessage(byte[] message, Certificate certificate) 
-  throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException {
- 
-    Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-    cipher.init(Cipher.ENCRYPT_MODE, certificate);
-    // ...
-}
-```
-
-The Cipher object gets the public key for data encryption from the certificate by calling the getPublicKey method.
-
-## Encryption and Decryption
-
-After initializing the Cipher object, we call the `doFinal()` method to perform the encryption or decryption operation. This method returns a byte array containing the encrypted or decrypted message.
-
-The `doFinal()` method also resets the Cipher object to the state it was in when previously initialized via a call to `init()` method, making the Cipher object available to encrypt or decrypt additional messages.
-
-Let's call doFinal in our encryptMessage method:
+- Cipher 객체 초기화 후 `doFinal()` 메서드를 호출하여 암호화 또는 복호화 작업 수행
+- 이 메서드는 암호화되거나 복호화된 메시지를 포함하는 바이트 배열 반환
+- `doFinal()` 메서드는 Cipher 객체를 `init()` 메서드를 통해 이전에 초기화된 상태로 재설정
+- Cipher 객체를 추가 메시지 암호화 또는 복호화에 사용 가능하게 함
 
 ```java
 public byte[] encryptMessage(byte[] message, byte[] keyBytes)
-  throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException, 
+  throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException,
     BadPaddingException, IllegalBlockSizeException {
- 
     Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
     SecretKey secretKey = new SecretKeySpec(keyBytes, "AES");
     cipher.init(Cipher.ENCRYPT_MODE, secretKey);
@@ -147,13 +114,12 @@ public byte[] encryptMessage(byte[] message, byte[] keyBytes)
 }
 ```
 
-To perform a decrypt operation, we change the opmode to DECRYPT_MODE:
+- 복호화 작업을 수행하려면 opmode를 DECRYPT_MODE로 변경:
 
 ```java
-public byte[] decryptMessage(byte[] encryptedMessage, byte[] keyBytes) 
-  throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, 
+public byte[] decryptMessage(byte[] encryptedMessage, byte[] keyBytes)
+  throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException,
     BadPaddingException, IllegalBlockSizeException {
- 
     Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
     SecretKey secretKey = new SecretKeySpec(keyBytes, "AES");
     cipher.init(Cipher.DECRYPT_MODE, secretKey);
@@ -161,15 +127,14 @@ public byte[] decryptMessage(byte[] encryptedMessage, byte[] keyBytes)
 }
 ```
 
-## exmaple code
+### 예제 코드
 
-In this test, we use AES encryption algorithm with a 128-bit key and assert that the decrypted result is equal to the original message text:
+128비트 키로 AES 암호화 알고리즘을 사용하고 복호화된 결과가 원본 메시지 텍스트와 같은지 확인하는 테스트
 
 ```java
 @Test
-public void whenIsEncryptedAndDecrypted_thenDecryptedEqualsOriginal() 
+public void whenIsEncryptedAndDecrypted_thenDecryptedEqualsOriginal()
   throws Exception {
- 
     String encryptionKeyString =  "thisisa128bitkey";
     String originalMessage = "This is a secret message";
     byte[] encryptionKeyBytes = encryptionKeyString.getBytes();
@@ -187,9 +152,10 @@ public void whenIsEncryptedAndDecrypted_thenDecryptedEqualsOriginal()
 }
 ```
 
-## Conclusion
+---
 
-In this article, we discussed the Cipher class and presented usage examples. More details on the Cipher class and the JCE Framework can be found in the [class documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/javax/crypto/Cipher.html) and the [Java Cryptography Architecture (JCA) Reference Guide](https://docs.oracle.com/javase/9/security/java-cryptography-architecture-jca-reference-guide.htm)
+참고:
 
-Implementation of all these examples and code snippets can be found over on GitHub. This is a Maven-based project, so it should be easy to import and run as it is.
-
+- <https://www.baeldung.com/java-cipher-class>
+- <https://docs.oracle.com/en/java/javase/11/docs/api/java.base/javax/crypto/Cipher.html>
+- <https://docs.oracle.com/javase/9/security/java-cryptography-architecture-jca-reference-guide.htm>

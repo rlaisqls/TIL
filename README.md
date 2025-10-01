@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 810
+files            : 813
 derectories      : 187
 ```
 
@@ -12,8 +12,10 @@ derectories      : 187
 .
 ┗━　[**개발**](./개발)</br>
 ┃　　　┗━　[**암호화**](./개발/암호화)</br>
+┃　　　┃　　　┗━　[비트코인 백서](./개발/암호화/비트코인 백서.md)</br>
 ┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
-┃　　　┃　　　┗━　[Certificate formats](./개발/암호화/Certificate formats.md)</br>
+┃　　　┃　　　┗━　[Alice and Bob](./개발/암호화/Alice and Bob.md)</br>
+┃　　　┃　　　┗━　[Certificate_formats](./개발/암호화/Certificate_formats.md)</br>
 ┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
 ┃　　　┃　　　┗━　[DB 암호화](./개발/암호화/DB 암호화.md)</br>
 ┃　　　┃　　　┗━　[Keytool](./개발/암호화/Keytool.md)</br>
@@ -513,6 +515,7 @@ derectories      : 187
 ┃　　　┃　　　┃　　　┗━　[Baston Host](./DevOps/AWS/Security/Baston Host.md)</br>
 ┃　　　┃　　　┃　　　┗━　[KMS](./DevOps/AWS/Security/KMS.md)</br>
 ┃　　　┃　　　┗━　[API Gateway](./DevOps/AWS/API Gateway.md)</br>
+┃　　　┃　　　┗━　[AWS 2024 Summit Seoul](./DevOps/AWS/AWS 2024 Summit Seoul.md)</br>
 ┃　　　┃　　　┗━　[AWS cloud computing](./DevOps/AWS/AWS cloud computing.md)</br>
 ┃　　　┃　　　┗━　[AWS Organization](./DevOps/AWS/AWS Organization.md)</br>
 ┃　　　┃　　　┗━　[Fault Injection Semulator](./DevOps/AWS/Fault Injection Semulator.md)</br>
@@ -1008,6 +1011,7 @@ derectories      : 187
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 ┗━　[README](./README.md)</br>
+┗━　[**XXA2U3Cu**](./XXA2U3Cu)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
