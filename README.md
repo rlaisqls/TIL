@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 813
-derectories      : 187
+files            : 815
+derectories      : 188
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -13,6 +13,7 @@ derectories      : 187
 ┗━　[**개발**](./개발)</br>
 ┃　　　┗━　[**암호화**](./개발/암호화)</br>
 ┃　　　┃　　　┗━　[비트코인 백서](./개발/암호화/비트코인 백서.md)</br>
+┃　　　┃　　　┗━　[타원곡선 암호](./개발/암호화/타원곡선 암호.md)</br>
 ┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
 ┃　　　┃　　　┗━　[Alice and Bob](./개발/암호화/Alice and Bob.md)</br>
 ┃　　　┃　　　┗━　[Certificate_formats](./개발/암호화/Certificate_formats.md)</br>
@@ -258,6 +259,8 @@ derectories      : 187
 ┃　　　　　　　┗━　[tomcat 구성요소](./서버/WAS/tomcat 구성요소.md)</br>
 ┃　　　　　　　┗━　[웹서버와 WAS](./서버/WAS/웹서버와 WAS.md)</br>
 ┗━　[**수학**](./수학)</br>
+┃　　　┗━　[**대수학**](./수학/대수학)</br>
+┃　　　┃　　　┗━　[체](./수학/대수학/체.md)</br>
 ┃　　　┗━　[**통계학**](./수학/통계학)</br>
 ┃　　　┃　　　┗━　[윌콕슨 순위합 검정](./수학/통계학/윌콕슨 순위합 검정.md)</br>
 ┃　　　┃　　　┗━　[t━value](./수학/통계학/t━value.md)</br>
@@ -1011,7 +1014,7 @@ derectories      : 187
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXA2U3Cu**](./XXA2U3Cu)</br>
+┗━　[**test.py**](./test.py)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
