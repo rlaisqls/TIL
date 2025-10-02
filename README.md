@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 815
+files            : 820
 derectories      : 188
 ```
 
@@ -12,13 +12,15 @@ derectories      : 188
 .
 ┗━　[**개발**](./개발)</br>
 ┃　　　┗━　[**암호화**](./개발/암호화)</br>
-┃　　　┃　　　┗━　[비트코인 백서](./개발/암호화/비트코인 백서.md)</br>
-┃　　　┃　　　┗━　[타원곡선 암호](./개발/암호화/타원곡선 암호.md)</br>
+┃　　　┃　　　┗━　[타원곡선　암호](./개발/암호화/타원곡선　암호.md)</br>
+┃　　　┃　　　┗━　[비트코인](./개발/암호화/비트코인.md)</br>
+┃　　　┃　　　┗━　[암호학](./개발/암호화/암호학.md)</br>
 ┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
 ┃　　　┃　　　┗━　[Alice and Bob](./개발/암호화/Alice and Bob.md)</br>
 ┃　　　┃　　　┗━　[Certificate_formats](./개발/암호화/Certificate_formats.md)</br>
 ┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
 ┃　　　┃　　　┗━　[DB 암호화](./개발/암호화/DB 암호화.md)</br>
+┃　　　┃　　　┗━　[Kerckhoffs's principle](./개발/암호화/Kerckhoffs's principle.md)</br>
 ┃　　　┃　　　┗━　[Keytool](./개발/암호화/Keytool.md)</br>
 ┃　　　┗━　[**영상**](./개발/영상)</br>
 ┃　　　┃　　　┗━　[비트레이트](./개발/영상/비트레이트.md)</br>
@@ -261,10 +263,13 @@ derectories      : 188
 ┗━　[**수학**](./수학)</br>
 ┃　　　┗━　[**대수학**](./수학/대수학)</br>
 ┃　　　┃　　　┗━　[체](./수학/대수학/체.md)</br>
+┃　　　┃　　　┗━　[타원곡선](./수학/대수학/타원곡선.md)</br>
 ┃　　　┗━　[**통계학**](./수학/통계학)</br>
 ┃　　　┃　　　┗━　[윌콕슨 순위합 검정](./수학/통계학/윌콕슨 순위합 검정.md)</br>
 ┃　　　┃　　　┗━　[t━value](./수학/통계학/t━value.md)</br>
 ┃　　　┗━　[곱셈공식](./수학/곱셈공식.md)</br>
+┃　　　┗━　[근과 계수의 관계](./수학/근과 계수의 관계.md)</br>
+┃　　　┗━　[미분](./수학/미분.md)</br>
 ┗━　[**아키텍처 및 방법론**](./아키텍처 및 방법론)</br>
 ┃　　　┗━　[**객체지향**](./아키텍처 및 방법론/객체지향)</br>
 ┃　　　┃　　　┗━　[응집도와 결합도](./아키텍처 및 방법론/객체지향/응집도와 결합도.md)</br>
@@ -1015,6 +1020,8 @@ derectories      : 188
 ┗━　[**package.json**](./package.json)</br>
 ┗━　[README](./README.md)</br>
 ┗━　[**test.py**](./test.py)</br>
+┗━　[**tmp**](./tmp)</br>
+┗━　[**XXui4gL3**](./XXui4gL3)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)

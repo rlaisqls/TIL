@@ -3,7 +3,25 @@
 
 CA에서 인증서를 발급 받으려면 아래와 같은 과정을 거쳐야한다.
 
-<img src="https://user-images.githubusercontent.com/81006587/216975631-bb0c1cf2-6f9e-470f-b1e9-90865197746f.png" height=500px>
+```mermaid
+graph TD
+    A[A 회사] -->|인증서 발급 요청<br/>도메인, 공개 키 등 제출| CA1[CA]
+    
+    CA1 -->|A 회사에 대해 검토| CA2[CA]
+    
+    CA2 -->|A 회사의 공개 키를<br/>SHA-256 등으로 해시하여<br/>인증서에 '지문'으로 등록| CA3[CA]
+    
+    CA3 -.->|Finger Print| FP[🖐️ Finger Print]
+    
+    CA3 -->|앞서 등록한 지문을<br/>CA의 개인키로 암호화 하여<br/>인증서에 '서명'으로 등록| CA4[CA]
+    
+    CA4 -.->|Digital Signing| DS[✍️ Digital Signing]
+    
+    CA4 -->|인증서 발급| A2[A 회사]
+    
+    style FP fill:#fff4b3
+    style DS fill:#fff4b3
+```
 
 - 먼저, 발급 받고자 하는 기관은 자신의 사이트 정보(도메인 등)과 공개키를 CA에게 제출한다.
 - 그러면 CA는 검증을 걸친 후 발급 받고자 하는 기관의 공개 키를 해시한다. (SHA-256 등..)
@@ -23,15 +41,16 @@ CA에서 인증서를 발급 받으려면 아래와 같은 과정을 거쳐야�
 
 <img src="https://user-images.githubusercontent.com/81006587/216979411-8759d2d3-83f9-4206-861a-4449adb42dd1.png" height=150px>
 
-보통 3단계에 걸쳐서 인증서 체인이 일어나는데, 구글(*.google.com)의 인증서를 보면 
+보통 3단계에 걸쳐서 인증서 체인이 일어나는데, 구글(*.google.com)의 인증서를 보면
 
 - `*.google.com`은 `GTS CA 1C3`의 비밀키로 암호화 되어있고,
 - `GTS CA 1C3`는 `GRS Root R1`의 비밀키로 암호화 되어있다는 것을 알 수 있다.
 
 `GRS Root R1`는 상위 인증기관이 없는 Root CA이기 때문에 Self-Signed 되어있다. (Self-Signed는 자신의 인증서를 해시한 후, CA가 아닌 자신의 비밀키로 암호화 하여 서명으로 등록하는 것이다!)
 
-### CA 인증 없이 인증서를 생성할 수 있을까? 
+### CA 인증 없이 인증서를 생성할 수 있을까?
 
 신뢰성은 떨어지겠지만 가능은 하다. CA 인증과 상관 없이 발행하는 인증서를 **사설 인증서**라고 하고, 이 사설 인증서는 Root CA처럼 Self-Signed 되어 있다.
 
 이제 인증서를 발급받은 서버는, 클라이언트와 [TLS 통신](TLS.md)을 할 수 있다
+
