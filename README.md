@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 824
-derectories      : 188
+files            : 825
+derectories      : 191
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -11,21 +11,6 @@ derectories      : 188
 
 .
 ┗━　[**개발**](./개발)</br>
-┃　　　┗━　[**암호화**](./개발/암호화)</br>
-┃　　　┃　　　┗━　[타원곡선　암호](./개발/암호화/타원곡선　암호.md)</br>
-┃　　　┃　　　┗━　[해시와　MAC](./개발/암호화/해시와　MAC.md)</br>
-┃　　　┃　　　┗━　[대칭암호화](./개발/암호화/대칭암호화.md)</br>
-┃　　　┃　　　┗━　[비대칭암호화](./개발/암호화/비대칭암호화.md)</br>
-┃　　　┃　　　┗━　[비트코인](./개발/암호화/비트코인.md)</br>
-┃　　　┃　　　┗━　[암호학](./개발/암호화/암호학.md)</br>
-┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
-┃　　　┃　　　┗━　[Alice and Bob](./개발/암호화/Alice and Bob.md)</br>
-┃　　　┃　　　┗━　[Certificate_formats](./개발/암호화/Certificate_formats.md)</br>
-┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
-┃　　　┃　　　┗━　[DB 암호화](./개발/암호화/DB 암호화.md)</br>
-┃　　　┃　　　┗━　[Diffie–Hellman 키교환](./개발/암호화/Diffie–Hellman 키교환.md)</br>
-┃　　　┃　　　┗━　[Kerckhoffs's principle](./개발/암호화/Kerckhoffs's principle.md)</br>
-┃　　　┃　　　┗━　[Keytool](./개발/암호화/Keytool.md)</br>
 ┃　　　┗━　[**영상**](./개발/영상)</br>
 ┃　　　┃　　　┗━　[자막　파일　포맷](./개발/영상/자막　파일　포맷.md)</br>
 ┃　　　┃　　　┗━　[비트레이트](./개발/영상/비트레이트.md)</br>
@@ -347,6 +332,25 @@ derectories      : 188
 ┃　　　┗━　[2020 중등부 정올 2차](./알고리즘/2020 중등부 정올 2차.md)</br>
 ┃　　　┗━　[N Queen](./알고리즘/N Queen.md)</br>
 ┃　　　┗━　[Range GCD](./알고리즘/Range GCD.md)</br>
+┗━　[**암호학**](./암호학)</br>
+┃　　　┗━　[**암호화**](./암호학/암호화)</br>
+┃　　　┃　　　┗━　[해시와　MAC](./암호학/암호화/해시와　MAC.md)</br>
+┃　　　┃　　　┗━　[대칭암호화](./암호학/암호화/대칭암호화.md)</br>
+┃　　　┃　　　┗━　[비대칭암호화](./암호학/암호화/비대칭암호화.md)</br>
+┃　　　┃　　　┗━　[AES&IV](./암호학/암호화/AES&IV.md)</br>
+┃　　　┃　　　┗━　[Cipher](./암호학/암호화/Cipher.md)</br>
+┃　　　┃　　　┗━　[Diffie–Hellman 키교환](./암호학/암호화/Diffie–Hellman 키교환.md)</br>
+┃　　　┗━　[**응용**](./암호학/응용)</br>
+┃　　　┃　　　┗━　[**블록체인**](./암호학/응용/블록체인)</br>
+┃　　　┃　　　┃　　　┗━　[비트코인](./암호학/응용/블록체인/비트코인.md)</br>
+┃　　　┃　　　┃　　　┗━　[비트코인 백서](./암호학/응용/블록체인/비트코인 백서.md)</br>
+┃　　　┃　　　┗━　[Certificate_formats](./암호학/응용/Certificate_formats.md)</br>
+┃　　　┃　　　┗━　[DB 암호화](./암호학/응용/DB 암호화.md)</br>
+┃　　　┃　　　┗━　[Keytool](./암호학/응용/Keytool.md)</br>
+┃　　　┗━　[무작위성](./암호학/무작위성.md)</br>
+┃　　　┗━　[암호학](./암호학/암호학.md)</br>
+┃　　　┗━　[Alice and Bob](./암호학/Alice and Bob.md)</br>
+┃　　　┗━　[Kerckhoffs's principle](./암호학/Kerckhoffs's principle.md)</br>
 ┗━　[**언어**](./언어)</br>
 ┃　　　┗━　[**Go**](./언어/Go)</br>
 ┃　　　┃　　　┗━　[고루틴 스케줄링](./언어/Go/고루틴 스케줄링.md)</br>
@@ -1025,7 +1029,7 @@ derectories      : 188
 ┗━　[README](./README.md)</br>
 ┗━　[**test.py**](./test.py)</br>
 ┗━　[**tmp**](./tmp)</br>
-┗━　[**XXCqeAC4**](./XXCqeAC4)</br>
+┗━　[**XXm0gaf0**](./XXm0gaf0)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
