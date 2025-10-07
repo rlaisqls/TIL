@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 820
+files            : 824
 derectories      : 188
 ```
 
@@ -13,6 +13,9 @@ derectories      : 188
 ┗━　[**개발**](./개발)</br>
 ┃　　　┗━　[**암호화**](./개발/암호화)</br>
 ┃　　　┃　　　┗━　[타원곡선　암호](./개발/암호화/타원곡선　암호.md)</br>
+┃　　　┃　　　┗━　[해시와　MAC](./개발/암호화/해시와　MAC.md)</br>
+┃　　　┃　　　┗━　[대칭암호화](./개발/암호화/대칭암호화.md)</br>
+┃　　　┃　　　┗━　[비대칭암호화](./개발/암호화/비대칭암호화.md)</br>
 ┃　　　┃　　　┗━　[비트코인](./개발/암호화/비트코인.md)</br>
 ┃　　　┃　　　┗━　[암호학](./개발/암호화/암호학.md)</br>
 ┃　　　┃　　　┗━　[AES&IV](./개발/암호화/AES&IV.md)</br>
@@ -20,11 +23,12 @@ derectories      : 188
 ┃　　　┃　　　┗━　[Certificate_formats](./개발/암호화/Certificate_formats.md)</br>
 ┃　　　┃　　　┗━　[Cipher](./개발/암호화/Cipher.md)</br>
 ┃　　　┃　　　┗━　[DB 암호화](./개발/암호화/DB 암호화.md)</br>
+┃　　　┃　　　┗━　[Diffie–Hellman 키교환](./개발/암호화/Diffie–Hellman 키교환.md)</br>
 ┃　　　┃　　　┗━　[Kerckhoffs's principle](./개발/암호화/Kerckhoffs's principle.md)</br>
 ┃　　　┃　　　┗━　[Keytool](./개발/암호화/Keytool.md)</br>
 ┃　　　┗━　[**영상**](./개발/영상)</br>
+┃　　　┃　　　┗━　[자막　파일　포맷](./개발/영상/자막　파일　포맷.md)</br>
 ┃　　　┃　　　┗━　[비트레이트](./개발/영상/비트레이트.md)</br>
-┃　　　┃　　　┗━　[자막 파일 포맷](./개발/영상/자막 파일 포맷.md)</br>
 ┃　　　┃　　　┗━　[컨테이너와 코덱](./개발/영상/컨테이너와 코덱.md)</br>
 ┃　　　┃　　　┗━　[ffmpeg](./개발/영상/ffmpeg.md)</br>
 ┃　　　┃　　　┗━　[hls, dash와 cmaf](./개발/영상/hls, dash와 cmaf.md)</br>
@@ -1021,7 +1025,7 @@ derectories      : 188
 ┗━　[README](./README.md)</br>
 ┗━　[**test.py**](./test.py)</br>
 ┗━　[**tmp**](./tmp)</br>
-┗━　[**XXui4gL3**](./XXui4gL3)</br>
+┗━　[**XXCqeAC4**](./XXCqeAC4)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
