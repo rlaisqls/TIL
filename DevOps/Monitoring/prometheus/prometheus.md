@@ -1,33 +1,30 @@
 
-Prometheus is an open-source systems monitoring and alerting toolkit. Prometheus collects and stores its metrics as time series data, i.e. metrics information is stored with the timestamp at which it was recorded, alongside optional key-value pairs called labels.
+> <https://prometheus.io/docs/introduction/overview/>
 
-Prometheus work well for recording any purely numeric time series. It fits both machine-centric monitoring of highly dynamic service-oriented architectures. In a world of microservices, its supports for multi-dimensionl data collection and quering is a particular strength.
+- Prometheus는 오픈소스 시스템 모니터링 및 알림 툴킷이다. Prometheus는 메트릭을 시계열 데이터로 수집하고 저장한다. 즉, 메트릭 정보는 기록된 타임스탬프와 함께 저장되며, label이라고 불리는 선택적 key-value 쌍도 함께 저장된다.
 
-Prometheus is designed for reliability, to be the system you go to during an outage to allow you to quickly diagnose problems. Each prometheus server is standalone, not depending on network storage or other remote services. You can rely on it when other parts of your infrastructure are broken, and you do not need to setup extensive infrastructure to use it.s
+- 순수한 숫자 시계열을 기록하는 데 적합하다. 높은 동적성을 가진 서비스 지향 아키텍처의 머신 중심 모니터링에 잘 맞는다. 마이크로서비스 환경에서 Prometheus의 다차원 데이터 수집 및 쿼리 지원은 특히 강력한 장점이다.
 
-## Features
+- Prometheus는 안정성을 위해 설계되었으며, 장애 발생 시 문제를 신속하게 진단할 수 있도록 돕는 시스템이다. 각 Prometheus 서버는 독립적으로 동작하며, 네트워크 스토리지나 다른 원격 서비스에 의존하지 않는다. 인프라의 다른 부분이 고장나도 Prometheus를 신뢰할 수 있으며, 광범위한 인프라 설정 없이도 사용할 수 있다.
 
-Prometheus's main features are:
+## 주요 기능
 
-- a multi-dimensional data model with time series data identifies by metric name and key/value pairs.
-- PromQL, a flexible query language to leverage this dimensionality.
-- no reliance on distributed storage' single server nodes are autonomous
-- time series collection happens via a pull model over HTTP
-- pushing time series is supported via an intermediary gateway
-- targets are discovered via service discovery or static configuration
-- multiple modes of graphing and dashboarding support/
+- 다차원 데이터 모델: 시계열 데이터가 메트릭 이름과 key/value 쌍으로 식별된다.
+- PromQL: 이 다차원성을 활용할 수 있는 유연한 쿼리 언어를 제공한다.
+- 분산 스토리지에 의존하지 않음: 단일 서버 노드가 자율적으로 동작한다.
+- Pull 모델 기반 시계열 수집: HTTP를 통해 메트릭을 수집한다.
+- Push 모델 지원: 중간 게이트웨이를 통해 시계열 데이터를 푸시할 수 있다.
+- 서비스 디스커버리: 타겟을 서비스 디스커버리 또는 정적 구성을 통해 검색한다.
+- 다양한 시각화 지원: 여러 모드의 그래프 및 대시보드를 지원한다.
 
-## Architecture
-
-This diagram illustrates the architecture of Prometeus and some of its ecosstem components.
+## 아키텍처
 
 ![image](https://github.com/rlaisqls/TIL/assets/81006587/42f0f8a0-f205-4814-b475-728dc28e1132)
 
-Prometheus scrapes metrics from instrumented jobs, either directly or via an intermediary push gateway for short-lived jobs. It stores all scraped samples locally and runs rules over this data to wither aggregate and record new time series from existing data or generate alerts. Grafaba ir itger API consumers can be used to visualize the collected data.
-
-You can get more information in this link
+Prometheus는 계측된 작업에서 메트릭을 스크랩한다. 직접 수집하거나 단기 작업의 경우 중간 push gateway를 통해 수집한다. 수집된 모든 샘플을 로컬에 저장하고, 이 데이터에 대해 규칙을 실행하여 기존 데이터로부터 새로운 시계열을 집계 및 기록하거나 알림을 생성한다. Grafana나 다른 API 소비자를 사용하여 수집된 데이터를 시각화할 수 있다.
 
 ---
 reference
-- https://prometheus.io/docs/introduction/overview/
-- https://github.com/prometheus/prometheus
+
+- <https://prometheus.io/docs/introduction/overview/>
+- <https://github.com/prometheus/prometheus>

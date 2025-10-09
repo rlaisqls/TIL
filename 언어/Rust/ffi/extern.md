@@ -1,9 +1,8 @@
+- `extern` 키워드를 사용하면 외부 코드를 링크하거나 import할 수 있다.
 
-- Using extern keyword, you can link to or import external code.
+- `extern` 키워드는 Rust에서 두 가지 용도로 사용된다. 하나는 `crate` 키워드와 함께 사용하여 프로젝트 내의 다른 Rust crate를 인식시키는 것이다 (예: `extern crate lazy_static;`). 다른 하나는 외부 함수 인터페이스(FFI, Foreign Function Interface)에서 사용하는 것이다.
 
-- The extern keyword is used in two places in Rust. One is in conjunction with the crate keyword to make your Rust code aware of other Rust crates in your project, i.e., extern crate lazy_static;. The other use is in foreign function interfaces (FFI).
-
-- `extern` is used in two different contexts within FFI. The first is in the form of external blocks, for declaring function interfaces that Rust code can call foreign code by.
+- FFI에서 `extern`은 두 가지 맥락에서 사용된다. 첫 번째는 외부 블록(external block) 형태로, Rust 코드가 외부 코드를 호출할 수 있도록 함수 인터페이스를 선언하는 것이다.
 
     ```rust
     #[link(name = "my_c_library")]
@@ -12,11 +11,11 @@
     }
     ```
 
-- This code would attempt to link with `libmy_c_library.so` on unix-like systems and my_c_library.dll on Windows at runtime, and panic if it can’t find something to link to.
+- 이 코드는 런타임에 Unix 계열 시스템에서는 `libmy_c_library.so`를, Windows에서는 `my_c_library.dll`을 링크하려고 시도하며, 링크할 대상을 찾지 못하면 패닉이 발생한다.
 
-- Rust code could then use `my_c_function` as if it were any other unsafe Rust function. Working with non-Rust languages and FFI is inherently unsafe, so wrappers are usually built around C APIs.
+- 이후 Rust 코드는 `my_c_function`을 다른 unsafe Rust 함수처럼 사용할 수 있다. Rust가 아닌 다른 언어와 FFI로 작업하는 것은 본질적으로 안전하지 않기 때문에, 보통 C API를 감싸는 래퍼를 만들어 사용한다.
 
-- The mirror use case of FFI is also done via the extern keyword:
+- FFI의 반대 방향 사용도 `extern` 키워드로 구현할 수 있다:
 
     ```rust
     #[no_mangle]
@@ -25,9 +24,11 @@
     }
     ```
 
-- If compiled as a dylib, the resulting .so could then be linked to from a C library, and the function could be used as if it was from any other library.
+- 이 코드를 dylib로 컴파일하면 생성된 `.so` 파일을 C 라이브러리에서 링크할 수 있고, 해당 함수를 다른 라이브러리의 함수처럼 사용할 수 있다.
 
 ---
-reference
-- https://doc.rust-lang.org/std/keyword.extern.html
-- https://www.reddit.com/r/rust/comments/17f78mb/what_is_extern_system/
+참고
+
+- <https://doc.rust-lang.org/std/keyword.extern.html>
+- <https://www.reddit.com/r/rust/comments/17f78mb/what_is_extern_system/>
+
