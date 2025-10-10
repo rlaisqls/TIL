@@ -125,188 +125,111 @@ DER(Distinguished Encoding Rules)
 - 록타임의 주요 문제는 록타임에 도달했을 때 트랜잭션의 수신자가 트랜잭션이 유효한지 확신할 수 없다는 점이다. 시가닝 많이 지나 부도 가능성이 있는 은행 수표와 비슷하다.
   - BIP65에서 도입한 `OP_CHECKSEQUENCEVERIFY`는 록타임까지 출력을 사용하지 못하게 해서 이러한 상황을 방지한다.
 
+### Mempool
+
+Mempool(Memory Pool)은 비트코인 노드가 아직 블록에 포함되지 않은 검증된 트랜잭션들을 임시로 저장하는 메모리 영역이다.
+
+- 각 노드는 독립적인 mempool을 유지하며, 트랜잭션 전파 시점과 노드 정책에 따라 내용이 다를 수 있다.
+- 트랜잭션이 mempool에 있다고 해서 반드시 블록에 포함된다는 보장은 없다.
+- 채굴자는 mempool에서 수수료가 높은 트랜잭션을 우선적으로 선택하여 블록에 포함시킨다.
+
+**Mempool이 "full"인 상태**
+
+- Bitcoin Core는 기본적으로 300MB의 메모리를 mempool에 할당한다.
+- Mempool이 할당된 300MB를 모두 사용하면 "full" 상태라고 한다.
+- Full 상태에서는 특정 수수료율 임계값 이하의 새로운 트랜잭션을 거부한다.
+  - 이 임계값은 mempool에서 가장 낮은 수수료율을 가진 트랜잭션의 수수료율이다.
+  - 트랜잭션을 전송할 때는 이 임계값을 초과하는 수수료율을 설정해야 네트워크에 전파된다.
+- Mempool 혼잡도가 높을수록 트랜잭션 확인 시간이 길어지고 필요한 수수료도 증가한다.
+
+**Memory usage와 실제 트랜잭션 크기**
+
+- Mempool의 memory usage는 실제 시스템 메모리 사용량을 나타낸다.
+- 이 값은 항상 트랜잭션들의 실제 크기 합보다 크다.
+  - 인덱스, 포인터, 기타 오버헤드가 포함되기 때문이다.
+  - Bitcoin Core가 트랜잭션 저장과 처리를 위해 사용하는 추가 데이터 구조 때문이다.
+- 300MB 제한을 가진 대부분의 노드(예: Raspberry Pi 노드)는 300MB를 초과하지 않는다.
+- 일부 노드는 더 큰 mempool 메모리 제한을 설정하여 혼잡 시에도 낮은 수수료율의 트랜잭션을 거부하지 않고 보관할 수 있다.
+
+**Mempool 모니터링**
+
+- mempool.space와 같은 서비스는 여러 종류의 노드를 사용한다.
+  - Small Node: 기본 300MB 제한을 가진 노드로, 대부분의 네트워크 노드를 대표한다.
+  - Big Node: 훨씬 큰 mempool 메모리 제한을 가진 노드로, 트랜잭션을 거부하지 않는다.
+- Small Node로부터 "Purging" 수수료율(거부 임계값)을 확인할 수 있다.
+- Big Node로부터 모든 대기 중인 트랜잭션 정보를 조회할 수 있다.
+
+### 트랜잭션 수수료와 선택
+
+**수수료율과 실효 수수료율**
+
+- 트랜잭션 수수료율은 일반적으로 sat/vB(satoshi per virtual byte) 단위로 표시된다.
+- 실효 수수료율(effective feerate)은 CPFP(Child Pays For Parent) 관계를 고려한 수수료율이다.
+  - 낮은 수수료율의 부모 트랜잭션도 높은 수수료율의 자식 트랜잭션에 의해 실효 수수료율이 상승할 수 있다.
+  - 채굴자는 부모-자식 트랜잭션을 함께 포함시켜 평균 수수료율이 높으면 선택한다.
+- 블록의 수수료율 범위는 실효 수수료율을 기준으로 표시된다.
+  - 예: 1 sat/vB 트랜잭션이 5-72 sat/vB 범위의 블록에 포함된 경우, 자식 트랜잭션이 부모의 실효 수수료율을 5 sat/vB 이상으로 끌어올렸기 때문이다.
+
+**CPFP (Child Pays For Parent)**
+
+- 낮은 수수료로 전송한 트랜잭션의 확인을 가속화하는 방법이다.
+- 해당 트랜잭션의 출력을 입력으로 사용하는 새로운 트랜잭션(자식)을 높은 수수료율로 생성한다.
+- 채굴자는 부모와 자식 트랜잭션을 하나의 패키지로 평가하여 평균 수수료율이 충분히 높으면 함께 블록에 포함시킨다.
+- RBF와 달리 수신자도 CPFP를 사용할 수 있다는 장점이 있다.
+
+**Sigops (Signature Operations)**
+
+- Sigops는 비트코인 스크립트에서 서명 연산의 비용을 계산하는 방법이다.
+- 다음 오피코드가 sigops에 해당한다.
+  - `OP_CHECKSIG`, `OP_CHECKSIGVERIFY`: 각 1 sigop
+  - `OP_CHECKMULTISIG`, `OP_CHECKMULTISIGVERIFY`: 스크립트에 명시된 공개키 개수만큼 sigops
+- Sigops의 위치에 따라 계산 비용이 다르다.
+  - 레거시 스크립트: P2PKH는 2 sigops, P2SH 내부는 redeemScript 실행 시 계산
+  - Witness 스크립트: Witness v0에서는 가중치 기반 계산 적용
+- 합의 규칙으로 각 블록은 최대 80,000 sigops까지만 포함할 수 있다.
+
+**Adjusted vsize (조정된 가상 크기)**
+
+- 비트코인 블록은 두 가지 독립적인 제약이 있다.
+  - 4MWU(million weight units) 크기 제한
+  - 80,000 sigops 제한
+- 대부분의 트랜잭션은 크기 제한을 더 많이 사용하지만, 일부 트랜잭션은 크기 대비 sigops를 불균형하게 많이 사용한다.
+- Adjusted vsize는 이를 보정하기 위한 값이다.
+  - `adjusted_vsize = max(actual_vsize, sigops × 5)`
+  - Sigops 개수에 5를 곱한 값과 실제 vsize 중 큰 값을 사용한다.
+- Bitcoin Core는 블록 템플릿 생성 시 adjusted vsize 기준으로 sat/adjusted_vB 수수료율이 높은 순서로 트랜잭션을 선택한다.
+- mempool.space에서도 미확인 트랜잭션의 실효 수수료율은 adjusted vsize 기준으로 표시된다.
+
+**예상 블록 수수료 범위의 겹침**
+
+- Mempool에서 표시되는 예상 블록들은 지금 채굴되면 어떤 트랜잭션이 포함될지 보여준다.
+- 각 예상 블록은 실제 블록과 동일한 제약(크기 제한, sigops 제한)을 따른다.
+- 수수료율이 낮은 트랜잭션이 높은 트랜잭션보다 먼저 포함되는 경우
+  - 블록에 남은 공간이 매우 작아서 작은 저수수료 트랜잭션만 들어갈 수 있는 경우
+  - Sigops가 많은 고수수료 트랜잭션으로 80,000 sigops 한도에 도달한 후, 남은 공간을 sigops가 없는 저수수료 트랜잭션으로 채우는 경우
+- 극단적인 경우 여러 예상 블록이 겹치는 수수료 범위를 가질 수 있다.
+  - 각 블록이 고수수료-고sigops 트랜잭션과 저수수료-제로sigops 트랜잭션을 함께 포함하기 때문이다.
+
 ### 스크립트
 
-- 스크립트는 프로그래밍 언어이다. 연산자와 데이터를 가지고, 스택 기반으로 주어진 명령어가 하나씩 처리된다.
-- ScriptPubKey와 ScriptSig 모두 같은 방식으로 파싱된다.
-- 파싱을 시작하고 처음 읽은 한 바이트 값이 n이고 이 값이 `0x01`~`0x4b`(1~75) 사이의 값이면 n바이트 길이만큼 이어서 읽은 숫자를 한 원소로 간주한다. 그렇지 않으면 그 바이트 값은 오피 코드를 의미한다. [연산자, 오피코드 대응 표](https://en.bitcoin.it/wiki/Script)
-  
-- 비트코인의 스크립트에선 반복문을 허용하지 않는다. (튜링 완전하지 않다.)
-  - 튜링 완전한 스마트 계약 언어인 Solidity를 이용하는 이더리움은 gas라고 하는 무언가를 프로그램 실행 대가로 지불하도록 강제하여 해결한다.
+비트코인 트랜잭션에서 사용되는 스크립트 시스템에 대한 자세한 내용은 [비트코인 스크립트](./비트코인%20스크립트.md) 문서를 참고한다.
 
-- 거래를 하기 위해선 이전 트랜잭션의 해제 스크립트(ScriptPubKey)로 코인을 해제 후, 이번 트랜잭션의 잠금 스크립트(ScriptSig)로 잠가야 한다. 따라서 이전 트랜잭션 정보를 가져와야한다.
+비트코인 스크립트는 트랜잭션 출력의 사용 조건을 정의하는 스택 기반 프로그래밍 언어이다. 주요 스크립트 타입은 다음과 같다:
 
-- 비트코인에서 해제 스크립트는 잠금 스크립트와 분리되어 실행된다. 이는 해제 스크립트가 잠금 스크립트 실행에 영향을 주지 않도록 하기 위해서이다. 결합하여 실행하는 경우, 해제 스크립트에서 잠금하지 않고 return 1하여 종료되는 허점이 생긴다.
+- **레거시 스크립트**
+  - P2PK (Pay to Public Key) - 초기 비트코인에서 사용
+  - P2PKH (Pay to Public Key Hash) - 가장 일반적인 레거시 타입
+  - P2MS (Pay to Multi-Signature) - 다중 서명
+  - P2SH (Pay to Script Hash) - 복잡한 스크립트를 해시로 압축
 
-**스크립트 예시**
+- **Segwit v0 스크립트** (2017)
+  - P2WPKH (Pay to Witness Public Key Hash) - Segwit 단일 서명
+  - P2WSH (Pay to Witness Script Hash) - Segwit 복잡한 스크립트
+  - P2SH-P2WPKH, P2SH-P2WSH - 하위 호환 래핑
 
-- **P2PK**(Pay to Public Key)
-  - 비트코인 초기에 널리 사용됨
-  - ECDSA 서명 공개키로 보내고, 비밀키 소유자는 서명을 통해 비트코인을 해제하고 사용할 수 있음.
-  - 스크립트
-    - ScriptPubKey: `<signature>`
-      - ac는 `OP_CEHECKSIG`를 의미함
-    - ScriptSig: `<pubkey>ac`
-  - 해제/잠금 스크립트를 합쳐 실행하면 `<signature><pubkey>ac`, `OP_CEHECKSIG`가 앞의 2개 원소를 꺼내어 공개키로 서명이 올바른지 확인한다.
-  - `OP_CEHECKSIG` 연산자는 서명이 올바르면 스택 위에 1을, 아니면 0을 올린다.
-  - 초기 IP to IP 지불이나 채굴 비트코인이 있는 출력에 사용되었다. 하지만 IP to IP 지불 시스템은 MITM 공격에 취약해 점차 사용하지 않게 되었다.
-  - 사람간의 거래에선 공개키의 길이가 길어 불편하고, UTXO 집합의 크기를 많이 차지한다는 단점이 있다.
-
-- **P2PKH**(Pay to Public Key Hash)
-  - P2PK 스크립트 대비 짧은 주소를 사용하고, hash160으로 추가 보호한다는 장점이 있다.
-  - SEC 형식 공개키가 잠금 스크립트가 아닌 해제 스크립트에 있다는 차이가 있다.
-    - P2PK는 ScriptPubKey에 공개키가 직접 노출되어 블록체인에 영구적으로 기록되지만, P2PKH는 코인을 사용하는 시점(ScriptSig)까지 공개키가 드러나지 않는다.
-    - 양자 컴퓨터의 Shor's algorithm은 공개키로부터 개인키를 계산할 수 있는데, P2PKH에서는 사용하지 않은 UTXO의 경우 공개키가 노출되지 않아 양자 컴퓨터 공격에 대한 시간적 여유를 확보할 수 있다.
-    - 공격자가 개인키를 얻으려면 먼저 hash160(SHA256 + RIPEMD160)을 역산하여 공개키를 찾고, 그 다음 ECDSA를 깨서 개인키를 찾아야 하는 이중 보호층이 있다.
-
-  - 스크립트
-    - ScriptSig
-
-       ```
-       <signature>
-       <publickey>
-       ```
-
-    - ScriptPubKey
-
-       ```
-       OP_DUP
-       OP_HASH160
-       <publickey hash>
-       OP_EQUALVERIFY
-       OP_CHECKSIG
-       ```
-
-  - 주소 생성
-    - Base58 인코딩, version 바이트 `0x00` (메인넷) / `0x6f` (테스트넷)
-    - 해싱 대상: 압축 혹은 비압축 SEC 형식 공개키
-    - 최종 주소: 메인넷 `1`, 테스트넷 `m` 또는 `n`으로 시작
-
-  - z 계산 및 검증
-    - 서명 생성 시 z 계산
-      1. 현재 트랜잭션의 모든 입력 ScriptSig를 빈 값으로 교체
-      2. 현재 입력의 ScriptSig만 이전 출력의 ScriptPubKey로 교체
-         - `OP_DUP OP_HASH160 <pubkey hash> OP_EQUALVERIFY OP_CHECKSIG`
-      3. 수정된 트랜잭션을 이중 SHA-256 해시하여 z 생성
-    - 검증 시: `OP_CHECKSIG`가 동일한 방식으로 z를 재계산하고 서명 검증
-
-- **P2RPH**(Pay to R-Puzzle Hash)
-  - R-Puzzle은 k 값에 대한 지식 증명을 사용하여 코인을 사용할 수 있도록 하는 스크립트이다.
-  - k는 비트코인 개인키와 동일한 수학적 집합에서 가져온 값이며, r(k와 생성자 점을 곱한 x 좌표)을 생성하는데 사용된다.
-  - 스크립트
-    - ScriptSig
-
-      ```
-      <sig'> <sig> <pubKey>
-      ```
-
-    - ScriptPubKey
-
-      ```
-      OP_OVER
-      OP_3
-      OP_SPLIT
-      OP_NIP
-      OP_1
-      OP_SPLIT
-      OP_SWAP
-      OP_SPLIT
-      OP_DROP
-      OP_HASH160
-      <rHash>
-      OP_EQUALVERIFY
-      OP_TUCK
-      OP_CHECKSIGVERIFY
-      OP_CHECKSIG
-      ```
-
-  - 공개키가 스크립트 솔루션의 일부로 검증되지 않기 때문에, 임의의 키 쌍을 사용하여 트랜잭션에 서명할 수 있다.
-
-- **P2MS**(Pay to Multi-Signature)
-  - 여러 공개키로 비트코인을 잠그고, 그 중 일부(또는 전부)의 서명을 요구하여 잠금을 해제하는 스크립트이다.
-  - m-of-n 표기법을 사용한다. (예: 2-of-3는 3개의 공개키 중 2개의 서명이 필요함)
-  - 스크립트 (2-of-3 multisig 예시)
-    - ScriptSig
-
-      ```
-      OP_0
-      <signature1>
-      <signature2>
-      ```
-
-      - `OP_CHECKMULTISIG`는 많은 서명과 공개키를 가져와 유효한 서명의수가 기준 이상인지 여부는 1, 0으로 반환하는 명령어이다.
-        - 스택 원소를 m+n+2개보다 한 개 더 가져오도록 (off-by-one) 잘못 구현되어 있어서 더미 값(`OP_0`)을 넣어줘야 한다. 이 원소가 실제로 계산에 사용되지는 않는다.
-
-    - ScriptPubKey
-
-      ```
-      OP_2
-      <pubkey1>
-      <pubkey2>
-      <pubkey3>
-      OP_3
-      OP_CHECKMULTISIG
-      ```
-
-  - 블록체인에서 P2MS를 직접 사용하는 것은 드물며, 대부분 P2SH나 P2WSH로 래핑되어 사용된다.
-  - 노드 중계를 위해 최대 3개의 공개키로 제한된다.
-
-- **P2SH**(Pay to Script Hash)
-  - P2MS(다중 서명)는 여러 공개키를 ScriptPubKey에 직접 포함해야 하므로 스크립트가 매우 길어진다.
-  - P2SH는 복잡한 스크립트를 20바이트 해시로 압축하여 이러한 문제를 해결한다.
-  - BIP16에서 도입되었으며, 2012년 4월 1일부터 활성화되었다.
-  - 스크립트
-    - ScriptSig
-
-      ```
-      <signature1>
-      <signature2>
-      <redeemScript>
-      ```
-
-      - 실제 스크립트 로직이 포함된 redeemScript를 제공해야 한다.
-      - redeemScript는 송금받을 때 공개되지 않고, 코인을 사용할 때 공개된다.
-
-    - ScriptPubKey
-
-      ```
-      OP_HASH160
-      <redeemScriptHash>
-      OP_EQUAL
-      ```
-
-      - redeemScript를 hash160으로 해시한 값만 저장한다.
-
-  - 주소 생성
-    - Base58 인코딩, version 바이트 `0x05` (메인넷) / `0xc4` (테스트넷)
-    - 해싱 대상: redeemScript
-    - 최종 주소: 메인넷 `3`, 테스트넷 `2`로 시작
-    - 주소만으로는 내부 스크립트 종류를 알 수 없음 (multisig, P2WPKH 등)
-
-  - 검증 방식
-    - ScriptPubKey가 `OP_HASH160 <20바이트 해시> OP_EQUAL` 패턴이면 P2SH로 인식한다.
-    - 2단계 검증을 수행한다.
-      1. 해시 검증: ScriptSig의 마지막 원소(redeemScript)를 hash160으로 해시하여 ScriptPubKey의 해시값과 일치하는지 확인
-      2. 스크립트 실행: 일치하면 redeemScript를 역직렬화하여 나머지 ScriptSig 원소들과 함께 실행
-    - 두 단계 모두 통과해야 트랜잭션이 유효하다.
-
-  - z 계산 및 검증
-    - 서명 생성 시 z 계산
-      1. 현재 트랜잭션의 모든 입력 ScriptSig를 빈 값으로 교체
-      2. 현재 입력의 ScriptSig만 redeemScript로 교체
-         - 예: 2-of-3 multisig의 경우 `OP_2 <pubkey1> <pubkey2> <pubkey3> OP_3 OP_CHECKMULTISIG`
-      3. 수정된 트랜잭션을 이중 SHA-256 해시하여 z 생성
-    - 검증 시: redeemScript 내부의 `OP_CHECKSIG` (또는 `OP_CHECKMULTISIG`)가 동일한 방식으로 z를 재계산하고 서명 검증
-
-  - redeemScript의 최대 크기는 520바이트로 제한, 스크립트 실행 시 스택 원소는 최대 201개로 제한된다.
-  - 반복문을 방지하기 위해 P2SH는 중첩될 수 없다. (P2SH 안에 또 다른 P2SH를 넣을 수 없음)
-
-- 인증키 등을 이용한 표준 스크립트 뿐만 아니라, 덧셈 문제를 푸는 등의 잠금/해제 스크립트를 작성하는 것도 가능하다.
-  - 일례로 Peter Todd가 해시 충돌을 찾은 사람이 가져갈 수 있도록 잠근 비트코인이 있다.
-  - 구글이 2017년 2월 SHA-1에 대한 해시 충돌을 찾았고, 이외 SHA에 대한 해시 충돌을 찾으면 해제할 수 있는 비트코인도 있다.
-  - 참고
-    - <https://bitcointalk.org/index.php?topic=293382>
-    - <https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html>
+- **Taproot (Segwit v1)** (2021)
+  - P2TR (Pay to Taproot) - Schnorr 서명과 MAST 사용
+  - 향상된 프라이버시와 효율성
 
 ### 트랜잭션 검증과 생성
 
@@ -406,6 +329,13 @@ DER(Distinguished Encoding Rules)
   - 바이트 단위로 똑같은 코인베이스 트랜잭션을 그 트랜잭션 ID 역시 동일하다. 트랜잭션 ID의 중복을 방지하기 위해, Gavin Andresen은 채굴하고 있는 블록의 높이를 코인베이스 해제 스크립트의 첫 원소로 한다는 soft-fork 규정을 [BIP0034](https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki)로 제안했다.
     - 여기서 fork는 비트코인 네트워크를 구선하는 채굴 노드의 소프트웨어를 새 버전으로 업데이트하는 것을 의비한다. 이 때 soft-fork는 예전 버전 노드와 최신 버전 노드가 혼재되어있어도 네트워크가 멈추지 않고 돌아가도록 하는 것, hark-fork는 양립할 수 없는 방식의 소프트웨어 업데이트이다. 하드포크는 주로 업데이트보다는 새로운 블록체인을 분기시키는 경우에 사용된다.
     - 이러한 인위적 포크 외에 일상적인 상황에서 2개 이상의 노드가 거의 동시에 작업 증명을 찾았을 때도 포크가 발생했다고 말한다. 이 경우는 일시적으로 노드들이 가진 블록체인의 마지막 블록이 동기되지 못하는 경우로 시간이 지날수록 우세한 블록이 생기면서 이러한 상황이 해소된다.
+
+- 빈 블록 (Empty Block)
+  - 빈 블록은 코인베이스 트랜잭션만 포함하고 다른 트랜잭션을 포함하지 않는 블록이다.
+  - 새로운 블록이 발견되면 채굴 풀은 새 블록을 완전히 검증하기 전에, 심지어 새 블록을 수신하기도 전에 채굴자들에게 새로운 블록 템플릿을 전송하는 경우가 많다.
+  - 이 시간 동안 채굴 풀은 어떤 트랜잭션이 새 블록에 포함되었는지 확실히 알 수 없어 트랜잭션 충돌을 피하기 위해 다음 블록의 트랜잭션을 선택할 수 없다.
+  - 따라서 이 짧은 기간 동안에는 빈 블록 템플릿으로 채굴을 진행한다.
+  - 빈 블록은 추가 트랜잭션을 블록체인에 포함시키지는 않지만, 이미 체인에 있는 트랜잭션들의 전체 보안에 기여한다.
 
 #### 블록 해시와 작업증명
 
@@ -584,6 +514,61 @@ DER(Distinguished Encoding Rules)
         - 블록 헤더 + 매칭된 트랜잭션들의 머클 경로를 포함한다.
         - 라이트 노드는 이를 통해 트랜잭션이 블록에 포함되었음을 검증할 수 있다.
 
+#### 블록 감사와 건강도
+
+**블록 감사 (Block Audit)**
+
+- 블록 감사는 mempool.space와 같은 서비스에서 예상 블록과 실제 채굴된 블록을 시각적으로 비교하는 기능이다.
+- 채굴자가 의도적으로 트랜잭션을 포함하거나 제외했는지 추론하는 것이 목적이다.
+
+- 작동 방식
+  - mempool.space는 mempool을 모니터링하고 Bitcoin Core의 트랜잭션 선택 알고리즘을 재구현하여 예상 블록을 생성한다.
+  - 이 알고리즘은 2초마다 실행되어 실시간에 가까운 예측을 제공한다.
+  - 새 블록이 채굴되는 순간, 해당 블록 높이에 대한 예상 블록 스냅샷을 저장한다.
+  - 이후 예상 블록과 실제 블록을 비교하여 차이를 분석한다.
+
+- 트랜잭션 분류 (색상 코드)
+  - Added (파란색): 예상 블록에 없고 실제 블록에 있는 트랜잭션
+    - 예상 수수료율 범위에서 크게 벗어난 경우 (채굴자가 의도적으로 우선순위를 부여했을 가능성)
+    - mempool에 전혀 없는 경우 (채굴자가 대역 외 방식으로 수락했을 가능성)
+    - 블록 건강도에 부정적 영향을 주지 않는다.
+
+  - Recently broadcasted (진한 분홍색): 예상 블록에 있지만 실제 블록에 없으며, 블록 채굴 3분 이내에 처음 확인된 트랜잭션
+    - 네트워크 지연으로 인해 채굴자 노드가 아직 수신하지 못했을 가능성이 있다.
+    - 블록 건강도에 부정적 영향을 주지 않는다.
+
+  - Marginal fee (어두운 색): 예상 수수료율 범위의 하단에 있으며 예상 블록이나 실제 블록 중 하나에서 누락된 트랜잭션
+    - 추가된 트랜잭션에 의해 밀려났거나, 동일한 낮은 수수료율의 다른 트랜잭션으로 대체되었을 수 있다.
+    - 블록 건강도에 부정적 영향을 주지 않는다.
+
+  - Removed (밝은 분홍색): 예상 블록에 있지만 실제 블록에 없으며, recently-broadcasted도 marginal-fee도 아닌 트랜잭션
+    - mempool에 충분히 오래 있어 널리 전파되었고, 블록에 포함될 것으로 예상되는 수수료율을 가진 트랜잭션이다.
+    - 의도적으로 제외되었을 가능성이 있다.
+    - 블록 건강도에 부정적 영향을 준다.
+
+- 이 기능은 리소스 사용량과 가용성 요구사항으로 인해 공식 mempool.space 인스턴스에서만 지원된다.
+
+**블록 건강도 (Block Health)**
+
+- 블록 건강도는 의도적으로 제외된 것으로 보이는 트랜잭션이 얼마나 있는지 측정하는 지표이다.
+- 의도적으로 제외된 트랜잭션이 없는 블록은 100% 건강도를 가진다.
+- 1개 이상의 트랜잭션이 의도적으로 제외된 것으로 보이는 블록은 100% 미만의 건강도를 가진다.
+
+- 계산 방식
+  - `sexpected`: 예상 블록의 모든 트랜잭션 집합
+  - `sactual`: 실제 블록의 모든 트랜잭션 집합
+  - `n`: `sexpected`와 `sactual` 모두에 있는 트랜잭션 개수
+  - `r`: 의도적으로 제외된 것으로 추론되는 트랜잭션 개수 (Removed 분류)
+  - 블록 건강도 = `n / (n + r)`
+
+- 계산 시 양쪽 집합에 모두 있는 트랜잭션만 사용하는 이유
+  - Recently-broadcast 트랜잭션은 채굴자가 단순히 수신하지 못했을 가능성이 있다.
+  - 특정 낮은 수수료 트랜잭션은 채굴자가 더 수익성 높은 대역 외 트랜잭션으로 교체했을 수 있다.
+  - 블록 건강도는 예상 블록과 실제 블록이 얼마나 유사한지를 측정하는 것이 아니라, 의도적 제외가 있었는지를 측정하는 것이다.
+  - 따라서 실제 블록이 예상 블록과 크게 다르더라도, 의도적으로 제외된 트랜잭션이 없으면 높은 건강도를 가질 수 있다.
+
+- 이 기능도 리소스 사용량과 가용성 요구사항으로 인해 공식 mempool.space 인스턴스에서만 지원된다.
+
 #### 블록 헤더 구성
 
 - 블록 헤더는 아래처럼 구성된다.
@@ -623,9 +608,9 @@ DER(Distinguished Encoding Rules)
 
 - 이전 블록의 해시 값이다.
 
-Merkel root
+**Merkel root**
 
-- 단순 지급 검증(SPV)에서 활용된다.
+- 단순 지급 검증(SPV)에서 활용되는 머클 트리의 루트 해시값이다.
 
 **Timestamp**
 
@@ -633,6 +618,15 @@ Merkel root
 - 크게 두 용도로 사용된다
   - 블록에 포함된 트랜잭션의 록타임이 유닉스 형식 시간으로 표현되었을 때 그 트랜잭션이 활성화되는 시점을 알아내기 위한 비교 기준 ([BIP0113](https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki)에 따라 지난 11 블록의 타임스탬프 중 중앙값과 비교, 많은 수수료를 얻으려고 자신이 생성하는 블록의 타임스탬프를 실제보다 증가시키지 않게 하기 위함)
   - 2016개 블록마다 비트값/목푯값/난이도를 재계산하는 과정
+
+- 타임스탬프가 항상 증가하지 않는 이유
+  - 블록 검증 규칙은 블록의 타임스탬프가 이전 블록보다 엄격히 더 최신이어야 한다고 요구하지 않는다.
+  - 중앙 기관이 없는 분산 시스템에서는 정확한 시간을 알 수 없다.
+  - 대신 비트코인 프로토콜은 블록 타임스탬프가 특정 요구사항을 충족하도록 요구한다.
+    - 블록 타임스탬프는 이전 12개 블록 타임스탬프의 중앙값보다 오래되어서는 안 된다. (Median Time Past, MTP 규칙)
+    - 블록 타임스탬프는 네트워크 조정 시간보다 2시간 이상 미래여서는 안 된다.
+  - 이로 인해 타임스탬프는 약 1시간 정도의 정확도를 가지며, 때때로 순서가 바뀌어 보일 수 있다.
+  - 예: 블록 N의 타임스탬프가 블록 N+1의 타임스탬프보다 늦은 경우가 발생할 수 있다.
 
 **Bits**
 
@@ -698,152 +692,6 @@ Merkel root
      - 핸드셰이킹이 완료되면 노드들은 트랜잭션, 블록, 인벤토리 등의 메시지를 교환할 수 있다.
      - 이후 `getaddr`, `getdata`, `inv`, `tx`, `block` 등의 커맨드로 네트워크 통신이 진행된다.
 
-### Segwit
-
-- 세그윗은 segregated witness의 약자로 비트코인 네트워크에서 2017년 활성화된 소프트포크이다.
-  - 수학에서 witness는 어떤 조건을 만족하는 수의 존재를 증명할 때 그러한 수의 예로 들 수 있는 특정 값을들 말한다. 암호학의 맥락에서 보면 서명이나, 공개키 등을 witness라고 할 수 있다. 왜냐하면 각각 서명 검증 조건식과 공개키 암호 조건식을 만족하는 특정값이기 때문이다.
-  - Segregated witness는 이러한 witness에 해당하는 서명이나 공개키를 스크립트에서 분리하여 떼어놓는다(segregation)는 의미이다.
-
-- 트랜잭션 직렬화 형식
-  - 일반 트랜잭션: `[Version 4byte][Input count][Inputs]...[Outputs]...[Locktime 4byte]`
-  - Segwit 트랜잭션: `[Version 4byte][Marker 0x00][Flag 0x01][Input count][Inputs]...[Outputs]...[Witness]...[Locktime 4byte]`
-  - Version(4바이트) 다음의 **5번째 바이트가 marker** `0x00`이고, 6번째 바이트가 flag `0x01`이다.
-  - 이 marker와 flag로 노드는 segwit 트랜잭션임을 인식하고 witness 데이터를 파싱한다.
-  - marker와 flag는 트랜잭션 해시(TXID) 계산에 포함되지 않는다.
-
-- 세그윗의 효과를 정리하면 다음과 같다
-  - 트랜잭션이 작아져 블록 크기가 증가
-  - Transaction malleability(가변성) 문제 해결
-    - 트랜잭션 의미는 유지하면서 트랜잭션 ID가 변경될 수 있는 성질을 말한다. 라이트닝 네트워크에서 가장 작은 단위인 결제 채널을 만들 때 트랜잭션 ID가 변할 수 있다는 사실은 중요한 고려 사항이다. 트랜잭션 ID가 변할 수 있으면 결제 채널을 안전하게 만드는 것이 어려워진다.
-    - 서명을 다시 생성하지 않고 조작 가능한 유일한 필드는 각 입력에 있는 해제 스크립트이기 때문에,
-      - 트랜잭션 ID가 변경될 수 있다는 것은 **해제 스크립트가 변경될 수 있다**는 의미이다.
-      - 예를 들어, 서명 생성시 얻은 `(r, s)`와 `(r, -s)`가 모두 유효한 서명이기에 가변성 문제가 발생한다. 각 노드에서는 일단 s와 -s 중 N/2보다 작은 것을 취해서 문제를 해결한다. 또한, `OP_CHECKMULTISIG`의 off-by-one 버그도 가변성 문제를 야기한다.
-    - 이는 트랜잭션 ID가 고정되지 않은 결제 체널에서 문제가 된다. (블록체인에 들어가면 트랜잭션 ID가 고정되므로 상관없다.)
-    - 증인필드는 트랜잭션 해싱에 들어가지 않는 필드이므로, **해제 스크립트가 변경되어도 ID가 변경되지 않게 된다**.
-  - Quadratic hashing(이차 해싱) 문제 해결
-  - 오프라인 지갑 수수료 계산의 보안 강화
-
-- **P2WPKH**(Pay to Witness Public Key Hash)
-  - Segwit의 가장 기본적인 트랜잭션 형식이다.
-  - [BIP0141](https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki)과 [BIP0143](https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki)에서 정의되었다.
-  - P2PKH의 segwit 버전으로, 서명과 공개키를 witness 필드로 분리한 형태이다.
-
-  - 스크립트
-    - ScriptSig
-
-      ```
-      (empty)
-      ```
-
-      - witness 필드로 분리되어 ScriptSig는 비어있다.
-
-    - ScriptPubKey
-
-      ```
-      OP_0
-      <20-byte pubkey hash>
-      ```
-
-      - `OP_0`은 witness version 0을 의미한다.
-      - 20바이트 공개키 해시가 뒤따른다.
-
-    - Witness
-
-      ```
-      <signature>
-      <pubkey>
-      ```
-
-      - 서명과 공개키가 witness 필드에 위치한다.
-      - 이 데이터는 트랜잭션 ID 계산에 포함되지 않는다.
-
-  - 주소 생성
-    - Bech32 인코딩 사용 ([BIP0173](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki))
-    - 해싱 대상: 공개키를 hash160 → 20바이트
-    - HRP(Human Readable Part): 메인넷 `bc`, 테스트넷 `tb`
-    - Witness version 0 + 20바이트 해시를 5비트 그룹으로 변환 후 Bech32 체크섬 추가
-    - 최종 주소: `bc1` 또는 `tb1`로 시작 (예: `bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4`)
-    - Base58 대비 장점: 대소문자 구분 없음, 오류 검출 우수, QR 코드 효율성 향상
-
-  - z 계산 및 검증
-    - 서명 생성 시 z 계산 (BIP0143 서명 해싱)
-      - P2PKH와 달리 더 효율적인 해싱 방식을 사용한다.
-      - 각 입력마다 모든 이전 출력을 다시 해싱하지 않고, 한 번만 해싱한다.
-      - 계산 복잡도가 O(n²)에서 O(n)으로 개선된다.
-      - 주요 해시 컴포넌트
-        1. `hashPrevouts`: 모든 입력의 outpoint를 이중 SHA-256 해시
-        2. `hashSequence`: 모든 입력의 sequence를 이중 SHA-256 해시
-        3. `hashOutputs`: 모든 출력을 이중 SHA-256 해시
-      - 최종 z는 이러한 컴포넌트들과 현재 입력 정보를 결합하여 생성
-    - 검증 시: witness 필드의 서명과 공개키를 사용하여 동일한 방식으로 검증
-
-- **P2SH-P2WPKH**(Pay to Script Hash - Pay to Witness Public Key Hash)
-  - P2WPKH를 P2SH로 래핑한 형태이다.
-  - Segwit 호환성을 제공하기 위한 전환기적 스크립트 형식이다.
-  - 구형 지갑도 P2SH 주소로 segwit 출력에 송금할 수 있게 한다.
-
-  - 스크립트
-    - ScriptSig
-
-      ```
-      <redeemScript>
-      ```
-
-      - redeemScript는 `OP_0 <20-byte pubkey hash>`이다.
-      - 실제 서명과 공개키는 witness 필드에 위치한다.
-
-    - ScriptPubKey
-
-      ```
-      OP_HASH160
-      <20-byte redeemScript hash>
-      OP_EQUAL
-      ```
-
-      - P2SH 형식과 동일하다.
-      - redeemScript를 hash160으로 해시한 값을 저장한다.
-
-    - Witness
-
-      ```
-      <signature>
-      <pubkey>
-      ```
-
-      - P2WPKH와 동일하게 서명과 공개키가 witness 필드에 위치한다.
-
-  - 주소 생성
-    - P2SH와 동일한 Base58 인코딩 과정 사용
-    - 해싱 대상: redeemScript (`OP_0 <20-byte pubkey hash>`)
-    - 최종 주소: 메인넷 `3`, 테스트넷 `2`로 시작 (예: `3J98t1WpEZ73CNmYviecrnyiWrnqRhWNLy`)
-    - 외부적으로는 일반 P2SH와 구분 불가능 (코인 사용 시 redeemScript 공개되어야 드러남)
-
-  - 검증 방식
-    - 2단계 검증을 수행한다.
-      1. P2SH 검증: ScriptSig의 redeemScript를 hash160으로 해시하여 ScriptPubKey의 해시값과 일치하는지 확인
-      2. Segwit 검증: redeemScript가 `OP_0 <20-byte hash>` 패턴이면 witness 필드로 P2WPKH 검증 수행
-    - 두 단계 모두 통과해야 트랜잭션이 유효하다.
-
-  - z 계산 및 검증
-    - 서명 생성 시 z 계산
-      - P2WPKH와 동일한 BIP0143 해싱 방식을 사용한다.
-      - redeemScript(`OP_0 <20-byte pubkey hash>`)의 공개키 해시를 사용하여 z를 생성한다.
-    - 검증 시: witness 필드의 데이터로 동일한 방식으로 z를 재계산하고 서명 검증
-
-  - 장점
-    - 하위 호환성: 구형 지갑도 P2SH 주소로 송금 가능
-    - Segwit 혜택: 트랜잭션 가변성 해결, 효율적인 해싱, 낮은 수수료
-
-  - 단점
-    - P2WPKH보다 약간 큰 트랜잭션 크기 (redeemScript 포함)
-    - 네이티브 P2WPKH보다 약간 높은 수수료
-    - 2단계 검증으로 인한 추가 연산
-
-  - 사용 시기
-    - 초기 Segwit 도입 시기에 널리 사용되었다.
-    - 현재는 대부분의 지갑이 Segwit을 지원하므로 네이티브 P2WPKH 사용이 권장된다.
-    - 하위 호환성이 중요한 경우에만 사용을 고려한다.
-
 ---
 
 관련 테스트 및 탐방 사이트
@@ -870,8 +718,3 @@ Merkel root
 - <https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf>
 - <https://en.bitcoin.it/wiki/Protocol_documentation>
 - <https://en.bitcoin.it/wiki/Wallet_import_format>
-- 스크립트 관련
-  - <https://learnmeabitcoin.com/technical/script/>
-  - <https://learnmeabitcoin.com/technical/script/p2pkh/>
-  - <https://en.bitcoin.it/wiki/OP_CHECKMULTISIG>
-  - <https://opcodeexplained.com/opcodes/OP_CHECKMULTISIG.html>
