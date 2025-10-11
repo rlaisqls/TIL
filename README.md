@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 833
+files            : 834
 derectories      : 191
 ```
 
@@ -344,13 +344,14 @@ derectories      : 191
 ┃　　　┗━　[**응용**](./암호학/응용)</br>
 ┃　　　┃　　　┗━　[**블록체인**](./암호학/응용/블록체인)</br>
 ┃　　　┃　　　┃　　　┗━　[스마트　컨트랙트](./암호학/응용/블록체인/스마트　컨트랙트.md)</br>
-┃　　　┃　　　┃　　　┗━　[합의　알고리즘](./암호학/응용/블록체인/합의　알고리즘.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Altcoin](./암호학/응용/블록체인/Altcoin.md)</br>
 ┃　　　┃　　　┃　　　┗━　[BFT](./암호학/응용/블록체인/BFT.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Bitcoin　Script](./암호학/응용/블록체인/Bitcoin　Script.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Bitcoin](./암호학/응용/블록체인/Bitcoin.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Bitcoin WhitePaper](./암호학/응용/블록체인/Bitcoin WhitePaper.md)</br>
+┃　　　┃　　　┃　　　┗━　[Consensus　mechanisms](./암호학/응용/블록체인/Consensus　mechanisms.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Ethereum](./암호학/응용/블록체인/Ethereum.md)</br>
+┃　　　┃　　　┃　　　┗━　[HD　Wallet](./암호학/응용/블록체인/HD　Wallet.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ICO](./암호학/응용/블록체인/ICO.md)</br>
 ┃　　　┃　　　┗━　[Certificate_formats](./암호학/응용/Certificate_formats.md)</br>
 ┃　　　┃　　　┗━　[DB 암호화](./암호학/응용/DB 암호화.md)</br>
@@ -1037,7 +1038,7 @@ derectories      : 191
 ┗━　[README](./README.md)</br>
 ┗━　[**test.py**](./test.py)</br>
 ┗━　[**tmp**](./tmp)</br>
-┗━　[**XXivfvTH**](./XXivfvTH)</br>
+┗━　[**XXih8PWX**](./XXih8PWX)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)

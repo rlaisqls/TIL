@@ -1,5 +1,5 @@
 
-합의 알고리즘은 분산 네트워크에서 블록체인의 상태에 대해 모든 노드가 동의하도록 하는 메커니즘이다. Bitcoin에서 사용하는 Proof of Work 외에도 다양한 합의 메커니즘이 개발되어 사용되고 있다.
+Consensus mechanism(합의 알고리즘)은 분산 네트워크에서 블록체인의 상태에 대해 모든 노드가 동의하도록 하는 메커니즘이다. Bitcoin에서 사용하는 Proof of Work 외에도 다양한 합의 메커니즘이 개발되어 사용되고 있다.
 
 ## Proof of Stake (지분 증명)
 
@@ -81,6 +81,13 @@ Solana에서 사용하는 합의 메커니즘으로, 블록체인을 위한 암�
 - 사용 예시: Chia, Filecoin, Storj, Sia, Permacoin, Torcoin
   - Chia: 유용한 데이터를 저장하지 않으며, 담보금이 필요하지 않다.
   - Filecoin, Storj, Sia: 실제 사용자 데이터를 저장하는 서비스를 제공한다.
+
+---
+
+그 외 방식
+
+- [Avalanche Consensus](https://build.avax.network/docs/quick-start/avalanche-consensus)
+- ...
 
 ---
 참고
