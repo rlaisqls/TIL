@@ -1,6 +1,7 @@
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export LANG="UTF-8"
+export LC_COLLATE=C
+export LANG=en_US.UTF-8
 filepath="$HOME/obsidian/TIL"
 
 Y=$(date +%Y)
@@ -9,7 +10,7 @@ D=$(date +%d)
 Ymd=$Y-$M-$D
 
 function generate_project_tree() {
-  tree . -I '+*' -f --dirsfirst --noreport -I '~' --charset ascii |
+    LC_ALL=C LC_COLLATE=C LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8 /opt/homebrew/bin/tree . -I '+*' -f --dirsfirst --noreport -I '~' --charset ascii |
     gsed -e 's/[|]-\+/┗━/g' |
     gsed -e 's/[|]/┃/g' |
     gsed -e 's/[`]/┗━/g' |
@@ -19,7 +20,8 @@ function generate_project_tree() {
     gsed -e "s=$filepath/=./=g" |
     gsed -e "s=$filepath=./TIL</br>=g" |
     gsed -e 's/━━━/━/g' |
-    gsed -e 's/[ ]/　/g'
+    gsed -e 's/[ ]/　/g' |
+    printf '%b\n' "$(cat)"
 }
 
 function generate_project_file_count() {

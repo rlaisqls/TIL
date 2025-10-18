@@ -228,6 +228,15 @@ hash(m) = s^e mod n
 - 복호화 속도를 약 4배 향상시킨다.
 - 대부분의 실제 구현에서 사용된다.
 
+## BOJ 3734 RSA 인수 분해
+
+> <https://www.acmicpc.net/problem/3734>
+> <http://acm.ro/2009/index.html>
+
+- 문제: 양의 정수 n과 k가 주어졌을 때, n = p * q이고, p ≤ q, |q-kp| ≤ 105를 만족하는 소수 p와 q를 찾는 프로그램을 작성하시오.
+- 입력: 첫째 줄에 n과 k가 주어진다. (1 < n < 10120, 1 < k < 108)
+- 출력: 첫째 줄에 문제의 조건을 만족하는 소수 p와 q를 "p * q"형태로 출력한다.
+
 ---
 
 참고
@@ -235,6 +244,7 @@ hash(m) = s^e mod n
 - "리얼월드 암호학" - 데이비드 웡
 - "Cryptography Engineering" - Niels Ferguson, Bruce Schneier, Tadayoshi Kohno
 - <https://en.wikipedia.org/wiki/RSA_(cryptosystem)>
-- <https://www.rfc-editor.org/rfc/rfc8017.html> (PKCS #1: RSA Cryptography Specifications)
-- <https://csrc.nist.gov/publications/detail/sp/800-56b/rev-2/final> (NIST Recommendation for Pair-Wise Key-Establishment)
-- <https://cr.yp.to/factorization/rsa2048.html> (RSA-2048 소인수분해 현황)
+- <https://www.rfc-editor.org/rfc/rfc8017.html>
+- <https://csrc.nist.gov/publications/detail/sp/800-56b/rev-2/final>
+- <https://cr.yp.to/factorization/rsa2048.html>
+- <https://ko.wikipedia.org/wiki/%EB%B0%80%EB%9F%AC-%EB%9D%BC%EB%B9%88_%EC%86%8C%EC%88%98%ED%8C%90%EB%B3%84%EB%B2%95>
