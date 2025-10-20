@@ -233,9 +233,97 @@ hash(m) = s^e mod n
 > <https://www.acmicpc.net/problem/3734>
 > <http://acm.ro/2009/index.html>
 
-- 문제: 양의 정수 n과 k가 주어졌을 때, n = p * q이고, p ≤ q, |q-kp| ≤ 105를 만족하는 소수 p와 q를 찾는 프로그램을 작성하시오.
-- 입력: 첫째 줄에 n과 k가 주어진다. (1 < n < 10120, 1 < k < 108)
-- 출력: 첫째 줄에 문제의 조건을 만족하는 소수 p와 q를 "p * q"형태로 출력한다.
+- 문제: 양의 정수 n과 k가 주어졌을 때, n = p × q이고, p ≤ q, |q-kp| ≤ 10⁵를 만족하는 소수 p와 q를 찾는다.
+- 입력: 첫째 줄에 n과 k가 주어진다. (1 < n < 10¹²⁰, 1 < k < 10⁸)
+- 출력: "p* q" 형태로 출력한다.
+
+이 문제는 RSA의 보안 취약점을 보여주는 특수한 경우의 소인수분해 문제이다. 일반적인 RSA는 p와 q가 비슷한 크기의 소수이지만 충분히 떨어져 있을 때 안전하다. 하지만 두 소수가 특정 관계식을 만족하면 효율적으로 분해할 수 있다.
+
+조건 |q - kp| ≤ 10⁵에서:
+
+- q ≈ kp (약 10⁵ 오차 범위 내)
+- n = p × q ≈ kp²
+- 따라서 **p ≈ √(n/k)**
+
+이를 이용하면 √(n/k) 근처에서만 탐색하면 되므로 10¹²⁰ 크기의 수도 빠르게 소인수분해할 수 있다.
+
+Fermat의 소인수분해나 Pollard의 rho 알고리즘 등도 특수한 경우에 효율적이므로, RSA 키 생성 시 안전한 난수 생성기와 검증 과정이 필수적이다.
+
+```python
+import math
+
+def is_prime(n):
+    """Miller-Rabin 소수 판별 알고리즘"""
+    if n < 2:
+        return False
+    if n == 2 or n == 3:
+        return True
+    if n % 2 == 0:
+        return False
+
+    # n-1 = 2^r × d로 표현
+    r, d = 0, n - 1
+    while d % 2 == 0:
+        r += 1
+        d //= 2
+
+    def witness_test(a):
+        x = pow(a, d, n)
+        if x == 1 or x == n - 1:
+            return True
+        for _ in range(r - 1):
+            x = pow(x, 2, n)
+            if x == n - 1:
+                return True
+        return False
+
+    # 여러 witness로 테스트 (큰 수에도 충분히 정확)
+    for a in [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]:
+        if n == a:
+            return True
+        if n > a and not witness_test(a):
+            return False
+    return True
+
+def solve(n, k):
+    # p의 시작점: √(n/k)
+    start = math.isqrt(n // k)
+
+    # ±2×10⁵ 범위 탐색
+    search_range = 2 * 10**5
+    for delta in range(search_range):
+        for p in [start + delta, start - delta]:
+            if p <= 1:
+                continue
+
+            # p가 n의 약수가 아니면 스킵
+            if n % p != 0:
+                continue
+
+            q = n // p
+
+            # p ≤ q 조건 확인
+            if p > q:
+                continue
+
+            # |q - kp| ≤ 10⁵ 확인 (조기 필터링)
+            if abs(q - k * p) > 10**5:
+                continue
+
+            # 둘 다 소수인지 확인
+            if not is_prime(p):
+                continue
+            if not is_prime(q):
+                continue
+
+            return p, q
+
+    return None, None
+
+n, k = map(int, input().split())
+p, q = solve(n, k)
+print(f"{p}* {q}")
+```
 
 ---
 

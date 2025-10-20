@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 833
-derectories      : 191
+files            : 835
+derectories      : 192
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -850,6 +850,9 @@ derectories      : 191
 ┃　　　┗━　[**대수학**](./수학/대수학)</br>
 ┃　　　┃　　　┗━　[체](./수학/대수학/체.md)</br>
 ┃　　　┃　　　┗━　[타원곡선](./수학/대수학/타원곡선.md)</br>
+┃　　　┗━　[**정수론**](./수학/정수론)</br>
+┃　　　┃　　　┗━　[베주 항등식](./수학/정수론/베주 항등식.md)</br>
+┃　　　┃　　　┗━　[페르마 소정리](./수학/정수론/페르마 소정리.md)</br>
 ┃　　　┗━　[**통계학**](./수학/통계학)</br>
 ┃　　　┃　　　┗━　[t━value](./수학/통계학/t━value.md)</br>
 ┃　　　┃　　　┗━　[윌콕슨 순위합 검정](./수학/통계학/윌콕슨 순위합 검정.md)</br>
@@ -1033,10 +1036,19 @@ derectories      : 191
 ┃　　　　　　　　　　　┗━　[멀티모듈](./코드/빌드/Gradle/멀티모듈.md)</br>
 ┗━　[CLAUDE](./CLAUDE.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXFMBjUM**](./XXFMBjUM)</br>
+┗━　[**all_pair_lcm.py**](./all_pair_lcm.py)</br>
+┗━　[**combination_mod.py**](./combination_mod.py)</br>
+┗━　[**count_divisors.py**](./count_divisors.py)</br>
+┗━　[**euler_totient.py**](./euler_totient.py)</br>
+┗━　[**geometric_series.py**](./geometric_series.py)</br>
+┗━　[**large_prime_factorization.py**](./large_prime_factorization.py)</br>
+┗━　[**min_square_sum.py**](./min_square_sum.py)</br>
+┗━　[**modular_inverse.py**](./modular_inverse.py)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
 ┗━　[**solve_prime_factorization.py**](./solve_prime_factorization.py)</br>
+┗━　[**square_partition.py**](./square_partition.py)</br>
+┗━　[**sum_of_squares.py**](./sum_of_squares.py)</br>
 ┗━　[**test.py**](./test.py)</br>
 ┗━　[**tmp**](./tmp)</br>
 
