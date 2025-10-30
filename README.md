@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 837
+files            : 839
 derectories      : 192
 ```
 
@@ -390,6 +390,7 @@ derectories      : 192
 ┃　　　┃　　　┗━　[Audio Codec](./OS/Embedded/Audio Codec.md)</br>
 ┃　　　┃　　　┗━　[Cramfs](./OS/Embedded/Cramfs.md)</br>
 ┃　　　┃　　　┗━　[I2C](./OS/Embedded/I2C.md)</br>
+┃　　　┃　　　┗━　[샘플레이트](./OS/Embedded/샘플레이트.md)</br>
 ┃　　　┃　　　┗━　[시리얼 통신](./OS/Embedded/시리얼 통신.md)</br>
 ┃　　　┃　　　┗━　[임베디드 리눅스 프로그래밍 수업 정리](./OS/Embedded/임베디드 리눅스 프로그래밍 수업 정리.md)</br>
 ┃　　　┃　　　┗━　[임베디드 시스템](./OS/Embedded/임베디드 시스템.md)</br>
@@ -671,6 +672,7 @@ derectories      : 192
 ┃　　　┗━　[**MQ**](./데이터/MQ)</br>
 ┃　　　┗━　[**NoSQL**](./데이터/NoSQL)</br>
 ┃　　　┃　　　┗━　[**MongoDB**](./데이터/NoSQL/MongoDB)</br>
+┃　　　┃　　　┃　　　┗━　[writeConcern](./데이터/NoSQL/MongoDB/writeConcern.md)</br>
 ┃　　　┃　　　┗━　[**PostgreSQL**](./데이터/NoSQL/PostgreSQL)</br>
 ┃　　　┃　　　┗━　[**redis**](./데이터/NoSQL/redis)</br>
 ┃　　　┗━　[**SQL\　쿼리**](./데이터/SQL\　쿼리)</br>
