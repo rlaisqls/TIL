@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 839
+files            : 840
 derectories      : 192
 ```
 
@@ -898,6 +898,7 @@ derectories      : 192
 ┃　　　┃　　　┃　　　┗━　[Bitcoin\　Script](./암호학/응용/블록체인/Bitcoin\　Script.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Bitcoin](./암호학/응용/블록체인/Bitcoin.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Bitcoin WhitePaper](./암호학/응용/블록체인/Bitcoin WhitePaper.md)</br>
+┃　　　┃　　　┃　　　┗━　[CEX와\　DEX](./암호학/응용/블록체인/CEX와\　DEX.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Consensus\　mechanisms](./암호학/응용/블록체인/Consensus\　mechanisms.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Ethereum](./암호학/응용/블록체인/Ethereum.md)</br>
 ┃　　　┃　　　┃　　　┗━　[HD\　Wallet](./암호학/응용/블록체인/HD\　Wallet.md)</br>
@@ -1040,6 +1041,7 @@ derectories      : 192
 ┃　　　　　　　　　　　┗━　[멀티모듈](./코드/빌드/Gradle/멀티모듈.md)</br>
 ┗━　[CLAUDE](./CLAUDE.md)</br>
 ┗━　[README](./README.md)</br>
+┗━　[**XXyYW5B6**](./XXyYW5B6)</br>
 ┗━　[**all_pair_lcm.py**](./all_pair_lcm.py)</br>
 ┗━　[**combination_mod.py**](./combination_mod.py)</br>
 ┗━　[**count_divisors.py**](./count_divisors.py)</br>
