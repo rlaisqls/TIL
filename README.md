@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 840
+files            : 839
 derectories      : 192
 ```
 
@@ -390,7 +390,6 @@ derectories      : 192
 ┃　　　┃　　　┗━　[Audio Codec](./OS/Embedded/Audio Codec.md)</br>
 ┃　　　┃　　　┗━　[Cramfs](./OS/Embedded/Cramfs.md)</br>
 ┃　　　┃　　　┗━　[I2C](./OS/Embedded/I2C.md)</br>
-┃　　　┃　　　┗━　[샘플레이트](./OS/Embedded/샘플레이트.md)</br>
 ┃　　　┃　　　┗━　[시리얼 통신](./OS/Embedded/시리얼 통신.md)</br>
 ┃　　　┃　　　┗━　[임베디드 리눅스 프로그래밍 수업 정리](./OS/Embedded/임베디드 리눅스 프로그래밍 수업 정리.md)</br>
 ┃　　　┃　　　┗━　[임베디드 시스템](./OS/Embedded/임베디드 시스템.md)</br>
@@ -1041,7 +1040,7 @@ derectories      : 192
 ┃　　　　　　　　　　　┗━　[멀티모듈](./코드/빌드/Gradle/멀티모듈.md)</br>
 ┗━　[CLAUDE](./CLAUDE.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXyYW5B6**](./XXyYW5B6)</br>
+┗━　[**XX40hOp1**](./XX40hOp1)</br>
 ┗━　[**all_pair_lcm.py**](./all_pair_lcm.py)</br>
 ┗━　[**combination_mod.py**](./combination_mod.py)</br>
 ┗━　[**count_divisors.py**](./count_divisors.py)</br>
