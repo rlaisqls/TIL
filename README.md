@@ -671,7 +671,6 @@ derectories      : 192
 ┃　　　┗━　[**MQ**](./데이터/MQ)</br>
 ┃　　　┗━　[**NoSQL**](./데이터/NoSQL)</br>
 ┃　　　┃　　　┗━　[**MongoDB**](./데이터/NoSQL/MongoDB)</br>
-┃　　　┃　　　┃　　　┗━　[writeConcern](./데이터/NoSQL/MongoDB/writeConcern.md)</br>
 ┃　　　┃　　　┗━　[**PostgreSQL**](./데이터/NoSQL/PostgreSQL)</br>
 ┃　　　┃　　　┗━　[**redis**](./데이터/NoSQL/redis)</br>
 ┃　　　┗━　[**SQL\　쿼리**](./데이터/SQL\　쿼리)</br>
@@ -712,6 +711,7 @@ derectories      : 192
 ┃　　　┃　　　┃　　　┗━　[MongoDB 스키마설계 고려사항](./데이터베이스/NoSQL/MongoDB/MongoDB 스키마설계 고려사항.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MongoDB 유저관리](./데이터베이스/NoSQL/MongoDB/MongoDB 유저관리.md)</br>
 ┃　　　┃　　　┃　　　┗━　[MongoDB 쿼리](./데이터베이스/NoSQL/MongoDB/MongoDB 쿼리.md)</br>
+┃　　　┃　　　┃　　　┗━　[writeConcern](./데이터베이스/NoSQL/MongoDB/writeConcern.md)</br>
 ┃　　　┃　　　┗━　[**PostgreSQL**](./데이터베이스/NoSQL/PostgreSQL)</br>
 ┃　　　┃　　　┃　　　┗━　[PostgreSQL](./데이터베이스/NoSQL/PostgreSQL/PostgreSQL.md)</br>
 ┃　　　┃　　　┃　　　┗━　[PostgreSQL명령어](./데이터베이스/NoSQL/PostgreSQL/PostgreSQL명령어.md)</br>
@@ -900,13 +900,13 @@ derectories      : 192
 ┃　　　┃　　　┃　　　┗━　[CEX와\　DEX](./암호학/응용/블록체인/CEX와\　DEX.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Consensus\　mechanisms](./암호학/응용/블록체인/Consensus\　mechanisms.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Ethereum](./암호학/응용/블록체인/Ethereum.md)</br>
+┃　　　┃　　　┃　　　┗━　[EthereumClient](./암호학/응용/블록체인/EthereumClient.md)</br>
 ┃　　　┃　　　┃　　　┗━　[HD\　Wallet](./암호학/응용/블록체인/HD\　Wallet.md)</br>
 ┃　　　┃　　　┃　　　┗━　[ICO](./암호학/응용/블록체인/ICO.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Stablecoin](./암호학/응용/블록체인/Stablecoin.md)</br>
 ┃　　　┃　　　┃　　　┗━　[스마트\　컨트랙트](./암호학/응용/블록체인/스마트\　컨트랙트.md)</br>
 ┃　　　┃　　　┗━　[Certificate_formats](./암호학/응용/Certificate_formats.md)</br>
-┃　　　┃　　　┗━　[DB 암호화](./암호학/응용/DB 암호화.md)</br>
-┃　　　┃　　　┗━　[Keytool](./암호학/응용/Keytool.md)</br>
+┃　　　┃　　　┗━　[m3u8 암호화](./암호학/응용/m3u8 암호화.md)</br>
 ┃　　　┗━　[Alice and Bob](./암호학/Alice and Bob.md)</br>
 ┃　　　┗━　[Kerckhoffs's principle](./암호학/Kerckhoffs's principle.md)</br>
 ┃　　　┗━　[무작위성](./암호학/무작위성.md)</br>
@@ -1040,7 +1040,6 @@ derectories      : 192
 ┃　　　　　　　　　　　┗━　[멀티모듈](./코드/빌드/Gradle/멀티모듈.md)</br>
 ┗━　[CLAUDE](./CLAUDE.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XX40hOp1**](./XX40hOp1)</br>
 ┗━　[**all_pair_lcm.py**](./all_pair_lcm.py)</br>
 ┗━　[**combination_mod.py**](./combination_mod.py)</br>
 ┗━　[**count_divisors.py**](./count_divisors.py)</br>
