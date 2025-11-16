@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 841
-derectories      : 194
+files            : 840
+derectories      : 192
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -667,9 +667,6 @@ derectories      : 194
 ┃　　　┗━　[소프트웨어 공학](./개발/소프트웨어 공학.md)</br>
 ┃　　　┗━　[압축 알고리즘](./개발/압축 알고리즘.md)</br>
 ┃　　　┗━　[툴세팅](./개발/툴세팅.md)</br>
-┗━　[**교양**](./교양)</br>
-┃　　　┗━　[**국어**](./교양/국어)</br>
-┃　　　　　　　┗━　[현대문학](./교양/국어/현대문학.md)</br>
 ┗━　[**데이터**](./데이터)</br>
 ┃　　　┗━　[**DB설계**](./데이터/DB설계)</br>
 ┃　　　┗━　[**MQ**](./데이터/MQ)</br>
@@ -1044,7 +1041,6 @@ derectories      : 194
 ┃　　　　　　　　　　　┗━　[멀티모듈](./코드/빌드/Gradle/멀티모듈.md)</br>
 ┗━　[CLAUDE](./CLAUDE.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXDU4vYB**](./XXDU4vYB)</br>
 ┗━　[**all_pair_lcm.py**](./all_pair_lcm.py)</br>
 ┗━　[**combination_mod.py**](./combination_mod.py)</br>
 ┗━　[**count_divisors.py**](./count_divisors.py)</br>
