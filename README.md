@@ -1044,7 +1044,7 @@ derectories      : 194
 ┃　　　　　　　　　　　┗━　[멀티모듈](./코드/빌드/Gradle/멀티모듈.md)</br>
 ┗━　[CLAUDE](./CLAUDE.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XXG0yCVb**](./XXG0yCVb)</br>
+┗━　[**XXDU4vYB**](./XXDU4vYB)</br>
 ┗━　[**all_pair_lcm.py**](./all_pair_lcm.py)</br>
 ┗━　[**combination_mod.py**](./combination_mod.py)</br>
 ┗━　[**count_divisors.py**](./count_divisors.py)</br>
