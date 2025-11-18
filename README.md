@@ -1,8 +1,8 @@
 # TIL
 
 ```
-files            : 840
-derectories      : 192
+files            : 841
+derectories      : 195
 ```
 
 1. 학습한 지식을 md 파일로 정리합니다. 
@@ -292,20 +292,20 @@ derectories      : 192
 ┃　　　┃　　　┗━　[Contour](./DevOps/Proxy/Contour.md)</br>
 ┃　　　┃　　　┗━　[Contour CRD 설치](./DevOps/Proxy/Contour CRD 설치.md)</br>
 ┃　　　┃　　　┗━　[Reverse Proxy vs. Ingress Controller vs. API Gateway](./DevOps/Proxy/Reverse Proxy vs. Ingress Controller vs. API Gateway.md)</br>
+┃　　　┗━　[**Security**](./DevOps/Security)</br>
+┃　　　┃　　　┗━　[**Authentication**](./DevOps/Security/Authentication)</br>
+┃　　　┃　　　┃　　　┗━　[Dex](./DevOps/Security/Authentication/Dex.md)</br>
+┃　　　┃　　　┃　　　┗━　[Keycloak](./DevOps/Security/Authentication/Keycloak.md)</br>
+┃　　　┃　　　┗━　[**Secrets\　Management**](./DevOps/Security/Secrets\　Management)</br>
+┃　　　┃　　　　　　　┗━　[Vault](./DevOps/Security/Secrets\　Management/Vault.md)</br>
 ┃　　　┗━　[**tools**](./DevOps/tools)</br>
 ┃　　　┃　　　┗━　[CUE](./DevOps/tools/CUE.md)</br>
 ┃　　　┃　　　┗━　[Clium](./DevOps/tools/Clium.md)</br>
-┃　　　┃　　　┗━　[Dex](./DevOps/tools/Dex.md)</br>
-┃　　　┃　　　┗━　[Dex K8s Authenticator](./DevOps/tools/Dex K8s Authenticator.md)</br>
-┃　　　┃　　　┗━　[GPG](./DevOps/tools/GPG.md)</br>
-┃　　　┃　　　┗━　[Keycloak](./DevOps/tools/Keycloak.md)</br>
 ┃　　　┃　　　┗━　[Mortar](./DevOps/tools/Mortar.md)</br>
 ┃　　　┃　　　┗━　[OpenHistorian](./DevOps/tools/OpenHistorian.md)</br>
 ┃　　　┃　　　┗━　[Packer](./DevOps/tools/Packer.md)</br>
-┃　　　┃　　　┗━　[Vault](./DevOps/tools/Vault.md)</br>
 ┃　　　┃　　　┗━　[jenkins](./DevOps/tools/jenkins.md)</br>
 ┃　　　┃　　　┗━　[minio](./DevOps/tools/minio.md)</br>
-┃　　　┃　　　┗━　[openssl로 pemKey 만들고 접속하기](./DevOps/tools/openssl로 pemKey 만들고 접속하기.md)</br>
 ┃　　　┗━　[CI／CD파이프라인](./DevOps/CI／CD파이프라인.md)</br>
 ┃　　　┗━　[Cloud Agnostic Design](./DevOps/Cloud Agnostic Design.md)</br>
 ┃　　　┗━　[Platform Engineering](./DevOps/Platform Engineering.md)</br>
@@ -873,6 +873,7 @@ derectories      : 192
 ┃　　　┗━　[Range GCD](./알고리즘/Range GCD.md)</br>
 ┃　　　┗━　[가장 가까운 두 점](./알고리즘/가장 가까운 두 점.md)</br>
 ┃　　　┗━　[담금질 기법](./알고리즘/담금질 기법.md)</br>
+┃　　　┗━　[몽고메리\　사다리](./알고리즘/몽고메리\　사다리.md)</br>
 ┃　　　┗━　[볼록 껍질과 회전하는 캘리퍼스](./알고리즘/볼록 껍질과 회전하는 캘리퍼스.md)</br>
 ┃　　　┗━　[오일러 경로 테크닉](./알고리즘/오일러 경로 테크닉.md)</br>
 ┃　　　┗━　[왜판원순회](./알고리즘/왜판원순회.md)</br>
@@ -907,6 +908,9 @@ derectories      : 192
 ┃　　　┃　　　┃　　　┗━　[Stablecoin](./암호학/응용/블록체인/Stablecoin.md)</br>
 ┃　　　┃　　　┃　　　┗━　[스마트\　컨트랙트](./암호학/응용/블록체인/스마트\　컨트랙트.md)</br>
 ┃　　　┃　　　┗━　[Certificate_formats](./암호학/응용/Certificate_formats.md)</br>
+┃　　　┃　　　┗━　[GPG](./암호학/응용/GPG.md)</br>
+┃　　　┃　　　┗━　[OpenSSL\　PEM\　Keys](./암호학/응용/OpenSSL\　PEM\　Keys.md)</br>
+┃　　　┃　　　┗━　[SSH](./암호학/응용/SSH.md)</br>
 ┃　　　┃　　　┗━　[m3u8 암호화](./암호학/응용/m3u8 암호화.md)</br>
 ┃　　　┗━　[Alice and Bob](./암호학/Alice and Bob.md)</br>
 ┃　　　┗━　[Kerckhoffs's principle](./암호학/Kerckhoffs's principle.md)</br>
