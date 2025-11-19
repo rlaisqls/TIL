@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 842
+files            : 841
 derectories      : 195
 ```
 
@@ -153,14 +153,12 @@ derectories      : 195
 ┃　　　┃　　　┃　　　┗━　[service mesh](./DevOps/Kubernetes/Service Mesh/service mesh.md)</br>
 ┃　　　┃　　　┗━　[**tools**](./DevOps/Kubernetes/tools)</br>
 ┃　　　┃　　　┃　　　┗━　[**Argo**](./DevOps/Kubernetes/tools/Argo)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[ApplicationSets](./DevOps/Kubernetes/tools/Argo/ApplicationSets.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Apps of Apps](./DevOps/Kubernetes/tools/Argo/Apps of Apps.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[ArgoCD 설치](./DevOps/Kubernetes/tools/Argo/ArgoCD 설치.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Argo Events](./DevOps/Kubernetes/tools/Argo/Argo Events.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Argo Workflow Priority](./DevOps/Kubernetes/tools/Argo/Argo Workflow Priority.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Config Management Plugins](./DevOps/Kubernetes/tools/Argo/Config Management Plugins.md)</br>
-┃　　　┃　　　┃　　　┃　　　┗━　[Health Check](./DevOps/Kubernetes/tools/Argo/Health Check.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**Karpenter**](./DevOps/Kubernetes/tools/Karpenter)</br>
+┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter\　best\　practices](./DevOps/Kubernetes/tools/Karpenter/Karpenter\　best\　practices.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter](./DevOps/Kubernetes/tools/Karpenter/Karpenter.md)</br>
 ┃　　　┃　　　┃　　　┃　　　┗━　[Karpenter best practices](./DevOps/Kubernetes/tools/Karpenter/Karpenter best practices.md)</br>
 ┃　　　┃　　　┃　　　┗━　[**Kyverno**](./DevOps/Kubernetes/tools/Kyverno)</br>
@@ -907,7 +905,8 @@ derectories      : 195
 ┃　　　┃　　　┃　　　┗━　[ICO](./암호학/응용/블록체인/ICO.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Stablecoin](./암호학/응용/블록체인/Stablecoin.md)</br>
 ┃　　　┃　　　┃　　　┗━　[스마트\　컨트랙트](./암호학/응용/블록체인/스마트\　컨트랙트.md)</br>
-┃　　　┃　　　┗━　[Certificate_formats](./암호학/응용/Certificate_formats.md)</br>
+┃　　　┃　　　┗━　[Certificate\　Revocation](./암호학/응용/Certificate\　Revocation.md)</br>
+┃　　　┃　　　┗━　[Certificate\　formats](./암호학/응용/Certificate\　formats.md)</br>
 ┃　　　┃　　　┗━　[GPG](./암호학/응용/GPG.md)</br>
 ┃　　　┃　　　┗━　[OpenSSL\　PEM\　Keys](./암호학/응용/OpenSSL\　PEM\　Keys.md)</br>
 ┃　　　┃　　　┗━　[PKI](./암호학/응용/PKI.md)</br>
@@ -1046,7 +1045,6 @@ derectories      : 195
 ┃　　　　　　　　　　　┗━　[멀티모듈](./코드/빌드/Gradle/멀티모듈.md)</br>
 ┗━　[CLAUDE](./CLAUDE.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**XX6VzxpA**](./XX6VzxpA)</br>
 ┗━　[**all_pair_lcm.py**](./all_pair_lcm.py)</br>
 ┗━　[**combination_mod.py**](./combination_mod.py)</br>
 ┗━　[**count_divisors.py**](./count_divisors.py)</br>
