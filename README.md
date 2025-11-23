@@ -1,7 +1,7 @@
 # TIL
 
 ```
-files            : 841
+files            : 843
 derectories      : 195
 ```
 
@@ -133,6 +133,7 @@ derectories      : 195
 ┃　　　┃　　　┃　　　┗━　[Debugging DNS Resolution](./DevOps/Kubernetes/Network/Debugging DNS Resolution.md)</br>
 ┃　　　┃　　　┃　　　┗━　[HTTPProxy](./DevOps/Kubernetes/Network/HTTPProxy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[IPVS](./DevOps/Kubernetes/Network/IPVS.md)</br>
+┃　　　┃　　　┃　　　┗━　[Ingress와\　Gateway\　API](./DevOps/Kubernetes/Network/Ingress와\　Gateway\　API.md)</br>
 ┃　　　┃　　　┃　　　┗━　[NetworkPolicy](./DevOps/Kubernetes/Network/NetworkPolicy.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Network Troubleshooting](./DevOps/Kubernetes/Network/Network Troubleshooting.md)</br>
 ┃　　　┃　　　┃　　　┗━　[Node and Pod Network Layout](./DevOps/Kubernetes/Network/Node and Pod Network Layout.md)</br>
@@ -908,6 +909,7 @@ derectories      : 195
 ┃　　　┃　　　┗━　[Certificate\　Revocation](./암호학/응용/Certificate\　Revocation.md)</br>
 ┃　　　┃　　　┗━　[Certificate\　formats](./암호학/응용/Certificate\　formats.md)</br>
 ┃　　　┃　　　┗━　[GPG](./암호학/응용/GPG.md)</br>
+┃　　　┃　　　┗━　[GPG와\　블록체인의\　암호학적\　비교](./암호학/응용/GPG와\　블록체인의\　암호학적\　비교.md)</br>
 ┃　　　┃　　　┗━　[OpenSSL\　PEM\　Keys](./암호학/응용/OpenSSL\　PEM\　Keys.md)</br>
 ┃　　　┃　　　┗━　[PKI](./암호학/응용/PKI.md)</br>
 ┃　　　┃　　　┗━　[SSH](./암호학/응용/SSH.md)</br>
@@ -1045,33 +1047,8 @@ derectories      : 195
 ┃　　　　　　　　　　　┗━　[멀티모듈](./코드/빌드/Gradle/멀티모듈.md)</br>
 ┗━　[CLAUDE](./CLAUDE.md)</br>
 ┗━　[README](./README.md)</br>
-┗━　[**all_pair_lcm.py**](./all_pair_lcm.py)</br>
-┗━　[**combination_mod.py**](./combination_mod.py)</br>
-┗━　[**count_divisors.py**](./count_divisors.py)</br>
-┗━　[**count_ones**](./count_ones)</br>
-┗━　[**count_ones.cpp**](./count_ones.cpp)</br>
-┗━　[**euler_totient.py**](./euler_totient.py)</br>
-┗━　[**geometric_series.py**](./geometric_series.py)</br>
-┗━　[**large_prime_factorization.py**](./large_prime_factorization.py)</br>
-┗━　[**min_square_sum.py**](./min_square_sum.py)</br>
-┗━　[**modular_inverse.py**](./modular_inverse.py)</br>
-┗━　[**multiples_of_15**](./multiples_of_15)</br>
-┗━　[**multiples_of_15.cpp**](./multiples_of_15.cpp)</br>
 ┗━　[**package━lock.json**](./package━lock.json)</br>
 ┗━　[**package.json**](./package.json)</br>
-┗━　[**rsa_break**](./rsa_break)</br>
-┗━　[**rsa_break.cpp**](./rsa_break.cpp)</br>
-┗━　[**solve_prime_factorization.py**](./solve_prime_factorization.py)</br>
-┗━　[**square_partition.py**](./square_partition.py)</br>
-┗━　[**sum_of_squares.py**](./sum_of_squares.py)</br>
-┗━　[**sum_s_function**](./sum_s_function)</br>
-┗━　[**sum_s_function.cpp**](./sum_s_function.cpp)</br>
-┗━　[**sum_s_function.py**](./sum_s_function.py)</br>
-┗━　[**sum_s_function_verification.py**](./sum_s_function_verification.py)</br>
-┗━　[**test.py**](./test.py)</br>
-┗━　[**tmp**](./tmp)</br>
-┗━　[**work_attendance**](./work_attendance)</br>
-┗━　[**work_attendance.cpp**](./work_attendance.cpp)</br>
 
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frlaisqls%2FTIL&count_bg=%234B4B4B&title_bg=%23272727&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
