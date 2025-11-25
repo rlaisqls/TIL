@@ -1,3 +1,4 @@
+#!/bin/bash
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_COLLATE=C
@@ -48,7 +49,7 @@ function generate_avg_file_legnth() {
 readme="$filepath/README.md"
 
 function generate_readme() {
-  readme_template="$filepath/.husky/readme_template.md"
+  readme_template="$filepath/.scripts/readme_template.md"
   cp -f "$readme_template" "$readme"
 
   generate_project_tree . |
@@ -63,4 +64,3 @@ function generate_readme() {
 
 generate_readme .
 git add $readme
-
