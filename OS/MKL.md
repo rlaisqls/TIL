@@ -70,22 +70,19 @@ B = np.linalg.inv(A)  # 내부적으로 MKL을 호출
 
 C/C++에서 직접 MKL을 사용할 수도 있다.
 
-```
-# include "mkl.h"
-
+```c
+#include "mkl.h"
 cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans,
             M, N, K, alpha, A, K, B, N, beta, C, N);
+```
 
 설치 방법
 
-Linux (APT 또는 Conda)
-
+```bash
 # Conda를 사용하는 경우
-
 conda install -c intel mkl
 
 # APT 기반 리눅스에서 설치 (Intel OneAPI 포함)
-
 sudo apt install intel-oneapi-mkl
 ```
 
@@ -93,4 +90,4 @@ sudo apt install intel-oneapi-mkl
 
 - ARM 아키텍처에서는 공식적으로 지원되지 않는다. (x86 전용)
 - 라이선스는 Intel OneAPI의 일부로 무료이나, 상업적 사용 시 조건 확인이 필요하다.
-- 성능 최적화를 위해 CPU 플래그와 연동이 중요하다 (예: MKL_DEBUG_CPU_TYPE)
+- 성능 최적화를 위해 CPU 플래그와 연동이 중요하다 (예: `MKL_DEBUG_CPU_TYPE`)
