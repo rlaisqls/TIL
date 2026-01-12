@@ -19,6 +19,57 @@ spec:
 
 ---
 
+## 스케줄러 내부 구조
+
+### Scheduling Cycle vs Binding Cycle
+
+Pod 스케줄링은 두 단계로 나뉜다:
+
+1. **Scheduling Cycle**: 노드 선택 (직렬 실행)
+2. **Binding Cycle**: API Server에 바인딩 통보 (병렬 실행 가능)
+
+Scheduling Cycle이 직렬인 이유는 두 Pod가 동시에 같은 리소스를 선점하는 race condition을 막기 위함이다. Binding은 네트워크 I/O라 느리므로, 이걸 기다리는 동안 다음 Pod 스케줄링을 병렬로 진행한다.
+
+### 스케줄링 큐
+
+스케줄러는 세 개의 큐를 관리한다:
+
+- **ActiveQ**: 스케줄링 대기 중인 Pod
+- **BackoffQ**: 실패 후 재시도 대기 중인 Pod (1초 → 2초 → ... → 최대 10초)
+- **Unschedulable Pod Pool**: 현재 클러스터 상태로는 스케줄링 불가능한 Pod
+
+> QueueingHint (v1.32)
+>
+> - 이전에 기본값으론 스케줄링 실패한 Pod가 노드 추가, Pod 삭제 같은 이벤트에 무조건 스케줄링을 재시도했다. v1.32부터는 각 플러그인이 '이 이벤트가 실제로 이 Pod와 연관있는지' 판단해서 불필요한 재시도를 줄인다.
+
+---
+
+## Scheduling Framework
+
+v1.19부터 스케줄러가 플러그인 기반으로 바뀌었다.
+
+확장 포인트:
+
+```
+PreEnqueue → QueueSort → PreFilter → Filter → PostFilter
+    → PreScore → Score → NormalizeScore → Reserve → Permit
+    → PreBind → Bind → PostBind
+```
+
+- **QueueSort**: 큐 정렬. 하나만 활성화 가능
+- **Filter**: 노드별로 병렬 실행
+- **PostFilter**: feasible 노드가 없을 때만 호출. Preemption이 여기서 동작
+- **Permit**: Wait 반환 가능. Gang Scheduling 구현에 사용
+
+기본 플러그인:
+
+- `NodeResourcesFit`: 리소스 검사. LeastAllocated/MostAllocated/RequestedToCapacityRatio 전략
+- `TaintToleration`: Taint/Toleration 검사
+- `InterPodAffinity`: Pod 간 affinity/anti-affinity. 대규모 클러스터에서 O(N²) 성능 이슈가 있어서 1.22부터 인덱싱 도입
+- `ImageLocality`: 이미지가 이미 있는 노드 선호
+
+---
+
 1. Labels and Selectors
 
 특정 라벨이 붙어있는 노드에 스케줄링하는 방법
@@ -61,26 +112,21 @@ spec:
 - `Taint`: '오염시키다'
   - (Node에 설정) 이 Node는 오염되어있음
 - `Toleration` : '관용'
-
   - (Pod에 설정) 이 오염은 무시해도 됨
 
 - Taint 옵션
-
   - `NoSchedule`: tolerance 없이 Pod를 스케줄링하지 않는다.
   - `NoExecute`: tolerance 없이 Pod를 스케줄링, 실행하지 않는다.
     - 노드에 NoExecute taint가 추가되면, 지정된 시간(`tolerationSeconds`)이 지난 후 toleration이 없는 기존 Pod가 퇴출된다.
   - `PreferredNoSchedule`: tolerance가 없이 Pod를 스케줄링하지 않으려 하지만, 클러스터에 리소스가 부족한 경우, taint가 있는 노드에도 Pod를 스케줄링할 수 있다.
 
 - 용도
-
   - 특정 노드들을 전용 용도로 쓰고 싶을 때
     - 특정 Pod들만 이 노드에 스케줄링되도록
     - ex. GPU를 쓰는 컨테이너만 GPU 노드에 스케줄링 되도록
   - Node에 문제가 있어 내쫒을 때
-
     - effect `NoExecute`로
     - k8s에선 이 용도로 아래 taint들을 사용함
-
       - `node.kubernetes.io/not-ready` (Node가 준비되지 않음)
       - `node.kubernetes.io/unreachable` (노드 컨트롤러와 통신되지 않음)
       - `memory-pressure`, `disk-pressure`, `pid-pressure`, `network-unavailable`...
@@ -105,7 +151,6 @@ spec:
 
 - taint, toleration은 노드에 다른 포드가 예약되는 걸 막고 특정 노드로 제한하는 역할이라면
 - nodeAffinity는 pod 입장에서 이 노드에 스케줄링되면 좋겠다 (친밀감, 관련성)
-
   - `requiredDuringSchedulingIgnoredDuringExecution`
   - `preferredDuringSchedulingIgnoredDuringExecution`
   - (`requiredDuringschedulingrequiredduringexecution`를 지원할 계획이 있다고 함)
@@ -142,12 +187,10 @@ spec:
     - weight (규칙과 일치하는 두 개의 가능한 노드가있는 경우, 일치하는 가중치 합이 높은 노드에 스케줄링)
 
 - Pod Affinity (Anti-affinity)
-
   - Pod들 간의 위치 관계를 정의하여 함께 배치하거나(affinity) 떨어뜨려 배치(anti-affinity)
   - topologyKey를 기준으로 도메인을 나눔 (node, zone, region 등)
 
   **사용 사례**:
-
   - Affinity:
     - 같은 서비스의 Pod들을 동일 존에 배치하여 존 간 트래픽 비용 절감
     - 특정 라이센스나 하드웨어가 있는 노드에 관련 Pod들을 함께 배치
@@ -215,7 +258,52 @@ spec:
 
 ---
 
-4. Priority Classes & Preemption
+4. Pod Topology Spread Constraints
+
+Anti-Affinity는 "분리됨/안됨"만 표현 가능. Topology Spread는 "각 도메인에 균등하게"를 표현한다.
+
+```yaml
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mypod
+  labels:
+    foo: bar
+spec:
+  topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: zone
+      whenUnsatisfiable: DoNotSchedule
+      labelSelector:
+        matchLabels:
+          foo: bar
+  containers:
+    - name: pause
+      image: registry.k8s.io/pause:3.1
+```
+
+- `maxSkew`: 가장 많은 도메인과 가장 적은 도메인의 Pod 수 차이 허용치
+- `whenUnsatisfiable`: `DoNotSchedule`(기본값) 또는 `ScheduleAnyway`
+- `minDomains` (v1.28): 최소 도메인 수 지정 가능
+- `nodeAffinityPolicy`, `nodeTaintsPolicy` (v1.26): nodeAffinity/taint 고려 여부
+
+클러스터 기본값 (v1.24+):
+
+```yaml
+defaultConstraints:
+  - maxSkew: 3
+    topologyKey: "kubernetes.io/hostname"
+    whenUnsatisfiable: ScheduleAnyway
+  - maxSkew: 5
+    topologyKey: "topology.kubernetes.io/zone"
+    whenUnsatisfiable: ScheduleAnyway
+```
+
+스케일 다운 시 분산이 깨질 수 있다. 스케줄러는 새 Pod 배치만 담당하고 기존 Pod 재배치는 안 한다.
+
+---
+
+5. Priority Classes & Preemption
 
 Pod의 우선순위를 정의하여 스케줄링 순서와 리소스 부족 시 선점(Preemption) 동작을 제어
 
@@ -241,7 +329,6 @@ spec:
 ```
 
 - Priority 설정
-
   - `value`: 우선순위 값 (높을수록 우선순위 높음, -2147483648 ~ 1000000000)
   - `globalDefault`: 클러스터 전체 기본값으로 설정 (하나만 가능)
   - 시스템 예약 우선순위:
@@ -249,7 +336,6 @@ spec:
     - `system-node-critical`: 2000001000
 
 - Preemption:
-
   - 높은 우선순위 Pod가 스케줄링될 공간이 없을 때, 낮은 우선순위 Pod를 evict하고 그 자리에 스케줄링
   - 과정
     1. 높은 우선순위 Pod가 pending 상태
@@ -258,10 +344,14 @@ spec:
     4. 낮은 우선순위 Pod에 graceful termination period 부여
     5. 높은 우선순위 Pod가 해당 노드에 스케줄링
 
+- `nominatedNodeName`: preemption 발생 시 설정됨. 단, 보장은 아님
+  - victim의 graceful termination(기본 30초) 동안 더 높은 우선순위 Pod가 올 수 있음
+  - 다른 pending Pod가 먼저 스케줄링될 수 있음
+
+- `preemptionPolicy: Never` (v1.24+): 우선순위는 높지만 preemption은 안 함. 큐에서 앞에 서있다가 자리 나면 들어감
+
 - Kubelet Eviction에도 priority가 고려됨
-
   - 정확히는 아래 정보에따라 순서대로 고려함
-
     1. pod의 자원 사용이 requests를 초과하는지 **여부**
     2. Pod 우선 순위
     3. requests 대비 자원 사용량
@@ -278,7 +368,6 @@ spec:
   > - **Guaranteed**: 모든 컨테이너가 CPU/메모리 requests와 limits을 동일하게 설정
   > - **Burstable**: 최소 하나의 컨테이너가 requests나 limits을 설정
   > - **BestEffort**: requests와 limits이 모두 미설정
-
   - 참고
     - EphemeralStorage는 QoS 분류가 적용되지 않음
     - inode나 PID 부족 시에는 requests가 없으므로 Priority만으로 결정
@@ -289,18 +378,15 @@ Preemption 제한사항
 1. 낮은 우선순위 Pod에 대한 Inter-Pod Affinity 보장되지 않음
 
 - 예시
-
   - 낮은 우선순위의 cache-pod
   - 높은 우선순의의 web-pod (cache pod와 같은 노드에 있어야 함)
   - 이 때 스케줄러가 preemption 시도
-
     - affinity를 보장하려면, 모든 low-priority Pod(cache-pod 포함) 제거를 시뮬레이션 해야함
     - 근데 web pod보다 우선순위 낮은 pod가 cache-pod밖에 없다면?
     - web-pod 스케줄링 시도 → 실패 (필요한 cache-pod가 없어서)
     - 결론: 이 노드는 preemption 불가능, web은 계속 pending 상대로 남음
 
   - 따라서 이 경우 affinity가 깨질 수 있음
-
     - affinity 규칙을 만족하는 Pod 조합의 permutation이 너무 많아 성능 저하
     - 높은 우선순위 Pod가 낮은 우선순위 Pod에 의존하는 것은 설계상 모순
     - 사용자에게 혼란을 주고 스케줄링 예측 가능성 저하
@@ -353,9 +439,85 @@ Preemption 제한사항
 
 ---
 
-1. 낮은 우선순위 Pod에 대한 Inter-Pod Affinity. 깨지는지, 아닌지
+6. 스케줄러 성능 튜닝
 
-2. ignoredDuringExecution이어도 내쫒는가
+### percentageOfNodesToScore
+
+모든 노드를 다 스코어링하여 계산하면 성능에 부정적 영향이 있을 수 있다다. 이 값을 설정하면 feasible 노드를 해당 비율만큼 찾은 후 스코어링으로 넘어간다.
+
+기본값:
+
+- 100개 노드: 50%
+- 5000개 노드: 10%
+- 최소값: 5% (하드코딩)
+
+```yaml
+apiVersion: kubescheduler.config.k8s.io/v1
+kind: KubeSchedulerConfiguration
+percentageOfNodesToScore: 50
+```
+
+### 노드 순회 방식
+
+특정 노드가 항상 먼저 검사되는 걸 막기 위해 라운드 로빈으로 순회한다. 이전에 멈춘 곳부터 시작. 멀티 존이면 존도 인터리빙:
+
+```
+Zone1: Node1, Node2, Node3
+Zone2: Node4, Node5
+
+순회: Node1 → Node4 → Node2 → Node5 → Node3 → Node1 → ...
+```
+
+---
+
+7. NodeResourcesFit 스코어링 전략
+
+- **LeastAllocated** (기본값): 리소스가 여유로운 노드 선호. 워크로드 분산
+- **MostAllocated**: 리소스를 많이 쓰는 노드 선호. Bin Packing. Cluster Autoscaler와 같이 쓸 때 유용 (빈 노드를 만들어서 스케일 다운)
+- **RequestedToCapacityRatio**: `shape` 파라미터로 커스텀 스코어링 함수 정의
+
+```yaml
+apiVersion: kubescheduler.config.k8s.io/v1
+kind: KubeSchedulerConfiguration
+profiles:
+  - pluginConfig:
+      - args:
+          scoringStrategy:
+            type: MostAllocated
+            resources:
+              - name: cpu
+                weight: 1
+              - name: memory
+                weight: 1
+        name: NodeResourcesFit
+```
+
+---
+
+8. Gang Scheduling
+
+기본 스케줄러는 All-or-Nothing 스케줄링을 지원 안 함. ML 학습에서 8개 Pod 중 7개만 뜨면 데드락.
+
+외부 스케줄러 필요:
+
+- **Volcano**: CNCF 프로젝트. Job 큐, PodGroup, Fair-share 스케줄링
+- **Coscheduling Plugin**: kubernetes-sigs/scheduler-plugins. 기본 스케줄러에 플러그인으로 붙음
+
+---
+
+9. Descheduler
+
+스케줄러는 새 Pod 배치만 담당. 이미 스케줄링된 Pod 재배치는 Descheduler가 한다.
+
+주요 전략:
+
+- `RemoveDuplicates`: 노드당 ReplicaSet Pod 중복 제거
+- `LowNodeUtilization`: 활용도 낮은 노드의 Pod evict → 통합
+- `HighNodeUtilization`: 빈 노드 만들기 (오토스케일링용)
+- `RemovePodsViolatingNodeAffinity`: affinity 조건 안 맞게 된 Pod 제거
+- `RemovePodsViolatingTopologySpreadConstraint`: 분산 깨진 경우 재조정
+
+system-cluster-critical, system-node-critical Pod는 안 건드림. PDB 존중.
 
 ---
 
@@ -415,3 +577,14 @@ profiles:
 - <https://github.com/kubernetes/design-proposals-archive/blob/main/scheduling/podaffinity.md>
 - <https://github.com/kubernetes/design-proposals-archive/blob/main/scheduling/nodeaffinity.md>
 - <https://kubernetes.io/blog/2017/03/advanced-scheduling-in-kubernetes/>
+- <https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/>
+- <https://kubernetes.io/docs/reference/scheduling/config/>
+- <https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/>
+- <https://kubernetes.io/docs/concepts/scheduling-eviction/scheduler-perf-tuning/>
+- <https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/>
+- <https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/>
+- <https://kubernetes.io/docs/concepts/scheduling-eviction/resource-bin-packing/>
+- <https://kubernetes.io/blog/2024/12/12/scheduler-queueinghint/>
+- <https://github.com/kubernetes-sigs/descheduler>
+- <https://github.com/kubernetes-sigs/scheduler-plugins>
+- <https://volcano.sh/en/docs/>
