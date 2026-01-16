@@ -16,7 +16,7 @@ function generate_project_tree() {
     gsed -e 's/[|]/┃/g' |
     gsed -e 's/[`]/┗━/g' |
     gsed -e 's/[-]/━/g' |
-    gsed -e "s:\(━ \)\(\(.*/\)\([^/]\+\)\):\1[**\4**](\2)<\/br>:g" |
+    gsed -e "s:\(━ \)\(\(.*/\)\([^/]\+\)\):\1[**\4**](<\2>)<\/br>:g" |
     gsed -e "s:\[\*\*\(.*\)\.md\*\*\]:\[\1\]:g" |
     gsed -e "s=$filepath/=./=g" |
     gsed -e "s=$filepath=./TIL</br>=g" |

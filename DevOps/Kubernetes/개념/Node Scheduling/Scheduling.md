@@ -1,4 +1,4 @@
-k8s Scheduler의 동작:
+## k8s Scheduler의 동작
 
 - Pod를 정의하면 그 Pod를 정의할 수 있는 적절한 Node를 찾아서 배치해줌.
   - 적절한 Node는 selector, taint & toleration, priority 등 설정값에 따라 정함
@@ -70,7 +70,7 @@ PreEnqueue → QueueSort → PreFilter → Filter → PostFilter
 
 ---
 
-1. Labels and Selectors
+## 1. Labels and Selectors
 
 특정 라벨이 붙어있는 노드에 스케줄링하는 방법
 
@@ -87,7 +87,7 @@ spec:
 
 ---
 
-2. Taints and Tolerations
+## 2. Taints and Tolerations
 
 스케줄링해도 되는 노드를 지정하는 방법
 
@@ -120,6 +120,23 @@ spec:
     - 노드에 NoExecute taint가 추가되면, 지정된 시간(`tolerationSeconds`)이 지난 후 toleration이 없는 기존 Pod가 퇴출된다.
   - `PreferredNoSchedule`: tolerance가 없이 Pod를 스케줄링하지 않으려 하지만, 클러스터에 리소스가 부족한 경우, taint가 있는 노드에도 Pod를 스케줄링할 수 있다.
 
+### Toleration과 Taint Effect 관계
+
+Toleration의 effect와 Taint의 effect 간 호환성을 정리하면 다음과 같다:
+
+| Toleration ╲ Taint       | PreferNoSchedule | NoSchedule | NoExecute |
+|--------------------------|------------------|------------|-----------|
+| PreferNoSchedule         | O                | X          | X         |
+| NoSchedule               | O                | O          | X         |
+| NoExecute                | O                | X          | O         |
+| effect 미지정 (빈 값)    | O                | O          | O         |
+
+- **O**: 해당 Toleration으로 해당 Taint를 tolerate 가능 = Pod가 그 노드에 스케줄링 가능
+- **X**: 해당 Toleration으로 해당 Taint를 tolerate 불가 = Pod가 그 노드에 스케줄링 불가
+
+effect를 지정하지 않으면(빈 값) 모든 effect의 Taint를 tolerate할 수 있다.
+
+
 - 용도
   - 특정 노드들을 전용 용도로 쓰고 싶을 때
     - 특정 Pod들만 이 노드에 스케줄링되도록
@@ -142,12 +159,37 @@ spec:
       tolerationSeconds: 300
       ```
 
-- PodDisruptionBudget
-  - <https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction>
+### PodDisruptionBudget과 Drain
+
+Drain으로 노드를 비울 때 주의할 점이 있다. Deployment의 Rolling Update와 달리, drain으로 evict되면 pod가 바로 삭제된다.
+
+- **Rolling Update**: Ready 상태를 기준으로 `maxSurge 25%`, `maxUnavailable 25%`가 기본값이므로 Pod가 1개여도 새 Pod가 먼저 Ready된 후 기존 Pod가 삭제됨
+- **Drain/Evict**: Pod를 직접 삭제하므로, 1개뿐인 Pod는 그냥 중단됨
+
+따라서 evict로부터 Pod를 보호하려면 PodDisruptionBudget(PDB)을 설정해야 한다.
+
+```yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: my-app-pdb
+spec:
+  minAvailable: 1  # 또는 maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: my-app
+```
+
+- `minAvailable`: 항상 유지해야 하는 최소 Pod 수 (정수 또는 백분율)
+- `maxUnavailable`: 동시에 중단될 수 있는 최대 Pod 수 (정수 또는 백분율)
+
+PDB가 설정되면 drain 시 해당 조건을 만족할 때까지 eviction이 대기한다.
+
+- <https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction>
 
 ---
 
-3. Affinity
+## 3. Affinity
 
 - taint, toleration은 노드에 다른 포드가 예약되는 걸 막고 특정 노드로 제한하는 역할이라면
 - nodeAffinity는 pod 입장에서 이 노드에 스케줄링되면 좋겠다 (친밀감, 관련성)
@@ -258,7 +300,7 @@ spec:
 
 ---
 
-4. Pod Topology Spread Constraints
+## 4. Pod Topology Spread Constraints
 
 Anti-Affinity는 "분리됨/안됨"만 표현 가능. Topology Spread는 "각 도메인에 균등하게"를 표현한다.
 
@@ -303,7 +345,7 @@ defaultConstraints:
 
 ---
 
-5. Priority Classes & Preemption
+## 5. Priority Classes & Preemption
 
 Pod의 우선순위를 정의하여 스케줄링 순서와 리소스 부족 시 선점(Preemption) 동작을 제어
 
@@ -375,33 +417,29 @@ spec:
 
 Preemption 제한사항
 
-1. 낮은 우선순위 Pod에 대한 Inter-Pod Affinity 보장되지 않음
+### 1. 낮은 우선순위 Pod에 대한 Inter-Pod Affinity 보장되지 않음
+
+높은 우선순위 Pod가 낮은 우선순위 Pod와 같은 노드에 있어야 하는 affinity가 있으면 문제가 된다.
 
 - 예시
   - 낮은 우선순위의 cache-pod
-  - 높은 우선순의의 web-pod (cache pod와 같은 노드에 있어야 함)
+  - 높은 우선순위의 web-pod (cache pod와 같은 노드에 있어야 함)
   - 이 때 스케줄러가 preemption 시도
     - affinity를 보장하려면, 모든 low-priority Pod(cache-pod 포함) 제거를 시뮬레이션 해야함
     - 근데 web pod보다 우선순위 낮은 pod가 cache-pod밖에 없다면?
     - web-pod 스케줄링 시도 → 실패 (필요한 cache-pod가 없어서)
-    - 결론: 이 노드는 preemption 불가능, web은 계속 pending 상대로 남음
+    - 결론: 이 노드는 preemption 불가능, web은 계속 pending 상태로 남음
 
-  - 따라서 이 경우 affinity가 깨질 수 있음
-    - affinity 규칙을 만족하는 Pod 조합의 permutation이 너무 많아 성능 저하
-    - 높은 우선순위 Pod가 낮은 우선순위 Pod에 의존하는 것은 설계상 모순
-    - 사용자에게 혼란을 주고 스케줄링 예측 가능성 저하
+- 해결책: affinity 대상 Pod의 우선순위를 같거나 높게 설정
 
-  - 해결책
-    - cache-pod의 우선순위를 web-pod와 같거나 높게 설정
-    - affinity 대신 다른 방법 사용 (예: 같은 Deployment로 관리)
+### 2. Cross-Node Preemption 지원 안 함
 
-2. 특정 노드에 Pod를 스케줄링하기 위해 다른 노드의 Pod를 제거하지 않음
+같은 노드 내에서만 preemption을 수행한다. 다른 노드의 Pod를 쫓아내서 문제를 해결할 수 있어도 안 한다.
 
-- 같은 노드 내에서만 preemption을 수행
-- 예시 (Node1과 Node2가 모두 a zone에 있음)
+- 예시 (Node1과 Node2가 모두 zone-a에 있음)
 
   ```yaml
-  # Node1에서 이미 실행 중인 Pod
+  # Node1에서 실행 중인 낮은 우선순위 Pod
   apiVersion: v1
   kind: Pod
   metadata:
@@ -413,33 +451,107 @@ Preemption 제한사항
         requiredDuringSchedulingIgnoredDuringExecution:
         - labelSelector:
             matchLabels:
-              app: web  # "app: web" 라벨을 가진 Pod와 같은 zone에 있으면 안됨
+              app: web  # "app: web" 라벨 Pod와 같은 zone 금지
           topologyKey: topology.kubernetes.io/zone
-    containers: [...]
+  ```
 
+  ```yaml
   # Node2에 스케줄링하려는 높은 우선순위 Pod
   apiVersion: v1
   kind: Pod
   metadata:
     name: web-pod
     labels:
-      app: web  # 이 라벨 때문에 pod-a의 anti-affinity에 걸림
+      app: web
   spec:
     priorityClassName: high-priority
-    containers: [...]
   ```
 
-1. web-pod를 Node2에 스케줄링하려 함
-2. Node1의 pod-a가 "같은 zone(zone-a)에 app:web Pod 금지" 규칙을 가지고,
-   web-pod는 app:web 라벨을 가지므로, zone-a 어디에도 배치 불가
-3. 해결하려면 Node1의 pod-a를 제거해야 함 (= Cross Node Preemption)
+- 흐름:
+  1. web-pod를 Node2에 스케줄링하려 함
+  2. pod-a의 anti-affinity 때문에 zone-a 전체가 막힘
+  3. pod-a를 쫓아내면 해결되는데, pod-a는 Node1에 있음
+  4. 스케줄러는 다른 노드의 Pod를 건드리지 않음 → web-pod는 pending
 
-- 하지만 이는 다른 노드의 Pod를 건드리는 것
-- web-pod의 priority가 높지만 preemption 하지 못하고 pending으로 남음
+### 3. nominatedNodeName Race Condition
+
+preemption이 발생하면 `status.nominatedNodeName`이 설정된다. 근데 이게 race condition이 있다.
+
+- 흐름:
+  1. Pod P가 스케줄링 불가 → preemption 로직이 Node N을 선택
+  2. 스케줄러가 Pod P의 nominatedNodeName을 N으로 업데이트하려고 API 요청
+  3. 그 사이에 다른 Pod Q가 스케줄링되어 Node N에 배치됨
+  4. Pod P는 nominatedNodeName=N이지만, 실제로 N에 자리가 없음
+
+- 결과:
+  - nominatedNodeName이 설정된 Pod가 있으면 다른 작은 Pod들이 그 노드에 스케줄링 안 됨
+  - 근데 정작 nominated Pod는 자리가 없어서 못 들어감
+  - 노드 리소스가 낭비되는 상황
+
+- nominatedNodeName은 보장이 아님. 스케줄러가 "먼저 시도해볼 노드" 정도의 의미
+
+### 4. Graceful Termination 동안 다른 Pod가 끼어듦
+
+victim Pod들이 종료되는 동안 (기본 30초) 다른 일이 생길 수 있다.
+
+- 시나리오 1: 더 높은 우선순위 Pod가 등장
+  1. Pod P (priority: 100)가 preemption 시작, victim 종료 대기 중
+  2. Pod Q (priority: 200)가 생성됨
+  3. victim 종료 완료
+  4. 스케줄러가 Q를 먼저 스케줄링 (더 높은 우선순위니까)
+  5. P는 다시 pending
+
+- 시나리오 2: 같은 우선순위 Pod가 끼어듦
+  1. Pod P가 preemption 시작
+  2. Pod Q (같은 우선순위, 더 작은 리소스 요청)가 생성됨
+  3. victim 일부만 종료된 시점에 Q가 들어갈 자리가 생김
+  4. Q가 먼저 스케줄링됨
+  5. P는 자리 부족으로 다시 preemption 시도
+
+- 완화책: 낮은 우선순위 Pod에 `terminationGracePeriodSeconds: 0` 설정
+
+### 5. PDB는 Best-Effort
+
+PodDisruptionBudget을 존중하려고 "노력"하지만 보장은 아니다.
+
+- 동작:
+  1. 스케줄러가 PDB를 위반하지 않는 victim을 찾으려고 시도
+  2. 그런 victim이 없으면? PDB를 무시하고 preemption 진행
+
+- 더 심각한 문제 (race condition):
+  - PDB가 `minAvailable: 2`이고 현재 Pod 3개
+  - 스케줄러가 "1개 evict 가능"이라고 판단
+  - 근데 동시에 2개를 evict하려고 하면?
+  - 스케줄러는 자기가 보낸 eviction 요청을 고려 안 함
+  - 결과: PDB가 `minAvailable: 2`인데 Pod가 1개만 남는 상황
+
+- 이건 스케줄러와 PDB 컨트롤러 간의 race condition. 알려진 이슈다. (kubernetes/kubernetes#91492)
+
+### 6. Priority Inflation
+
+너무 많은 Pod가 높은 우선순위를 가지면 preemption이 무의미해진다.
+
+- 모든 Pod가 priority: 1000이면 preemption이 발생 안 함
+- 해결책: ResourceQuota로 PriorityClass별 Pod 수 제한
+
+```yaml
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: high-priority-quota
+spec:
+  hard:
+    pods: "10"
+  scopeSelector:
+    matchExpressions:
+    - operator: In
+      scopeName: PriorityClass
+      values: ["high-priority"]
+```
 
 ---
 
-6. 스케줄러 성능 튜닝
+## 6. 스케줄러 성능 튜닝
 
 ### percentageOfNodesToScore
 
@@ -470,7 +582,7 @@ Zone2: Node4, Node5
 
 ---
 
-7. NodeResourcesFit 스코어링 전략
+## 7. NodeResourcesFit 스코어링 전략
 
 - **LeastAllocated** (기본값): 리소스가 여유로운 노드 선호. 워크로드 분산
 - **MostAllocated**: 리소스를 많이 쓰는 노드 선호. Bin Packing. Cluster Autoscaler와 같이 쓸 때 유용 (빈 노드를 만들어서 스케일 다운)
@@ -494,7 +606,7 @@ profiles:
 
 ---
 
-8. Gang Scheduling
+## 8. Gang Scheduling
 
 기본 스케줄러는 All-or-Nothing 스케줄링을 지원 안 함. ML 학습에서 8개 Pod 중 7개만 뜨면 데드락.
 
@@ -505,7 +617,7 @@ profiles:
 
 ---
 
-9. Descheduler
+## 9. Descheduler
 
 스케줄러는 새 Pod 배치만 담당. 이미 스케줄링된 Pod 재배치는 Descheduler가 한다.
 
@@ -566,6 +678,100 @@ profiles:
               - name: memory
                 weight: 1
 ```
+---
+
+## 10. 리소스 관리와 스케줄링
+
+스케줄러가 Pod를 노드에 배치할 때 리소스 요청량(requests)과 제한량(limits)을 기준으로 결정한다.
+
+### 리소스 종류
+
+**CPU**
+
+- Compressible 리소스: 부족하면 throttling됨 (Pod가 죽지 않음)
+- 단위: 밀리코어(m). 1000m = 1 CPU 코어
+
+**Memory**
+
+- Incompressible 리소스: 부족하면 OOM Killed됨
+- 단위: 바이트 (Mi, Gi 등)
+
+**Ephemeral Storage**
+
+로컬 디스크 기반 임시 스토리지로, 다음 항목들이 포함된다:
+
+- kubelet이 관리하는 컨테이너 로그
+- `emptyDir` 볼륨
+- Writable Layer (컨테이너가 이미지 위에 쓴 데이터)
+  - 참고: `docker commit`을 하면 이 Writable Layer가 추가된 이미지가 생성됨
+
+Ephemeral Storage는 **overlay2**라는 디스크 드라이버를 사용한다. Docker 네트워크 드라이버에 bridge, host, overlay가 있듯이, 디스크 드라이버에는 overlay2, aufs, devicemapper 등이 있다. Writable Layer에 파일을 쓸 때 어떻게 처리하는지가 디스크 드라이버에 따라 다르다.
+
+### 가용 리소스 계산
+
+노드의 가용 리소스(Allocatable)에서 다음이 기본적으로 제외된다:
+
+- **kube-reserved**: kubelet, container runtime 등 k8s 컴포넌트용
+  - 클라우드 환경에서는 노드 크기에 따라 수식이 달라짐
+- **system-reserved**: OS, systemd 등 시스템 데몬용
+  - 기본값은 설정되어 있지 않음
+
+### Pod 리소스 총합 계산 방식
+
+Pod의 리소스 요청량은 컨테이너 종류에 따라 다르게 계산된다:
+
+**일반 Container**
+
+모든 app container의 requests/limits이 Pod 총 리소스에 더해진다. 동시에 실행되기 때문이다.
+
+**Init Container**
+
+일반 init container의 requests/limits 중 **가장 높은 값**만 Pod 총 리소스에 더해진다. Init Container들은 순차적으로 실행되므로 그 중 가장 큰 리소스 요구량만 고려한다.
+
+**Native Sidecar (Restartable Init Container)**
+
+모든 native sidecar container의 requests/limits이 Pod 총 리소스에 더해진다. 일반 container와 동일하다.
+
+> The resource usage calculation changes for the pod as restartable init container resources are now added to the sum of the resource requests by the main containers.
+
+Native sidecar를 가장 위에 선언하면(init container 중 가장 먼저 실행), **native sidecar 용량 + init container 중 최대 용량**이 Pod 총 리소스가 된다. 다른 init container가 먼저 실행되면 공간을 공유한다.
+
+```
+예시 1: native sidecar가 먼저 실행
+- native sidecar container: 200m
+- init container: 300m
+- container: 100m
+= Pod 총합: 600m (200 + max(300, 200) + 100 = 200 + 300 + 100)
+
+예시 2: init container가 먼저 실행
+- init container: 300m  
+- native sidecar container: 200m
+- container: 100m
+= Pod 총합: 400m (max(300, 200+200) + 100 = 300 + 100)
+```
+
+### QoS Class와 OOM Score
+
+Pod의 리소스 설정에 따라 QoS Class가 결정되고, 이는 OOM 발생 시 어떤 Pod가 먼저 종료될지 결정한다.
+
+**QoS Class 분류**
+
+| QoS Class   | 조건                                                        |
+|-------------|-------------------------------------------------------------|
+| Guaranteed  | 모든 컨테이너에 CPU/Memory requests = limits 이며 모두 지정됨 |
+| Burstable   | 위 두 조건이 아닌 나머지                                      |
+| BestEffort  | 모든 컨테이너에 requests/limits 모두 미지정                   |
+
+**OOM Score**
+
+| QoS Class   | OOM Score                                                          | 비고           |
+|-------------|--------------------------------------------------------------------|----------------|
+| BestEffort  | 1000                                                               | 가장 먼저 종료  |
+| Burstable   | min(max(2, 1000 - 1000 × (메모리 Requests / 머신 메모리 용량)), 999) | 덜 쓰는 것 우선 |
+| Guaranteed  | -998                                                               | 가장 나중에 종료 |
+
+Burstable의 경우 실제 메모리 사용량이 아닌 requests를 기준으로 점수가 계산된다. 따라서 requests 대비 실제 사용량이 낮은 Pod가 먼저 종료될 수 있다.
+
 
 ---
 
