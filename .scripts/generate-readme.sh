@@ -11,7 +11,7 @@ D=$(date +%d)
 Ymd=$Y-$M-$D
 
 function generate_project_tree() {
-    LC_ALL=C LC_COLLATE=C LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8 /opt/homebrew/bin/tree . -I '+*' -f --dirsfirst --noreport -I '~' --charset ascii |
+    LC_ALL=C LC_COLLATE=C LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8 /opt/homebrew/bin/tree . -I '+*' -f --dirsfirst --noreport -I '~' --charset ascii -N |
     gsed -e 's/[|]-\+/┗━/g' |
     gsed -e 's/[|]/┃/g' |
     gsed -e 's/[`]/┗━/g' |
@@ -22,6 +22,7 @@ function generate_project_tree() {
     gsed -e "s=$filepath=./TIL</br>=g" |
     gsed -e 's/━━━/━/g' |
     gsed -e 's/[ ]/　/g' |
+    gsed -e ':a;s/\(<[^>]*\)　/\1 /g;ta' |
     printf '%b\n' "$(cat)"
 }
 
