@@ -23,6 +23,7 @@ function generate_project_tree() {
     gsed -e 's/━━━/━/g' |
     gsed -e 's/[ ]/　/g' |
     gsed -e ':a;s/\(<[^>]*\)　/\1 /g;ta' |
+    gsed -e ':a;s/\(\[[^]]*\)　/\1 /g;ta' |
     printf '%b\n' "$(cat)"
 }
 
