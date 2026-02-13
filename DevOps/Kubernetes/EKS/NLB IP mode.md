@@ -1,9 +1,9 @@
 
-AWS Load Balancer Controller supports Network Load Balancer (NLB) with IP tergets for pods runing on Amazon EC2 instances and AWS Fargate through Kubernetes service of type `LoadBalancer` with proper annotation. In this mode, the AWS NLB targets traffic directly to the Kubernetes pods behind the service, aliminationg the need for an extra network hop through the worker nodes in the Kubernetes cluster.
+AWS Load Balancer Controller는 Kubernetes `LoadBalancer` 타입 서비스에 적절한 어노테이션을 통해, Amazon EC2 인스턴스와 AWS Fargate에서 실행되는 Pod에 대한 IP 대상 모드의 Network Load Balancer(NLB)를 지원한다. 이 모드에서는 AWS NLB가 트래픽을 서비스 뒤의 Kubernetes Pod로 직접 타겟팅하므로, 워커 노드를 통한 추가적인 네트워크 홉이 필요 없다.
 
-### Configuration
+**설정**
 
-The NLB IP mode is determined based on the annotations added to the service object. For NLB in IP mode, apply the following annotation to the service:
+NLB IP 모드는 서비스 객체에 추가된 어노테이션을 기반으로 결정된다. IP 모드의 NLB를 사용하려면 서비스에 다음 어노테이션을 적용한다:
 
 ```yaml
 metadata:
@@ -13,20 +13,20 @@ metadata:
 
 ```
 
-> Do not modify the service annotation `service.beta.kubernetes.io/aws-load-balancer-type` on an existing service object. If you need to modify the underlying AWS LoadBalancer type, for example from classic to NLB, delete the kubernetes service first and create again with the correct annotation. Failure to do so will result in leaked AWS load balancer resources.
+> 기존 서비스 객체의 `service.beta.kubernetes.io/aws-load-balancer-type` 어노테이션을 수정하면 안 된다. 예를 들어 클래식에서 NLB로 기본 AWS 로드 밸런서 유형을 변경해야 하는 경우, Kubernetes 서비스를 먼저 삭제하고 올바른 어노테이션으로 다시 생성해야 한다. 그렇지 않으면 AWS 로드 밸런서 리소스가 유출될 수 있다.
 
-> The default load balancer is internet-facing. To create an internal load balancer, apply the following annotation to your service: `service.beta.kubernetes.io/aws-load-balancer-internal: "true"``
+> 기본 로드 밸런서는 인터넷 연결형이다. 내부 로드 밸런서를 생성하려면 서비스에 다음 어노테이션을 적용한다: `service.beta.kubernetes.io/aws-load-balancer-internal: "true"`
 
-### Protocols
+**프로토콜**
 
-Support is avalilable for both TCP and UDP protocols. In case of TCP, NLB in IP mode does not pass the client source IP address to the pods. You can configure [NLB proxy protocol v2](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) via annotation if you need the client source IP address.
+TCP와 UDP 프로토콜 모두 지원된다. TCP의 경우 IP 모드의 NLB는 클라이언트 소스 IP 주소를 Pod에 전달하지 않는다. 클라이언트 소스 IP 주소가 필요하면 어노테이션을 통해 [NLB 프록시 프로토콜 v2](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol)를 구성할 수 있다.
 
-to enable proxy protocol v2, apply the following annotation to your service:
+프록시 프로토콜 v2를 활성화하려면 서비스에 다음 어노테이션을 적용한다:
 
 ```yaml
 service.beta.kubernetes.io/aws-load-balancer-proxy-protocol: "*"
 ```
 
-### Security group
+**보안 그룹**
 
-NLB does not currently support a managed security group. For ingress access, the controller will resolve the security group for the ENI corresponding to the endpoint pod. If the ENI has a single security group, it gets used. In case of multiple security groups, the controller expects to find only one security group tagged with the Kubernetes cluster id. Controller will update the ingress rules on the security groups as per the service spec.
+NLB는 현재 관리형 보안 그룹을 지원하지 않는다. 인그레스 접근의 경우 컨트롤러는 엔드포인트 Pod에 해당하는 ENI의 보안 그룹을 해석한다. ENI에 단일 보안 그룹이 있으면 그것이 사용된다. 여러 보안 그룹이 있는 경우 컨트롤러는 Kubernetes 클러스터 ID로 태그된 보안 그룹 하나만 찾으려고 한다. 컨트롤러는 서비스 스펙에 따라 보안 그룹의 인그레스 규칙을 업데이트한다.

@@ -1,13 +1,13 @@
 
-Cobbler is a Linux installation server that allows for rapid setup of network installation environments. It glues together and automates many associated Linux tasks so you do not have to hop between many various commands and applications when deploying new systems, and, in some cases, changing existing ones. Cobbler can help with provisioning, managing DNS and DHCP, package updates, power management, configuration management orchestration.
+Cobbler는 네트워크 설치 환경을 빠르게 설정할 수 있게 해주는 Linux 설치 서버이다. 새 시스템을 배포할 때(경우에 따라 기존 시스템을 변경할 때도) 여러 명령어와 애플리케이션 사이를 오가지 않아도 되도록, 관련된 많은 Linux 작업을 결합하고 자동화해준다. Cobbler는 프로비저닝, DNS 및 DHCP 관리, 패키지 업데이트, 전원 관리, 구성 관리 오케스트레이션을 도울 수 있다.
 
-Just as configuration management systems rely on templates to simplify updates, so to does Cobbler. Templates are used extensively for management of services like DNS and DHCP, and the response files given to the various distributions (kickstart, preseed, etc.) are all templated to maximize code reuse.
+구성 관리 시스템이 업데이트를 단순화하기 위해 템플릿에 의존하는 것처럼, Cobbler도 마찬가지이다. 템플릿은 DNS, DHCP 같은 서비스 관리와 다양한 배포판에 제공되는 응답 파일(kickstart, preseed 등)에 광범위하게 사용되며, 코드 재사용을 극대화하기 위해 모두 템플릿화되어 있다.
 
-In addition to templates, Cobbler relies on a system of snippets - small chunks of code (which are really templates themselves) that can be embedded in other templates. This allows admins to write things once, use it wherever they need it via a simple include, all while managing the content in just one place.
+템플릿 외에도 Cobbler는 스니펫(snippet) 시스템에 의존한다. 스니펫은 다른 템플릿에 임베드할 수 있는 작은 코드 조각(실제로는 그 자체가 템플릿)이다. 이를 통해 관리자가 한 번만 작성하고, 필요한 곳에서 간단한 include로 사용하면서도, 콘텐츠를 한 곳에서만 관리할 수 있다.
 
-Automation is the key to speed, consistency and repeatability. These properties are critical to managing an infrastructure, whether it is comprised of a few servers or a few thousand servers. Cobbler helps by automating the process of provisioning servers from bare metal, or when deploying virtual machines onto various hypervisors.
+자동화는 속도, 일관성, 반복성의 핵심이다. 이러한 속성은 몇 대의 서버든 수천 대의 서버든 인프라를 관리하는 데 필수적이다. Cobbler는 베어메탈에서 서버를 프로비저닝하거나, 다양한 하이퍼바이저에 가상 머신을 배포할 때 프로세스를 자동화하여 도움을 준다.
 
 ---
-reference
+참고
 - https://en.wikipedia.org/wiki/Cobbler_(software)
 - https://cobbler.readthedocs.io/en/latest/quickstart-guide.html

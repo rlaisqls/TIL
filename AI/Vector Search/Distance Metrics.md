@@ -1,27 +1,28 @@
-Use the distance metric that matches the model that you're using.
+
+벡터 검색에서 사용하는 거리 메트릭은 사용 중인 모델에 맞는 것을 선택해야 한다.
 
 ## Cosine Similarity
 
-The cosine similarity measures the angle between two vectors in a multi-dimensional space – with the idea that similar vectors point in a similar direction. Cosine similarity is commonly used in Natural Language Processing (NLP). It measures the similarity between documents regardless of the magnitude.
+코사인 유사도는 다차원 공간에서 두 벡터 사이의 각도를 측정하는 방법이다. 유사한 벡터는 비슷한 방향을 가리킨다는 아이디어에 기반한다. 자연어 처리(NLP)에서 많이 사용되며, 벡터의 크기와 관계없이 문서 간의 유사성을 측정한다.
 
 ## Dot Product
 
-The dot product takes two or more vectors and multiplies them together. It is also known as the scalar product since the output is a single (scalar) value. The dot product shows the alignment of two vectors. The dot product is negative if the vectors are oriented in different directions and positive if the vectors are oriented in the same direction.
+내적은 두 개 이상의 벡터를 곱하는 연산이다. 출력이 단일 스칼라 값이므로 스칼라 곱이라고도 한다. 내적은 두 벡터의 정렬 상태를 나타낸다. 벡터가 서로 다른 방향을 향하면 음수, 같은 방향을 향하면 양수가 된다.
 
 ## Squared Euclidean (L2-Squared)
 
-The L2 norm takes the square root of the sum of the squared vector values.
+L2 노름은 벡터 값의 제곱의 합에 대한 제곱근을 취한 것이다.
 
-## Manhattan (L1 Norm or Taxicab Distance)
+## Manhattan (L1 Norm 또는 Taxicab Distance)
 
-The L1 norm is calculated by taking the sum of the absolute values of the vector. The Manhattan distance is faster to calculate since the values are typically smaller than the Euclidean distance.
+L1 노름은 벡터의 절대값의 합을 계산한다. 맨해튼 거리는 유클리드 거리에 비해 값이 일반적으로 작기 때문에 계산이 더 빠르다.
 
 ## Hamming
 
-The Hamming distance is a metric for comparing two numeric vectors. It computes how many changes are needed to convert one vector to the other. The fewer changes are required, the more similar the vectors.
+해밍 거리는 두 수치 벡터를 비교하는 메트릭이다. 하나의 벡터를 다른 벡터로 변환하는 데 필요한 변경 횟수를 계산한다. 필요한 변경이 적을수록 벡터가 더 유사하다.
 
-1. Compare two numeric vectors
-2. Compare two binary vectors
+1. 두 수치 벡터 비교
+2. 두 이진 벡터 비교
 
 ---
 참고
