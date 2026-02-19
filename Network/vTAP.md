@@ -1,46 +1,47 @@
-Being able to capture network packets from inside a network at strategic points is invaluable, whether it is done to troubleshoot or for security monitoring.
 
-If, for example, users report that a website is intermittently inaccessible, IT can analyze the [captured network packets](https://www.techtarget.com/searchunifiedcommunications/tip/Check-packet-loss-to-manage-call-quality) and find an underlying issue by looking at the interactions between the client and the web server or router.
+네트워크의 전략적 지점에서 패킷을 캡처하는 것은 트러블슈팅이든 보안 모니터링이든 매우 중요하다.
 
-It's also possible to use an intrusion detection system (IDS) that listens to a stream of network traffic and alerts users when it identifies suspicious or malicious traffic based on known signatures or traffic anomalies.
+예를 들어, 사용자가 웹사이트에 간헐적으로 접근할 수 없다고 보고하면, IT 부서가 [캡처된 네트워크 패킷](https://www.techtarget.com/searchunifiedcommunications/tip/Check-packet-loss-to-manage-call-quality)을 분석하여 클라이언트와 웹 서버 또는 라우터 간의 상호작용을 살펴봄으로써 근본적인 문제를 찾을 수 있다.
+
+또한 네트워크 트래픽 스트림을 수신하여 알려진 시그니처나 트래픽 이상을 기반으로 의심스럽거나 악의적인 트래픽이 식별되면 사용자에게 알리는 침입 탐지 시스템(IDS)을 사용할 수도 있다.
 
 <img width="567" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/ad7d9b8d-35b6-44ee-bf29-b203e0739be9">
 
-### What is a TAP?
+**TAP이란**
 
-- In order to obtain these packets, they need to be intercepted.
+- 패킷을 얻으려면 가로채야 한다.
 
-- **A network Test Access Point (TAP)** can be either a virtual or a physical device that **listens to the network traffic on its network interfaces** and either **sends copies of the packets to another system or stores them directly to disk**.
+- **네트워크 TAP(Test Access Point)**은 네트워크 인터페이스의 네트워크 트래픽을 수신하고 패킷의 복사본을 다른 시스템으로 전송하거나 디스크에 직접 저장하는 가상 또는 물리적 장치이다.
 
-- A physical TAP can be as simple as a box with mirrors capable of duplicating the light carried by an incoming fiber optic cable. 
-- Alternatively, it can be a powered device, sometimes with built-in logic and software and network interfaces. Many professional switches have the option to assign an interface as a TAP port, as well -- this is called a Switched Port Analyzer, or SPAN.
+- 물리적 TAP은 들어오는 광섬유 케이블의 빛을 복제할 수 있는 미러가 있는 박스처럼 단순할 수 있다.
+- 또는 내장 로직, 소프트웨어, 네트워크 인터페이스를 갖춘 전원 장치일 수도 있다. 많은 전문 스위치에는 인터페이스를 TAP 포트로 지정하는 옵션이 있으며, 이를 SPAN(Switched Port Analyzer)이라고 한다.
 
-### vTAP
+**vTAP**
 
-- A virtual TAP, or vTAP, is located within a hypervisor such as VMware ESX or Oracle VM VirtualBox. It works in a similar manner by connecting to a virtual traffic flow or virtual switch.
+- 가상 TAP(vTAP)은 VMware ESX나 Oracle VM VirtualBox 같은 하이퍼바이저 내에 위치한다. 가상 트래픽 흐름이나 가상 스위치에 연결하여 유사한 방식으로 작동한다.
 
-- A benefit of a vTAP is that it can monitor traffic between two virtual machines within the same hypervisor without the traffic leaving the hardware.
+- vTAP의 장점은 트래픽이 하드웨어를 벗어나지 않고도 동일 하이퍼바이저 내의 두 가상 머신 간의 트래픽을 모니터링할 수 있다는 것이다.
 
-- With the virtualization of network devices such as firewalls, switches and proxy servers, this has been a popular option in recent years.
+- 방화벽, 스위치, 프록시 서버 같은 네트워크 장치의 가상화와 함께, 최근 몇 년간 인기 있는 옵션이 되었다.
 
-- This diagram shows a sample implementation of a VTAP.
+- VTAP 구현 예시:
 
   <img width="588" alt="image" src="https://github.com/rlaisqls/TIL/assets/81006587/ec65abd1-1f12-4850-bb60-0fab0ce241e8">
 
-### TAPs in the cloud
+**클라우드에서의 TAP**
 
-- Some cloud service providers (CSPs) have come up with solutions that enable customers to tap into their network traffic. 
-  - This is important because whether a system is located in a company's own local data center or it is hosted within a cloud instance, visibility into troubleshooting and security monitoring is important.
+- 일부 CSP(클라우드 서비스 제공업체)는 고객이 네트워크 트래픽을 캡처할 수 있는 솔루션을 제공하고 있다.
+  - 시스템이 회사 자체 로컬 데이터센터에 있든 클라우드 인스턴스에 호스팅되어 있든, 트러블슈팅과 보안 모니터링에 대한 가시성이 중요하기 때문이다.
 
-- Some challenges CSPs face, however, arise from the fact that their platform environments are multi-tenant, which obviously raises further privacy and security concerns. The CSP cannot provide a customer access to the lower layer of the network infrastructure in a multi-tenant environment.
+- 하지만 CSP에게는 몇 가지 과제가 있다. 멀티테넌트 환경이므로 프라이버시와 보안 문제가 따르며, 고객에게 네트워크 인프라 하위 레이어의 접근 권한을 줄 수 없다.
 
-- Another complication is the location-independent nature of the public cloud. An organization's infrastructure -- including its virtual servers -- can be moved around between data centers and physical systems at any given time. As long as the CSP ensures availability and adheres to all the limitations requested by the customer, such as keeping data within selected geographic areas, this is not an issue. However, this does make it complex to select a static, reliable vTAP.
+- 퍼블릭 클라우드는 가상 서버가 데이터센터와 물리 시스템 간에 언제든 이동할 수 있어, 안정적인 vTAP 구성이 어렵다.
 
-- Finally, cloud network traffic often uses different CSP-specific headers while the packets are in transit. The CSP removes those headers upon delivery of the traffic, but if the traffic was actually intercepted in transit, it would be hard to use in typical security devices and applications.
+- 또한 클라우드 네트워크 트래픽은 전송 중 CSP 고유 헤더를 사용하는 경우가 많아, 전송 중 캡처한 트래픽을 일반 보안 장비에서 바로 분석하기 어렵다.
 
-- Because vTAP configuration has been challenging for customers, creative users and researchers have come up with workarounds -- such as network address translation setups for AWS.
+- vTAP 구성이 고객에게 어려웠기 때문에, 창의적인 사용자와 연구자들이 AWS용 NAT 설정 같은 해결 방법을 고안해왔다.
 
-- Companies relying on network tap for their products to function, such as Gigamon, have also developed new products and services, such as TAP as a service for OpenStack.
+- 자사 제품이 네트워크 TAP에 의존하는 Gigamon 같은 회사도 OpenStack용 TAP as a service 같은 새로운 제품과 서비스를 개발했다.
 
 
 ---
