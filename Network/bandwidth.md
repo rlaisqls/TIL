@@ -1,32 +1,28 @@
 
-> Bandwidth is the amount of data that can be transmitted in a specified amount of time.
+> 대역폭(Bandwidth)이란, 지정된 시간 내에 전송할 수 있는 데이터의 양이다.
 
-Bandwidth is a measure of how much information a network, a group of two or more devices that communicate between themselves, can transfer. Data moves from A to B just as water flows through pipes from a supply point to our faucets. The volume that's transported varies, impacting how effectively a transmission medium, such as an internet connection, operates.
+대역폭은 네트워크가 얼마나 많은 정보를 전송할 수 있는지를 나타내는 척도이다. 데이터가 수도관 속의 물처럼 흘러간다고 보면, 대역폭은 그 관의 굵기에 해당한다. 대역폭이 클수록 한 번에 더 많은 데이터를 보낼 수 있다.
 
-Internet service providers (ISPs) typically denote bandwidth speeds in millions of bits per second (Bps), or megabits (Mbps), and billions of Bps, or gigabits (Gbps). Generally speaking, the higher the bandwidth, the quicker a device downloads information from the internet, including emails or streamed movies.
+ISP(인터넷 서비스 제공업체)는 보통 대역폭을 Mbps(초당 수백만 비트)나 Gbps(초당 수십억 비트) 단위로 표시한다.
 
-- Bandwidth is the data transfer capacity of a network in bits per second (Bps).
-- Bandwidth is a measure of how much information a network can transfer.
-- The volume of data that can be transported varies, impacting how effectively transmission medium, such ass an internet connection, operates.
-- Internet service providers(ISPs) typically denote bandwidth speeds in million of bits per second (Bps), or megabits (Mbps), and billions of Bps, or gigabits (Gbps).
-- Generally speaking, the higher the bandwidth, the quicker your devices download information from the internet.
+**대역폭 측정**
 
-### Recording Bandwidth
+어떤 장치든 현재 대역폭을 측정할 수 있다. 전용 웹사이트나 ISP가 연결을 통해 파일을 보내고 돌아오는 시간을 측정하는 방식이다.
 
-Any device can measure the bandwidth it has at any given time. Special websites or the Internet Service Provider can calculate the bandwidth by sending a file through the connection and then waiting for the information to return.
+**대역폭 요구사항**
 
-### Bandwidth Requirements
+필요한 대역폭은 용도에 따라 크게 달라진다.
 
-The amount of bandwidth required to surf the web seamlessly depends on the task the user wishes to undertake.
+- 인스턴트 메시징: 약 1Kbps
+- VoIP 통화: 1~3Mbps
+- SD 영상: 1Mbps
+- 4K 영상: 최소 15Mbps
+- 8K 영상: 약 100Mbps
 
-For instance, an instant messaging conversation may use 1,000 bits, or one kilobit, per second in bandwidth. A voice-over internet conversation, in which someone's voice transmits through internet connections, typically uses more than 1 Mbps to 3 megabits per second.
+**적절한 대역폭이란**
 
-Moving further up the scale, standard-definition video takes 1 Mbps, while 4k needs at least 15 Mbps. The highest available, 8k, requires speeds of nearly 100 Mbps for seamless viewing.
-
-### What Is a Good Bandwidth?
-
-A good bandwidth allows you to transmit and receive the amount of data you need without overloading your connection's capacity. A medium business might require at least 25 Mbps down and 3 Mbps up speeds, while a smaller business could use less. However, the faster your bandwidth is, the better it is for you and your customers.
+연결 용량을 초과하지 않으면서 필요한 데이터를 주고받을 수 있으면 된다. 중규모 기업 기준으로 다운로드 25Mbps, 업로드 3Mbps 정도가 최소 기준이다.
 
 ---
-reference
-- https://www.investopedia.com/terms/b/bandwidth.asp#:~:text=our%20editorial%20policies-,What%20Is%20Bandwidth%3F,at%20a%20point%20in%20time.
+참고
+- https://www.investopedia.com/terms/b/bandwidth.asp
