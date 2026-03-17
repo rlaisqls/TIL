@@ -1,6 +1,6 @@
 Weak reference(약한 참조)는 객체를 참조하되, reference count를 증가시키지 않는 참조 방식이다. `weakref` 모듈로 사용한다.
 
-CPython은 [레퍼런스 카운팅](./GIL.md)으로 메모리를 관리한다. 일반 참조(strong reference)는 ref count를 올리므로, 참조가 남아있는 한 객체가 해제되지 않는다. 이게 문제가 되는 경우가 있다.
+CPython은 [레퍼런스 카운팅](../GIL.md)으로 메모리를 관리한다. 일반 참조(strong reference)는 ref count를 올리므로, 참조가 남아있는 한 객체가 해제되지 않는다. 이게 문제가 되는 경우가 있다.
 
 - **캐시**: 캐시가 객체를 잡고 있으면 원본이 필요 없어져도 메모리에서 안 사라진다.
 - **순환 참조**: observer 패턴 등에서 상호 참조 시 메모리 누수가 발생할 수 있다.
@@ -70,8 +70,8 @@ print(proxy.value)  # 42 — 바로 접근 가능
 
 ```python
 del obj
-print(ref())       # None
-print(proxy.value) # ReferenceError: weakly-referenced object no longer exists
+print(ref())  # None
+print(proxy.value)  # ReferenceError: weakly-referenced object no longer exists
 ```
 
 **`WeakValueDictionary`**
