@@ -27,7 +27,6 @@ def iou(a, b):
 
 - IoU = 1.0: 두 영역이 완전히 일치
 - IoU = 0.0: 겹치는 부분이 전혀 없음
-- IoU ≥ 0.5: 보통 "매칭됨"으로 판정하는 임계값 (태스크마다 다름)
 
 ## Object Detection에서의 활용
 
@@ -47,10 +46,6 @@ def nms(boxes, scores, threshold=0.5):
         order = remaining
     return keep
 ```
-
-## 텍스트 퓨전에서의 활용
-
-OCR에서 인접 프레임의 텍스트 영역을 매칭할 때도 IoU를 쓸 수 있다. 프레임 A의 텍스트 bbox와 프레임 B의 텍스트 bbox를 IoU로 비교하여, 같은 위치의 텍스트인지 판별한다. IoU가 낮은(예: 0.3 미만) 텍스트는 해당 프레임에서 가려진(occluded) 텍스트일 수 있으므로, 인접 프레임에서 보완하는 방식으로 활용한다.
 
 ## 변형
 
