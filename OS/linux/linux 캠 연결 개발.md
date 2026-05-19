@@ -8,7 +8,7 @@ $ ls /dev/video*
 /dev/video0  /dev/video1  /dev/video10
 ```
 
-보통 가장 낮은 번호가 RGB 스트림이고 나머지는 메타데이터 채널이나 다른 포맷이 노출되는 것이다. 정확히 뭐가 뭔지 보려면 `v4l2-ctl --list-devices`.
+보통 가장 낮은 번호가 RGB 스트림이고 나머지는 메타데이터 채널이나 다른 포맷이 노출되는 것이다. 정확히 뭐가 뭔지 보려면 `v4l2-ctl --list-devices` 로 확인할 수 있다.
 
 ```bash
 sudo apt install -y v4l-utils
@@ -48,7 +48,7 @@ def _on_capture_tick(self):
     self.root.after(30_000, self._on_capture_tick)
 ```
 
-같은 `VideoCapture`를 두 콜백이 공유해도 둘 다 메인 스레드에서 직렬로 호출되니까 race condition은 없다.
+같은 `VideoCapture`를 두 콜백이 공유해도 둘 다 메인 스레드에서 직렬로 호출되니까 race condition은 발생하지 않는다.
 
 정지할 때 `after_cancel(id)`를 안 해주면 정지 후에도 한 번 더 leftover 호출이 생긴다.
 
