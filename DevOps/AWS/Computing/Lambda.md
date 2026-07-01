@@ -1,0 +1,51 @@
+
+- **Lambda**
+  - [제약사항 문서](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html)
+  - 메모리: 128MB ~ 10,240MB
+  - `/tmp` dir 스토리지: 512MB ~ 10,240MB
+  - 타임아웃: ~900초 (15분)
+  - 배포
+    - 배포 패키지 크기
+      - 콘솔 직접 업로드·API: ~50MB
+      - S3에 업로드: ~250MB
+    - 컨테이너 배포 크기
+      - ~10GB (모든 레이어를 포함한 최대 비압축 이미지 크기)
+    - 요청 및 응답 크기
+      - 동기식: 요청/응답 모두 ~6MB
+      - 스트리밍 동기식 응답: ~200MB (2MBps 대역폭 지원)
+      - 비동기식: ~1MB
+  - 동시성
+    - 계정 단위 동시 실행 수(account-level concurrent executions): 리전당 기본 1,000 (Service Quotas로 증설 요청 가능)
+    - 예약된 동시성 (Reserved concurrency)
+      - 특정 함수에 계정 동시성 중 일부를 예약 → 해당 함수의 최대 동시 실행 수 상한이자 다른 함수로부터의 보장치
+      - 예약하면 그만큼 계정의 미예약(unreserved) 풀에서 차감
+      - 미예약 풀은 최소 100은 남겨야 함 (모든 함수 예약으로 0이 될 수 없음)
+      - 0으로 설정하면 함수 실행을 완전히 차단(throttle) 가능
+    - 프로비저닝된 동시성 (Provisioned concurrency)
+      - 지정한 수만큼 실행 환경을 미리 초기화 → 콜드 스타트 제거
+      - 별도 과금, Application Auto Scaling으로 스케줄/타깃 기반 조정 가능
+    - 버스트 동시성 (Burst concurrency)
+      - 함수당 10초마다 최대 +1,000씩 확장, 계정 동시성 한도까지 증가
+    - 초과 시 동기식 호출은 429(TooManyRequestsException)로 throttle, 비동기식은 재시도 후 DLQ로 이동
+
+- **Lambda@Edge**
+  - [제약사항 문서](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html#limits-lambda-at-edge)
+  - 메모리: 128MB ~ 10,240MB
+  - `/tmp` dir 스토리지: 512MB만 가능
+  - 타임아웃: ~30초
+  - 배포
+    - Lambda 함수 및 포함된 라이브러리의 최대 압축 크기: 50MB
+    - arm 사용 불가, 컨테이너 이미지·Lambda layer 사용 불가 (node, python 런타임 지원)
+      - [기능 제한 문서](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-at-edge-function-restrictions.html#lambda-at-edge-restrictions-features)
+  - CloudFront에서 실행되므로 VPC 지정되지 않으며 VPC private network 접근 불가
+  - 응답 크기
+    - Lambda@Edge 함수가 요청 body를 대체하는 경우만 해당 (body를 안 건드리면 본문 용량 상관 무)
+    - Viewer request / response: 40KB
+    - Origin request / response: 1MB
+  - 동시성
+    - 함수별 예약/프로비저닝된 동시성 설정 불가 → CloudFront 요청량에 따라 각 엣지 로케이션에서 자동 확장
+    - 동시성 한도는 리전(엣지 로케이션이 매핑되는 AWS 리전) 단위로 적용됨
+    - 함수를 배포한 us-east-1의 동시 실행 수가 아니라, 트래픽이 발생하는 리전별로 카운트
+    - 초과(throttle) 시 CloudFront 동작
+      - Viewer request/response: 뷰어에게 HTTP 500 에러 반환
+      - Origin request/response: 오리진 응답을 그대로 전달(함수 미실행)
