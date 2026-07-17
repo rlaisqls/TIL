@@ -1,24 +1,24 @@
 ## repr(Rust)
 
-- First and foremost, all types have an alignment specified in bytes. 
-- A value with alignment n must only be stored at an address that is a multiple of n. So alignment 2 means you must be stored at an even address, and 1 means that you can be stored anywhere. 
-- Alignment is at least 1, and always a power of 2.
+- 가장 기본적으로, 모든 타입은 바이트 단위의 정렬(alignment)을 가진다.
+- 정렬이 n인 값은 반드시 n의 배수인 주소에만 저장될 수 있다. 즉 정렬이 2라면 짝수 주소에 저장되어야 하고, 1이라면 아무 곳에나 저장될 수 있다.
+- 정렬은 최소 1이며, 항상 2의 거듭제곱이다.
 
-- Primitives are usually aligned to their size, although this is platform-specific behavior. For example, on x86 u64 and f64 are often aligned to 4 bytes (32 bits).
+- 원시 타입(primitive)은 보통 자신의 크기에 맞춰 정렬되지만, 이는 플랫폼마다 다르다. 예를 들어 x86에서 `u64`와 `f64`는 4바이트(32비트)로 정렬되는 경우가 많다.
 
-- A type's size must always be a multiple of its alignment (Zero being a valid size for any alignment). 
-  - This ensures that an array of that type may always be indexed by offsetting by a multiple of its size. Note that the size and alignment of a type may not be known statically in the case of dynamically sized types.
+- 타입의 크기는 항상 정렬의 배수여야 한다(0은 모든 정렬에 대해 유효한 크기다).
+  - 이 규칙 덕분에 해당 타입의 배열은 항상 크기의 배수만큼 오프셋을 더하는 방식으로 인덱싱할 수 있다. 단, 동적 크기 타입(DST)의 경우 크기와 정렬을 정적으로 알 수 없다.
 
-- Rust gives you the following ways to lay out composite data:
-  - structs (named product types)
-  - tuples (anonymous product types)
-  - arrays (homogeneous product types)
-  - enums (named sum types -- tagged unions)
-  - unions (untagged unions)
-  
-- An enum is said to be field-less if none of its variants have associated data.
+- Rust는 복합 데이터를 배치하는 방법으로 다음을 제공한다.
+  - 구조체(struct): 이름 있는 곱 타입(product type)
+  - 튜플(tuple): 익명 곱 타입
+  - 배열(array): 동종(homogeneous) 곱 타입
+  - 열거형(enum): 이름 있는 합 타입(sum type) — tagged union
+  - 유니온(union): untagged union
 
-- By default, composite structures have an alignment equal to the maximum of their fields' alignments. Rust will consequently insert padding where necessary to ensure that all fields are properly aligned and that the overall type's size is a multiple of its alignment. For instance:
+- 어떤 variant도 데이터를 갖지 않는 enum을 field-less enum이라고 한다.
+
+- 기본적으로 복합 구조의 정렬은 필드들의 정렬 중 최댓값과 같다. 그래서 Rust는 모든 필드가 올바르게 정렬되고 전체 타입의 크기가 정렬의 배수가 되도록 필요한 곳에 패딩을 삽입한다. 예를 들어:
 
     ```rust
     struct A {
@@ -28,19 +28,19 @@
     }
     ```
 
-- will be 32-bit aligned on a target that aligns these primitives to their respective sizes. The whole struct will therefore have a size that is a multiple of 32-bits. 
-    - It may become:
+- 이 구조체는 원시 타입을 각자의 크기로 정렬하는 타겟에서 32비트로 정렬된다. 따라서 전체 구조체의 크기도 32비트의 배수가 된다.
+    - 실제로는 다음과 같이 될 수 있다:
         ```rust
         struct A {
             a: u8,
-            _pad1: [u8; 3], // to align `b`
+            _pad1: [u8; 3], // `b` 정렬을 맞추기 위한 패딩
             b: u32,
             c: u16,
-            _pad2: [u8; 2], // to make overall size multiple of 4
+            _pad2: [u8; 2], // 전체 크기를 4의 배수로 만들기 위한 패딩
         }
         ```
 
-    - or maybe:
+    - 혹은 이렇게 될 수도 있다:
         ```rust
         struct A {
             b: u32,
@@ -50,7 +50,7 @@
         }
         ```
 
-- There is no indirection for these types; all data is stored within the struct, as you would expect in C. However with the exception of arrays (which are densely packed and in-order), the layout of data is not specified by default. Given the two following struct definitions:
+- 이런 타입에는 간접 참조(indirection)가 없다. C에서 기대하는 것처럼 모든 데이터가 구조체 안에 직접 저장된다. 다만 배열(순서대로 빽빽하게 배치됨)을 제외하면, 데이터의 배치는 기본적으로 명세되어 있지 않다. 다음 두 구조체 정의를 보자:
 
     ```rust
     struct A {
@@ -64,11 +64,11 @@
     }
     ```
 
-- Rust does guarantee that two instances of A have their data laid out in exactly the same way. However Rust does not currently guarantee that an instance of A has the same field ordering or padding as an instance of B.
+- Rust는 A의 두 인스턴스가 정확히 같은 방식으로 데이터를 배치한다는 것은 보장한다. 하지만 A의 인스턴스와 B의 인스턴스가 같은 필드 순서나 패딩을 가진다는 것은 현재 보장하지 않는다.
 
-- With A and B as written, this point would seem to be pedantic, but several other features of Rust make it desirable for the language to play with data layout in complex ways.
+- 위의 A와 B만 보면 지나치게 사소한 이야기처럼 들리지만, Rust의 다른 여러 기능을 고려하면 언어가 데이터 배치를 복잡한 방식으로 다룰 수 있게 열어두는 것이 바람직하다.
 
-- For instance, consider this struct:
+- 예를 들어 이 구조체를 보자:
 
     ```rust
     struct Foo<T, U> {
@@ -78,7 +78,7 @@
     }
     ```
 
-- Now consider the monomorphizations of `Foo<u32, u16>` and `Foo<u16, u32>`. If Rust lays out the fields in the order specified, we expect it to pad the values in the struct to satisfy their alignment requirements. So if Rust didn't reorder fields, we would expect it to produce the following:
+- 이제 `Foo<u32, u16>`과 `Foo<u16, u32>`의 단형화(monomorphization)를 생각해 보자. Rust가 필드를 명시된 순서대로 배치한다면, 정렬 요구사항을 만족시키기 위해 구조체 값에 패딩을 넣어야 한다. 즉 Rust가 필드를 재배열하지 않는다면 다음과 같은 결과가 나올 것이다:
 
     ```rust
     struct Foo<u16, u32> {
@@ -96,10 +96,10 @@
     }
     ```
 
-- The latter case quite simply wastes space. An optimal use of space requires different monomorphizations to have different field orderings.
+- 후자는 명백히 공간을 낭비한다. 공간을 최적으로 사용하려면 단형화 결과마다 필드 순서가 달라져야 한다.
 
-- Enums make this consideration even more complicated.
-  - Naively, an enum such as:
+- enum은 이 문제를 더 복잡하게 만든다.
+  - 단순하게 생각하면 다음 enum은:
 
     ```rust
     enum Foo {
@@ -109,47 +109,47 @@
     }
     ```
 
-  - might be laid out as:
+  - 이렇게 배치될 것이다:
 
     ```rust
     struct FooRepr {
-        data: u64, // this is either a u64, u32, or u8 based on `tag`
+        data: u64, // `tag`에 따라 u64, u32, u8 중 하나
         tag: u8,   // 0 = A, 1 = B, 2 = C
     }
     ```
 
-- And indeed this is approximately how it would be laid out (modulo the size and position of tag).
+- 실제로도 대략 이렇게 배치된다(tag의 크기와 위치는 다를 수 있다).
 
-- However there are several cases where such a representation is inefficient. The classic case of this is Rust's "null pointer optimization": an enum consisting of a single outer unit variant (e.g. `None`) and a (potentially nested) non-nullable pointer variant (e.g. `Some(&T)`) makes the tag unnecessary. A null pointer can safely be interpreted as the unit (None) variant. The net result is that, for example, `size_of::<Option<&T>>() == size_of::<&T>()`.
+- 하지만 이런 표현이 비효율적인 경우가 여럿 있다. 고전적인 예가 Rust의 "널 포인터 최적화(null pointer optimization)"다. 단일 unit variant(예: `None`)와 (중첩될 수도 있는) 널이 될 수 없는 포인터 variant(예: `Some(&T)`)로 구성된 enum은 tag가 필요 없다. 널 포인터를 그대로 unit(None) variant로 해석해도 안전하기 때문이다. 그 결과, 예를 들어 `size_of::<Option<&T>>() == size_of::<&T>()`가 성립한다.
 
-- There are many types in Rust that are, or contain, non-nullable pointers such as `Box<T>`, `Vec<T>`, `String`, `&T,` and `&mut T`. Similarly, one can imagine nested enums pooling their tags into a single discriminant, as they are by definition known to have a limited range of valid values. In principle enums could use fairly elaborate algorithms to store bits throughout nested types with forbidden values. As such it is especially desirable that we leave enum layout unspecified today.
+- Rust에는 널이 될 수 없는 포인터이거나 그것을 포함하는 타입이 많다. `Box<T>`, `Vec<T>`, `String`, `&T`, `&mut T` 등이 그렇다. 마찬가지로 중첩된 enum들이 tag를 하나의 discriminant로 합치는 것도 상상할 수 있다. enum은 정의상 유효한 값의 범위가 제한되어 있기 때문이다. 원칙적으로 enum은 중첩된 타입의 금지된 값들 사이에 비트를 저장하는 꽤 정교한 알고리즘을 사용할 수도 있다. 그래서 enum의 레이아웃을 명세하지 않은 채로 두는 것이 특히 바람직하다.
 
-### Dynamically Sized Types (DSTs)
+### 동적 크기 타입 (Dynamically Sized Types, DSTs)
 
-- Rust supports Dynamically Sized Types (DSTs): types without a statically known size or alignment. 
-- On the surface, this is a bit nonsensical: Rust must know the size and alignment of something in order to correctly work with it! In this regard, DSTs are not normal types. 
-- Because they lack a statically known size, these types can only exist behind a pointer. Any pointer to a DST consequently becomes a wide pointer consisting of the pointer and the information that "completes" them (more on this below).
+- Rust는 동적 크기 타입(DST), 즉 크기나 정렬을 정적으로 알 수 없는 타입을 지원한다.
+- 언뜻 보면 말이 안 되는 이야기다. Rust는 무언가를 올바르게 다루려면 그 크기와 정렬을 알아야 하기 때문이다. 그런 점에서 DST는 일반적인 타입이 아니다.
+- 정적으로 알 수 있는 크기가 없기 때문에, 이런 타입은 포인터 뒤에서만 존재할 수 있다. 따라서 DST를 가리키는 포인터는 포인터와 그것을 "완성하는" 정보로 구성된 와이드 포인터(wide pointer)가 된다.
 
-- There are two major DSTs exposed by the language:
+- 언어가 제공하는 주요 DST는 두 가지다:
 
-  - trait objects: `dyn MyTrait`
-  - slices: `[T]`, `str`, and others
-  
-- A trait object represents some type that implements the traits it specifies. The exact original type is erased in favor of runtime reflection with a vtable containing all the information necessary to use the type. The information that completes a trait object pointer is the vtable pointer. The runtime size of the pointee can be dynamically requested from the vtable.
+  - trait object: `dyn MyTrait`
+  - slice: `[T]`, `str` 등
 
-- A slice is simply a view into some contiguous storage -- typically an array or Vec. The information that completes a slice pointer is just the number of elements it points to. The runtime size of the pointee is just the statically known size of an element multiplied by the number of elements.
+- trait object는 자신이 명시한 trait을 구현하는 어떤 타입을 나타낸다. 정확한 원래 타입은 지워지고, 대신 그 타입을 사용하는 데 필요한 모든 정보를 담은 vtable을 통한 런타임 리플렉션이 사용된다. trait object 포인터를 완성하는 정보는 vtable 포인터이며, 가리키는 대상의 런타임 크기는 vtable에서 동적으로 얻을 수 있다.
 
-- Structs can actually store a single DST directly as their last field, but this makes them a DST as well:
+- slice는 어떤 연속된 저장 공간(보통 배열이나 Vec)에 대한 뷰일 뿐이다. slice 포인터를 완성하는 정보는 가리키는 원소의 개수다. 가리키는 대상의 런타임 크기는 정적으로 알려진 원소 하나의 크기에 원소 개수를 곱한 것이다.
+
+- 구조체는 마지막 필드로 DST 하나를 직접 저장할 수 있는데, 그러면 구조체 자체도 DST가 된다:
 
     ```rust
-    // Can't be stored on the stack directly
+    // 스택에 직접 저장할 수 없다
     struct MySuperSlice {
         info: u32,
         data: [u8],
     }
     ```
 
-- Although such a type is largely useless without a way to construct it. Currently the only properly supported way to create a custom DST is by making your type generic and performing an unsizing coercion:
+- 다만 이런 타입은 만들 방법이 없다면 거의 쓸모가 없다. 현재 커스텀 DST를 만드는 제대로 지원되는 유일한 방법은 타입을 제네릭으로 만들고 unsizing coercion을 수행하는 것이다:
 
     ```rust
     struct MySuperSliceable<T: ?Sized> {
@@ -165,120 +165,121 @@
 
         let dynamic: &MySuperSliceable<[u8]> = &sized;
 
-        // prints: "17 [0, 0, 0, 0, 0, 0, 0, 0]"
+        // 출력: "17 [0, 0, 0, 0, 0, 0, 0, 0]"
         println!("{} {:?}", dynamic.info, &dynamic.data);
     }
     ```
-- (Yes, custom DSTs are a largely half-baked feature for now.)
+- (그렇다. 커스텀 DST는 아직 상당히 미완성인 기능이다.)
 
-### Zero Sized Types (ZSTs)
+### 크기가 0인 타입 (Zero Sized Types, ZSTs)
 
-- Rust also allows types to be specified that occupy no space:
+- Rust는 공간을 전혀 차지하지 않는 타입도 정의할 수 있게 해준다:
 
     ```rust
-    struct Nothing; // No fields = no size
+    struct Nothing; // 필드가 없음 = 크기 없음
 
-    // All fields have no size = no size
+    // 모든 필드가 크기 없음 = 크기 없음
     struct LotsOfNothing {
         foo: Nothing,
-        qux: (),      // empty tuple has no size
-        baz: [u8; 0], // empty array has no size
+        qux: (),      // 빈 튜플은 크기가 없다
+        baz: [u8; 0], // 빈 배열은 크기가 없다
     }
     ```
 
-- On their own, Zero Sized Types (ZSTs) are, for obvious reasons, pretty useless. However as with many curious layout choices in Rust, their potential is realized in a generic context: Rust largely understands that any operation that produces or stores a ZST can be reduced to a no-op. First off, storing it doesn't even make sense -- it doesn't occupy any space. Also there's only one value of that type, so anything that loads it can just produce it from the aether -- which is also a no-op since it doesn't occupy any space.
+- ZST 그 자체는 당연한 이유로 별 쓸모가 없다. 하지만 Rust의 여러 흥미로운 레이아웃 선택들이 그렇듯, 제네릭 문맥에서 그 잠재력이 드러난다. Rust는 ZST를 생성하거나 저장하는 모든 연산이 no-op으로 환원될 수 있다는 것을 대체로 이해한다. 우선 저장한다는 것 자체가 의미가 없다. 공간을 차지하지 않기 때문이다. 또 그 타입의 값은 하나뿐이므로, 그 값을 읽는 코드는 그냥 허공에서 만들어내면 된다. 이 역시 공간을 차지하지 않으므로 no-op이다.
 
-- One of the most extreme examples of this is Sets and Maps. Given a `Map<Key, Value>`, it is common to implement a `Set<Key>` as just a thin wrapper around` Map<Key, UselessJunk>`. In many languages, this would necessitate allocating space for UselessJunk and doing work to store and load UselessJunk only to discard it. Proving this unnecessary would be a difficult analysis for the compiler.
+- 가장 극단적인 예 중 하나가 Set과 Map이다. `Map<Key, Value>`가 있을 때, `Set<Key>`를 `Map<Key, UselessJunk>`의 얇은 래퍼로 구현하는 것이 흔하다. 많은 언어에서 이렇게 하면 UselessJunk를 위한 공간을 할당하고, 결국 버려질 UselessJunk를 저장하고 읽는 작업을 해야 한다. 컴파일러가 이것이 불필요하다는 것을 증명하기는 어렵다.
 
-- However in Rust, we can **just say that `Set<Key> = Map<Key, ()>`**. Now Rust statically knows that every load and store is useless, and no allocation has any size. The result is that the monomorphized code is basically a custom implementation of a HashSet with none of the overhead that HashMap would have to support values.
+- 하지만 Rust에서는 그냥 **`Set<Key> = Map<Key, ()>`라고 하면 된다.** 이제 Rust는 모든 읽기와 쓰기가 무의미하고 어떤 할당도 크기를 갖지 않는다는 것을 정적으로 안다. 그 결과, 단형화된 코드는 사실상 HashMap이 값을 지원하기 위해 짊어져야 할 오버헤드가 전혀 없는 커스텀 HashSet 구현이 된다.
 
-- Safe code need not worry about ZSTs, but unsafe code must be careful about the consequence of types with no size. In particular, pointer offsets are no-ops, and allocators typically require a non-zero size.
+- 안전한 코드는 ZST를 신경 쓸 필요가 없지만, unsafe 코드는 크기 없는 타입이 낳는 결과에 주의해야 한다. 특히 포인터 오프셋 연산이 no-op이 되고, 할당자(allocator)는 보통 0이 아닌 크기를 요구한다.
 
-- Note that references to ZSTs (including empty slices), just like all other references, must be non-null and suitably aligned. Dereferencing a null or unaligned pointer to a ZST is undefined behavior, just like for any other type.
+- ZST에 대한 참조(빈 slice 포함)도 다른 모든 참조와 마찬가지로 널이 아니어야 하고 적절히 정렬되어야 한다. ZST라고 해도 널이거나 정렬되지 않은 포인터를 역참조하는 것은 다른 타입과 똑같이 미정의 동작(undefined behavior)이다.
 
-### Empty Types
-- Rust also enables types to be declared that cannot even be instantiated. These types can only be talked about at the type level, and never at the value level. Empty types can be declared by specifying an enum with no variants:
+### 빈 타입 (Empty Types)
+
+- Rust는 인스턴스화조차 할 수 없는 타입도 선언할 수 있게 해준다. 이런 타입은 타입 수준에서만 이야기할 수 있고 값 수준에서는 존재할 수 없다. 빈 타입은 variant가 없는 enum으로 선언한다:
 
     ```rust
-    enum Void {} // No variants = EMPTY
+    enum Void {} // variant 없음 = 빈 타입
     ```
 
-- Empty types are even more marginal than ZSTs. The primary motivating example for an empty type is type-level unreachability. For instance, suppose an API needs to return a Result in general, but a specific case actually is infallible. It's actually possible to communicate this at the type level by returning a `Result<T, Void>`. Consumers of the API can confidently unwrap such a Result knowing that it's statically impossible for this value to be an Err, as this would require providing a value of type Void.
+- 빈 타입은 ZST보다도 더 주변적인 존재다. 빈 타입의 대표적인 활용 예는 타입 수준의 도달 불가능성(unreachability)이다. 예를 들어 어떤 API가 일반적으로는 Result를 반환해야 하지만, 특정 경우에는 실제로 절대 실패하지 않는다고 하자. `Result<T, Void>`를 반환하면 이 사실을 타입 수준에서 전달할 수 있다. API 사용자는 이 값이 Err일 수 없다는 것이 정적으로 보장되므로 안심하고 unwrap할 수 있다. Err이 되려면 Void 타입의 값이 있어야 하는데, 그것은 불가능하기 때문이다.
 
-- In principle, Rust can do some interesting analyses and optimizations based on this fact. For instance, `Result<T, Void>` is represented as just T, because the Err case doesn't actually exist (strictly speaking, this is only an optimization that is not guaranteed, so for example transmuting one into the other is still Undefined Behavior).
+- 원칙적으로 Rust는 이 사실을 기반으로 흥미로운 분석과 최적화를 할 수 있다. 예를 들어 `Result<T, Void>`는 Err 경우가 실제로 존재하지 않으므로 그냥 T로 표현된다(엄밀히 말하면 이는 보장되지 않는 최적화일 뿐이므로, 둘 사이를 transmute하는 것은 여전히 미정의 동작이다).
 
-- The following could also compile:
+- 다음 코드도 컴파일될 수 있을 것이다:
 
 ```rust
 enum Void {}
 
 let res: Result<u32, Void> = Ok(0);
 
-// Err doesn't exist anymore, so Ok is actually irrefutable.
+// Err은 존재하지 않으므로 Ok는 사실상 반박 불가능(irrefutable)한 패턴이다
 let Ok(num) = res;
 ```
 
-- But this trick doesn't work yet. One final subtle detail about empty types is that raw pointers to them are actually valid to construct, but dereferencing them is Undefined Behavior because that wouldn't make sense.
+- 하지만 이 트릭은 아직 동작하지 않는다. 빈 타입에 대한 마지막 미묘한 디테일 하나: 빈 타입에 대한 raw 포인터를 만드는 것은 유효하지만, 역참조하는 것은 의미가 없으므로 미정의 동작이다.
 
-- We recommend against modelling C's `void*` type with `*const Void`. A lot of people started doing that but quickly ran into trouble because Rust doesn't really have any safety guards against trying to instantiate empty types with unsafe code, and if you do it, it's Undefined Behavior. This was especially problematic because developers had a habit of converting raw pointers to references and &Void is also Undefined Behavior to construct.
+- C의 `void*`를 `*const Void`로 모델링하는 것은 권장하지 않는다. 많은 사람들이 그렇게 하기 시작했다가 곧 문제에 부딪혔다. Rust는 unsafe 코드로 빈 타입을 인스턴스화하려는 시도를 막는 안전장치가 딱히 없고, 실제로 그렇게 하면 미정의 동작이기 때문이다. 개발자들이 raw 포인터를 참조로 변환하는 습관이 있다는 점에서 특히 문제였는데, `&Void`를 만드는 것 역시 미정의 동작이다.
 
-- `*const ()` (or equivalent) works reasonably well for `void*`, and can be made into a reference without any safety problems. It still doesn't prevent you from trying to read or write values, but at least it compiles to a no-op instead of Undefined Behavior.
+- `void*`에는 `*const ()`(또는 이에 준하는 것)가 꽤 잘 동작하며, 안전 문제 없이 참조로 만들 수도 있다. 값을 읽거나 쓰려는 시도를 막아주지는 못하지만, 적어도 미정의 동작 대신 no-op으로 컴파일된다.
 
-### Extern Types
+### Extern 타입
 
-- There is an accepted RFC to add proper types with an unknown size, called extern types, which would let Rust developers model things like C's void* and other "declared but never defined" types more accurately. However as of Rust 2018, the feature is stuck in limbo over how `size_of_val::<MyExternType>()` should behave.
+- 크기를 알 수 없는 진짜 타입을 추가하는 extern type이라는 RFC가 승인되어 있다. 이를 통해 Rust 개발자는 C의 `void*` 같은 "선언만 되고 정의되지 않은" 타입을 더 정확하게 모델링할 수 있게 된다. 하지만 Rust 2018 기준으로 이 기능은 `size_of_val::<MyExternType>()`이 어떻게 동작해야 하는지에 대한 논쟁에 막혀 표류 중이다.
 
 ## repr(C)
 
-- This is the most important repr. It has fairly simple intent: do what C does.
-- The order, size, and alignment of fields is exactly what you would expect from C or C++. Any type you expect to pass through an FFI boundary should have `repr(C)`, as C is the lingua-franca of the programming world. 
-  - This is also necessary to soundly do more elaborate tricks with data layout such as reinterpreting values as a different type.
+- 가장 중요한 repr이다. 의도는 아주 단순하다. C가 하는 대로 하라는 것이다.
+- 필드의 순서, 크기, 정렬이 C나 C++에서 기대하는 것과 정확히 같다. FFI 경계를 넘길 것으로 예상되는 모든 타입은 `repr(C)`를 가져야 한다. C는 프로그래밍 세계의 공용어(lingua franca)이기 때문이다.
+  - 이는 값을 다른 타입으로 재해석하는 등 데이터 레이아웃으로 더 정교한 트릭을 건전하게(soundly) 수행하기 위해서도 필요하다.
 
-- We strongly recommend using rust-bindgen and/or cbindgen to manage your FFI boundaries for you. The Rust team works closely with those projects to ensure that they **work robustly and are compatible with current and future guarantees about type layouts and reprs**.
+- FFI 경계 관리에는 rust-bindgen이나 cbindgen 사용을 강력히 권장한다. Rust 팀은 이 프로젝트들이 **타입 레이아웃과 repr에 대한 현재 및 미래의 보장과 호환되며 견고하게 동작하도록** 긴밀히 협력하고 있다.
 
-- The interaction of `repr(C)` with Rust's more exotic data layout features must be kept in mind. Due to its dual purpose as "for FFI" and "for layout control", `repr(C)` can be applied to types that will be nonsensical or problematic if passed through the FFI boundary.
+- `repr(C)`가 Rust의 더 특이한 데이터 레이아웃 기능과 상호작용하는 방식을 염두에 두어야 한다. "FFI용"과 "레이아웃 제어용"이라는 이중 목적 때문에, `repr(C)`는 FFI 경계를 넘기면 말이 안 되거나 문제가 되는 타입에도 적용될 수 있다.
 
-  - ZSTs are still zero-sized, even though this is not a standard behavior in C, and is explicitly contrary to the behavior of an empty type in C++, which says they should still consume a byte of space.
+  - ZST는 여전히 크기가 0이다. C에서는 이것이 표준 동작이 아니고, 빈 타입이 1바이트를 차지해야 한다는 C++의 동작과는 명백히 상반되는데도 그렇다.
 
-  - DST pointers (wide pointers) and tuples are not a concept in C, and as such are never FFI-safe.
+  - DST 포인터(와이드 포인터)와 튜플은 C에 없는 개념이므로 절대 FFI-safe하지 않다.
 
-  - Enums with fields also aren't a concept in C or C++, but a valid bridging of the types is defined.
+  - 필드를 가진 enum도 C나 C++에 없는 개념이지만, 타입을 연결(bridge)하는 유효한 방법이 정의되어 있다.
 
-  - If `T` is an FFI-safe non-nullable pointer type, `Option<T>` is guaranteed to have the same layout and ABI as T and is therefore also FFI-safe. As of this writing, this covers `&`, `&mut`, and function pointers, all of which can never be null.
+  - `T`가 FFI-safe하고 널이 될 수 없는 포인터 타입이라면, `Option<T>`는 T와 같은 레이아웃과 ABI를 가짐이 보장되므로 역시 FFI-safe하다. 이 글을 쓰는 시점 기준으로 `&`, `&mut`, 함수 포인터가 여기에 해당하며, 이들은 모두 절대 널이 될 수 없다.
 
-  - Tuple structs are like structs with regards to `repr(C)`, as the only difference from a struct is that the fields aren’t named.
+  - 튜플 구조체는 `repr(C)` 관점에서 일반 구조체와 같다. 필드에 이름이 없다는 점만 다르기 때문이다.
 
-  - `repr(C)` is equivalent to one of repr(u*) (see the next section) for fieldless enums. The chosen size is the default enum size for the target platform's C application binary interface (ABI). Note that enum representation in C is implementation defined, so this is really a "best guess". In particular, this may be incorrect when the C code of interest is compiled with certain flags.
+  - field-less enum에 대해 `repr(C)`는 repr(u\*) 중 하나(다음 섹션 참고)와 동등하다. 선택되는 크기는 타겟 플랫폼 C ABI의 기본 enum 크기다. C의 enum 표현은 구현 정의(implementation defined)이므로 이는 사실 "최선의 추측"일 뿐이다. 특히 대상 C 코드가 특정 플래그로 컴파일된 경우 이 추측이 틀릴 수 있다.
 
-  - Fieldless enums with `repr(C)` or `repr(u*)` still may not be set to an integer value without a corresponding variant, even though this is permitted behavior in C or C++. It is undefined behavior to (unsafely) construct an instance of an enum that does not match one of its variants. (This allows exhaustive matches to continue to be written and compiled as normal.)
+  - `repr(C)`나 `repr(u*)`를 붙인 field-less enum이라도, 대응하는 variant가 없는 정수 값으로 설정하는 것은 여전히 허용되지 않는다. C나 C++에서는 허용되는 동작인데도 그렇다. variant 중 어느 것과도 일치하지 않는 enum 인스턴스를 (unsafe하게) 만드는 것은 미정의 동작이다. (이 덕분에 exhaustive match를 평소처럼 작성하고 컴파일할 수 있다.)
 
 ## repr(transparent)
 
-- `#[repr(transparent)]` can only be used on a struct or single-variant enum that has a single non-zero-sized field (there may be additional zero-sized fields). The effect is that the layout and ABI of the whole struct/enum is guaranteed to be the same as that one field.
+- `#[repr(transparent)]`는 크기가 0이 아닌 필드가 하나뿐인 구조체 또는 단일 variant enum에만 사용할 수 있다(크기가 0인 필드는 추가로 있어도 된다). 효과는 구조체/enum 전체의 레이아웃과 ABI가 그 하나의 필드와 같음이 보장되는 것이다.
 
-> NOTE: There's a transparent_unions nightly feature to apply repr(transparent) to unions, but it hasn't been stabilized due to design concerns. 
+> NOTE: union에 repr(transparent)를 적용하는 transparent_unions nightly 기능이 있지만, 설계상의 우려로 안정화되지 않았다.
 
-- The goal is to make it possible to **transmute between the single field and the struct/enum**. An example of that is [`UnsafeCell`](https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html), which can be transmuted into the type it wraps (`UnsafeCell` also uses the unstable no_niche, so its ABI is not actually guaranteed to be the same when nested in other types).
+- 목적은 **그 단일 필드와 구조체/enum 사이의 transmute를 가능하게 하는 것**이다. 대표적인 예가 [`UnsafeCell`](https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html)로, 자신이 감싸는 타입으로 transmute할 수 있다(`UnsafeCell`은 불안정한 no_niche도 사용하므로, 다른 타입 안에 중첩됐을 때의 ABI는 실제로 보장되지 않는다).
 
-- Also, passing the struct/enum through FFI where the inner field type is expected on the other side is guaranteed to work. In particular, this is necessary for `struct Foo(f32)` or `enum Foo { Bar(f32) }` to always have the same ABI as f32.
+- 또한 반대쪽에서 내부 필드 타입을 기대하는 FFI에 이 구조체/enum을 전달하는 것도 동작함이 보장된다. 특히 `struct Foo(f32)`나 `enum Foo { Bar(f32) }`가 항상 f32와 같은 ABI를 갖게 하려면 이것이 필요하다.
 
-- This repr is only considered part of the public ABI of a type if either the single field is pub, or if its layout is documented in prose. Otherwise, the layout should not be relied upon by other crates.
+- 이 repr은 단일 필드가 pub이거나 레이아웃이 문서에 명시된 경우에만 타입의 공개 ABI의 일부로 간주된다. 그렇지 않다면 다른 크레이트는 그 레이아웃에 의존해서는 안 된다.
 
-- More details are in the [RFC 1758](https://github.com/rust-lang/rfcs/blob/master/text/1758-repr-transparent.md) and the [RFC 2645](https://rust-lang.github.io/rfcs/2645-transparent-unions.html).
+- 자세한 내용은 [RFC 1758](https://github.com/rust-lang/rfcs/blob/master/text/1758-repr-transparent.md)과 [RFC 2645](https://rust-lang.github.io/rfcs/2645-transparent-unions.html)에 있다.
 
 ## repr(u*), repr(i*)
 
-- These specify the size to make a fieldless enum. If the discriminant overflows the integer it has to fit in, it will produce a compile-time error. 
+- field-less enum의 크기를 지정한다. discriminant가 지정한 정수 크기를 넘치면 컴파일 에러가 발생한다.
 
-- You can manually ask Rust to allow this by setting the overflowing element to explicitly be 0. However Rust will not allow you to create an enum where two variants have the same discriminant.
+- 넘치는 원소를 명시적으로 0으로 설정해서 Rust에게 허용해 달라고 수동으로 요청할 수는 있다. 하지만 두 variant가 같은 discriminant를 갖는 enum은 만들 수 없다.
 
-- The term "fieldless enum" only means that the enum doesn't have data in any of its variants. A fieldless enum without a `repr(u*)` or `repr(C)` is still a Rust native type, and does not have a stable ABI representation. Adding a repr causes it to be treated exactly like the specified integer size for ABI purposes.
+- "field-less enum"은 어떤 variant에도 데이터가 없는 enum을 뜻할 뿐이다. `repr(u*)`나 `repr(C)`가 없는 field-less enum은 여전히 Rust 네이티브 타입이며, 안정적인 ABI 표현을 갖지 않는다. repr을 추가하면 ABI 관점에서 지정된 정수 크기와 정확히 동일하게 취급된다.
 
-- If the enum has fields, the effect is similar to the effect of `repr(C)` in that there is a defined layout of the type. This makes it possible to pass the enum to C code, or access the type's raw representation and directly manipulate its tag and fields. See the RFC for details.
+- 필드가 있는 enum에 적용하면 `repr(C)`와 비슷하게 타입의 레이아웃이 정의되는 효과가 있다. 이를 통해 enum을 C 코드에 전달하거나, 타입의 원시 표현에 접근해서 tag와 필드를 직접 조작할 수 있다. 자세한 내용은 RFC를 참고하자.
 
-- These reprs have no effect on a struct.
+- 이 repr들은 구조체에는 아무 효과가 없다.
 
-- Adding an explicit `repr(u*)`, `repr(i*)`, or `repr(C)` to an enum with fields suppresses the null-pointer optimization, like:
+- 필드가 있는 enum에 명시적으로 `repr(u*)`, `repr(i*)`, `repr(C)`를 추가하면 널 포인터 최적화가 비활성화된다:
 
     ```rust
     enum MyOption<T> {
@@ -296,28 +297,28 @@ let Ok(num) = res;
     assert_eq!(16, size_of::<MyReprOption<&u16>>());
     ```
 
-This optimization still applies to fieldless enums with an explicit `repr(u*)`, `repr(i*)`, or `repr(C)`.
+명시적으로 `repr(u*)`, `repr(i*)`, `repr(C)`를 붙인 field-less enum에는 이 최적화가 여전히 적용된다.
 
 ## repr(packed)
 
-- repr(packed) forces Rust to strip any padding, and only align the type to a byte. This may improve the memory footprint, but will likely have other negative side-effects.
+- repr(packed)는 Rust가 모든 패딩을 제거하고 타입을 1바이트로만 정렬하도록 강제한다. 메모리 사용량은 줄어들 수 있지만, 다른 부정적인 부작용이 생길 가능성이 높다.
 
-- In particular, most architectures strongly prefer values to be aligned. This may mean the unaligned loads are penalized (x86), or even fault (some ARM chips). For simple cases like directly loading or storing a packed field, the compiler might be able to paper over alignment issues with shifts and masks. 
-  - However if you take a reference to a packed field, it's unlikely that the compiler will be able to emit code to avoid an unaligned load.
+- 특히 대부분의 아키텍처는 값이 정렬되어 있기를 강하게 선호한다. 정렬되지 않은 로드에 페널티가 있거나(x86), 아예 폴트가 발생할 수도 있다(일부 ARM 칩). packed 필드를 직접 로드하거나 저장하는 단순한 경우에는 컴파일러가 시프트와 마스크로 정렬 문제를 덮어줄 수 있다.
+  - 하지만 packed 필드에 대한 참조를 얻는 경우, 컴파일러가 비정렬 로드를 피하는 코드를 만들어내기는 어렵다.
 
-- As this can cause undefined behavior, the lint has been implemented and it will become a hard error.
+- 이것이 미정의 동작을 일으킬 수 있기 때문에 lint가 구현되었고, 앞으로는 hard error가 될 예정이다.
 
-- repr(packed) is not to be used lightly. Unless you have extreme requirements, this should not be used.
+- repr(packed)는 가볍게 쓸 것이 아니다. 극단적인 요구사항이 있는 게 아니라면 사용하지 말아야 한다.
 
-- This repr is a modifier on `repr(C)` and repr(Rust).
+- 이 repr은 `repr(C)`와 repr(Rust)에 대한 수정자(modifier)다.
 
 ## repr(align(n))
 
-- repr(align(n)) (where n is a power of two) forces the type to have an alignment of at least n.
+- repr(align(n))은 (n은 2의 거듭제곱) 타입이 최소 n의 정렬을 갖도록 강제한다.
 
-- This enables several tricks, like making sure neighboring elements of an array never share the same cache line with each other (which may speed up certain kinds of concurrent code).
+- 배열의 이웃한 원소들이 절대 같은 캐시 라인을 공유하지 않게 만드는 등 여러 트릭이 가능해진다(특정 종류의 동시성 코드가 빨라질 수 있다).
 
-- This is a modifier on `repr(C)` and repr(Rust). It is incompatible with repr(packed).
+- 이 repr은 `repr(C)`와 repr(Rust)에 대한 수정자다. repr(packed)와는 함께 쓸 수 없다.
 
 ---
 reference

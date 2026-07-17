@@ -108,7 +108,7 @@ fn method_is_overloaded(
 
 ## Fix weakref proxy number protocol delegation [#7410](https://github.com/RustPython/RustPython/pull/7410)
 
-weakref.proxy는 원본 객체의 모든 연산을 투명해야 하는데, 숫자 프로토콜은 `boolean` 슬롯 하나만 구현되어 있었다.
+weakref.proxy는 원본 객체의 모든 연산을 그대로 proxy 해야하는데, 숫자 프로토콜은 `boolean` 슬롯 하나만 구현되어 있었다.
 
 ```python
 import weakref
