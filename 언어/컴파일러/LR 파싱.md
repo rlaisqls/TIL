@@ -23,20 +23,19 @@ F → ( E ) | id
 
 `E → E+E | E*E | id` 문법으로 `id+id*id`를 파싱하면 이렇게 된다.
 
-```
-단계  스택            입력            행동
- 0    $               id+id*id$       shift id
- 1    $id             +id*id$         reduce E → id
- 2    $E              +id*id$         shift +
- 3    $E+             id*id$          shift id
- 4    $E+id           *id$            reduce E → id
- 5    $E+E            *id$            shift *
- 6    $E+E*           id$             shift id
- 7    $E+E*id         $               reduce E → id
- 8    $E+E*E          $               reduce E → E*E
- 9    $E+E            $               reduce E → E+E
-10    $E              $               accept
-```
+| 단계 | 스택 | 입력 | 행동 |
+|---|---|---|---|
+| 0 | `$` | `id+id*id$` | shift `id` |
+| 1 | `$id` | `+id*id$` | reduce `E → id` |
+| 2 | `$E` | `+id*id$` | shift `+` |
+| 3 | `$E+` | `id*id$` | shift `id` |
+| 4 | `$E+id` | `*id$` | reduce `E → id` |
+| 5 | `$E+E` | `*id$` | shift `*` |
+| 6 | `$E+E*` | `id$` | shift `id` |
+| 7 | `$E+E*id` | `$` | reduce `E → id` |
+| 8 | `$E+E*E` | `$` | reduce `E → E*E` |
+| 9 | `$E+E` | `$` | reduce `E → E+E` |
+| 10 | `$E` | `$` | accept |
 
 여기의 단계 1에서 `id`가 handle인 건 어떻게 알 수 있을까? 단계 5에서 `E+E`는 왜 handle이 아닌가? handle을 어떻게 찾고, 후보가 여럿이면 어떤 생성규칙을 적용할 것인가. 상향식 파싱은 이 질문에 답하는 방법의 문제다.
 
