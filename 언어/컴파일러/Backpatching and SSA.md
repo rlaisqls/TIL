@@ -245,35 +245,163 @@ while (cond) {
 
 ### When a patch changes instruction size
 
-- RustPython(= CPython 3.14)은 instruction이 2-byte 단위(opcode 1 + argument 1)
-  - argument가 255를 넘으면 앞에 `EXTENDED_ARG`를 붙여 instruction이 길어짐
-- 그러면 책이 피한 문제가 그대로 생김
-  - jump distance를 채움 → instruction이 길어짐 → 뒤쪽 position이 전부 밀림 → 다른 jump distance도 바뀜
-- 그래서 RustPython은 **instruction 크기가 더 이상 안 바뀔 때까지** position 계산과 argument 채우기를 반복함
-  - 크기는 커지기만 하니 반드시 멈춤(fixed point)
+- RustPython(= CPython 3.14)의 instruction은 2-byte code unit 단위 (opcode 1 byte + argument 1 byte)
+  - argument 칸에는 255까지만 들어감
+  - 더 크면 앞에 `EXTENDED_ARG`를 붙여 윗자리를 실어 보냄 → instruction이 2 bytes에서 4 bytes로 길어짐
+- jump의 argument는 byte가 아니라 code unit(2 bytes) 단위로 센 distance
+- 책이 "같은 길이로만 덮어쓴다"는 전제로 피한 문제가 여기서 그대로 생김
+
+#### Measured: 127 lines vs 128 lines
+
+- if body에 `x = 1`을 n줄 넣고, if를 건너뛰는 jump를 관찰함 (스크립트는 [appendix](#appendix-demo-code))
+
+```python
+def f(a):
+    if a:
+        x = 1   # 이 줄을 n번 반복
+        ...
+    return a
+```
+
+```
+   n  prefix           jump                arg  @jump  target   size
+ 120  -                POP_JUMP_IF_FALSE   241     12     498   502B
+ 127  -                POP_JUMP_IF_FALSE   255     12     526   530B
+ 128  EXTENDED_ARG 1   POP_JUMP_IF_FALSE   257     14     532   536B
+ 130  EXTENDED_ARG 1   POP_JUMP_IF_FALSE   261     14     540   544B
+```
+
+- RustPython(`target/debug/rustpython`, 3.14.0.alpha)과 CPython 3.14.6의 출력이 한 글자도 다르지 않음
+- 127줄: distance 255 → argument 칸 하나에 딱 들어감
+
+```
+@12   POP_JUMP_IF_FALSE    255
+@16   NOT_TAKEN
+@18   LOAD_SMALL_INT       1
+bytes[12:16]: 64 ff 00 00
+```
+
+- 128줄: distance 257 → 칸이 모자라 앞에 `EXTENDED_ARG 1`이 붙음
+
+```
+@12   EXTENDED_ARG         1
+@14   POP_JUMP_IF_FALSE    257
+@18   NOT_TAKEN
+bytes[12:16]: 45 01 64 01
+```
+
+- byte로 읽으면
+  - 127줄: `64 ff` = `POP_JUMP_IF_FALSE`(0x64) + 255(0xff). 뒤의 `00 00`은 이 jump에 딸린 inline cache 칸
+  - 128줄: `45 01 64 01` = `EXTENDED_ARG`(0x45) 1 + `POP_JUMP_IF_FALSE` 1 → 1 × 256 + 1 = 257
+- distance 계산도 맞음. jump와 cache 다음 instruction부터 target까지를 2 bytes 단위로 셈
+  - 127줄: (526 − 16) / 2 = 255
+  - 128줄: (532 − 18) / 2 = 257
+- 128줄이면 body가 한 줄(4 bytes) 늘었는데 전체는 6 bytes 늘어남 (530B → 536B)
+  - 늘어난 2 bytes가 `EXTENDED_ARG`
+  - 그 바람에 jump 자체가 @12 → @14로, target이 @530이 아니라 @532로, 그 뒤 전부가 2 bytes씩 밀림
+
+#### Why one pass is not enough
+
+- 한 jump가 길어지면 그 뒤가 밀리고, 그 구간을 건너뛰던 **다른 jump의 distance도 늘어남**
+
+```
+jump A ───────────────────────────────┐   distance 255
+…                                     │
+[EXTENDED_ARG]   ← B 때문에 새로 생김  │
+jump B ──────────────────────────┐    │   distance 257
+…                                │    │
+A의 target  ◄────────────────────┼────┘   A: 255 → 256 (넘침)
+B의 target  ◄────────────────────┘
+```
+
+- B 앞에 code unit 하나가 생기면 A가 건너야 할 distance가 255 → 256
+  - A도 255를 넘으니 `EXTENDED_ARG`가 필요해지고, 또 뒤가 밀림
+- 그래서 position 계산 → argument 채우기를 **instruction 크기가 더 이상 안 바뀔 때까지** 반복함(fixed point)
+- 반드시 멈추는 이유
+  - distance가 늘면 instruction이 길어질 뿐 짧아지지 않음
+  - instruction 하나는 최대 4 code units(`EXTENDED_ARG` 3개 + 자기 자신, 8 bytes)라서 무한히 커질 수 없음
+- Monkey는 jump operand를 늘 2 bytes로 고정해서 이 반복 자체가 필요 없음
+  - 대신 함수 하나가 65535 bytes를 못 넘음
+
+#### The actual code
+
+- 숫자 크기로 instruction이 몇 code unit이 될지 정하는 함수
 
 ```rust
-// crates/codegen/src/ir.rs — resolve_jump_offsets (CPython assemble.c 이식, 일부 생략)
+// crates/compiler-core/src/bytecode/oparg.rs (줄바꿈만 조정)
+pub const fn instr_size(self) -> usize {
+    (self.0 > 0xff) as usize
+        + (self.0 > 0xff_ff) as usize
+        + (self.0 > 0xff_ff_ff) as usize
+        + 1
+}
+```
+
+| argument | code unit 수 |
+|---|---|
+| 0 ~ 255 | 1 |
+| 256 ~ 65535 | 2 (`EXTENDED_ARG` 1개) |
+| ~ 16777215 | 3 |
+| 그 이상 | 4 |
+
+- `resolve_jump_offsets` 본체. 바깥 `loop` 안에서 ① position 매기기 → ② distance 채우기와 크기 검사를 반복함
+
+```rust
+// crates/codegen/src/ir.rs:919-970 — resolve_jump_offsets (CPython assemble.c 이식)
+// EndAsyncFor 분기 본문과 debug_assert만 생략
+let mut extended_arg_recompile;
 loop {
-    // 1) 지금 크기로 모든 명령의 위치 계산
+    // ① 지금 크기대로 모든 instruction의 position을 매김
+    let mut totsize = 0i32;
     for i in 0..instr_sequence.instr_used {
+        let instr = &mut instr_sequence.instrs[i];
         instr.i_offset = totsize;
-        totsize += instr.info.instr_size() as i32;
+        let instr_size = instr.info.instr_size();
+        totsize += instr_size as i32;
     }
-    // 2) 점프 인자 채우기
+
+    // ② jump마다 distance를 채우고, 크기가 바뀌었는지 검사
     extended_arg_recompile = false;
+    let mut offset = 0i32;
     for i in 0..instr_sequence.instr_used {
-        // ...
-        info.arg = OpArg::new(oparg as u32);
-        if info.instr_size() != i_size {
-            extended_arg_recompile = true;
+        let i_size = instr_sequence.instrs[i].info.instr_size();   // 채우기 전 크기
+        offset += i_size as i32;                                    // 이 instruction 바로 다음 position
+
+        let opcode = instr_sequence.instrs[i].info.instr.expect_real();
+        if opcode.has_jump() {
+            let target = instr_sequence.instrs[i].i_target;
+            let target_offset = instr_sequence.instrs[target as usize].i_offset;
+            let info = &mut instr_sequence.instrs[i].info;
+            let op = opcode;
+            let mut oparg = target_offset;
+            info.arg = OpArg::new(oparg as u32);
+            if matches!(op, Instruction::EndAsyncFor) {
+                // ... (생략)
+            } else if oparg < offset {
+                oparg = offset - oparg;   // 뒤로 가는 distance
+            } else {
+                oparg -= offset;          // 앞으로 가는 distance
+            }
+            info.arg = OpArg::new(oparg as u32);
+            if info.instr_size() != i_size {   // 숫자를 넣었더니 길어졌나?
+                extended_arg_recompile = true;
+            }
         }
     }
+
+    // ③ 하나도 안 바뀌었으면 끝, 아니면 ①부터 다시
     if !extended_arg_recompile {
         break;
     }
 }
 ```
+
+- 핵심은 `if info.instr_size() != i_size`
+  - distance를 채우기 전 크기와 채운 뒤 크기를 비교함
+  - 다르면 `EXTENDED_ARG`가 필요해졌다는 뜻이라 `extended_arg_recompile`을 켜고, 바깥 `loop`가 ①부터 다시 돎
+- 뒤로 가는 jump도 `offset - oparg`로 양수 distance를 만듦
+  - 방향은 argument 부호가 아니라 opcode(`JUMP_FORWARD` / `JUMP_BACKWARD`)가 정함
+- 책의 `changeOperand`가 "같은 길이로만 덮어쓴다"고 가정했던 바로 그 지점을, RustPython은 반복으로 해결함
 
 ### Labels instead of holes
 
@@ -576,7 +704,7 @@ block3(v4):          block3:     // r4를 씀
 ## Appendix: demo code
 
 - 본문의 실측 출력은 전부 아래 코드로 뽑은 것
-- 측정 환경: arm64 macOS, Go 1.26.2, Rust(cargo) + cranelift 0.132.3
+- 측정 환경: arm64 macOS, Go 1.26.2, Rust(cargo) + cranelift 0.132.3, RustPython @1db2006fb, CPython 3.14.6
 
 ### Chapter 4 backpatching reproduction (Go)
 
@@ -960,6 +1088,48 @@ fn main() {
     println!("=== after seal_all_blocks ===\n{}", b.func.display());
     b.finalize();
 }
+```
+
+### EXTENDED_ARG measurement (Python)
+
+- [When a patch changes instruction size](#when-a-patch-changes-instruction-size)의 표와 `dis` 출력을 뽑은 스크립트
+- RustPython과 CPython에서 같은 스크립트를 돌림
+
+```bash
+# RustPython
+~/work/RustPython/target/debug/rustpython extended_arg.py
+# CPython 3.14
+python3 extended_arg.py
+```
+
+```python
+# if 몸통에 `x = 1`을 n줄 넣고, if를 건너뛰는 jump 앞에 EXTENDED_ARG가 붙는 순간을 찾음
+import dis
+import sys
+
+def make(n):
+    body = "\n".join("        x = 1" for _ in range(n))
+    ns = {}
+    exec(f"def f(a):\n    if a:\n{body}\n    return a\n", ns)
+    return ns["f"]
+
+print(sys.implementation.name, sys.version.split()[0])
+print(f"{'n':>4}  {'prefix':<16} {'jump':<18} {'arg':>4}  {'@jump':>5}  {'target':>6}  {'size':>5}")
+for n in (120, 127, 128, 130):
+    f = make(n)
+    ins = list(dis.get_instructions(f))
+    k = next(i for i, x in enumerate(ins) if x.opname.startswith("POP_JUMP"))
+    j, prev = ins[k], ins[k - 1]
+    prefix = f"EXTENDED_ARG {prev.arg}" if prev.opname == "EXTENDED_ARG" else "-"
+    print(f"{n:>4}  {prefix:<16} {j.opname:<18} {j.arg:>4}  {j.offset:>5}  {j.argval:>6}  {len(f.__code__.co_code):>4}B")
+
+for n in (127, 128):
+    f = make(n)
+    print(f"\n## n={n}")
+    for x in dis.get_instructions(f):
+        if x.offset >= 12 and x.offset <= 18:
+            print(f"@{x.offset:<4} {x.opname:<20} {'' if x.arg is None else x.arg}")
+    print("bytes[12:16]:", f.__code__.co_code[12:16].hex(" "))
 ```
 
 ---
