@@ -33,7 +33,7 @@ Aggregate는 행이 들어오는 순간 다 합쳐지는 게 아니다. 같은 R
 
 ### Unique: Merge-on-Read vs Merge-on-Write
 
-Unique 테이블도 Segment는 불변이라 update를 제자리에서 할 수 없다. 같은 키의 새 행을 새 Rowset에 쓰고, 같은 키의 행이 여러 개 있으면 **마지막 것만 유효**하다고 본다. 삭제도 마찬가지로 "삭제됐다"는 표시(`__DORIS_DELETE_SIGN__ = 1`)를 가진 행을 새로 쓴다. 앞서 본 delete predicate가 데이터 없는 빈 Rowset이었던 것과 달리, 이건 행이 실제로 있는 Rowset이다.
+Unique 테이블도 Segment는 불변이라 update를 제자리에서 할 수 없다. 같은 키의 새 행을 새 Rowset에 쓰고, 같은 키의 행이 여러 개 있으면 **마지막 것만 유효**하다고 본다. 삭제도 마찬가지로 "삭제됐다"는 표시(`__DORIS_DELETE_SIGN__ = 1`)를 가진 행을 새로 쓴다. 뒤의 [삭제](#삭제)에서 볼 delete predicate가 데이터 없는 빈 Rowset인 것과 달리, 이건 행이 실제로 있는 Rowset이다.
 
 ```
 [2-2] uid=7 name=a
@@ -125,7 +125,7 @@ compaction은 적재를 막지 않는다. 대신 output을 커밋할 때 세 부
 
 sequence column이 있으면 PK 인덱스 조회가 key와 sequence 값을 같이 비교한다. 새 행의 sequence가 기존 행보다 **작으면** `KEY_ALREADY_EXISTS`를 돌려주고([segment.cpp#L1335-L1341](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/storage/segment/segment.cpp#L1335-L1341)) 새 행 쪽을 bitmap에 표시한다([base_tablet.cpp#L817-L833](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/storage/tablet/base_tablet.cpp#L817-L833)). 같으면 새 행이 이긴다. 이 비교는 `__DORIS_DELETE_SIGN__`을 따로 보지 않는다. 그래서 delete sign 행도 sequence가 작으면 그냥 무시된다(코드상 추론이고, 이 경우만 따로 다루는 테스트는 못 찾았다). 반대로 sequence가 큰 delete가 먼저 들어오면 그 delete 행이 tombstone처럼 남아, 이후 들어오는 더 작은 sequence의 upsert를 막는다. `regression-test/suites/unique_with_mow_c_p0/test_delete_sign.groovy`가 이 시나리오를 다룬다. sequence 1, 10, 2를 넣고, sequence 10으로 delete한 다음 3을 넣어도 결과가 비어 있다.
 
-앞서 본 "MoW는 버전이 1000개를 넘으면 승격"도 이 bitmap이 버전마다 쌓여 tablet 메타가 커지는 걸 막으려는 것이다.
+뒤의 Compaction 절에서 볼 "MoW는 버전이 1000개를 넘으면 승격"도 이 bitmap이 버전마다 쌓여 tablet 메타가 커지는 걸 막으려는 것이다.
 
 ### CDC: `WITH MERGE` / `DELETE ON`
 
@@ -284,6 +284,57 @@ tablet 버전 수가 `max_tablet_version_num`(2000, time_series는 `time_series_
 
 합쳐진 옛 Rowset은 실행 중인 쿼리가 읽고 있을 수 있어서 바로 지우지 않고 stale로 둔다. `tablet_rowset_stale_sweep_time_sec`(600초)이 지나면 지운다([config.cpp#L402](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/common/config.cpp#L402)).
 
+## Group Commit
+
+Vector처럼 작은 배치를 자주 보내면 적재마다 Rowset과 버전이 하나씩 생긴다. compaction이 이 속도를 못 따라가면 위의 `-235`에 걸린다. Group commit은 여러 적재를 BE 안에서 모아 **내부 트랜잭션 하나**로 커밋한다. 적재 N번이 Rowset 하나, 버전 하나가 된다.
+
+```
+적재 1 ─┐
+적재 2 ─┼─▶ LoadBlockQueue (테이블별, 내부 label·txn 하나) ─▶ 내부 적재 plan ─▶ Rowset 1개
+적재 3 ─┘     ├ async면 블록마다 WAL에 먼저 기록
+              └ 커밋 조건: group_commit_interval_ms(10초) 또는 group_commit_data_bytes(128MB)
+```
+
+켜는 방법은 세 가지다.
+
+- Stream Load: HTTP 헤더 `group_commit: async_mode | sync_mode | off_mode`([http_common.h#L72](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/service/http/http_common.h#L72), [stream_load.cpp#L982-L1015](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/service/http/action/stream_load.cpp#L982-L1015)). 헤더가 없으면 테이블 속성을 따른다.
+- 테이블 속성: `"group_commit_mode"`. 기본값은 `off_mode`다([PropertyAnalyzer.java#L2051-L2066](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/fe/fe-core/src/main/java/org/apache/doris/common/util/PropertyAnalyzer.java#L2051-L2066)). `group_commit_interval_ms`, `group_commit_data_bytes`도 테이블마다 바꿀 수 있다.
+- INSERT: 세션 변수 `group_commit`([SessionVariable.java#L642](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/fe/fe-core/src/main/java/org/apache/doris/qe/SessionVariable.java#L642)).
+
+**커밋 조건과 backpressure**
+
+내부 적재는 큐에서 블록을 꺼내 쓰다가, 큐를 연 지 `group_commit_interval_ms`(기본 10초)가 지났거나 쌓인 데이터가 `group_commit_data_bytes`(기본 128MB)를 넘으면 커밋한다([Config.java#L604-L608](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/fe/fe-common/src/main/java/org/apache/doris/common/Config.java#L604-L608), [group_commit_mgr.cpp#L116-L131](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/group_commit_mgr.cpp#L116-L131)). 모든 테이블 큐의 메모리 합이 `group_commit_queue_mem_limit`(64MB)를 넘으면 들어오는 적재의 쓰기를 막고, 큐가 비워지면 풀어 준다([#L103-L115](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/group_commit_mgr.cpp#L103-L115), [#L191-L197](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/group_commit_mgr.cpp#L191-L197)).
+
+**async_mode와 sync_mode**
+
+| | async_mode | sync_mode |
+|---|---|---|
+| 응답 시점 | 블록이 큐와 WAL에 들어가면 | 내부 txn이 커밋된 뒤 |
+| WAL | 쓴다 | 안 쓴다 |
+| 데이터가 보이는 시점 | 응답 후, 다음 내부 커밋 때(최대 interval) | 응답 시점에 이미 보인다 |
+| 응답 지연 | 짧다 | 최대 interval만큼 |
+
+- sync는 sink를 닫을 때 내부 적재가 끝났는지(`process_finish`) 기다린다([group_commit_block_sink_operator.cpp#L102-L121](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/exec/operator/group_commit_block_sink_operator.cpp#L102-L121)). async는 `write_wal = (mode == ASYNC_MODE)`로 블록을 큐에 넣으면서 WAL에도 쓴다([#L164-L165](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/exec/operator/group_commit_block_sink_operator.cpp#L164-L165), [group_commit_mgr.cpp#L96-L102](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/group_commit_mgr.cpp#L96-L102)).
+- WAL 디스크가 모자라면 async가 **조용히 sync로 바뀐다**. 로그만 남긴다([group_commit_block_sink_operator.cpp#L210-L221](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/exec/operator/group_commit_block_sink_operator.cpp#L210-L221)). WAL 한도는 `group_commit_wal_max_disk_limit`(디스크의 10%)다([config.cpp#L1659](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/common/config.cpp#L1659)). Stream Load는 요청 크기가 남은 WAL 공간보다 크면 처음부터 거부한다. 압축된 요청은 크기를 3배로 잡는다([stream_load.cpp#L847-L860](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/service/http/action/stream_load.cpp#L847-L860), [#L916-L929](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/service/http/action/stream_load.cpp#L916-L929)).
+
+**실패와 WAL replay**
+
+- 내부 커밋이 성공하면(또는 `PUBLISH_TIMEOUT`이면) WAL을 지우고, 아니면 복구 대상으로 넘긴다([group_commit_mgr.cpp#L719-L731](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/group_commit_mgr.cpp#L719-L731)). MoW 테이블은 커밋이 `DELETE_BITMAP_LOCK_ERROR`면 재시도한다([#L638-L657](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/group_commit_mgr.cpp#L638-L657)).
+- replay는 WAL 파일 이름에서 내부 label을 꺼내 그 txn을 abort하고, 같은 label로 `insert into doris_internal_table_id(<id>) WITH LABEL <label> ...`을 다시 실행한다([wal_table.cpp#L206-L222](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/wal/wal_table.cpp#L206-L222), [#L248](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/wal/wal_table.cpp#L248)). 원래 커밋이 실제로는 성공했던 경우 label이 이미 `COMMITTED`/`VISIBLE`이라는 에러가 나는데, 이걸 성공으로 보고 WAL을 지운다([#L101-L105](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/wal/wal_table.cpp#L101-L105)). 내부 label이 replay 중복을 막는 셈이다.
+- 실패한 replay는 최대 10번까지 5초 기준 지수 backoff로, 그 뒤로는 1800초씩 늘려 가며 다시 시도한다([wal_table.cpp#L167-L177](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/wal/wal_table.cpp#L167-L177)). 테이블의 WAL이 `group_commit_max_wal_num_per_table`(10)개 이상 쌓였고 마지막 replay가 실패한 상태면, 새 async 적재를 `Too many group commit async WALs`로 거부한다([group_commit_mgr.cpp#L325-L341](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/load/group_commit/group_commit_mgr.cpp#L325-L341)).
+- WAL은 그 BE의 로컬 디스크에 있다. BE가 디스크째 사라지면 async로 응답했지만 아직 커밋되지 않은 데이터도 같이 사라진다고 봐야 한다(코드 구조에서 추론, cloud 모드에서 따로 다루는 코드는 못 찾았다).
+
+**Label과 같이 못 쓴다**
+
+맨 위에서 "같은 Label로 재시도하면 거부되어 중복이 생기지 않는다"고 했는데, group commit에서는 이게 성립하지 않는다. Stream Load에 `label`과 `group_commit` 헤더를 같이 주면 `label and group_commit can't be set at the same time`으로 거부한다. chunked 전송이면 label을 비운다([stream_load.cpp#L958-L975](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/service/http/action/stream_load.cpp#L958-L975)). label은 내부 group commit의 것만 남는다([group_commit_block_sink_operator.cpp#L230](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/exec/operator/group_commit_block_sink_operator.cpp#L230)). 그래서 클라이언트가 타임아웃 뒤 재전송하면 중복될 수 있다. 중복이 문제라면 Unique 테이블로 키 중복을 흡수하거나, AutoMQ + Routine Load 경로를 쓴다.
+
+**group commit이 적용되지 않는 경우**
+
+조건에 안 맞으면 에러 없이 일반 적재로 돈다.
+
+- Stream Load: `partial_columns`, `partitions`, `temp_partitions`, 2PC, unique key update mode를 쓸 때, 본문이 비었을 때([stream_load.cpp#L953-L971](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/service/http/action/stream_load.cpp#L953-L971))
+- INSERT: 명시적 트랜잭션, partial update, OLAP 테이블이 아닐 때, light schema change가 꺼져 있을 때, 파티션을 지정했을 때 등([OlapGroupCommitInsertExecutor.java#L116-L143](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/fe/fe-core/src/main/java/org/apache/doris/nereids/trees/plans/commands/insert/OlapGroupCommitInsertExecutor.java#L116-L143))
+
 ## Cloud 모드: compaction과 delete bitmap
 
 shared-nothing에서는 tablet의 주인이 BE 하나라서, compaction과 publish를 BE 프로세스 안의 lock(`rowset_update_lock`)으로 직렬화하고 결과를 로컬 tablet meta에 저장하면 됐다. cloud 모드는 BE가 stateless다. 같은 tablet을 여러 BE가 만질 수 있으므로 이 조정을 **meta-service(FDB)**가 대신한다.
@@ -337,6 +388,59 @@ MoW에서 적재와 compaction이 bitmap을 동시에 고치지 못하게 FDB에
 BE 설정 `delete_bitmap_store_write_version`/`read_version`으로 고르고(1 = v1, 2 = v2, 3 = 둘 다), 기본값은 1이다. 코드에서 확인한 v2의 필요성은 하나다. 인스턴스가 versioned write/read를 켜면 meta-service가 v1 읽기·쓰기를 거부한다([meta_service.cpp#L4339-L4344](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/cloud/src/meta-service/meta_service.cpp#L4339-L4344)). versioned write란 메타 키를 `0x03` 키 공간에 쓰는 것이다. 이 공간의 키에는 FDB versionstamp(커밋 시각에 해당)가 붙어서 같은 키의 여러 버전이 남는다([keys.h#L92-L111](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/cloud/src/meta-store/keys.h#L92-L111)). 같은 키 목록에 `snapshot_data_migrator`, `snapshot_chain_compactor` 같은 job이 있는 걸 보면, 메타데이터 스냅샷(특정 시점 복원)을 위한 공간으로 보인다. v1 bitmap 키는 `0x01` 단일 버전 공간에 있고 version·segment마다 키가 따로라서 이 방식에 맞지 않는다. 그래서 Rowset당 값 하나인 v2를 새로 만든 것으로 보인다. 스냅샷 용도와 FDB 값 크기 제한(큰 값은 파일로 빼기)이 동기라는 건 키 구성과 코드에서 추론한 것이고, 설계 문서로 확인하지는 못했다.
 
 **읽을 때**: BE는 Rowset을 동기화할 때 MoW tablet이면 delete bitmap도 받아 메모리의 tablet bitmap에 합친다. 자기가 publish하면서 계산한 bitmap은 캐시에서 재사용하고, 나머지는 meta-service에서 증분만 받아 온다([cloud_meta_mgr.cpp#L896-L917](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/cloud/cloud_meta_mgr.cpp#L896-L917), [cloud_meta_mgr.cpp#L1227-L1252](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/cloud/cloud_meta_mgr.cpp#L1227-L1252)).
+
+## Cloud 모드: file cache
+
+cloud 모드에서 Segment는 S3에 있고 BE는 stateless다. 매번 S3를 읽으면 느리므로 BE마다 로컬 디스크에 **file cache**를 둔다. cloud 모드의 읽기 성능은 사실상 이 캐시의 hit 여부가 정한다.
+
+- 파일을 `file_cache_each_block_size`(1MB) 블록으로 나눠 캐시한다([config.cpp#L1256](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/common/config.cpp#L1256)). miss면 S3에서 그 범위를 읽고 블록을 채운다.
+- 위치와 크기는 `file_cache_path`(기본 `${DORIS_HOME}/file_cache`)에 JSON으로 디스크마다 `total_size`와 큐 비율을 적는다([config.cpp#L1242-L1255](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/common/config.cpp#L1242-L1255)).
+- 캐시 키는 파일 이름의 해시다([file_writer.h#L116](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/io/fs/file_writer.h#L116)). compaction이 새 Rowset을 만들면 파일 이름이 바뀌므로, 옛 Rowset의 캐시 블록은 output을 읽는 데 쓸모가 없다.
+
+**큐 4개**
+
+| 큐 | 기본 비율 | 들어가는 것 |
+|---|---|---|
+| TTL | 50% | `file_cache_ttl_seconds`가 걸린 tablet의 데이터 |
+| INDEX | 5% | 인덱스 데이터 |
+| DISPOSABLE | 5% | compaction처럼 쿼리가 아닌 읽기, `disable_file_cache` 쿼리 |
+| NORMAL | 40% | 나머지(일반 쿼리 읽기, 적재 쓰기) |
+
+([file_cache_common.h#L33-L36](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/io/cache/file_cache_common.h#L33-L36), 위 순서대로 고른다 [#L171-L180](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/io/cache/file_cache_common.h#L171-L180))
+
+compaction이 input을 읽을 때는 `reader_type != READER_QUERY`라 DISPOSABLE로 간다([beta_rowset_reader.cpp#L221](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/storage/rowset/beta_rowset_reader.cpp#L221)). 그래서 base compaction이 옛 데이터를 훑어도 NORMAL 큐의 쿼리용 캐시를 밀어내지 않는다.
+
+**쓸 때도 채운다**
+
+적재와 compaction이 S3에 쓸 때 캐시에도 같이 쓴다(`enable_file_cache_write_from_s3_file_writer`, 기본 true)([config.cpp#L1241](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/common/config.cpp#L1241)). 그래서 방금 적재한 데이터는 첫 쿼리부터 hit다. compaction output은 규칙이 따로 있다([compaction.cpp#L2603-L2641](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/storage/compaction/compaction.cpp#L2603-L2641)).
+
+- cumulative output은 항상 캐시에 쓴다. 최근 데이터라 곧 읽힐 가능성이 높고, input의 캐시는 위 이유로 쓸모가 없어진다.
+- base output은 `enable_file_cache_keep_base_compaction_output`(기본 false)을 켰거나, input 중 캐시에 있던 비율이 0.7을 넘을 때만 쓴다. 차갑던 옛 데이터를 합친 결과로 캐시를 채우지 않으려는 것이다.
+- 이와 별개로 `enable_file_cache_adaptive_write`(기본 true)면, 캐시 여유 공간이 쓸 크기보다 클 때도 쓴다([file_writer.h#L119-L132](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/io/fs/file_writer.h#L119-L132)).
+
+**TTL cache**
+
+테이블 속성 `file_cache_ttl_seconds`를 주면 그 데이터가 TTL 큐에 들어가 NORMAL보다 오래 남는다([PropertyAnalyzer.java#L135](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/fe/fe-core/src/main/java/org/apache/doris/common/util/PropertyAnalyzer.java#L135)). 만료 시각은 Rowset이 아니라 **tablet 생성 시각 + ttl**이다. 이미 지났으면 0을 돌려줘 처음부터 NORMAL로 들어간다([tablet_meta.cpp#L712-L729](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/storage/tablet/tablet_meta.cpp#L712-L729)). 시간 파티션 로그 테이블이라면 "만들어진 지 ttl이 안 된 파티션"의 데이터만 TTL 큐에 붙잡아 두는 셈이다. dynamic partition이 미리 만들어 두는 파티션은 데이터가 들어오기 전부터 시계가 돈다는 점에 주의한다.
+
+**warm-up**
+
+compute group마다 캐시가 따로다. 새 group이나 캐시가 빈 BE는 첫 쿼리들이 전부 S3로 간다. 그래서 미리 채운다([DorisParser.g4#L755-L761](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/fe/fe-sql-parser/src/main/antlr4/org/apache/doris/nereids/DorisParser.g4#L755-L761)).
+
+```sql
+WARM UP COMPUTE GROUP dst WITH COMPUTE GROUP src;          -- src의 hotspot을 dst로
+WARM UP COMPUTE GROUP dst WITH TABLE logs PARTITION p20261024;
+WARM UP SELECT * FROM logs l WHERE dt = '2026-10-24';      -- 쿼리 하나가 읽을 범위
+```
+
+group 간 warm-up은 `sync_mode` 속성으로 방식을 고른다([CacheHotspotManager.java#L1439-L1461](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/fe/fe-core/src/main/java/org/apache/doris/cloud/CacheHotspotManager.java#L1439-L1461)).
+
+| sync_mode | 동작 |
+|---|---|
+| 없음 | 한 번만 |
+| `periodic` + `sync_interval_sec` | 주기적으로 src의 hotspot을 dst에 반영 |
+| `event_driven` + `sync_event = "load"` | src에 적재된 Rowset을 dst BE도 바로 내려받는다([cloud_warm_up_manager.cpp#L523-L560](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/be/src/cloud/cloud_warm_up_manager.cpp#L523-L560)) |
+
+active/standby 구성의 virtual compute group이면 FE가 periodic과 event_driven job 둘을 자동으로 만든다([CloudInstanceStatusChecker.java#L296-L320](https://github.com/apache/doris/blob/eb7a508d5e29bef12d616ea1084d1367b9e16354/fe/fe-core/src/main/java/org/apache/doris/cloud/catalog/CloudInstanceStatusChecker.java#L296-L320)). standby로 넘어가도 캐시가 이미 데워져 있게 하려는 것이다.
 
 ## 삭제
 
